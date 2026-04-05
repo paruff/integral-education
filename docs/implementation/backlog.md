@@ -27,8 +27,8 @@ This backlog is designed so Copilot can implement technical and documentation it
 - Tags: `[COPILOT] [HUMAN-RECOMMENDED]`
 - Outcome: Single source of truth for mission, outcomes, constraints, and decision cadence.
 - Tasks:
-  - [ ] Draft charter doc with scope, exclusions, and measurable outcomes. `[COPILOT]`
-  - [ ] Define RACI for curriculum, safety, and analytics workflows. `[COPILOT]`
+  - [x] Draft charter doc with scope, exclusions, and measurable outcomes. `[COPILOT]` → [`product-charter.md`](product-charter)
+  - [x] Define RACI for curriculum, safety, and analytics workflows. `[COPILOT]` → [`raci.md`](raci)
   - [ ] Approve charter and assign owners. `[HUMAN-REQUIRED]`
 
 ### Issue E1-2: Repository-wide implementation protocol (`M1`)

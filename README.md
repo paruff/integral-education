@@ -65,6 +65,18 @@ npm run deploy  # deploy to GitHub Pages
 | Cognitive Bias 101 | Critical thinking | Amber → Rational |
 | Systems Thinking 101 | Systems perspective | Rational → Pluralistic |
 
+## 🧩 Contributor Guidance
+
+Use these as the canonical standards for contributors and Copilot:
+
+- [Instructional Design Protocol](docs/quality/instructional-design-protocol.md)
+- [Evidence-Vetting Checklist](docs/quality/evidence-vetting-checklist.md)
+- [Peer Review SOP](docs/quality/peer-review-sop.md)
+- [Shadowwork Safety Standard](docs/safety/shadowwork-safety-standard.md)
+- [Implementation Backlog](docs/implementation/backlog.md)
+- [Integral Theory and AQAL Protocol Template](docs/implementation/integral-aqal-protocol-template.md)
+- [Permaculture Protocol Example](docs/implementation/permaculture-implementation-protocol.md)
+
 ## 🧬 AQAL Module Template
 
 Every module follows the same mastery loop:

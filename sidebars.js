@@ -35,12 +35,17 @@ const sidebars = {
     {
       type: 'category',
       label: 'Implementation',
-      items: ['implementation/backlog'],
+      items: [
+        'implementation/backlog',
+        'implementation/integral-aqal-protocol-template',
+        'implementation/permaculture-implementation-protocol',
+      ],
     },
     {
       type: 'category',
       label: 'Quality',
       items: [
+        'quality/instructional-design-protocol',
         'quality/evidence-vetting-checklist',
         'quality/peer-review-sop',
       ],

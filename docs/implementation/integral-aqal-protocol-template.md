@@ -11,6 +11,7 @@ Use this template to design any new course or module in this repository. It oper
 
 Canonical references:
 
+- `docs/maps/aqal-label-crosswalk.md`
 - `docs/quality/instructional-design-protocol.md`
 - `docs/quality/evidence-vetting-checklist.md`
 - `docs/quality/peer-review-sop.md`
@@ -32,6 +33,30 @@ Canonical references:
 - Delivery mode (self-guided, cohort, facilitator-led):
 - Required facilitators (if any):
 - Related backlog issue(s):
+
+## 0.1 Language and Accessibility Layer (Editorial)
+
+Use dual-layer terms in learner-facing content where helpful:
+
+- Where (Quadrants)
+- Depth (Levels)
+- Skills (Lines)
+- Experience (States)
+- Style (Types)
+
+4-path framing is optional, not mandatory:
+
+- Growing Up
+- Waking Up
+- Cleaning Up
+- Showing Up
+
+Target audience language profile (for example Amber-friendly, Orange-analytic, Green-dialogic):
+
+- Profile:
+- Accessibility rationale:
+- Terms to prefer:
+- Terms to avoid:
 
 ## 1) Strategic Intent (Why)
 
@@ -66,6 +91,11 @@ Define the real-world performance outcome:
 - Entry level assumptions:
 - Progression markers:
 - Mastery threshold:
+
+If target includes Amber-oriented learners:
+
+- Strengths-first framing used (duty, reliability, role clarity, contribution):
+- Transition framing used ("add" or "expand" rather than "replace"):
 
 ### 2.3 Lines
 
@@ -135,6 +165,17 @@ List explicit developmental lines used:
 - Restricting access rule:
 - Mastery threshold for advancement:
 
+## 4.4 Optional 4-Path Matrix (Editorial)
+
+Use when it improves learner clarity. Leave blank if not used.
+
+| Path | AQAL mapping | Level/Line fit | Learning activity |
+|---|---|---|---|
+| Growing Up |  |  |  |
+| Waking Up |  |  |  |
+| Cleaning Up |  |  |  |
+| Showing Up |  |  |  |
+
 ## 5) Assessment and Bias Control
 
 ### 5.1 Performance-based assessment
@@ -192,9 +233,15 @@ Mark required human actions:
 ## 8) Acceptance Checklist (Pre-Launch)
 
 - [ ] AQAL mapping completed across all five dimensions.
+- [ ] Dual-layer language (friendly + canonical) is applied in learner-facing sections where useful.
 - [ ] Learn/Practice/Reflect/Assess/Integrate structure present.
 - [ ] Retrieval + spacing/interleaving are explicitly designed.
 - [ ] Evidence checklist completed and citations verified.
 - [ ] Safety standard applied (if emotionally intense content exists).
 - [ ] Accessibility checks pass WCAG 2.2 criteria.
 - [ ] Human-required steps are assigned to named owners.
+
+Optional checks:
+
+- [ ] 4-path framing included where it improves accessibility.
+- [ ] Amber language profile check completed where relevant.

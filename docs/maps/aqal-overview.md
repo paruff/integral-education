@@ -13,7 +13,7 @@ Developed by Ken Wilber, AQAL is the most comprehensive map of human experience 
 
 ---
 
-## The Four Quadrants
+## Where (Quadrants)
 
 The four quadrants divide reality into four irreducible perspectives:
 
@@ -26,7 +26,7 @@ All four are real and necessary. Reducing reality to only one quadrant is a **pa
 
 ---
 
-## Levels of Development
+## Depth (Levels)
 
 Levels represent stages of increasing complexity and capacity. Key levels (using color-coded spiral dynamics notation):
 
@@ -45,7 +45,7 @@ Development is *transcend and include* — each level includes and goes beyond t
 
 ---
 
-## Lines of Development
+## Skills (Lines)
 
 Lines are relatively independent developmental streams:
 
@@ -60,7 +60,7 @@ A person can be at different levels on different lines (e.g., high cognitive, lo
 
 ---
 
-## States of Consciousness
+## Experience (States)
 
 States are temporary experiences of consciousness:
 
@@ -74,7 +74,7 @@ States are temporary experiences of consciousness:
 
 ---
 
-## Types
+## Style (Types)
 
 Types are stable styles that cut across levels, lines, and states:
 
@@ -92,6 +92,15 @@ When facing a challenge, ask:
 3. **Line check**: Which developmental line is most relevant here?
 4. **State check**: What state of consciousness is most supportive for this work?
 5. **Type check**: How do different personality types approach this situation?
+
+## Optional 4-Path Lens
+
+Use this lens when it improves learner accessibility:
+
+- **Growing Up**: developmental complexity and perspective-taking
+- **Waking Up**: awareness and state training
+- **Cleaning Up**: shadow integration and trigger repair
+- **Showing Up**: ethical participation and systems contribution
 
 ---
 

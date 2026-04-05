@@ -70,6 +70,7 @@ npm run deploy  # deploy to GitHub Pages
 Use these as the canonical standards for contributors and Copilot:
 
 - [Instructional Design Protocol](docs/quality/instructional-design-protocol.md)
+- [AQAL Label Crosswalk](docs/maps/aqal-label-crosswalk.md)
 - [Evidence-Vetting Checklist](docs/quality/evidence-vetting-checklist.md)
 - [Peer Review SOP](docs/quality/peer-review-sop.md)
 - [Shadowwork Safety Standard](docs/safety/shadowwork-safety-standard.md)

@@ -28,6 +28,7 @@ const sidebars = {
       label: 'Maps',
       items: [
         'maps/aqal-overview',
+        'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',
         'maps/ilp-practice-taxonomy',
       ],

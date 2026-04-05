@@ -13,6 +13,14 @@ labels: [enhancement, roadmap, aqal, copilot-implementable, human-recommended]
 - Required facilitators (if any):
 - Related backlog issue(s):
 
+## 0.1 Language and Accessibility Layer (Editorial)
+
+- Audience language profile (for example Amber-friendly, Orange-analytic, Green-dialogic):
+- Dual-layer labels planned (Where/Depth/Skills/Experience/Style with canonical in parentheses):
+- Accessibility rationale for chosen labels:
+- Terms to prefer:
+- Terms to avoid:
+
 ## 1) Strategic Intent (Why)
 
 ### 1.1 Target Transfer Outcome
@@ -44,6 +52,11 @@ labels: [enhancement, roadmap, aqal, copilot-implementable, human-recommended]
 - Entry level assumptions:
 - Progression markers:
 - Mastery threshold:
+
+If targeting Amber-oriented learners:
+
+- Strengths-first framing (duty, reliability, role clarity, contribution):
+- Transition framing (add/expand vs replace/reject):
 
 ### 2.3 Lines
 
@@ -111,6 +124,17 @@ labels: [enhancement, roadmap, aqal, copilot-implementable, human-recommended]
 - Restricting access rule:
 - Mastery threshold for advancement:
 
+### 4.4 Optional 4-Path Matrix (Editorial)
+
+Use only when it improves learner accessibility.
+
+| Path | AQAL mapping | Level/Line fit | Learning activity |
+|---|---|---|---|
+| Growing Up |  |  |  |
+| Waking Up |  |  |  |
+| Cleaning Up |  |  |  |
+| Showing Up |  |  |  |
+
 ## 5) Assessment and Bias Control
 
 ### 5.1 Performance-Based Assessment
@@ -166,6 +190,7 @@ labels: [enhancement, roadmap, aqal, copilot-implementable, human-recommended]
 ## 8) Acceptance Checklist (Pre-Launch)
 
 - [ ] AQAL mapping completed across quadrants, levels, lines, states, and types.
+- [ ] Dual-layer labels (friendly + canonical) used where helpful.
 - [ ] Learn/Practice/Reflect/Assess/Integrate structure is present.
 - [ ] Retrieval plus spacing/interleaving are explicitly designed.
 - [ ] Evidence checklist completed and citations verified.
@@ -173,8 +198,14 @@ labels: [enhancement, roadmap, aqal, copilot-implementable, human-recommended]
 - [ ] Accessibility checks pass WCAG 2.2 criteria.
 - [ ] Human-required steps assigned to named owners.
 
+Optional checks:
+
+- [ ] 4-path framing included where useful (not mandatory).
+- [ ] Amber language profile reviewed where relevant.
+
 ## Canonical References
 
+- docs/maps/aqal-label-crosswalk.md
 - docs/implementation/integral-aqal-protocol-template.md
 - docs/quality/instructional-design-protocol.md
 - docs/quality/evidence-vetting-checklist.md

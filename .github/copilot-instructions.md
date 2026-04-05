@@ -3,6 +3,7 @@
 This repository builds an evidence-based integral learning platform. Copilot should optimize for instructional rigor, safety, and implementation speed while respecting human-only boundaries.
 
 Canonical protocol reference:
+- `docs/maps/aqal-label-crosswalk.md`
 - `docs/quality/instructional-design-protocol.md`
 - `docs/quality/evidence-vetting-checklist.md`
 - `docs/quality/peer-review-sop.md`

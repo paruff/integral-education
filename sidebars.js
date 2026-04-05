@@ -35,7 +35,11 @@ const sidebars = {
     {
       type: 'category',
       label: 'Implementation',
-      items: ['implementation/backlog'],
+      items: [
+        'implementation/product-charter',
+        'implementation/raci',
+        'implementation/backlog',
+      ],
     },
     {
       type: 'category',

@@ -36,6 +36,8 @@ const sidebars = {
       type: 'category',
       label: 'Implementation',
       items: [
+        'implementation/product-charter',
+        'implementation/raci',
         'implementation/backlog',
         'implementation/integral-aqal-protocol-template',
         'implementation/permaculture-implementation-protocol',

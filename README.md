@@ -1,6 +1,6 @@
 # Integral Education Platform
 
-A mastery-based learning platform built on the [AQAL framework](https://integrallife.com/aqal-map/) — All Quadrants, All Levels, All Lines, All States, All Types.
+A mastery-based learning platform built on the [AQAL framework](https://integrallife.com/) — All Quadrants, All Levels, All Lines, All States, All Types.
 
 Built with [Docusaurus](https://docusaurus.io/) and deployed to GitHub Pages.
 

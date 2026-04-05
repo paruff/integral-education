@@ -27,12 +27,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Install ripgrep
+        run: sudo apt-get install -y ripgrep
+
       - name: Check For Hype Terms
         shell: bash
         run: |
           set -euo pipefail
           # Discourage overclaiming language in learning content.
-          if rg -n -i "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md; then
+          # Exclude quality/protocol docs that reference hype terms as examples to avoid.
+          if rg -n -i --glob '!docs/quality/**' "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md; then
             echo "Found prohibited hype language. Replace with evidence-quality wording."
             exit 1
           fi

@@ -14,6 +14,7 @@ Audience: adult learners ready for low-to-moderate intensity shadow practices wi
 - Explicit consent required before each shadow sequence.
 - Tier 1 default; Tier 2 only with facilitator oversight.
 - Tier 3 excluded from this pilot.
+- **Stop rules:** Discontinue immediately if a learner reports acute distress, dissociation, or requests to stop. Do not resume without facilitator check-in.
 
 ## Weekly Arc
 

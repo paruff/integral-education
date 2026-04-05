@@ -1,0 +1,97 @@
+name: Content Protocol
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - docs/**
+      - README.md
+      - .github/workflows/content-protocol.yml
+  push:
+    branches: [main]
+    paths:
+      - docs/**
+      - README.md
+      - .github/workflows/content-protocol.yml
+
+permissions:
+  contents: read
+
+jobs:
+  protocol-guardrails:
+    name: Protocol Guardrails
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check For Hype Terms
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Discourage overclaiming language in learning content.
+          if rg -n -i "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md; then
+            echo "Found prohibited hype language. Replace with evidence-quality wording."
+            exit 1
+          fi
+
+      - name: Check Shadow Safety Language
+        shell: bash
+        run: |
+          set -euo pipefail
+          shadow_files=$(rg --files docs | rg -i "shadow|safety")
+          if [[ -z "${shadow_files}" ]]; then
+            echo "No shadow/safety files detected in docs. Skipping safety-language check."
+            exit 0
+          fi
+
+          required_patterns=(
+            "consent"
+            "contraindication|not suitable"
+            "stop rule|stop rules"
+            "grounding"
+            "escalation"
+          )
+
+          while IFS= read -r f; do
+            for p in "${required_patterns[@]}"; do
+              if ! rg -n -i "${p}" "${f}" >/dev/null; then
+                echo "Missing required safety language pattern '${p}' in ${f}"
+                exit 1
+              fi
+            done
+          done <<< "${shadow_files}"
+
+          echo "Shadow/safety language checks passed."
+
+      - name: Check AQAL Coverage Tokens
+        shell: bash
+        run: |
+          set -euo pipefail
+          aqal_files=$(rg --files docs | rg -i "aqal|integral|module|pathway")
+          if [[ -z "${aqal_files}" ]]; then
+            echo "No AQAL/integral files detected for token check."
+            exit 0
+          fi
+
+          tokens=(
+            "Quadrant|I, We, It, Its"
+            "Level"
+            "Line"
+            "State"
+            "Type"
+          )
+
+          while IFS= read -r f; do
+            missing=0
+            for t in "${tokens[@]}"; do
+              if ! rg -n -i "${t}" "${f}" >/dev/null; then
+                missing=1
+              fi
+            done
+            if [[ "${missing}" -eq 1 ]]; then
+              echo "AQAL token coverage may be incomplete in ${f}"
+            fi
+          done <<< "${aqal_files}"

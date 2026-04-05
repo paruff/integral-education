@@ -1,0 +1,89 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 1rem 3rem;
+}
+
+.hero {
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border: 1px solid #d6dde6;
+  border-radius: 0.75rem;
+  background: linear-gradient(120deg, #f0f7ff, #f8fcff);
+}
+
+.hero h1 {
+  margin: 0 0 0.5rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid #d6dde6;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  background: #ffffff;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.card select,
+.card input[type='range'] {
+  width: 100%;
+  margin-top: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.infoBox {
+  border: 1px solid #dbe6f2;
+  background: #f7fbff;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+}
+
+.stepList {
+  padding-left: 1.2rem;
+}
+
+.checkboxRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.7rem;
+}
+
+.note {
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.retrievalList {
+  padding-left: 1.2rem;
+}
+
+.sliderGroup {
+  margin-bottom: 0.65rem;
+}
+
+.links {
+  margin-top: 1.25rem;
+  border: 1px solid #d6dde6;
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.links ul {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

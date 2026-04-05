@@ -18,6 +18,11 @@ function HomepageHeader() {
             to="/docs/intro">
             Get Started →
           </Link>
+          <Link
+            className="button button--outline button--lg margin-left--md"
+            to="/prototype">
+            Open Prototype
+          </Link>
         </div>
       </div>
     </header>
@@ -55,7 +60,11 @@ export default function Home() {
               <p>Reference maps and daily practices to orient your development.</p>
               <Link to="/docs/maps/aqal-overview">AQAL Overview</Link>
               <br />
+              <Link to="/docs/maps/aqal-competency-map">AQAL Competency Map</Link>
+              <br />
               <Link to="/docs/reflections/daily-template">Daily Reflection</Link>
+              <br />
+              <Link to="/prototype">Interactive Prototype</Link>
             </div>
           </div>
         </div>

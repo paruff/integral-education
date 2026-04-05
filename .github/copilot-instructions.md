@@ -2,6 +2,14 @@
 
 This repository builds an evidence-based integral learning platform. Copilot should optimize for instructional rigor, safety, and implementation speed while respecting human-only boundaries.
 
+Canonical protocol reference:
+- `docs/quality/instructional-design-protocol.md`
+- `docs/quality/evidence-vetting-checklist.md`
+- `docs/quality/peer-review-sop.md`
+- `docs/implementation/integral-aqal-protocol-template.md`
+
+When generating or editing learning content, Copilot must align output to these protocol documents before proposing completion.
+
 ## Product Constraints
 
 - Use evidence-based instructional design over intuition.

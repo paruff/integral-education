@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Start with AQAL Module or Pathway Template
+    url: https://github.com/paruff/integral-education/issues/new?template=aqal-module-pathway.md
+    about: Use this for all new Integral Theory/AQAL learning modules and pathways.
+  - name: Instructional Design Protocol (Canonical)
+    url: https://github.com/paruff/integral-education/blob/main/docs/quality/instructional-design-protocol.md
+    about: Required quality standard for all learning content.
+  - name: Integral AQAL Protocol Template
+    url: https://github.com/paruff/integral-education/blob/main/docs/implementation/integral-aqal-protocol-template.md
+    about: Use this template to draft protocol-ready implementation plans.

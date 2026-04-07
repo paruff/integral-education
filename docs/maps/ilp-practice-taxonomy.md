@@ -233,7 +233,7 @@ Each ladder covers **Levels 1–4** (Beginner → Advanced). Criteria for advanc
 | Boundary | Specification |
 |---|---|
 | Consent | Explicit informed consent required before any shadow practice begins. Consent must be renewed when advancing levels. |
-| Tier classification | Level 1 = Tier 1 (self-guided allowed). Level 2 = Tier 1 with safety prompts. Level 3 = Tier 2 (facilitator-supervised recommended). Level 4 = Tier 2/3 (facilitator-led only). |
+| Tier classification | Level 1 = Tier 1 (self-guided allowed). Level 2 = Tier 1 with safety prompts. Level 3 = Tier 2 (facilitator-supervised recommended). Level 4 = Tier 3 (facilitator-led only). |
 | Entry check | Distress check-in required at session start. Learner must report current emotional state before proceeding. |
 | Stop rules | Escalating panic, dissociation, inability to orient, or any expression of risk to self or others requires immediate stop. Shift to grounding protocol. |
 | Grounding menu | Breath anchor (4-count inhale, 6-count exhale), sensory orientation (5 senses named), physical movement reset (shake or walk). |
@@ -276,7 +276,7 @@ Each practice implementation must define the following fields:
 | AQAL tags | Quadrant(s), Level, Line(s), State, Type notes |
 | Duration | Short / Medium / Long / Extended |
 | Intensity | Low / Moderate / High |
-| Tier | 1 / 2 / 3 (safety tier per Shadowwork Safety Standard) |
+| Tier | 1 / 2 / 3 (safety tier; applies to Shadow and Spirit/Meaning practices per [Shadowwork Safety Standard](../safety/shadowwork-safety-standard); mark N/A for Body, Mind, Ethics, Relationships, and Service practices unless emotionally elevated) |
 | Instructions | Step-by-step learner-facing directions |
 | Reflection prompt | Open-ended prompt for post-practice journaling |
 | Evidence capture | Method for documenting completion |
@@ -297,7 +297,7 @@ Each practice implementation must define the following fields:
 | ILP-SPIRIT-001 | Spirit/Meaning | Short (3–5 min) | Low | Low | 1 | Morning values anchor |
 | ILP-SPIRIT-003 | Spirit/Meaning | Long (20–30 min) | High | Medium | 2 | Post-module meaning debrief |
 | ILP-SHADOW-001 | Shadow | Short (3–5 min) | Low | Low | 1 | Daily emotion noting |
-| ILP-SHADOW-002 | Shadow | Medium (10–15 min) | Moderate | Medium | 2 | Trigger-pattern review after 72h |
+| ILP-SHADOW-002 | Shadow | Medium (10–15 min) | Moderate | Medium | 1 | Trigger-pattern review after 72h |
 | ILP-SHADOW-004 | Shadow | Long (20–30 min) | High | Elevated | 3 | Facilitator-gated integration session |
 | ILP-ETHICS-002 | Ethics | Medium (10–15 min) | Moderate | Low | 1 | Weekly values-action audit |
 | ILP-REL-003 | Relationships | Long (20–30 min) | Moderate | Medium | 2 | Peer feedback comparison loop |
@@ -310,7 +310,7 @@ Each practice implementation must define the following fields:
 - Pair each concept lesson with one short practice from the relevant family.
 - Insert retrieval prompts 24 h, 72 h, and 7 d after initial exposure.
 - Alternate families across weeks to support interleaving.
-- Keep High-intensity and Tier 2–3 practices facilitator-gated.
+- Keep High-intensity and Tier 2–3 practices in Facilitated mode.
 - Do not schedule Shadow practices in the first week of any new cohort.
 - Sequence Body or Mind practices before Shadow or Spirit practices in any single session.
 

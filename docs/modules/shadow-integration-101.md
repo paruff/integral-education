@@ -77,3 +77,19 @@ A: Attributing your own disowned traits to other people
 
 Q: What is the goal of shadow integration?
 A: To make the unconscious conscious — own and relate to disowned qualities
+
+---
+
+# ⚠️ Safety Notes
+
+> **Tier 1 practice (self-guided with safety prompts). Not a substitute for therapy or clinical care.**
+
+**Consent:** Proceed only if you are willing to explore potentially uncomfortable feelings at a manageable pace. You may pause or stop at any time.
+
+**Contraindications:** This practice is not suitable if you are currently in acute emotional distress, experiencing a trauma response, or working through active PTSD without professional support. If in doubt, consult a qualified practitioner before starting.
+
+**Stop rules:** Stop immediately if you feel overwhelmed, dissociated, or unable to orient to your surroundings. Return to the grounding practice below.
+
+**Grounding:** If distress arises, pause and use a grounding reset — breathe slowly (4-count inhale, 6-count exhale), name five things you can see, and place both feet flat on the floor.
+
+**Escalation:** If distress persists after grounding, step away from the practice and contact a trusted support person or qualified counsellor. Do not continue the exercise alone.

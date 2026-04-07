@@ -30,7 +30,17 @@ Audience: adult learners ready for low-to-moderate intensity shadow practices wi
 - Retrieval loops at 24h, 72h, and 7d on safety cues and core concepts.
 - Weekly mixed-topic interleaving includes emotion labeling, projection spotting, and repair language.
 
-## Core Practice Flow
+## Stop Rules
+
+Stop the practice immediately if any of the following occur:
+
+- Escalating panic, dissociation, or inability to orient to the present.
+- Expression of risk to self or others.
+- Repeated inability to self-regulate with the provided grounding protocol.
+
+When stop rules are triggered: exit the activity, use the grounding protocol, and notify the facilitator channel.
+
+
 
 1. Consent check and readiness scan.
 2. Practice briefing with contraindications.

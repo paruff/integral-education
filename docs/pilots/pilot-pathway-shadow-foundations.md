@@ -15,6 +15,18 @@ Audience: adult learners ready for low-to-moderate intensity shadow practices wi
 - Tier 1 default; Tier 2 only with facilitator oversight.
 - Tier 3 excluded from this pilot.
 
+## Stop Rules
+
+Discontinue the practice immediately if any of the following occur:
+
+- Participant reports acute distress, dissociation, or overwhelm.
+- Somatic symptoms (rapid heart rate, shallow breathing, trembling) do not resolve within 2 minutes of grounding.
+- Participant expresses active self-harm ideation.
+- Facilitator (where present) judges that safe container has been lost.
+
+After stopping, follow the grounding protocol and escalation path documented in the facilitator runbook.
+Contraindications for participation include active trauma processing with a therapist, recent major loss (< 90 days), or unmanaged psychiatric symptoms. When in doubt, refer to a qualified human before resuming.
+
 ## Weekly Arc
 
 | Week | Focus | Safety Tier | Assessment |

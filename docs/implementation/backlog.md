@@ -62,8 +62,8 @@ This backlog is designed so Copilot can implement technical and documentation it
 - Tags: `[COPILOT] [HUMAN-RECOMMENDED]`
 - Outcome: Repeatable quality gate for claims, citations, and overstatement control.
 - Tasks:
-  - [ ] Build a checklist for source class, methods, causality limits, and citation validity. `[COPILOT]`
-  - [ ] Add red-flag list for hype language and uncited AI content. `[COPILOT]`
+  - [x] Build a checklist for source class, methods, causality limits, and citation validity. `[COPILOT]` → [`evidence-vetting-checklist`](../quality/evidence-vetting-checklist)
+  - [x] Add red-flag list for hype language and uncited AI content. `[COPILOT]` → [`evidence-vetting-checklist`](../quality/evidence-vetting-checklist)
   - [ ] Approve policy for claims escalation and rejection criteria. `[HUMAN-REQUIRED]`
 
 ### Issue E3-2: Peer review SOP (`M1`)

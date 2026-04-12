@@ -30,6 +30,8 @@ Related backlog issue: E5-1.
 
 ### Levels
 
+Levels use the L1–L4 bands defined in the [AQAL Competency Map](../maps/aqal-competency-map): L1 (Foundational) → L2 (Differentiated) → L3 (Integrative) → L4 (Transformative).
+
 - Entry level assumption: L1–L2 (learners can name basic concepts and apply them in familiar contexts).
 - Progression target: L2–L3 (learners apply concepts independently across moderately novel contexts by week 4).
 - Mastery threshold: consistent L2 performance across all four quadrants, with evidence of emerging L3 integration in the capstone task.
@@ -57,7 +59,7 @@ Related backlog issue: E5-1.
 ## Design Constraints
 
 - Microlearning units are 3-5 minutes, one concept each.
-- Every week includes retrieval at 24 h, 72 h, and 7 d.
+- Every week includes retrieval at 24h, 72h, and 7d.
 - Interleaving progression: weeks 1-2 use AABBCC blocked practice; weeks 3-4 use ABCABC interleaved practice.
 
 ## Weekly Arc
@@ -295,16 +297,20 @@ Passing threshold: ≥ 11 / 15 (sum across all dimensions).
 - Require citation or a specific example for every non-trivial claim in reflections and memos.
 - For learners who default strongly to one quadrant, offer an optional "counter-quadrant" challenge: frame the same scenario from the least-preferred quadrant first.
 - Facilitator is not required for Tier 1 delivery; a course moderator checking in at the end of each week is recommended for cohort settings.
+- Performance task passing thresholds are intentionally scaffolded: week 1 sets a low bar (≥ 5/9, ~56%) to build confidence and reveal gaps; thresholds rise to ≥ 8/12 (67%) in week 2, ≥ 9/12 (75%) in week 3, and ≥ 11/15 (73%) in week 4. Faculty may adjust thresholds based on cohort readiness data from the pilot.
 
 ---
 
 ## Evidence and Citations
 
+Evidence quality tiers follow the definitions in the [Evidence Vetting Checklist](../quality/evidence-vetting-checklist): Tier 1 = RCT or meta-analysis; Tier 2 = strong observational or systematic review; Tier 3 = theoretical or expert consensus.
+
 | Claim | Source | Evidence Quality Tier | Caveat |
 |---|---|---|---|
 | Retrieval practice improves long-term retention compared to re-reading | Roediger & Karpicke (2006), *Psychological Science* | Tier 1 (RCT) | Effect sizes vary by material complexity; quizzes must be low-stakes to avoid test anxiety |
 | Interleaved practice produces stronger transfer than blocked practice | Kornell & Bjork (2008), *Journal of Experimental Psychology* | Tier 1 (RCT) | Interleaving initially feels harder; learner briefing on this effect is recommended |
-| Spacing practice across 24 h, 72 h, and 7 d optimizes retention curves | Cepeda et al. (2006), *Psychological Bulletin* | Tier 1 (meta-analysis) | Optimal spacing ratios depend on retention interval; 7-day gap is a conservative estimate |
+| Spacing practice across 24h, 72h, and 7d optimizes retention curves | Cepeda et al. (2006), *Psychological Bulletin* | Tier 1 (meta-analysis) | Optimal spacing ratios depend on retention interval; 7-day gap is a conservative estimate |
+| Interleaving outperforms blocked practice on transfer and post-delay retention | Rohrer & Taylor (2007), *Instructional Science* | Tier 1 (experimental) | Effect observed primarily with procedural tasks; concept-based tasks show similar patterns |
 | Multiple intelligences (Gardner) supports distinct developmental lines concept | Gardner (1983), *Frames of Mind* | Tier 3 (theoretical) | Empirical support for strict modularity is contested; use as a heuristic, not a biological fact |
 | AQAL framework as an integral meta-theory | Wilber (2000), *A Theory of Everything* | Tier 3 (theoretical) | Empirical validation of the full AQAL system is limited; treat as an organizational heuristic |
 

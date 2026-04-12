@@ -88,6 +88,7 @@ This backlog is designed so Copilot can implement technical and documentation it
 - Tags: `[HUMAN-REQUIRED]`
 - Outcome: Verified facilitator training and supervision protocol.
 - Tasks:
+  - [x] Draft qualification standard scaffold with minimums, supervision ratios, certification pathway, and incident-response roster template. `[COPILOT]` → [`facilitator-qualification-standard`](../safety/facilitator-qualification-standard)
   - [ ] Define qualification minimums and supervision ratio. `[HUMAN-REQUIRED]`
   - [ ] Certify facilitators for Tier 2 and Tier 3 delivery. `[HUMAN-REQUIRED]`
   - [ ] Establish incident response roster. `[HUMAN-REQUIRED]`

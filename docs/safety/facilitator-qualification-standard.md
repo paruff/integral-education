@@ -48,6 +48,7 @@ A facilitator is not required for Tier 1 delivery. If a facilitator is present o
 | Shadow protocol training | Completed (≥ 8 hours, documented) | `[HUMAN-REQUIRED]` verify |
 | Supervised facilitation hours | ≥ 10 hours documented at Tier 1 or above | `[HUMAN-REQUIRED]` verify |
 | Observed practice evaluation | At least 1 observed session with written evaluation | `[HUMAN-REQUIRED]` verify |
+| Consent and contraindications delivery | Able to present informed consent language, review contraindications, and verify entry criteria before each session | `[HUMAN-REQUIRED]` verify |
 | Incident response certification | Completed; renewal annually | `[HUMAN-REQUIRED]` verify |
 | Live debrief capability | Demonstrated in observed evaluation | `[HUMAN-REQUIRED]` verify |
 | Clinical supervisor access | Supervisor identified; consultation available within 48 hours | `[HUMAN-REQUIRED]` assign |
@@ -61,6 +62,7 @@ A facilitator is not required for Tier 1 delivery. If a facilitator is present o
 | Shadow protocol training | Completed (≥ 20 hours, documented) | `[HUMAN-REQUIRED]` verify |
 | Supervised facilitation hours | ≥ 40 hours documented (≥ 10 at Tier 2 or higher) | `[HUMAN-REQUIRED]` verify |
 | Observed practice evaluations | At least 2 observed sessions at Tier 2 with written evaluations | `[HUMAN-REQUIRED]` verify |
+| Consent and contraindications delivery | Able to present full Tier 3 informed consent, clinical self-report screen review, and individual pre-clearance for each participant | `[HUMAN-REQUIRED]` verify |
 | Incident response certification | Completed; renewal annually | `[HUMAN-REQUIRED]` verify |
 | Live debrief capability | Demonstrated; debrief script on file | `[HUMAN-REQUIRED]` verify |
 | Clinical supervisor access | Required; same-day or on-call consultation available | `[HUMAN-REQUIRED]` assign |

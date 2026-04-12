@@ -80,7 +80,7 @@ Tier 1 does not require a qualified facilitator. However, if a facilitator is pr
 |---|---|
 | Structured parts dialogue | Written or spoken inner dialogue with differentiated parts of self using a structured protocol |
 | Role reversal | Perspective-taking exercise imagining the point of view of a person in conflict |
-| Guided interpersonal repair | Structured exploration of past interpersonal ruptures and possible repair pathways |
+| Guided interpersonal repair reflection | Internal structured exploration of past interpersonal ruptures and possible repair pathways; does not involve other parties or constitute relationship counselling |
 | Parts mapping | Visual or written inventory of internal sub-personalities and their protective functions |
 | Shadow letter writing | Written letter to a disowned quality, not sent; used for integration only |
 
@@ -92,7 +92,7 @@ Tier 1 does not require a qualified facilitator. However, if a facilitator is pr
 | Tier 1 experience | Demonstrated consistent Tier 1 practice for a minimum of one week |
 | Self-regulation demonstrated | Documented ability to use grounding independently during elevated states |
 | Distress check-in | Current distress level rated ≤ 4 / 10 at session start |
-| Contraindications review | Confirms no current dissociative episodes, no active suicidal ideation, and no recent major trauma exposure (within 30 days) without professional support |
+| Contraindications review | Confirms no current dissociative episodes, no active suicidal ideation, and no highly distressing event (e.g., bereavement, accident, assault, or sudden significant loss) experienced within the past 30 days without ongoing professional support. Facilitator reviews participant self-report before granting clearance. |
 | Facilitator briefing | Facilitator has reviewed participant readiness and agreed to supervise |
 
 ### Facilitator Qualifications
@@ -138,7 +138,7 @@ Tier 1 does not require a qualified facilitator. However, if a facilitator is pr
 | Prior tier completion | Documented Tier 2 experience and demonstrated stable self-observation at Tier 2 |
 | Clinical screening | Completed a brief clinical self-report screen; facilitator has reviewed and cleared results |
 | Distress check-in | Current distress level rated ≤ 3 / 10 at session start; rated above 3 = automatic deferral |
-| Contraindications review | No active psychotic symptoms, no acute suicidal/homicidal ideation, no ongoing substance dependency without clinical support |
+| Contraindications review | No active psychotic symptoms; no acute suicidal or homicidal ideation; no alcohol or drug use in the 24 hours before the session; participants in active recovery with documented clinical support may be considered eligible at facilitator and clinical supervisor discretion |
 | Emergency contact on file | Participant has provided an emergency contact and consent to contact if escalation is required |
 | Facilitator pre-clearance | Lead facilitator has individually cleared participant for Tier 3 engagement |
 
@@ -233,7 +233,7 @@ All tiers share access to these foundational grounding tools:
 
 1. Co-facilitator initiates physical grounding cues: "Press your feet firmly into the floor. Feel the weight of your body in the chair."
 2. Lead facilitator uses slow, calm, directive language. Avoid open-ended questions during acute distress.
-3. Breath anchor guided at 1:1.5 inhale-to-exhale ratio over 5 cycles.
+3. Guide the core grounding breath anchor (4-count inhale, 2-count hold, 6-count exhale) for a minimum of 5 cycles, modelling the count aloud.
 4. Sensory orientation exercise: facilitator names objects in the room for the participant to locate and touch.
 5. If participant is not re-oriented within 5 minutes, do not continue any practice; shift to presence-only support.
 6. After re-orientation: offer the safe-place visualization; close session; do not return to the protocol.
@@ -316,7 +316,7 @@ All tiers share access to these foundational grounding tools:
 | Level 1 (Monitor) | Tier 1 stop-rule fires; distress self-resolves with grounding | Log incident; monitor; no immediate escalation |
 | Level 2 (Notify) | Tier 2 stop-rule fires; facilitator delivers grounding; participant stabilizes | Document; notify facilitation lead within 24 hours; follow-up check-in required |
 | Level 3 (Escalate) | Tier 3 stop-rule fires; participant does not stabilize within 5 minutes | Facilitator contacts clinical supervisor; initiate aftercare plan; document full incident |
-| Level 4 (Crisis) | Any tier: risk to self or others expressed; participant in acute crisis | Activate emergency contact immediately; contact crisis services if appropriate; do not leave participant unaccompanied; document and report within 2 hours |
+| Level 4 (Crisis) | Any tier: risk to self or others expressed; participant in acute crisis | Activate emergency contact immediately; the certified facilitator (or, if absent, the most senior person present) determines whether emergency services (e.g., 911 / 999) or a crisis line (e.g., 988 Suicide &amp; Crisis Lifeline) should be contacted based on immediacy of risk; do not leave participant unaccompanied; document and report within 2 hours |
 
 ---
 

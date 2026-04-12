@@ -107,8 +107,8 @@ This backlog is designed so Copilot can implement technical and documentation it
 - Tags: `[COPILOT] [HUMAN-RECOMMENDED]`
 - Outcome: 4-week low-risk shadow pathway with strong consent and safeguards.
 - Tasks:
-  - [ ] Draft protocol-aligned microlearning plan and reflection prompts. `[COPILOT]`
-  - [ ] Add safety checkpoints and escalation path per tier model. `[COPILOT]`
+  - [x] Draft protocol-aligned microlearning plan and reflection prompts. `[COPILOT]` → [`pilot-pathway-shadow-foundations`](../pilots/pilot-pathway-shadow-foundations)
+  - [x] Add safety checkpoints and escalation path per tier model. `[COPILOT]` → [`pilot-pathway-shadow-foundations`](../pilots/pilot-pathway-shadow-foundations)
   - [ ] Approve launch readiness by safety board. `[HUMAN-REQUIRED]`
 
 ### Issue E5-3: Clickable prototype (`M2`)

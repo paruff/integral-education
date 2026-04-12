@@ -70,8 +70,8 @@ This backlog is designed so Copilot can implement technical and documentation it
 - Tags: `[COPILOT] [HUMAN-RECOMMENDED]`
 - Outcome: Standardized review workflow for complex modules and controversial topics.
 - Tasks:
-  - [ ] Define reviewer roles, rounds, and acceptance thresholds. `[COPILOT]`
-  - [ ] Add structured decision log and dissent capture. `[COPILOT]`
+  - [x] Define reviewer roles, rounds, and acceptance thresholds. `[COPILOT]` → [`peer-review-sop`](../quality/peer-review-sop)
+  - [x] Add structured decision log and dissent capture. `[COPILOT]` → [`peer-review-sop`](../quality/peer-review-sop)
   - [ ] Staff qualified reviewers and run calibration session. `[HUMAN-REQUIRED]`
 
 ## Epic 4: Shadowwork Safety and Facilitation Standards

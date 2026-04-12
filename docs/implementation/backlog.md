@@ -80,8 +80,8 @@ This backlog is designed so Copilot can implement technical and documentation it
 - Tags: `[COPILOT] [HUMAN-RECOMMENDED]`
 - Outcome: Tiered risk model with delivery constraints and escalation pathways.
 - Tasks:
-  - [ ] Define Tier 1-3 practices and entry criteria. `[COPILOT]`
-  - [ ] Define stop rules, grounding protocols, and documentation requirements. `[COPILOT]`
+  - [x] Define Tier 1-3 practices and entry criteria. `[COPILOT]` → [`shadowwork-safety-standard`](../safety/shadowwork-safety-standard)
+  - [x] Define stop rules, grounding protocols, and documentation requirements. `[COPILOT]` → [`shadowwork-safety-standard`](../safety/shadowwork-safety-standard)
   - [ ] Clinical and legal review of safety model. `[HUMAN-REQUIRED]`
 
 ### Issue E4-2: Facilitator qualification standard (`M2`)

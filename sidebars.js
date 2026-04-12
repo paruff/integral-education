@@ -56,7 +56,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'Safety',
-      items: ['safety/shadowwork-safety-standard'],
+      items: [
+        'safety/shadowwork-safety-standard',
+        'safety/facilitator-qualification-standard',
+      ],
     },
     {
       type: 'category',

@@ -329,7 +329,7 @@ If a learner encounters distress during any reflective activity:
 
 ## Prototype Preview
 
-Explore this pathway's learner flow in the [Interactive Prototype](/prototype) before pilot deployment. It demonstrates pathway selection and practice flow with safety gates. You can also preview retrieval loop scheduling and rubric-based assessment scoring.
+Explore this pathway's learner flow in the [Interactive Prototype](https://paruff.github.io/integral-education/prototype) before pilot deployment. It demonstrates pathway selection and practice flow with safety gates. You can also preview retrieval loop scheduling and rubric-based assessment scoring.
 
 ## Faculty Review Checklist `[HUMAN-REQUIRED]`
 

@@ -327,6 +327,10 @@ If a learner encounters distress during any reflective activity:
 
 ---
 
+## Prototype Preview
+
+Explore this pathway's learner flow in the [Interactive Prototype](/prototype) before pilot deployment. It demonstrates pathway selection and practice flow with safety gates. You can also preview retrieval loop scheduling and rubric-based assessment scoring.
+
 ## Faculty Review Checklist `[HUMAN-REQUIRED]`
 
 Before publishing this pathway for pilot deployment, a faculty facilitator must review and approve each item:

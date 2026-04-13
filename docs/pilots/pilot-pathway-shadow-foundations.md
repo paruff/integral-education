@@ -479,6 +479,10 @@ Learners who have recently experienced significant trauma, loss, assault, or a c
 
 ---
 
+## Prototype Preview
+
+Explore this pathway's learner flow in the [Interactive Prototype](https://paruff.github.io/integral-education/prototype) before pilot deployment. It demonstrates pathway selection (including Pathway B: Shadow Foundations) and practice flow with safety gates and consent checkpoints. You can also preview retrieval loop scheduling and rubric-based assessment scoring.
+
 ## Safety Board Review Checklist `[HUMAN-REQUIRED]`
 
 Before publishing this pathway for pilot deployment, a safety board representative must review and approve each item:

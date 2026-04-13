@@ -76,6 +76,11 @@ const sidebars = {
       label: 'Reflection',
       items: ['reflections/daily-template'],
     },
+    {
+      type: 'link',
+      label: '🖱️ Interactive Prototype',
+      href: '/prototype',
+    },
   ],
 };
 

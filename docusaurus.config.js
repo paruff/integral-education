@@ -43,6 +43,11 @@ const config = {
             label: 'Learn',
           },
           {
+            to: '/prototype',
+            label: 'Prototype',
+            position: 'left',
+          },
+          {
             href: 'https://github.com/paruff/integral-education',
             label: 'GitHub',
             position: 'right',

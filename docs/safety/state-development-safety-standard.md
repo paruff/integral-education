@@ -32,7 +32,7 @@ The following conditions are **absolute contraindications** for intensive state 
 | Diagnosis of a dissociative disorder (e.g., DID, DPDR disorder) without active professional support | Causal and witnessing practices can intensify dissociative symptoms |
 | Active PTSD with uncontrolled hyperarousal or dissociation | State practices may re-trigger trauma responses and overwhelm self-regulation capacity |
 | Recent severe trauma (within the past 90 days) not yet stabilized with professional support | Insufficient integration window; state access can amplify unprocessed material |
-| Certain psychiatric medications (high-dose benzodiazepines, antipsychotics, mood stabilisers) | May unpredictably interact with altered-state induction; medical consultation required |
+| Certain psychiatric medications (high-dose benzodiazepines, antipsychotics, mood stabilizers) | May unpredictably interact with altered-state induction; medical consultation required |
 | Active suicidal ideation or self-harm urges | Crisis-level risk supersedes all developmental practice |
 | Severe depersonalization or derealization currently present | Core symptom may be worsened by causal or nondual practice |
 | Substance dependence or active misuse of psychoactive substances | Impaired capacity for volitional state navigation; safety monitoring unreliable |
@@ -77,7 +77,7 @@ Before beginning any intensive state practice (causal, witnessing, or nondual le
 | Grounding practices on standby | At least two somatic grounding practices (e.g., 5-4-3-2-1 sensory anchor, cold water on wrists, slow rhythmic breathing) reviewed and practiced before intensive work begins |
 | Informed consent | Learner has read and acknowledged all contraindications, warning signs, and stop rules in this document |
 | Distress baseline | Current distress level ≤ 3 / 10 at session start; learner has been stable for at least 2 weeks before entering intensive practice |
-| Gross-state baseline established | Learner has completed foundational gross-state and subtle-state modules and can reliably return to ordinary waking awareness |
+| Gross-state baseline established | Learner has completed foundational [gross-state](../modules/gross-state-awareness) and [subtle-state](../modules/subtle-state-access) modules and can reliably return to ordinary waking awareness (gross state = normal waking sensorimotor experience in AQAL) |
 | Support network active | At least one trusted person in learner's physical life is aware that intensive state work is occurring and can be contacted if needed |
 | No isolation | Learner is not currently living alone without any social contact; intensive state work must not occur in conditions of prolonged solitude |
 

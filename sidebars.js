@@ -26,6 +26,7 @@ const sidebars = {
         'modules/systems-thinking-101',
         'modules/gross-state-awareness',
         'modules/subtle-state-access',
+        'modules/flow-peak-experience',
         'modules/causal-witness-state',
         'modules/nondual-awareness-orientation',
       ],

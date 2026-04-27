@@ -31,6 +31,7 @@ const sidebars = {
         'modules/amber-mythic-orientation',
         'modules/rational-orange-orientation',
         'modules/cognitive-dissonance-bridge',
+        'modules/perspective-taking-capacity',
         {
           type: 'category',
           label: 'Rational → Pluralistic',

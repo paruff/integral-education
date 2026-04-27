@@ -23,6 +23,7 @@ const sidebars = {
         'modules/systems-thinking-101',
         'modules/gross-state-awareness',
         'modules/subtle-state-access',
+        'modules/causal-witness-state',
       ],
     },
     {

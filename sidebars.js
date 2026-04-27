@@ -30,6 +30,7 @@ const sidebars = {
           type: 'category',
           label: 'Rational → Pluralistic',
           items: [
+            'modules/late-orange-disillusionment',
             'modules/pluralistic-green-orientation',
           ],
         },

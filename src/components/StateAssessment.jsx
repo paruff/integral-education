@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from '@docusaurus/Link';
+import styles from './StateAssessment.module.css';
 
 // ─── Assessment data ──────────────────────────────────────────────────────────
 
@@ -175,121 +176,6 @@ const PROFILES = {
   },
 };
 
-// ─── Inline styles ────────────────────────────────────────────────────────────
-
-const styles = {
-  wrapper: {
-    fontFamily: 'inherit',
-    maxWidth: '780px',
-    margin: '0 auto',
-    padding: '0 0 2rem',
-  },
-  disclaimer: {
-    border: '1px solid #f0b429',
-    background: '#fffbea',
-    borderRadius: '0.5rem',
-    padding: '0.75rem 1rem',
-    marginBottom: '1.5rem',
-    fontSize: '0.9rem',
-  },
-  questionBlock: {
-    border: '1px solid #d6dde6',
-    borderRadius: '0.75rem',
-    padding: '1rem 1.25rem',
-    marginBottom: '1rem',
-    background: '#fff',
-  },
-  questionText: {
-    fontWeight: '600',
-    marginBottom: '0.75rem',
-  },
-  optionLabel: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '0.5rem',
-    marginBottom: '0.45rem',
-    cursor: 'pointer',
-    lineHeight: '1.45',
-  },
-  optionInput: {
-    marginTop: '0.2rem',
-    flexShrink: 0,
-  },
-  submitBtn: {
-    display: 'inline-block',
-    padding: '0.65rem 1.5rem',
-    background: '#2e7dce',
-    color: '#fff',
-    border: 'none',
-    borderRadius: '0.5rem',
-    fontSize: '1rem',
-    cursor: 'pointer',
-    marginTop: '0.5rem',
-  },
-  submitBtnDisabled: {
-    background: '#aab8c8',
-    cursor: 'not-allowed',
-  },
-  resetBtn: {
-    display: 'inline-block',
-    padding: '0.55rem 1.2rem',
-    background: 'transparent',
-    color: '#2e7dce',
-    border: '1px solid #2e7dce',
-    borderRadius: '0.5rem',
-    fontSize: '0.95rem',
-    cursor: 'pointer',
-    marginLeft: '0.75rem',
-  },
-  resultBox: {
-    border: '1px solid #b3d4f5',
-    background: '#f0f7ff',
-    borderRadius: '0.75rem',
-    padding: '1.25rem 1.5rem',
-    marginTop: '1.5rem',
-  },
-  resultTitle: {
-    marginTop: 0,
-    fontSize: '1.3rem',
-  },
-  moduleLinks: {
-    marginTop: '1rem',
-    display: 'flex',
-    flexWrap: 'wrap',
-    gap: '0.5rem',
-  },
-  moduleLink: {
-    padding: '0.4rem 0.9rem',
-    background: '#2e7dce',
-    color: '#fff',
-    borderRadius: '0.4rem',
-    textDecoration: 'none',
-    fontSize: '0.9rem',
-  },
-  moduleLinkSecondary: {
-    padding: '0.4rem 0.9rem',
-    background: 'transparent',
-    color: '#2e7dce',
-    border: '1px solid #2e7dce',
-    borderRadius: '0.4rem',
-    textDecoration: 'none',
-    fontSize: '0.9rem',
-  },
-  progressBar: {
-    height: '6px',
-    borderRadius: '3px',
-    background: '#d6dde6',
-    margin: '0.5rem 0 1.25rem',
-    overflow: 'hidden',
-  },
-  progressFill: {
-    height: '100%',
-    background: '#2e7dce',
-    transition: 'width 0.3s ease',
-    borderRadius: '3px',
-  },
-};
-
 // ─── Helper ───────────────────────────────────────────────────────────────────
 
 function tally(answers) {
@@ -330,8 +216,8 @@ export default function StateAssessment() {
   const profile = dominantKey ? PROFILES[dominantKey] : null;
 
   return (
-    <div style={styles.wrapper}>
-      <div style={styles.disclaimer}>
+    <div className={styles.wrapper}>
+      <div className={styles.disclaimer}>
         <strong>⚠️ Disclaimer:</strong> This is a self-reflection tool, not a clinical instrument. It is designed to support contemplative self-inquiry and cannot diagnose, treat, or assess any clinical condition. If you are experiencing psychological distress, please consult a qualified mental health professional.
       </div>
 
@@ -341,9 +227,10 @@ export default function StateAssessment() {
             Answer each question based on your actual recent practice experience — not on how you hope to experience practice or what you think the "correct" answer might be. There are no right or wrong responses.
           </p>
 
-          <div style={styles.progressBar}>
+          <div className={styles.progressBar}>
             <div
-              style={{ ...styles.progressFill, width: `${(answered / total) * 100}%` }}
+              className={styles.progressFill}
+              style={{ width: `${(answered / total) * 100}%` }}
               aria-valuenow={answered}
               aria-valuemin={0}
               aria-valuemax={total}
@@ -351,24 +238,24 @@ export default function StateAssessment() {
               aria-label={`${answered} of ${total} questions answered`}
             />
           </div>
-          <p style={{ fontSize: '0.9rem', color: '#555', marginBottom: '1rem' }}>
+          <p className={styles.progressLabel}>
             {answered} of {total} questions answered
           </p>
 
           {QUESTIONS.map((q) => (
-            <div key={q.id} style={styles.questionBlock}>
-              <div style={styles.questionText}>
+            <div key={q.id} className={styles.questionBlock}>
+              <div className={styles.questionText}>
                 {q.id}. {q.text}
               </div>
               {q.options.map((opt, idx) => (
-                <label key={idx} style={styles.optionLabel}>
+                <label key={idx} className={styles.optionLabel}>
                   <input
                     type="radio"
                     name={`q${q.id}`}
                     value={opt.state}
                     checked={answers[q.id] === opt.state}
                     onChange={() => handleSelect(q.id, opt.state)}
-                    style={styles.optionInput}
+                    className={styles.optionInput}
                   />
                   {opt.label}
                 </label>
@@ -377,10 +264,7 @@ export default function StateAssessment() {
           ))}
 
           <button
-            style={{
-              ...styles.submitBtn,
-              ...(allAnswered ? {} : styles.submitBtnDisabled),
-            }}
+            className={styles.submitBtn}
             onClick={handleSubmit}
             disabled={!allAnswered}
             aria-disabled={!allAnswered}
@@ -391,28 +275,25 @@ export default function StateAssessment() {
       )}
 
       {submitted && profile && (
-        <div style={styles.resultBox} role="region" aria-label="Assessment result">
-          <h3 style={styles.resultTitle}>
+        <div className={styles.resultBox} role="region" aria-label="Assessment result">
+          <h3 className={styles.resultTitle}>
             {profile.emoji} Your Dominant State Profile: {profile.title}
           </h3>
           <p>{profile.interpretation}</p>
           <p>
             <strong>Recommended next step:</strong>
           </p>
-          <div style={styles.moduleLinks}>
-            <Link to={profile.module.to} style={styles.moduleLink}>
+          <div className={styles.moduleLinks}>
+            <Link to={profile.module.to} className={styles.moduleLink}>
               → {profile.module.label}
             </Link>
-            <Link to={profile.secondary.to} style={styles.moduleLinkSecondary}>
+            <Link to={profile.secondary.to} className={styles.moduleLinkSecondary}>
               {profile.secondary.label}
             </Link>
           </div>
-          <div style={{ marginTop: '1.5rem' }}>
-            <button style={styles.submitBtn} onClick={handleReset}>
+          <div className={styles.resultActions}>
+            <button className={styles.submitBtn} onClick={handleReset}>
               Retake Assessment
-            </button>
-            <button style={styles.resetBtn} onClick={handleReset}>
-              Clear and start over
             </button>
           </div>
         </div>

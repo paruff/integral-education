@@ -16,6 +16,7 @@ const sidebars = {
       type: 'category',
       label: 'Modules',
       items: [
+        'modules/amber-mythic-orientation',
         'modules/mindfulness-basics',
         'modules/emotional-granularity',
         'modules/shadow-integration-101',

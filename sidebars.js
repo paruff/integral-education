@@ -22,6 +22,7 @@ const sidebars = {
         'modules/cognitive-bias-101',
         'modules/systems-thinking-101',
         'modules/gross-state-awareness',
+        'modules/subtle-state-access',
       ],
     },
     {

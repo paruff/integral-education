@@ -162,9 +162,9 @@ Name aloud or in writing:
 
 > **[HUMAN-REQUIRED]** Insert verified emergency contact details, crisis-line numbers appropriate to your deployment region, and designated human safety lead contact before publishing.
 
-- **Crisis text lines** (example — verify for your region): Text HOME to 741741 (US, SAMHSA)
+- **Crisis text lines** (example — verify for your region): Text HOME to 741741 (US, Crisis Text Line)
 - **Suicide and Crisis Lifeline** (US): Call or text 988
-- **International crisis resources**: findahelpline.com
+- **International crisis resources**: https://findahelpline.com
 
 ---
 

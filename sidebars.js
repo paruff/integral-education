@@ -18,6 +18,7 @@ const sidebars = {
       label: 'Shadow Work',
       items: [
         'modules/shadow-work-foundation',
+        'modules/shadow-321-process',
       ],
     },
     {

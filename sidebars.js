@@ -43,6 +43,7 @@ const sidebars = {
         'modules/emotional-granularity',
         'modules/shadow-integration-101',
         'modules/cognitive-bias-101',
+        'modules/evidence-evaluation',
         'modules/systems-thinking-101',
         'modules/gross-state-awareness',
         'modules/subtle-state-access',

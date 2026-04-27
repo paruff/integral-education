@@ -30,6 +30,7 @@ const sidebars = {
       items: [
         'modules/amber-mythic-orientation',
         'modules/rational-orange-orientation',
+        'modules/cognitive-dissonance-bridge',
         {
           type: 'category',
           label: 'Rational → Pluralistic',

@@ -19,6 +19,13 @@ const sidebars = {
       items: [
         'modules/amber-mythic-orientation',
         'modules/rational-orange-orientation',
+        {
+          type: 'category',
+          label: 'Rational → Pluralistic',
+          items: [
+            'modules/pluralistic-green-orientation',
+          ],
+        },
         'modules/mindfulness-basics',
         'modules/emotional-granularity',
         'modules/shadow-integration-101',

@@ -38,6 +38,7 @@ const sidebars = {
         'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',
         'maps/ilp-practice-taxonomy',
+        'maps/state-identification-assessment',
       ],
     },
     {

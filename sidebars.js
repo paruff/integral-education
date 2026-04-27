@@ -15,6 +15,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Shadow Work',
+      items: [
+        'modules/shadow-work-foundation',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Modules',
       items: [
         'modules/amber-mythic-orientation',

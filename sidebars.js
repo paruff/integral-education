@@ -32,6 +32,7 @@ const sidebars = {
         'modules/rational-orange-orientation',
         'modules/cognitive-dissonance-bridge',
         'modules/perspective-taking-capacity',
+        'modules/authority-autonomy-transition',
         {
           type: 'category',
           label: 'Rational → Pluralistic',

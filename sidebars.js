@@ -24,6 +24,7 @@ const sidebars = {
         'modules/gross-state-awareness',
         'modules/subtle-state-access',
         'modules/causal-witness-state',
+        'modules/nondual-awareness-orientation',
       ],
     },
     {

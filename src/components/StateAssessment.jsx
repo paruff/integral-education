@@ -181,7 +181,7 @@ const PROFILES = {
 function tally(answers) {
   const counts = { G: 0, S: 0, C: 0, N: 0 };
   for (const state of Object.values(answers)) {
-    counts[state] = (counts[state] || 0) + 1;
+    counts[state] += 1;
   }
   const max = Math.max(...Object.values(counts));
   const winners = Object.keys(counts).filter((k) => counts[k] === max);

@@ -20,6 +20,7 @@ const sidebars = {
         'modules/shadow-work-foundation',
         'modules/shadow-321-process',
         'modules/shadow-positive-projection',
+        'modules/shadow-persona-mask',
       ],
     },
     {

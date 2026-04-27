@@ -60,6 +60,7 @@ const sidebars = {
       label: 'Safety',
       items: [
         'safety/shadowwork-safety-standard',
+        'safety/state-development-safety-standard',
         'safety/facilitator-qualification-standard',
       ],
     },

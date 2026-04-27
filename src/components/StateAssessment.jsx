@@ -227,17 +227,12 @@ export default function StateAssessment() {
             Answer each question based on your actual recent practice experience — not on how you hope to experience practice or what you think the "correct" answer might be. There are no right or wrong responses.
           </p>
 
-          <div className={styles.progressBar}>
-            <div
-              className={styles.progressFill}
-              style={{ width: `${(answered / total) * 100}%` }}
-              aria-valuenow={answered}
-              aria-valuemin={0}
-              aria-valuemax={total}
-              role="progressbar"
-              aria-label={`${answered} of ${total} questions answered`}
-            />
-          </div>
+          <progress
+            className={styles.progressBar}
+            value={answered}
+            max={total}
+            aria-label={`${answered} of ${total} questions answered`}
+          />
           <p className={styles.progressLabel}>
             {answered} of {total} questions answered
           </p>

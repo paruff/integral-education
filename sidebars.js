@@ -39,6 +39,7 @@ const sidebars = {
           items: [
             'modules/late-orange-disillusionment',
             'modules/empathy-perspective-plurality',
+            'modules/emotional-intelligence-somatic-line',
             'modules/contextual-ethics-moral-complexity',
             'modules/ecological-systems-consciousness',
             'modules/authentic-dialogue-collaborative-meaning',

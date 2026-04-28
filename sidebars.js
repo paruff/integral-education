@@ -24,6 +24,7 @@ const sidebars = {
         'modules/shadow-in-relationships',
         'modules/shadow-immunity-to-change',
         'modules/shadow-spiritual-bypassing',
+        'modules/shadow-collective-cultural',
       ],
     },
     {

@@ -41,6 +41,7 @@ const sidebars = {
             'modules/empathy-perspective-plurality',
             'modules/contextual-ethics-moral-complexity',
             'modules/ecological-systems-consciousness',
+            'modules/authentic-dialogue-collaborative-meaning',
             'modules/pluralistic-green-orientation',
           ],
         },

@@ -39,6 +39,7 @@ const sidebars = {
           items: [
             'modules/late-orange-disillusionment',
             'modules/empathy-perspective-plurality',
+            'modules/contextual-ethics-moral-complexity',
             'modules/pluralistic-green-orientation',
           ],
         },

@@ -22,6 +22,7 @@ const sidebars = {
         'modules/shadow-positive-projection',
         'modules/shadow-persona-mask',
         'modules/shadow-in-relationships',
+        'modules/shadow-collective-cultural',
         'modules/shadow-immunity-to-change',
         'modules/shadow-spiritual-bypassing',
       ],

@@ -48,6 +48,7 @@ const sidebars = {
           ],
         },
         'modules/mindfulness-basics',
+        'modules/mindfulness-deepening',
         'modules/emotional-granularity',
         'modules/shadow-integration-101',
         'modules/cognitive-bias-101',

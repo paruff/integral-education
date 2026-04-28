@@ -75,6 +75,7 @@ const sidebars = {
         'maps/aqal-competency-map',
         'maps/ilp-practice-taxonomy',
         'maps/state-identification-assessment',
+        'maps/state-stage-integration-map',
       ],
     },
     {

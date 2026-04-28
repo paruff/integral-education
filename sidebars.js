@@ -38,6 +38,7 @@ const sidebars = {
           label: 'Rational → Pluralistic',
           items: [
             'modules/late-orange-disillusionment',
+            'modules/empathy-perspective-plurality',
             'modules/pluralistic-green-orientation',
           ],
         },

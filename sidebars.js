@@ -21,6 +21,7 @@ const sidebars = {
         'modules/shadow-321-process',
         'modules/shadow-positive-projection',
         'modules/shadow-persona-mask',
+        'modules/shadow-in-relationships',
         'modules/shadow-immunity-to-change',
         'modules/shadow-spiritual-bypassing',
       ],

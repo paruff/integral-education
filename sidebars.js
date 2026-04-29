@@ -57,6 +57,7 @@ const sidebars = {
           items: [
             'modules/integral-teal-orientation',
             'modules/late-green-emergence-signals',
+            'modules/vision-logic-metasystematic-thinking',
           ],
         },
         'modules/mindfulness-basics',

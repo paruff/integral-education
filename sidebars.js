@@ -56,6 +56,7 @@ const sidebars = {
           label: 'Pluralistic → Integral',
           items: [
             'modules/integral-teal-orientation',
+            'modules/late-green-emergence-signals',
           ],
         },
         'modules/mindfulness-basics',

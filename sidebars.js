@@ -63,6 +63,7 @@ const sidebars = {
             'modules/integral-ethics-beyond-relativism',
             'modules/integral-shadow-teal-trap',
             'modules/multiperspectival-leadership-action',
+            'modules/integral-life-practice-embodying-2nd-tier',
           ],
         },
         'modules/mindfulness-basics',

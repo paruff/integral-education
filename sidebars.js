@@ -25,6 +25,7 @@ const sidebars = {
         'modules/shadow-immunity-to-change',
         'modules/shadow-spiritual-bypassing',
         'modules/shadow-collective-cultural',
+        'modules/integral-shadow-teal-trap',
       ],
     },
     {
@@ -60,6 +61,7 @@ const sidebars = {
             'modules/vision-logic-metasystematic-thinking',
             'modules/healthy-hierarchy-actualization-gradient',
             'modules/integral-ethics-beyond-relativism',
+            'modules/integral-shadow-teal-trap',
           ],
         },
         'modules/mindfulness-basics',

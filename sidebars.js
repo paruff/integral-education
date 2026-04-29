@@ -62,6 +62,7 @@ const sidebars = {
             'modules/healthy-hierarchy-actualization-gradient',
             'modules/integral-ethics-beyond-relativism',
             'modules/integral-shadow-teal-trap',
+            'modules/multiperspectival-leadership-action',
           ],
         },
         'modules/mindfulness-basics',

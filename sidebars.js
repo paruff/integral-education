@@ -51,6 +51,13 @@ const sidebars = {
             'modules/pluralistic-green-orientation',
           ],
         },
+        {
+          type: 'category',
+          label: 'Pluralistic → Integral',
+          items: [
+            'modules/integral-teal-orientation',
+          ],
+        },
         'modules/mindfulness-basics',
         'modules/mindfulness-deepening',
         'modules/emotional-granularity',

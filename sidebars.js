@@ -15,6 +15,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Self Line',
+      items: [
+        'modules/self-line-overview-psychograph',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Shadow Work',
       items: [
         'modules/shadow-work-foundation',

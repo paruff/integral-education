@@ -140,6 +140,7 @@ const sidebars = {
             'implementation/rational-pluralistic-facilitator-guide',
             'implementation/pluralistic-integral-facilitator-guide',
             'implementation/self-line-facilitation-guide',
+            'implementation/spiritual-line-facilitation-guide',
           ],
         },
       ],

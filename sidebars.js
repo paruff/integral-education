@@ -22,6 +22,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Spiritual Line',
+      items: [
+        'modules/spiritual-line-overview-orientation',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Shadow Work',
       items: [
         'modules/shadow-work-foundation',

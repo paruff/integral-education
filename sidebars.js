@@ -36,6 +36,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Moral Line',
+      items: [
+        'modules/moral-line-overview-dual-track',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Shadow Work',
       items: [
         'modules/shadow-work-foundation',

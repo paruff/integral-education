@@ -131,6 +131,13 @@ const sidebars = {
         'implementation/backlog',
         'implementation/integral-aqal-protocol-template',
         'implementation/permaculture-implementation-protocol',
+        {
+          type: 'category',
+          label: 'Guides',
+          items: [
+            'implementation/shadow-work-facilitation-guide',
+          ],
+        },
       ],
     },
     {

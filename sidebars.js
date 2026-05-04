@@ -22,6 +22,13 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: 'Cognitive Line',
+      items: [
+        'modules/cognitive-line-overview-orientation',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Spiritual Line',
       items: [
         'modules/spiritual-line-overview-orientation',

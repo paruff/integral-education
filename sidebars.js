@@ -136,6 +136,7 @@ const sidebars = {
           label: 'Guides',
           items: [
             'implementation/shadow-work-facilitation-guide',
+            'implementation/amber-rational-facilitator-guide',
           ],
         },
       ],

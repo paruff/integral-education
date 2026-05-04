@@ -139,6 +139,7 @@ const sidebars = {
             'implementation/amber-rational-facilitator-guide',
             'implementation/rational-pluralistic-facilitator-guide',
             'implementation/pluralistic-integral-facilitator-guide',
+            'implementation/self-line-facilitation-guide',
           ],
         },
       ],

@@ -138,6 +138,7 @@ const sidebars = {
             'implementation/shadow-work-facilitation-guide',
             'implementation/amber-rational-facilitator-guide',
             'implementation/rational-pluralistic-facilitator-guide',
+            'implementation/pluralistic-integral-facilitator-guide',
           ],
         },
       ],

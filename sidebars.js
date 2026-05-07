@@ -18,6 +18,7 @@ const sidebars = {
       label: 'Self Line',
       items: [
         'modules/self-line-overview-psychograph',
+        'modules/self-line-conventional-conformist-achiever',
       ],
     },
     {

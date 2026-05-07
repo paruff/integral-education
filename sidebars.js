@@ -19,6 +19,7 @@ const sidebars = {
       items: [
         'modules/self-line-overview-psychograph',
         'modules/self-line-conventional-conformist-achiever',
+        'modules/self-line-postconventional-individualist-strategist',
       ],
     },
     {

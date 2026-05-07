@@ -21,6 +21,7 @@ const sidebars = {
         'modules/self-line-conventional-conformist-achiever',
         'modules/self-line-postconventional-individualist-strategist',
         'modules/self-line-postautonomous-construct-aware-unitive',
+        'modules/self-line-integration-practice',
       ],
     },
     {

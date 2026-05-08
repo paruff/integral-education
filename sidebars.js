@@ -38,6 +38,7 @@ const sidebars = {
         'modules/spiritual-line-overview-orientation',
         'modules/spiritual-line-mythic-to-rational',
         'modules/spiritual-line-conjunctive-universalizing',
+        'modules/spiritual-line-post-metaphysical-integral-religion',
       ],
     },
     {

@@ -36,6 +36,7 @@ const sidebars = {
       label: 'Spiritual Line',
       items: [
         'modules/spiritual-line-overview-orientation',
+        'modules/spiritual-line-mythic-to-rational',
       ],
     },
     {

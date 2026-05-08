@@ -37,6 +37,7 @@ const sidebars = {
       items: [
         'modules/spiritual-line-overview-orientation',
         'modules/spiritual-line-mythic-to-rational',
+        'modules/spiritual-line-conjunctive-universalizing',
       ],
     },
     {

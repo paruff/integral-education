@@ -142,7 +142,7 @@ export default function Home() {
             </article>
           </div>
           <p className="margin-top--md">
-            <Link to="/docs/modules">View all modules →</Link>
+            <Link to="/docs/modules">View all modules</Link>
           </p>
         </section>
         <section className="container homepage-section margin-bottom--xl">

@@ -7,6 +7,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
+  --ifm-color-primary-rgb: 46, 133, 85;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
   --ifm-color-primary-darkest: #205d3b;
@@ -20,6 +21,7 @@
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-rgb: 37, 194, 160;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
   --ifm-color-primary-darkest: #1a8870;
@@ -39,4 +41,22 @@
   background-color: var(--ifm-color-primary-dark);
   border-color: var(--ifm-color-primary-dark);
   color: var(--ifm-color-white);
+}
+
+.navbar-start-here {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.12);
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
+  border: 1px solid rgba(var(--ifm-color-primary-rgb), 0.3);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+  border-radius: 999px;
+  font-weight: 600;
+  padding-inline: 0.9rem;
+}
+
+.navbar-start-here:hover,
+.navbar-start-here:focus-visible {
+  background-color: rgba(var(--ifm-color-primary-rgb), 0.18);
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 18%, transparent);
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
 }

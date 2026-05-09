@@ -67,6 +67,12 @@ const sidebars = {
     {
       type: 'category',
       label: 'Modules',
+      link: {
+        type: 'generated-index',
+        slug: '/modules',
+        title: 'Modules',
+        description: 'Browse standalone learning units across the integral curriculum.',
+      },
       items: [
         'modules/amber-mythic-orientation',
         'modules/rational-orange-orientation',

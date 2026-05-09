@@ -6,20 +6,22 @@ import Layout from '@theme/Layout';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">Develop yourself across mind, body, and relationships</h1>
+        <p className="hero__subtitle">
+          Build practical skills for thinking clearly, relating better, and acting with purpose.
+          Designed for curious adults, coaches, educators, and teams.
+        </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--lg homepage-primary-cta"
             to="/docs/intro">
             Get Started →
           </Link>
           <Link
-            className="button button--outline button--lg margin-left--md"
+            className={styles.secondaryCta}
             to="/prototype">
             Open Prototype
           </Link>
@@ -34,9 +36,16 @@ export default function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Mastery Across All Quadrants — AQAL-aware integral education platform">
+      description="Develop practical skills for clearer thinking, better relationships, and purposeful action.">
       <HomepageHeader />
       <main>
+        <section className="container margin-top--lg">
+          <h2>Built on the AQAL Framework</h2>
+          <p>
+            We use AQAL to organize learning across inner growth, relationships, behavior, and
+            systems. <Link to="/docs/maps/aqal-overview">Learn more</Link>.
+          </p>
+        </section>
         <div className="container margin-vert--xl">
           <div className="row">
             <div className="col col--4">

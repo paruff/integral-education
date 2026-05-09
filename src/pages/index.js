@@ -39,44 +39,154 @@ export default function Home() {
       description="Develop practical skills for clearer thinking, better relationships, and purposeful action.">
       <HomepageHeader />
       <main>
-        <section className="container margin-top--lg">
+        <section className="container margin-top--lg homepage-section">
           <h2>Built on the AQAL Framework</h2>
           <p>
             We use AQAL to organize learning across inner growth, relationships, behavior, and
             systems. <Link to="/docs/maps/aqal-overview">Learn more</Link>.
           </p>
         </section>
-        <div className="container margin-vert--xl">
-          <div className="row">
-            <div className="col col--4">
-              <h3>🧭 QuickStarts</h3>
-              <p>Choose a curated learning path and begin your journey in minutes.</p>
-              <Link to="/docs/quickstarts/personal-to-integral">Personal → Integral</Link>
-              <br />
-              <Link to="/docs/quickstarts/amber-to-rational">Amber → Rational</Link>
+        <section className="container homepage-section">
+          <h2>How It Works</h2>
+          <div className="homepage-loop-grid">
+            <div className="homepage-loop-item">
+              <span className="homepage-loop-icon">📘</span>
+              <p>
+                <strong>Learn</strong>: Build one practical concept at a time.
+              </p>
             </div>
-            <div className="col col--4">
-              <h3>📚 Modules</h3>
-              <p>Standalone learning units covering key domains of integral development.</p>
-              <Link to="/docs/modules/mindfulness-basics">Mindfulness Basics</Link>
-              <br />
-              <Link to="/docs/modules/emotional-granularity">Emotional Granularity</Link>
-              <br />
-              <Link to="/docs/modules/shadow-integration-101">Shadow Integration</Link>
+            <div className="homepage-loop-item">
+              <span className="homepage-loop-icon">🛠️</span>
+              <p>
+                <strong>Practice</strong>: Apply the skill with a focused activity.
+              </p>
             </div>
-            <div className="col col--4">
-              <h3>🗺️ Maps & Tools</h3>
-              <p>Reference maps and daily practices to orient your development.</p>
-              <Link to="/docs/maps/aqal-overview">AQAL Overview</Link>
-              <br />
-              <Link to="/docs/maps/aqal-competency-map">AQAL Competency Map</Link>
-              <br />
-              <Link to="/docs/reflections/daily-template">Daily Reflection</Link>
-              <br />
-              <Link to="/prototype">Interactive Prototype</Link>
+            <div className="homepage-loop-item">
+              <span className="homepage-loop-icon">🪞</span>
+              <p>
+                <strong>Reflect</strong>: Track what shifted in your perspective.
+              </p>
+            </div>
+            <div className="homepage-loop-item">
+              <span className="homepage-loop-icon">✅</span>
+              <p>
+                <strong>Assess</strong>: Check progress with clear criteria.
+              </p>
+            </div>
+            <div className="homepage-loop-item">
+              <span className="homepage-loop-icon">🌱</span>
+              <p>
+                <strong>Integrate</strong>: Transfer the learning into daily life.
+              </p>
             </div>
           </div>
-        </div>
+        </section>
+        <section className="container homepage-section">
+          <h2>🧭 QuickStarts</h2>
+          <p>Choose a curated learning path and begin your journey in minutes.</p>
+          <div className="homepage-card-grid">
+            <article className="homepage-card">
+              <h3>Personal → Integral</h3>
+              <p>Move from self-growth basics to AQAL-informed development habits.</p>
+              <p className="homepage-card-meta">Estimated time: 20 min</p>
+              <Link className="homepage-card-cta" to="/docs/quickstarts/personal-to-integral">
+                Begin →
+              </Link>
+            </article>
+            <article className="homepage-card">
+              <h3>Amber → Rational</h3>
+              <p>Build critical thinking skills while transitioning into modern worldview logic.</p>
+              <p className="homepage-card-meta">Estimated time: 20 min</p>
+              <Link className="homepage-card-cta" to="/docs/quickstarts/amber-to-rational">
+                Begin →
+              </Link>
+            </article>
+          </div>
+        </section>
+        <section className="container homepage-section">
+          <h2>📚 Featured Modules</h2>
+          <p>Stand-alone learning units covering key domains of integral development.</p>
+          <div className="homepage-module-grid">
+            <article className="homepage-card">
+              <h3>Mindfulness Basics</h3>
+              <p>Focus area: Attention and present-moment awareness.</p>
+              <div className="homepage-card-meta-row">
+                <span className="homepage-level-badge">Beginner</span>
+                <span className="homepage-card-meta">Read time: 8 min</span>
+              </div>
+              <Link className="homepage-card-cta" to="/docs/modules/mindfulness-basics">
+                Open module →
+              </Link>
+            </article>
+            <article className="homepage-card">
+              <h3>Emotional Granularity</h3>
+              <p>Focus area: Naming emotions with nuance to improve regulation.</p>
+              <div className="homepage-card-meta-row">
+                <span className="homepage-level-badge">Intermediate</span>
+                <span className="homepage-card-meta">Read time: 10 min</span>
+              </div>
+              <Link className="homepage-card-cta" to="/docs/modules/emotional-granularity">
+                Open module →
+              </Link>
+            </article>
+            <article className="homepage-card">
+              <h3>Shadow Integration</h3>
+              <p>Focus area: Recognizing disowned patterns and integrating them safely.</p>
+              <div className="homepage-card-meta-row">
+                <span className="homepage-level-badge">Intermediate</span>
+                <span className="homepage-card-meta">Read time: 12 min</span>
+              </div>
+              <Link className="homepage-card-cta" to="/docs/modules/shadow-integration-101">
+                Open module →
+              </Link>
+            </article>
+          </div>
+          <p className="margin-top--md">
+            <Link to="/docs/modules">View all learning modules</Link>
+          </p>
+        </section>
+        <section className="container homepage-section margin-bottom--xl">
+          <h2>🗺️ Maps & Tools</h2>
+          <p>Reference maps and daily practices to orient your development.</p>
+          <div className="homepage-tools-grid">
+            <article className="homepage-tool-card">
+              <h3>
+                <span>🧭</span> AQAL Overview
+              </h3>
+              <p>Get a quick map of quadrants, levels, lines, states, and types.</p>
+              <Link className="homepage-card-cta" to="/docs/maps/aqal-overview">
+                Open map →
+              </Link>
+            </article>
+            <article className="homepage-tool-card">
+              <h3>
+                <span>🗺️</span> AQAL Competency Map
+              </h3>
+              <p>See core skills by quadrant so you can choose your next practice target.</p>
+              <Link className="homepage-card-cta" to="/docs/maps/aqal-competency-map">
+                Open map →
+              </Link>
+            </article>
+            <article className="homepage-tool-card">
+              <h3>
+                <span>📝</span> Daily Reflection
+              </h3>
+              <p>Use a structured template to capture observations and integration notes.</p>
+              <Link className="homepage-card-cta" to="/docs/reflections/daily-template">
+                Open reflection →
+              </Link>
+            </article>
+            <article className="homepage-tool-card">
+              <h3>
+                <span>🖱️</span> Interactive Prototype
+              </h3>
+              <p>Preview pathway selection, safety checks, and assessment flow in one place.</p>
+              <Link className="homepage-card-cta" to="/prototype">
+                Open prototype →
+              </Link>
+            </article>
+          </div>
+        </section>
       </main>
     </Layout>
   );

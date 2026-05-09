@@ -60,3 +60,109 @@
   color: var(--ifm-navbar-link-color);
   text-decoration: none;
 }
+
+.homepage-section {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.homepage-loop-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.homepage-loop-item {
+  align-items: flex-start;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0.75rem;
+  display: flex;
+  gap: 0.6rem;
+  padding: 0.75rem;
+}
+
+.homepage-loop-item p {
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+.homepage-loop-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.homepage-card-grid,
+.homepage-module-grid,
+.homepage-tools-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.homepage-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.homepage-module-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.homepage-tools-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.homepage-card,
+.homepage-tool-card {
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+
+.homepage-card h3,
+.homepage-tool-card h3 {
+  margin-top: 0;
+}
+
+.homepage-tool-card h3 {
+  align-items: center;
+  display: flex;
+  gap: 0.35rem;
+}
+
+.homepage-card-meta {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+
+.homepage-card-meta-row {
+  align-items: center;
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.homepage-level-badge {
+  background: rgba(var(--ifm-color-primary-rgb), 0.12);
+  border-radius: 999px;
+  color: var(--ifm-color-primary-darker);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.2rem 0.6rem;
+}
+
+.homepage-card-cta {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 767px) {
+  .homepage-loop-grid,
+  .homepage-card-grid,
+  .homepage-module-grid,
+  .homepage-tools-grid {
+    grid-template-columns: 1fr;
+  }
+}

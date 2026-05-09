@@ -146,10 +146,10 @@
 }
 
 .homepage-level-badge {
-  background: var(--ifm-card-background-color);
-  border: 1px solid var(--ifm-color-primary);
+  background: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-font-color-base);
   border-radius: 999px;
-  color: var(--ifm-color-emphasis-900);
+  color: var(--ifm-background-color);
   font-size: 0.78rem;
   font-weight: 700;
   padding: 0.2rem 0.6rem;

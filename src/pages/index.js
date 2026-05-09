@@ -105,7 +105,7 @@ export default function Home() {
         </section>
         <section className="container homepage-section">
           <h2>📚 Featured Modules</h2>
-          <p>Standalone learning units covering key domains of integral development.</p>
+          <p>Stand-alone learning units covering key domains of integral development.</p>
           <div className="homepage-module-grid">
             <article className="homepage-card">
               <h3>Mindfulness Basics</h3>

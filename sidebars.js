@@ -61,7 +61,6 @@ const sidebars = {
         'modules/shadow-immunity-to-change',
         'modules/shadow-spiritual-bypassing',
         'modules/shadow-collective-cultural',
-        'modules/integral-shadow-teal-trap',
       ],
     },
     {
@@ -77,8 +76,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'Stage Development',
-          description:
-            'Orientation and transition modules for navigating major developmental stages.',
           collapsible: true,
           collapsed: true,
           items: [
@@ -90,8 +87,6 @@ const sidebars = {
             {
               type: 'category',
               label: 'Rational → Pluralistic',
-              description:
-                'Bridge modules for moving from achievement-centered to pluralistic meaning-making.',
               collapsible: true,
               collapsed: true,
               items: [
@@ -109,8 +104,6 @@ const sidebars = {
             {
               type: 'category',
               label: 'Pluralistic → Integral',
-              description:
-                'Second-tier transition modules for late-Green to Integral/Teal development.',
               collapsible: true,
               collapsed: true,
               items: [
@@ -129,8 +122,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'State Training',
-          description:
-            'Practices for recognizing, stabilizing, and integrating key contemplative states.',
           collapsible: true,
           collapsed: true,
           items: [
@@ -144,8 +135,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'Core Skills',
-          description:
-            'Foundational modules for attention, emotion, reasoning, evidence, and systems literacy.',
           collapsible: true,
           collapsed: true,
           items: [
@@ -161,8 +150,6 @@ const sidebars = {
         {
           type: 'category',
           label: 'Shadow Work',
-          description:
-            'Foundational shadow curriculum for projection, disowned parts, and safe integration.',
           collapsible: true,
           collapsed: true,
           items: [
@@ -173,8 +160,6 @@ const sidebars = {
             {
               type: 'category',
               label: 'Shadow Applications',
-              description:
-                'Applied shadow modules for relationships, spirituality, culture, and advanced integration.',
               collapsible: true,
               collapsed: true,
               items: [

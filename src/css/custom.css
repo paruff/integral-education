@@ -40,3 +40,18 @@
   border-color: var(--ifm-color-primary-dark);
   color: var(--ifm-color-white);
 }
+
+.navbar-start-here {
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ifm-color-primary) 30%, transparent);
+  border-radius: 999px;
+  font-weight: 600;
+  padding-inline: 0.9rem;
+}
+
+.navbar-start-here:hover,
+.navbar-start-here:focus-visible {
+  background-color: color-mix(in srgb, var(--ifm-color-primary) 18%, transparent);
+  color: var(--ifm-navbar-link-color);
+  text-decoration: none;
+}

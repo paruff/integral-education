@@ -37,15 +37,25 @@ const config = {
         title: 'Integral Education',
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/docs/quickstarts/personal-to-integral',
             position: 'left',
-            label: 'Learn',
+            label: 'Start Here',
+            className: 'navbar-start-here',
+          },
+          {
+            to: '/docs/modules',
+            position: 'left',
+            label: 'Modules',
+          },
+          {
+            to: '/docs/maps/aqal-overview',
+            label: 'Maps and Tools',
+            position: 'left',
           },
           {
             to: '/prototype',
             label: 'Prototype',
-            position: 'left',
+            position: 'right',
           },
           {
             href: 'https://github.com/paruff/integral-education',

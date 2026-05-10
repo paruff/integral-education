@@ -32,6 +32,7 @@ const sidebars = {
         'modules/cognitive-line-concrete-to-formal',
         'modules/cognitive-line-postformal-operations',
         'modules/cognitive-line-metasystematic-vision-logic',
+        'modules/cognitive-line-practice-architecture',
       ],
     },
     {

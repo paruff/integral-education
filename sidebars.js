@@ -30,6 +30,7 @@ const sidebars = {
       items: [
         'modules/cognitive-line-overview-orientation',
         'modules/cognitive-line-concrete-to-formal',
+        'modules/cognitive-line-postformal-operations',
       ],
     },
     {

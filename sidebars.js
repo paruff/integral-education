@@ -53,6 +53,7 @@ const sidebars = {
         'modules/moral-line-overview-dual-track',
         'modules/moral-line-conventional-reasoning',
         'modules/moral-line-postconventional-reasoning',
+        'modules/moral-line-imagination-integral-ethics',
       ],
     },
     {

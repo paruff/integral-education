@@ -54,6 +54,7 @@ const sidebars = {
         'modules/moral-line-conventional-reasoning',
         'modules/moral-line-postconventional-reasoning',
         'modules/moral-line-imagination-integral-ethics',
+        'modules/moral-line-shadow-moral-injury',
       ],
     },
     {

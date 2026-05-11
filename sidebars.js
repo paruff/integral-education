@@ -52,6 +52,7 @@ const sidebars = {
       items: [
         'modules/moral-line-overview-dual-track',
         'modules/moral-line-conventional-reasoning',
+        'modules/moral-line-postconventional-reasoning',
       ],
     },
     {

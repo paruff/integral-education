@@ -51,6 +51,7 @@ const sidebars = {
       label: 'Moral Line',
       items: [
         'modules/moral-line-overview-dual-track',
+        'modules/moral-line-conventional-reasoning',
       ],
     },
     {

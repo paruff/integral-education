@@ -16,6 +16,7 @@ const sidebars = {
         'quickstarts/state-development',
         'quickstarts/shadow-work',
         'quickstarts/spiritual-line-development',
+        'quickstarts/cognitive-line-development',
       ],
     },
     {

@@ -11,6 +11,7 @@ const sidebars = {
         'quickstarts/personal-to-integral',
         'quickstarts/amber-to-rational',
         'quickstarts/state-development',
+        'quickstarts/shadow-work',
       ],
     },
     {

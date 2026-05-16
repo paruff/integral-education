@@ -12,6 +12,7 @@ const sidebars = {
         'quickstarts/amber-to-rational',
         'quickstarts/rational-to-pluralistic',
         'quickstarts/pluralistic-to-integral',
+        'quickstarts/self-line-development',
         'quickstarts/state-development',
         'quickstarts/shadow-work',
       ],

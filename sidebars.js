@@ -10,6 +10,7 @@ const sidebars = {
       items: [
         'quickstarts/personal-to-integral',
         'quickstarts/amber-to-rational',
+        'quickstarts/rational-to-pluralistic',
         'quickstarts/state-development',
         'quickstarts/shadow-work',
       ],

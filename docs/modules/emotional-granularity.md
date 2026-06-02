@@ -11,7 +11,16 @@ types: ["experiential", "analytical"]
 tags: ["emotions", "affect", "self-awareness"]
 ---
 
-# 🧠 Learn
+## AQAL Mapping
+| Dimension | Framework Mapping |
+| :--- | :--- |
+| **Quadrant** | **Primary Upper-Left (UL):** Interior-individual emotional differentiation and interoceptive refinement. <br />**Secondary Lower-Left (LL):** Interpersonal communication of granular emotional states within shared cultural contexts. |
+| **Developmental Level** | L1 to L2 on the Emotional Line (AQAL Competency Map). |
+| **Adjacent Lines** | Interpersonal line, Cognitive line. |
+| **State Dynamics** | Reflective waking state; translating raw somatic affect into conscious mental representations. |
+| **Type Variations** | Dependent on linguistic structures and cultural background frameworks. |
+
+## 🧠 Learn
 
 **Emotional granularity** is the ability to make fine-grained distinctions between emotional states — moving beyond "I feel bad" to "I feel ashamed because I failed to meet my own standard."
 
@@ -27,7 +36,7 @@ Core skills:
 
 ---
 
-# 🧘 Practice
+## 🧘 Practice
 
 **Duration:** 10–15 min
 
@@ -43,7 +52,7 @@ Core skills:
 
 ---
 
-# 🔍 Reflect
+## 🔍 Reflect
 
 - What was your initial emotion label? What did you settle on after reflection?
 - Did finding a more precise word change how you related to the emotion?
@@ -52,18 +61,28 @@ Core skills:
 
 ---
 
-# 📊 Assess (Self + Structured)
+## Assessment Rubric
 
-| Level | Indicator |
-|-------|-----------|
-| 1 | Uses broad categories (happy, sad, angry, scared) |
-| 2 | Distinguishes within categories (anxious vs. nervous vs. apprehensive) |
-| 3 | Accurately labels emotions in real-time as they arise |
-| 4 | Uses emotional data to guide decisions and communication |
+This rubric aligns with the AQAL Competency Map Emotional Line L1–L2 indicators:
+
+| Competency Indicator | Emerging | Proficient |
+| :--- | :--- | :--- |
+| **L1: Affective Differentiation** | Identifies internal states strictly using binary polarities (e.g., "good" vs. "bad", "mad" vs. "glad"). | Reliably distinguishes between basic discrete emotional families (e.g., separating fear from anger or sadness). |
+| **L2: Granular Conceptualization** | Recognizes subtle shifts in emotional valence but struggles to accurately label mixed or nuanced states. | Accurately identifies and names nuanced, fine-grained emotional states (e.g., distinguishing frustration from indignation or disappointment). |
 
 ---
 
-# 🔗 Integrate
+## Evidence Base
+| Claim / Framework | Evidence Tier | Notes &amp; Caveats |
+| :--- | :--- | :--- |
+| Barrett's Theory of Constructed Emotion | **Tier B** | Strong empirical support via neuroimaging and behavioral datasets, though specific sub-components remain subject to ongoing paradigm debates in cognitive science. |
+| Brackett's RULER Framework | **Tier B** | Extensively validated in educational settings; shows clear real-world outcomes for emotional literacy development. |
+| Lindquist Granularity–Wellbeing Relationship | **Tier B** | Well-documented meta-analytic correlations linking high emotional granularity to lowered instances of mood disorders. |
+| Emotion Wheel Vocabulary Scaffolds | **Tier C** | Highly functional pragmatic tool for clinical and educational vocabulary building, but lacks rigorous psychometric validation. |
+
+---
+
+## 🔗 Integrate
 
 Apply this in real life:
 - Replace "I'm stressed" with a more precise emotion before conversations
@@ -72,7 +91,13 @@ Apply this in real life:
 
 ---
 
-# 🧠 Anki Cards
+## Stabilize
+- **The Pre/Trans Action Gap (Inflation Warning):** Developing an intellectual, conceptual knowledge of complex emotional vocabularies is not equivalent to actually practicing emotional granularity in high-charge moments. Do not mistake an expanded emotional lexicon for structural emotional line maturity.
+- **Cultural and Linguistic Relativism:** Emotion category boundaries are heavily dependent on language and culture. The English-language emotion wheel utilized in this module is a useful scaffold, but it is not a universal psychological blueprint. Learners from non-WEIRD (Western, Educated, Industrialized, Rich, Democratic) contexts should actively adapt these categories to fit their native linguistic frameworks.
+
+---
+
+## 🧠 Anki Cards
 
 Q: What is emotional granularity?
 A: The ability to make fine-grained distinctions between emotional states
@@ -82,3 +107,16 @@ A: Less intense emotions during stress, faster recovery, better decisions under 
 
 Q: Who is the researcher associated with emotional granularity?
 A: Lisa Feldman Barrett
+
+---
+
+## Knowledge Retention &amp; Retrieval
+To transition this cognitive taxonomy into long-term functional capacity, execute the following retrieval practice:
+- **24-Hour Interval:** Re-run the core differentiation exercise using a completely different recent emotional event.
+- **72-Hour Interval:** Apply the model to a live, active emotional situation in your daily life and log the granular labels.
+- **7-Day Interval:** Re-examine your original 3-candidate emotion list from your first practice session. Assess whether your interpretation of the primary emotional label has evolved after a week of reflection.
+
+## Next Steps
+
+
+import NextStep from '@site/src/components/NextStep';

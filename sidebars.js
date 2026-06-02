@@ -36,6 +36,7 @@ const sidebars = {
       label: 'Emotional Line',
       items: [
         'modules/emotional-line-overview-orientation',
+        'modules/emotion-regulation-foundations',
       ],
     },
     {

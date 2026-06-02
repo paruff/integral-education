@@ -102,7 +102,7 @@ The person accesses contemplative or transcendent states reliably but struggles 
 | Module | Prerequisites | Focus | Est. time |
 |---|---|---|---|
 | [EI-01 · Emotional Line Overview & Orientation](./emotional-line-overview-orientation) | None | Core map of the Emotional line, RULER scaffold, psychograph orientation | 60 min |
-| [EI-02 · Emotional Granularity](./emotional-granularity) | EI-01 recommended | Precision labeling + somatic correlates | 45 min |
+| [EI-02 · Emotion Regulation Foundations](./emotion-regulation-foundations) | EI-01 required | Gross process model, reappraisal vs. suppression, and window-of-tolerance basics | 60 min |
 | [EI-03 · Trigger-Appraisal-Regulation Chain](#ei-03--trigger-appraisal-regulation-chain-planned) | EI-01, EI-02 | Event → appraisal → emotion → strategy sequencing | 60 min |
 | [EI-05 · Regulation Under Stress](#ei-05--regulation-under-stress-planned) | EI-01 to EI-03 | Strategy selection under load; recovery loops | 60 min |
 | [EI-06 · Co-Regulation in Relationship](#ei-06--co-regulation-in-relationship-planned) | EI-01 to EI-05 | Dyadic regulation, rupture-repair, boundary skill | 60 min |
@@ -151,6 +151,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 # 🔄 Integrate
 
 - Pair with [Self Line Overview & Psychograph](./self-line-overview-psychograph) to examine how self-structure frames emotional work.
+- Pair with [Emotion Regulation Foundations](./emotion-regulation-foundations) for Gross's regulation architecture and window-of-tolerance practice.
 - Pair with [Emotional Granularity](./emotional-granularity) for immediate L2 practice.
 - Use the [AQAL Competency Map Emotional line table](../maps/aqal-competency-map#emotional-line) to align practice to L1–L4 indicators.
 - Use the [Shadow & Developmental Lines Integration Map](../maps/shadow-developmental-lines-map) to identify emotional-line shadow patterns across other lines.

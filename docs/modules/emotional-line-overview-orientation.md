@@ -4,7 +4,7 @@ title: Emotional Line Overview & Orientation
 sidebar_label: Emotional Line Overview & Orientation
 description: An orientation to the Emotional developmental line in AQAL — defining affective development, introducing constructed emotion in plain language, mapping the L1–L4 arc through the RULER framework, and situating Emotional line growth within psychograph asynchrony.
 
-quadrants: ["UL", "LL"]
+quadrants: ["I", "We"]
 level: "Cross-level (L1 through L4 Emotional line development)"
 lines: ["emotional"]
 states: ["reflective"]
@@ -17,7 +17,7 @@ tags: ["emotional-line", "affective-science", "RULER", "Barrett", "growing-up", 
 
 ---
 
-## 🗺️ AQAL Mapping
+# 🗺️ AQAL Mapping
 
 | Dimension | Value |
 |---|---|
@@ -31,9 +31,9 @@ tags: ["emotional-line", "affective-science", "RULER", "Barrett", "growing-up", 
 
 ---
 
-## 🧠 Learn
+# 🧠 Learn
 
-### 1) What the Emotional Line Is (and Is Not)
+## 1) What the Emotional Line Is (and Is Not)
 
 In AQAL, the Emotional line tracks the **development of affective complexity**: your capacity to differentiate, regulate, communicate, and integrate emotional experience with increasing precision over time.
 
@@ -44,13 +44,13 @@ This is distinct from:
 
 The Emotional line is developmental and trainable: it concerns *skills and structure* in emotional processing, not merely how intense emotions feel.
 
-### 2) Barrett's Constructed Emotion Theory (Plain Language)
+## 2) Barrett's Constructed Emotion Theory (Plain Language)
 
 Lisa Feldman Barrett's core claim is that emotions are not fixed hardwired packets that fire identically in all situations. Instead, the brain continuously predicts what bodily signals mean using prior experience, context, and concepts. In that sense, emotion is **constructed** in real time.
 
 Practical implication: emotional development is partly the development of richer emotion concepts. The more precise your emotional vocabulary and context discrimination, the more precise your emotional predictions and regulation options become.
 
-### 3) RULER as the Operational Model (L1–L4 Skill Spine)
+## 3) RULER as the Operational Model (L1–L4 Skill Spine)
 
 This suite uses Brackett's **RULER** model as the operational scaffold:
 - **R — Recognize** emotions in self and others
@@ -61,14 +61,14 @@ This suite uses Brackett's **RULER** model as the operational scaffold:
 
 RULER maps cleanly onto AQAL Emotional line development and gives an evidence-aligned common language for practice across modules.
 
-### 4) Emotional Line Developmental Arc (L1 → L4)
+## 4) Emotional Line Developmental Arc (L1 → L4)
 
 - **L1 — Undifferentiated affect naming:** broad categories ("good/bad," "angry/sad") with limited precision.
 - **L2 — Granular labeling with somatic correlates:** finer distinctions ("irritated" vs "resentful") plus body-signal linkage.
 - **L3 — Appraisal mastery:** event → appraisal → emotion → regulation strategy chain becomes explicit and trainable.
 - **L4 — Co-regulation and facilitation:** emotional intelligence becomes relational/systemic; supports group climate and others' regulation.
 
-### 5) Typical Cross-Line Pattern: Self, Cognitive, and Somatic
+## 5) Typical Cross-Line Pattern: Self, Cognitive, and Somatic
 
 Common psychograph pattern in adult learners:
 - **Self line often lags Emotional line aspirations:** the meaning-making frame can rationalize emotional avoidance.
@@ -79,25 +79,25 @@ These are tendencies, not fixed rules; use psychograph inquiry rather than ident
 
 ---
 
-## 🧭 Psychograph Orientation: Common Emotional-Line Asynchronies
+# 🧭 Psychograph Orientation: Common Emotional-Line Asynchronies
 
 Cross-reference: [Self Line Overview psychograph section](./self-line-overview-psychograph#the-psychograph-your-personal-developmental-profile).
 
-### Profile A — Cognitively advanced, emotionally earlier
+## Profile A — Cognitively advanced, emotionally earlier
 
 Strong abstract reasoning and framework fluency coexist with limited real-time affect naming and low tolerance for emotional ambiguity. Under stress, the person explains emotions better than they regulate them.
 
-### Profile B — Relationally sophisticated, poorly regulated
+## Profile B — Relationally sophisticated, poorly regulated
 
 The person is empathic and socially skilled in calm settings but shows rapid dysregulation under threat (shutdown, flooding, harsh expression). Interpersonal skill masks unstable regulation architecture.
 
-### Profile C — High spiritual state access, emotionally underdeveloped
+## Profile C — High spiritual state access, emotionally underdeveloped
 
 The person accesses contemplative or transcendent states reliably but struggles with ordinary affective processing (grief, anger, shame, envy). State depth is mistaken for emotional development.
 
 ---
 
-## 🧩 Suite Sequence Map
+# 🧩 Suite Sequence Map
 
 | Module | Prerequisites | Focus | Est. time |
 |---|---|---|---|
@@ -108,19 +108,19 @@ The person accesses contemplative or transcendent states reliably but struggles 
 | [EI-06 · Co-Regulation in Relationship](#ei-06--co-regulation-in-relationship-planned) | EI-01 to EI-05 | Dyadic regulation, rupture-repair, boundary skill | 60 min |
 | [EI-07 · Emotional Facilitation](#ei-07--emotional-facilitation-planned) | EI-01 to EI-06 | Group emotional climate sensing and facilitation | 75 min |
 
-### EI-03 · Trigger-Appraisal-Regulation Chain (planned)
+## EI-03 · Trigger-Appraisal-Regulation Chain (planned)
 
-### EI-05 · Regulation Under Stress (planned)
+## EI-05 · Regulation Under Stress (planned)
 
-### EI-06 · Co-Regulation in Relationship (planned)
+## EI-06 · Co-Regulation in Relationship (planned)
 
-### EI-07 · Emotional Facilitation (planned)
+## EI-07 · Emotional Facilitation (planned)
 
 ---
 
-## 🧘 Practice
+# 🧘 Practice
 
-### Emotional Line Self-Portrait (30 minutes)
+## Emotional Line Self-Portrait (30 minutes)
 
 Use complete sentences for each stem. Aim for concrete examples rather than ideals.
 
@@ -134,21 +134,21 @@ Optional synthesis prompt: "If my Emotional line were one level more developed i
 
 ---
 
-## 🧲 Stabilize
+# 🧲 Stabilize
 
-### Pre/Trans Checkpoint for the Emotional Line
+## Pre/Trans Checkpoint for the Emotional Line
 
-### Confusion 1: Intellectual knowledge of affective science ≠ emotional development
+## Confusion 1: Intellectual knowledge of affective science ≠ emotional development
 
 Knowing Barrett, Ekman, Gross, or RULER conceptually can create a false sense of maturity. Conceptual fluency is not the same as real-time naming precision, regulation flexibility, or relational repair capacity.
 
-### Confusion 2: Suppression disguised as regulation
+## Confusion 2: Suppression disguised as regulation
 
 Reduced emotional expression is not automatically healthy regulation. Suppression often narrows awareness, increases physiological load, and delays integration. Regulation is skillful modulation with retained awareness, not emotional numbing.
 
 ---
 
-## 🔄 Integrate
+# 🔄 Integrate
 
 - Pair with [Self Line Overview & Psychograph](./self-line-overview-psychograph) to examine how self-structure frames emotional work.
 - Pair with [Emotional Granularity](./emotional-granularity) for immediate L2 practice.
@@ -157,7 +157,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-## 🔍 Reflect
+# 🔍 Reflect
 
 1. Where do you currently rely on broad emotion categories instead of precise labels, and what does that cost you?
 2. In the past week, where did you confuse suppression with regulation?
@@ -167,7 +167,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-## 📊 Assess
+# 📊 Assess
 
 | Criterion | Not yet | Developing | Stable |
 |---|---|---|---|
@@ -181,7 +181,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-## ⏱️ Retrieval Schedule
+# ⏱️ Retrieval Schedule
 
 | Interval | Activity |
 |---|---|
@@ -192,7 +192,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-## 🧠 Anki Cards
+# 🧠 Anki Cards
 
 Q: In AQAL, what does the Emotional line primarily track?
 A: The development of affective complexity: differentiating, regulating, communicating, and integrating emotional experience with increasing precision.
@@ -226,7 +226,7 @@ A: Suppression narrows awareness and often increases load; regulation modulates 
 
 ---
 
-## 📚 Evidence and Citations
+# 📚 Evidence and Citations
 
 Evidence quality is rated as Tier A (strong convergent evidence), Tier B (moderate convergent evidence or strong applied/theoretical synthesis), Tier C (provisional or largely heuristic).
 
@@ -241,7 +241,7 @@ Evidence quality is rated as Tier A (strong convergent evidence), Tier B (modera
 | Emotional line L1–L4 progression is operationalized in platform map | [AQAL Competency Map — Emotional line](../maps/aqal-competency-map#emotional-line) | Tier C | Platform framework; pedagogically useful but not itself an independent empirical study |
 | Psychograph asynchrony across lines is common | Wilber, K. (2000). *Integral Psychology*; line-asynchrony synthesis in AQAL usage | Tier C | AQAL psychograph is an integrative framework, not a single validated psychometric instrument |
 
-### SME Review Sign-off (Human-required)
+## SME Review Sign-off (Human-required)
 
 - **Reviewer role required:** Affective scientist or licensed clinician
 - **Scope:** Validate the representation of Barrett's theory and appropriateness of RULER application to L1–L4 progression

@@ -1,3 +1,38 @@
+# ==========================================
+# COPILOT IGNORE - TOKEN BUDGET OPTIMIZATION
+# FOR PARUFF/INTEGRAL-EDUCATION
+# ==========================================
+
+# 1. BANNED: Static Site and Build Compilation Footprints (THE MOST CRITICAL)
+_site/
+dist/
+build/
+out/
+.sass-cache/
+.jekyll-cache/
+
+# 2. BANNED: Configuration & Dependency Noise
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+node_modules/
+.npm/
+
+# 3. BANNED: Non-Code Educational Media & Asset Dumps
+**/assets/**/*.png
+**/assets/**/*.jpg
+**/assets/**/*.jpeg
+**/assets/**/*.gif
+**/assets/**/*.svg
+**/assets/**/*.pdf
+**/assets/**/*.mp4
+
+# 4. BANNED: Local System & CI Logs
+.github/workflows/
+*.log
+.DS_Store
+Thumbs.db
 # ============================================================
 # Copilot Ignore File
 # Purpose: Reduce cached tokens and context size to minimize

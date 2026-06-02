@@ -9,6 +9,7 @@ const sidebars = {
       label: 'QuickStarts',
       items: [
         'quickstarts/personal-to-integral',
+        'quickstarts/moral-line-development',
         'quickstarts/amber-to-rational',
         'quickstarts/rational-to-pluralistic',
         'quickstarts/pluralistic-to-integral',

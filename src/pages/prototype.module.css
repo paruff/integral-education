@@ -38,6 +38,14 @@
   width: 100%;
   margin-top: 0.35rem;
   margin-bottom: 0.75rem;
+  min-height: 44px;
+}
+
+@media (max-width: 900px) {
+  .card select,
+  .card input[type='range'] {
+    min-height: 44px;
+  }
 }
 
 .infoBox {

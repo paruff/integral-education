@@ -109,14 +109,15 @@ export default function PrototypePage() {
                 type="checkbox"
                 checked={safetyAck}
                 onChange={(e) => setSafetyAck(e.target.checked)}
+                aria-label="I have read the consent language and stop rules"
               />
               I have read consent language and stop rules.
             </label>
-            <p className={styles.note}>
+            <div aria-live="polite" aria-atomic="true" className={styles.note}>
               {safetyAck
                 ? 'Safety gate passed: practice can proceed.'
                 : 'Safety gate pending: review consent and safety instructions before practice.'}
-            </p>
+            </div>
           </article>
 
           <article className={styles.card}>
@@ -135,16 +136,43 @@ export default function PrototypePage() {
           <article className={styles.card}>
             <h2>4) Rubric Preview</h2>
             <div className={styles.sliderGroup}>
-              <label>AQAL completeness: {aqalScore}</label>
-              <input type="range" min="1" max="5" step="0.5" value={aqalScore} onChange={(e) => setAqalScore(Number(e.target.value))} />
+              <label id="aqalLabel">AQAL completeness</label>
+              <input
+                type="range"
+                min="1"
+                max="5"
+                step="0.5"
+                value={aqalScore}
+                onChange={(e) => setAqalScore(Number(e.target.value))}
+                aria-labelledby="aqalLabel"
+                aria-valuetext={`${aqalScore} out of 5`}
+              />
             </div>
             <div className={styles.sliderGroup}>
-              <label>Evidence quality: {evidenceScore}</label>
-              <input type="range" min="1" max="5" step="0.5" value={evidenceScore} onChange={(e) => setEvidenceScore(Number(e.target.value))} />
+              <label id="evidenceLabel">Evidence quality</label>
+              <input
+                type="range"
+                min="1"
+                max="5"
+                step="0.5"
+                value={evidenceScore}
+                onChange={(e) => setEvidenceScore(Number(e.target.value))}
+                aria-labelledby="evidenceLabel"
+                aria-valuetext={`${evidenceScore} out of 5`}
+              />
             </div>
             <div className={styles.sliderGroup}>
-              <label>Transfer feasibility: {transferScore}</label>
-              <input type="range" min="1" max="5" step="0.5" value={transferScore} onChange={(e) => setTransferScore(Number(e.target.value))} />
+              <label id="transferLabel">Transfer feasibility</label>
+              <input
+                type="range"
+                min="1"
+                max="5"
+                step="0.5"
+                value={transferScore}
+                onChange={(e) => setTransferScore(Number(e.target.value))}
+                aria-labelledby="transferLabel"
+                aria-valuetext={`${transferScore} out of 5`}
+              />
             </div>
             <div className={styles.infoBox}>
               <p>Average score: <strong>{avg}</strong></p>

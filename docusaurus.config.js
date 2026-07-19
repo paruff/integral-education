@@ -37,9 +37,9 @@ const config = {
         title: 'Integral Education',
         items: [
           {
-            to: '/docs/quickstarts/personal-to-integral',
+            to: '/start',
             position: 'left',
-            label: 'Start Here',
+            label: 'Find Your Path',
             className: 'navbar-start-here',
           },
           {

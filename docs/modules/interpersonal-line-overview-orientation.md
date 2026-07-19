@@ -155,7 +155,7 @@ The practical marker: When relational threat is real and the stakes are high, do
 
 A person can be emotionally warm, relationally oriented, and genuinely caring — and simultaneously be structurally organized at Interpersonal altitude (Kegan 3), with the characteristic enmeshment, conflict avoidance, and self-loss-under-relational-pressure that altitude involves.
 
-Warmth is a quality that can appear at any altitude. Interpersonal development concerns the structural complexity of the relational self available — whether the person can hold their own position and genuinely meet another's; whether they can engage conflict without collapse or avoidance; whether they can repair rupture without requiring the other to minimize their hurt. These structural capacities are not guaranteed by warmth.
+Warmth is a quality that can appear at any altitude. Interpersonal development concerns the structural complexity of the relational self available — whether the person can hold their own position and genuinely meet another's; whether they can engage conflict without collapse or avoidance; whether they can repair rupture without requiring the other to minimize their hurt. These structural capacities are not conferred by warmth.
 
 ---
 

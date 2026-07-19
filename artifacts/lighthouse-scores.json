@@ -1,0 +1,44 @@
+[
+  {
+    "name": "homepage",
+    "url": "http://localhost:3099/integral-education/",
+    "score": 100,
+    "failedAudits": []
+  },
+  {
+    "name": "intro",
+    "url": "http://localhost:3099/integral-education/docs/intro",
+    "score": 100,
+    "failedAudits": []
+  },
+  {
+    "name": "module-mindfulness",
+    "url": "http://localhost:3099/integral-education/docs/modules/mindfulness-basics",
+    "score": 100,
+    "failedAudits": []
+  },
+  {
+    "name": "quickstart",
+    "url": "http://localhost:3099/integral-education/docs/quickstarts/personal-to-integral",
+    "score": 100,
+    "failedAudits": []
+  },
+  {
+    "name": "prototype",
+    "url": "http://localhost:3099/integral-education/prototype",
+    "score": 100,
+    "failedAudits": []
+  },
+  {
+    "name": "start-here",
+    "url": "http://localhost:3099/integral-education/start",
+    "score": 100,
+    "failedAudits": []
+  },
+  {
+    "name": "404-page",
+    "url": "http://localhost:3099/integral-education/nonexistent-page",
+    "score": 0,
+    "failedAudits": []
+  }
+]

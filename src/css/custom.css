@@ -7,6 +7,7 @@
 /* You can override the default Infima variables here. */
 :root {
   --ifm-color-primary: #2e8555;
+  --ifm-menu-color-active: var(--ifm-color-primary-dark);
   --ifm-color-primary-rgb: 46, 133, 85;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -166,6 +167,26 @@
   .homepage-tools-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ─── WCAG contrast fixes (UX-17) ──────────────────────────────────────── */
+
+/* Active breadcrumb: #2e8555 on #f2f2f2 = 4.07:1 → use darker green */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--ifm-color-primary-dark);
+}
+
+/* Table links on intro page: #2e8555 on #f7f7f7 = 4.25:1 → use darker green */
+table a {
+  color: var(--ifm-color-primary-dark);
+}
+table a:hover {
+  color: var(--ifm-color-primary-darker);
+}
+
+/* Navbar Start Here active state: #2e8555 on #e6f0eb = 3.91:1 */
+.navbar-start-here.navbar__link--active {
+  color: var(--ifm-color-primary-dark);
 }
 
 /* Breadcrumbs — prevent truncation on narrow viewports */

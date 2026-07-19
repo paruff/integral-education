@@ -6,9 +6,9 @@ import styles from './styles.module.css';
 // ─── Difficulty → colour + label ──────────────────────────────────────────────
 
 const DIFFICULTY_CONFIG = {
-  Beginner: { colour: '#2e7dce', bg: '#e8f0fe', label: 'Beginner' },
-  Intermediate: { colour: '#e37400', bg: '#fef7e0', label: 'Intermediate' },
-  Advanced: { colour: '#c5221f', bg: '#fce8e6', label: 'Advanced' },
+  Beginner: { colour: '#1a5a9e', bg: '#dce8f5', label: 'Beginner' },
+  Intermediate: { colour: '#8a4200', bg: '#ffedd1', label: 'Intermediate' },
+  Advanced: { colour: '#a50e0e', bg: '#f5d9d6', label: 'Advanced' },
 };
 
 function difficultyLabel(difficulty) {

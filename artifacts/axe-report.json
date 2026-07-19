@@ -1,0 +1,129 @@
+{
+  "timestamp": "2026-07-19T21:32:07.979Z",
+  "tool": "axe-core 4.12.1 via Puppeteer",
+  "targets": [
+    {
+      "name": "homepage",
+      "path": "/"
+    },
+    {
+      "name": "intro",
+      "path": "/docs/intro"
+    },
+    {
+      "name": "module-mindfulness",
+      "path": "/docs/modules/mindfulness-basics"
+    },
+    {
+      "name": "quickstart",
+      "path": "/docs/quickstarts/personal-to-integral"
+    },
+    {
+      "name": "prototype",
+      "path": "/prototype"
+    },
+    {
+      "name": "start-here",
+      "path": "/start"
+    },
+    {
+      "name": "404-page",
+      "path": "/nonexistent-page"
+    }
+  ],
+  "results": [
+    {
+      "url": "http://localhost:3099/integral-education/",
+      "violations": [],
+      "passes": 25,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 6
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3099/integral-education/docs/intro",
+      "violations": [],
+      "passes": 27,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3099/integral-education/docs/modules/mindfulness-basics",
+      "violations": [],
+      "passes": 27,
+      "incomplete": [
+        {
+          "id": "aria-prohibited-attr",
+          "description": "Ensure ARIA attributes are not prohibited for an element's role",
+          "nodes": 1
+        },
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3099/integral-education/docs/quickstarts/personal-to-integral",
+      "violations": [],
+      "passes": 26,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3099/integral-education/prototype",
+      "violations": [],
+      "passes": 27,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 5
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3099/integral-education/start",
+      "violations": [],
+      "passes": 24,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 3
+        }
+      ]
+    },
+    {
+      "url": "http://localhost:3099/integral-education/nonexistent-page",
+      "violations": [],
+      "passes": 24,
+      "incomplete": [
+        {
+          "id": "color-contrast",
+          "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+          "nodes": 3
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "totalPages": 7,
+    "totalViolations": 0
+  }
+}

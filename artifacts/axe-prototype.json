@@ -1,0 +1,12 @@
+{
+  "url": "http://localhost:3099/integral-education/prototype",
+  "violations": [],
+  "passes": 27,
+  "incomplete": [
+    {
+      "id": "color-contrast",
+      "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+      "nodes": 5
+    }
+  ]
+}

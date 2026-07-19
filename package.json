@@ -28,7 +28,9 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/types": "3.10.2",
     "@easyops-cn/docusaurus-search-local": "^0.55.2",
-    "canvas": "^3.2.3"
+    "canvas": "^3.2.3",
+    "lighthouse": "^13.4.0",
+    "puppeteer": "^25.3.0"
   },
   "browserslist": {
     "production": [
@@ -49,6 +51,8 @@
     "node": ">=18.0"
   },
   "allowScripts": {
-    "canvas@3.2.3": true
+    "canvas@3.2.3": true,
+    "puppeteer@25.3.0": true,
+    "lighthouse@13.4.0": true
   }
 }

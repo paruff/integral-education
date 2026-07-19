@@ -16,6 +16,16 @@
   margin: 0 0 0.5rem;
 }
 
+.callout {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem;
+  border: 1px solid #f0c060;
+  border-radius: 0.75rem;
+  background: #fffbe6;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -88,6 +98,17 @@
 
 .links ul {
   margin-bottom: 0;
+  margin-top: 0.75rem;
+}
+
+.links summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.links summary:hover {
+  opacity: 0.8;
 }
 
 @media (max-width: 900px) {

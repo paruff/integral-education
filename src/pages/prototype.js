@@ -52,20 +52,26 @@ export default function PrototypePage() {
 
   return (
     <Layout
-      title="Interactive Prototype"
-      description="Clickable prototype for pathway selection, practice flow, retrieval loop, and rubric preview">
+      title="Try a Practice Session"
+      description="Explore how a guided learning practice works, choose a path, and see how your progress is tracked.">
       <main className={styles.wrapper}>
         <section className={styles.hero}>
-          <h1>Integral Learning Prototype</h1>
+          <h1>Try a Practice Session</h1>
           <p>
-            Explore pathway selection, safety-aware practice flow, retrieval loops,
-            and rubric-based assessment in a single interactive page.
+            Choose a learning path, step through a guided practice, and see how
+            your progress is tracked.
           </p>
         </section>
 
+        <div className={styles.callout}>
+          <strong>This is a demo — not a full session.</strong>
+          <br />
+          Explore how a guided practice works before you begin. No progress is saved.
+        </div>
+
         <section className={styles.grid}>
           <article className={styles.card}>
-            <h2>1) Select Pathway</h2>
+            <h2>Choose Your Path</h2>
             <label htmlFor="pathway">Pathway</label>
             <select
               id="pathway"
@@ -98,7 +104,7 @@ export default function PrototypePage() {
           </article>
 
           <article className={styles.card}>
-            <h2>2) Practice Flow</h2>
+            <h2>Begin Your Practice</h2>
             <ol className={styles.stepList}>
               {practiceSteps.map((step) => (
                 <li key={step}>{step}</li>
@@ -121,7 +127,7 @@ export default function PrototypePage() {
           </article>
 
           <article className={styles.card}>
-            <h2>3) Retrieval Loop Preview</h2>
+            <h2>How Review Works</h2>
             <ul className={styles.retrievalList}>
               <li>24h: 5-question mixed recall check</li>
               <li>72h: short scenario application prompt</li>
@@ -134,7 +140,7 @@ export default function PrototypePage() {
           </article>
 
           <article className={styles.card}>
-            <h2>4) Rubric Preview</h2>
+            <h2>How You Are Assessed</h2>
             <div className={styles.sliderGroup}>
               <label id="aqalLabel">AQAL completeness</label>
               <input
@@ -181,8 +187,8 @@ export default function PrototypePage() {
           </article>
         </section>
 
-        <section className={styles.links}>
-          <h2>Implementation Docs</h2>
+        <details className={styles.links}>
+          <summary><strong>Implementation Docs (for developers)</strong></summary>
           <ul>
             <li><Link to="/docs/implementation/backlog">Backlog</Link></li>
             <li><Link to="/docs/maps/aqal-competency-map">AQAL Competency Map</Link></li>
@@ -191,7 +197,7 @@ export default function PrototypePage() {
             <li><Link to="/docs/safety/shadowwork-safety-standard">Shadowwork Safety Standard</Link></li>
             <li><Link to="/docs/pilots/pilot-runbook-20-40">Pilot Runbook</Link></li>
           </ul>
-        </section>
+        </details>
       </main>
     </Layout>
   );

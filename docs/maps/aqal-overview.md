@@ -13,7 +13,7 @@ Developed by Ken Wilber, AQAL is the most comprehensive map of human experience 
 
 :::tip New to AQAL?
 
-AQAL is a framework for understanding human development across five dimensions: how we experience things (quadrants), how we grow (levels), what capacities we develop (lines), what states we access (states), and what styles shape us (types). If you are brand new to integral theory, the [Introduction](/docs/intro) explains these concepts in plain language and takes about 5 minutes to read.
+AQAL is a framework for understanding human development across five dimensions: how we experience things (quadrants), how we grow (levels), what capacities we develop (lines), what states we access (states), and what styles shape us (types). If you are brand new to integral theory, the [Introduction](../intro) explains these concepts in plain language and takes about 5 minutes to read.
 
 :::
 
@@ -137,9 +137,9 @@ Use this lens when it improves learner accessibility:
 
 ## Next Steps
 
-- [Choose a QuickStart →](/docs/quickstarts/personal-to-integral) — a curated learning path based on where you are right now
-- [Explore the Competency Map →](/docs/maps/aqal-competency-map) — see how skills map across quadrants and levels
-- [Not sure which path? →](/start) — take the self-reflection tool to find your starting point
+- [Choose a QuickStart →](../quickstarts/personal-to-integral) — a curated learning path based on where you are right now
+- [Explore the Competency Map →](./aqal-competency-map) — see how skills map across quadrants and levels
+- [Not sure where to begin? →](../quickstarts/personal-to-integral) — a broad starting point that meets you where you are
 
 ## Resources
 

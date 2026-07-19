@@ -1,28 +1,30 @@
-# Build Report — UX-13
+# Build Report — UX-14
 
 ## Summary
-Implemented accessibility fixes for prototype page form controls (WCAG 2.1 AA compliance). All changes in `src/pages/prototype.js` and `src/pages/prototype.module.css`.
+Installed and configured client-side search for the platform using `@easyops-cn/docusaurus-search-local`. Search index is generated at build time and ships as static JSON with the site.
 
 ## Files Changed
 | File | Change |
 |------|--------|
-| `src/pages/prototype.js` | Added aria-label to checkbox, aria-labelledby + aria-valuetext to 3 sliders, aria-live region for safety gate |
-| `src/pages/prototype.module.css` | Added min-height: 44px for select and range inputs (mobile touch targets) |
+| `package.json` | Added `@easyops-cn/docusaurus-search-local` to devDependencies |
+| `package-lock.json` | Updated lockfile |
+| `docusaurus.config.js` | Added `plugins` array with search-local configuration (`hashed: true`, `language: ['en']`, `indexDocs: true`, `indexPages: true`) |
 
 ## Tasks Completed
 | ID | Task | Status |
 |----|------|--------|
-| 1 | Explicit labels for Pathway/Readiness selects | PASS (already implemented) |
-| 2 | aria-label on safety consent checkbox | PASS |
-| 3 | aria-label/aria-valuetext on rubric sliders | PASS |
-| 4 | aria-live region for safety gate | PASS |
-| 5 | 44px minimum touch targets | PASS |
-| 6 | Verify focus order | PASS |
-| 7 | Build passes, axe-core zero violations | PASS |
+| 1 | Install docusaurus-search-local dev dependency | PASS |
+| 2 | Add search plugin configuration to docusaurus.config.js | PASS |
+| 3 | Build and verify search index generation | PASS |
+| 4 | Verify search box appears in navbar | PASS |
 
 ## Validation Results
-- **Build**: PASS (no errors, no new warnings)
-- **Lint/Typecheck**: N/A (no project config)
+- **Build**: PASS (`[SUCCESS] Generated static files in "build"`)
+- **Search index**: Generated at `build/search-index.json` (14MB)
+- **Index composition**: 5 sub-indexes — titles (118), headings (2,678), descriptions (118), keywords (0), content (2,473)
+- **Content indexing**: 7,606 unique terms indexed across module content
+- **Search bar**: Present in navbar with `placeholder="Search"` and `aria-label="Search"`
+- **Keyboard accessible**: Native `<input>` element (Tab to focus, Enter to submit)
 
 ## Blockers
 None.

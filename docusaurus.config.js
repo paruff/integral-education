@@ -14,6 +14,18 @@ const config = {
   organizationName: 'paruff',
   projectName: 'integral-education',
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      ({
+        hashed: true,
+        language: ['en'],
+        indexDocs: true,
+        indexPages: true,
+      }),
+    ],
+  ],
+
   presets: [
     [
       'classic',

@@ -29,7 +29,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-# 🧠 Learn
+## 🧠 Learn
 
 **Systems thinking** = understanding how parts relate to form wholes, and how wholes influence their parts.
 
@@ -45,7 +45,7 @@ Key concepts:
 
 ---
 
-# 🧘 Practice
+## 🧘 Practice
 
 **Duration:** 15–20 min
 
@@ -59,7 +59,7 @@ Key concepts:
 
 ---
 
-# 🔍 Reflect
+## 🔍 Reflect
 
 - What surprised you about the system you mapped?
 - Where do you see yourself creating unintended consequences?
@@ -68,7 +68,7 @@ Key concepts:
 
 ---
 
-# 📊 Assess (Self + Structured)
+## 📊 Assess (Self + Structured)
 
 | Level | Indicator |
 |-------|-----------|
@@ -79,7 +79,7 @@ Key concepts:
 
 ---
 
-# 🔗 Integrate
+## 🔗 Integrate
 
 Apply this in real life:
 - Before intervening, ask: "What feedback loops am I triggering?"
@@ -88,7 +88,7 @@ Apply this in real life:
 
 ---
 
-# 🧠 Anki Cards
+## 🧠 Anki Cards
 
 Q: What is a feedback loop?
 A: A causal chain where output becomes input, either reinforcing or balancing the system

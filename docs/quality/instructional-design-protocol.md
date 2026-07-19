@@ -5,7 +5,7 @@ sidebar_label: Design Protocol
 tags: [quality, evidence, instructional-design, accessibility]
 ---
 
-# Evidence-Based Instructional Design Protocol
+## Evidence-Based Instructional Design Protocol
 
 This document is the canonical design and presentation protocol for contributors and Copilot when creating or revising learning content in this repository.
 

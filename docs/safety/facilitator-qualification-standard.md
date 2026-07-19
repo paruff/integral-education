@@ -5,7 +5,7 @@ sidebar_label: Facilitator Qualifications
 tags: [safety, facilitation, governance, M2]
 ---
 
-# Facilitator Qualification Standard
+## Facilitator Qualification Standard
 
 This standard defines the minimum qualifications, supervision ratios, certification pathways, and incident-response requirements for facilitators delivering Tier 1–3 shadowwork and reflective practices on this platform.
 

@@ -5,7 +5,7 @@ sidebar_label: "Pathway A: Integral Foundations"
 tags: [pilot, pathway, microlearning, retrieval]
 ---
 
-# Pilot Pathway A: Integral Foundations (4 Weeks)
+## Pilot Pathway A: Integral Foundations (4 Weeks)
 
 Audience: adult learners building baseline integral literacy and practical transfer skills.
 

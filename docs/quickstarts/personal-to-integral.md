@@ -4,7 +4,7 @@ title: Personal → Integral (QuickStart)
 sidebar_position: 1
 ---
 
-# 🧭 Personal → Integral (QuickStart)
+## 🧭 Personal → Integral (QuickStart)
 
 **Goal:** Move from conventional self-awareness to an integral, multi-perspectival understanding of yourself and the world.
 

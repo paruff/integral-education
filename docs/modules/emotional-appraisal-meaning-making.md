@@ -23,7 +23,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-# EI-05 · Emotional Appraisal & Meaning-Making
+## EI-05 · Emotional Appraisal & Meaning-Making
 
 **Position in sequence:** This is the fifth module in the **Emotional Line** suite. It builds directly on [Emotion Regulation Foundations](./emotion-regulation-foundations) (EI-02) and provides the appraisal-theory foundation that makes reappraisal intellectually grounded. Prerequisites: EI-01, EI-02, EI-03.
 

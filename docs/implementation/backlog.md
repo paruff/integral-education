@@ -5,7 +5,7 @@ sidebar_label: Backlog
 tags: [implementation, backlog, roadmap]
 ---
 
-# Integral Platform Backlog
+## Integral Platform Backlog
 
 This backlog is designed so Copilot can implement technical and documentation items directly, while clearly flagging work that requires human judgment, facilitation, ethics review, or participant operations.
 

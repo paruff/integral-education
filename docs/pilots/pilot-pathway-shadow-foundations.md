@@ -5,7 +5,7 @@ sidebar_label: "Pathway B: Shadow Foundations"
 tags: [pilot, shadowwork, safety, microlearning]
 ---
 
-# Pilot Pathway B: Shadow Integration Foundations (4 Weeks)
+## Pilot Pathway B: Shadow Integration Foundations (4 Weeks)
 
 Audience: adult learners ready for low-intensity shadow literacy and projection practices with explicit safety scaffolding.
 

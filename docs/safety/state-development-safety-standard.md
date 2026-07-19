@@ -5,7 +5,7 @@ sidebar_label: State Development Safety
 tags: [safety, states, meditation, waking-up, facilitation]
 ---
 
-# State Development Safety & Integration Standards
+## State Development Safety & Integration Standards
 
 This standard defines contraindications, warning signs, safe-container requirements, emergency grounding procedures, and escalation pathways for all state-development practices on this platform — including causal state training, self-inquiry, nondual practices, Yoga Nidra, and related waking-up path work.
 

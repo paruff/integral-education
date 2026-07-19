@@ -5,7 +5,7 @@ title: Daily Reflection Template
 tags: ["reflection", "journaling", "aqal"]
 ---
 
-# 🪞 Daily Reflection Template
+## 🪞 Daily Reflection Template
 
 Use this template daily to track your growth across all quadrants.
 

@@ -8,7 +8,7 @@ tags: [emotional-line, stage-map, aqal, growing-up, amber, orange, green, teal, 
 
 import Admonition from '@theme/Admonition';
 
-# 🗺️ Emotional Line Stage Map (Amber through Integral)
+## 🗺️ Emotional Line Stage Map (Amber through Integral)
 
 ## Overview
 

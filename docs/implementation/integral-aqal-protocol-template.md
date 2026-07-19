@@ -5,7 +5,7 @@ sidebar_label: Integral AQAL Template
 tags: [implementation, protocol, template, aqal, integral]
 ---
 
-# Integral Theory and AQAL Protocol Template
+## Integral Theory and AQAL Protocol Template
 
 Use this template to design any new course or module in this repository. It operationalizes the canonical quality protocol specifically for Integral Theory and AQAL.
 

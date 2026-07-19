@@ -5,7 +5,7 @@ sidebar_label: Peer Review SOP
 tags: [quality, peer-review, sop]
 ---
 
-# Peer Review SOP
+## Peer Review SOP
 
 This SOP standardizes external and internal review of learning modules for factual accuracy, bias control, instructional quality, and safety.
 

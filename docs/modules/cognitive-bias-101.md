@@ -25,7 +25,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-# 🧠 Learn
+## 🧠 Learn
 
 **Cognitive bias** = a systematic error in thinking that affects the judgments and decisions people make.
 
@@ -40,7 +40,7 @@ Key biases to know:
 
 ---
 
-# 🧘 Practice
+## 🧘 Practice
 
 **Duration:** 10–15 min
 
@@ -53,7 +53,7 @@ Key biases to know:
 
 ---
 
-# 🔍 Reflect
+## 🔍 Reflect
 
 - What evidence did you ignore or downweight?
 - Which bias felt most active in your thinking?
@@ -62,7 +62,7 @@ Key biases to know:
 
 ---
 
-# 📊 Assess (Self + Structured)
+## 📊 Assess (Self + Structured)
 
 | Level | Indicator |
 |-------|-----------|
@@ -73,7 +73,7 @@ Key biases to know:
 
 ---
 
-# 🔗 Integrate
+## 🔗 Integrate
 
 Apply this in real life:
 - Pause before forming conclusions and ask: *Am I being systematic?*
@@ -82,7 +82,7 @@ Apply this in real life:
 
 ---
 
-# 🧠 Anki Cards
+## 🧠 Anki Cards
 
 Q: What is a cognitive bias?
 A: A systematic error in thinking that affects judgments and decisions

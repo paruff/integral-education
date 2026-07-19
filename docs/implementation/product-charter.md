@@ -5,7 +5,7 @@ sidebar_label: Product Charter
 tags: [implementation, governance, charter, M1]
 ---
 
-# Integral Education Platform — Product Charter
+## Integral Education Platform — Product Charter
 
 > **Status:** Draft — Pending human owner review and approval  
 > **Version:** 0.1  

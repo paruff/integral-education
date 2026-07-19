@@ -10,6 +10,8 @@ types: ["experiential", "analytical"]
 
 tags: ["emotions", "affect", "self-awareness"]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 ## AQAL Mapping
 | Dimension | Framework Mapping |
@@ -118,5 +120,4 @@ To transition this cognitive taxonomy into long-term functional capacity, execut
 
 ## Next Steps
 
-
-import NextStep from '@site/src/components/NextStep';
+<NextStep />

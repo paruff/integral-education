@@ -5,6 +5,8 @@ sidebar_label: "EI-05 · Emotional Appraisal"
 prerequisites: [ei-01, ei-02, ei-03]
 tags: [emotional-line, appraisal, aqal, meaning-making, abc-model, cognitive-reappraisal]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 # EI-05 · Emotional Appraisal & Meaning-Making
 
@@ -238,3 +240,5 @@ END
 - **Review Status:** PENDING
 - **Reviewer:** [HUMAN REQUIRED]
 - **Date:** [HUMAN REQUIRED]
+
+<NextStep />

@@ -10,6 +10,8 @@ types: ["systems-thinker"]
 
 tags: ["bias", "thinking", "reasoning"]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 # 🧠 Learn
 
@@ -81,3 +83,5 @@ A: Overestimating competence in areas where one has little knowledge
 
 Q: What is steelmanning?
 A: Stating the strongest possible version of an opposing argument
+
+<NextStep />

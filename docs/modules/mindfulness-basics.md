@@ -10,6 +10,8 @@ types: ["experiential"]
 
 tags: ["attention", "awareness"]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 # 🧠 Learn
 
@@ -78,3 +80,5 @@ A: Attention is focused; awareness is the open space in which experience occurs
 
 Q: What is meta-cognition in mindfulness?
 A: Awareness of your own awareness — observing the observer
+
+<NextStep />

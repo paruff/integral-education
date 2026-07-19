@@ -1,0 +1,110 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - var(--ifm-navbar-height) - 10rem);
+  padding: 2rem 1rem;
+}
+
+.content {
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+}
+
+.statusCode {
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--ifm-color-emphasis-300);
+  margin-bottom: 0.25rem;
+  user-select: none;
+}
+
+.heading {
+  font-size: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-800);
+  margin-bottom: 0.75rem;
+}
+
+.explanation {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 2rem;
+}
+
+.recoverySection {
+  margin-bottom: 2rem;
+}
+
+.recoveryHeading {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+}
+
+.recoveryGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+.recoveryCard {
+  display: block;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-toc-border-color);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.recoveryCard:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  color: inherit;
+}
+
+.recoveryCardTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  color: var(--ifm-color-primary);
+}
+
+.recoveryCardDesc {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0 0 0.5rem;
+}
+
+.recoveryCardCta {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.helpSection {
+  margin-top: 0.5rem;
+}
+
+.helpText {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+@media screen and (min-width: 480px) {
+  .statusCode {
+    font-size: 6rem;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+}

@@ -1,60 +1,58 @@
-# Design: UX-15 — Social Sharing Meta Tags
+# Design: UX-16 — Custom 404 Page
 
 ## Impacted Components
 
-### 1. static/img/og-default.png (NEW)
-Default Open Graph image for all pages that lack a page-specific image. 1200x630px PNG with branded platform name and tagline.
+### 1. src/pages/404.js (NEW)
+A React component that Docusaurus automatically uses as the 404 page. Uses `@theme/Layout` for consistent header/footer wrapping.
 
-### 2. docusaurus.config.js
-Add `themeConfig.metadata` array with Open Graph and Twitter Card meta tags. Docusaurus renders these as `<meta>` elements in `<head>`.
-
-### 3. Module .md files (72 files)
-Add `description` frontmatter to each module, derived from the module's title, level, and lines.
-
-### 4. Quickstart .md files (10 files)
-Add `description` frontmatter to each quickstart.
-
-### 5. Maps .md files (8 files)
-Add `title` and `description` frontmatter to each maps doc.
-
-### 6. Pilot .md files (4 files)
-Add `title` and `description` frontmatter to each pilot doc.
+### 2. src/pages/404.module.css (NEW)
+CSS module for 404 page styling, using Docusaurus/Infima CSS variables for theme consistency.
 
 ## Technical Approach
 
-### Docusaurus Meta Tag Rendering
-Docusaurus automatically:
-- Uses `themeConfig.metadata` to render `<meta>` tags site-wide
-- Uses `description` frontmatter on each doc page for `og:description` (no custom code needed)
-- Uses `title` frontmatter or H1 for `og:title`
+### Docusaurus Auto-Discovery
+Docusaurus automatically discovers `src/pages/404.js` and renders it at any invalid URL. No config changes needed — no routing, no plugin, no docusaurus.config.js changes.
 
-Example config:
-```js
-metadata: [
-  { property: 'og:image', content: '/img/og-default.png' },
-  { property: 'og:type', content: 'website' },
-  { property: 'og:site_name', content: 'Integral Education Platform' },
-  { name: 'twitter:card', content: 'summary_large_image' },
-],
+### Component Structure
+```jsx
+<Layout title="Page Not Found">
+  <main className={styles.container}>
+    <div className={styles.content}>
+      <h1>Page Not Found</h1>
+      <p>3-sentence explanation...</p>
+      <div className={styles.recoveryLinks}>
+        <Link to="/">Home</Link>
+        <Link to="/start">Start Here</Link>
+        <Link to="/docs/modules/mindfulness-basics">Mindfulness Basics</Link>
+      </div>
+      <Link to="https://github.com/paruff/integral-education/issues/new">Report broken link</Link>
+    </div>
+  </main>
+</Layout>
 ```
 
-### OG Image Generation
-Create a simple branded 1200x630 PNG with:
-- Dark background (#1a1a2e or similar)
-- Platform name "Integral Education" centered
-- Tagline "Mastery Across All Quadrants" below
-- Clean, readable font
+### Recovery Navigation (3+ options)
+1. Homepage — `/`
+2. Start Here — `/start`
+3. Mindfulness Basics module — `/docs/modules/mindfulness-basics`
+4. Report a broken link — GitHub Issues (external)
 
-### Frontmatter Additions
-- **Modules**: Add `description` summarizing the module (e.g., "Explore [module title] — a [level] practice for developing [lines] awareness.")
-- **Quickstarts**: Add `description` describing the quickstart path
-- **Maps**: Add `title` (if missing) and `description`
-- **Pilots**: Add `title` (if missing) and `description`
+### Accessibility
+- Proper heading hierarchy: `h1 → h2 → h3`
+- All links keyboard-navigable (native `<a>` and `<Link>` elements)
+- `aria-label` on external link for context
+- Sufficient color contrast using theme CSS variables
+
+### Styling
+- Use CSS variables from `:root` and `[data-theme='dark']` for theme consistency
+- Center content vertically and horizontally
+- Card-style recovery option blocks matching homepage card pattern
+- Responsive layout
 
 ## Data Flow
-No runtime data flow — all changes are build-time static metadata.
+No runtime data flow — static React page rendered at build time.
 
 ## Constraints
-- Keep OG image file size reasonable (<100KB)
-- No additional npm dependencies needed
-- Do not break any existing builds
+- No additional npm dependencies
+- No docusaurus.config.js changes needed
+- No changes to existing files

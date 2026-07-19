@@ -14,7 +14,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-# Affect Labelling & Somatic Correlation
+## Affect Labelling & Somatic Correlation
 
 This module develops the competency at the junction of the Emotional and Somatic lines (AQAL Competency Map L2), training the capacity to pair a distinct emotional concept with its concrete bodily sensation.
 

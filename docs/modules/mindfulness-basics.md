@@ -26,7 +26,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-# 🧠 Learn
+## 🧠 Learn
 
 **Mindfulness** = non-judgmental awareness of present experience.
 
@@ -39,7 +39,7 @@ Key distinctions:
 
 ---
 
-# 🧘 Practice
+## 🧘 Practice
 
 **Duration:** 10–20 min
 
@@ -54,7 +54,7 @@ Key distinctions:
 
 ---
 
-# 🔍 Reflect
+## 🔍 Reflect
 
 - How often did your attention drift during the practice?
 - What types of thoughts pulled attention away most?
@@ -63,7 +63,7 @@ Key distinctions:
 
 ---
 
-# 📊 Assess (Self + Structured)
+## 📊 Assess (Self + Structured)
 
 | Level | Indicator |
 |-------|-----------|
@@ -74,7 +74,7 @@ Key distinctions:
 
 ---
 
-# 🔗 Integrate
+## 🔗 Integrate
 
 Apply this in real life:
 - Pause for 3 breaths before responding in conversation
@@ -83,7 +83,7 @@ Apply this in real life:
 
 ---
 
-# 🧠 Anki Cards
+## 🧠 Anki Cards
 
 Q: What is mindfulness?
 A: Non-judgmental present-moment awareness

@@ -5,7 +5,7 @@ sidebar_label: AQAL Label Crosswalk
 tags: [aqal, labels, accessibility, taxonomy]
 ---
 
-# AQAL Label Crosswalk (Dual-Layer)
+## AQAL Label Crosswalk (Dual-Layer)
 
 This guide defines a dual-layer language model for learner accessibility and conceptual precision.
 

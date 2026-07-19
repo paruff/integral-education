@@ -5,7 +5,7 @@ sidebar_label: AQAL Competency Map
 tags: [aqal, competencies, assessment, progression, evidence]
 ---
 
-# AQAL Competency Map
+## AQAL Competency Map
 
 This map defines measurable competencies for all quadrants, levels, lines, states, and types. Use it as the canonical design reference for pathway, assessment, and analytics decisions.
 

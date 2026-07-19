@@ -5,7 +5,7 @@ sidebar_label: Permaculture Protocol Example
 tags: [implementation, protocol, example, evidence]
 ---
 
-# Implementation Protocol Example: Introduction to Permaculture
+## Implementation Protocol Example: Introduction to Permaculture
 
 This document is a domain-specific implementation example that translates the repository's canonical evidence-based instructional protocol to a concrete subject area.
 

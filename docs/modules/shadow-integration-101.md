@@ -26,7 +26,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-# 🧠 Learn
+## 🧠 Learn
 
 **Shadow** = the disowned aspects of self — qualities, impulses, and capacities that were deemed unacceptable and pushed out of conscious awareness.
 
@@ -41,7 +41,7 @@ The goal is not to eliminate shadow — it's to make the unconscious conscious.
 
 ---
 
-# 🧘 Practice
+## 🧘 Practice
 
 **Duration:** 15–20 min
 
@@ -54,7 +54,7 @@ The goal is not to eliminate shadow — it's to make the unconscious conscious.
 
 ---
 
-# 🔍 Reflect
+## 🔍 Reflect
 
 - What trait in others triggered the strongest reaction?
 - Where have you expressed that same trait, even subtly?
@@ -63,7 +63,7 @@ The goal is not to eliminate shadow — it's to make the unconscious conscious.
 
 ---
 
-# 📊 Assess (Self + Structured)
+## 📊 Assess (Self + Structured)
 
 | Level | Indicator |
 |-------|-----------|
@@ -74,7 +74,7 @@ The goal is not to eliminate shadow — it's to make the unconscious conscious.
 
 ---
 
-# 🔗 Integrate
+## 🔗 Integrate
 
 Apply this in real life:
 - When criticized, ask: "Is there truth here I'm resisting?"
@@ -83,7 +83,7 @@ Apply this in real life:
 
 ---
 
-# 🧠 Anki Cards
+## 🧠 Anki Cards
 
 Q: What is shadow in Jungian psychology?
 A: The disowned aspects of self — qualities pushed out of conscious awareness
@@ -96,7 +96,7 @@ A: To make the unconscious conscious — own and relate to disowned qualities
 
 ---
 
-# ⚠️ Safety Notes
+## ⚠️ Safety Notes
 
 > **Tier 1 practice (self-guided with safety prompts). Not a substitute for therapy or clinical care.**
 

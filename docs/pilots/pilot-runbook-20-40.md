@@ -5,7 +5,7 @@ sidebar_label: Pilot Runbook
 tags: [pilot, operations, runbook]
 ---
 
-# Pilot Runbook (20-40 Adult Learners)
+## Pilot Runbook (20-40 Adult Learners)
 
 This runbook defines execution steps for human teams. Copilot can prepare materials but cannot execute participant operations.
 

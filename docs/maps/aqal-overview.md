@@ -5,7 +5,7 @@ title: AQAL Overview
 tags: ["aqal", "integral", "framework", "map"]
 ---
 
-# 🗺️ AQAL Overview
+## 🗺️ AQAL Overview
 
 **AQAL** = All Quadrants, All Levels, All Lines, All States, All Types
 

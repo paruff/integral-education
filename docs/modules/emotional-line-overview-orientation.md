@@ -38,7 +38,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-# 🗺️ AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | Value |
 |---|---|
@@ -52,7 +52,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-# 🧠 Learn
+## 🧠 Learn
 
 ## 1) What the Emotional Line Is (and Is Not)
 
@@ -100,7 +100,7 @@ These are tendencies, not fixed rules; use psychograph inquiry rather than ident
 
 ---
 
-# 🧭 Psychograph Orientation: Common Emotional-Line Asynchronies
+## 🧭 Psychograph Orientation: Common Emotional-Line Asynchronies
 
 Cross-reference: [Self Line Overview psychograph section](./self-line-overview-psychograph#the-psychograph-your-personal-developmental-profile).
 
@@ -118,7 +118,7 @@ The person accesses contemplative or transcendent states reliably but struggles 
 
 ---
 
-# 🧩 Suite Sequence Map
+## 🧩 Suite Sequence Map
 
 | Module | Prerequisites | Focus | Est. time |
 |---|---|---|---|
@@ -139,7 +139,7 @@ The person accesses contemplative or transcendent states reliably but struggles 
 
 ---
 
-# 🧘 Practice
+## 🧘 Practice
 
 ## Emotional Line Self-Portrait (30 minutes)
 
@@ -155,7 +155,7 @@ Optional synthesis prompt: "If my Emotional line were one level more developed i
 
 ---
 
-# 🧲 Stabilize
+## 🧲 Stabilize
 
 ## Pre/Trans Checkpoint for the Emotional Line
 
@@ -169,7 +169,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-# 🔄 Integrate
+## 🔄 Integrate
 
 - Pair with [Self Line Overview & Psychograph](./self-line-overview-psychograph) to examine how self-structure frames emotional work.
 - Pair with [Emotion Regulation Foundations](./emotion-regulation-foundations) for Gross's regulation architecture and window-of-tolerance practice.
@@ -179,7 +179,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-# 🔍 Reflect
+## 🔍 Reflect
 
 1. Where do you currently rely on broad emotion categories instead of precise labels, and what does that cost you?
 2. In the past week, where did you confuse suppression with regulation?
@@ -189,7 +189,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-# 📊 Assess
+## 📊 Assess
 
 | Criterion | Not yet | Developing | Stable |
 |---|---|---|---|
@@ -203,7 +203,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-# ⏱️ Retrieval Schedule
+## ⏱️ Retrieval Schedule
 
 | Interval | Activity |
 |---|---|
@@ -214,7 +214,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-# 🧠 Anki Cards
+## 🧠 Anki Cards
 
 Q: In AQAL, what does the Emotional line primarily track?
 A: The development of affective complexity: differentiating, regulating, communicating, and integrating emotional experience with increasing precision.
@@ -248,7 +248,7 @@ A: Suppression narrows awareness and often increases load; regulation modulates 
 
 ---
 
-# 📚 Evidence and Citations
+## 📚 Evidence and Citations
 
 Evidence quality is rated as Tier A (strong convergent evidence), Tier B (moderate convergent evidence or strong applied/theoretical synthesis), Tier C (provisional or largely heuristic).
 

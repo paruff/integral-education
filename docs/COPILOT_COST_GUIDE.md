@@ -1,4 +1,4 @@
-# Copilot Cost Guide
+## Copilot Cost Guide
 
 ## Billing model in plain language
 - As of June 2026, token-based billing means AI Credits are consumed by model usage and context size.

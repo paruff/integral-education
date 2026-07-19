@@ -5,7 +5,7 @@ sidebar_label: ILP Taxonomy
 tags: [ilp, practices, taxonomy, safety]
 ---
 
-# ILP Practice Taxonomy
+## ILP Practice Taxonomy
 
 This taxonomy defines Integral Life Practice (ILP) categories, taxonomy dimensions, progression ladders, fallback alternatives, and safety constraints for implementation in learning pathways and curriculum design.
 

@@ -5,7 +5,7 @@ sidebar_label: RACI Matrix
 tags: [implementation, governance, raci, M1]
 ---
 
-# RACI Matrix — Delivery Governance
+## RACI Matrix — Delivery Governance
 
 > **Status:** Draft — Pending human owner review and role assignment  
 > **Version:** 0.1  

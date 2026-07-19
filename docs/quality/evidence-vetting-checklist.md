@@ -5,7 +5,7 @@ sidebar_label: Evidence Checklist
 tags: [quality, evidence, citations]
 ---
 
-# Evidence-Vetting Checklist
+## Evidence-Vetting Checklist
 
 Use this checklist before publishing any learning module, claim, rubric descriptor, or controversial case study.
 

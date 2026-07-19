@@ -4,7 +4,7 @@ title: Introduction
 sidebar_position: 1
 ---
 
-# 🌐 Integral Education Platform
+## 🌐 Integral Education Platform
 
 Welcome to the **Integral Education Platform** — a mastery-based learning system built on the AQAL framework (All Quadrants, All Levels, All Lines, All States, All Types).
 

@@ -5,7 +5,7 @@ sidebar_label: Shadowwork Safety
 tags: [safety, shadowwork, facilitation]
 ---
 
-# Shadowwork Safety Standard
+## Shadowwork Safety Standard
 
 This standard defines safety tiers, delivery constraints, facilitator requirements, stop-rules, grounding protocols, and escalation pathways for all shadow-related practices on this platform.
 

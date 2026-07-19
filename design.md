@@ -1,72 +1,49 @@
-# Design: UX-13 — Prototype form controls are inaccessible
+# Design: UX-14 — No search capability
 
 ## Impacted Components
-- `src/pages/prototype.js` — Form controls, labels, ARIA attributes, safety gate live region
-- `src/pages/prototype.module.css` — Touch target sizing for mobile
+- `package.json` — Add `@easyops-cn/docusaurus-search-local` dev dependency
+- `docusaurus.config.js` — Add search plugin configuration
 
 ## Technical Approach
 
-### 1. Explicit Labels for Selects
-**Current:**
-```jsx
-<label htmlFor="pathway">Pathway</label>
-<select id="pathway" ...>
+### 1. Install Plugin
+```bash
+npm install --save-dev @easyops-cn/docusaurus-search-local
 ```
 
-**Target:** Already correct - both selects have proper label associations with matching htmlFor/id
+### 2. Plugin Configuration
+Add a `plugins` array to `docusaurus.config.js` with the search-local plugin:
 
-### 2. Safety Consent Checkbox aria-label
-**Target:**
-```jsx
-<label className={styles.checkboxRow}>
-  <input
-    type="checkbox"
-    checked={safetyAck}
-    onChange={...}
-    aria-label="I have read the consent language and stop rules"
-  />
-  I have read consent language and stop rules.
-</label>
+```js
+plugins: [
+  [
+    require.resolve('@easyops-cn/docusaurus-search-local'),
+    {
+      hashed: true,
+      language: ['en'],
+      indexDocs: true,
+      indexPages: true,
+    },
+  ],
+],
 ```
 
-### 3. Rubric Sliders ARIA
-**Target for all three sliders:**
-```jsx
-<label id="aqalLabel">AQAL completeness</label>
-<input
-  type="range"
-  min="1"
-  max="5"
-  step="0.5"
-  value={aqalScore}
-  onChange={...}
-  aria-labelledby="aqalLabel"
-  aria-valuetext={`${aqalScore} out of 5`}
-/>
-```
-Repeat for evidence and transfer sliders with appropriate labels.
+### 3. Build Verification
+- `npm run build` generates static files including the search index JSON
+- Docusaurus classic preset automatically renders a search bar in the navbar when a search plugin is active
+- No theme swizzling or custom components needed
 
-### 4. Safety Gate Live Region
-**Target:**
-```jsx
-<div aria-live="polite" aria-atomic="true" className={styles.note}>
-  {safetyAck ? 'Safety gate passed: practice can proceed.' : 'Safety gate pending: review consent and safety instructions before practice.'}
-</div>
-```
+### 4. GitHub Actions
+- No changes needed: the existing `deploy-gh-pages.yml` workflow runs `npm run build` and deploys the full `build/` directory including the search index
 
-### 5. Touch Target Sizing (CSS)
-```css
-.card select,
-.card input[type="range"] {
-  min-height: 44px;
-}
-```
-
-### 6. Focus Order
-Current tab order already matches visual order: Pathway → Readiness → Consent checkbox → 3 rubric sliders. No changes needed.
+### 5. Verification Testing
+- Start dev server with `npm run start`
+- Confirm search bar appears in the navbar
+- Test searches: "mindfulness", "shadow", "retrieval", "emotional"
+- Check keyboard accessibility: Tab to search box, type query, Enter to submit
 
 ## Risk Assessment
-- **Low risk**: Only ARIA attributes and CSS changes
-- **No new dependencies**: Native HTML/ARIA only
-- **Focus order**: Already matches visual order
-- **Testing**: axe-core validation after implementation
+- **Low risk**: Widely used Docusaurus plugin, no breaking changes
+- **No backend**: Fully client-side search index
+- **No theme changes**: Plugin integrates automatically via Docusaurus plugin system
+- **No performance concern**: Index is hashed for cache busting, search is local/offline

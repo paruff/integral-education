@@ -1,79 +1,61 @@
 [
   {
     "id": "1",
-    "task": "Add aria-label to safety consent checkbox",
+    "task": "Install @easyops-cn/docusaurus-search-local dev dependency",
     "dependency": [],
     "acceptance_criteria": [
       {
-        "ac": "Safety consent checkbox has aria-label='I have read the consent language and stop rules'",
-        "test_type": "integration"
+        "ac": "Plugin added to devDependencies in package.json",
+        "test_type": "unit"
+      },
+      {
+        "ac": "npm install completes without errors",
+        "test_type": "unit"
       }
     ]
   },
   {
     "id": "2",
-    "task": "Add aria-label and aria-valuetext to rubric sliders",
-    "dependency": [],
+    "task": "Add search plugin configuration to docusaurus.config.js",
+    "dependency": ["1"],
     "acceptance_criteria": [
       {
-        "ac": "AQAL completeness slider has aria-labelledby and aria-valuetext showing value out of 5",
-        "test_type": "integration"
-      },
-      {
-        "ac": "Evidence quality slider has aria-labelledby and aria-valuetext showing value out of 5",
-        "test_type": "integration"
-      },
-      {
-        "ac": "Transfer feasibility slider has aria-labelledby and aria-valuetext showing value out of 5",
-        "test_type": "integration"
+        "ac": "plugins array in docusaurus.config.js includes search-local with hashed: true, language: ['en'], indexDocs: true, indexPages: true",
+        "test_type": "unit"
       }
     ]
   },
   {
     "id": "3",
-    "task": "Wrap safety gate status message in aria-live region",
-    "dependency": [],
+    "task": "Build and verify search index generation",
+    "dependency": ["2"],
     "acceptance_criteria": [
       {
-        "ac": "Safety gate status message wrapped in div with aria-live='polite' and aria-atomic='true'",
+        "ac": "npm run build completes without errors",
+        "test_type": "unit"
+      },
+      {
+        "ac": "Search index JSON file exists in build output",
         "test_type": "integration"
       }
     ]
   },
   {
     "id": "4",
-    "task": "Ensure 44px minimum touch targets on mobile via CSS",
-    "dependency": [],
+    "task": "Verify search box appears in navbar and is keyboard-accessible",
+    "dependency": ["3"],
     "acceptance_criteria": [
       {
-        "ac": "Select inputs have min-height: 44px on mobile",
-        "test_type": "integration"
+        "ac": "Search box visible in navbar on desktop and mobile",
+        "test_type": "live-system"
       },
       {
-        "ac": "Range inputs have min-height: 44px on mobile",
-        "test_type": "integration"
-      }
-    ]
-  },
-  {
-    "id": "5",
-    "task": "Verify focus order follows visual reading order",
-    "dependency": ["1", "2"],
-    "acceptance_criteria": [
+        "ac": "Search returns relevant results for: mindfulness, shadow, retrieval, emotional",
+        "test_type": "live-system"
+      },
       {
-        "ac": "Tab order: Pathway → Readiness → Consent checkbox → 3 rubric sliders",
-        "test_type": "integration"
-      }
-    ]
-  },
-  {
-    "id": "6",
-    "task": "Run build and validate no regressions",
-    "dependency": ["1", "2", "3", "4", "5"],
-    "acceptance_criteria": [
-      {
-        "ac": "npm run build passes with no errors",
-        "test_type": "unit"
+        "ac": "Search box is reachable via Tab key and Enter submits",
+        "test_type": "live-system"
       }
     ]
   }

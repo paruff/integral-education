@@ -11,6 +11,37 @@ tags: ["aqal", "integral", "framework", "map"]
 
 Developed by Ken Wilber, AQAL is the most comprehensive map of human experience and development available. It is a *map* — not the territory — but a useful orienting framework.
 
+:::tip New to AQAL?
+
+AQAL is a framework for understanding human development across five dimensions: how we experience things (quadrants), how we grow (levels), what capacities we develop (lines), what states we access (states), and what styles shape us (types). If you are brand new to integral theory, the [Introduction](../intro) explains these concepts in plain language and takes about 5 minutes to read.
+
+:::
+
+## Quick Summary
+
+AQAL says: **every situation has at least four perspectives** (the quadrants), **people grow through predictable stages** (levels), **different capacities develop at different rates** (lines), **temporary states of consciousness are trainable** (states), and **stable personality styles colour everything** (types). Together, these five dimensions help you see what you might be missing — in yourself, in others, and in the systems you inhabit.
+
+## Quick Reference
+
+| Dimension | What It Covers | Why It Matters |
+|-----------|---------------|----------------|
+| **Quadrants** (Where) | Four irreducible perspectives: I (subjective), We (culture), It (behaviour), Its (systems) | Prevents reductionism — no single lens captures reality |
+| **Levels** (Depth) | Developmental stages from archaic to integral | Helps you meet people where they are, not where you wish they were |
+| **Lines** (Skills) | Independent capacities: cognitive, emotional, moral, interpersonal, somatic, spiritual | Explains why someone can be brilliant in one area and struggling in another |
+| **States** (Experience) | Temporary consciousness: waking, dreaming, deep sleep, witnessing, nondual | States are trainable — practice can stabilise access to wider awareness |
+| **Types** (Style) | Stable patterns: masculine/feminine, personality, cultural orientation | Types cut across all levels — they describe *how* you process, not *where* you are |
+
+## How to Use This Map
+
+### If you are new to integral theory
+Start with the [Quick Summary](#quick-summary) above, then read the **Quadrants** and **Levels** sections. Those two dimensions alone will give you a working framework. Come back to Lines, States, and Types when you encounter a situation where the first two feel insufficient.
+
+### If you are an active learner
+Use the **Quick Reference** table to identify which dimension you have been neglecting. Most learners over-focus on one or two quadrants and under-attend to States and Types. Pick the section that feels least familiar and read it with a specific life situation in mind.
+
+### If you are facilitating or teaching
+Start with the **Quadrants** section — it is the most immediately useful diagnostic tool for group dynamics. Then scan the **Levels** table to calibrate your language and framing to your group's likely centre of gravity. The **Lines** section helps you individualise support for participants with uneven development.
+
 ---
 
 ## Where (Quadrants)
@@ -84,7 +115,7 @@ Types are stable styles that cut across levels, lines, and states:
 
 ---
 
-## How to Use AQAL
+## How to Apply AQAL
 
 When facing a challenge, ask:
 1. **Quadrant check**: Am I addressing all four quadrants?
@@ -103,6 +134,12 @@ Use this lens when it improves learner accessibility:
 - **Showing Up**: ethical participation and systems contribution
 
 ---
+
+## Next Steps
+
+- [Choose a QuickStart →](../quickstarts/personal-to-integral) — a curated learning path based on where you are right now
+- [Explore the Competency Map →](./aqal-competency-map) — see how skills map across quadrants and levels
+- [Not sure where to begin? →](../quickstarts/personal-to-integral) — a broad starting point that meets you where you are
 
 ## Resources
 

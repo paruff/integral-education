@@ -1,6 +1,7 @@
 ---
 id: mindfulness-basics
 title: Mindfulness Basics
+description: An introduction to foundational mindfulness practice — breath awareness, body scanning, and open monitoring — for developing cognitive and somatic attention across the Personal → Pluralistic stage range.
 quadrants:
 - I
 level: Personal → Pluralistic

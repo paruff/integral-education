@@ -1,6 +1,7 @@
 ---
 id: cognitive-bias-101
 title: Cognitive Bias Basics
+description: A practical guide to recognizing and mitigating common cognitive biases, with stage-aware debiasing strategies and reflective practices for rational decision-making.
 quadrants:
 - It
 level: Amber → Rational

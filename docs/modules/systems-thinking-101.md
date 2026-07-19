@@ -1,6 +1,7 @@
 ---
 id: systems-thinking-101
 title: Systems Thinking 101
+description: Foundational systems thinking concepts — feedback loops, leverage points, emergence — applied to personal development, organizational dynamics, and social change.
 quadrants:
 - It
 - Its

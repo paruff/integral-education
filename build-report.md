@@ -1,30 +1,47 @@
-# Build Report — UX-14
+# Build Report: UX-15
 
 ## Summary
-Installed and configured client-side search for the platform using `@easyops-cn/docusaurus-search-local`. Search index is generated at build time and ships as static JSON with the site.
+Implemented Open Graph and Twitter Card meta tags for social sharing previews.
 
 ## Files Changed
-| File | Change |
-|------|--------|
-| `package.json` | Added `@easyops-cn/docusaurus-search-local` to devDependencies |
-| `package-lock.json` | Updated lockfile |
-| `docusaurus.config.js` | Added `plugins` array with search-local configuration (`hashed: true`, `language: ['en']`, `indexDocs: true`, `indexPages: true`) |
+
+### New
+- `static/img/og-default.png` — 1200x630px branded OG image (48.7 KB)
+- `scripts/generate-og-image.mjs` — OG image generator (kept for future regeneration)
+
+### Modified
+- `docusaurus.config.js` — Added `themeConfig.metadata` array with 4 meta tags
+- `package.json` — Added `canvas` devDependency for OG image generation
+- `package-lock.json` — Updated with canvas dependency tree
+
+### Frontmatter additions (20 files)
+- 8 module `.md`/`.mdx` files — added `description` frontmatter
+- 4 quickstart `.md`/`.mdx` files — added `description` frontmatter
+- 4 maps `.md` files — added `description` frontmatter
+- 4 pilot `.md` files — added `description` frontmatter
 
 ## Tasks Completed
-| ID | Task | Status |
-|----|------|--------|
-| 1 | Install docusaurus-search-local dev dependency | PASS |
-| 2 | Add search plugin configuration to docusaurus.config.js | PASS |
-| 3 | Build and verify search index generation | PASS |
-| 4 | Verify search box appears in navbar | PASS |
+
+| Task | Status | Details |
+|------|--------|---------|
+| 1 — OG image | ✅ | Created 1200x630px, 48.7 KB, dark branded card |
+| 2 — Site metadata | ✅ | Added og:image, og:type, og:site_name, twitter:card |
+| 3 — Module frontmatter | ✅ | 8 modules got descriptions (64 already had them) |
+| 4 — Quickstart frontmatter | ✅ | 4 quickstarts got descriptions (6 already had them) |
+| 5 — Maps frontmatter | ✅ | 4 maps got descriptions (4 already had them) |
+| 6 — Pilot frontmatter | ✅ | All 4 pilots got descriptions |
+| 7 — Build validation | ✅ | Build passes, meta tags confirmed in output |
 
 ## Validation Results
-- **Build**: PASS (`[SUCCESS] Generated static files in "build"`)
-- **Search index**: Generated at `build/search-index.json` (14MB)
-- **Index composition**: 5 sub-indexes — titles (118), headings (2,678), descriptions (118), keywords (0), content (2,473)
-- **Content indexing**: 7,606 unique terms indexed across module content
-- **Search bar**: Present in navbar with `placeholder="Search"` and `aria-label="Search"`
-- **Keyboard accessible**: Native `<input>` element (Tab to focus, Enter to submit)
+
+| Gate | Status |
+|------|--------|
+| `npm run build` | ✅ PASS (no errors, no warnings) |
+| OG image 1200x630 | ✅ PASS |
+| OG image valid PNG | ✅ PASS |
+| Site-level meta tags in HTML | ✅ og:image, og:type, og:site_name, twitter:card all present |
+| Module-specific og:description | ✅ mindfulness-basics shows module-specific description |
+| Maps-specific og:description | ✅ aqal-overview shows map-specific description |
 
 ## Blockers
 None.

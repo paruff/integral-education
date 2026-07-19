@@ -2,6 +2,7 @@
 id: pilot-runbook-20-40
 title: Pilot Runbook (20-40 Adult Learners)
 sidebar_label: Pilot Runbook
+description: The operational runbook for 20–40 minute pilot Pathways A and B — session plans, facilitator notes, materials checklists, and contingency protocols.
 tags: [pilot, operations, runbook]
 ---
 

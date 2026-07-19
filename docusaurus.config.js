@@ -45,6 +45,12 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [
+        { property: 'og:image', content: '/integral-education/img/og-default.png' },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:site_name', content: 'Integral Education Platform' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+      ],
       navbar: {
         title: 'Integral Education',
         items: [

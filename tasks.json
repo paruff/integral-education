@@ -1,62 +1,115 @@
-[
-  {
-    "id": "1",
-    "task": "Install @easyops-cn/docusaurus-search-local dev dependency",
-    "dependency": [],
-    "acceptance_criteria": [
-      {
-        "ac": "Plugin added to devDependencies in package.json",
-        "test_type": "unit"
-      },
-      {
-        "ac": "npm install completes without errors",
-        "test_type": "unit"
-      }
-    ]
-  },
-  {
-    "id": "2",
-    "task": "Add search plugin configuration to docusaurus.config.js",
-    "dependency": ["1"],
-    "acceptance_criteria": [
-      {
-        "ac": "plugins array in docusaurus.config.js includes search-local with hashed: true, language: ['en'], indexDocs: true, indexPages: true",
-        "test_type": "unit"
-      }
-    ]
-  },
-  {
-    "id": "3",
-    "task": "Build and verify search index generation",
-    "dependency": ["2"],
-    "acceptance_criteria": [
-      {
-        "ac": "npm run build completes without errors",
-        "test_type": "unit"
-      },
-      {
-        "ac": "Search index JSON file exists in build output",
-        "test_type": "integration"
-      }
-    ]
-  },
-  {
-    "id": "4",
-    "task": "Verify search box appears in navbar and is keyboard-accessible",
-    "dependency": ["3"],
-    "acceptance_criteria": [
-      {
-        "ac": "Search box visible in navbar on desktop and mobile",
-        "test_type": "live-system"
-      },
-      {
-        "ac": "Search returns relevant results for: mindfulness, shadow, retrieval, emotional",
-        "test_type": "live-system"
-      },
-      {
-        "ac": "Search box is reachable via Tab key and Enter submits",
-        "test_type": "live-system"
-      }
-    ]
-  }
-]
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Create default OG image",
+      "description": "Create static/img/og-default.png (1200x630px) branded card with platform name and tagline",
+      "dependencies": [],
+      "acceptance_criteria": [
+        {
+          "id": "AC-1",
+          "description": "Default OG image exists at static/img/og-default.png",
+          "test_type": "live-system"
+        },
+        {
+          "id": "AC-1b",
+          "description": "OG image is 1200x630 pixels",
+          "test_type": "live-system"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Add site-level Open Graph and Twitter Card metadata",
+      "description": "Add themeConfig.metadata array to docusaurus.config.js with og:image, og:type, og:site_name, twitter:card",
+      "dependencies": ["1"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-2",
+          "description": "docusaurus.config.js has metadata array with og:image pointing to og-default.png",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-2b",
+          "description": "docusaurus.config.js has twitter:card metadata entry",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Add description frontmatter to all module .md files",
+      "description": "Add 'description' frontmatter to all 72 module files, derived from title, level, and lines",
+      "dependencies": ["2"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-3",
+          "description": "Every module .md file has a non-empty description in frontmatter",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-3b",
+          "description": "Module descriptions are unique and module-specific",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Add description frontmatter to all quickstart .md files",
+      "description": "Add 'description' frontmatter to all 10 quickstart files",
+      "dependencies": ["2"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-4",
+          "description": "Every quickstart .md file has a non-empty description in frontmatter",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Add title and description frontmatter to all maps .md files",
+      "description": "Add 'title' and 'description' frontmatter to all 8 maps files",
+      "dependencies": ["2"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-5",
+          "description": "Every maps .md file has title and description in frontmatter",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Add title and description frontmatter to all pilot .md files",
+      "description": "Add 'title' and 'description' frontmatter to all 4 pilot files",
+      "dependencies": ["2"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-6",
+          "description": "Every pilot .md file has title and description in frontmatter",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Validate build and OG tag output",
+      "description": "Run npm run build and verify meta tags in built HTML output",
+      "dependencies": ["1", "2", "3", "4", "5", "6"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-7",
+          "description": "npm run build passes with no errors",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-7b",
+          "description": "Built HTML contains og:image, og:type, og:site_name, og:description, and twitter:card meta tags",
+          "test_type": "unit"
+        }
+      ]
+    }
+  ]
+}

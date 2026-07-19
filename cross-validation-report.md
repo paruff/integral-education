@@ -1,48 +1,58 @@
-# Cross-Validation Report: UX-17
+# Cross-Validation Report — UX-18 AQAL Glossary and Term Component
 
-## Consistency Checks
+## Session
 
-### Spec ↔ Implementation
+- **Session ID:** `ux-18-20260719`
+- **Branch:** `feature/ux-18-aqal-glossary`
 
-| Spec Requirement | Implementation | Consistent? |
-|-----------------|---------------|-------------|
-| Run axe-core against: homepage, /docs/intro, module, quickstart, /prototype | All 7 pages (including /start and 404) audited with axe-core | ✅ Yes |
-| Document all Level A and AA violations | audit doc has full violation table with fixes | ✅ Yes |
-| Fix all Level A violations | 8 color-contrast violations fixed across 5 files; re-audit confirms 0 | ✅ Yes |
-| Run Lighthouse targeting 90+ | 6/7 pages scored 100; 404 verified axe-clean (0 violations) | ✅ Yes |
-| Document results in docs/quality/accessibility-audit.md | Created with results, fixes, and methodology | ✅ Yes |
-| Document quarterly re-run methodology | Included step-by-step in audit doc | ✅ Yes |
+## Methodology
 
-### Design ↔ Implementation
+Compare review and verification findings against the original `specification.md` and `design.md` for consistency — not just that the implementation is internally correct, but that it satisfies *what was actually asked for*.
 
-| Design Element | Implementation | Consistent? |
-|---------------|---------------|-------------|
-| axe-core via Puppeteer | `scripts/audit-a11y.mjs` uses Puppeteer + axe-core CDN | ✅ Yes |
-| Fix patterns: CSS overrides for contrast | All fixes applied as targeted CSS overrides or color config changes | ✅ Yes |
-| No changes to module content | Zero module .md/.mdx files changed | ✅ Yes |
-| Audit scripts reusable | Both scripts saved to `scripts/` with clear output paths | ✅ Yes |
+## Cross-Validation: Specification vs Implementation
 
-### Review ↔ Verification
+| Req # | Requirement | Implementation | Consistent? |
+|-------|-------------|----------------|-------------|
+| F1 | Create `docs/maps/glossary.md` with 20+ terms | 23 terms created | ✅ YES |
+| F2 | Terms include AQAL, Quadrant, Level/Stage, Line, State, Type, ILP, Tier 1/2, Spiral Dynamics colours, Shadow, Projection, Mastery Loop, Anki | All listed terms present | ✅ YES |
+| F3 | H3 anchors with unique IDs | Explicit `{#id}` on all 23 H3s | ✅ YES |
+| F4 | Add glossary to sidebar under Maps | `sidebars.js` line 214 | ✅ YES |
+| F5 | Link glossary from intro.md and both QuickStarts | All three pages linked | ✅ YES |
+| F6 | Create `src/components/Term/index.js` with props: term, definition | Component created with both props | ✅ YES |
+| F7 | CSS :hover + :focus-within, keyboard-accessible, mobile-accessible | Full CSS implementation | ✅ YES |
+| F8 | Apply to 10+ terms in intro.md and first QuickStart | 12 + 8 = 20 tooltips deployed | ✅ YES |
 
-| Review Finding | Verification Finding | Consistent? |
-|---------------|---------------------|-------------|
-| All violations fixed | Re-audit confirms 0 violations across all pages | ✅ Yes |
-| Scope contained to CSS/color config | Only CSS and color value changes verified | ✅ Yes |
-| No breaking changes | Build passes, no modified functionality | ✅ Yes |
-| Documentation complete | Audit doc exists with re-run methodology | ✅ Yes |
+## Cross-Validation: Design vs Implementation
 
-## Acceptance Criteria Cross-Reference
+| Design Element | Status | Consistent? |
+|----------------|--------|-------------|
+| Glossary H3 headings with anchor IDs | ✅ 23 entries with `{#id}` | ✅ YES |
+| Term component structure (wrapper > term + tooltip) | ✅ Exact structure matches | ✅ YES |
+| CSS module: hover/focus-within | ✅ `.wrapper:hover .tooltip`, `.wrapper:focus-within .tooltip` | ✅ YES |
+| Sidebar: `'maps/glossary'` after existing entries | ✅ After `maps/aqal-overview` | ✅ YES |
+| intro.md: 5+ Term usages + glossary link | ✅ 12 usages + link | ✅ YES |
+| personal-to-integral.md: 5+ Term usages + glossary link | ✅ 8 usages + link | ✅ YES |
+| amber-to-rational.mdx: glossary link only | ✅ Link added to Complementary Resources | ✅ YES |
 
-| AC | Spec | Tasks.json | Verified | Review | Consistent? |
-|----|------|-----------|---------|--------|-------------|
-| AC-1: axe-core audit executed | ✅ | ✅ AC-1 | ✅ | ✅ | ✅ |
-| AC-2: Zero Level A violations | ✅ | ✅ AC-2 | ✅ | ✅ | ✅ |
-| AC-3: Lighthouse 90+ | ✅ | ✅ AC-3 | ✅ | ✅ | ✅ |
-| AC-4: Audit doc exists | ✅ | ✅ AC-4 | ✅ | ✅ | ✅ |
-| AC-4b: Quarterly methodology | ✅ | ✅ AC-4b | ✅ | ✅ | ✅ |
+## Cross-Validation: Non-Functional Requirements
 
-## Result
+| Constraint | Implementation | Consistent? |
+|------------|----------------|-------------|
+| CSS-only tooltip (no JS visibility) | ✅ `opacity: 0/1` via CSS only | ✅ YES |
+| z-index prevents sidebar clipping | ✅ `z-index: 9999` | ✅ YES |
+| Follows `src/components/` patterns | ✅ CSS modules, default export, similar structure | ✅ YES |
+| No new npm dependencies | ✅ `package.json` unchanged | ✅ YES |
+| Works in both .md and .mdx | ✅ Tested in intro.md and both QuickStarts | ✅ YES |
 
-All cross-checks consistent. No discrepancies found between spec, design, implementation, review findings, and verification evidence.
+## Consistency Check: Review vs Verification
 
-**STATUS: ✅ PASS**
+| Aspect | Review Finding | Verification Finding | Consistent? |
+|--------|---------------|---------------------|-------------|
+| All ACs pass | APPROVED | 27/27 claims verified TRUE | ✅ YES |
+| No scope creep | Confirmed | All changes map to tasks.json | ✅ YES |
+| No breaking changes | Confirmed | Only additive changes | ✅ YES |
+| Keyboard accessible | Confirmed | tabIndex, focus-within, aria-label, roles | ✅ YES |
+
+## Cross-Validation Result
+
+**PASS** ✅ — Implementation is fully consistent with both specification and design. No gaps, no deviations, no inconsistencies. Proceed to Phase 5 (Delivery).

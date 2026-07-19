@@ -1,45 +1,68 @@
-# Build Report: UX-17
+# Build Report — UX-18 AQAL Glossary and Term Component
 
 ## Summary
-Ran comprehensive WCAG 2.1 AA accessibility audit and remediated all Level A violations.
+
+Implemented the AQAL glossary page and reusable Term component for inline tooltip definitions across the platform, plus integrated both into existing docs.
+
+## Session
+
+- **Session ID:** `ux-18-20260719`
+- **Branch:** `feature/ux-18-aqal-glossary`
 
 ## Files Changed
 
-### Modified
-- `src/css/custom.css` — Added CSS overrides for active menu, breadcrumb, table link, and navbar-start-here contrast
-- `src/components/ModuleMeta/index.js` — Darkened difficulty badge colors for AA contrast compliance
-- `src/components/ModuleMeta/styles.module.css` — Removed opacity on label; darkened prereqLink color
-- `src/components/NextStep/styles.module.css` — Darkened secondaryCta color
-- `src/pages/index.module.css` — Added `:visited` override for secondary CTA
-
-### New
-- `docs/quality/accessibility-audit.md` — Documented audit results, fixes, and quarterly re-run methodology
-- `scripts/audit-a11y.mjs` — axe-core audit script (reusable for quarterly runs)
-- `scripts/lighthouse-score.mjs` — Lighthouse audit script (reusable for quarterly runs)
-- `artifacts/` — Audit results (axe JSON, Lighthouse JSON reports)
+| File | Action | Purpose |
+|------|--------|---------|
+| `docs/maps/glossary.md` | **Created** | 23-entry glossary covering AQAL terms, stages, and platform concepts |
+| `src/components/Term/index.js` | **Created** | Reusable React component: inline tooltip on hover/click |
+| `src/components/Term/styles.module.css` | **Created** | Styles for Term component (tooltip, highlight, transitions) |
+| `src/components/Term/__tests__/Term.test.jsx` | **Created** | Unit tests for Term component rendering |
+| `sidebars.js` | Modified | Added `maps/glossary` after `maps/aqal-overview` |
+| `docs/intro.md` | Modified | Added 12 Term component usages + glossary link in Maps section |
+| `docs/quickstarts/personal-to-integral.md` | Modified | Added 8 Term component usages + glossary link in Next Steps |
+| `docs/quickstarts/amber-to-rational.mdx` | Modified | Added glossary link in Complementary Resources |
 
 ## Tasks Completed
 
-| Task | Status | Details |
-|------|--------|---------|
-| 1 — Run axe-core audit | ✅ | All 7 pages audited, violations collected |
-| 2 — Fix all Level A violations | ✅ | 7 color-contrast violations fixed across 5 files |
-| 3 — Run Lighthouse audit | ✅ | 6/7 pages scored 100; 404 page 0 (navigation artifact, axe verified clean) |
-| 4 — Document audit results | ✅ | docs/quality/accessibility-audit.md created with methodology |
+| # | Task | Status | Notes |
+|---|------|--------|-------|
+| 1 | Create glossary page (`docs/maps/glossary.md`) | ✅ Done | 23 entries with cross-references, anchors, plain-language definitions |
+| 2 | Create Term React component | ✅ Done | `src/components/Term/index.js` + `styles.module.css` |
+| 3 | Add glossary to sidebar | ✅ Done | After AQAL Overview in Maps section |
+| 4 | Integrate Term component in intro.md | ✅ Done | 12 Term usages + glossary link |
+| 5 | Integrate Term component in personal-to-integral.md | ✅ Done | 8 Term usages + glossary link |
+| 6 | Integrate glossary link in amber-to-rational.mdx | ✅ Done | Link in Complementary Resources |
+| 7 | Build verification | ✅ Done | `npm run build` passes cleanly |
 
-## Audit Results Summary
+## Validation Results
 
-| Page | axe Violations | Lighthouse |
-|------|---------------|-----------|
-| Homepage | 0 | 100 |
-| Intro | 0 | 100 |
-| Module (Mindfulness Basics) | 0 | 100 |
-| Quickstart | 0 | 100 |
-| Prototype | 0 | 100 |
-| Start Here | 0 | 100 |
-| 404 Page | 0 | 100* |
+### Lint
+No lint configuration actively enforced in this project — no issues to report.
 
-*Lighthouse scores 404 page at 0 due to HTTP 404 status navigation; axe confirms zero violations and 24 passing checks.
+### Typecheck
+No TypeScript configuration — JavaScript with React prop-types equivalent handled by runtime.
+
+### Build
+```
+npm run build  →  [SUCCESS] Generated static files in "build".
+```
+
+### Test
+```
+No test runner configured — component behavioral spec at `src/components/Term/__tests__/Term.test.jsx` requires jest + @testing-library/react (not yet in devDependencies).
+```
+
+## Build Output Verification
+
+| Metric | Value |
+|--------|-------|
+| Glossary HTML size | 35,002 bytes |
+| Term components rendered (intro) | 12 |
+| Term components rendered (quickstart) | 8 |
+| Glossary entries (H3 sections) | 23 |
+| Build errors | 0 |
+| Build warnings | 2 (deprecated config, missing blog dir — pre-existing) |
 
 ## Blockers
+
 None.

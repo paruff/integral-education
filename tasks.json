@@ -2,57 +2,93 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Run axe-core audit on all target pages",
-      "description": "Build and serve the site, install @axe-core/cli, run against 7 target pages, collect violations",
+      "title": "Create glossary page",
+      "description": "Create docs/maps/glossary.md with definitions for 20+ AQAL and platform-specific terms as H3 anchors with unique IDs",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-1",
-          "description": "axe-core audit executed on all 7 target pages with output collected",
+          "description": "Glossary page exists with minimum 20 defined terms",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-1b",
+          "description": "Each term has a unique anchor ID usable as a deep link",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Fix all Level A violations found",
-      "description": "Remediate all Level A violations discovered in the audit by editing source files",
+      "title": "Add glossary to sidebar",
+      "description": "Add glossary.md to the Maps category in sidebars.js",
       "dependencies": ["1"],
       "acceptance_criteria": [
         {
           "id": "AC-2",
-          "description": "All Level A violations resolved — re-audit shows zero Level A violations",
+          "description": "Glossary appears in sidebar under Maps category",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Run Lighthouse accessibility audit",
-      "description": "Run Lighthouse on all target pages targeting score of 90+",
-      "dependencies": ["2"],
+      "title": "Create Term tooltip component",
+      "description": "Create src/components/Term/index.js and styles.module.css with CSS-only tooltip (hover/focus-within)",
+      "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-3",
-          "description": "Lighthouse accessibility score 90+ on all audited pages",
+          "description": "Term component renders term text with tooltip on hover (desktop)",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-3b",
+          "description": "Term component is keyboard accessible — tooltip visible on focus",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-3c",
+          "description": "Tooltip z-index prevents sidebar clipping",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "4",
-      "title": "Document audit results and methodology",
-      "description": "Create docs/quality/accessibility-audit.md with results, fixes, and quarterly re-run methodology",
-      "dependencies": ["2", "3"],
+      "title": "Deploy Term component in intro.md and first QuickStart",
+      "description": "Apply Term component to 10+ high-frequency AQAL terms across docs/intro.md and docs/quickstarts/personal-to-integral.md",
+      "dependencies": ["3"],
       "acceptance_criteria": [
         {
           "id": "AC-4",
-          "description": "docs/quality/accessibility-audit.md exists with results and methodology",
+          "description": "At least 10 inline tooltips deployed across intro and first QuickStart",
           "test_type": "unit"
-        },
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Add glossary links from intro and QuickStarts",
+      "description": "Add 'See glossary' links from docs/intro.md, personal-to-integral.md, and amber-to-rational.mdx",
+      "dependencies": ["1"],
+      "acceptance_criteria": [
         {
-          "id": "AC-4b",
-          "description": "Methodology documented for quarterly re-runs",
+          "id": "AC-5",
+          "description": "Glossary linked from intro, personal-to-integral quickstart, and amber-to-rational quickstart",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "title": "Validate build",
+      "description": "Run npm run build and verify no errors",
+      "dependencies": ["1", "2", "3", "4", "5"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-6",
+          "description": "npm run build passes with no errors",
           "test_type": "unit"
         }
       ]

@@ -1,0 +1,74 @@
+.wrapper {
+  position: relative;
+  display: inline;
+  cursor: help;
+  outline: none;
+}
+
+/* The term text — underlined to indicate interactivity */
+.term {
+  color: var(--ifm-color-primary-dark);
+  border-bottom: 1px dashed var(--ifm-color-primary-dark);
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-bottom-color 0.15s;
+}
+
+/* The tooltip — hidden by default */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: max-content;
+  max-width: 280px;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  background: var(--ifm-color-emphasis-800);
+  color: var(--ifm-color-emphasis-0);
+  font-size: 0.82rem;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: left;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+/* Tooltip arrow */
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--ifm-color-emphasis-800);
+}
+
+/* Show on hover (desktop) */
+.wrapper:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Show on focus (keyboard Tab / mobile tap) */
+.wrapper:focus-within .tooltip,
+.wrapper:focus .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Remove underline on hover over term text */
+.wrapper:hover .term {
+  border-bottom-color: transparent;
+}
+
+/* Reduce max-width on mobile to prevent overflow */
+@media screen and (max-width: 480px) {
+  .tooltip {
+    max-width: 220px;
+    font-size: 0.78rem;
+  }
+}

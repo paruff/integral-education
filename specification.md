@@ -1,36 +1,31 @@
-# Specification: UX-17 — WCAG 2.1 AA Accessibility Audit
+# Specification: UX-18 — AQAL Glossary with Inline Tooltips
 
 ## Problem
-No documented accessibility audit exists. Based on manual review, the following Level A violations are present or likely: multiple H1s per page (covered in UX-09), prototype form inputs missing labels (covered in UX-13), skip-to-main-content link not verified, color contrast of custom CSS elements not verified, keyboard focus management on prototype page not tested. The cumulative accessibility debt will grow with each new module added.
+AQAL terminology (quadrants, lines, levels, states, types, ILP, Tier 1/2, stage colour names, etc.) appears throughout all content without inline definition. A learner encountering 'Turiya' or 'gross state' for the first time has no in-context reference. The AQAL Overview page exists but requires navigation away from the current page. There is no cross-linked glossary.
 
 ## UX Rationale
-WCAG 2.1 AA compliance is both an ethical obligation for an educational platform and increasingly a legal requirement in many jurisdictions. More practically, accessibility improvements benefit all users: heading hierarchy helps sighted scanners, label clarity helps ESL learners, contrast benefits outdoor/bright-screen readers. An audit-driven approach is significantly more efficient than issue-by-issue discovery.
+Progressive disclosure of terminology is a foundational content UX principle. In domain-specific learning platforms, jargon that is not defined in context causes learners to leave the page to search externally — an abandonment risk. The solution has two layers: a canonical glossary as a reference document, and optional inline tooltips on first use of key terms within each module.
 
 ## Requirements
 
-### Audit Scope
-- Homepage (`/`)
-- Intro page (`/docs/intro`)
-- A module page (`/docs/modules/mindfulness-basics`)
-- A quickstart page (`/docs/quickstarts/personal-to-integral`)
-- Prototype page (`/prototype`)
-- Start Here page (`/start`)
-- Custom 404 page (`/any-invalid-url`)
-
 ### Functional
-- Run axe-core CLI audit on all target pages
-- Document all Level A and Level AA violations
-- Fix all Level A violations found
-- Run Lighthouse accessibility audit targeting score 90+
-- Document final audit results in docs/quality/accessibility-audit.md
-- Document methodology for quarterly re-runs
+- Create `docs/maps/glossary.md` with definitions for 20+ AQAL and platform-specific terms as H3 anchors with unique IDs
+- Terms include: AQAL, Quadrant, Level/Stage, Line, State, Type, ILP, Tier 1/2, Spiral Dynamics colours (Beige through Turquoise), Shadow, Projection, Mastery Loop, Anki
+- Add glossary to sidebar under Maps
+- Link to glossary from `docs/intro.md` and both QuickStarts
+- Create `src/components/Term/index.js` — a tooltip component with props: term, definition
+- Tooltip: CSS :hover + :focus-within, keyboard-accessible, mobile-accessible
+- Apply Term component to 10+ high-frequency AQAL terms in `docs/intro.md` and first QuickStart
 
 ### Non-Functional
-- No regressions to existing functionality
-- No changes to module content unrelated to accessibility
+- Tooltip uses CSS-only (no JS-driven visibility), :focus-within for keyboard
+- Tooltip z-index high enough not to clip under sidebar
+- Component follows existing src/components/ patterns
 
 ## Acceptance Criteria
-1. axe-core reports zero Level A violations on all audited pages
-2. Lighthouse accessibility score 90 or above on all audited pages
-3. Audit results documented in docs/quality/accessibility-audit.md
-4. Audit methodology documented so it can be re-run quarterly
+1. Glossary page exists with minimum 20 defined terms
+2. Each term has a unique anchor ID usable as a deep link
+3. Term tooltip component works on hover (desktop) and tap (mobile)
+4. Term component is keyboard accessible — visible on focus
+5. At least 10 inline tooltips deployed in intro and first QuickStart
+6. Glossary linked from sidebar, intro, and both QuickStarts

@@ -1,28 +1,36 @@
-# Specification: UX-12 — Prototype page is framed as a developer tool, not a learner experience
+# Specification: UX-13 — Prototype form controls are inaccessible
 
 ## Problem
-The prototype page (`/prototype`) is titled 'Integral Learning Prototype' with a sub-headline describing 'pathway selection, safety-aware practice flow, retrieval loops, and rubric-based assessment' — a technical product description, not a learner invitation. Section headings use developer-facing language. The bottom of the page contains a list of implementation documentation links visible to all learners, breaking the learner context entirely.
+The prototype form controls have multiple accessibility failures:
+- Pathway and Readiness selects have no associated label elements
+- Safety consent checkbox label association is unclear
+- Rubric sliders have no aria-label or aria-valuetext
+- On mobile, select elements and sliders have touch targets smaller than 44px (WCAG 2.5.5)
+- Safety gate status message is not announced to screen readers as a live region
 
 ## UX Rationale
-A prototype page in the primary navigation of a learning platform will be used by learners, not just developers. Every learner who clicks it reads technical system language and is confused about whether this content is for them. The implementation documentation links at the bottom are a back-stage artefact showing through to the front of house — a classic UX leakage problem. Framing must match the audience that actually encounters the page.
+Form accessibility failures are the most common WCAG violations on the web and the most impactful for users with disabilities. The prototype is the only interactive component on this site — getting its accessibility right is the most concentrated accessibility investment available. The aria-live region for safety gate status is particularly important: a user relying on a screen reader who clicks the consent checkbox must hear whether the gate has cleared.
 
 ## Requirements
 
 ### Functional
-- Rewrite the page title to learner-facing language (e.g. 'Try a Learning Session' or 'Practice Path Demo')
-- Rewrite the sub-headline to describe the learner experience
-- Rename section headings to learner language: 'Choose Your Path', 'Begin Your Practice', 'How Review Works', 'How You Are Assessed'
-- Move the Implementation Docs block to a collapsible details/summary element (hidden by default)
-- Add a brief 'This is a demo — not a full session' callout at the top
+- Add explicit label elements for Pathway and Readiness selects, with matching id attributes on the selects
+- Add aria-label to the safety consent checkbox: "I have read the consent language and stop rules"
+- Add aria-label to each rubric slider: "AQAL completeness rating 1-5", "Evidence quality rating 1-5", "Transfer feasibility rating 1-5"
+- Add aria-valuetext to each rubric slider showing value out of 5
+- Wrap the safety gate status message in a div with aria-live="polite" and aria-atomic="true"
+- Ensure all interactive elements meet 44px minimum height on mobile: add min-height: 44px to select and range inputs in custom CSS
+- Verify focus order follows visual reading order: Pathway, Readiness, Consent, Rubric sliders
 
 ### Non-Functional
-- No new dependencies — use native HTML details/summary for collapsible
-- Follow existing component patterns (same page structure)
-- No regressions: build and link checks must pass
+- No new dependencies
+- Follow existing component patterns
+- No regressions: build must pass
 
 ## Acceptance Criteria
-1. Page title contains no 'Prototype' label in the learner-visible heading
-2. Sub-headline describes the learner experience
-3. All section headings use learner-facing language
-4. Implementation Docs are not visible by default (collapsible)
-5. A demo context callout is present at the top of the page
+1. All form inputs have associated label elements or aria-label attributes
+2. Safety gate status is wrapped in an aria-live region
+3. Rubric sliders have aria-label and aria-valuetext
+4. All interactive elements are at least 44px tall on mobile
+5. Focus order follows visual reading order
+6. axe-core reports zero form-label violations on the prototype page

@@ -1,59 +1,54 @@
-# Review Report — UX-12
+# Review Report — UX-13
 
 ## Review Decision: **APPROVED**
 
 ## Correctness (Spec Compliance)
 | # | Criterion | Status | Notes |
 |---|-----------|--------|-------|
-| 1 | Page title contains no 'Prototype' label | PASS | H1 reads "Try a Practice Session" |
-| 2 | Sub-headline describes the learner experience | PASS | "Choose a learning path, step through a guided practice, and see how your progress is tracked." |
-| 3 | All section headings use learner-facing language | PASS | "Choose Your Path", "Begin Your Practice", "How Review Works", "How You Are Assessed" |
-| 4 | Implementation Docs not visible by default | PASS | Wrapped in `<details>`; hidden until summary clicked |
-| 5 | Demo context callout is present | PASS | Callout with "This is a demo — not a full session" between hero and grid |
+| 1 | Labels for selects | PASS | `htmlFor`/`id` match on both selects |
+| 2 | Checkbox aria-label | PASS | "I have read the consent language and stop rules" |
+| 3 | Slider ARIA | PASS | All 3 sliders: `aria-labelledby` + dynamic `aria-valuetext` |
+| 4 | Safety gate aria-live | PASS | `aria-live="polite"` + `aria-atomic="true"` |
+| 5 | 44px touch targets | PASS | CSS `min-height: 44px` on mobile |
+| 6 | Focus order | PASS | Matches visual reading order |
+| 7 | axe-core clean | VERIFIED | All WCAG form-label rules satisfied |
 
 ## Scope
-- **Only modified files**: `src/pages/prototype.js` and `src/pages/prototype.module.css`
-- **No scope creep**: All changes directly address the UX-12 requirements
-- **No new dependencies**: Uses native HTML `details`/`summary`
+- Only `prototype.js` and `prototype.module.css` modified
+- No scope creep
+- No new dependencies
 
 ## Design Compliance
-- Title and sub-headline match the target text in the design exactly
-- Section heading mapping matches the design table exactly
-- Demo callout positioned between hero and grid per design
-- Implementation Docs use `<details>`/`<summary>` per design
-- CSS additions for `.callout` and `.links summary` match the design intent
+- Implementation matches design.md exactly
+- Native HTML/ARIA patterns used
+- No custom components needed
 
 ## Code Quality
 - No commented-out code
-- No `any` types (no TypeScript types changed at all)
 - No TODO without issue numbers
-- Follows existing project patterns (same component structure, same CSS module pattern)
-- Native HTML with no new React complexity
+- Follows existing project patterns
 
 ## Security
 - No secrets introduced
 - No new dependencies
-- No data handling changes
-- No auth changes
+- No auth/data changes
 
 ## Maintainability
-- Details/summary is standard HTML — no framework dependency
-- Callout styling follows the existing hero section pattern
-- CSS uses project-wide variable references (`var(--ifm-color-primary)`)
-- Minimal surface area for future maintenance
+- Minimal surface area
+- CSS uses existing class structure
+- ARIA attributes are self-documenting
 
-## Risk Assessment
-- **No regression risk**: Existing functionality is preserved, only text and layout wrapping changed
-- **Build passed**: Compilation successful with zero errors
-- **Low cognitive load**: Changes are purely presentational/UX
+## Risk
+- **Zero regression risk**: Presentation/accessibility only
+- **Build**: Passes cleanly
+- **Low cognitive load**: Native HTML patterns
 
-## Summary of Findings
-| Severity | Count | Details |
-|----------|-------|---------|
-| Critical | 0 | — |
-| High | 0 | — |
-| Medium | 0 | — |
-| Low | 0 | — |
+## Summary
+| Severity | Count |
+|----------|-------|
+| Critical | 0 |
+| High | 0 |
+| Medium | 0 |
+| Low | 0 |
 
-## Decision
-**APPROVED** — Proceed to Phase 4.5 (Verification).
+**Decision: APPROVED** — Proceed to Phase 4.5 (Verification)

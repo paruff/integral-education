@@ -1,60 +1,72 @@
-# Design: UX-12 — Prototype page is framed as a developer tool, not a learner experience
+# Design: UX-13 — Prototype form controls are inaccessible
 
 ## Impacted Components
-- `src/pages/prototype.js` — Page title, sub-headline, section headings, Implementation Docs section, and demo callout
+- `src/pages/prototype.js` — Form controls, labels, ARIA attributes, safety gate live region
+- `src/pages/prototype.module.css` — Touch target sizing for mobile
 
 ## Technical Approach
 
-### 1. Page Title and Sub-headline
+### 1. Explicit Labels for Selects
 **Current:**
 ```jsx
-<h1>Integral Learning Prototype</h1>
-<p>Explore pathway selection, safety-aware practice flow, retrieval loops, and rubric-based assessment...</p>
+<label htmlFor="pathway">Pathway</label>
+<select id="pathway" ...>
 ```
 
+**Target:** Already correct - both selects have proper label associations with matching htmlFor/id
+
+### 2. Safety Consent Checkbox aria-label
 **Target:**
 ```jsx
-<h1>Try a Practice Session</h1>
-<p>Choose a learning path, step through a guided practice, and see how your progress is tracked.</p>
+<label className={styles.checkboxRow}>
+  <input
+    type="checkbox"
+    checked={safetyAck}
+    onChange={...}
+    aria-label="I have read the consent language and stop rules"
+  />
+  I have read consent language and stop rules.
+</label>
 ```
 
-### 2. Section Headings
-| Current | Target |
-|---------|--------|
-| `1) Select Pathway` | `Choose Your Path` |
-| `2) Practice Flow` | `Begin Your Practice` |
-| `3) Retrieval Loop Preview` | `How Review Works` |
-| `4) Rubric Preview` | `How You Are Assessed` |
-
-### 3. Demo Context Callout
-Add a callout box at the top of the page (before the `.grid` section) styled similarly to the existing hero:
+### 3. Rubric Sliders ARIA
+**Target for all three sliders:**
 ```jsx
-<div className={styles.callout}>
-  <strong>🧪 This is a demo — not a full session.</strong>
-  <br />
-  Explore how a guided practice works before you begin. No progress is saved.
+<label id="aqalLabel">AQAL completeness</label>
+<input
+  type="range"
+  min="1"
+  max="5"
+  step="0.5"
+  value={aqalScore}
+  onChange={...}
+  aria-labelledby="aqalLabel"
+  aria-valuetext={`${aqalScore} out of 5`}
+/>
+```
+Repeat for evidence and transfer sliders with appropriate labels.
+
+### 4. Safety Gate Live Region
+**Target:**
+```jsx
+<div aria-live="polite" aria-atomic="true" className={styles.note}>
+  {safetyAck ? 'Safety gate passed: practice can proceed.' : 'Safety gate pending: review consent and safety instructions before practice.'}
 </div>
 ```
 
-### 4. Implementation Docs — Collapsible
-Wrap the existing `.links` section in a native HTML `<details>`/`<summary>` element:
-```jsx
-<details className={styles.links}>
-  <summary>Implementation Docs (for developers)</summary>
-  <ul>...</ul>
-</details>
+### 5. Touch Target Sizing (CSS)
+```css
+.card select,
+.card input[type="range"] {
+  min-height: 44px;
+}
 ```
 
-The `.links` CSS needs minor adjustment to support the `details`/`summary` pattern:
-- Remove the `section` tag, use `details` instead
-- The `<summary>` element replaces the `<h2>` for the collapsed heading
-
-### 5. CSS Changes (`prototype.module.css`)
-- Add `.callout` style for the demo context callout
-- Adjust `.links` to work with `details`/`summary` elements
+### 6. Focus Order
+Current tab order already matches visual order: Pathway → Readiness → Consent checkbox → 3 rubric sliders. No changes needed.
 
 ## Risk Assessment
-- **Low risk**: Page already exists, no new dependencies, no backend changes
-- **Minimal change surface**: Only text and one structural change (details/summary)
-- **Natively supported**: details/summary is standard HTML, no polyfill needed
-- **No regression risk**: Content is preserved, just rearranged
+- **Low risk**: Only ARIA attributes and CSS changes
+- **No new dependencies**: Native HTML/ARIA only
+- **Focus order**: Already matches visual order
+- **Testing**: axe-core validation after implementation

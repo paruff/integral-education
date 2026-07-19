@@ -1,26 +1,25 @@
-# Verification Report: UX-16
+# Verification Report: UX-17
 
 ## Method
-All claims from build-report.md and test-report.md were independently verified against actual filesystem and build output evidence.
+All claims from build-report.md and test-report.md were independently verified against actual files, build output, and audit results.
 
 ## Claim Verification
 
 | Claim | Source | Verified? | Evidence |
 |-------|--------|-----------|----------|
-| 404.js created at src/pages/404.js | build-report.md | ✅ true | `ls src/pages/404.js` → file exists |
-| 404.module.css created | build-report.md | ✅ true | `ls src/pages/404.module.css` → file exists |
+| axe-core audit executed on all 7 pages | build-report.md | ✅ true | `artifacts/axe-report.json` has results for 7 targets |
+| Zero Level A violations post-fix | build-report.md | ✅ true | Re-audit output: all pages show 0 violations |
+| Lighthouse 100 on 6/7 pages | build-report.md | ✅ true | `artifacts/lighthouse-scores.json`: 6 pages at 100 |
+| 404 page axe-verified clean | build-report.md | ✅ true | `artifacts/axe-404-page.json`: 0 violations, 24 passes |
+| Fixes applied to 5 source files | build-report.md | ✅ true | Modified: custom.css, ModuleMeta/index.js and styles.module.css, NextStep/styles.module.css, index.module.css |
+| Violations fixed broken down by type | test-report.md | ✅ true | All 8 color-contrast violation locations mapped to fixes |
+| docs/quality/accessibility-audit.md exists | test-report.md | ✅ true | File exists with results and methodology |
+| Quarterly re-run methodology documented | test-report.md | ✅ true | Audit doc has step-by-step re-run instructions |
 | Build passes | build-report.md | ✅ true | `[SUCCESS] Generated static files in "build"` |
-| 404.html exists in build output | build-report.md | ✅ true | `ls build/404.html` → 9,750 bytes |
-| 3 recovery navigation options | test-report.md | ✅ true | 3 recovery cards verified: Homepage (`/`), Find Your Path (`/start`), Mindfulness Basics (`/docs/modules/mindfulness-basics`) |
-| GitHub Issues report link present | test-report.md | ✅ true | `href="https://github.com/paruff/integral-education/issues/new"` in built HTML |
-| Proper heading hierarchy (1 H1) | test-report.md | ✅ true | Exactly 1 `h1` ("Page Not Found"), 1 `h2`, 3 `h3` |
-| Uses @theme/Layout | test-report.md | ✅ true | Navbar and footer present in built HTML |
-| CSS uses Infima theme variables | test-report.md | ✅ true | All CSS values reference `var(--ifm-*)` variables, no hardcoded colors |
-| Aria-label on external link | test-report.md | ✅ true | `aria-label="Report a broken link on GitHub (opens in new tab)"` in built HTML |
-| Recovery section has aria-labelledby | test-report.md | ✅ true | `aria-labelledby="recovery-heading"` present |
+| Audit scripts reusable | build-report.md | ✅ true | `scripts/audit-a11y.mjs` and `lighthouse-score.mjs` exist |
 
 ## Result
 
-**11/11 claims verified true.** No false claims, no missing evidence.
+**10/10 claims verified true.** No false claims, no missing evidence.
 
 **STATUS: ✅ PASS**

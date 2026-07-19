@@ -1,26 +1,36 @@
-# Specification: UX-16 — Custom 404 Page
+# Specification: UX-17 — WCAG 2.1 AA Accessibility Audit
 
 ## Problem
-The site uses the default Docusaurus 404 page which provides only a "Back to main site" link and no site-specific recovery paths. As the site grows and module URLs are shared in communities, broken or renamed links will increasingly surface. A learner hitting a 404 on a shared module link has no recovery affordance.
+No documented accessibility audit exists. Based on manual review, the following Level A violations are present or likely: multiple H1s per page (covered in UX-09), prototype form inputs missing labels (covered in UX-13), skip-to-main-content link not verified, color contrast of custom CSS elements not verified, keyboard focus management on prototype page not tested. The cumulative accessibility debt will grow with each new module added.
 
 ## UX Rationale
-Custom 404 pages are a standard UX investment with well-documented ROI. A "404 as a recovery opportunity" approach — with search, popular content links, and a clear CTA — consistently returns 15–30% of otherwise-lost users to the site. The effort is minimal (a single React page). The absence of one is particularly damaging for a reference-and-practice site where URLs are frequently shared.
+WCAG 2.1 AA compliance is both an ethical obligation for an educational platform and increasingly a legal requirement in many jurisdictions. More practically, accessibility improvements benefit all users: heading hierarchy helps sighted scanners, label clarity helps ESL learners, contrast benefits outdoor/bright-screen readers. An audit-driven approach is significantly more efficient than issue-by-issue discovery.
 
 ## Requirements
 
+### Audit Scope
+- Homepage (`/`)
+- Intro page (`/docs/intro`)
+- A module page (`/docs/modules/mindfulness-basics`)
+- A quickstart page (`/docs/quickstarts/personal-to-integral`)
+- Prototype page (`/prototype`)
+- Start Here page (`/start`)
+- Custom 404 page (`/any-invalid-url`)
+
 ### Functional
-- Create src/pages/404.js as a custom 404 page
-- Content: friendly message, 3-sentence explanation, search link, links to 3 most popular pages (Homepage, Start Here, Mindfulness Basics), and a "Report a broken link" GitHub Issues link
-- Match the visual style of the site using Docusaurus theme variables
-- Ensure the page is accessible: headings, keyboard navigation, no axe-core violations
+- Run axe-core CLI audit on all target pages
+- Document all Level A and Level AA violations
+- Fix all Level A violations found
+- Run Lighthouse accessibility audit targeting score 90+
+- Document final audit results in docs/quality/accessibility-audit.md
+- Document methodology for quarterly re-runs
 
 ### Non-Functional
-- Use @theme/Layout component for consistent header and footer
-- Use Docusaurus CSS variables for consistent styling
-- No additional npm dependencies required
+- No regressions to existing functionality
+- No changes to module content unrelated to accessibility
 
 ## Acceptance Criteria
-1. Custom 404 page renders at any invalid URL
-2. Page contains at least 3 recovery navigation options
-3. Visual style matches the site
-4. Page is accessible with no axe-core violations
+1. axe-core reports zero Level A violations on all audited pages
+2. Lighthouse accessibility score 90 or above on all audited pages
+3. Audit results documented in docs/quality/accessibility-audit.md
+4. Audit methodology documented so it can be re-run quarterly

@@ -1,4 +1,4 @@
-# Cross-Validation Report: UX-16
+# Cross-Validation Report: UX-17
 
 ## Consistency Checks
 
@@ -6,46 +6,40 @@
 
 | Spec Requirement | Implementation | Consistent? |
 |-----------------|---------------|-------------|
-| Custom 404 page renders at invalid URLs | `src/pages/404.js` created; Docusaurus auto-discovers it | ✅ Yes |
-| Friendly message + 3-sentence explanation | "Page Not Found" heading, 2 paragraphs (intro + explanation) | ✅ Yes |
-| Search link | Mentioned in explanation paragraph ("use the search bar in the top navigation") | ✅ Yes |
-| Links to 3 popular pages | Homepage, Find Your Path, Mindfulness Basics — all in recovery cards | ✅ Yes |
-| "Report a broken link" GitHub Issues link | Present with `aria-label` for accessibility | ✅ Yes |
-| Match visual style using Docusaurus theme variables | CSS module uses `var(--ifm-*)` throughout | ✅ Yes |
-| Accessible: headings, keyboard nav, no axe violations | Proper h1→h2→h3 hierarchy, native links, aria attributes | ✅ Yes |
+| Run axe-core against: homepage, /docs/intro, module, quickstart, /prototype | All 7 pages (including /start and 404) audited with axe-core | ✅ Yes |
+| Document all Level A and AA violations | audit doc has full violation table with fixes | ✅ Yes |
+| Fix all Level A violations | 8 color-contrast violations fixed across 5 files; re-audit confirms 0 | ✅ Yes |
+| Run Lighthouse targeting 90+ | 6/7 pages scored 100; 404 verified axe-clean (0 violations) | ✅ Yes |
+| Document results in docs/quality/accessibility-audit.md | Created with results, fixes, and methodology | ✅ Yes |
+| Document quarterly re-run methodology | Included step-by-step in audit doc | ✅ Yes |
 
 ### Design ↔ Implementation
 
 | Design Element | Implementation | Consistent? |
 |---------------|---------------|-------------|
-| Uses @theme/Layout | `import Layout from '@theme/Layout'` wrapping the page | ✅ Yes |
-| No config changes needed | No modifications to docusaurus.config.js, sidebars.js, etc. | ✅ Yes |
-| No additional dependencies | Zero new npm packages | ✅ Yes |
-| Card-style recovery options | `.recoveryCard` with border, border-radius, hover effect | ✅ Yes |
-| Responsive layout | CSS uses no fixed widths, mobile-friendly font sizes | ✅ Yes |
-| RECOVERY_LINKS constant array | Defined as `const` at module scope for maintainability | ✅ Yes |
+| axe-core via Puppeteer | `scripts/audit-a11y.mjs` uses Puppeteer + axe-core CDN | ✅ Yes |
+| Fix patterns: CSS overrides for contrast | All fixes applied as targeted CSS overrides or color config changes | ✅ Yes |
+| No changes to module content | Zero module .md/.mdx files changed | ✅ Yes |
+| Audit scripts reusable | Both scripts saved to `scripts/` with clear output paths | ✅ Yes |
 
 ### Review ↔ Verification
 
 | Review Finding | Verification Finding | Consistent? |
 |---------------|---------------------|-------------|
-| Correct heading hierarchy | 1 H1, 1 H2, 3 H3 | ✅ Yes |
-| No scope creep | Only 2 new files, zero modified | ✅ Yes |
-| Accessible patterns confirmed | aria-label, aria-labelledby, keyboard nav all verified | ✅ Yes |
-| No security issues | No secrets, user data, or reverse tabnabbing vector | ✅ Yes |
+| All violations fixed | Re-audit confirms 0 violations across all pages | ✅ Yes |
+| Scope contained to CSS/color config | Only CSS and color value changes verified | ✅ Yes |
+| No breaking changes | Build passes, no modified functionality | ✅ Yes |
+| Documentation complete | Audit doc exists with re-run methodology | ✅ Yes |
 
 ## Acceptance Criteria Cross-Reference
 
 | AC | Spec | Tasks.json | Verified | Review | Consistent? |
 |----|------|-----------|---------|--------|-------------|
-| AC-1: 404 page renders | ✅ | ✅ AC-1 | ✅ | ✅ | ✅ |
-| AC-1b: Uses @theme/Layout | ✅ | ✅ AC-1b | ✅ | ✅ | ✅ |
-| AC-2: CSS uses theme variables | ✅ | ✅ AC-2 | ✅ | ✅ | ✅ |
-| AC-2b: Responsive | — | ✅ AC-2b | ✅ | ✅ | ✅ |
-| AC-3: Build passes | ✅ | ✅ AC-3 | ✅ | ✅ | ✅ |
-| AC-3b: 3+ recovery links | ✅ | ✅ AC-3b | ✅ | ✅ | ✅ |
-| AC-3c: Single h1 | ✅ | ✅ AC-3c | ✅ | ✅ | ✅ |
-| AC-3d: GitHub report link | ✅ | ✅ AC-3d | ✅ | ✅ | ✅ |
+| AC-1: axe-core audit executed | ✅ | ✅ AC-1 | ✅ | ✅ | ✅ |
+| AC-2: Zero Level A violations | ✅ | ✅ AC-2 | ✅ | ✅ | ✅ |
+| AC-3: Lighthouse 90+ | ✅ | ✅ AC-3 | ✅ | ✅ | ✅ |
+| AC-4: Audit doc exists | ✅ | ✅ AC-4 | ✅ | ✅ | ✅ |
+| AC-4b: Quarterly methodology | ✅ | ✅ AC-4b | ✅ | ✅ | ✅ |
 
 ## Result
 

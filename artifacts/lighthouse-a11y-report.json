@@ -1,0 +1,81 @@
+[
+  {
+    "name": "homepage",
+    "url": "http://localhost:3099/integral-education/",
+    "hasSkipLink": true,
+    "headingCount": 15,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 0,
+    "hasLang": true,
+    "issues": [],
+    "axeViolations": 0
+  },
+  {
+    "name": "intro",
+    "url": "http://localhost:3099/integral-education/docs/intro",
+    "hasSkipLink": true,
+    "headingCount": 9,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 0,
+    "hasLang": true,
+    "issues": [],
+    "axeViolations": 0
+  },
+  {
+    "name": "module-mindfulness",
+    "url": "http://localhost:3099/integral-education/docs/modules/mindfulness-basics",
+    "hasSkipLink": true,
+    "headingCount": 7,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 0,
+    "hasLang": true,
+    "issues": [],
+    "axeViolations": 0
+  },
+  {
+    "name": "quickstart",
+    "url": "http://localhost:3099/integral-education/docs/quickstarts/personal-to-integral",
+    "hasSkipLink": true,
+    "headingCount": 7,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 0,
+    "hasLang": true,
+    "issues": [],
+    "axeViolations": 0
+  },
+  {
+    "name": "prototype",
+    "url": "http://localhost:3099/integral-education/prototype",
+    "hasSkipLink": true,
+    "headingCount": 5,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 0,
+    "hasLang": true,
+    "issues": [],
+    "axeViolations": 0
+  },
+  {
+    "name": "start-here",
+    "url": "http://localhost:3099/integral-education/start",
+    "hasSkipLink": true,
+    "headingCount": 1,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 12,
+    "hasLang": true,
+    "issues": [
+      "12 inputs missing accessible labels"
+    ],
+    "axeViolations": 0
+  },
+  {
+    "name": "404-page",
+    "url": "http://localhost:3099/integral-education/nonexistent-page",
+    "hasSkipLink": true,
+    "headingCount": 1,
+    "imagesWithoutAlt": 0,
+    "inputsWithoutLabel": 0,
+    "hasLang": true,
+    "issues": [],
+    "axeViolations": 0
+  }
+]

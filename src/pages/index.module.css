@@ -23,6 +23,11 @@
   color: var(--ifm-color-white);
   font-weight: 600;
   text-decoration: underline;
+  /* Override visit-link color: ensure white against hero background */
+}
+
+.secondaryCta:visited {
+  color: var(--ifm-color-white);
 }
 
 .secondaryCta:hover {

@@ -2,64 +2,57 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Create custom 404 React page",
-      "description": "Create src/pages/404.js with friendly error message, 3-sentence explanation, recovery navigation links, and report-link option",
+      "title": "Run axe-core audit on all target pages",
+      "description": "Build and serve the site, install @axe-core/cli, run against 7 target pages, collect violations",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-1",
-          "description": "Custom 404 page renders at any invalid URL",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-1b",
-          "description": "Page uses @theme/Layout for consistent header/footer",
+          "description": "axe-core audit executed on all 7 target pages with output collected",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Create CSS module for 404 styling",
-      "description": "Create src/pages/404.module.css with themed styling matching the site's visual style using Docusaurus CSS variables",
+      "title": "Fix all Level A violations found",
+      "description": "Remediate all Level A violations discovered in the audit by editing source files",
       "dependencies": ["1"],
       "acceptance_criteria": [
         {
           "id": "AC-2",
-          "description": "CSS uses Infima theme variables for consistent light/dark styling",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-2b",
-          "description": "Page layout is responsive (works on mobile and desktop)",
+          "description": "All Level A violations resolved — re-audit shows zero Level A violations",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Validate build, accessibility, and recovery options",
-      "description": "Run npm run build, verify the 404 page exists in output, check it has 3+ recovery links, and confirm accessible patterns",
-      "dependencies": ["1", "2"],
+      "title": "Run Lighthouse accessibility audit",
+      "description": "Run Lighthouse on all target pages targeting score of 90+",
+      "dependencies": ["2"],
       "acceptance_criteria": [
         {
           "id": "AC-3",
-          "description": "npm run build passes with no errors",
+          "description": "Lighthouse accessibility score 90+ on all audited pages",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Document audit results and methodology",
+      "description": "Create docs/quality/accessibility-audit.md with results, fixes, and quarterly re-run methodology",
+      "dependencies": ["2", "3"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-4",
+          "description": "docs/quality/accessibility-audit.md exists with results and methodology",
           "test_type": "unit"
         },
         {
-          "id": "AC-3b",
-          "description": "Built output contains 404.html with 3+ recovery navigation links",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-3c",
-          "description": "Page has proper heading hierarchy (single h1)",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-3d",
-          "description": "Page has a 'Report a broken link' external link",
+          "id": "AC-4b",
+          "description": "Methodology documented for quarterly re-runs",
           "test_type": "unit"
         }
       ]

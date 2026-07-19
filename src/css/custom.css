@@ -167,3 +167,18 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Breadcrumbs — prevent truncation on narrow viewports */
+.breadcrumbs__item {
+  white-space: normal;
+}
+
+@media screen and (max-width: 480px) {
+  .breadcrumbs__link {
+    font-size: 0.85rem;
+  }
+
+  .breadcrumbs {
+    padding: 0.5rem 0;
+  }
+}

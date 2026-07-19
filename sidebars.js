@@ -45,6 +45,7 @@ const sidebars = {
       label: 'Interpersonal Line',
       items: [
         'modules/interpersonal-line-overview-orientation',
+        'modules/perspective-taking-empathic-accuracy',
       ],
     },
     {

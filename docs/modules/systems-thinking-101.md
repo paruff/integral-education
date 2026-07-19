@@ -10,6 +10,8 @@ types: ["systems-thinker", "analytical"]
 
 tags: ["systems", "complexity", "feedback"]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 # 🧠 Learn
 
@@ -83,3 +85,5 @@ A: A place in a system where small changes produce large effects
 
 Q: What is the difference between a reinforcing and balancing loop?
 A: Reinforcing loops amplify change (growth or collapse); balancing loops stabilize the system toward a goal
+
+<NextStep />

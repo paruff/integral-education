@@ -23,6 +23,25 @@ Canonical references:
 2. Replace placeholders and remove unchecked options.
 3. Link the final protocol from the related issue and pathway docs.
 
+## Module End-of-Page Progression CTA (Required)
+
+When authoring module files under `docs/modules/`, include the reusable NextStep CTA at the bottom of the module body:
+
+```mdx
+import NextStep from '@site/src/components/NextStep';
+```
+
+```mdx
+<NextStep
+  nextTitle="Rational/Orange Stage Orientation"
+  nextLink="/docs/modules/rational-orange-orientation"
+  reflectLink="/docs/reflections/daily-template"
+  message="You completed this module. The next step in your path is below."
+/>
+```
+
+If `nextTitle` and `nextLink` are omitted, the component falls back to the module-path mapping in `src/components/NextStep/index.js`.
+
 ---
 
 ## 0) Course Metadata

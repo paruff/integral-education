@@ -12,6 +12,8 @@ types: ["note-variation"]
 
 tags: ["emotional-line", "affective-science", "RULER", "Barrett", "growing-up", "developmental-lines", "AQAL"]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 **Position in sequence:** This is the first module in the **Emotional Line** suite. It provides the conceptual foundation for all subsequent Emotional Line modules. No prerequisites are required. If you have completed the [Self Line Overview & Psychograph](./self-line-overview-psychograph), this module extends the psychograph lens specifically into affective development.
 
@@ -265,3 +267,5 @@ This module is rated **Tier 1 (self-guided, low intensity)**. It is conceptual a
 **Escalation:** If distress persists, contact a trusted support person or a qualified clinician before continuing.
 
 :::
+
+<NextStep />

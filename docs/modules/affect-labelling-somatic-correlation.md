@@ -1,24 +1,10 @@
-title:	EI-04 · Affect Labelling & Somatic Correlation module
-state:	OPEN
-author:	paruff (Phil Ruff)
-labels:	
-comments:	0
-assignees:	
-projects:	
-milestone:	
-number:	226
---
-Revised Issue: EI-04 · Affect Labelling & Somatic Correlation module
-Priority: 🟠 P1 | Effort: L | Labels: copilot-implementable
-[Context Control]: Limit repository scanning strictly to ⁠docs/modules/affect-labelling-somatic-correlation.md⁠. Do not scan historical issues, PRs, or files under ⁠docs/safety/⁠.
-📋 Target Implementation Task
-Create a single new file at ⁠docs/modules/affect-labelling-somatic-correlation.md⁠ using the exact structural template provided below. Do not generate conversational markdown introductions or post-generation summaries.
-
 ---
 id: affect-labelling-somatic-correlation
 title: Affect Labelling & Somatic Correlation
 prerequisites: [ei-01, ei-03]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 # Affect Labelling & Somatic Correlation
 
@@ -159,3 +145,5 @@ END
 - **Review Status:** PENDING
 - **Reviewer:** [HUMAN REQUIRED]
 - **Date:** [HUMAN REQUIRED]
+
+<NextStep />

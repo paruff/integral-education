@@ -131,8 +131,8 @@ const sidebars = {
               collapsible: true,
               collapsed: true,
               items: [
-                'modules/integral-teal-orientation',
                 'modules/late-green-emergence-signals',
+                'modules/integral-teal-orientation',
                 'modules/vision-logic-metasystematic-thinking',
                 'modules/healthy-hierarchy-actualization-gradient',
                 'modules/integral-ethics-beyond-relativism',
@@ -151,9 +151,9 @@ const sidebars = {
           items: [
             'modules/gross-state-awareness',
             'modules/subtle-state-access',
-            'modules/flow-peak-experience',
             'modules/causal-witness-state',
             'modules/nondual-awareness-orientation',
+            'modules/flow-peak-experience',
           ],
         },
         {
@@ -166,8 +166,8 @@ const sidebars = {
             'modules/mindfulness-deepening',
             'modules/emotional-granularity',
             'modules/cognitive-bias-101',
-            'modules/evidence-evaluation',
             'modules/critical-thinking-foundations',
+            'modules/evidence-evaluation',
             'modules/systems-thinking-101',
           ],
         },

@@ -9,6 +9,8 @@ states: ["introspection"]
 
 tags: ["shadow", "projection", "self-awareness"]
 ---
+import NextStep from '@site/src/components/NextStep';
+
 
 # 🧠 Learn
 
@@ -93,3 +95,5 @@ A: To make the unconscious conscious — own and relate to disowned qualities
 **Grounding:** If distress arises, pause and use a grounding reset — breathe slowly (4-count inhale, 6-count exhale), name five things you can see, and place both feet flat on the floor.
 
 **Escalation:** If distress persists after grounding, step away from the practice and contact a trusted support person or qualified counsellor. Do not continue the exercise alone.
+
+<NextStep />

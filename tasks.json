@@ -1,0 +1,84 @@
+[
+  {
+    "id": "1",
+    "task": "Rewrite page title and sub-headline to learner-facing language",
+    "dependency": [],
+    "acceptance_criteria": [
+      {
+        "ac": "Page title contains no 'Prototype' label in the learner-visible heading",
+        "test_type": "integration"
+      },
+      {
+        "ac": "Sub-headline describes the learner experience, not system features",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "task": "Rename section headings to learner-facing language",
+    "dependency": [],
+    "acceptance_criteria": [
+      {
+        "ac": "Section headings use learner-facing language: 'Choose Your Path', 'Begin Your Practice', 'How Review Works', 'How You Are Assessed'",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "task": "Move Implementation Docs to collapsible details/summary element",
+    "dependency": [],
+    "acceptance_criteria": [
+      {
+        "ac": "Implementation Docs are not visible by default",
+        "test_type": "integration"
+      },
+      {
+        "ac": "Content is accessible by clicking the summary to expand",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "task": "Add demo context callout at the top of the page",
+    "dependency": [],
+    "acceptance_criteria": [
+      {
+        "ac": "A demo context callout is present at the top before any interactive content",
+        "test_type": "integration"
+      },
+      {
+        "ac": "Callout says 'This is a demo' or equivalent learner-facing language",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "task": "Add CSS styles for callout and collapsible Implementation Docs",
+    "dependency": ["3", "4"],
+    "acceptance_criteria": [
+      {
+        "ac": "Callout is visually distinguishable from surrounding content",
+        "test_type": "integration"
+      },
+      {
+        "ac": "Collapsible Implementation Docs renders correctly with details/summary",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "task": "Run full build and validate no regressions",
+    "dependency": ["1", "2", "3", "4", "5"],
+    "acceptance_criteria": [
+      {
+        "ac": "npm run build passes with no errors",
+        "test_type": "unit"
+      }
+    ]
+  }
+]

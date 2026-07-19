@@ -37,6 +37,7 @@ const sidebars = {
       items: [
         'modules/emotional-line-overview-orientation',
         'modules/emotion-regulation-foundations',
+        'modules/emotional-appraisal-meaning-making',
       ],
     },
     {

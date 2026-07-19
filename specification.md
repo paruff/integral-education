@@ -1,27 +1,26 @@
-# Specification: UX-15 — No Open Graph or Twitter Card meta tags
+# Specification: UX-16 — Custom 404 Page
 
 ## Problem
-When any page is shared on social media, messaging apps, or email clients that render link previews, no image, title, or description appears — just a bare URL. There are no Open Graph or Twitter Card meta tags on any page. For a platform growing through community sharing, blank link previews are a material conversion barrier.
+The site uses the default Docusaurus 404 page which provides only a "Back to main site" link and no site-specific recovery paths. As the site grows and module URLs are shared in communities, broken or renamed links will increasingly surface. A learner hitting a 404 on a shared module link has no recovery affordance.
 
 ## UX Rationale
-Link preview quality is a significant driver of click-through rate for socially-distributed content. Links with rich previews (image + title + description) generate 2-3 times the clicks of bare URL links. For a learning platform targeting growth via community, this is one of the highest-ROI distribution fixes available.
+Custom 404 pages are a standard UX investment with well-documented ROI. A "404 as a recovery opportunity" approach — with search, popular content links, and a clear CTA — consistently returns 15–30% of otherwise-lost users to the site. The effort is minimal (a single React page). The absence of one is particularly damaging for a reference-and-practice site where URLs are frequently shared.
 
 ## Requirements
 
 ### Functional
-- Create a default OG image at static/img/og-default.png (1200x630px) — a simple branded card with the platform name
-- Add site-level metadata to docusaurus.config.js themeConfig.metadata: og:image, og:type, og:site_name, twitter:card
-- Add page-specific description frontmatter to all module and quickstart .md files (becomes og:description)
-- Add title and description frontmatter to all maps and pilots docs
-- Validate OG tags using a link preview checker
+- Create src/pages/404.js as a custom 404 page
+- Content: friendly message, 3-sentence explanation, search link, links to 3 most popular pages (Homepage, Start Here, Mindfulness Basics), and a "Report a broken link" GitHub Issues link
+- Match the visual style of the site using Docusaurus theme variables
+- Ensure the page is accessible: headings, keyboard navigation, no axe-core violations
 
 ### Non-Functional
-- OG image must be 1200x630px (standard OG ratio)
-- File size should be minimized for fast loading
-- Use Docusaurus built-in meta tag support (no custom components)
+- Use @theme/Layout component for consistent header and footer
+- Use Docusaurus CSS variables for consistent styling
+- No additional npm dependencies required
 
 ## Acceptance Criteria
-1. Default OG image exists at static/img/og-default.png
-2. All pages show a title, description, and image in a link preview checker
-3. Module pages show module-specific titles and descriptions
-4. Twitter Card meta tag is present site-wide
+1. Custom 404 page renders at any invalid URL
+2. Page contains at least 3 recovery navigation options
+3. Visual style matches the site
+4. Page is accessible with no axe-core violations

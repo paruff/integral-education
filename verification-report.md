@@ -1,4 +1,4 @@
-# Verification Report: UX-15
+# Verification Report: UX-16
 
 ## Method
 All claims from build-report.md and test-report.md were independently verified against actual filesystem and build output evidence.
@@ -7,21 +7,20 @@ All claims from build-report.md and test-report.md were independently verified a
 
 | Claim | Source | Verified? | Evidence |
 |-------|--------|-----------|----------|
-| OG image exists at static/img/og-default.png | build-report.md | ✅ true | `file static/img/og-default.png` → `PNG image data, 1200 x 630` |
-| OG image is 1200x630 | build-report.md | ✅ true | Python PIL: `Dimensions: 1200x630` |
-| OG image is valid PNG | build-report.md | ✅ true | `file` command confirms PNG format |
-| Build passes with no errors | build-report.md | ✅ true | `[SUCCESS] Generated static files in "build"` |
-| docusaurus.config.js has metadata array | build-report.md | ✅ true | Config verified: `themeConfig.metadata` with 4 entries |
-| All 72 modules have non-empty description | test-report.md | ✅ true | Script scan: 72/72 have description |
-| All 10 quickstarts have non-empty description | test-report.md | ✅ true | Script scan: 10/10 have description |
-| All 8 maps have title and description | test-report.md | ✅ true | Script scan: 8/8 have both title and description |
-| All 4 pilots have title and description | test-report.md | ✅ true | Script scan: 4/4 have both title and description |
-| Module descriptions are unique | test-report.md | ✅ true | Counter check: 0 duplicates across all 94 files |
-| All files have title frontmatter | test-report.md | ✅ true | Regex scan: 0 files missing title |
-| Built HTML contains og:image, og:type, og:site_name, twitter:card | test-report.md | ✅ true | Verified in `build/index.html` — all 4 tags present |
+| 404.js created at src/pages/404.js | build-report.md | ✅ true | `ls src/pages/404.js` → file exists |
+| 404.module.css created | build-report.md | ✅ true | `ls src/pages/404.module.css` → file exists |
+| Build passes | build-report.md | ✅ true | `[SUCCESS] Generated static files in "build"` |
+| 404.html exists in build output | build-report.md | ✅ true | `ls build/404.html` → 9,750 bytes |
+| 3 recovery navigation options | test-report.md | ✅ true | 3 recovery cards verified: Homepage (`/`), Find Your Path (`/start`), Mindfulness Basics (`/docs/modules/mindfulness-basics`) |
+| GitHub Issues report link present | test-report.md | ✅ true | `href="https://github.com/paruff/integral-education/issues/new"` in built HTML |
+| Proper heading hierarchy (1 H1) | test-report.md | ✅ true | Exactly 1 `h1` ("Page Not Found"), 1 `h2`, 3 `h3` |
+| Uses @theme/Layout | test-report.md | ✅ true | Navbar and footer present in built HTML |
+| CSS uses Infima theme variables | test-report.md | ✅ true | All CSS values reference `var(--ifm-*)` variables, no hardcoded colors |
+| Aria-label on external link | test-report.md | ✅ true | `aria-label="Report a broken link on GitHub (opens in new tab)"` in built HTML |
+| Recovery section has aria-labelledby | test-report.md | ✅ true | `aria-labelledby="recovery-heading"` present |
 
 ## Result
 
-**12/12 claims verified true.** No false claims, no missing evidence.
+**11/11 claims verified true.** No false claims, no missing evidence.
 
 **STATUS: ✅ PASS**

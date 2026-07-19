@@ -1,10 +1,18 @@
 ---
 id: affect-labelling-somatic-correlation
 title: Affect Labelling & Somatic Correlation
-prerequisites: [ei-01, ei-03]
+prerequisites:
+- emotional-line-overview-orientation
+- affect-labelling-somatic-correlation
+difficulty: Intermediate
+readingTime: 10
+practiceTime: 10
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 # Affect Labelling & Somatic Correlation
 

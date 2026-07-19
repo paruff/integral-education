@@ -1,12 +1,30 @@
 ---
 id: co-regulation-relational-attunement
-title: "EI-06 · Co-regulation & Relational Attunement"
-sidebar_label: "EI-06 · Co-regulation & Relational Attunement"
-description: Learn how co-regulation and relational attunement — the bidirectional, shared regulation of emotional and autonomic states — form the We-quadrant foundation of emotional development.
-prerequisites: [ei-01, ei-02, ei-04]
-tags: [emotional-line, interpersonal-line, co-regulation, polyvagal, attunement, AQAL, tier-2, safety-critical]
+title: EI-06 · Co-regulation & Relational Attunement
+sidebar_label: EI-06 · Co-regulation & Relational Attunement
+description: Learn how co-regulation and relational attunement — the bidirectional, shared regulation of emotional and autonomic
+  states — form the We-quadrant foundation of emotional development.
+prerequisites:
+- emotional-line-overview-orientation
+- emotion-regulation-foundations
+- emotional-appraisal-meaning-making
+tags:
+- emotional-line
+- interpersonal-line
+- co-regulation
+- polyvagal
+- attunement
+- AQAL
+- tier-2
+- safety-critical
+difficulty: Intermediate
+readingTime: 10
+practiceTime: 10
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
+
+<ModuleMeta />
 
 **Position in sequence:** This is the sixth module in the **Emotional Line** suite and the primary bridge to the Interpersonal Line. It builds on the self-regulation foundation of [Emotion Regulation Foundations](./emotion-regulation-foundations) (EI-02) and the somatic awareness of [Affect Labelling & Somatic Correlation](./affect-labelling-somatic-correlation) (EI-04). The L4 indicator on the Emotional Competency Map — *teaching emotional granularity and co-regulating with others* — requires this module's relational framework. Prerequisites: EI-01, EI-02, EI-04.
 

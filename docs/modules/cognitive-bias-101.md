@@ -1,17 +1,29 @@
 ---
 id: cognitive-bias-101
 title: Cognitive Bias Basics
-
-quadrants: ["It"]
-level: "Amber → Rational"
-lines: ["cognitive"]
-states: ["analytical"]
-types: ["systems-thinker"]
-
-tags: ["bias", "thinking", "reasoning"]
+quadrants:
+- It
+level: Amber → Rational
+lines:
+- cognitive
+states:
+- analytical
+types:
+- systems-thinker
+tags:
+- bias
+- thinking
+- reasoning
+difficulty: Beginner
+readingTime: 10
+practiceTime: 10
+prerequisites: None
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 # 🧠 Learn
 

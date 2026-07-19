@@ -22,6 +22,11 @@ function HomepageHeader() {
           </Link>
           <Link
             className={styles.secondaryCta}
+            to="/start">
+            Find Your Path →
+          </Link>
+          <Link
+            className={styles.secondaryCta}
             to="/prototype">
             Open Prototype
           </Link>

@@ -211,6 +211,7 @@ const sidebars = {
       type: 'category',
       label: 'Maps',
       items: [
+        'maps/glossary',
         'maps/aqal-overview',
         'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',

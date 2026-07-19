@@ -1,55 +1,48 @@
-# Test Report: UX-17
+# Test Report — UX-18 AQAL Glossary and Term Component
 
-## Acceptance Criteria Results
+## Session
 
-| ID | Description | Test Type | Result | Evidence |
-|----|-------------|-----------|--------|----------|
-| AC-1 | axe-core audit executed on all 7 target pages | unit | ✅ PASS | `artifacts/axe-report.json` exists with results for all 7 pages |
-| AC-2 | All Level A violations resolved — re-audit shows 0 | unit | ✅ PASS | Re-audit after fixes: 0 violations on all 7 pages |
-| AC-3 | Lighthouse accessibility score 90+ on all audited pages | unit | ✅ PASS | 6/7 pages scored 100; 4th page scored 100* (see note) |
-| AC-4 | docs/quality/accessibility-audit.md exists | unit | ✅ PASS | File created with results and methodology |
-| AC-4b | Methodology documented for quarterly re-runs | unit | ✅ PASS | Audit doc includes step-by-step quarterly re-run instructions |
+- **Session ID:** `ux-18-20260719`
+- **Branch:** `feature/ux-18-aqal-glossary`
 
-## Detailed Audit Evidence
+## Acceptance Criteria Verification
 
-### axe-core Results (post-fix)
-```
-homepage:              0 violations
-intro:                 0 violations
-module-mindfulness:    0 violations
-quickstart:            0 violations
-prototype:             0 violations
-start-here:            0 violations
-404-page:              0 violations
-```
+| ID | Description | Expected | Actual | Status |
+|----|-------------|----------|--------|--------|
+| AC-1 | Glossary page exists with minimum 20 defined terms | ≥20 terms | 23 terms | ✅ PASS |
+| AC-1b | Each term has a unique anchor ID usable as deep link | All terms have `{#id}` | All 23 have explicit `{#id}` anchors | ✅ PASS |
+| AC-2 | Glossary appears in sidebar under Maps category | Sidebar link at `maps/glossary` | Present in `sidebars.js` line 214 | ✅ PASS |
+| AC-3 | Term component renders term with tooltip on hover (desktop) | CSS `:hover` triggers tooltip | `.wrapper:hover .tooltip { opacity: 1 }` | ✅ PASS |
+| AC-3b | Term component keyboard accessible — tooltip on focus | CSS `:focus` / `:focus-within` triggers tooltip | `.wrapper:focus-within .tooltip, .wrapper:focus .tooltip` | ✅ PASS |
+| AC-3c | Tooltip z-index prevents sidebar clipping | `z-index ≥ 1000` | `z-index: 9999` | ✅ PASS |
+| AC-4 | At least 10 inline tooltips deployed across intro and first QuickStart | ≥10 total | 12 (intro) + 8 (quickstart) = 20 | ✅ PASS |
+| AC-5 | Glossary linked from intro, personal-to-integral, amber-to-rational | 3 pages link to glossary | All three updated | ✅ PASS |
+| AC-6 | `npm run build` passes with no errors | Build success | `[SUCCESS]` — 0 errors | ✅ PASS |
 
-### Lighthouse Results
-```
-homepage:              100
-intro:                 100
-module-mindfulness:    100
-quickstart:            100
-prototype:             100
-start-here:            100
-404-page:              100* (axe-verified clean, 0 violations)
-```
+**All 9 acceptance criteria: ✅ PASS**
 
-### Violations Fixed
+## Build Verification
 
-| Violation | Pages Affected | Fix |
-|-----------|---------------|-----|
-| color-contrast: active sidebar link (#2e8555 on #f2f2f2) | intro, module, quickstart | Used `--ifm-menu-color-active: var(--ifm-color-primary-dark)` |
-| color-contrast: active breadcrumb (#2e8555 on #f2f2f2) | intro, module, quickstart | Overrode `.breadcrumbs__item--active .breadcrumbs__link` to use darker green |
-| color-contrast: table links (#2e8555 on #f7f7f7) | intro | Overrode `table a` to use darker green |
-| color-contrast: navbar-start-here active (#2e8555 on #e6f0eb) | start-here | Overrode `.navbar-start-here.navbar__link--active` to use darker green |
-| color-contrast: difficulty badge labels (#66a0dc on #e8f0fe, 2.4:1) | module | Darkened badge colors; removed opacity from label |
-| color-contrast: difficulty badge values (#2e7dce on #e8f0fe, 3.7:1) | module | Darkened Beginner color from #2e7dce to #1a5a9e |
-| color-contrast: prereq links (#2e8555 on #f5f6f7, 4.21:1) | module | Added `color: var(--ifm-color-primary-dark)` to `.prereqLink` |
-| color-contrast: secondary CTA (#2e8555 on #eef5f1, 4.12:1) | module | Added `color: var(--ifm-color-primary-dark)` to `.secondaryCta` |
-
-## Live System Verification (Phase 3.5)
-
-**Result: N/A** — No acceptance criteria tagged `test_type: live-system`. All audits run against locally served build; no live deployment dependency.
+- `npm run build` — **SUCCESS** (no errors)
+- Pre-existing warnings only (deprecated config, missing blog dir)
+- Glossary page generates correct HTML with all 23 entries
+- Term component renders correctly in both `.md` (intro) and `.mdx` (quickstart) contexts
 
 ## Coverage
-No code coverage metrics needed — changes are CSS overrides and config values, not application logic.
+
+No formal coverage thresholds for this project. Component unit tests exist at `src/components/Term/__tests__/Term.test.jsx` but require `jest` and `@testing-library/react` to be installed (not currently in `devDependencies`) — they serve as a behavioral specification for the Term component.
+
+## Regression Risk
+
+- No existing functionality removed
+- Sidebar entry added (not modified)
+- Only additive changes to `.md` / `.mdx` files
+- Term component is self-contained, no changes to CSS variables or layout
+
+## Overall Test Result
+
+**PASS** — All acceptance criteria verified. Proceed to Phase 3.5.
+
+## Live-System Verification
+
+Not applicable — no acceptance criterion is tagged `test_type: live-system`. Skipping to Phase 4.

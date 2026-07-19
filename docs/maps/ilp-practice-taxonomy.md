@@ -2,6 +2,7 @@
 id: ilp-practice-taxonomy
 title: ILP Practice Taxonomy
 sidebar_label: ILP Taxonomy
+description: A taxonomy of Integral Life Practice categories, progression ladders, and safety constraints organized by quadrant, line, and stage for curriculum and pathway design.
 tags: [ilp, practices, taxonomy, safety]
 ---
 

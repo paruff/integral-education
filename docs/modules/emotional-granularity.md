@@ -1,6 +1,7 @@
 ---
 id: emotional-granularity
 title: Emotional Granularity
+description: Build emotional vocabulary and discrimination skills to name feelings with precision, moving from diffuse emotional states to differentiated, actionable self-awareness.
 quadrants:
 - I
 - We

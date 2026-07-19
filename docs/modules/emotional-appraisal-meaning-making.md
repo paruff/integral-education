@@ -2,6 +2,7 @@
 id: emotional-appraisal-meaning-making
 title: EI-05 · Emotional Appraisal & Meaning-Making
 sidebar_label: EI-05 · Emotional Appraisal
+description: Explore how emotions encode meaning — a cognitive-emotional practice for decoding the evaluative judgments embedded in emotional responses.
 prerequisites:
 - emotional-line-overview-orientation
 - emotion-regulation-foundations

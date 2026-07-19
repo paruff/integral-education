@@ -2,6 +2,7 @@
 id: pilot-pathway-integral-foundations
 title: Pilot Pathway A - Integral Foundations
 sidebar_label: "Pathway A: Integral Foundations"
+description: A 4-week pilot pathway introducing adult learners to the Integral/AQAL framework with foundational competencies in all five AQAL dimensions.
 tags: [pilot, pathway, microlearning, retrieval]
 ---
 

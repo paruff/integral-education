@@ -1,21 +1,27 @@
-# Verification Report — UX-14
+# Verification Report: UX-15
 
-## Claims Audit
+## Method
+All claims from build-report.md and test-report.md were independently verified against actual filesystem and build output evidence.
 
-| # | Claim | Source Report | Verified | Evidence |
-|---|-------|---------------|----------|----------|
-| 1 | Build passes | build-report.md | ✅ verified_true | `[SUCCESS] Generated static files in "build"` |
-| 2 | Search index is generated | build-report.md | ✅ verified_true | `build/search-index.json` (14MB) |
-| 3 | Search box visible in navbar | test-report.md | ✅ verified_true | Built HTML: `<input placeholder="Search" aria-label="Search">` in navbar |
-| 4 | Content is indexed | test-report.md | ✅ verified_true | Content sub-index: 2,473 documents, 7,606 unique terms |
-| 5 | "shadow" returns results | test-report.md | ✅ verified_true | "shadow": 547 docs, 1,856 positions in content index |
-| 6 | "retrieval" returns results | test-report.md | ✅ verified_true | "retriev" (stemmed): 57 docs, 76 positions |
-| 7 | "emotional" returns results | test-report.md | ✅ verified_true | "emotion": 78 docs, 80 positions, plus "emotional" appears in composite terms |
-| 8 | "mindfulness" returns results | test-report.md | ✅ verified_true | Stemmed to "mind": 218 positions across content |
-| 9 | Only 3 files changed | build-report.md | ✅ verified_true | `docusaurus.config.js`, `package.json`, `package-lock.json` |
-| 10 | No backend needed | design.md | ✅ verified_true | Static JSON index deployed with site |
-| 11 | Keyboard accessible | test-report.md | ✅ verified_true | Native `<input>` element with Tab/Enter support |
-| 12 | Works with GitHub Pages deploy | test-report.md | ✅ verified_true | `deploy-gh-pages.yml` runs `npm run build` + uploads build dir |
+## Claim Verification
 
-## Verdict
-**PASS** — All 12 claims verified true.
+| Claim | Source | Verified? | Evidence |
+|-------|--------|-----------|----------|
+| OG image exists at static/img/og-default.png | build-report.md | ✅ true | `file static/img/og-default.png` → `PNG image data, 1200 x 630` |
+| OG image is 1200x630 | build-report.md | ✅ true | Python PIL: `Dimensions: 1200x630` |
+| OG image is valid PNG | build-report.md | ✅ true | `file` command confirms PNG format |
+| Build passes with no errors | build-report.md | ✅ true | `[SUCCESS] Generated static files in "build"` |
+| docusaurus.config.js has metadata array | build-report.md | ✅ true | Config verified: `themeConfig.metadata` with 4 entries |
+| All 72 modules have non-empty description | test-report.md | ✅ true | Script scan: 72/72 have description |
+| All 10 quickstarts have non-empty description | test-report.md | ✅ true | Script scan: 10/10 have description |
+| All 8 maps have title and description | test-report.md | ✅ true | Script scan: 8/8 have both title and description |
+| All 4 pilots have title and description | test-report.md | ✅ true | Script scan: 4/4 have both title and description |
+| Module descriptions are unique | test-report.md | ✅ true | Counter check: 0 duplicates across all 94 files |
+| All files have title frontmatter | test-report.md | ✅ true | Regex scan: 0 files missing title |
+| Built HTML contains og:image, og:type, og:site_name, twitter:card | test-report.md | ✅ true | Verified in `build/index.html` — all 4 tags present |
+
+## Result
+
+**12/12 claims verified true.** No false claims, no missing evidence.
+
+**STATUS: ✅ PASS**

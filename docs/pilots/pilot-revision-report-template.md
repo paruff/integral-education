@@ -2,6 +2,7 @@
 id: pilot-revision-report-template
 title: Pilot Revision Report Template
 sidebar_label: Revision Report Template
+description: A structured template for reporting pilot pathway revisions, including feedback analysis, content changes, safety updates, and success metrics.
 tags: [pilot, report, revision]
 ---
 

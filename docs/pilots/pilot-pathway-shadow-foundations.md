@@ -2,6 +2,7 @@
 id: pilot-pathway-shadow-foundations
 title: Pilot Pathway B - Shadow Integration Foundations
 sidebar_label: "Pathway B: Shadow Foundations"
+description: A 4-week pilot pathway for low-intensity shadow literacy and projection practices with explicit safety scaffolding for adult learners.
 tags: [pilot, shadowwork, safety, microlearning]
 ---
 

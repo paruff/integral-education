@@ -2,6 +2,7 @@
 id: aqal-label-crosswalk
 title: AQAL Label Crosswalk (Dual-Layer)
 sidebar_label: AQAL Label Crosswalk
+description: A dual-layer language model and cross-reference table translating developmental stage labels across major theorists for learner accessibility and conceptual precision.
 tags: [aqal, labels, accessibility, taxonomy]
 ---
 

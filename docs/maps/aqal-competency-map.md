@@ -2,6 +2,7 @@
 id: aqal-competency-map
 title: AQAL Competency Map
 sidebar_label: AQAL Competency Map
+description: A competency framework mapping measurable developmental capacities across all quadrants, levels, lines, states, and types — the canonical design reference for pathway and assessment decisions.
 tags: [aqal, competencies, assessment, progression, evidence]
 ---
 

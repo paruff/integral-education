@@ -1,6 +1,7 @@
 ---
 id: aqal-overview
 title: AQAL Overview
+description: The complete reference for AQAL — All Quadrants, All Levels, All Lines, All States, All Types — Ken Wilber's comprehensive map of human experience and development.
 
 tags: ["aqal", "integral", "framework", "map"]
 ---

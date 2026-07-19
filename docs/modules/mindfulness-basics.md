@@ -1,17 +1,30 @@
 ---
 id: mindfulness-basics
 title: Mindfulness Basics
-
-quadrants: ["I"]
-level: "Personal → Pluralistic"
-lines: ["cognitive", "somatic"]
-states: ["mindfulness"]
-types: ["experiential"]
-
-tags: ["attention", "awareness"]
+quadrants:
+- I
+level: Personal → Pluralistic
+lines:
+- cognitive
+- somatic
+states:
+- mindfulness
+types:
+- experiential
+tags:
+- attention
+- awareness
+difficulty: Beginner
+readingTime: 10
+practiceTime: 15
+prerequisites:
+- rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 # 🧠 Learn
 

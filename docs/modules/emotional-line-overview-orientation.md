@@ -2,18 +2,37 @@
 id: emotional-line-overview-orientation
 title: Emotional Line Overview & Orientation
 sidebar_label: Emotional Line Overview & Orientation
-description: An orientation to the Emotional developmental line in AQAL — defining affective development, introducing constructed emotion in plain language, mapping the L1–L4 arc through the RULER framework, and situating Emotional line growth within psychograph asynchrony.
-
-quadrants: ["I", "We"]
-level: "Cross-level (L1 through L4 Emotional line development)"
-lines: ["emotional"]
-states: ["reflective"]
-types: ["note-variation"]
-
-tags: ["emotional-line", "affective-science", "RULER", "Barrett", "growing-up", "developmental-lines", "AQAL"]
+description: An orientation to the Emotional developmental line in AQAL — defining affective development, introducing constructed
+  emotion in plain language, mapping the L1–L4 arc through the RULER framework, and situating Emotional line growth within
+  psychograph asynchrony.
+quadrants:
+- I
+- We
+level: Cross-level (L1 through L4 Emotional line development)
+lines:
+- emotional
+states:
+- reflective
+types:
+- note-variation
+tags:
+- emotional-line
+- affective-science
+- RULER
+- Barrett
+- growing-up
+- developmental-lines
+- AQAL
+difficulty: Intermediate
+readingTime: 8
+practiceTime: 12
+prerequisites: None
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 **Position in sequence:** This is the first module in the **Emotional Line** suite. It provides the conceptual foundation for all subsequent Emotional Line modules. No prerequisites are required. If you have completed the [Self Line Overview & Psychograph](./self-line-overview-psychograph), this module extends the psychograph lens specifically into affective development.
 

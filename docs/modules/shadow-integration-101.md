@@ -1,16 +1,30 @@
 ---
 id: shadow-integration-101
 title: Shadow Integration
-
-quadrants: ["I", "We"]
-level: "Pluralistic → Integral"
-lines: ["emotional", "interpersonal"]
-states: ["introspection"]
-
-tags: ["shadow", "projection", "self-awareness"]
+quadrants:
+- I
+- We
+level: Pluralistic → Integral
+lines:
+- emotional
+- interpersonal
+states:
+- introspection
+tags:
+- shadow
+- projection
+- self-awareness
+difficulty: Advanced
+readingTime: 10
+practiceTime: 15
+prerequisites:
+- pluralistic-green-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 # 🧠 Learn
 

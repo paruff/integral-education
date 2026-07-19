@@ -1,17 +1,34 @@
 ---
 id: emotional-granularity
 title: Emotional Granularity
-
-quadrants: ["I", "We"]
-level: "Personal → Pluralistic"
-lines: ["emotional", "interpersonal"]
-states: ["mindfulness", "introspection"]
-types: ["experiential", "analytical"]
-
-tags: ["emotions", "affect", "self-awareness"]
+quadrants:
+- I
+- We
+level: Personal → Pluralistic
+lines:
+- emotional
+- interpersonal
+states:
+- mindfulness
+- introspection
+types:
+- experiential
+- analytical
+tags:
+- emotions
+- affect
+- self-awareness
+difficulty: Beginner
+readingTime: 10
+practiceTime: 12
+prerequisites:
+- rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 ## AQAL Mapping
 | Dimension | Framework Mapping |

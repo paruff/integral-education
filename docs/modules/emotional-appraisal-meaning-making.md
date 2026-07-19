@@ -1,12 +1,27 @@
 ---
 id: emotional-appraisal-meaning-making
-title: "EI-05 · Emotional Appraisal & Meaning-Making"
-sidebar_label: "EI-05 · Emotional Appraisal"
-prerequisites: [ei-01, ei-02, ei-03]
-tags: [emotional-line, appraisal, aqal, meaning-making, abc-model, cognitive-reappraisal]
+title: EI-05 · Emotional Appraisal & Meaning-Making
+sidebar_label: EI-05 · Emotional Appraisal
+prerequisites:
+- emotional-line-overview-orientation
+- emotion-regulation-foundations
+- affect-labelling-somatic-correlation
+tags:
+- emotional-line
+- appraisal
+- aqal
+- meaning-making
+- abc-model
+- cognitive-reappraisal
+difficulty: Intermediate
+readingTime: 10
+practiceTime: 10
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 # EI-05 · Emotional Appraisal & Meaning-Making
 

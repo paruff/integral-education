@@ -1,17 +1,33 @@
 ---
 id: systems-thinking-101
 title: Systems Thinking 101
-
-quadrants: ["It", "Its"]
-level: "Rational → Pluralistic"
-lines: ["cognitive", "systems"]
-states: ["analytical"]
-types: ["systems-thinker", "analytical"]
-
-tags: ["systems", "complexity", "feedback"]
+quadrants:
+- It
+- Its
+level: Rational → Pluralistic
+lines:
+- cognitive
+- systems
+states:
+- analytical
+types:
+- systems-thinker
+- analytical
+tags:
+- systems
+- complexity
+- feedback
+difficulty: Intermediate
+readingTime: 10
+practiceTime: 10
+prerequisites:
+- rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import ModuleMeta from '@site/src/components/ModuleMeta';
 
+
+<ModuleMeta />
 
 # 🧠 Learn
 

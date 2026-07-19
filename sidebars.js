@@ -46,6 +46,7 @@ const sidebars = {
       items: [
         'modules/interpersonal-line-overview-orientation',
         'modules/relational-repair-conflict-navigation',
+        'modules/perspective-taking-empathic-accuracy',
       ],
     },
     {

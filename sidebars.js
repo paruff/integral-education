@@ -205,6 +205,7 @@ const sidebars = {
         'maps/aqal-overview',
         'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',
+        'maps/emotional-line-stage-map',
         'maps/ilp-practice-taxonomy',
         'maps/state-identification-assessment',
         'maps/state-stage-integration-map',

@@ -1,35 +1,59 @@
-# Build Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
+# Build Report — SAFE-01: Add crisis resource banner to all shadow-adjacent module pages
 
 ## Summary
 
-Revised `.agents/skills/learner-experience/SKILL.md` from v1 to v2, aligning it with the authoritative v2 agent file at `.agents/agents/learner-experience.md`. Four critical inconsistencies resolved, plus three new patterns added. Updated AGENTS.md skill status table.
+Created a persistent, non-intrusive `CrisisResourceBanner` component that displays at the top of every shadow-adjacent and altered-state module page. Created a dedicated `docs/safety/crisis-resources.md` page with US crisis lines, Samaritans (UK/IE), and international resources. The banner was imported into 17 target modules.
 
 ## Session
 
-- **Session ID:** `agent-01-20260719`
-- **Branch:** `feature/agent-01-learner-experience-skill-v2`
+- **Session ID:** `safe-01-20260720`
+- **Branch:** `fix/safe-01-crisis-resource-banner`
 
 ## Files Changed
 
 | File | Action | Purpose |
 |------|--------|---------|
-| `.agents/skills/learner-experience/SKILL.md` | **Revised** | v1 → v2: scoring, retrieval, schema, graceful degradation, error boundary, baseUrl links |
-| `AGENTS.md` | Modified | Added skill status table with version column, learner-experience marked v2 |
-| `specification.md` | Created | AGENT-01 spec from issue #333 |
-| `design.md` | Created | AGENT-01 design from issue #333 |
-| `tasks.json` | Created | AGENT-01 task decomposition |
+| `src/components/CrisisResourceBanner/index.js` | **Created** | Persistent banner component with crisis link |
+| `src/components/CrisisResourceBanner/styles.module.css` | **Created** | Infima-themed styling, responsive |
+| `docs/safety/crisis-resources.md` | **Created** | Crisis resource page (US + UK/IE + international) |
+| 14 shadow-tagged module files | Modified | Added banner import after frontmatter |
+| 3 state-tagged module files | Modified | Added banner import after frontmatter |
 
 ## Tasks Completed
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | Per-line modal scoring | ✅ Done | Replaced linear 0–90 aggregate with lineScores + getModalTransition |
-| 2 | Drop-back-one-interval retrieval | ✅ Done | Replaced reset-to-zero with `Math.max(0, currentIndex - 1)` |
-| 3 | localStorage schema v2 | ✅ Done | version 2, lineResults, modalResult, complete field |
-| 4 | Graceful degradation | ✅ Done | safeLocalStorageGet/Set, private browsing message, in-memory fallback |
-| 5 | Error boundary + baseUrl patterns | ✅ Done | LearnerComponentErrorBoundary, useDocusaurusContext for fork-safe links |
-| 6 | AGENTS.md update | ✅ Done | Skill status table with version column, learner-experience v2 |
-| 7 | Build verification | ✅ Done | `npm run build` SUCCESS, zero errors |
+| 1 | Create CrisisResourceBanner component | ✅ Done | `index.js` + `styles.module.css` with Infima variables |
+| 2 | Create crisis-resources page | ✅ Done | US crisis lines, Samaritans, international resources |
+| 3 | Import banner into 14 shadow modules | ✅ Done | All shadow-tagged modules updated |
+| 4 | Import banner into 3 state modules | ✅ Done | causal, nondual, subtle modules updated |
+| 5 | Validate build | ✅ Done | `npm run build` SUCCESS |
+
+## Component Architecture
+
+```
+src/components/CrisisResourceBanner/
+├── index.js              — React component with @docusaurus/Link
+└── styles.module.css     — Infima-themed, responsive, keyboard accessible
+```
+
+**Component features:**
+- `role="complementary"` + `aria-label="Crisis resources"` for screen readers
+- ⚠️ warning icon with `aria-hidden="true"`
+- Text: "If you feel overwhelmed or unsafe, stop the practice. Crisis resources →"
+- Link to `/docs/safety/crisis-resources` using `@docusaurus/Link`
+- Infima `--ifm-color-warning-contrasting-background` + `--ifm-color-warning-dark` border
+- Responsive: reduced padding at 480px breakpoint
+
+## Crisis Resources Page
+
+```
+docs/safety/crisis-resources.md
+├── United States: 988 Lifeline, Crisis Text Line, Veterans Crisis Line
+├── United Kingdom / Ireland: Samaritans (116 123)
+├── International: findahelpline.com, IASP directory
+└── Emergency numbers: 911 (US), 999 (UK), 112 (EU)
+```
 
 ## Validation Results
 
@@ -38,18 +62,13 @@ Revised `.agents/skills/learner-experience/SKILL.md` from v1 to v2, aligning it 
 npm run build → [SUCCESS] Generated static files in "build".
 ```
 
-### Content verification
-- ✅ Zero remaining v1 patterns (0 linear ranges, 0 reset-to-zero, 0 `version: 1`)
-- ✅ All v2 patterns verified present (lineScores, Math.max(0, currentIndex - 1), version: 2, lineResults, modalResult, safeLocalStorageGet/Set, ErrorBoundary, useDocusaurusContext, AGENTS.md v2 entry)
+### Import count
+```
+grep -rl 'CrisisResourceBanner' docs/modules/ → 17 files
+```
 
-### Preserved content
-- ✅ Design principles (stage-neutral, low friction, progressive disclosure, somatic pacing, accessibility)
-- ✅ CompetencyMap specification
-- ✅ ReadinessCheck specification
-- ✅ PracticeTimer specification
-- ✅ PartnerPrompt specification
-- ✅ "What not to build" section
-- ✅ MDX integration pattern section
+### Component rendering
+Verified banner HTML present in build output for all 17 module pages.
 
 ## Blockers
 

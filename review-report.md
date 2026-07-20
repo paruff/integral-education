@@ -1,56 +1,65 @@
-# Review Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
+# Review Report — SAFE-01: Add crisis resource banner to all shadow-adjacent module pages
 
 ## Session
 
-- **Session ID:** `agent-01-20260719`
-- **Branch:** `feature/agent-01-learner-experience-skill-v2`
+- **Session ID:** `safe-01-20260720`
+- **Branch:** `fix/safe-01-crisis-resource-banner`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| Per-line modal scoring replaces linear ranges | ✅ | `lineScores` object + `getModalTransition()` with tie-breaking rule |
-| Drop-back-one-interval replaces reset-to-zero | ✅ | `Math.max(0, currentIndex - 1)` with completion detection |
-| localStorage version 2 with lineResults/modalResult | ✅ | Schema fully updated; v1 fields removed |
-| Graceful degradation added | ✅ | safeLocalStorageGet/Set, private browsing message, in-memory fallback |
-| Error boundary pattern added | ✅ | `LearnerComponentErrorBoundary` class with usage example |
-| useDocusaurusContext baseUrl pattern added | ✅ | Fork-safe link construction with baseUrl |
-| AGENTS.md updated | ✅ | Skill status table with version column |
+| CrisisResourceBanner component created | ✅ | `src/components/CrisisResourceBanner/index.js` + `styles.module.css` |
+| Banner text matches spec | ✅ | "If you feel overwhelmed or unsafe, stop the practice. Crisis resources →" |
+| Link targets `/docs/safety/crisis-resources` | ✅ | Uses `@docusaurus/Link` with correct path |
+| Crisis resources page created | ✅ | US, UK/IE, international resources with findahelpline.com |
+| All 14 shadow modules have banner | ✅ | Verified by grep + build output |
+| All 3 state modules have banner | ✅ | causal-witness-state, nondual-awareness-orientation, subtle-state-access |
+| Build passes | ✅ | `npm run build` SUCCESS |
 
-**Verdict: All requirements satisfied exactly as specified in issue #333.**
+**Verdict: All requirements satisfied.**
 
 ## Scope Discipline
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only sections changed that were explicitly listed in the issue. |
-| Unnecessary changes | **None.** Every edit is traceable to an acceptance criterion in tasks.json. |
-| Files modified beyond scope | **None.** Only `.agents/skills/learner-experience/SKILL.md` and `AGENTS.md`. |
-| Preserved content | ✅ All existing component specs, design principles, "what not to build", and MDX integration patterns intact. |
+| Scope creep | **None.** Only the 17 target modules specified in the issue + component + page. |
+| Unnecessary changes | **None.** Banner import is the only change to each module. |
+| Non-target modules changed | **None.** Exactly 17 modules affected. |
+| Component pattern compliance | ✅ Follows `src/components/ComponentName/index.js` + `styles.module.css` pattern |
 
 **Verdict: Tight scope control.**
 
-## Maintainability
+## Safety Assessment
 
 | Aspect | Assessment |
 |--------|------------|
-| Consistency with agent file | ✅ Full alignment with `.agents/agents/learner-experience.md` (v2) |
-| Code examples | ✅ All JS/JSX examples syntactically valid |
-| Structural preservation | ✅ Same section order and heading hierarchy as v1 |
-| Version markup | ✅ Changes clearly marked with "(v2)" in section headings |
+| Banner prominence | Non-intrusive but visible — warning-colored background with border accent |
+| Link accessibility | Always visible at page top — learner doesn't need to scroll or navigate |
+| Crisis resources accuracy | Language matches Safety Classification skill v2; findahelpline.com for international coverage |
+| No categorical confidentiality claims | ✅ Sample disclaimer added: "These resources are provided for informational purposes. The Integral Education Platform is an educational resource, not a clinical or crisis service." |
 
-**Verdict: Maintainable, authoritative, consistent with agent file.**
+**Verdict: Safety-positive change. Addresses the key risk: a learner in distress during a shadow exercise now has an immediate, visible path to crisis resources.**
 
 ## Risk Assessment
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Regressions to doc site | None | Skill file and AGENTS.md not consumed by Docusaurus build |
-| Agent loading errors | None | File path unchanged, structure preserved |
-| Confusion from v1-v2 diff | Low | Changes clearly marked; AGENTS.md documents current version |
-| Breaking existing builds | None | `npm run build` verified clean |
+| Banner interferes with ModuleMeta layout | Low | Banner renders above ModuleMeta; both are block-level components with margins |
+| Stale crisis line numbers | Medium | Numbers verified current (988, 741741, 116 123); disclaimer notes informational purpose |
+| International learners without local resources | Low | findahelpline.com covers 50+ countries; IASP directory covers global resources |
 
-**Verdict: No material risk identified.**
+**Verdict: Low risk. Medium risk for stale numbers mitigated by disclaimer and known-current verification.**
+
+## Design Compliance
+
+| Design Element | Status |
+|----------------|--------|
+| Infima theme variables used | ✅ `--ifm-color-warning-contrasting-background`, `--ifm-color-warning-dark` |
+| `@docusaurus/Link` for internal link | ✅ |
+| Responsive at 480px | ✅ |
+| Keyboard accessible | ✅ (standard anchor, semantic HTML) |
+| CSS modules pattern | ✅ |
 
 ## Review Result
 

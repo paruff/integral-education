@@ -2,95 +2,69 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Update TransitionAssessment scoring to per-line modal",
-      "description": "Replace the linear 0–90 aggregate scoring section with per-line modal scoring structure matching the v2 agent file. Include lineScores object, modal determination logic, and tie-breaking rule.",
+      "title": "Create CrisisResourceBanner component",
+      "description": "Create src/components/CrisisResourceBanner/index.js and styles.module.css — persistent, non-intrusive banner using Infima theme variables and @docusaurus/Link.",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-1",
-          "description": "SKILL.md TransitionAssessment section uses per-line modal scoring, not linear 0–90 ranges",
+          "description": "CrisisResourceBanner component exists at src/components/CrisisResourceBanner/",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Update RetrievalScheduler reset logic to drop back one interval",
-      "description": "Replace reset-to-zero interval logic with drop-back-one-interval logic as specified in the v2 agent file.",
+      "title": "Create crisis-resources page",
+      "description": "Create docs/safety/crisis-resources.md listing US crisis lines, Samaritans (UK/IE), and international resources with findahelpline.com link. Use Safety Classification skill's approved language.",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-2",
-          "description": "SKILL.md RetrievalScheduler uses 'drop back one interval' logic, not reset-to-zero",
+          "description": "docs/safety/crisis-resources.md exists with US crisis lines, Samaritans (UK/IE), and international link",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-5",
+          "description": "Crisis resources page uses safety classification skill's approved language",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Update localStorage schema to version 2",
-      "description": "Update localStorage schema: version 1 → 2, add lineResults and modalResult fields, add complete field to retrievalSchedule entries.",
-      "dependencies": [],
+      "title": "Import banner into all 14 shadow-tagged modules",
+      "description": "Add CrisisResourceBanner import and usage at top of body in all 14 modules with shadow in frontmatter tags.",
+      "dependencies": ["1"],
       "acceptance_criteria": [
         {
           "id": "AC-3",
-          "description": "SKILL.md localStorage schema is version 2 with lineResults and modalResult fields",
+          "description": "Banner is imported into all 14 shadow-tagged modules",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "4",
-      "title": "Add graceful degradation pattern",
-      "description": "Add safeLocalStorageGet/Set patterns with try/catch blocks, private browsing fallback message, and in-memory fallback behavior description.",
-      "dependencies": [],
+      "title": "Import banner into all 3 state modules",
+      "description": "Add CrisisResourceBanner import and usage in causal-witness-state.mdx, nondual-awareness-orientation.mdx, and subtle-state-access.mdx.",
+      "dependencies": ["1"],
       "acceptance_criteria": [
         {
           "id": "AC-4",
-          "description": "SKILL.md includes graceful degradation pattern (safeLocalStorageGet/Set, private browsing message)",
+          "description": "Banner is imported into all 3 state modules (causal, nondual, subtle)",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "5",
-      "title": "Add error boundary and useDocusaurusContext patterns",
-      "description": "Add error boundary React pattern for component crashes and useDocusaurusContext hook pattern for fork-safe internal links.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {
-          "id": "AC-5",
-          "description": "SKILL.md includes error boundary pattern",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-6",
-          "description": "SKILL.md includes useDocusaurusContext hook pattern",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "title": "Update AGENTS.md skill status",
-      "description": "Update AGENTS.md to reflect the learner-experience SKILL.md revision status as v2.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {
-          "id": "AC-7",
-          "description": "AGENTS.md updated to reflect SKILL.md revision status: v2",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "7",
       "title": "Validate build",
       "description": "Run npm run build and verify no errors.",
-      "dependencies": ["1", "2", "3", "4", "5", "6"],
+      "dependencies": ["1", "2", "3", "4"],
       "acceptance_criteria": [
         {
-          "id": "AC-8",
+          "id": "AC-6",
           "description": "npm run build passes with no errors",
           "test_type": "unit"
         }

@@ -1,39 +1,30 @@
-# Specification: AGENT-01 — learner-experience/SKILL.md revision (v1 → v2)
+# Specification: SAFE-01 — Add crisis resource banner to all shadow-adjacent module pages
 
 ## Problem
 
-The `learner-experience/SKILL.md` skill file is still v1 and inconsistent with the v2 agent file (`.agents/agents/learner-experience.md`) on four critical points:
-
-1. **Assessment scoring**: v1 has linear 0–90 aggregate score ranges; v2 agent specifies per-line modal scoring
-2. **Retrieval reset logic**: v1 resets missed intervals to zero; v2 agent specifies "drop back one interval"
-3. **localStorage schema version mismatch**: v1 is `version: 1` with `assessment.result` string; v2 is `version: 2` with `assessment.lineResults` object and `assessment.modalResult`
-4. **Missing graceful degradation**: v1 has no `safeLocalStorageGet/Set`; v2 requires try/catch for private browsing and in-memory fallback
-
-The agent file is correct and authoritative. The skill file needs to be revised to match.
+Learners can navigate directly to Shadow Integration 101, Shadow Work Foundation, and all 10+ shadow modules without encountering a crisis resource link. The Trauma Activation Response Protocol correctly references 988 (US) but is buried in `docs/safety/shadowwork-safety-standard.md`. A learner in acute distress during a shadow exercise will not navigate to that document.
 
 ## Requirements
 
 ### Functional
-- Update `.agents/skills/learner-experience/SKILL.md` to v2, consistent with the v2 agent file
-- Replace TransitionAssessment scoring: linear 0–90 aggregation → per-line modal scoring
-- Replace RetrievalScheduler reset logic: "reset to zero" → "drop back one interval"
-- Update localStorage schema: version 1 → version 2, `assessment.result` → `assessment.lineResults` + `assessment.modalResult`
-- Add graceful degradation pattern: `safeLocalStorageGet`/`safeLocalStorageSet` with private browsing fallback
-- Add error boundary pattern for component crashes
-- Add `useDocusaurusContext` hook pattern for fork-safe internal links
+- Create `src/components/CrisisResourceBanner/` React component with persistent, non-intrusive banner
+- Banner text: "If you feel overwhelmed or unsafe, stop the practice." with link to `/docs/safety/crisis-resources`
+- Create `docs/safety/crisis-resources.md` listing: 988 Suicide & Crisis Lifeline (US), Crisis Text Line, Samaritans (UK/IE), international resources note with link to findahelpline.com
+- Import banner into every module under `docs/modules/` that contains `shadow` in its frontmatter `tags:` field — 14 modules total
+- Import banner into every module under `docs/modules/` tagged `subtle`, `causal`, or `nondual` — 3 modules total
+- Banner must be the first component import after frontmatter, before module content
 
 ### Non-Functional
-- Skill file must be stage-neutral (no stage names in UI copy examples)
-- Skill file must preserve all existing component specifications (CompetencyMap, ReadinessCheck, PracticeTimer, PartnerPrompt)
-- "What not to build" section must be preserved
-- MDX integration patterns must be preserved
+- Banner must use Infima theme variables for consistent styling
+- Banner must follow existing `src/components/` patterns (CSS modules, default export)
+- Banner must be keyboard accessible
+- Crisis resources page must use the same resource language as the Safety Classification skill
+- `npm run build` must pass
 
 ## Acceptance Criteria
-1. SKILL.md TransitionAssessment section uses per-line modal scoring, not linear 0–90 ranges
-2. SKILL.md RetrievalScheduler uses "drop back one interval" logic, not reset-to-zero
-3. SKILL.md localStorage schema is version 2 with `lineResults` and `modalResult` fields
-4. SKILL.md includes graceful degradation pattern (safeLocalStorageGet/Set, private browsing message)
-5. SKILL.md includes error boundary pattern
-6. SKILL.md includes useDocusaurusContext hook pattern
-7. `.agents/AGENTS.md` updated with SKILL.md revision status: v2 (or AGENTS.md updated to reflect skill revision)
-8. `npm run build` passes (no regressions)
+1. CrisisResourceBanner component exists at `src/components/CrisisResourceBanner/`
+2. `docs/safety/crisis-resources.md` exists with US crisis lines, Samaritans (UK/IE), and international link
+3. Banner is imported into all 14 shadow-tagged modules
+4. Banner is imported into all 3 state modules (causal-witness-state, nondual-awareness-orientation, subtle-state-access)
+5. Crisis resources page uses safety classification skill's approved language
+6. `npm run build` passes with no errors

@@ -1,35 +1,59 @@
-# Build Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
+# Build Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
 
 ## Summary
 
-Revised `.agents/skills/learner-experience/SKILL.md` from v1 to v2, aligning it with the authoritative v2 agent file at `.agents/agents/learner-experience.md`. Four critical inconsistencies resolved, plus three new patterns added. Updated AGENTS.md skill status table.
+Removed all prescribed breath-count ratios from module files, replacing them with the Safety Classification skill's approved grounding language: "slow, natural breaths at whatever pace feels settling." The fix started with the primary target (`shadow-integration-101.md`) and was systematically applied across all 20 module files that contained breath-count ratios.
 
 ## Session
 
-- **Session ID:** `agent-01-20260719`
-- **Branch:** `feature/agent-01-learner-experience-skill-v2`
+- **Session ID:** `safe-03-20260720`
+- **Branch:** `fix/safe-03-breath-ratios`
 
 ## Files Changed
 
-| File | Action | Purpose |
-|------|--------|---------|
-| `.agents/skills/learner-experience/SKILL.md` | **Revised** | v1 → v2: scoring, retrieval, schema, graceful degradation, error boundary, baseUrl links |
-| `AGENTS.md` | Modified | Added skill status table with version column, learner-experience marked v2 |
-| `specification.md` | Created | AGENT-01 spec from issue #333 |
-| `design.md` | Created | AGENT-01 design from issue #333 |
-| `tasks.json` | Created | AGENT-01 task decomposition |
+| # | File | Changes |
+|---|------|---------|
+| 1 | `docs/modules/shadow-integration-101.md` | Removed `(4-count inhale, 6-count exhale)` |
+| 2 | `docs/modules/shadow-positive-projection.mdx` | 2 occurrences fixed |
+| 3 | `docs/modules/shadow-spiritual-bypassing.mdx` | 3 occurrences fixed |
+| 4 | `docs/modules/shadow-persona-mask.mdx` | 1 occurrence fixed |
+| 5 | `docs/modules/shadow-work-foundation.mdx` | 1 occurrence fixed |
+| 6 | `docs/modules/shadow-in-relationships.mdx` | 3 occurrences fixed |
+| 7 | `docs/modules/shadow-321-process.mdx` | 2 occurrences fixed |
+| 8 | `docs/modules/shadow-immunity-to-change.mdx` | 2 occurrences fixed |
+| 9 | `docs/modules/integral-shadow-teal-trap.mdx` | 2 occurrences fixed |
+| 10 | `docs/modules/self-line-integration-practice.mdx` | 1 occurrence fixed |
+| 11 | `docs/modules/spiritual-line-mythic-to-rational.mdx` | 3 occurrences fixed |
+| 12 | `docs/modules/spiritual-line-shadow-integration.mdx` | 2 occurrences fixed |
+| 13 | `docs/modules/spiritual-line-overview-orientation.mdx` | 1 occurrence fixed |
+| 14 | `docs/modules/spiritual-line-post-metaphysical-integral-religion.mdx` | 1 occurrence fixed |
+| 15 | `docs/modules/moral-line-overview-dual-track.mdx` | 1 occurrence fixed |
+| 16 | `docs/modules/contextual-ethics-moral-complexity.mdx` | 1 occurrence fixed |
+| 17 | `docs/modules/cognitive-line-practice-architecture.mdx` | 1 occurrence fixed |
+| 18 | `docs/modules/cognitive-line-overview-orientation.mdx` | 1 occurrence fixed |
+| 19 | `docs/modules/integral-life-practice-embodying-2nd-tier.mdx` | 1 occurrence fixed |
+| 20 | `docs/modules/emotional-intelligence-somatic-line.mdx` | 1 occurrence fixed |
+
+**Total: 20 files, 31 insertions, 31 deletions**
 
 ## Tasks Completed
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | Per-line modal scoring | ✅ Done | Replaced linear 0–90 aggregate with lineScores + getModalTransition |
-| 2 | Drop-back-one-interval retrieval | ✅ Done | Replaced reset-to-zero with `Math.max(0, currentIndex - 1)` |
-| 3 | localStorage schema v2 | ✅ Done | version 2, lineResults, modalResult, complete field |
-| 4 | Graceful degradation | ✅ Done | safeLocalStorageGet/Set, private browsing message, in-memory fallback |
-| 5 | Error boundary + baseUrl patterns | ✅ Done | LearnerComponentErrorBoundary, useDocusaurusContext for fork-safe links |
-| 6 | AGENTS.md update | ✅ Done | Skill status table with version column, learner-experience v2 |
-| 7 | Build verification | ✅ Done | `npm run build` SUCCESS, zero errors |
+| 1 | Fix primary target: shadow-integration-101.md | ✅ Done | `(4-count inhale, 6-count exhale)` → `take several slow, natural breaths` |
+| 2 | Audit and fix all module files | ✅ Done | 20 files, 30+ occurrences, three cleanup passes |
+| 3 | Validate build | ✅ Done | `npm run build` SUCCESS |
+
+## Replacement Language (from Safety Classification skill)
+
+All replacements use the approved language from `.agents/skills/safety-classification/SKILL.md` line 134:
+> "Slow, natural breaths at whatever pace feels settling" is safer and more universally appropriate.
+
+Context-appropriate variants applied:
+- `take several slow, natural breaths` (short grounding)
+- `breathe slowly for two to three minutes at whatever pace feels comfortable` (timed)
+- `slow, comfortable breathing` (in breathing sequence context)
+- `take three slow, natural breaths at whatever pace feels settling` (repetition context)
 
 ## Validation Results
 
@@ -38,18 +62,24 @@ Revised `.agents/skills/learner-experience/SKILL.md` from v1 to v2, aligning it 
 npm run build → [SUCCESS] Generated static files in "build".
 ```
 
-### Content verification
-- ✅ Zero remaining v1 patterns (0 linear ranges, 0 reset-to-zero, 0 `version: 1`)
-- ✅ All v2 patterns verified present (lineScores, Math.max(0, currentIndex - 1), version: 2, lineResults, modalResult, safeLocalStorageGet/Set, ErrorBoundary, useDocusaurusContext, AGENTS.md v2 entry)
+### Breath-count audit
+```
+grep -rn '4-count\|6-count\|four-count inhale.*exhale' docs/modules/ → ZERO RESULTS
+```
 
-### Preserved content
-- ✅ Design principles (stage-neutral, low friction, progressive disclosure, somatic pacing, accessibility)
-- ✅ CompetencyMap specification
-- ✅ ReadinessCheck specification
-- ✅ PracticeTimer specification
-- ✅ PartnerPrompt specification
-- ✅ "What not to build" section
-- ✅ MDX integration pattern section
+### Quality audit
+- ✅ No double-word artifacts (e.g., "breathing breathing")
+- ✅ No broken punctuation
+- ✅ No remaining "three repetitions" counting after settling instructions
+
+## Findings (out of scope, flagged)
+
+Non-module files also contain breath-count ratios, outside this issue's scope:
+- `docs/safety/shadowwork-safety-standard.md` — 4 occurrences (lines 309, 321, 333, 358)
+- `docs/pilots/pilot-pathway-shadow-foundations.md` — 3 occurrences (lines 104, 327, 366)
+- `docs/maps/ilp-practice-taxonomy.md` — 1 occurrence (line 240)
+
+These should be addressed in a follow-up issue.
 
 ## Blockers
 

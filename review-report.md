@@ -1,21 +1,19 @@
-# Review Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
+# Review Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
 
 ## Session
 
-- **Session ID:** `agent-01-20260719`
-- **Branch:** `feature/agent-01-learner-experience-skill-v2`
+- **Session ID:** `safe-03-20260720`
+- **Branch:** `fix/safe-03-breath-ratios`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| Per-line modal scoring replaces linear ranges | ✅ | `lineScores` object + `getModalTransition()` with tie-breaking rule |
-| Drop-back-one-interval replaces reset-to-zero | ✅ | `Math.max(0, currentIndex - 1)` with completion detection |
-| localStorage version 2 with lineResults/modalResult | ✅ | Schema fully updated; v1 fields removed |
-| Graceful degradation added | ✅ | safeLocalStorageGet/Set, private browsing message, in-memory fallback |
-| Error boundary pattern added | ✅ | `LearnerComponentErrorBoundary` class with usage example |
-| useDocusaurusContext baseUrl pattern added | ✅ | Fork-safe link construction with baseUrl |
-| AGENTS.md updated | ✅ | Skill status table with version column |
+| Primary target: shadow-integration-101.md fixed | ✅ | Line 110: `(4-count inhale, 6-count exhale)` → `take several slow, natural breaths` |
+| Full module audit complete | ✅ | All 20 affected files cleaned, zero remaining breath-count ratios |
+| Replacement language matches safety classification skill | ✅ | All variants derive from approved "slow, natural breaths at whatever pace feels settling" |
+| Grounding protocol structure preserved | ✅ | Sensory naming, feet-on-floor, escalation, stop rules all intact |
+| Build passes | ✅ | `npm run build` SUCCESS |
 
 **Verdict: All requirements satisfied exactly as specified in issue #333.**
 
@@ -23,32 +21,32 @@
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only sections changed that were explicitly listed in the issue. |
-| Unnecessary changes | **None.** Every edit is traceable to an acceptance criterion in tasks.json. |
-| Files modified beyond scope | **None.** Only `.agents/skills/learner-experience/SKILL.md` and `AGENTS.md`. |
-| Preserved content | ✅ All existing component specs, design principles, "what not to build", and MDX integration patterns intact. |
+| Scope creep | **None.** Only breath-count ratio replacements in module files. |
+| Files beyond scope changed | **None.** Only `docs/modules/` files. |
+| Non-module files left unchanged | ✅ `docs/safety/`, `docs/pilots/`, `docs/maps/` — flagged as follow-up finding |
+| Unnecessary phrasing changes | **None.** Only the breath-count phrases replaced; surrounding text preserved. |
 
 **Verdict: Tight scope control.**
 
-## Maintainability
+## Safety Assessment
 
 | Aspect | Assessment |
 |--------|------------|
-| Consistency with agent file | ✅ Full alignment with `.agents/agents/learner-experience.md` (v2) |
-| Code examples | ✅ All JS/JSX examples syntactically valid |
-| Structural preservation | ✅ Same section order and heading hierarchy as v1 |
-| Version markup | ✅ Changes clearly marked with "(v2)" in section headings |
+| New safety issues introduced | **None.** All replacements use safer language (no prescribed ratios). |
+| Safety classification skill compliance | ✅ Full alignment with line 134 guidance and standard grounding protocol (lines 126-132). |
+| Panic disorder / anxiety profile risk | ✅ Extended exhale ratios removed — addresses the specific contraindication. |
+| Learner autonomy | ✅ Improved — "at whatever pace feels settling" empowers learner self-regulation. |
 
-**Verdict: Maintainable, authoritative, consistent with agent file.**
+**Verdict: Safety-positive change.**
 
 ## Risk Assessment
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Regressions to doc site | None | Skill file and AGENTS.md not consumed by Docusaurus build |
-| Agent loading errors | None | File path unchanged, structure preserved |
-| Confusion from v1-v2 diff | Low | Changes clearly marked; AGENTS.md documents current version |
-| Breaking existing builds | None | `npm run build` verified clean |
+| Broken grounding sequences | Low | Multi-pass verification; all sequences structurally preserved |
+| Incorrect replacements | Low | Three cleanup passes; spot-checks across 5+ files |
+| Build failure | None | `npm run build` verified clean |
+| Missing occurrences | Low | Double-audit: grep confirmed zero remaining |
 
 **Verdict: No material risk identified.**
 

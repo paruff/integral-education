@@ -2,95 +2,48 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Update TransitionAssessment scoring to per-line modal",
-      "description": "Replace the linear 0–90 aggregate scoring section with per-line modal scoring structure matching the v2 agent file. Include lineScores object, modal determination logic, and tie-breaking rule.",
+      "title": "Fix primary target: shadow-integration-101.md",
+      "description": "Remove the prescribed breath-count ratio (4-count inhale, 6-count exhale) from line 110 of docs/modules/shadow-integration-101.md and replace with approved grounding language.",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-1",
-          "description": "SKILL.md TransitionAssessment section uses per-line modal scoring, not linear 0–90 ranges",
+          "description": "shadow-integration-101.md no longer contains prescribed breath-count ratio",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Update RetrievalScheduler reset logic to drop back one interval",
-      "description": "Replace reset-to-zero interval logic with drop-back-one-interval logic as specified in the v2 agent file.",
+      "title": "Audit and fix all module files with breath-count ratios",
+      "description": "Run grep audit across all docs/modules/ files, fix every occurrence of prescribed breath-count ratios with context-appropriate approved replacement language.",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-2",
-          "description": "SKILL.md RetrievalScheduler uses 'drop back one interval' logic, not reset-to-zero",
+          "description": "All module files in docs/modules/ no longer contain prescribed breath-count ratios",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-3",
+          "description": "Replacement language uses approved phrasing from Safety Classification skill",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-4",
+          "description": "Surrounding grounding protocol structure preserved",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Update localStorage schema to version 2",
-      "description": "Update localStorage schema: version 1 → 2, add lineResults and modalResult fields, add complete field to retrievalSchedule entries.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {
-          "id": "AC-3",
-          "description": "SKILL.md localStorage schema is version 2 with lineResults and modalResult fields",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Add graceful degradation pattern",
-      "description": "Add safeLocalStorageGet/Set patterns with try/catch blocks, private browsing fallback message, and in-memory fallback behavior description.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {
-          "id": "AC-4",
-          "description": "SKILL.md includes graceful degradation pattern (safeLocalStorageGet/Set, private browsing message)",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "5",
-      "title": "Add error boundary and useDocusaurusContext patterns",
-      "description": "Add error boundary React pattern for component crashes and useDocusaurusContext hook pattern for fork-safe internal links.",
-      "dependencies": [],
+      "title": "Validate build",
+      "description": "Run npm run build and verify no errors.",
+      "dependencies": ["1", "2"],
       "acceptance_criteria": [
         {
           "id": "AC-5",
-          "description": "SKILL.md includes error boundary pattern",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-6",
-          "description": "SKILL.md includes useDocusaurusContext hook pattern",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "6",
-      "title": "Update AGENTS.md skill status",
-      "description": "Update AGENTS.md to reflect the learner-experience SKILL.md revision status as v2.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {
-          "id": "AC-7",
-          "description": "AGENTS.md updated to reflect SKILL.md revision status: v2",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "7",
-      "title": "Validate build",
-      "description": "Run npm run build and verify no errors.",
-      "dependencies": ["1", "2", "3", "4", "5", "6"],
-      "acceptance_criteria": [
-        {
-          "id": "AC-8",
           "description": "npm run build passes with no errors",
           "test_type": "unit"
         }

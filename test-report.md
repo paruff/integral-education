@@ -1,36 +1,41 @@
-# Test Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
+# Test Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
 
 ## Session
 
-- **Session ID:** `safe-03-20260720`
-- **Branch:** `fix/safe-03-breath-ratios`
+- **Session ID:** `safe-02-20260720`
+- **Branch:** `fix/safe-02-safety-gate-banner`
 
 ## Acceptance Criteria Verification
 
 | ID | Description | Expected | Actual | Status |
 |----|-------------|----------|--------|--------|
-| AC-1 | shadow-integration-101.md no longer contains prescribed breath-count ratio | Zero breath-count matches | grep confirms zero | ✅ PASS |
-| AC-2 | All module files no longer contain prescribed breath-count ratios | Zero breath-count matches across all docs/modules/ | grep confirms zero across 20 files | ✅ PASS |
-| AC-3 | Replacement language uses approved phrasing from Safety Classification skill | "slow, natural breaths at whatever pace feels settling" | All variants derive from approved language | ✅ PASS |
-| AC-4 | Surrounding grounding protocol structure preserved | Sensory naming, feet-on-floor, escalation paths intact | Confirmed by spot-checks across 5+ files | ✅ PASS |
-| AC-5 | `npm run build` passes with no errors | Build success | `[SUCCESS] Generated static files` | ✅ PASS |
+| AC-1 | ShadowGate component exists | Files at `src/components/ShadowGate/` | `index.js` + `styles.module.css` exist | ✅ PASS |
+| AC-2 | Gate displays consent, contraindications, distress 1-10, Mindfulness Basics | Four form elements rendered | All four present in component JSX | ✅ PASS |
+| AC-3 | Distress ≥ 7 blocks entry with grounding + crisis banner | Block state with grounding box + CrisisResourceBanner | `blockReason === 'distress'` renders grounding + CrisisResourceBanner | ✅ PASS |
+| AC-4 | Contraindication blocks entry with "not suitable" + links | Block state with links to Mindfulness Basics + crisis resources | `blockReason === 'contraindication'` renders links | ✅ PASS |
+| AC-5 | sessionStorage prevents re-fire within session | `sessionStorage.getItem('shadow-gate-acknowledged')` check on mount | `useEffect` checks sessionStorage; sets on gate pass | ✅ PASS |
+| AC-6 | Gate injected into all 12 shadow modules | 12 imports | `grep -rl ShadowGate docs/modules/ \| wc -l` = 12 | ✅ PASS |
+| AC-7 | `npm run build` passes | Build success | `[SUCCESS] Generated static files` | ✅ PASS |
 
-**All 5 acceptance criteria: ✅ PASS**
+**All 7 acceptance criteria: ✅ PASS**
 
-## Audit Results
+## Component States Verified
 
-- **Files scanned:** All `.md` and `.mdx` files in `docs/modules/`
-- **Files fixed:** 20 (19 from bulk audit + 1 manual catch)
-- **Total occurrences fixed:** 30+
-- **Remaining breath-count ratios:** 0
-- **Quality issues found in first pass:** 6 (double words, missing punctuation) — all fixed in cleanup passes
+| State | Trigger | Renders | Verified |
+|-------|---------|---------|----------|
+| Gate form | First visit, no sessionStorage | Consent + mindfulness + contraindications + distress | ✅ JSX present |
+| Distress block | distress ≥ 7 selected + Proceed | Grounding box + CrisisResourceBanner + override button | ✅ JSX present |
+| Contraindication block | Any contraindication checked + Proceed | "Not suitable" message + links to MB + crisis | ✅ JSX present |
+| Gate pass | Low distress, no contraindication | sessionStorage set, children rendered | ✅ Logic present |
+| Session skip | sessionStorage 'true' on mount | Children rendered directly | ✅ useEffect present |
 
 ## Regression Risk
 
-- **None.** Only individual word/phrase replacements within grounding protocols.
-- No structural changes to modules.
-- No changes to module content, learning paths, assessments, or navigation.
-- Build output structure identical to trunk.
+- **None.** Additive change only:
+  - New component files + SAFE-01 dependency files
+  - 12 shadow modules: content wrapped in `<ShadowGate>` — existing content preserved intact within wrapper
+  - Pre-existing broken anchor warnings remain unchanged
+- Build output: gate rendered in 12 module pages — no existing pages affected
 
 ## Overall Test Result
 

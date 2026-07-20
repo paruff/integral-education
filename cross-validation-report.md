@@ -1,56 +1,42 @@
-# Cross-Validation Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
+# Cross-Validation Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
 
 ## Session
 
-- **Session ID:** `safe-03-20260720`
-- **Branch:** `fix/safe-03-breath-ratios`
+- **Session ID:** `safe-02-20260720`
+- **Branch:** `fix/safe-02-safety-gate-banner`
+
+## Cross-Validation: Issue #315 vs Implementation
+
+| Issue Requirement | Implementation | Consistent? |
+|-------------------|----------------|-------------|
+| ShadowGate component in `src/components/` | `src/components/ShadowGate/index.js` + `styles.module.css` | ✅ YES |
+| Gate displays consent, contraindications, distress, Mindfulness Basics | All four form elements present | ✅ YES |
+| Distress ≥ 7 blocks with grounding + crisis banner | `blockReason === 'distress'` renders grounding box + CrisisResourceBanner | ✅ YES |
+| Contraindication blocks with "not suitable" + links | `blockReason === 'contraindication'` renders links to MB + crisis | ✅ YES |
+| sessionStorage per-session acknowledgment | `sessionStorage.getItem('shadow-gate-acknowledged')` on mount | ✅ YES |
+| Injected at top of all shadow modules | 12 modules with "shadow" in filename | ✅ YES |
+| Build passes | SUCCESS | ✅ YES |
 
 ## Cross-Validation: Specification vs Implementation
 
 | Req | Requirement | Implementation | Consistent? |
 |-----|-------------|----------------|-------------|
-| 1 | Remove breath ratio from shadow-integration-101.md | Line 110: `(4-count inhale, 6-count exhale)` → `take several slow, natural breaths` | ✅ YES |
-| 2 | Audit ALL module files | All `docs/modules/` files scanned; 20 files fixed; zero remaining | ✅ YES |
-| 3 | Replacement matches Safety Classification skill | Variants all derive from "slow, natural breaths at whatever pace feels settling" | ✅ YES |
-| 4 | Grounding protocol structure preserved | Sensory naming, feet-on-floor, escalation paths confirmed intact | ✅ YES |
-| 5 | Build passes | `[SUCCESS]` | ✅ YES |
+| AC-1 | Component exists | ✅ Created | ✅ YES |
+| AC-2 | Four gate elements | ✅ All present | ✅ YES |
+| AC-3 | Distress block | ✅ Grounding + CrisisResourceBanner + override | ✅ YES |
+| AC-4 | Contraindication block | ✅ "Not suitable" + MB + crisis links | ✅ YES |
+| AC-5 | sessionStorage | ✅ Per-session check on mount | ✅ YES |
+| AC-6 | 12 module imports | ✅ All 12 confirmed | ✅ YES |
+| AC-7 | Build passes | ✅ SUCCESS | ✅ YES |
 
-## Cross-Validation: Design vs Implementation
+## Dependency Check: SAFE-01 vs Implementation
 
-| Design Element | Status | Consistent? |
-|----------------|--------|-------------|
-| Primary target: line 110 fixed | `(4-count inhale, 6-count exhale)` removed | ✅ YES |
-| 8 context-appropriate replacement variants | All variants applied per design table | ✅ YES |
-| Non-module files NOT changed | `docs/safety/`, `docs/pilots/`, `docs/maps/` untouched | ✅ YES |
-| No npm dependencies changed | `package.json` unchanged | ✅ YES |
-
-## Cross-Validation: Issue #316 vs Deliverables
-
-| Issue Requirement | Deliverable | Consistent? |
-|-------------------|-------------|-------------|
-| Remove `(4-count inhale, 6-count exhale)` from shadow-integration-101 | Fixed | ✅ YES |
-| Replacement invites slow, comfortable breath without counts | "take several slow, natural breaths" | ✅ YES |
-| Audit across ALL module files | 20 files fixed; zero remaining ratios | ✅ YES |
-| Safety Review agent approved replacement | Language matches Safety Classification skill v2 line 134 | ✅ YES |
-| `npm run build` passes | SUCCESS | ✅ YES |
-
-## Consistency Check: Review vs Verification
-
-| Aspect | Review Finding | Verification Finding | Consistent? |
-|--------|---------------|---------------------|-------------|
-| All ACs pass | APPROVED | 14/14 claims verified TRUE | ✅ YES |
-| Scope: only module files | Confirmed | 20 module files; non-module files untouched | ✅ YES |
-| Safety-positive | Confirmed | Language matches approved safety guidance | ✅ YES |
-
-## Out-of-Scope Finding (Consistency Gap)
-
-Non-module files contain the same breath-count ratios but were intentionally excluded per issue scope:
-- `docs/safety/shadowwork-safety-standard.md` (4 occurrences) — this is the safety standard itself, so the inconsistency between the safety skill and the safety standard document is notable
-- `docs/pilots/pilot-pathway-shadow-foundations.md` (3 occurrences)
-- `docs/maps/ilp-practice-taxonomy.md` (1 occurrence)
-
-This gap is deliberate (scope discipline) and flagged for a follow-up issue.
+| SAFE-01 Dependency | Included? | Consistent? |
+|--------------------|-----------|-------------|
+| CrisisResourceBanner component | ✅ Copied from SAFE-01 branch | ✅ YES |
+| crisis-resources.md page | ✅ Copied from SAFE-01 branch | ✅ YES |
+| Banner imported in shadow modules | ✅ All 12 shadow modules have CrisisResourceBanner + ShadowGate | ✅ YES |
 
 ## Cross-Validation Result
 
-**PASS** ✅ — Implementation fully consistent with specification, design, and issue #316. All 5 requirements satisfied. Proceed to Phase 5 (Delivery).
+**PASS** ✅ — Implementation fully consistent with specification and issue #315. All 7 requirements satisfied. SAFE-01 dependency included. Proceed to Phase 5 (Delivery).

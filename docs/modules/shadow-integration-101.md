@@ -21,6 +21,14 @@ practiceTime: 15
 prerequisites:
 - pluralistic-green-orientation
 ---
+
+import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
+import ShadowGate from '@site/src/components/ShadowGate';
+
+<CrisisResourceBanner />
+
+<ShadowGate>
+
 import NextStep from '@site/src/components/NextStep';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
@@ -112,3 +120,5 @@ A: To make the unconscious conscious — own and relate to disowned qualities
 **Escalation:** If distress persists after grounding, step away from the practice and contact a trusted support person or qualified counsellor. Do not continue the exercise alone.
 
 <NextStep />
+
+</ShadowGate>

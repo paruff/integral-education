@@ -26,9 +26,16 @@ Before Agent Mode: list read files, write files, plan, validation.
 If scope expands, stop and re-scope.
 
 ## On-Demand Skills
-| Use | Path |
-|---|---|
-| Detailed rules | .github/skills/ |
+| Use | Path | Version |
+|---|---|---|
+| Detailed rules | .github/skills/ | — |
+| Learner experience | .agents/skills/learner-experience/SKILL.md | v2 |
+| Module authoring | .agents/skills/module-authoring/SKILL.md | — |
+| Docusaurus conventions | .agents/skills/docusaurus-conventions/SKILL.md | — |
+| Evidence vetting | .agents/skills/evidence-vetting/SKILL.md | — |
+| Safety classification | .agents/skills/safety-classification/SKILL.md | — |
+| Developmental vocabulary | .agents/skills/developmental-vocabulary/SKILL.md | — |
+| Fork readiness audit | .agents/skills/fork-readiness-audit/SKILL.md | — |
 
 ## Context Files to Read Before Writing Code
 | Purpose | File |

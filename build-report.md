@@ -1,67 +1,55 @@
-# Build Report — UX-18 AQAL Glossary and Term Component
+# Build Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
 
 ## Summary
 
-Implemented the AQAL glossary page and reusable Term component for inline tooltip definitions across the platform, plus integrated both into existing docs.
+Revised `.agents/skills/learner-experience/SKILL.md` from v1 to v2, aligning it with the authoritative v2 agent file at `.agents/agents/learner-experience.md`. Four critical inconsistencies resolved, plus three new patterns added. Updated AGENTS.md skill status table.
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `agent-01-20260719`
+- **Branch:** `feature/agent-01-learner-experience-skill-v2`
 
 ## Files Changed
 
 | File | Action | Purpose |
 |------|--------|---------|
-| `docs/maps/glossary.md` | **Created** | 23-entry glossary covering AQAL terms, stages, and platform concepts |
-| `src/components/Term/index.js` | **Created** | Reusable React component: inline tooltip on hover/click |
-| `src/components/Term/styles.module.css` | **Created** | Styles for Term component (tooltip, highlight, transitions) |
-| `src/components/Term/__tests__/Term.test.jsx` | **Created** | Unit tests for Term component rendering |
-| `sidebars.js` | Modified | Added `maps/glossary` after `maps/aqal-overview` |
-| `docs/intro.md` | Modified | Added 12 Term component usages + glossary link in Maps section |
-| `docs/quickstarts/personal-to-integral.md` | Modified | Added 8 Term component usages + glossary link in Next Steps |
-| `docs/quickstarts/amber-to-rational.mdx` | Modified | Added glossary link in Complementary Resources |
+| `.agents/skills/learner-experience/SKILL.md` | **Revised** | v1 → v2: scoring, retrieval, schema, graceful degradation, error boundary, baseUrl links |
+| `AGENTS.md` | Modified | Added skill status table with version column, learner-experience marked v2 |
+| `specification.md` | Created | AGENT-01 spec from issue #333 |
+| `design.md` | Created | AGENT-01 design from issue #333 |
+| `tasks.json` | Created | AGENT-01 task decomposition |
 
 ## Tasks Completed
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | Create glossary page (`docs/maps/glossary.md`) | ✅ Done | 23 entries with cross-references, anchors, plain-language definitions |
-| 2 | Create Term React component | ✅ Done | `src/components/Term/index.js` + `styles.module.css` |
-| 3 | Add glossary to sidebar | ✅ Done | After AQAL Overview in Maps section |
-| 4 | Integrate Term component in intro.md | ✅ Done | 12 Term usages + glossary link |
-| 5 | Integrate Term component in personal-to-integral.md | ✅ Done | 8 Term usages + glossary link |
-| 6 | Integrate glossary link in amber-to-rational.mdx | ✅ Done | Link in Complementary Resources |
-| 7 | Build verification | ✅ Done | `npm run build` passes cleanly |
+| 1 | Per-line modal scoring | ✅ Done | Replaced linear 0–90 aggregate with lineScores + getModalTransition |
+| 2 | Drop-back-one-interval retrieval | ✅ Done | Replaced reset-to-zero with `Math.max(0, currentIndex - 1)` |
+| 3 | localStorage schema v2 | ✅ Done | version 2, lineResults, modalResult, complete field |
+| 4 | Graceful degradation | ✅ Done | safeLocalStorageGet/Set, private browsing message, in-memory fallback |
+| 5 | Error boundary + baseUrl patterns | ✅ Done | LearnerComponentErrorBoundary, useDocusaurusContext for fork-safe links |
+| 6 | AGENTS.md update | ✅ Done | Skill status table with version column, learner-experience v2 |
+| 7 | Build verification | ✅ Done | `npm run build` SUCCESS, zero errors |
 
 ## Validation Results
 
-### Lint
-No lint configuration actively enforced in this project — no issues to report.
-
-### Typecheck
-No TypeScript configuration — JavaScript with React prop-types equivalent handled by runtime.
-
 ### Build
 ```
-npm run build  →  [SUCCESS] Generated static files in "build".
+npm run build → [SUCCESS] Generated static files in "build".
 ```
 
-### Test
-```
-No test runner configured — component behavioral spec at `src/components/Term/__tests__/Term.test.jsx` requires jest + @testing-library/react (not yet in devDependencies).
-```
+### Content verification
+- ✅ Zero remaining v1 patterns (0 linear ranges, 0 reset-to-zero, 0 `version: 1`)
+- ✅ All v2 patterns verified present (lineScores, Math.max(0, currentIndex - 1), version: 2, lineResults, modalResult, safeLocalStorageGet/Set, ErrorBoundary, useDocusaurusContext, AGENTS.md v2 entry)
 
-## Build Output Verification
-
-| Metric | Value |
-|--------|-------|
-| Glossary HTML size | 35,002 bytes |
-| Term components rendered (intro) | 12 |
-| Term components rendered (quickstart) | 8 |
-| Glossary entries (H3 sections) | 23 |
-| Build errors | 0 |
-| Build warnings | 2 (deprecated config, missing blog dir — pre-existing) |
+### Preserved content
+- ✅ Design principles (stage-neutral, low friction, progressive disclosure, somatic pacing, accessibility)
+- ✅ CompetencyMap specification
+- ✅ ReadinessCheck specification
+- ✅ PracticeTimer specification
+- ✅ PartnerPrompt specification
+- ✅ "What not to build" section
+- ✅ MDX integration pattern section
 
 ## Blockers
 

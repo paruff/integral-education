@@ -1,31 +1,39 @@
-# Specification: UX-18 — AQAL Glossary with Inline Tooltips
+# Specification: AGENT-01 — learner-experience/SKILL.md revision (v1 → v2)
 
 ## Problem
-AQAL terminology (quadrants, lines, levels, states, types, ILP, Tier 1/2, stage colour names, etc.) appears throughout all content without inline definition. A learner encountering 'Turiya' or 'gross state' for the first time has no in-context reference. The AQAL Overview page exists but requires navigation away from the current page. There is no cross-linked glossary.
 
-## UX Rationale
-Progressive disclosure of terminology is a foundational content UX principle. In domain-specific learning platforms, jargon that is not defined in context causes learners to leave the page to search externally — an abandonment risk. The solution has two layers: a canonical glossary as a reference document, and optional inline tooltips on first use of key terms within each module.
+The `learner-experience/SKILL.md` skill file is still v1 and inconsistent with the v2 agent file (`.agents/agents/learner-experience.md`) on four critical points:
+
+1. **Assessment scoring**: v1 has linear 0–90 aggregate score ranges; v2 agent specifies per-line modal scoring
+2. **Retrieval reset logic**: v1 resets missed intervals to zero; v2 agent specifies "drop back one interval"
+3. **localStorage schema version mismatch**: v1 is `version: 1` with `assessment.result` string; v2 is `version: 2` with `assessment.lineResults` object and `assessment.modalResult`
+4. **Missing graceful degradation**: v1 has no `safeLocalStorageGet/Set`; v2 requires try/catch for private browsing and in-memory fallback
+
+The agent file is correct and authoritative. The skill file needs to be revised to match.
 
 ## Requirements
 
 ### Functional
-- Create `docs/maps/glossary.md` with definitions for 20+ AQAL and platform-specific terms as H3 anchors with unique IDs
-- Terms include: AQAL, Quadrant, Level/Stage, Line, State, Type, ILP, Tier 1/2, Spiral Dynamics colours (Beige through Turquoise), Shadow, Projection, Mastery Loop, Anki
-- Add glossary to sidebar under Maps
-- Link to glossary from `docs/intro.md` and both QuickStarts
-- Create `src/components/Term/index.js` — a tooltip component with props: term, definition
-- Tooltip: CSS :hover + :focus-within, keyboard-accessible, mobile-accessible
-- Apply Term component to 10+ high-frequency AQAL terms in `docs/intro.md` and first QuickStart
+- Update `.agents/skills/learner-experience/SKILL.md` to v2, consistent with the v2 agent file
+- Replace TransitionAssessment scoring: linear 0–90 aggregation → per-line modal scoring
+- Replace RetrievalScheduler reset logic: "reset to zero" → "drop back one interval"
+- Update localStorage schema: version 1 → version 2, `assessment.result` → `assessment.lineResults` + `assessment.modalResult`
+- Add graceful degradation pattern: `safeLocalStorageGet`/`safeLocalStorageSet` with private browsing fallback
+- Add error boundary pattern for component crashes
+- Add `useDocusaurusContext` hook pattern for fork-safe internal links
 
 ### Non-Functional
-- Tooltip uses CSS-only (no JS-driven visibility), :focus-within for keyboard
-- Tooltip z-index high enough not to clip under sidebar
-- Component follows existing src/components/ patterns
+- Skill file must be stage-neutral (no stage names in UI copy examples)
+- Skill file must preserve all existing component specifications (CompetencyMap, ReadinessCheck, PracticeTimer, PartnerPrompt)
+- "What not to build" section must be preserved
+- MDX integration patterns must be preserved
 
 ## Acceptance Criteria
-1. Glossary page exists with minimum 20 defined terms
-2. Each term has a unique anchor ID usable as a deep link
-3. Term tooltip component works on hover (desktop) and tap (mobile)
-4. Term component is keyboard accessible — visible on focus
-5. At least 10 inline tooltips deployed in intro and first QuickStart
-6. Glossary linked from sidebar, intro, and both QuickStarts
+1. SKILL.md TransitionAssessment section uses per-line modal scoring, not linear 0–90 ranges
+2. SKILL.md RetrievalScheduler uses "drop back one interval" logic, not reset-to-zero
+3. SKILL.md localStorage schema is version 2 with `lineResults` and `modalResult` fields
+4. SKILL.md includes graceful degradation pattern (safeLocalStorageGet/Set, private browsing message)
+5. SKILL.md includes error boundary pattern
+6. SKILL.md includes useDocusaurusContext hook pattern
+7. `.agents/AGENTS.md` updated with SKILL.md revision status: v2 (or AGENTS.md updated to reflect skill revision)
+8. `npm run build` passes (no regressions)

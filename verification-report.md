@@ -1,13 +1,13 @@
-# Verification Report — UX-18 AQAL Glossary and Term Component
+# Verification Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `agent-01-20260719`
+- **Branch:** `feature/agent-01-learner-experience-skill-v2`
 
 ## Verification Methodology
 
-Each claim in `build-report.md`, `test-report.md`, and `review-report.md` has been checked against actual evidence (file system, build output, source code).
+Each claim in `build-report.md`, `test-report.md`, and `review-report.md` has been checked against actual evidence (file system, grep patterns, build output).
 
 ## Claim Verification
 
@@ -15,59 +15,43 @@ Each claim in `build-report.md`, `test-report.md`, and `review-report.md` has be
 
 | Claim | Evidence | Verified |
 |-------|----------|----------|
-| `docs/maps/glossary.md` created | `ls -la docs/maps/glossary.md` exists (8259 bytes) | ✅ TRUE |
-| `src/components/Term/index.js` created | `ls -la src/components/Term/index.js` exists (1091 bytes) | ✅ TRUE |
-| `src/components/Term/styles.module.css` created | `ls -la src/components/Term/styles.module.css` exists (1567 bytes) | ✅ TRUE |
-| `src/components/Term/__tests__/Term.test.jsx` created | `ls -la src/components/Term/__tests__/Term.test.jsx` exists | ✅ TRUE |
-| `sidebars.js` modified | `grep 'maps/glossary' sidebars.js` finds entry at line 214 | ✅ TRUE |
-| `docs/intro.md` modified | `grep -c 'Term term='` returns 12; `grep glossary` finds link | ✅ TRUE |
-| `docs/quickstarts/personal-to-integral.md` modified | `grep -c 'Term term='` returns 8; `grep glossary` finds link | ✅ TRUE |
-| `docs/quickstarts/amber-to-rational.mdx` modified | `grep glossary` finds link in Complementary Resources | ✅ TRUE |
-
-### Build Output (from build-report.md)
-
-| Claim | Evidence | Verified |
-|-------|----------|----------|
-| `npm run build` passes | Build command output: `[SUCCESS]` | ✅ TRUE |
-| Build errors = 0 | Build output shows no errors | ✅ TRUE |
-| Glossary HTML = 35,002 bytes | `ls -la build/docs/maps/glossary/index.html` | ✅ TRUE |
-| 23 glossary entries (H3 sections) | Python regex count of H3 elements in build output = 23 | ✅ TRUE |
+| `.agents/skills/learner-experience/SKILL.md` revised | `ls -la` exists (16535 bytes), git diff shows 223 lines changed | ✅ TRUE |
+| `AGENTS.md` modified | `ls -la` exists (1840 bytes), git diff shows 13 lines changed | ✅ TRUE |
+| `specification.md` created | Exists on disk | ✅ TRUE |
+| `design.md` created | Exists on disk | ✅ TRUE |
+| `tasks.json` created | Exists on disk | ✅ TRUE |
 
 ### Acceptance Criteria (from test-report.md)
 
 | Claim | Evidence | Verified |
 |-------|----------|----------|
-| AC-1: 23 terms (≥20) | Build output H3 count = 23 | ✅ TRUE |
-| AC-1b: Unique anchors on all terms | Source shows `{#id}` on all 23 H3s | ✅ TRUE |
-| AC-2: Glossary in sidebar | `sidebars.js` line 214 has `'maps/glossary'` | ✅ TRUE |
-| AC-3: Hover tooltip | CSS: `.wrapper:hover .tooltip { opacity: 1 }` | ✅ TRUE |
-| AC-3b: Keyboard focus tooltip | CSS: `.wrapper:focus-within .tooltip, .wrapper:focus .tooltip` | ✅ TRUE |
-| AC-3c: z-index 9999 | CSS: `.tooltip { z-index: 9999 }` | ✅ TRUE |
-| AC-4: 20 tooltips deployed | 12 in intro + 8 in quickstart = 20 | ✅ TRUE |
-| AC-5: 3 glossary links | Found in all 3 files | ✅ TRUE |
-| AC-6: Build passes | `npm run build` SUCCESS | ✅ TRUE |
+| AC-1: Per-line modal scoring | 5 matches (lineScores, getModalTransition), 0 linear ranges | ✅ TRUE |
+| AC-2: Drop-back-one-interval | 1 match (Math.max(0, currentIndex - 1)), 0 reset-to-zero | ✅ TRUE |
+| AC-3: Schema version 2 | 2 occurrences of `version: 2`, 6 matches of lineResults/modalResult | ✅ TRUE |
+| AC-4: Graceful degradation | 3 matches (safeLocalStorageGet + safeLocalStorageSet + private browsing) | ✅ TRUE |
+| AC-5: Error boundary | 2 matches (ErrorBoundary + getDerivedStateFromError) | ✅ TRUE |
+| AC-6: useDocusaurusContext | 5 matches (useDocusaurusContext + baseUrl) | ✅ TRUE |
+| AC-7: AGENTS.md v2 | `\| Learner experience \| .agents/skills/learner-experience/SKILL.md \| v2 \|` present | ✅ TRUE |
+| AC-8: Build passes | `[SUCCESS] Generated static files in "build"` | ✅ TRUE |
 
-### Review Claims (from review-report.md)
+### Preserved Content (from review-report.md)
 
 | Claim | Evidence | Verified |
 |-------|----------|----------|
-| No scope creep | All changes map to tasks 1–6 in tasks.json | ✅ TRUE |
-| No new npm packages | `package.json` unchanged (dependencies section) | ✅ TRUE |
-| No breaking changes | Only additive changes (new files + sidebar entry) | ✅ TRUE |
-| Keyboard accessible | `tabIndex={0}`, `:focus-within` CSS, `role="tooltip"`, `aria-label` | ✅ TRUE |
-| Responsive | `@media (max-width: 480px)` breakpoint in CSS | ✅ TRUE |
-| Docusaurus conventions followed | CSS modules, `@site` alias, sidebar array pattern | ✅ TRUE |
+| Design principles intact | 5 of 5 principles found | ✅ TRUE |
+| Component specs intact | 24 references across 6 components | ✅ TRUE |
+| "What not to build" intact | 5 of 5 items found | ✅ TRUE |
+| MDX integration intact | 3 import statements present | ✅ TRUE |
 
 ## Summary
 
 | Category | Claims | Verified True | Verified False |
 |----------|--------|---------------|----------------|
-| Files Changed | 8 | 8 | 0 |
-| Build Output | 4 | 4 | 0 |
-| Acceptance Criteria | 9 | 9 | 0 |
-| Review Claims | 6 | 6 | 0 |
-| **Total** | **27** | **27** | **0** |
+| Files Changed | 5 | 5 | 0 |
+| Acceptance Criteria | 8 | 8 | 0 |
+| Preserved Content | 4 | 4 | 0 |
+| **Total** | **17** | **17** | **0** |
 
 ## Verification Result
 
-**PASS** ✅ — All 27 claims verified as true against actual evidence. Proceed to Phase 4.6 (Cross-Validation).
+**PASS** ✅ — All 17 claims verified as true against actual evidence. Proceed to Phase 4.6 (Cross-Validation).

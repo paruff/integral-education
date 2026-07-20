@@ -1,52 +1,48 @@
-# Design: UX-18 — AQAL Glossary with Inline Tooltips
+# Design: AGENT-01 — learner-experience/SKILL.md revision (v1 → v2)
 
 ## Impacted Components
 
-### 1. docs/maps/glossary.md (NEW)
-Canonical glossary with 20+ AQAL/platform terms. Each term is an H3 heading with a unique anchor ID (kebab-case slug). One-to-three sentence plain-language definition.
+### 1. `.agents/skills/learner-experience/SKILL.md` (REVISE)
 
-### 2. src/components/Term/index.js (NEW)
-React component that renders a term with an inline tooltip showing its definition. Uses CSS :hover and :focus-within for visibility (no JS-driven show/hide).
+The primary change target. Four sections need revision to match the v2 agent at `.agents/agents/learner-experience.md`.
 
-**Props:**
-- `term` (string) — the term text to display
-- `definition` (string) — the tooltip content (supports limited markdown)
+#### a) TransitionAssessment scoring section
+- **Replace**: linear score thresholds (`{ min: 0, max: 30 }`, `{ min: 31, max: 60 }`, `{ min: 61, max: 90 }`)
+- **With**: per-line modal scoring structure (`lineScores` object with `{ lineName: { transition: 'amber_orange' } }`), modal determination logic, tie-breaking rule (weight cognitive + interpersonal)
+- **Keep**: question design template, plain-language result display text
 
-**Behavior:**
-- Renders `<span className={styles.wrapper}><span className={styles.term}>{term}</span><span className={styles.tooltip}>{definition}</span></span>`
-- Tooltip visible on hover (desktop), focus (keyboard Tab), and tap (mobile)
-- Tooltip positioned above the term text, centered
+#### b) RetrievalScheduler reset logic
+- **Replace**: `reset ? 0 : nextIndex` (the ternary that resets to intervalIndex 0)
+- **With**: `missed ? Math.max(0, currentIndex - 1) : Math.min(INTERVALS_DAYS.length - 1, currentIndex + 1)` (drop back one interval)
+- **Keep**: interval constants, `DueReviews` surface component, `getNextInterval` function
 
-### 3. src/components/Term/styles.module.css (NEW)
-CSS module for tooltip styling:
-- `.wrapper` — `position: relative; display: inline;`
-- `.term` — underlined/branded styling to indicate interactivity
-- `.tooltip` — `position: absolute;` hidden by default, shown on `.wrapper:hover .tooltip` and `.wrapper:focus-within .tooltip`
+#### c) localStorage schema
+- **Replace**: `version: 1` → `version: 2`
+- **Replace**: `assessment.result: 'orange_green'` → `assessment.lineResults: { cognitive: '...', emotional: '...', ... }` + `assessment.modalResult: '...'`
+- **Add**: `complete: false` field to `retrievalSchedule` entries
+- **Keep**: all other fields (`completedModules`, `inProgressModules`, etc.)
 
-### 4. sidebars.js
-Add `'maps/glossary'` to the Maps category items list, after the existing entries.
+#### d) Graceful degradation (NEW section)
+- Add `safeLocalStorageGet(key)` and `safeLocalStorageSet(key, value)` patterns
+- Add private browsing message: "Progress won't be saved in private browsing"
+- Add in-memory fallback behavior description
 
-### 5. docs/intro.md
-- Add Term component imports and use on 5+ high-frequency terms
-- Add link to glossary page
+#### e) Error boundary pattern (NEW section)
+- Add error boundary React pattern for component crashes
+- Describe recovery behavior and user-facing message
 
-### 6. docs/quickstarts/personal-to-integral.md
-- Add Term component imports and use on 5+ high-frequency terms
-- Add link to glossary page
+#### f) useDocusaurusContext pattern (NEW section)
+- Add hook import and usage pattern for fork-safe internal links
+- Describe `siteConfig.baseUrl` usage for link generation
 
-### 7. docs/quickstarts/amber-to-rational.mdx
-- Add link to glossary page (no Term component needed here since .mdx supports imports but scope is limited)
+### 2. `AGENTS.md` (UPDATE)
 
-## Glossary Terms (20+)
-AQAL, Quadrant, Level/Stage, Line, State, Type, ILP, Tier 1, Tier 2, Mastery Loop, Shadow, Projection, Spiral Dynamics, Beige, Purple, Red, Blue/Amber, Orange, Green, Teal/Turquoise, Anki, Pre/Trans Fallacy
-
-## Data Flow
-- Glossary: static markdown page rendered at build time
-- Term component: client-side React, no data fetching
-- No API calls, no state management, no external dependencies
+Add or update a skill status table entry to reflect `learner-experience/SKILL.md` is now at v2. Keep AGENTS.md lean per the token cost header.
 
 ## Constraints
-- No additional npm dependencies
-- Tooltip must be pure CSS (no JS visibility toggling)
-- Tooltip must not clip under sidebar (high z-index)
-- Component must work in both .md and .mdx files
+- No npm dependencies changed
+- Skill file must remain stage-neutral
+- All existing component specifications preserved intact (CompetencyMap, ReadinessCheck, PracticeTimer, PartnerPrompt)
+- "What not to build" section preserved
+- MDX integration pattern section preserved
+- Design principles section preserved

@@ -1,32 +1,32 @@
-# Review Report — UX-18 AQAL Glossary and Term Component
+# Review Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `agent-01-20260719`
+- **Branch:** `feature/agent-01-learner-experience-skill-v2`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| Glossary page with 20+ terms | ✅ | 23 entries with plain-language definitions |
-| Each term has unique anchor ID | ✅ | Explicit `{#id}` anchors on all H3s |
-| Glossary in sidebar under Maps | ✅ | After `maps/aqal-overview` |
-| Reusable Term component | ✅ | CSS-only tooltip, keyboard accessible, responsive |
-| Term deployed in intro.md | ✅ | 12 usages covering AQAL element names and Mastery Loop |
-| Term deployed in personal-to-integral.md | ✅ | 8 usages covering States, Lines, Quadrants, Shadow, Projection |
-| Glossary links from intro + 2 QuickStarts | ✅ | All three pages updated |
+| Per-line modal scoring replaces linear ranges | ✅ | `lineScores` object + `getModalTransition()` with tie-breaking rule |
+| Drop-back-one-interval replaces reset-to-zero | ✅ | `Math.max(0, currentIndex - 1)` with completion detection |
+| localStorage version 2 with lineResults/modalResult | ✅ | Schema fully updated; v1 fields removed |
+| Graceful degradation added | ✅ | safeLocalStorageGet/Set, private browsing message, in-memory fallback |
+| Error boundary pattern added | ✅ | `LearnerComponentErrorBoundary` class with usage example |
+| useDocusaurusContext baseUrl pattern added | ✅ | Fork-safe link construction with baseUrl |
+| AGENTS.md updated | ✅ | Skill status table with version column |
 
-**Verdict: All requirements satisfied.**
+**Verdict: All requirements satisfied exactly as specified in issue #333.**
 
 ## Scope Discipline
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only directly specified files changed. |
-| Unnecessary changes | **None.** Every change is traceable to a task in `tasks.json`. |
-| Files modified beyond scope | **None.** |
-| Files created | 4 (`glossary.md`, `Term/index.js`, `styles.module.css`, test file) — all in scope |
+| Scope creep | **None.** Only sections changed that were explicitly listed in the issue. |
+| Unnecessary changes | **None.** Every edit is traceable to an acceptance criterion in tasks.json. |
+| Files modified beyond scope | **None.** Only `.agents/skills/learner-experience/SKILL.md` and `AGENTS.md`. |
+| Preserved content | ✅ All existing component specs, design principles, "what not to build", and MDX integration patterns intact. |
 
 **Verdict: Tight scope control.**
 
@@ -34,25 +34,21 @@
 
 | Aspect | Assessment |
 |--------|------------|
-| Project patterns | ✅ Follows existing component structure in `src/components/` |
-| Docusaurus conventions | ✅ Uses `@site` import alias, CSS modules, sidebar array pattern |
-| Plain CSS modules | ✅ No CSS-in-JS dependency added |
-| No new npm packages | ✅ Zero dependencies added |
-| Accessible | ✅ `role="note"`, `aria-label`, `role="tooltip"`, keyboard focusable (`tabIndex={0}`) |
-| Responsive | ✅ Mobile max-width constraint at 480px breakpoint |
+| Consistency with agent file | ✅ Full alignment with `.agents/agents/learner-experience.md` (v2) |
+| Code examples | ✅ All JS/JSX examples syntactically valid |
+| Structural preservation | ✅ Same section order and heading hierarchy as v1 |
+| Version markup | ✅ Changes clearly marked with "(v2)" in section headings |
 
-**Verdict: Maintainable, zero new dependencies.**
+**Verdict: Maintainable, authoritative, consistent with agent file.**
 
 ## Risk Assessment
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Breaking changes | None | Only additive changes |
-| Security | None | No data fetching, no user input, no dangerous APIs |
-| Performance | None | CSS-only tooltip — zero JS runtime cost after render |
-| SEO | None | Glossary is a standard page, Term component only affects inline spans |
-| Sidebar regression | Low | Entry appended to existing array — no structure change |
-| Build regression | None | `npm run build` passes clean with zero errors |
+| Regressions to doc site | None | Skill file and AGENTS.md not consumed by Docusaurus build |
+| Agent loading errors | None | File path unchanged, structure preserved |
+| Confusion from v1-v2 diff | Low | Changes clearly marked; AGENTS.md documents current version |
+| Breaking existing builds | None | `npm run build` verified clean |
 
 **Verdict: No material risk identified.**
 

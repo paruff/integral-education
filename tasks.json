@@ -2,92 +2,95 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Create glossary page",
-      "description": "Create docs/maps/glossary.md with definitions for 20+ AQAL and platform-specific terms as H3 anchors with unique IDs",
+      "title": "Update TransitionAssessment scoring to per-line modal",
+      "description": "Replace the linear 0–90 aggregate scoring section with per-line modal scoring structure matching the v2 agent file. Include lineScores object, modal determination logic, and tie-breaking rule.",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-1",
-          "description": "Glossary page exists with minimum 20 defined terms",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-1b",
-          "description": "Each term has a unique anchor ID usable as a deep link",
+          "description": "SKILL.md TransitionAssessment section uses per-line modal scoring, not linear 0–90 ranges",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "2",
-      "title": "Add glossary to sidebar",
-      "description": "Add glossary.md to the Maps category in sidebars.js",
-      "dependencies": ["1"],
+      "title": "Update RetrievalScheduler reset logic to drop back one interval",
+      "description": "Replace reset-to-zero interval logic with drop-back-one-interval logic as specified in the v2 agent file.",
+      "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-2",
-          "description": "Glossary appears in sidebar under Maps category",
+          "description": "SKILL.md RetrievalScheduler uses 'drop back one interval' logic, not reset-to-zero",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "3",
-      "title": "Create Term tooltip component",
-      "description": "Create src/components/Term/index.js and styles.module.css with CSS-only tooltip (hover/focus-within)",
+      "title": "Update localStorage schema to version 2",
+      "description": "Update localStorage schema: version 1 → 2, add lineResults and modalResult fields, add complete field to retrievalSchedule entries.",
       "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-3",
-          "description": "Term component renders term text with tooltip on hover (desktop)",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-3b",
-          "description": "Term component is keyboard accessible — tooltip visible on focus",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-3c",
-          "description": "Tooltip z-index prevents sidebar clipping",
+          "description": "SKILL.md localStorage schema is version 2 with lineResults and modalResult fields",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "4",
-      "title": "Deploy Term component in intro.md and first QuickStart",
-      "description": "Apply Term component to 10+ high-frequency AQAL terms across docs/intro.md and docs/quickstarts/personal-to-integral.md",
-      "dependencies": ["3"],
+      "title": "Add graceful degradation pattern",
+      "description": "Add safeLocalStorageGet/Set patterns with try/catch blocks, private browsing fallback message, and in-memory fallback behavior description.",
+      "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-4",
-          "description": "At least 10 inline tooltips deployed across intro and first QuickStart",
+          "description": "SKILL.md includes graceful degradation pattern (safeLocalStorageGet/Set, private browsing message)",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "5",
-      "title": "Add glossary links from intro and QuickStarts",
-      "description": "Add 'See glossary' links from docs/intro.md, personal-to-integral.md, and amber-to-rational.mdx",
-      "dependencies": ["1"],
+      "title": "Add error boundary and useDocusaurusContext patterns",
+      "description": "Add error boundary React pattern for component crashes and useDocusaurusContext hook pattern for fork-safe internal links.",
+      "dependencies": [],
       "acceptance_criteria": [
         {
           "id": "AC-5",
-          "description": "Glossary linked from intro, personal-to-integral quickstart, and amber-to-rational quickstart",
+          "description": "SKILL.md includes error boundary pattern",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-6",
+          "description": "SKILL.md includes useDocusaurusContext hook pattern",
           "test_type": "unit"
         }
       ]
     },
     {
       "id": "6",
-      "title": "Validate build",
-      "description": "Run npm run build and verify no errors",
-      "dependencies": ["1", "2", "3", "4", "5"],
+      "title": "Update AGENTS.md skill status",
+      "description": "Update AGENTS.md to reflect the learner-experience SKILL.md revision status as v2.",
+      "dependencies": [],
       "acceptance_criteria": [
         {
-          "id": "AC-6",
+          "id": "AC-7",
+          "description": "AGENTS.md updated to reflect SKILL.md revision status: v2",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "title": "Validate build",
+      "description": "Run npm run build and verify no errors.",
+      "dependencies": ["1", "2", "3", "4", "5", "6"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-8",
           "description": "npm run build passes with no errors",
           "test_type": "unit"
         }

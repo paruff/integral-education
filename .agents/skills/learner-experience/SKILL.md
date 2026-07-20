@@ -73,13 +73,43 @@ const questions = [
 ];
 ```
 
-**Scoring and routing:**
+**Scoring: per-line modal (v2)**
+
+A single linear 0–90 aggregate score collapses meaningful developmental differentiation. A learner can score cognitively in an Orange transition while scoring emotionally in an Amber-Orange transition. Score each line independently. The QuickStart recommendation is determined by the *modal* transition — the transition appearing most frequently across the 5 lines.
+
 ```js
-// Score thresholds (simplified — actual scoring weights each question by transition signal strength)
-const routes = {
-  amber_orange: { min: 0, max: 30, quickstart: '/docs/quickstarts/amber-to-rational' },
-  orange_green: { min: 31, max: 60, quickstart: '/docs/quickstarts/rational-to-pluralistic' },
-  green_teal:   { min: 61, max: 90, quickstart: '/docs/quickstarts/pluralistic-to-integral' },
+// Per-line scoring structure
+const lineScores = {
+  cognitive:     { transition: 'amber_orange' },  // example result
+  emotional:     { transition: 'amber_orange' },
+  interpersonal: { transition: 'orange_green' },
+  moral:         { transition: 'amber_orange' },
+  somatic:       { transition: 'amber_orange' },
+};
+
+// Modal transition determination
+function getModalTransition(lineScores) {
+  const counts = {};
+  Object.values(lineScores).forEach(ls => {
+    counts[ls.transition] = (counts[ls.transition] || 0) + 1;
+  });
+  // Find max count; on tie, weight cognitive + interpersonal as tie-breaker
+  const maxCount = Math.max(...Object.values(counts));
+  const modal = Object.keys(counts).filter(k => counts[k] === maxCount);
+  if (modal.length === 1) return modal[0];
+  // Tie: pick the one supported by cognitive or interpersonal lines
+  const cognitiveResult = lineScores.cognitive.transition;
+  const interpersonalResult = lineScores.interpersonal.transition;
+  return [cognitiveResult, interpersonalResult].find(r => counts[r] === maxCount) || modal[0];
+}
+```
+
+```js
+// Routes (unchanged)
+const QUICKSTART_ROUTES = {
+  amber_orange: '/docs/quickstarts/amber-to-rational',
+  orange_green: '/docs/quickstarts/rational-to-pluralistic',
+  green_teal:   '/docs/quickstarts/pluralistic-to-integral',
 };
 ```
 
@@ -106,15 +136,23 @@ const routes = {
 
 **localStorage schema:**
 ```js
-// Key: 'ie_progress'
+// Key: 'ie_progress' — v2 schema (see full schema below)
 {
-  completedModules: ['rational-orange-orientation', 'late-orange-disillusionment'],
-  retrievalDue: {
-    'rational-orange-orientation': '2026-06-08T00:00:00Z',
-    'late-orange-disillusionment': '2026-06-12T00:00:00Z',
+  version: 2,
+  completedModules: ['module-slug-1', 'module-slug-2'],
+  retrievalSchedule: {
+    'module-slug-1': {
+      intervalIndex: 2,
+      lastReviewDate: '2026-06-08T00:00:00Z',
+      nextDueDate: '2026-06-15T00:00:00Z',
+      complete: false,
+    }
   },
-  lastAssessment: '2026-05-15T00:00:00Z',
-  assessmentResult: 'orange_green',
+  assessment: {
+    lastTaken: '2026-05-15T00:00:00Z',
+    lineResults: { /* per-line transition results */ },
+    modalResult: 'orange_green',
+  },
 }
 ```
 
@@ -126,30 +164,42 @@ const routes = {
 
 **Location:** `src/utils/retrieval.js`
 
-**Intervals:**
+**Intervals — drop back one interval on miss (v2):**
+
+The correct forgetting-curve response to a missed review interval is to drop back ONE interval, not reset to zero. Resetting to zero on a 14-day miss destroys 13 days of memory consolidation unnecessarily.
+
 ```js
 const INTERVALS_DAYS = [1, 3, 7, 14]; // 24h, 72h, 7d, 14d
 
 function getNextInterval(moduleId) {
-  const progress = getModuleProgress(moduleId);
-  const currentInterval = progress.intervalIndex || 0;
+  const progress = getModuleProgress(moduleId) || { intervalIndex: 0 };
+  const currentInterval = progress.intervalIndex;
   if (currentInterval >= INTERVALS_DAYS.length) return null; // complete
   return INTERVALS_DAYS[currentInterval];
 }
 
 function markIntervalComplete(moduleId) {
-  const progress = getModuleProgress(moduleId);
-  const nextIndex = (progress.intervalIndex || 0) + 1;
-  
-  // If learner missed interval by >50% of the interval length, reset to 0
+  const progress = getModuleProgress(moduleId) || { intervalIndex: 0 };
+  const currentIndex = progress.intervalIndex;
+  const expectedDays = INTERVALS_DAYS[currentIndex];
   const daysSinceLastReview = daysSince(progress.lastReviewDate);
-  const expectedDays = INTERVALS_DAYS[progress.intervalIndex || 0];
-  const reset = daysSinceLastReview > expectedDays * 1.5;
-  
+
+  // Miss threshold: learner is more than 1.5× the expected interval late
+  const missed = daysSinceLastReview > expectedDays * 1.5;
+
+  // Drop back one interval on miss; advance one interval on time
+  const nextIndex = missed
+    ? Math.max(0, currentIndex - 1)
+    : Math.min(INTERVALS_DAYS.length - 1, currentIndex + 1);
+
+  // If already at the last interval and on time: mark complete (no more reviews scheduled)
+  const isComplete = !missed && currentIndex === INTERVALS_DAYS.length - 1;
+
   saveModuleProgress(moduleId, {
-    intervalIndex: reset ? 0 : nextIndex,
+    intervalIndex: nextIndex,
     lastReviewDate: new Date().toISOString(),
-    nextDueDate: addDays(new Date(), INTERVALS_DAYS[reset ? 0 : nextIndex] || 0),
+    nextDueDate: isComplete ? null : addDays(new Date(), INTERVALS_DAYS[nextIndex]),
+    complete: isComplete,
   });
 }
 ```
@@ -264,12 +314,12 @@ function DueReviews() {
 
 ---
 
-## localStorage schema (full platform)
+## localStorage schema (full platform — v2)
 
 ```js
 // Key: 'ie_progress' — all learner state
 {
-  version: 1,
+  version: 2,                          // increment on schema changes
   completedModules: ['module-slug-1', 'module-slug-2'],
   inProgressModules: ['module-slug-3'],
   retrievalSchedule: {
@@ -277,12 +327,20 @@ function DueReviews() {
       intervalIndex: 2,
       lastReviewDate: '2026-06-01T00:00:00Z',
       nextDueDate: '2026-06-08T00:00:00Z',
+      complete: false,
     }
   },
   assessment: {
     lastTaken: '2026-05-15T00:00:00Z',
-    result: 'orange_green',
-    routedTo: '/docs/quickstarts/rational-to-pluralistic',
+    lineResults: {
+      cognitive: 'amber_orange',
+      emotional: 'amber_orange',
+      interpersonal: 'orange_green',
+      moral: 'amber_orange',
+      somatic: 'amber_orange',
+    },
+    modalResult: 'amber_orange',
+    routedTo: '/docs/quickstarts/amber-to-rational',
   },
 }
 ```
@@ -290,9 +348,116 @@ function DueReviews() {
 **Reset function** — always provide a way for learners to clear their data:
 ```js
 function clearAllProgress() {
+  safeLocalStorageSet('ie_progress', null);
   localStorage.removeItem('ie_progress');
 }
 ```
+
+---
+
+## Graceful degradation (private browsing)
+
+All components that use localStorage must handle private/incognito browsing gracefully. Browsers may throw on `localStorage.setItem` in private mode. Components must detect this and degrade to in-memory-only sessions.
+
+### Safe localStorage access pattern
+```js
+function safeLocalStorageGet(key) {
+  try {
+    return JSON.parse(localStorage.getItem(key));
+  } catch {
+    return null; // private/incognito browsing — fail silently, operate in memory
+  }
+}
+
+function safeLocalStorageSet(key, value) {
+  try {
+    localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    return false; // storage full or unavailable — fail silently
+  }
+}
+```
+
+### Private browsing detection and messaging
+When storage is unavailable, display a non-intrusive message:
+```
+"Progress won't be saved in private browsing. Your session will work normally but won't persist between visits."
+```
+
+The component must **not** block the user from proceeding. All interactive features remain usable; only persistence is lost. Store all state in a module-scoped `Map` or object as an in-memory fallback during the session.
+
+---
+
+## Error boundary pattern
+
+Wrap complex interactive components in error boundaries to prevent a single component crash from breaking the entire page. The error boundary should:
+- Log the error to console with a name tag identifying the component
+- Display a minimal inline message: "Something went wrong with [feature]. The rest of the page is unaffected."
+- Not redirect or unload the page — the user may have entered data elsewhere
+
+```jsx
+import React from 'react';
+
+class LearnerComponentErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  componentDidCatch(error, info) {
+    console.error(`[Learner Error] ${this.props.name}:`, error, info);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div role="alert" style={{ padding: '1rem', color: 'var(--ifm-font-color-base)' }}>
+          Something went wrong with {this.props.name || 'this feature'}.
+          The rest of the page is unaffected.
+        </div>
+      );
+    }
+    return this.props.children;
+  }
+}
+
+// Usage:
+// <ErrorBoundary name="CompetencyMap">
+//   <CompetencyMap />
+// </ErrorBoundary>
+```
+
+---
+
+## Fork-safe internal links
+
+When constructing internal links to other pages in the platform, never hardcode `/docs/`. Use the Docusaurus `useDocusaurusContext` hook to get the base URL, ensuring links work correctly in forks with custom `baseUrl` configurations.
+
+```jsx
+import { useDocusaurusContext } from '@docusaurus/useDocusaurusContext';
+
+function QuickStartLink({ route }) {
+  const { siteConfig } = useDocusaurusContext();
+  const base = siteConfig.baseUrl; // e.g., '/integral-education/' or '/'
+
+  return (
+    <a href={`${base}${route}`}>
+      Explore this path →
+    </a>
+  );
+}
+```
+
+**Rule:** Every manually constructed `<a href>` pointing to another page on the platform must use `baseUrl`. Applies to:
+- TransitionAssessment result routing
+- ReadinessCheck outcome links
+- CompetencyMap "next recommended" links
+- Any component that navigates the learner to another page
 
 ---
 

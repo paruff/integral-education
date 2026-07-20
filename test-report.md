@@ -1,43 +1,42 @@
-# Test Report — UX-18 AQAL Glossary and Term Component
+# Test Report — AGENT-01: learner-experience/SKILL.md revision (v1 → v2)
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `agent-01-20260719`
+- **Branch:** `feature/agent-01-learner-experience-skill-v2`
 
 ## Acceptance Criteria Verification
 
 | ID | Description | Expected | Actual | Status |
 |----|-------------|----------|--------|--------|
-| AC-1 | Glossary page exists with minimum 20 defined terms | ≥20 terms | 23 terms | ✅ PASS |
-| AC-1b | Each term has a unique anchor ID usable as deep link | All terms have `{#id}` | All 23 have explicit `{#id}` anchors | ✅ PASS |
-| AC-2 | Glossary appears in sidebar under Maps category | Sidebar link at `maps/glossary` | Present in `sidebars.js` line 214 | ✅ PASS |
-| AC-3 | Term component renders term with tooltip on hover (desktop) | CSS `:hover` triggers tooltip | `.wrapper:hover .tooltip { opacity: 1 }` | ✅ PASS |
-| AC-3b | Term component keyboard accessible — tooltip on focus | CSS `:focus` / `:focus-within` triggers tooltip | `.wrapper:focus-within .tooltip, .wrapper:focus .tooltip` | ✅ PASS |
-| AC-3c | Tooltip z-index prevents sidebar clipping | `z-index ≥ 1000` | `z-index: 9999` | ✅ PASS |
-| AC-4 | At least 10 inline tooltips deployed across intro and first QuickStart | ≥10 total | 12 (intro) + 8 (quickstart) = 20 | ✅ PASS |
-| AC-5 | Glossary linked from intro, personal-to-integral, amber-to-rational | 3 pages link to glossary | All three updated | ✅ PASS |
-| AC-6 | `npm run build` passes with no errors | Build success | `[SUCCESS]` — 0 errors | ✅ PASS |
+| AC-1 | SKILL.md uses per-line modal scoring, not linear 0–90 ranges | `lineScores` object + modal logic; zero linear `min/max` ranges | `lineScores` + `getModalTransition` present; zero linear ranges found | ✅ PASS |
+| AC-2 | SKILL.md uses "drop back one interval" logic, not reset-to-zero | `Math.max(0, currentIndex - 1)` logic; zero reset-to-zero | Drop-back logic present; zero reset-to-zero patterns found | ✅ PASS |
+| AC-3 | SKILL.md localStorage schema is version 2 with lineResults and modalResult | `version: 2`, `lineResults`, `modalResult` fields | `version: 2`; `assessment.lineResults` + `assessment.modalResult` present | ✅ PASS |
+| AC-4 | SKILL.md includes graceful degradation pattern | `safeLocalStorageGet`, `safeLocalStorageSet`, private browsing message | All three present in "Graceful degradation" section | ✅ PASS |
+| AC-5 | SKILL.md includes error boundary pattern | `ErrorBoundary` class or equivalent | `LearnerComponentErrorBoundary` class with usage pattern | ✅ PASS |
+| AC-6 | SKILL.md includes useDocusaurusContext hook pattern | `useDocusaurusContext` + `baseUrl` | Hook + base URL usage for fork-safe links | ✅ PASS |
+| AC-7 | AGENTS.md updated to reflect SKILL.md revision status: v2 | AGENTS.md entry with v2 | `| Learner experience | .agents/skills/learner-experience/SKILL.md | v2 |` | ✅ PASS |
+| AC-8 | `npm run build` passes with no errors | Build success | `[SUCCESS] Generated static files` | ✅ PASS |
 
-**All 9 acceptance criteria: ✅ PASS**
+**All 8 acceptance criteria: ✅ PASS**
 
 ## Build Verification
 
 - `npm run build` — **SUCCESS** (no errors)
 - Pre-existing warnings only (deprecated config, missing blog dir)
-- Glossary page generates correct HTML with all 23 entries
-- Term component renders correctly in both `.md` (intro) and `.mdx` (quickstart) contexts
+- No new files in the build output (skill file and AGENTS.md are not build artifacts)
 
 ## Coverage
 
-No formal coverage thresholds for this project. Component unit tests exist at `src/components/Term/__tests__/Term.test.jsx` but require `jest` and `@testing-library/react` to be installed (not currently in `devDependencies`) — they serve as a behavioral specification for the Term component.
+Not applicable — this is a documentation/configuration change, not executable code.
 
 ## Regression Risk
 
-- No existing functionality removed
-- Sidebar entry added (not modified)
-- Only additive changes to `.md` / `.mdx` files
-- Term component is self-contained, no changes to CSS variables or layout
+- **None.** Only agent/configuration files modified:
+  - `.agents/skills/learner-experience/SKILL.md` — skill specification only
+  - `AGENTS.md` — project metadata only
+- No source code, components, styles, or Docusaurus configuration changed
+- Build output identical to trunk (only docs site built, skill files are source only)
 
 ## Overall Test Result
 

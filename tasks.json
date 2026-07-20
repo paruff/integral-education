@@ -2,38 +2,24 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Fix primary target: shadow-integration-101.md",
-      "description": "Remove the prescribed breath-count ratio (4-count inhale, 6-count exhale) from line 110 of docs/modules/shadow-integration-101.md and replace with approved grounding language.",
+      "title": "Create ShadowGate component",
+      "description": "Create src/components/ShadowGate/index.js and styles.module.css. Component renders consent check, contraindications list, distress radio (1-10), Mindfulness Basics confirmation. Blocks entry if distress ≥ 7 or contraindication checked. Uses sessionStorage for per-session acknowledgment.",
       "dependencies": [],
       "acceptance_criteria": [
-        {
-          "id": "AC-1",
-          "description": "shadow-integration-101.md no longer contains prescribed breath-count ratio",
-          "test_type": "unit"
-        }
+        {"id": "AC-1", "description": "ShadowGate component exists at src/components/ShadowGate/", "test_type": "unit"},
+        {"id": "AC-2", "description": "Gate displays consent, contraindications, distress 1-10, Mindfulness Basics check", "test_type": "unit"},
+        {"id": "AC-3", "description": "Distress ≥ 7 blocks entry with grounding + crisis banner", "test_type": "unit"},
+        {"id": "AC-4", "description": "Contraindication blocks entry with 'not suitable' message + links", "test_type": "unit"},
+        {"id": "AC-5", "description": "sessionStorage prevents re-fire within session", "test_type": "unit"}
       ]
     },
     {
       "id": "2",
-      "title": "Audit and fix all module files with breath-count ratios",
-      "description": "Run grep audit across all docs/modules/ files, fix every occurrence of prescribed breath-count ratios with context-appropriate approved replacement language.",
-      "dependencies": [],
+      "title": "Wrap all 12 shadow modules in ShadowGate",
+      "description": "Wrap module body content in <ShadowGate>...</ShadowGate> in all 12 modules with 'shadow' in filename. Gate renders below CrisisResourceBanner.",
+      "dependencies": ["1"],
       "acceptance_criteria": [
-        {
-          "id": "AC-2",
-          "description": "All module files in docs/modules/ no longer contain prescribed breath-count ratios",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-3",
-          "description": "Replacement language uses approved phrasing from Safety Classification skill",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-4",
-          "description": "Surrounding grounding protocol structure preserved",
-          "test_type": "unit"
-        }
+        {"id": "AC-6", "description": "Gate injected into all 12 shadow modules", "test_type": "unit"}
       ]
     },
     {
@@ -42,11 +28,7 @@
       "description": "Run npm run build and verify no errors.",
       "dependencies": ["1", "2"],
       "acceptance_criteria": [
-        {
-          "id": "AC-5",
-          "description": "npm run build passes with no errors",
-          "test_type": "unit"
-        }
+        {"id": "AC-7", "description": "npm run build passes", "test_type": "unit"}
       ]
     }
   ]

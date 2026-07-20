@@ -1,0 +1,163 @@
+/* ShadowGate — Tier 1 entry gate for shadow modules.
+   Uses Infima theme variables. Match the CrisisResourceBanner visual family. */
+
+.gate {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem 1.25rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-left: 4px solid var(--ifm-color-warning-dark);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--ifm-font-color-base);
+}
+
+.heading {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0 0 0.85rem;
+  color: var(--ifm-heading-color);
+}
+
+.section {
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 1.15rem;
+}
+
+.consent {
+  font-style: italic;
+  margin: 0;
+}
+
+.label {
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  cursor: pointer;
+}
+
+.checkbox input[type='checkbox'] {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+/* Distress radio row */
+.distressRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+}
+
+.radioLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  min-width: 2rem;
+}
+
+.radioLabel input[type='radio'] {
+  margin: 0;
+}
+
+.radioLabel span {
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.distressHigh {
+  color: var(--ifm-color-danger-dark);
+}
+
+/* Buttons */
+.primaryButton {
+  display: inline-block;
+  padding: 0.55rem 1.2rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-primary-contrasting-background);
+  border: none;
+  border-radius: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.primaryButton:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.secondaryButton {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  background: transparent;
+  color: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 0.4rem;
+  font-size: 0.88rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.secondaryButton:hover {
+  background: var(--ifm-color-primary-lightest);
+}
+
+.secondaryLink {
+  display: inline-block;
+  padding: 0.45rem 0;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.88rem;
+}
+
+.actions {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Grounding box (distress block) */
+.groundingBox {
+  background: var(--ifm-color-warning-contrasting-background);
+  border: 1px solid var(--ifm-color-warning-dark);
+  border-radius: 0.4rem;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 0;
+}
+
+.groundingBox ul {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+  .gate {
+    padding: 1rem 0.9rem 0.75rem;
+    font-size: 0.87rem;
+  }
+
+  .distressRow {
+    gap: 0;
+  }
+
+  .radioLabel {
+    min-width: 1.7rem;
+  }
+}

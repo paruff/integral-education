@@ -1,4 +1,6 @@
 # Specification: SAFE-02 — Enforce Tier 1 safety gate at module entry for all shadow modules
+> **Issue #315** | **PR #339** | Archived from feature-flow session
+
 
 ## Problem
 

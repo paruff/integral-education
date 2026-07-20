@@ -1,21 +1,19 @@
-# Review Report — UX-18 AQAL Glossary and Term Component
+# Review Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `safe-03-20260720`
+- **Branch:** `fix/safe-03-breath-ratios`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| Glossary page with 20+ terms | ✅ | 23 entries with plain-language definitions |
-| Each term has unique anchor ID | ✅ | Explicit `{#id}` anchors on all H3s |
-| Glossary in sidebar under Maps | ✅ | After `maps/aqal-overview` |
-| Reusable Term component | ✅ | CSS-only tooltip, keyboard accessible, responsive |
-| Term deployed in intro.md | ✅ | 12 usages covering AQAL element names and Mastery Loop |
-| Term deployed in personal-to-integral.md | ✅ | 8 usages covering States, Lines, Quadrants, Shadow, Projection |
-| Glossary links from intro + 2 QuickStarts | ✅ | All three pages updated |
+| Primary target: shadow-integration-101.md fixed | ✅ | Line 110: `(4-count inhale, 6-count exhale)` → `take several slow, natural breaths` |
+| Full module audit complete | ✅ | All 20 affected files cleaned, zero remaining breath-count ratios |
+| Replacement language matches safety classification skill | ✅ | All variants derive from approved "slow, natural breaths at whatever pace feels settling" |
+| Grounding protocol structure preserved | ✅ | Sensory naming, feet-on-floor, escalation, stop rules all intact |
+| Build passes | ✅ | `npm run build` SUCCESS |
 
 **Verdict: All requirements satisfied.**
 
@@ -23,36 +21,32 @@
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only directly specified files changed. |
-| Unnecessary changes | **None.** Every change is traceable to a task in `tasks.json`. |
-| Files modified beyond scope | **None.** |
-| Files created | 4 (`glossary.md`, `Term/index.js`, `styles.module.css`, test file) — all in scope |
+| Scope creep | **None.** Only breath-count ratio replacements in module files. |
+| Files beyond scope changed | **None.** Only `docs/modules/` files. |
+| Non-module files left unchanged | ✅ `docs/safety/`, `docs/pilots/`, `docs/maps/` — flagged as follow-up finding |
+| Unnecessary phrasing changes | **None.** Only the breath-count phrases replaced; surrounding text preserved. |
 
 **Verdict: Tight scope control.**
 
-## Maintainability
+## Safety Assessment
 
 | Aspect | Assessment |
 |--------|------------|
-| Project patterns | ✅ Follows existing component structure in `src/components/` |
-| Docusaurus conventions | ✅ Uses `@site` import alias, CSS modules, sidebar array pattern |
-| Plain CSS modules | ✅ No CSS-in-JS dependency added |
-| No new npm packages | ✅ Zero dependencies added |
-| Accessible | ✅ `role="note"`, `aria-label`, `role="tooltip"`, keyboard focusable (`tabIndex={0}`) |
-| Responsive | ✅ Mobile max-width constraint at 480px breakpoint |
+| New safety issues introduced | **None.** All replacements use safer language (no prescribed ratios). |
+| Safety classification skill compliance | ✅ Full alignment with line 134 guidance and standard grounding protocol (lines 126-132). |
+| Panic disorder / anxiety profile risk | ✅ Extended exhale ratios removed — addresses the specific contraindication. |
+| Learner autonomy | ✅ Improved — "at whatever pace feels settling" empowers learner self-regulation. |
 
-**Verdict: Maintainable, zero new dependencies.**
+**Verdict: Safety-positive change.**
 
 ## Risk Assessment
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Breaking changes | None | Only additive changes |
-| Security | None | No data fetching, no user input, no dangerous APIs |
-| Performance | None | CSS-only tooltip — zero JS runtime cost after render |
-| SEO | None | Glossary is a standard page, Term component only affects inline spans |
-| Sidebar regression | Low | Entry appended to existing array — no structure change |
-| Build regression | None | `npm run build` passes clean with zero errors |
+| Broken grounding sequences | Low | Multi-pass verification; all sequences structurally preserved |
+| Incorrect replacements | Low | Three cleanup passes; spot-checks across 5+ files |
+| Build failure | None | `npm run build` verified clean |
+| Missing occurrences | Low | Double-audit: grep confirmed zero remaining |
 
 **Verdict: No material risk identified.**
 

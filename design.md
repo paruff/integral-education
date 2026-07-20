@@ -1,52 +1,46 @@
-# Design: UX-18 — AQAL Glossary with Inline Tooltips
+# Design: SAFE-03 — Fix prescribed breath ratios in Shadow Integration 101
 
 ## Impacted Components
 
-### 1. docs/maps/glossary.md (NEW)
-Canonical glossary with 20+ AQAL/platform terms. Each term is an H3 heading with a unique anchor ID (kebab-case slug). One-to-three sentence plain-language definition.
+### 1. Primary target: `docs/modules/shadow-integration-101.md` (line 110)
 
-### 2. src/components/Term/index.js (NEW)
-React component that renders a term with an inline tooltip showing its definition. Uses CSS :hover and :focus-within for visibility (no JS-driven show/hide).
+**Current:**
+```
+**Grounding:** If distress arises, pause and use a grounding reset — breathe slowly (4-count inhale, 6-count exhale), name five things you can see, and place both feet flat on the floor.
+```
 
-**Props:**
-- `term` (string) — the term text to display
-- `definition` (string) — the tooltip content (supports limited markdown)
+**Replacement:**
+```
+**Grounding:** If distress arises, pause and use a grounding reset — take several slow, natural breaths at whatever pace feels settling to you, name five things you can see, and place both feet flat on the floor.
+```
 
-**Behavior:**
-- Renders `<span className={styles.wrapper}><span className={styles.term}>{term}</span><span className={styles.tooltip}>{definition}</span></span>`
-- Tooltip visible on hover (desktop), focus (keyboard Tab), and tap (mobile)
-- Tooltip positioned above the term text, centered
+### 2. All other module files with breath-count ratios
 
-### 3. src/components/Term/styles.module.css (NEW)
-CSS module for tooltip styling:
-- `.wrapper` — `position: relative; display: inline;`
-- `.term` — underlined/branded styling to indicate interactivity
-- `.tooltip` — `position: absolute;` hidden by default, shown on `.wrapper:hover .tooltip` and `.wrapper:focus-within .tooltip`
+Audit scope: `docs/modules/**/*.md` and `docs/modules/**/*.mdx`
 
-### 4. sidebars.js
-Add `'maps/glossary'` to the Maps category items list, after the existing entries.
+**Replacement patterns — context-appropriate variants:**
 
-### 5. docs/intro.md
-- Add Term component imports and use on 5+ high-frequency terms
-- Add link to glossary page
+| Pattern to replace | Context | Replacement |
+|---|---|---|
+| `(4-count inhale, 6-count exhale)` standalone | Short grounding instruction | "take several slow, natural breaths" |
+| `(4-count inhale / 6-count exhale)` | Parenthetical grounding | "breathe slowly at whatever pace feels comfortable" |
+| `4-count inhale / 6-count exhale, three repetitions` | Grounding sequence with repetitions | "take several slow, natural breaths, repeating until you feel more settled" |
+| `4-count inhale / 6-count exhale for 2-3 minutes` | Timed grounding | "breathe slowly for two to three minutes at whatever pace feels comfortable" |
+| `4-count inhale / 6-count exhale breathing sequence` | Named technique | "slow, comfortable breathing" |
+| `(4-count inhale / 6-count exhale, three repetitions; name three things...` | Full grounding sequence | "take several slow, natural breaths; name three things..." |
+| `four-count inhale, six-count exhale` | Spelled-out variant | "slow, natural breaths at whatever pace feels settling" |
+| `four-count inhale, four-count hold, six-count exhale` | Extended ratio | "slow, natural breaths" (remove the count-based practice entirely) |
 
-### 6. docs/quickstarts/personal-to-integral.md
-- Add Term component imports and use on 5+ high-frequency terms
-- Add link to glossary page
+### 3. Non-module files (NOT in scope, flagged as finding)
 
-### 7. docs/quickstarts/amber-to-rational.mdx
-- Add link to glossary page (no Term component needed here since .mdx supports imports but scope is limited)
+- `docs/safety/shadowwork-safety-standard.md` — 4 occurrences (line 309, 321, 333, 358)
+- `docs/pilots/pilot-pathway-shadow-foundations.md` — 3 occurrences (line 104, 327, 366)
+- `docs/maps/ilp-practice-taxonomy.md` — 1 occurrence (line 240)
 
-## Glossary Terms (20+)
-AQAL, Quadrant, Level/Stage, Line, State, Type, ILP, Tier 1, Tier 2, Mastery Loop, Shadow, Projection, Spiral Dynamics, Beige, Purple, Red, Blue/Amber, Orange, Green, Teal/Turquoise, Anki, Pre/Trans Fallacy
-
-## Data Flow
-- Glossary: static markdown page rendered at build time
-- Term component: client-side React, no data fetching
-- No API calls, no state management, no external dependencies
+These are outside the issue scope of "module files" but should be tracked for a follow-up issue.
 
 ## Constraints
-- No additional npm dependencies
-- Tooltip must be pure CSS (no JS visibility toggling)
-- Tooltip must not clip under sidebar (high z-index)
-- Component must work in both .md and .mdx files
+- No new npm dependencies
+- Must not change non-breath content in affected lines
+- Must preserve surrounding grounding sequence structure (sensory naming, feet-on-floor)
+- Replacement language must derive from Safety Classification skill's approved grounding protocol

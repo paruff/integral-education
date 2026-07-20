@@ -1,47 +1,40 @@
-# Test Report — UX-18 AQAL Glossary and Term Component
+# Test Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `safe-03-20260720`
+- **Branch:** `fix/safe-03-breath-ratios`
 
 ## Acceptance Criteria Verification
 
 | ID | Description | Expected | Actual | Status |
 |----|-------------|----------|--------|--------|
-| AC-1 | Glossary page exists with minimum 20 defined terms | ≥20 terms | 23 terms | ✅ PASS |
-| AC-1b | Each term has a unique anchor ID usable as deep link | All terms have `{#id}` | All 23 have explicit `{#id}` anchors | ✅ PASS |
-| AC-2 | Glossary appears in sidebar under Maps category | Sidebar link at `maps/glossary` | Present in `sidebars.js` line 214 | ✅ PASS |
-| AC-3 | Term component renders term with tooltip on hover (desktop) | CSS `:hover` triggers tooltip | `.wrapper:hover .tooltip { opacity: 1 }` | ✅ PASS |
-| AC-3b | Term component keyboard accessible — tooltip on focus | CSS `:focus` / `:focus-within` triggers tooltip | `.wrapper:focus-within .tooltip, .wrapper:focus .tooltip` | ✅ PASS |
-| AC-3c | Tooltip z-index prevents sidebar clipping | `z-index ≥ 1000` | `z-index: 9999` | ✅ PASS |
-| AC-4 | At least 10 inline tooltips deployed across intro and first QuickStart | ≥10 total | 12 (intro) + 8 (quickstart) = 20 | ✅ PASS |
-| AC-5 | Glossary linked from intro, personal-to-integral, amber-to-rational | 3 pages link to glossary | All three updated | ✅ PASS |
-| AC-6 | `npm run build` passes with no errors | Build success | `[SUCCESS]` — 0 errors | ✅ PASS |
+| AC-1 | shadow-integration-101.md no longer contains prescribed breath-count ratio | Zero breath-count matches | grep confirms zero | ✅ PASS |
+| AC-2 | All module files no longer contain prescribed breath-count ratios | Zero breath-count matches across all docs/modules/ | grep confirms zero across 20 files | ✅ PASS |
+| AC-3 | Replacement language uses approved phrasing from Safety Classification skill | "slow, natural breaths at whatever pace feels settling" | All variants derive from approved language | ✅ PASS |
+| AC-4 | Surrounding grounding protocol structure preserved | Sensory naming, feet-on-floor, escalation paths intact | Confirmed by spot-checks across 5+ files | ✅ PASS |
+| AC-5 | `npm run build` passes with no errors | Build success | `[SUCCESS] Generated static files` | ✅ PASS |
 
-**All 9 acceptance criteria: ✅ PASS**
+**All 5 acceptance criteria: ✅ PASS**
 
-## Build Verification
+## Audit Results
 
-- `npm run build` — **SUCCESS** (no errors)
-- Pre-existing warnings only (deprecated config, missing blog dir)
-- Glossary page generates correct HTML with all 23 entries
-- Term component renders correctly in both `.md` (intro) and `.mdx` (quickstart) contexts
-
-## Coverage
-
-No formal coverage thresholds for this project. Component unit tests exist at `src/components/Term/__tests__/Term.test.jsx` but require `jest` and `@testing-library/react` to be installed (not currently in `devDependencies`) — they serve as a behavioral specification for the Term component.
+- **Files scanned:** All `.md` and `.mdx` files in `docs/modules/`
+- **Files fixed:** 20 (19 from bulk audit + 1 manual catch)
+- **Total occurrences fixed:** 30+
+- **Remaining breath-count ratios:** 0
+- **Quality issues found in first pass:** 6 (double words, missing punctuation) — all fixed in cleanup passes
 
 ## Regression Risk
 
-- No existing functionality removed
-- Sidebar entry added (not modified)
-- Only additive changes to `.md` / `.mdx` files
-- Term component is self-contained, no changes to CSS variables or layout
+- **None.** Only individual word/phrase replacements within grounding protocols.
+- No structural changes to modules.
+- No changes to module content, learning paths, assessments, or navigation.
+- Build output structure identical to trunk.
 
 ## Overall Test Result
 
-**PASS** — All acceptance criteria verified. Proceed to Phase 3.5.
+**PASS** ✅ — All acceptance criteria verified. Proceed to Phase 3.5.
 
 ## Live-System Verification
 

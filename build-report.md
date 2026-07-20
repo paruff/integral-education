@@ -1,67 +1,85 @@
-# Build Report — UX-18 AQAL Glossary and Term Component
+# Build Report — SAFE-03: Fix prescribed breath ratios in Shadow Integration 101
 
 ## Summary
 
-Implemented the AQAL glossary page and reusable Term component for inline tooltip definitions across the platform, plus integrated both into existing docs.
+Removed all prescribed breath-count ratios from module files, replacing them with the Safety Classification skill's approved grounding language: "slow, natural breaths at whatever pace feels settling." The fix started with the primary target (`shadow-integration-101.md`) and was systematically applied across all 20 module files that contained breath-count ratios.
 
 ## Session
 
-- **Session ID:** `ux-18-20260719`
-- **Branch:** `feature/ux-18-aqal-glossary`
+- **Session ID:** `safe-03-20260720`
+- **Branch:** `fix/safe-03-breath-ratios`
 
 ## Files Changed
 
-| File | Action | Purpose |
-|------|--------|---------|
-| `docs/maps/glossary.md` | **Created** | 23-entry glossary covering AQAL terms, stages, and platform concepts |
-| `src/components/Term/index.js` | **Created** | Reusable React component: inline tooltip on hover/click |
-| `src/components/Term/styles.module.css` | **Created** | Styles for Term component (tooltip, highlight, transitions) |
-| `src/components/Term/__tests__/Term.test.jsx` | **Created** | Unit tests for Term component rendering |
-| `sidebars.js` | Modified | Added `maps/glossary` after `maps/aqal-overview` |
-| `docs/intro.md` | Modified | Added 12 Term component usages + glossary link in Maps section |
-| `docs/quickstarts/personal-to-integral.md` | Modified | Added 8 Term component usages + glossary link in Next Steps |
-| `docs/quickstarts/amber-to-rational.mdx` | Modified | Added glossary link in Complementary Resources |
+| # | File | Changes |
+|---|------|---------|
+| 1 | `docs/modules/shadow-integration-101.md` | Removed `(4-count inhale, 6-count exhale)` |
+| 2 | `docs/modules/shadow-positive-projection.mdx` | 2 occurrences fixed |
+| 3 | `docs/modules/shadow-spiritual-bypassing.mdx` | 3 occurrences fixed |
+| 4 | `docs/modules/shadow-persona-mask.mdx` | 1 occurrence fixed |
+| 5 | `docs/modules/shadow-work-foundation.mdx` | 1 occurrence fixed |
+| 6 | `docs/modules/shadow-in-relationships.mdx` | 3 occurrences fixed |
+| 7 | `docs/modules/shadow-321-process.mdx` | 2 occurrences fixed |
+| 8 | `docs/modules/shadow-immunity-to-change.mdx` | 2 occurrences fixed |
+| 9 | `docs/modules/integral-shadow-teal-trap.mdx` | 2 occurrences fixed |
+| 10 | `docs/modules/self-line-integration-practice.mdx` | 1 occurrence fixed |
+| 11 | `docs/modules/spiritual-line-mythic-to-rational.mdx` | 3 occurrences fixed |
+| 12 | `docs/modules/spiritual-line-shadow-integration.mdx` | 2 occurrences fixed |
+| 13 | `docs/modules/spiritual-line-overview-orientation.mdx` | 1 occurrence fixed |
+| 14 | `docs/modules/spiritual-line-post-metaphysical-integral-religion.mdx` | 1 occurrence fixed |
+| 15 | `docs/modules/moral-line-overview-dual-track.mdx` | 1 occurrence fixed |
+| 16 | `docs/modules/contextual-ethics-moral-complexity.mdx` | 1 occurrence fixed |
+| 17 | `docs/modules/cognitive-line-practice-architecture.mdx` | 1 occurrence fixed |
+| 18 | `docs/modules/cognitive-line-overview-orientation.mdx` | 1 occurrence fixed |
+| 19 | `docs/modules/integral-life-practice-embodying-2nd-tier.mdx` | 1 occurrence fixed |
+| 20 | `docs/modules/emotional-intelligence-somatic-line.mdx` | 1 occurrence fixed |
+
+**Total: 20 files, 31 insertions, 31 deletions**
 
 ## Tasks Completed
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | Create glossary page (`docs/maps/glossary.md`) | ✅ Done | 23 entries with cross-references, anchors, plain-language definitions |
-| 2 | Create Term React component | ✅ Done | `src/components/Term/index.js` + `styles.module.css` |
-| 3 | Add glossary to sidebar | ✅ Done | After AQAL Overview in Maps section |
-| 4 | Integrate Term component in intro.md | ✅ Done | 12 Term usages + glossary link |
-| 5 | Integrate Term component in personal-to-integral.md | ✅ Done | 8 Term usages + glossary link |
-| 6 | Integrate glossary link in amber-to-rational.mdx | ✅ Done | Link in Complementary Resources |
-| 7 | Build verification | ✅ Done | `npm run build` passes cleanly |
+| 1 | Fix primary target: shadow-integration-101.md | ✅ Done | `(4-count inhale, 6-count exhale)` → `take several slow, natural breaths` |
+| 2 | Audit and fix all module files | ✅ Done | 20 files, 30+ occurrences, three cleanup passes |
+| 3 | Validate build | ✅ Done | `npm run build` SUCCESS |
+
+## Replacement Language (from Safety Classification skill)
+
+All replacements use the approved language from `.agents/skills/safety-classification/SKILL.md` line 134:
+> "Slow, natural breaths at whatever pace feels settling" is safer and more universally appropriate.
+
+Context-appropriate variants applied:
+- `take several slow, natural breaths` (short grounding)
+- `breathe slowly for two to three minutes at whatever pace feels comfortable` (timed)
+- `slow, comfortable breathing` (in breathing sequence context)
+- `take three slow, natural breaths at whatever pace feels settling` (repetition context)
 
 ## Validation Results
 
-### Lint
-No lint configuration actively enforced in this project — no issues to report.
-
-### Typecheck
-No TypeScript configuration — JavaScript with React prop-types equivalent handled by runtime.
-
 ### Build
 ```
-npm run build  →  [SUCCESS] Generated static files in "build".
+npm run build → [SUCCESS] Generated static files in "build".
 ```
 
-### Test
+### Breath-count audit
 ```
-No test runner configured — component behavioral spec at `src/components/Term/__tests__/Term.test.jsx` requires jest + @testing-library/react (not yet in devDependencies).
+grep -rn '4-count\|6-count\|four-count inhale.*exhale' docs/modules/ → ZERO RESULTS
 ```
 
-## Build Output Verification
+### Quality audit
+- ✅ No double-word artifacts (e.g., "breathing breathing")
+- ✅ No broken punctuation
+- ✅ No remaining "three repetitions" counting after settling instructions
 
-| Metric | Value |
-|--------|-------|
-| Glossary HTML size | 35,002 bytes |
-| Term components rendered (intro) | 12 |
-| Term components rendered (quickstart) | 8 |
-| Glossary entries (H3 sections) | 23 |
-| Build errors | 0 |
-| Build warnings | 2 (deprecated config, missing blog dir — pre-existing) |
+## Findings (out of scope, flagged)
+
+Non-module files also contain breath-count ratios, outside this issue's scope:
+- `docs/safety/shadowwork-safety-standard.md` — 4 occurrences (lines 309, 321, 333, 358)
+- `docs/pilots/pilot-pathway-shadow-foundations.md` — 3 occurrences (lines 104, 327, 366)
+- `docs/maps/ilp-practice-taxonomy.md` — 1 occurrence (line 240)
+
+These should be addressed in a follow-up issue.
 
 ## Blockers
 

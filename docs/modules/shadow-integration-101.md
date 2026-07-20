@@ -23,8 +23,11 @@ prerequisites:
 ---
 
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
+import ShadowGate from '@site/src/components/ShadowGate';
 
 <CrisisResourceBanner />
+
+<ShadowGate>
 
 import NextStep from '@site/src/components/NextStep';
 import ModuleMeta from '@site/src/components/ModuleMeta';
@@ -112,8 +115,10 @@ A: To make the unconscious conscious — own and relate to disowned qualities
 
 **Stop rules:** Stop immediately if you feel overwhelmed, dissociated, or unable to orient to your surroundings. Return to the grounding practice below.
 
-**Grounding:** If distress arises, pause and use a grounding reset — breathe slowly (4-count inhale, 6-count exhale), name five things you can see, and place both feet flat on the floor.
+**Grounding:** If distress arises, pause and use a grounding reset — take several slow, natural breaths, name five things you can see, and place both feet flat on the floor.
 
 **Escalation:** If distress persists after grounding, step away from the practice and contact a trusted support person or qualified counsellor. Do not continue the exercise alone.
 
 <NextStep />
+
+</ShadowGate>

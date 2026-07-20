@@ -1,58 +1,73 @@
-# Build Report — SAFE-01: Add crisis resource banner to all shadow-adjacent module pages
+# Build Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
 
 ## Summary
 
-Created a persistent, non-intrusive `CrisisResourceBanner` component that displays at the top of every shadow-adjacent and altered-state module page. Created a dedicated `docs/safety/crisis-resources.md` page with US crisis lines, Samaritans (UK/IE), and international resources. The banner was imported into 17 target modules.
+Created a `ShadowGate` React component that enforces the Tier 1 entry criteria defined in the Shadowwork Safety Standard. The gate renders a consent and readiness check before module content, blocking entry when self-reported distress is ≥ 7 or contraindications are present. Uses `sessionStorage` for per-session acknowledgment. Also includes CrisisResourceBanner and crisis-resources page (SAFE-01 dependency).
 
 ## Session
 
-- **Session ID:** `safe-01-20260720`
-- **Branch:** `fix/safe-01-crisis-resource-banner`
+- **Session ID:** `safe-02-20260720`
+- **Branch:** `fix/safe-02-safety-gate-banner`
+
+## Dependency Note
+
+SAFE-02 depends on SAFE-01 (crisis resource banner). Since SAFE-01 (#337) is not yet merged, this branch includes both the CrisisResourceBanner component and crisis-resources page from SAFE-01, plus the new ShadowGate component.
 
 ## Files Changed
 
 | File | Action | Purpose |
 |------|--------|---------|
-| `src/components/CrisisResourceBanner/index.js` | **Created** | Persistent banner component with crisis link |
-| `src/components/CrisisResourceBanner/styles.module.css` | **Created** | Infima-themed styling, responsive |
-| `docs/safety/crisis-resources.md` | **Created** | Crisis resource page (US + UK/IE + international) |
-| 14 shadow-tagged module files | Modified | Added banner import after frontmatter |
-| 3 state-tagged module files | Modified | Added banner import after frontmatter |
+| `src/components/ShadowGate/index.js` | **Created** | Tier 1 gate component: consent, contraindications, distress check, Mindfulness Basics confirmation |
+| `src/components/ShadowGate/styles.module.css` | **Created** | Infima-themed gate styling with block/grounding states |
+| `src/components/CrisisResourceBanner/index.js` | **Copied** | From SAFE-01 branch (dependency) |
+| `src/components/CrisisResourceBanner/styles.module.css` | **Copied** | From SAFE-01 branch (dependency) |
+| `docs/safety/crisis-resources.md` | **Copied** | From SAFE-01 branch (dependency) |
+| 12 shadow module files | Modified | Added CrisisResourceBanner + ShadowGate imports/wrappers |
 
 ## Tasks Completed
 
 | # | Task | Status | Notes |
 |---|------|--------|-------|
-| 1 | Create CrisisResourceBanner component | ✅ Done | `index.js` + `styles.module.css` with Infima variables |
-| 2 | Create crisis-resources page | ✅ Done | US crisis lines, Samaritans, international resources |
-| 3 | Import banner into 14 shadow modules | ✅ Done | All shadow-tagged modules updated |
-| 4 | Import banner into 3 state modules | ✅ Done | causal, nondual, subtle modules updated |
-| 5 | Validate build | ✅ Done | `npm run build` SUCCESS |
+| 1 | Create ShadowGate component | ✅ Done | Consent, contraindications, distress 1-10, Mindfulness Basics; blocks at distress ≥ 7 or contraindication; sessionStorage acknowledgment |
+| 2 | Wrap all 12 shadow modules | ✅ Done | All modules with "shadow" in filename |
+| 3 | Validate build | ✅ Done | `npm run build` SUCCESS |
 
-## Component Architecture
+## Component Architecture — ShadowGate
 
 ```
-src/components/CrisisResourceBanner/
-├── index.js              — React component with @docusaurus/Link
-└── styles.module.css     — Infima-themed, responsive, keyboard accessible
-```
-
-**Component features:**
-- `role="complementary"` + `aria-label="Crisis resources"` for screen readers
-- ⚠️ warning icon with `aria-hidden="true"`
-- Text: "If you feel overwhelmed or unsafe, stop the practice. Crisis resources →"
-- Link to `/docs/safety/crisis-resources` using `@docusaurus/Link`
-- Infima `--ifm-color-warning-contrasting-background` + `--ifm-color-warning-dark` border
-- Responsive: reduced padding at 480px breakpoint
-
-## Crisis Resources Page
-
-```
-docs/safety/crisis-resources.md
-├── United States: 988 Lifeline, Crisis Text Line, Veterans Crisis Line
-├── United Kingdom / Ireland: Samaritans (116 123)
-├── International: findahelpline.com, IASP directory
-└── Emergency numbers: 911 (US), 999 (UK), 112 (EU)
+Gate states:
+  ┌──────────────────┐
+  │ MOUNT            │
+  │ Check sessionStorage
+  │ for prior ack    │
+  └──────┬───────────┘
+         │
+    ┌────▼────┐ YES  ┌──────────┐
+    │ Ack'd?  │─────▶│ RENDER   │
+    └────┬────┘      │ children │
+         │ NO        └──────────┘
+         ▼
+  ┌──────────────┐
+  │ DISPLAY GATE │
+  │ - consent    │
+  │ - mindfulness│
+  │ - contraind. │
+  │ - distress   │
+  └──────┬───────┘
+         │ [Proceed]
+    ┌────▼────┐ YES  ┌──────────────────┐
+    │ ≥ 7?    │─────▶│ BLOCK: grounding │
+    └────┬────┘      │ + crisis banner  │
+         │ NO        │ + override opt   │
+    ┌────▼────────┐  └──────────────────┘
+    │ Contraind?  │ YES  ┌────────────────────┐
+    └────┬────────┘─────▶│ BLOCK: not suitable │
+         │ NO            │ + links to MB/crisis│
+         ▼               └────────────────────┘
+  ┌──────────────┐
+  │ sessionStore │
+  │ → RENDER     │
+  └──────────────┘
 ```
 
 ## Validation Results
@@ -61,14 +76,12 @@ docs/safety/crisis-resources.md
 ```
 npm run build → [SUCCESS] Generated static files in "build".
 ```
+Pre-existing broken anchor warnings (emoji-based heading IDs) — not caused by these changes.
 
-### Import count
+### Gate Import Count
 ```
-grep -rl 'CrisisResourceBanner' docs/modules/ → 17 files
+grep -rl 'ShadowGate' docs/modules/ → 12 files
 ```
-
-### Component rendering
-Verified banner HTML present in build output for all 17 module pages.
 
 ## Blockers
 

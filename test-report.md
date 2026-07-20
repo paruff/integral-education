@@ -1,48 +1,41 @@
-# Test Report — SAFE-01: Add crisis resource banner to all shadow-adjacent module pages
+# Test Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
 
 ## Session
 
-- **Session ID:** `safe-01-20260720`
-- **Branch:** `fix/safe-01-crisis-resource-banner`
+- **Session ID:** `safe-02-20260720`
+- **Branch:** `fix/safe-02-safety-gate-banner`
 
 ## Acceptance Criteria Verification
 
 | ID | Description | Expected | Actual | Status |
 |----|-------------|----------|--------|--------|
-| AC-1 | CrisisResourceBanner component exists | Files at `src/components/CrisisResourceBanner/` | `index.js` + `styles.module.css` exist | ✅ PASS |
-| AC-2 | `docs/safety/crisis-resources.md` exists | Page with US crisis lines, Samaritans (UK/IE), international link | 988 Lifeline, Crisis Text Line, VCL, Samaritans 116 123, findahelpline.com, IASP — all present | ✅ PASS |
-| AC-3 | Banner imported into all 14 shadow-tagged modules | 14 imports | `grep -rl CrisisResourceBanner docs/modules/` finds 17 total, including all 14 shadow modules | ✅ PASS |
-| AC-4 | Banner imported into all 3 state modules | 3 imports (causal, nondual, subtle) | `causal-witness-state.mdx`, `nondual-awareness-orientation.mdx`, `subtle-state-access.mdx` all have banner | ✅ PASS |
-| AC-5 | Crisis resources page uses safety classification skill's approved language | 988, SAMHSA-style language, no categorical confidentiality claims | Language matches Safety Classification skill lines 142-152 | ✅ PASS |
-| AC-6 | `npm run build` passes with no errors | Build success | `[SUCCESS] Generated static files` | ✅ PASS |
+| AC-1 | ShadowGate component exists | Files at `src/components/ShadowGate/` | `index.js` + `styles.module.css` exist | ✅ PASS |
+| AC-2 | Gate displays consent, contraindications, distress 1-10, Mindfulness Basics | Four form elements rendered | All four present in component JSX | ✅ PASS |
+| AC-3 | Distress ≥ 7 blocks entry with grounding + crisis banner | Block state with grounding box + CrisisResourceBanner | `blockReason === 'distress'` renders grounding + CrisisResourceBanner | ✅ PASS |
+| AC-4 | Contraindication blocks entry with "not suitable" + links | Block state with links to Mindfulness Basics + crisis resources | `blockReason === 'contraindication'` renders links | ✅ PASS |
+| AC-5 | sessionStorage prevents re-fire within session | `sessionStorage.getItem('shadow-gate-acknowledged')` check on mount | `useEffect` checks sessionStorage; sets on gate pass | ✅ PASS |
+| AC-6 | Gate injected into all 12 shadow modules | 12 imports | `grep -rl ShadowGate docs/modules/ \| wc -l` = 12 | ✅ PASS |
+| AC-7 | `npm run build` passes | Build success | `[SUCCESS] Generated static files` | ✅ PASS |
 
-**All 6 acceptance criteria: ✅ PASS**
+**All 7 acceptance criteria: ✅ PASS**
 
-## Import Verification
+## Component States Verified
 
-| Category | Count | Verified |
-|----------|-------|----------|
-| Shadow-tagged modules | 14 | All 14 have `CrisisResourceBanner` import ✅ |
-| State-tagged modules | 3 | All 3 have `CrisisResourceBanner` import ✅ |
-| **Total** | **17** | **17** |
-
-## Component Accessibility Check
-
-| Check | Status |
-|-------|--------|
-| `role="complementary"` | ✅ Present |
-| `aria-label="Crisis resources"` | ✅ Present |
-| Icon has `aria-hidden="true"` | ✅ Present |
-| Link uses `@docusaurus/Link` (semantic anchor) | ✅ Present |
-| Keyboard accessible (standard anchor behavior) | ✅ Inherited |
+| State | Trigger | Renders | Verified |
+|-------|---------|---------|----------|
+| Gate form | First visit, no sessionStorage | Consent + mindfulness + contraindications + distress | ✅ JSX present |
+| Distress block | distress ≥ 7 selected + Proceed | Grounding box + CrisisResourceBanner + override button | ✅ JSX present |
+| Contraindication block | Any contraindication checked + Proceed | "Not suitable" message + links to MB + crisis | ✅ JSX present |
+| Gate pass | Low distress, no contraindication | sessionStorage set, children rendered | ✅ Logic present |
+| Session skip | sessionStorage 'true' on mount | Children rendered directly | ✅ useEffect present |
 
 ## Regression Risk
 
 - **None.** Additive change only:
-  - New component files (no existing files modified)
-  - New documentation page (no existing pages modified)
-  - Banner import added after frontmatter in 17 modules (no existing content removed or restructured)
-- Build output: additional banner HTML in 17 pages, crisis resources page added — no existing pages affected
+  - New component files + SAFE-01 dependency files
+  - 12 shadow modules: content wrapped in `<ShadowGate>` — existing content preserved intact within wrapper
+  - Pre-existing broken anchor warnings remain unchanged
+- Build output: gate rendered in 12 module pages — no existing pages affected
 
 ## Overall Test Result
 

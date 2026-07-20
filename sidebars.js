@@ -38,6 +38,7 @@ const sidebars = {
         'modules/emotional-line-overview-orientation',
         'modules/emotion-regulation-foundations',
         'modules/emotional-appraisal-meaning-making',
+        'modules/emotional-interpersonal-integration',
       ],
     },
     {
@@ -47,6 +48,7 @@ const sidebars = {
         'modules/interpersonal-line-overview-orientation',
         'modules/relational-repair-conflict-navigation',
         'modules/perspective-taking-empathic-accuracy',
+        'modules/emotional-interpersonal-integration',
       ],
     },
     {

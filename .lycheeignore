@@ -1,0 +1,5 @@
+# Publisher paywall 403 — valid DOIs blocked by publisher anti-bot protection.
+# These resolve correctly in a browser; lychee cannot verify them.
+# Issue: https://github.com/paruff/integral-education/issues/338
+https://doi.org/10.1177/0963721414550708
+https://doi.org/10.1037/a0027600

@@ -1,21 +1,24 @@
-# Review Report — SAFE-01: Add crisis resource banner to all shadow-adjacent module pages
+# Review Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
 
 ## Session
 
-- **Session ID:** `safe-01-20260720`
-- **Branch:** `fix/safe-01-crisis-resource-banner`
+- **Session ID:** `safe-02-20260720`
+- **Branch:** `fix/safe-02-safety-gate-banner`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| CrisisResourceBanner component created | ✅ | `src/components/CrisisResourceBanner/index.js` + `styles.module.css` |
-| Banner text matches spec | ✅ | "If you feel overwhelmed or unsafe, stop the practice. Crisis resources →" |
-| Link targets `/docs/safety/crisis-resources` | ✅ | Uses `@docusaurus/Link` with correct path |
-| Crisis resources page created | ✅ | US, UK/IE, international resources with findahelpline.com |
-| All 14 shadow modules have banner | ✅ | Verified by grep + build output |
-| All 3 state modules have banner | ✅ | causal-witness-state, nondual-awareness-orientation, subtle-state-access |
-| Build passes | ✅ | `npm run build` SUCCESS |
+| ShadowGate component created | ✅ | `src/components/ShadowGate/index.js` + `styles.module.css` |
+| Consent statement displayed | ✅ | I quadrant framing, no therapy claims |
+| Contraindications: trauma, PTSD, crisis | ✅ | Three checkboxes matching safety standard |
+| Distress 1-10 radio | ✅ | 10 radio buttons; 7-10 marked with danger color |
+| Mindfulness Basics confirmation | ✅ | Checkbox with link to module |
+| Distress ≥ 7 blocks | ✅ | Grounding box + CrisisResourceBanner + override |
+| Contraindication blocks | ✅ | "Not suitable" + links to MB + crisis resources |
+| sessionStorage acknowledgment | ✅ | per-session; cleared on browser close |
+| Gate in all 12 shadow modules | ✅ | Confirmed by grep |
+| Build passes | ✅ | SUCCESS |
 
 **Verdict: All requirements satisfied.**
 
@@ -23,43 +26,27 @@
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only the 17 target modules specified in the issue + component + page. |
-| Unnecessary changes | **None.** Banner import is the only change to each module. |
-| Non-target modules changed | **None.** Exactly 17 modules affected. |
-| Component pattern compliance | ✅ Follows `src/components/ComponentName/index.js` + `styles.module.css` pattern |
-
-**Verdict: Tight scope control.**
+| Scope creep | **None.** Only the 12 shadow modules (filename contains "shadow"). State modules excluded per spec. |
+| SAFE-01 dependency | ✅ Included CrisisResourceBanner + crisis-resources page since not yet merged |
+| Unnecessary changes | **None.** Gate wrapper only; all module content preserved intact. |
 
 ## Safety Assessment
 
 | Aspect | Assessment |
 |--------|------------|
-| Banner prominence | Non-intrusive but visible — warning-colored background with border accent |
-| Link accessibility | Always visible at page top — learner doesn't need to scroll or navigate |
-| Crisis resources accuracy | Language matches Safety Classification skill v2; findahelpline.com for international coverage |
-| No categorical confidentiality claims | ✅ Sample disclaimer added: "These resources are provided for informational purposes. The Integral Education Platform is an educational resource, not a clinical or crisis service." |
-
-**Verdict: Safety-positive change. Addresses the key risk: a learner in distress during a shadow exercise now has an immediate, visible path to crisis resources.**
+| Gate severity | Distress block at ≥ 7 (not the ideal ≤ 3 from safety standard) — pragmatic floor, not best-practice ceiling |
+| Override path | Distress block has "I've grounded and still want to proceed" escape — respects learner autonomy |
+| No override for contraindications | Contraindication block has no override — correct: "not suitable right now" |
+| sessionStorage vs localStorage | sessionStorage clears on browser close — correct for per-session gate |
+| CrisisResourceBanner integration | Crisis banner rendered in distress block state |
 
 ## Risk Assessment
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Banner interferes with ModuleMeta layout | Low | Banner renders above ModuleMeta; both are block-level components with margins |
-| Stale crisis line numbers | Medium | Numbers verified current (988, 741741, 116 123); disclaimer notes informational purpose |
-| International learners without local resources | Low | findahelpline.com covers 50+ countries; IASP directory covers global resources |
-
-**Verdict: Low risk. Medium risk for stale numbers mitigated by disclaimer and known-current verification.**
-
-## Design Compliance
-
-| Design Element | Status |
-|----------------|--------|
-| Infima theme variables used | ✅ `--ifm-color-warning-contrasting-background`, `--ifm-color-warning-dark` |
-| `@docusaurus/Link` for internal link | ✅ |
-| Responsive at 480px | ✅ |
-| Keyboard accessible | ✅ (standard anchor, semantic HTML) |
-| CSS modules pattern | ✅ |
+| Gate fatigue (learners dismiss without reading) | Medium | Gate is structural (must interact), not a cookie banner — requires explicit consent/check action |
+| sessionStorage unavailable (rare) | Low | Gate shows; on next page load within session, gate re-fires (acceptable degradation) |
+| Pre-existing broken anchors | Low | Not caused by these changes; pre-existing in all 12 shadow modules |
 
 ## Review Result
 

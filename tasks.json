@@ -2,72 +2,33 @@
   "tasks": [
     {
       "id": "1",
-      "title": "Create CrisisResourceBanner component",
-      "description": "Create src/components/CrisisResourceBanner/index.js and styles.module.css — persistent, non-intrusive banner using Infima theme variables and @docusaurus/Link.",
+      "title": "Create ShadowGate component",
+      "description": "Create src/components/ShadowGate/index.js and styles.module.css. Component renders consent check, contraindications list, distress radio (1-10), Mindfulness Basics confirmation. Blocks entry if distress ≥ 7 or contraindication checked. Uses sessionStorage for per-session acknowledgment.",
       "dependencies": [],
       "acceptance_criteria": [
-        {
-          "id": "AC-1",
-          "description": "CrisisResourceBanner component exists at src/components/CrisisResourceBanner/",
-          "test_type": "unit"
-        }
+        {"id": "AC-1", "description": "ShadowGate component exists at src/components/ShadowGate/", "test_type": "unit"},
+        {"id": "AC-2", "description": "Gate displays consent, contraindications, distress 1-10, Mindfulness Basics check", "test_type": "unit"},
+        {"id": "AC-3", "description": "Distress ≥ 7 blocks entry with grounding + crisis banner", "test_type": "unit"},
+        {"id": "AC-4", "description": "Contraindication blocks entry with 'not suitable' message + links", "test_type": "unit"},
+        {"id": "AC-5", "description": "sessionStorage prevents re-fire within session", "test_type": "unit"}
       ]
     },
     {
       "id": "2",
-      "title": "Create crisis-resources page",
-      "description": "Create docs/safety/crisis-resources.md listing US crisis lines, Samaritans (UK/IE), and international resources with findahelpline.com link. Use Safety Classification skill's approved language.",
-      "dependencies": [],
+      "title": "Wrap all 12 shadow modules in ShadowGate",
+      "description": "Wrap module body content in <ShadowGate>...</ShadowGate> in all 12 modules with 'shadow' in filename. Gate renders below CrisisResourceBanner.",
+      "dependencies": ["1"],
       "acceptance_criteria": [
-        {
-          "id": "AC-2",
-          "description": "docs/safety/crisis-resources.md exists with US crisis lines, Samaritans (UK/IE), and international link",
-          "test_type": "unit"
-        },
-        {
-          "id": "AC-5",
-          "description": "Crisis resources page uses safety classification skill's approved language",
-          "test_type": "unit"
-        }
+        {"id": "AC-6", "description": "Gate injected into all 12 shadow modules", "test_type": "unit"}
       ]
     },
     {
       "id": "3",
-      "title": "Import banner into all 14 shadow-tagged modules",
-      "description": "Add CrisisResourceBanner import and usage at top of body in all 14 modules with shadow in frontmatter tags.",
-      "dependencies": ["1"],
-      "acceptance_criteria": [
-        {
-          "id": "AC-3",
-          "description": "Banner is imported into all 14 shadow-tagged modules",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Import banner into all 3 state modules",
-      "description": "Add CrisisResourceBanner import and usage in causal-witness-state.mdx, nondual-awareness-orientation.mdx, and subtle-state-access.mdx.",
-      "dependencies": ["1"],
-      "acceptance_criteria": [
-        {
-          "id": "AC-4",
-          "description": "Banner is imported into all 3 state modules (causal, nondual, subtle)",
-          "test_type": "unit"
-        }
-      ]
-    },
-    {
-      "id": "5",
       "title": "Validate build",
       "description": "Run npm run build and verify no errors.",
-      "dependencies": ["1", "2", "3", "4"],
+      "dependencies": ["1", "2"],
       "acceptance_criteria": [
-        {
-          "id": "AC-6",
-          "description": "npm run build passes with no errors",
-          "test_type": "unit"
-        }
+        {"id": "AC-7", "description": "npm run build passes", "test_type": "unit"}
       ]
     }
   ]

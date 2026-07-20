@@ -1,31 +1,30 @@
-# Verification Report — SAFE-01: Add crisis resource banner to all shadow-adjacent module pages
+# Verification Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
 
 ## Session
 
-- **Session ID:** `safe-01-20260720`
-- **Branch:** `fix/safe-01-crisis-resource-banner`
+- **Session ID:** `safe-02-20260720`
+- **Branch:** `fix/safe-02-safety-gate-banner`
 
 ## Claim Verification
 
 | Claim | Evidence | Verified |
 |-------|----------|----------|
-| `CrisisResourceBanner/index.js` exists | `ls` confirms file exists | ✅ TRUE |
-| `CrisisResourceBanner/styles.module.css` exists | `ls` confirms file exists | ✅ TRUE |
-| `docs/safety/crisis-resources.md` exists | `ls` confirms file exists | ✅ TRUE |
-| Crisis resources page built | `build/docs/safety/crisis-resources/index.html` exists | ✅ TRUE |
-| Banner imported into 17 modules | `grep -rl CrisisResourceBanner docs/modules/ \| wc -l` = 17 | ✅ TRUE |
-| Banner renders in build output | `Crisis resources` + `crisis-resources` found in `shadow-integration-101/build/index.html` | ✅ TRUE |
+| ShadowGate component exists | `ls src/components/ShadowGate/index.js` + `styles.module.css` | ✅ TRUE |
+| CrisisResourceBanner exists | Copied from SAFE-01 branch | ✅ TRUE |
+| `docs/safety/crisis-resources.md` exists | `ls docs/safety/crisis-resources.md` | ✅ TRUE |
+| 12 shadow modules have ShadowGate | `grep -rl ShadowGate docs/modules/ \| wc -l` = 12 | ✅ TRUE |
 | Build passes | `npm run build` → `[SUCCESS]` | ✅ TRUE |
-| 17 files changed, 85 insertions | `git diff --stat` confirms | ✅ TRUE |
+| Pre-existing anchors unchanged | Same broken anchor warnings as main branch | ✅ TRUE |
 
 ## Summary
 
 | Category | Claims | Verified True | Verified False |
 |----------|--------|---------------|----------------|
-| File existence | 5 | 5 | 0 |
-| Build | 3 | 3 | 0 |
-| **Total** | **8** | **8** | **0** |
+| File existence | 3 | 3 | 0 |
+| Module imports | 1 | 1 | 0 |
+| Build | 2 | 2 | 0 |
+| **Total** | **6** | **6** | **0** |
 
 ## Verification Result
 
-**PASS** ✅ — All 8 claims verified as true. Proceed to Phase 4.6.
+**PASS** ✅ — All 6 claims verified. Proceed to Phase 4.6.

@@ -45,7 +45,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          shadow_files=$(rg --files docs | rg -i "shadow|safety")
+          # Exclude docs/features/ (archived spec+design docs that aren't learner-facing)
+          shadow_files=$(rg --files docs | rg -i "shadow|safety" | rg -v "^docs/features/")
           if [[ -z "${shadow_files}" ]]; then
             echo "No shadow/safety files detected in docs. Skipping safety-language check."
             exit 0

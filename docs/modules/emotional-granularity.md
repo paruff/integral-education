@@ -50,6 +50,8 @@ Research by Lisa Feldman Barrett shows that people with higher emotional granula
 - Recover faster from negative events
 - Make better decisions under pressure
 
+Research suggests these outcomes — though note that the causal direction is still being established in intervention studies. The correlational evidence is strong; whether training granularity directly causes the benefits is still under investigation.
+
 Core skills:
 - **Differentiation** — distinguishing similar emotions (anxiety vs. dread vs. apprehension)
 - **Labeling** — finding the right word for the felt sense
@@ -120,7 +122,7 @@ Apply this in real life:
 
 <RetrievalPrompt moduleName="Emotional Granularity" cards={
   {q: "What is emotional granularity?", a: "The ability to make fine-grained distinctions between emotional states"},
-  {q: "What are the benefits of high emotional granularity?", a: "Less intense emotions during stress, faster recovery, better decisions under pressure"},
+  {q: "What are the benefits of high emotional granularity?", a: "Less intense emotions during stress, faster recovery, better decisions under pressure. Note: causal evidence is still developing — correlational findings are strong, intervention studies ongoing"},
   {q: "Who is the researcher associated with emotional granularity?", a: "Lisa Feldman Barrett"}
 } />
 

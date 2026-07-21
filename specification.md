@@ -1,16 +1,12 @@
-# Specification: NAV-02 — Standardize end-of-module CTA pattern across all modules
-
+# Specification: CONT-01 — Epistemic caveats for Emotional Granularity and Dunning-Kruger
 ## Problem
-Most modules end with only Docusaurus prev/next arrows. Learners hit a dead end with no clear next action.
-
+Two claims overstate certainty. Emotional Granularity: causal direction unsettled. Dunning-Kruger: popular simplification vs original finding plus replication nuance.
 ## Requirements
-- ModuleFooter component with: next module, parent QuickStart, reflection link, ModuleComplete button
-- moduleMap.js mapping each module to its next module and parent QuickStart
-- All modules updated with ModuleFooter replacing <NextStep />
+- Emotional Granularity: add causal caveat to benefits + update Anki card
+- Cognitive Bias 101: expand Dunning-Kruger definition + update Anki card
 - Build passes
-
 ## ACs
-1. ModuleFooter component created with all four slots
-2. moduleMap.js maps every module to next + QuickStart
-3. All modules have <ModuleFooter /> at end
+1. Emotional granularity benefits list has causal caveat
+2. Dunning-Kruger definition expanded with replication note
+3. Both Anki cards updated
 4. Build passes

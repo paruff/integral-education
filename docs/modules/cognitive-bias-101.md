@@ -37,7 +37,7 @@ Key biases to know:
 - **Confirmation bias** — seeking information that confirms existing beliefs
 - **Availability heuristic** — overweighting recent or vivid examples
 - **In-group bias** — favoring members of your own group
-- **Dunning-Kruger effect** — overestimating competence in areas of ignorance
+- **Dunning-Kruger effect** — overestimating competence in areas of limited knowledge — specifically, a metacognitive deficit that prevents low performers from recognizing their own performance gaps. Note: subsequent large-scale replications have found the effect more modest and context-dependent than originally reported
 - **Anchoring** — over-relying on the first piece of information encountered
 
 ---
@@ -87,7 +87,7 @@ Apply this in real life:
 <RetrievalPrompt moduleName="Cognitive Bias 101" cards={[
   {q: "What is a cognitive bias?", a: "A systematic error in thinking that affects judgments and decisions"},
   {q: "What is confirmation bias?", a: "The tendency to seek information that confirms existing beliefs"},
-  {q: "What is the Dunning-Kruger effect?", a: "Overestimating competence in areas where one has little knowledge"},
+  {q: "What is the Dunning-Kruger effect?", a: "Overestimating competence in areas of limited knowledge — a metacognitive deficit preventing low performers from recognizing their gaps. Effect is more modest and context-dependent than originally reported in replications"},
   {q: "What is steelmanning?", a: "Stating the strongest possible version of an opposing argument"},
 ]} />
 

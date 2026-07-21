@@ -1,50 +1,42 @@
 [
   {
-    "id": "lsc-02-1",
-    "description": "Create useProgress hook at src/hooks/useProgress.js with correct schema, try/catch for private browsing, clear method",
+    "id": "nav-01-1",
+    "description": "Move internal docs: implementation/, quality/, safety/, pilots/ from docs/ to internal/ directory",
     "type": "code",
     "test_type": "unit",
     "dependsOn": [],
-    "acceptance": "Hook reads/writes iel_progress_v1 with correct schema, all ops wrapped in try/catch, returns isAvailable bool"
+    "acceptance": "Files moved: internal/implementation/, internal/quality/, internal/safety/, internal/pilots/ exist"
   },
   {
-    "id": "lsc-02-2",
-    "description": "Create ModuleComplete component with Mark complete button + level selector (1-4), wired to useProgress",
+    "id": "nav-01-2",
+    "description": "Create learnerSidebar in sidebars.js — remove Implementation, Quality, Safety, Pilots sections",
     "type": "code",
     "test_type": "unit",
-    "dependsOn": ["lsc-02-1"],
-    "acceptance": "Component renders level radio + Mark complete button, updates progress on interaction"
+    "dependsOn": ["nav-01-1"],
+    "acceptance": "Learner sidebar contains no internal docs references"
   },
   {
-    "id": "lsc-02-3",
-    "description": "Create docs/my-progress.mdx page showing modules completed, level per module, days since last activity, Clear button",
+    "id": "nav-01-3",
+    "description": "Create sidebarsInternal.js with Implementation, Quality, Safety, Pilots",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": ["nav-01-1"],
+    "acceptance": "Internal sidebar exists with all four categories"
+  },
+  {
+    "id": "nav-01-4",
+    "description": "Update docusaurus.config.js — two plugin instances, learner navbar links, footer link",
     "type": "code",
     "test_type": "integration",
-    "dependsOn": ["lsc-02-1"],
-    "acceptance": "Page renders progress summary, table, Clear button, private browsing notice"
+    "dependsOn": ["nav-01-2", "nav-01-3"],
+    "acceptance": "Two docs plugins configured, navbar learner-only, footer has facilitator link"
   },
   {
-    "id": "lsc-02-4",
-    "description": "Convert docs/reflections/daily-template.md to interactive MDX with fillable text areas saving to iel_reflections_v1",
-    "type": "code",
-    "test_type": "integration",
-    "dependsOn": ["lsc-02-1"],
-    "acceptance": "Text areas are fillable, save to localStorage on blur, display last saved timestamp"
-  },
-  {
-    "id": "lsc-02-5",
-    "description": "Add ModuleComplete component to 5 representative modules (batch 1)",
-    "type": "code",
-    "test_type": "integration",
-    "dependsOn": ["lsc-02-2"],
-    "acceptance": "5 modules have ModuleComplete at end: cognitive-bias-101, mindfulness-basics, shadow-integration-101, emotional-granularity, systems-thinking-101"
-  },
-  {
-    "id": "lsc-02-6",
+    "id": "nav-01-5",
     "description": "Verify npm run build passes",
     "type": "verification",
     "test_type": "integration",
-    "dependsOn": ["lsc-02-3", "lsc-02-4", "lsc-02-5"],
-    "acceptance": "npm run build → [SUCCESS] with zero errors"
+    "dependsOn": ["nav-01-4"],
+    "acceptance": "Build completes with zero errors"
   }
 ]

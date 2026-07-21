@@ -31,7 +31,7 @@ Related backlog issue: E5-1.
 
 ### Levels
 
-Levels use the L1–L4 bands defined in the [AQAL Competency Map](../maps/aqal-competency-map): L1 (Foundational) → L2 (Differentiated) → L3 (Integrative) → L4 (Transformative).
+Levels use the L1–L4 bands defined in the [AQAL Competency Map](../../docs/maps/aqal-competency-map): L1 (Foundational) → L2 (Differentiated) → L3 (Integrative) → L4 (Transformative).
 
 - Entry level assumption: L1–L2 (learners can name basic concepts and apply them in familiar contexts).
 - Progression target: L2–L3 (learners apply concepts independently across moderately novel contexts by week 4).

@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Invocation Log",
+  "description": "Structured log entry for agent skill invocations",
+  "type": "object",
+  "properties": {
+    "agent_name": { "type": "string", "description": "Name of the agent that was invoked" },
+    "session_id": { "type": "string", "description": "Unique identifier for this session" },
+    "triggered_by": { "type": "string", "description": "What triggered this invocation (e.g. repair-flow-direct, feature-flow)" },
+    "originating_session_id": { "type": "string", "description": "session_id of the feature-flow that produced the code being repaired, if known" },
+    "timestamp": { "type": "string", "format": "date-time", "description": "Completion time (ISO 8601)" },
+    "started_at": { "type": "string", "format": "date-time", "description": "When the agent began (ISO 8601)" },
+    "duration_ms": { "type": "integer", "description": "Duration in milliseconds" },
+    "root_cause_category": { "type": "string", "enum": ["Code", "Dependency", "Infrastructure", "Pipeline", "Unclassifiable"] },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": { "type": "string", "enum": ["blocker", "defect", "note"] },
+          "description": { "type": "string" }
+        },
+        "required": ["severity", "description"]
+      }
+    },
+    "decision": { "type": "string" },
+    "blockers": { "type": "array", "items": { "type": "string" } }
+  },
+  "required": ["agent_name", "session_id", "triggered_by", "timestamp", "started_at", "duration_ms", "root_cause_category", "findings", "decision"]
+}

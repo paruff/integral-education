@@ -1,24 +1,26 @@
-# Build Report — LSC-02: Implement learner progress persistence (localStorage)
+# Build Report — NAV-01: Separate learner navigation from internal documentation
 
 ## Summary
 
-Created client-side progress tracking using localStorage. No backend required.
+Refactored Docusaurus configuration to use dual docs plugin instances — one for learner-facing content (`docs/`) and one for internal documentation (`internal/`). Removed Implementation, Quality, Safety, and Pilots sections from the learner sidebar. Updated all cross-links.
 
 ## Session
 
-- **Session ID:** `lsc-02-20260721`
-- **Branch:** `feature/lsc-02-progress-persistence`
+- **Session ID:** `nav-01-20260721`
+- **Branch:** `feature/nav-01-separate-navigation`
 
-## What was built
+## Changes
 
-| File | Purpose |
-|------|---------|
-| `src/hooks/useProgress.js` | localStorage hook: reads/writes `iel_progress_v1`, schema with modules/level/completed/lastVisited, try/catch for private browsing |
-| `src/components/ModuleComplete/index.js` + `styles.module.css` | "Mark complete" button + level selector (1-4), wired to useProgress |
-| `src/components/DailyReflectionForm/index.js` | Interactive daily reflection form with fillable text areas, saves to `iel_reflections_v1` |
-| `docs/my-progress.mdx` | Dashboard: modules completed, level per module, days since last activity, Clear button |
-| `docs/reflections/daily-template.mdx` | Converted from static .md to interactive MDX with DailyReflectionForm |
-| 5 module files | Added ModuleComplete component |
+| File | Action | Purpose |
+|------|--------|---------|
+| `docs/implementation/` → `internal/implementation/` | **Moved** | Internal docs |
+| `docs/quality/` → `internal/quality/` | **Moved** | Internal docs |
+| `docs/pilots/` → `internal/pilots/` | **Moved** | Internal docs |
+| `docs/safety/` → `internal/safety/` | **Moved** (crisis-resources.md kept in docs/safety/) | Internal docs |
+| `sidebars.js` | **Rewritten** | Learner-only sidebar (no Implementation/Quality/Safety/Pilots) |
+| `sidebarsInternal.js` | **Created** | Internal docs sidebar |
+| `docusaurus.config.js` | **Modified** | Dual plugin instances, updated navbar/footer |
+| 58 cross-link files | **Modified** | Updated `../safety/`, `../quality/` etc. to `/internal/` paths |
 
 ## Validation
 
@@ -26,7 +28,7 @@ Created client-side progress tracking using localStorage. No backend required.
 npm run build → [SUCCESS] Generated static files in "build".
 ```
 
-Pre-existing broken anchor warnings unchanged.
+All broken links resolved. Pre-existing anchor warnings (emoji-based heading IDs) unchanged.
 
 ## Blockers
 

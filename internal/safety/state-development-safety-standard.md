@@ -77,7 +77,7 @@ Before beginning any intensive state practice (causal, witnessing, or nondual le
 | Grounding practices on standby | At least two somatic grounding practices (e.g., 5-4-3-2-1 sensory anchor, cold water on wrists, slow rhythmic breathing) reviewed and practiced before intensive work begins |
 | Informed consent | Learner has read and acknowledged all contraindications, warning signs, and stop rules in this document |
 | Distress baseline | Current distress level ≤ 3 / 10 at session start; learner has been stable for at least 2 weeks before entering intensive practice |
-| Gross-state baseline established | Learner has completed foundational [gross-state](../modules/gross-state-awareness) and [subtle-state](../modules/subtle-state-access) modules and can reliably return to ordinary waking awareness (gross state = normal waking sensorimotor experience in AQAL) |
+| Gross-state baseline established | Learner has completed foundational [gross-state](../../docs/modules/gross-state-awareness) and [subtle-state](../../docs/modules/subtle-state-access) modules and can reliably return to ordinary waking awareness (gross state = normal waking sensorimotor experience in AQAL) |
 | Support network active | At least one trusted person in learner's physical life is aware that intensive state work is occurring and can be contacted if needed |
 | No isolation | Learner is not currently living alone without any social contact; intensive state work must not occur in conditions of prolonged solitude |
 

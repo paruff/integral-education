@@ -269,7 +269,7 @@ This module's practices prepare the *interior* of repair — the self-awareness 
 
 ## 📚 Evidence and Citations
 
-Evidence quality uses the canonical tiers from the [Evidence Vetting Checklist](../quality/evidence-vetting-checklist): **Tier A** = strong convergent evidence with multiple high-quality replications; **Tier B** = moderate evidence with meaningful limitations; **Tier C** = provisional or expert opinion.
+Evidence quality uses the canonical tiers from the [Evidence Vetting Checklist](/internal/quality/evidence-vetting-checklist): **Tier A** = strong convergent evidence with multiple high-quality replications; **Tier B** = moderate evidence with meaningful limitations; **Tier C** = provisional or expert opinion.
 
 | Framework / Claim | Source | Tier | Notes & Caveats |
 | :--- | :--- | :--- | :--- |

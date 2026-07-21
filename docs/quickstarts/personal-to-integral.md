@@ -63,8 +63,9 @@ By completing this QuickStart, you will have developed:
 
 - ✅ Increased self-awareness (I <Term term="Quadrant" definition="The I quadrant covers interior-individual experience — your thoughts, feelings, sensations, and states of consciousness." />)
 - ✅ Reduced emotional reactivity
-- ✅ Emerging systems perspective
-- ✅ First-person, second-person, and third-person views integrated
+- ✅ Initial shadow awareness — the ability to recognise patterns you usually project onto others
+
+These three modules focus on the I quadrant (first-person interior skills). Systems thinking and multi-perspective integration are addressed in later paths — see Next Steps below.
 
 ---
 
@@ -72,7 +73,7 @@ By completing this QuickStart, you will have developed:
 
 After completing this QuickStart, explore:
 
+- [Systems Thinking 101](../modules/systems-thinking-101) — develop a systems perspective and expand to collective quadrants
 - [AQAL Overview](../maps/aqal-overview) — understand the full map
 - [AQAL Glossary](../maps/glossary) — plain-language definitions for all terms
-- [Systems Thinking 101](../modules/systems-thinking-101) — expand to collective quadrants
 - [Daily Reflection Template](../reflections/daily-template) — track your ongoing growth

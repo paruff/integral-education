@@ -21,7 +21,7 @@ difficulty: Intermediate
 readingTime: 10
 practiceTime: 10
 ---
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
@@ -355,4 +355,4 @@ END
 - **Date:** [HUMAN REQUIRED]
 - **Notes:** [HUMAN REQUIRED]
 
-<NextStep />
+<ModuleFooter />

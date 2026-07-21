@@ -29,7 +29,6 @@ difficulty: Intermediate
 readingTime: 12
 practiceTime: 15
 ---
-import NextStep from '@site/src/components/NextStep';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 

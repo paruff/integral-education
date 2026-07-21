@@ -23,7 +23,7 @@ readingTime: 12
 practiceTime: 25
 ---
 
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
@@ -341,4 +341,4 @@ Evidence quality uses the canonical tiers from the [Evidence Vetting Checklist](
 - **Date:** [HUMAN REQUIRED]
 - **Notes:** [HUMAN REQUIRED]
 
-<NextStep />
+<ModuleFooter />

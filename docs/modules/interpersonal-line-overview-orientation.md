@@ -12,7 +12,7 @@ types: ["self-paced", "dialogue-supported"]
 
 tags: ["interpersonal-line", "Kegan", "Buber", "attachment", "Siegel", "relational-development", "subject-object", "I-Thou", "growing-up", "developmental-lines", "AQAL", "EI-08"]
 ---
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 
 
 **Position in sequence:** This is the first module in the **Interpersonal Line** suite (EI-08). It provides the theoretical and experiential foundation for all subsequent Interpersonal Line modules. No prerequisites are required, though familiarity with the [AQAL Overview](../maps/aqal-overview) is helpful. Learners who have completed [Emotional Line Overview & Orientation](./emotional-line-overview-orientation) or [Self Line Overview & Psychograph](./self-line-overview-psychograph) will find this module deepens and differentiates those foundations into the relational domain specifically.
@@ -335,4 +335,4 @@ This platform does not provide therapy or emergency care.
 
 :::
 
-<NextStep />
+<ModuleFooter />

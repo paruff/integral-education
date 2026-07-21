@@ -20,10 +20,9 @@ readingTime: 10
 practiceTime: 10
 prerequisites: None
 ---
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
-import ModuleComplete from '@site/src/components/ModuleComplete';
 
 
 <ModuleMeta />
@@ -92,6 +91,5 @@ Apply this in real life:
   {q: "What is steelmanning?", a: "Stating the strongest possible version of an opposing argument"},
 ]} />
 
-<ModuleComplete moduleId="cognitive-bias-101" moduleTitle="Cognitive Bias 101" />
 
-<NextStep />
+<ModuleFooter />

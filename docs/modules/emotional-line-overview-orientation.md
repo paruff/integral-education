@@ -28,7 +28,7 @@ readingTime: 8
 practiceTime: 12
 prerequisites: None
 ---
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
@@ -266,4 +266,4 @@ This module is rated **Tier 1 (self-guided, low intensity)**. It is conceptual a
 
 :::
 
-<NextStep />
+<ModuleFooter />

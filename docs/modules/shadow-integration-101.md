@@ -25,13 +25,12 @@ prerequisites:
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
 import ShadowGate from '@site/src/components/ShadowGate';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
-import ModuleComplete from '@site/src/components/ModuleComplete';
 
 <CrisisResourceBanner />
 
 <ShadowGate>
 
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 
@@ -116,8 +115,7 @@ Apply this in real life:
 
 **Escalation:** If distress persists after grounding, step away from the practice and contact a trusted support person or qualified counsellor. Do not continue the exercise alone.
 
-<ModuleComplete moduleId="shadow-integration-101" moduleTitle="Shadow Integration 101" />
 
-<NextStep />
+<ModuleFooter />
 
 </ShadowGate>

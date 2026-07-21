@@ -85,8 +85,8 @@ Key distinctions:
 |-------|-----------|
 | 1 | Notices when attention has drifted (retrospectively) |
 | 2 | Returns to breath within seconds of noticing drift |
-| 3 | Sustains focused attention for 5+ minutes |
-| 4 | Meta-awareness: observing the observer |
+| 3 | Sustains focused attention for 5+ minutes . *Example: "I sat for 10 minutes and my mind wandered maybe 15 times, but each time I noticed within a few seconds and returned to the breath. I never got lost in a thought for more than 30 seconds."*. *Example: "I sat for 10 minutes and my mind wandered maybe 15 times, but each time I noticed within seconds and returned to the breath. I never got lost in thought for more than half a minute."*|
+| 4 | Meta-awareness: observing the observer . *Example: "During an argument with my partner, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*. *Example: "During a tense conversation, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*|
 
 ---
 

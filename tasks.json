@@ -1,35 +1,50 @@
-{
-  "tasks": [
-    {
-      "id": "1",
-      "title": "Create ShadowGate component",
-      "description": "Create src/components/ShadowGate/index.js and styles.module.css. Component renders consent check, contraindications list, distress radio (1-10), Mindfulness Basics confirmation. Blocks entry if distress ≥ 7 or contraindication checked. Uses sessionStorage for per-session acknowledgment.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {"id": "AC-1", "description": "ShadowGate component exists at src/components/ShadowGate/", "test_type": "unit"},
-        {"id": "AC-2", "description": "Gate displays consent, contraindications, distress 1-10, Mindfulness Basics check", "test_type": "unit"},
-        {"id": "AC-3", "description": "Distress ≥ 7 blocks entry with grounding + crisis banner", "test_type": "unit"},
-        {"id": "AC-4", "description": "Contraindication blocks entry with 'not suitable' message + links", "test_type": "unit"},
-        {"id": "AC-5", "description": "sessionStorage prevents re-fire within session", "test_type": "unit"}
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Wrap all 12 shadow modules in ShadowGate",
-      "description": "Wrap module body content in <ShadowGate>...</ShadowGate> in all 12 modules with 'shadow' in filename. Gate renders below CrisisResourceBanner.",
-      "dependencies": ["1"],
-      "acceptance_criteria": [
-        {"id": "AC-6", "description": "Gate injected into all 12 shadow modules", "test_type": "unit"}
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Validate build",
-      "description": "Run npm run build and verify no errors.",
-      "dependencies": ["1", "2"],
-      "acceptance_criteria": [
-        {"id": "AC-7", "description": "npm run build passes", "test_type": "unit"}
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "lsc-01-1",
+    "description": "Create RetrievalCard component: question visible, answer hidden/revealed on click, I remembered/Need review buttons, keyboard accessible",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": [],
+    "acceptance": "Component renders question, hides answer, click reveals, tracks correct/incorrect, keyboard navigable (tab/enter)"
+  },
+  {
+    "id": "lsc-01-2",
+    "description": "Create RetrievalPrompt component: wraps cards sequentially, scoring, schedule section with copy-to-clipboard 24h/7d",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": ["lsc-01-1"],
+    "acceptance": "Renders cards one at a time, scores, shows schedule section after all done, copy buttons work"
+  },
+  {
+    "id": "lsc-01-3",
+    "description": "Verify build passes with new components (no module changes yet)",
+    "type": "verification",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-1", "lsc-01-2"],
+    "acceptance": "npm run build passes — components exist but not yet imported by any module"
+  },
+  {
+    "id": "lsc-01-4",
+    "description": "Replace Anki cards with RetrievalPrompt in 5 representative modules (batch 1)",
+    "type": "code",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-3"],
+    "acceptance": "5 modules updated: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation, shadow-work-foundation, emotional-intelligence-somatic-line"
+  },
+  {
+    "id": "lsc-01-5",
+    "description": "Replace Anki cards with RetrievalPrompt in remaining 50 modules (batch 2)",
+    "type": "code",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-4"],
+    "acceptance": "All 55 modules converted from static Anki section to RetrievalPrompt component"
+  },
+  {
+    "id": "lsc-01-6",
+    "description": "Verify npm run build passes after all module replacements",
+    "type": "verification",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-5"],
+    "acceptance": "npm run build → [SUCCESS] with zero errors across all 55 converted modules"
+  }
+]

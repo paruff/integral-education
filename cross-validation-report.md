@@ -1,42 +1,32 @@
-# Cross-Validation Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
+# Cross-Validation Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Session
 
-- **Session ID:** `safe-02-20260720`
-- **Branch:** `fix/safe-02-safety-gate-banner`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
-## Cross-Validation: Issue #315 vs Implementation
+## Issue #317 vs Implementation
 
 | Issue Requirement | Implementation | Consistent? |
 |-------------------|----------------|-------------|
-| ShadowGate component in `src/components/` | `src/components/ShadowGate/index.js` + `styles.module.css` | ✅ YES |
-| Gate displays consent, contraindications, distress, Mindfulness Basics | All four form elements present | ✅ YES |
-| Distress ≥ 7 blocks with grounding + crisis banner | `blockReason === 'distress'` renders grounding box + CrisisResourceBanner | ✅ YES |
-| Contraindication blocks with "not suitable" + links | `blockReason === 'contraindication'` renders links to MB + crisis | ✅ YES |
-| sessionStorage per-session acknowledgment | `sessionStorage.getItem('shadow-gate-acknowledged')` on mount | ✅ YES |
-| Injected at top of all shadow modules | 12 modules with "shadow" in filename | ✅ YES |
-| Build passes | SUCCESS | ✅ YES |
+| RetrievalCard: question shown, answer hidden until click, correct/incorrect tracked | Question visible, answer behind "Show Answer" button, "I remembered"/"Need review" buttons, scores[] tracked | ✅ YES |
+| RetrievalPrompt: wraps all cards, renders one at a time | Sequential rendering via currentIndex state | ✅ YES |
+| After all cards: schedule section with copy text 24h + 7d | Score summary + copy-to-clipboard buttons with pre-formatted dates | ✅ YES |
+| Replace static ## 🧠 Anki Cards with component import | All 55 modules converted, zero old sections remain | ✅ YES |
+| Keyboard accessible | Standard button elements, aria-labels, Tab/Enter/Space | ✅ YES |
+| npm run build passes | [SUCCESS] | ✅ YES |
 
-## Cross-Validation: Specification vs Implementation
+## Specification vs Implementation
 
-| Req | Requirement | Implementation | Consistent? |
-|-----|-------------|----------------|-------------|
-| AC-1 | Component exists | ✅ Created | ✅ YES |
-| AC-2 | Four gate elements | ✅ All present | ✅ YES |
-| AC-3 | Distress block | ✅ Grounding + CrisisResourceBanner + override | ✅ YES |
-| AC-4 | Contraindication block | ✅ "Not suitable" + MB + crisis links | ✅ YES |
-| AC-5 | sessionStorage | ✅ Per-session check on mount | ✅ YES |
-| AC-6 | 12 module imports | ✅ All 12 confirmed | ✅ YES |
-| AC-7 | Build passes | ✅ SUCCESS | ✅ YES |
-
-## Dependency Check: SAFE-01 vs Implementation
-
-| SAFE-01 Dependency | Included? | Consistent? |
-|--------------------|-----------|-------------|
-| CrisisResourceBanner component | ✅ Copied from SAFE-01 branch | ✅ YES |
-| crisis-resources.md page | ✅ Copied from SAFE-01 branch | ✅ YES |
-| Banner imported in shadow modules | ✅ All 12 shadow modules have CrisisResourceBanner + ShadowGate | ✅ YES |
+| AC | Requirement | Implementation | Consistent? |
+|----|-------------|----------------|-------------|
+| AC-1 | RetrievalCard interactive | ✅ Question/reveal/outcome pattern | ✅ YES |
+| AC-2 | RetrievalPrompt sequential + schedule | ✅ One-at-a-time + completion screen + copy | ✅ YES |
+| AC-3 | 5 batch-1 modules | ✅ All 5 converted | ✅ YES |
+| AC-4 | All 55 modules | ✅ Full conversion verified | ✅ YES |
+| AC-5 | Keyboard accessible | ✅ Standard buttons + aria labels | ✅ YES |
+| AC-6 | Build passes | ✅ [SUCCESS] | ✅ YES |
 
 ## Cross-Validation Result
 
-**PASS** ✅ — Implementation fully consistent with specification and issue #315. All 7 requirements satisfied. SAFE-01 dependency included. Proceed to Phase 5 (Delivery).
+**PASS** ✅ — Implementation fully consistent with specification and issue #317. All 6 requirements satisfied. No live-system criteria. Proceed to Phase 5 (Delivery).

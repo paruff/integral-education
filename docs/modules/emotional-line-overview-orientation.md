@@ -29,6 +29,7 @@ practiceTime: 12
 prerequisites: None
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 
@@ -214,41 +215,19 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="Emotional Line Overview & Orientation" cards={
+  {q: "In AQAL, what does the Emotional line primarily track?", a: "The development of affective complexity: differentiating, regulating, communicating, and integrating emotional experience with increasing precision."},
+  {q: "How is the Emotional line different from mood?", a: "Mood is a diffuse background affective climate; the Emotional line is a developmental capacity trajectory."},
+  {q: "What is the plain-language core of Barrett's constructed emotion theory?", a: "Emotions are predictions constructed from body signals, prior experience, context, and learned concepts, not fixed hardwired packets."},
+  {q: "Why does emotional vocabulary expansion support development?", a: "Richer concepts improve discrimination and prediction, which improves regulation options."},
+  {q: "What does RULER stand for?", a: "Recognize, Understand, Label, Express, Regulate."},
+  {q: "What characterizes L2 Emotional line development?", a: "Granular emotion labeling linked to somatic correlates."},
+  {q: "What is the L3 trigger-appraisal-regulation chain?", a: "Event → appraisal/interpretation → emotion → chosen regulation strategy."},
+  {q: "What defines L4 Emotional line capacity?", a: "Co-regulation and facilitation: helping others and groups regulate and integrate emotional dynamics."},
+  {q: "What is a key pre/trans confusion in this module?", a: "Intellectual mastery of affective theory being mistaken for emotional development."},
+  {q: "What is the difference between suppression and regulation?", a: "Suppression narrows awareness and often increases load; regulation modulates emotion while preserving awareness and adaptive function."}
+} />
 
-Q: In AQAL, what does the Emotional line primarily track?
-A: The development of affective complexity: differentiating, regulating, communicating, and integrating emotional experience with increasing precision.
-
-Q: How is the Emotional line different from mood?
-A: Mood is a diffuse background affective climate; the Emotional line is a developmental capacity trajectory.
-
-Q: What is the plain-language core of Barrett's constructed emotion theory?
-A: Emotions are predictions constructed from body signals, prior experience, context, and learned concepts, not fixed hardwired packets.
-
-Q: Why does emotional vocabulary expansion support development?
-A: Richer concepts improve discrimination and prediction, which improves regulation options.
-
-Q: What does RULER stand for?
-A: Recognize, Understand, Label, Express, Regulate.
-
-Q: What characterizes L2 Emotional line development?
-A: Granular emotion labeling linked to somatic correlates.
-
-Q: What is the L3 trigger-appraisal-regulation chain?
-A: Event → appraisal/interpretation → emotion → chosen regulation strategy.
-
-Q: What defines L4 Emotional line capacity?
-A: Co-regulation and facilitation: helping others and groups regulate and integrate emotional dynamics.
-
-Q: What is a key pre/trans confusion in this module?
-A: Intellectual mastery of affective theory being mistaken for emotional development.
-
-Q: What is the difference between suppression and regulation?
-A: Suppression narrows awareness and often increases load; regulation modulates emotion while preserving awareness and adaptive function.
-
----
-
-## 📚 Evidence and Citations
 
 Evidence quality is rated as Tier A (strong convergent evidence), Tier B (moderate convergent evidence or strong applied/theoretical synthesis), Tier C (provisional or largely heuristic).
 

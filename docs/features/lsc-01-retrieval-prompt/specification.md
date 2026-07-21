@@ -1,4 +1,6 @@
 # Specification: LSC-01 — Implement live spaced retrieval prompts at module end
+> **Issue #317** | **PR #341** | Archived from feature-flow session
+
 
 ## Problem
 

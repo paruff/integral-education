@@ -25,6 +25,7 @@ prerequisites:
 - rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 
@@ -89,18 +90,10 @@ Apply this in real life:
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="Systems Thinking 101" cards={
+  {q: "What is a feedback loop?", a: "A causal chain where output becomes input, either reinforcing or balancing the system"},
+  {q: "What is emergence in systems thinking?", a: "Properties that arise from the interaction of parts and cannot be reduced to any single part"},
+  {q: "What is a leverage point?", a: "A place in a system where small changes produce large effects"},
+  {q: "What is the difference between a reinforcing and balancing loop?", a: "Reinforcing loops amplify change (growth or collapse); balancing loops stabilize the system toward a goal"}
+} />
 
-Q: What is a feedback loop?
-A: A causal chain where output becomes input, either reinforcing or balancing the system
-
-Q: What is emergence in systems thinking?
-A: Properties that arise from the interaction of parts and cannot be reduced to any single part
-
-Q: What is a leverage point?
-A: A place in a system where small changes produce large effects
-
-Q: What is the difference between a reinforcing and balancing loop?
-A: Reinforcing loops amplify change (growth or collapse); balancing loops stabilize the system toward a goal
-
-<NextStep />

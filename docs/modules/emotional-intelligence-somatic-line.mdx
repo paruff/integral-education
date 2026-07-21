@@ -46,7 +46,7 @@ prerequisites:
 - rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
-
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 import Admonition from '@theme/Admonition';
 import ModuleMeta from '@site/src/components/ModuleMeta';
@@ -422,30 +422,13 @@ Write this commitment in your journal. Return to it in 7 days to record what hap
 
 ---
 
-## 🧠 Anki Cards
-
-**Q:** What is the central difference between Orange's emotional management and Green's emotional intelligence?
-**A:** Orange treats emotion as signal that can interfere with clear thinking and manages it accordingly — suppressing, minimizing, or overriding emotional states to maintain performance. Green treats emotion as *information* — a signal that tracks relational, contextual, and value-relevant events and that must be decoded rather than managed. The distinction is not the amount of emotion felt but the *relationship* to the emotional signal.
-
----
-
-**Q:** What is the somatic line of development, and why is it distinct from cognitive emotional intelligence?
-**A:** The somatic line is the capacity for body-based knowing: accurate interoception, somatic pattern recognition, somatic residue awareness, and somatic attunement to others. It is distinct from cognitive emotional intelligence because a person can develop sophisticated emotional vocabulary (cognitive-emotional) while remaining somatically cut off, and vice versa. Orange's cognitive dominance systematically suppresses somatic access; the Rational → Pluralistic transition requires re-opening it.
-
----
-
-**Q:** What are the three patterns the Stabilize Pre/Trans Checkpoint distinguishes?
-**A:** (1) **Genuine emotional intelligence** — emotion fully present, reflective capacity maintained, regulation integrative rather than suppressive; (2) **Emotional flooding** — activation exceeds regulatory capacity, reflection temporarily disabled, emotion experienced as global and urgent; (3) **Emotional performance** — emotional display calibrated to audience rather than authentic interior state, expressing what one believes one *should* feel or what produces desired social response.
-
----
-
-**Q:** What is Siegel's "window of tolerance" and how does it relate to emotional intelligence development?
-**A:** The window of tolerance is the range of emotional activation within which integrated processing — feeling *and* reflecting simultaneously — is possible. Below the window, the person is underactivated (numb, dissociated, emotionally absent). Above the window, flooding occurs. Genuine emotional intelligence expands the window: it increases the range of emotional intensity that can be fully felt while reflective capacity is maintained. Development requires working at the edge of the window — not avoiding activation, but not exceeding the regulatory capacity to hold it.
-
----
-
-**Q:** In Wilber's pre/trans distinction applied to emotional development, what is the key distinguishing question between pre-rational emotional reactivity and Green emotional integration?
-**A:** Can you feel the emotion fully while remaining capable of reflection? Pre-rational emotional reactivity disables reflective capacity — the self is *subject to* the emotion. Green emotional intelligence maintains the "observing self" throughout the emotional experience — the self *includes* the emotion rather than being dissolved into it. Both involve more emotional presence than Orange suppression; they are structurally opposite in terms of regulatory capacity.
+<RetrievalPrompt moduleName="Emotional Intelligence & Somatic Line" cards={[
+  {q: "What is the central difference between Orange's emotional management and Green's emotional intelligence?", a: "Orange treats emotion as signal that can interfere with clear thinking and manages it accordingly — suppressing, minimizing, or overriding emotional states to maintain performance. Green treats emotion as *information* — a signal that tracks relational, contextual, and value-relevant events and that must be decoded rather than managed. The distinction is not the amount of emotion felt but the *relationship* to the emotional signal."},
+  {q: "What is the somatic line of development, and why is it distinct from cognitive emotional intelligence?", a: "The somatic line is the capacity for body-based knowing: accurate interoception, somatic pattern recognition, somatic residue awareness, and somatic attunement to others. It is distinct from cognitive emotional intelligence because a person can develop sophisticated emotional vocabulary (cognitive-emotional) while remaining somatically cut off, and vice versa. Orange's cognitive dominance systematically suppresses somatic access; the Rational → Pluralistic transition requires re-opening it."},
+  {q: "What are the three patterns the Stabilize Pre/Trans Checkpoint distinguishes?", a: "(1) Genuine emotional intelligence — emotion fully present, reflective capacity maintained, regulation integrative rather than suppressive; (2) Emotional flooding — activation exceeds regulatory capacity, reflection temporarily disabled, emotion experienced as global and urgent; (3) Emotional performance — emotional display calibrated to audience rather than authentic interior state, expressing what one believes one should feel or what produces desired social response."},
+  {q: "What is Siegel's window of tolerance and how does it relate to emotional intelligence development?", a: "The window of tolerance is the range of emotional activation within which integrated processing — feeling and reflecting simultaneously — is possible. Below the window, the person is underactivated (numb, dissociated, emotionally absent). Above the window, flooding occurs. Genuine emotional intelligence expands the window: it increases the range of emotional intensity that can be fully felt while reflective capacity is maintained. Development requires working at the edge of the window — not avoiding activation, but not exceeding the regulatory capacity to hold it."},
+  {q: "In Wilber's pre/trans distinction applied to emotional development, what is the key distinguishing question between pre-rational emotional reactivity and Green emotional integration?", a: "Can you feel the emotion fully while remaining capable of reflection? Pre-rational emotional reactivity disables reflective capacity — the self is subject to the emotion. Green emotional intelligence maintains the observing self throughout the emotional experience — the self includes the emotion rather than being dissolved into it. Both involve more emotional presence than Orange suppression; they are structurally opposite in terms of regulatory capacity."},
+]} />
 
 ---
 

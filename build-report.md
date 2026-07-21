@@ -1,87 +1,63 @@
-# Build Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
+# Build Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Summary
 
-Created a `ShadowGate` React component that enforces the Tier 1 entry criteria defined in the Shadowwork Safety Standard. The gate renders a consent and readiness check before module content, blocking entry when self-reported distress is ≥ 7 or contraindications are present. Uses `sessionStorage` for per-session acknowledgment. Also includes CrisisResourceBanner and crisis-resources page (SAFE-01 dependency).
+Created two React components (`RetrievalCard` + `RetrievalPrompt`) to replace static Anki card sections with interactive retrieval practice. Converted all 55 module files from static `## 🧠 Anki Cards` Q/A blocks to `<RetrievalPrompt>` component with reveal-on-click, self-scoring, and copy-to-clipboard schedule reminders.
 
 ## Session
 
-- **Session ID:** `safe-02-20260720`
-- **Branch:** `fix/safe-02-safety-gate-banner`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
-## Dependency Note
+## Components Created
 
-SAFE-02 depends on SAFE-01 (crisis resource banner). Since SAFE-01 (#337) is not yet merged, this branch includes both the CrisisResourceBanner component and crisis-resources page from SAFE-01, plus the new ShadowGate component.
+| Component | File | Purpose |
+|-----------|------|---------|
+| `RetrievalCard` | `src/components/RetrievalCard/index.js` + `styles.module.css` | Individual flashcard: question visible, answer hidden until click, "I remembered" / "Need review" buttons |
+| `RetrievalPrompt` | `src/components/RetrievalPrompt/index.js` + `styles.module.css` | Wrapper: sequential card review, scoring, schedule section with copy-to-clipboard 24h/7d reminders |
+
+## RetrievalCard States
+
+```
+UNREVEALED → [Show Answer ↓] click → REVEALED
+  → [I remembered] / [Need to review] buttons → OUTCOME
+  → Badge: "✓ Remembered" or "↻ Marked for review"
+```
+
+## RetrievalPrompt States
+
+```
+ACTIVE → sequential RetrievalCards (one at a time)
+  → card completed → next card
+  → all cards done → COMPLETION
+    → Score summary: X/Y correct
+    → Schedule section: copy-to-clipboard for 24h + 7d
+```
+
+## Module Conversion
+
+| Batch | Modules | Status |
+|-------|---------|--------|
+| Batch 1 (manual) | 5 modules: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation, shadow-work-foundation, emotional-intelligence-somatic-line | ✅ Done |
+| Batch 2 (script) | 50 remaining modules | ✅ Done |
+
+**Total: 55 modules converted, 0 old Anki Cards remaining**
 
 ## Files Changed
 
-| File | Action | Purpose |
-|------|--------|---------|
-| `src/components/ShadowGate/index.js` | **Created** | Tier 1 gate component: consent, contraindications, distress check, Mindfulness Basics confirmation |
-| `src/components/ShadowGate/styles.module.css` | **Created** | Infima-themed gate styling with block/grounding states |
-| `src/components/CrisisResourceBanner/index.js` | **Copied** | From SAFE-01 branch (dependency) |
-| `src/components/CrisisResourceBanner/styles.module.css` | **Copied** | From SAFE-01 branch (dependency) |
-| `docs/safety/crisis-resources.md` | **Copied** | From SAFE-01 branch (dependency) |
-| 12 shadow module files | Modified | Added CrisisResourceBanner + ShadowGate imports/wrappers |
+| Category | Count |
+|----------|-------|
+| New component files | 4 (`src/components/RetrievalCard/`, `src/components/RetrievalPrompt/`) |
+| Modified modules | 55 (`docs/modules/*.md`, `docs/modules/*.mdx`) |
 
-## Tasks Completed
+## Validation
 
-| # | Task | Status | Notes |
-|---|------|--------|-------|
-| 1 | Create ShadowGate component | ✅ Done | Consent, contraindications, distress 1-10, Mindfulness Basics; blocks at distress ≥ 7 or contraindication; sessionStorage acknowledgment |
-| 2 | Wrap all 12 shadow modules | ✅ Done | All modules with "shadow" in filename |
-| 3 | Validate build | ✅ Done | `npm run build` SUCCESS |
-
-## Component Architecture — ShadowGate
-
-```
-Gate states:
-  ┌──────────────────┐
-  │ MOUNT            │
-  │ Check sessionStorage
-  │ for prior ack    │
-  └──────┬───────────┘
-         │
-    ┌────▼────┐ YES  ┌──────────┐
-    │ Ack'd?  │─────▶│ RENDER   │
-    └────┬────┘      │ children │
-         │ NO        └──────────┘
-         ▼
-  ┌──────────────┐
-  │ DISPLAY GATE │
-  │ - consent    │
-  │ - mindfulness│
-  │ - contraind. │
-  │ - distress   │
-  └──────┬───────┘
-         │ [Proceed]
-    ┌────▼────┐ YES  ┌──────────────────┐
-    │ ≥ 7?    │─────▶│ BLOCK: grounding │
-    └────┬────┘      │ + crisis banner  │
-         │ NO        │ + override opt   │
-    ┌────▼────────┐  └──────────────────┘
-    │ Contraind?  │ YES  ┌────────────────────┐
-    └────┬────────┘─────▶│ BLOCK: not suitable │
-         │ NO            │ + links to MB/crisis│
-         ▼               └────────────────────┘
-  ┌──────────────┐
-  │ sessionStore │
-  │ → RENDER     │
-  └──────────────┘
-```
-
-## Validation Results
-
-### Build
 ```
 npm run build → [SUCCESS] Generated static files in "build".
 ```
-Pre-existing broken anchor warnings (emoji-based heading IDs) — not caused by these changes.
 
-### Gate Import Count
-```
-grep -rl 'ShadowGate' docs/modules/ → 12 files
-```
+- Pre-existing broken anchor warnings (emoji-based heading IDs) — not caused by this change
+- One fix applied: double-quotes in `relativism-limits-of-pluralism.mdx` title escaped to single quotes
 
 ## Blockers
 

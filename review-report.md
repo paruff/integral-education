@@ -1,52 +1,45 @@
-# Review Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
+# Review Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Session
 
-- **Session ID:** `safe-02-20260720`
-- **Branch:** `fix/safe-02-safety-gate-banner`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| ShadowGate component created | ✅ | `src/components/ShadowGate/index.js` + `styles.module.css` |
-| Consent statement displayed | ✅ | I quadrant framing, no therapy claims |
-| Contraindications: trauma, PTSD, crisis | ✅ | Three checkboxes matching safety standard |
-| Distress 1-10 radio | ✅ | 10 radio buttons; 7-10 marked with danger color |
-| Mindfulness Basics confirmation | ✅ | Checkbox with link to module |
-| Distress ≥ 7 blocks | ✅ | Grounding box + CrisisResourceBanner + override |
-| Contraindication blocks | ✅ | "Not suitable" + links to MB + crisis resources |
-| sessionStorage acknowledgment | ✅ | per-session; cleared on browser close |
-| Gate in all 12 shadow modules | ✅ | Confirmed by grep |
-| Build passes | ✅ | SUCCESS |
-
-**Verdict: All requirements satisfied.**
+| RetrievalCard component exists | ✅ | `src/components/RetrievalCard/index.js` + `styles.module.css` |
+| Answer hidden by default | ✅ | `useState(false)` → button → `setRevealed(true)` |
+| I remembered / Need review buttons | ✅ | Two buttons, both keyboard focusable |
+| RetrievalPrompt wraps cards sequentially | ✅ | `currentIndex` state, `RetrievalCard` component per card |
+| Scoring tracked per session | ✅ | `scores[]` array in component state |
+| Completion screen with score | ✅ | Score circle, message, schedule section |
+| Copy-to-clipboard 24h + 7d | ✅ | `navigator.clipboard.writeText()` with textarea fallback |
+| 55 modules converted | ✅ | All static Anki sections replaced |
+| Build passes | ✅ | `[SUCCESS]` |
 
 ## Scope Discipline
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only the 12 shadow modules (filename contains "shadow"). State modules excluded per spec. |
-| SAFE-01 dependency | ✅ Included CrisisResourceBanner + crisis-resources page since not yet merged |
-| Unnecessary changes | **None.** Gate wrapper only; all module content preserved intact. |
+| Scope creep | **None.** Components built as specified; module conversion limited to Anki card replacement. |
+| Unnecessary changes | **None.** Module content outside Anki section untouched. |
 
-## Safety Assessment
+## Maintainability
 
-| Aspect | Assessment |
-|--------|------------|
-| Gate severity | Distress block at ≥ 7 (not the ideal ≤ 3 from safety standard) — pragmatic floor, not best-practice ceiling |
-| Override path | Distress block has "I've grounded and still want to proceed" escape — respects learner autonomy |
-| No override for contraindications | Contraindication block has no override — correct: "not suitable right now" |
-| sessionStorage vs localStorage | sessionStorage clears on browser close — correct for per-session gate |
-| CrisisResourceBanner integration | Crisis banner rendered in distress block state |
+- Components follow existing `src/components/` pattern (index.js + styles.module.css)
+- Infima theme variables used throughout (no hardcoded colors)
+- Keyboard accessible: standard button elements, aria-labels
+- Single source of truth for styling (CSS modules)
 
 ## Risk Assessment
 
 | Risk | Severity | Mitigation |
 |------|----------|------------|
-| Gate fatigue (learners dismiss without reading) | Medium | Gate is structural (must interact), not a cookie banner — requires explicit consent/check action |
-| sessionStorage unavailable (rare) | Low | Gate shows; on next page load within session, gate re-fires (acceptable degradation) |
-| Pre-existing broken anchors | Low | Not caused by these changes; pre-existing in all 12 shadow modules |
+| Copy-to-clipboard fails in older browsers | Low | Fallback to textarea select + execCommand |
+| Long answers overflow card | Low | CSS handles overflow with scroll |
+| sessionStorage unavailable (rare) | None | Scores are in component state only; no persistence attempted |
 
 ## Review Result
 

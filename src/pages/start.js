@@ -295,6 +295,9 @@ export default function StartPage() {
               <button className={styles.resetBtn} onClick={handleReset}>
                 Retake Assessment
               </button>
+              <p style={{ marginTop: '1rem' }}>
+                <Link to="/line-profile">Take your Line Profile →</Link> — find which developmental lines to focus on next.
+              </p>
             </div>
           </>
         )}

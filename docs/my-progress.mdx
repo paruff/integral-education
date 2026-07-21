@@ -6,9 +6,10 @@ description: Track your learning progress across all modules.
 ---
 
 import useProgress from '@site/src/hooks/useProgress';
+import Link from '@docusaurus/Link';
 
 export function ProgressDashboard() {
-  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity } = useProgress();
+  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile } = useProgress();
 
   if (!isAvailable) {
     return (
@@ -28,6 +29,33 @@ export function ProgressDashboard() {
         <p><strong>Modules completed:</strong> {completedCount} of {totalModules}</p>
         {daysSince !== null && (
           <p><strong>Last activity:</strong> {daysSince === 0 ? 'Today' : `${daysSince} day${daysSince === 1 ? '' : 's'} ago`}</p>
+        )}
+
+        {hasLineProfile && data.lineProfile && (
+          <div className="margin-top--md margin-bottom--md" style={{ padding: '1rem', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '0.75rem' }}>
+            <h3 style={{ marginTop: 0 }}>Line Profile</h3>
+            {['cognitive', 'emotional', 'moral', 'interpersonal', 'somatic', 'spiritual'].map((line) => {
+              const level = data.lineProfile[line];
+              return (
+                <div key={line} style={{ marginBottom: '0.5rem' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.85rem' }}>
+                    <span style={{ fontWeight: 600, textTransform: 'capitalize' }}>{line}</span>
+                    <span style={{ color: 'var(--ifm-color-emphasis-600)' }}>{['', 'Not yet', 'Beginning', 'Competent', 'Strong'][level]}</span>
+                  </div>
+                  <div style={{ height: '6px', background: 'var(--ifm-color-emphasis-200)', borderRadius: '3px' }}>
+                    <div style={{ height: '100%', width: `${(level / 4) * 100}%`, background: 'var(--ifm-color-primary)', borderRadius: '3px' }} />
+                  </div>
+                </div>
+              );
+            })}
+            <Link to="/line-profile" className="margin-top--sm" style={{ fontSize: '0.9rem' }}>Retake Line Profile →</Link>
+          </div>
+        )}
+
+        {!hasLineProfile && (
+          <p className="margin-top--md">
+            <Link to="/line-profile">Take your Line Profile →</Link> to see your development across six key lines.
+          </p>
         )}
       </div>
 

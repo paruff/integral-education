@@ -4,6 +4,7 @@ const STORAGE_KEY = 'iel_progress_v1';
 
 const DEFAULT_DATA = {
   modules: {},
+  lineProfile: null,
   lastUpdated: null,
 };
 
@@ -98,6 +99,22 @@ export default function useProgress() {
     (m) => m.completed
   ).length;
 
+  const updateLineProfile = useCallback((profile) => {
+    const now = new Date().toISOString();
+    setData((prev) => {
+      const current = prev || { ...DEFAULT_DATA };
+      const newData = {
+        ...current,
+        lineProfile: profile,
+        lastUpdated: now,
+      };
+      saveToStorage(newData);
+      return newData;
+    });
+  }, []);
+
+  const hasLineProfile = safeData.lineProfile !== null;
+
   return {
     data: safeData,
     isAvailable,
@@ -106,5 +123,7 @@ export default function useProgress() {
     clear,
     getDaysSinceLastActivity,
     completedCount,
+    updateLineProfile,
+    hasLineProfile,
   };
 }

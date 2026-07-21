@@ -32,6 +32,10 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
+:::info Before this module
+This module assumes you have a basic mindfulness practice — the capacity to observe your experience without immediately reacting to it. Being able to notice what you feel is the foundation on which naming what you feel is built.
+:::
+
 ## AQAL Mapping
 | Dimension | Framework Mapping |
 | :--- | :--- |

@@ -10,7 +10,7 @@ tags: ["aqal", "integral", "framework", "map"]
 
 **AQAL** = All Quadrants, All Levels, All Lines, All States, All Types
 
-Developed by Ken Wilber, AQAL is the most comprehensive map of human experience and development available. It is a *map* — not the territory — but a useful orienting framework.
+Developed by Ken Wilber, AQAL is one of the most ambitious integrating frameworks in adult development theory — a map that synthesizes many streams, while remaining a map rather than the territory.
 
 :::tip New to AQAL?
 
@@ -21,6 +21,16 @@ AQAL is a framework for understanding human development across five dimensions: 
 ## Quick Summary
 
 AQAL says: **every situation has at least four perspectives** (the quadrants), **people grow through predictable stages** (levels), **different capacities develop at different rates** (lines), **temporary states of consciousness are trainable** (states), and **stable personality styles colour everything** (types). Together, these five dimensions help you see what you might be missing — in yourself, in others, and in the systems you inhabit.
+
+## Companion Frameworks
+
+AQAL is not the only systematizing framework in adult development. Several peer-reviewed alternatives offer complementary perspectives:
+
+- **Kegan's Constructive-Developmental Theory** — maps how the structure of meaning-making evolves through five orders of consciousness, from the socialized mind (Stage 3) to the self-transforming mind (Stage 5). Kegan's framework has stronger empirical grounding in subject-object interview methodology than AQAL's broad synthesis.
+- **Cook-Greuter's Ego Development Research** — extends Loevinger's Washington University Sentence Completion Test into post-conventional stages, providing one of the most replicated empirical measures of developmental level. The ego development line overlaps substantially with what AQAL calls the self-line.
+- **Graves/Beck Spiral Dynamics** — models value systems as vMEMEs that emerge in response to changing life conditions. Spiral Dynamics influenced Wilber's colour-coding of levels but derives from a distinct research tradition with its own evidence base.
+
+These frameworks are not competitors to AQAL — they are alternate maps of overlapping terrain. Each has strengths and limitations; none captures everything.
 
 ## Quick Reference
 

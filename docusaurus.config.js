@@ -24,6 +24,15 @@ const config = {
         indexPages: true,
       }),
     ],
+    [
+      '@docusaurus/plugin-content-docs',
+      ({
+        id: 'internal',
+        path: 'internal',
+        routeBasePath: 'internal',
+        sidebarPath: require.resolve('./sidebarsInternal.js'),
+      }),
+    ],
   ],
 
   presets: [
@@ -71,11 +80,6 @@ const config = {
             position: 'left',
           },
           {
-            to: '/prototype',
-            label: 'Prototype',
-            position: 'right',
-          },
-          {
             href: 'https://github.com/paruff/integral-education',
             label: 'GitHub',
             position: 'right',
@@ -91,6 +95,15 @@ const config = {
               {
                 label: 'Introduction',
                 to: '/docs/intro',
+              },
+            ],
+          },
+          {
+            title: 'Contributors',
+            items: [
+              {
+                label: 'Facilitator & contributor docs',
+                to: '/internal/implementation/product-charter',
               },
             ],
           },

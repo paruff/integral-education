@@ -13,8 +13,8 @@ This taxonomy defines Integral Life Practice (ILP) categories, taxonomy dimensio
 Canonical references:
 
 - [AQAL Label Crosswalk](../maps/aqal-label-crosswalk)
-- [Shadowwork Safety Standard](../safety/shadowwork-safety-standard)
-- [Instructional Design Protocol](../quality/instructional-design-protocol)
+- [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard)
+- [Instructional Design Protocol](/internal/quality/instructional-design-protocol)
 
 ---
 
@@ -160,7 +160,7 @@ Each ladder covers **Levels 1–4** (Beginner → Advanced). Criteria for advanc
 
 ### 3.4 Shadow
 
-> **[HUMAN-REQUIRED]** Safety boundaries for this ladder must be reviewed and approved by a qualified SME before use in live cohorts. See [Shadowwork Safety Standard](../safety/shadowwork-safety-standard).
+> **[HUMAN-REQUIRED]** Safety boundaries for this ladder must be reviewed and approved by a qualified SME before use in live cohorts. See [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard).
 
 | Level | Name | Criteria to Enter | Example Practices | Developmental Line Focus |
 |---|---|---|---|---|
@@ -176,7 +176,7 @@ Each ladder covers **Levels 1–4** (Beginner → Advanced). Criteria for advanc
 - If Level 3 is inaccessible: substitute with cognitive reframing (Mind family) until regulation is stable.
 - Always offer sensory grounding as an exit from any shadow practice.
 
-**Stop rules:** Stop immediately if escalating panic, dissociation, inability to orient, or risk expression to self or others is present. Refer to [Shadowwork Safety Standard](../safety/shadowwork-safety-standard).
+**Stop rules:** Stop immediately if escalating panic, dissociation, inability to orient, or risk expression to self or others is present. Refer to [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard).
 
 ---
 
@@ -277,7 +277,7 @@ Each practice implementation must define the following fields:
 | AQAL tags | Quadrant(s), Level, Line(s), State, Type notes |
 | Duration | Short / Medium / Long / Extended |
 | Intensity | Low / Moderate / High |
-| Tier | 1 / 2 / 3 (safety tier; applies to Shadow and Spirit/Meaning practices per [Shadowwork Safety Standard](../safety/shadowwork-safety-standard); mark N/A for Body, Mind, Ethics, Relationships, and Service practices unless emotionally elevated) |
+| Tier | 1 / 2 / 3 (safety tier; applies to Shadow and Spirit/Meaning practices per [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard); mark N/A for Body, Mind, Ethics, Relationships, and Service practices unless emotionally elevated) |
 | Instructions | Step-by-step learner-facing directions |
 | Reflection prompt | Open-ended prompt for post-practice journaling |
 | Evidence capture | Method for documenting completion |
@@ -336,4 +336,4 @@ Each practice implementation must define the following fields:
 - [ ] Contemplative practice safety boundaries reviewed and approved by SME. **[HUMAN-REQUIRED]**
 - [ ] Practice card template is used for all new entries.
 - [ ] Scheduling guidelines applied to any new pathway.
-- [ ] Tier classifications assigned and aligned with [Shadowwork Safety Standard](../safety/shadowwork-safety-standard).
+- [ ] Tier classifications assigned and aligned with [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard).

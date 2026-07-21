@@ -190,12 +190,12 @@ export default function PrototypePage() {
         <details className={styles.links}>
           <summary><strong>Implementation Docs (for developers)</strong></summary>
           <ul>
-            <li><Link to="/docs/implementation/backlog">Backlog</Link></li>
+            <li><Link to="/internal/implementation/backlog">Backlog</Link></li>
             <li><Link to="/docs/maps/aqal-competency-map">AQAL Competency Map</Link></li>
             <li><Link to="/docs/maps/ilp-practice-taxonomy">ILP Practice Taxonomy</Link></li>
-            <li><Link to="/docs/quality/evidence-vetting-checklist">Evidence Checklist</Link></li>
-            <li><Link to="/docs/safety/shadowwork-safety-standard">Shadowwork Safety Standard</Link></li>
-            <li><Link to="/docs/pilots/pilot-runbook-20-40">Pilot Runbook</Link></li>
+            <li><Link to="/internal/quality/evidence-vetting-checklist">Evidence Checklist</Link></li>
+            <li><Link to="/internal/safety/shadowwork-safety-standard">Shadowwork Safety Standard</Link></li>
+            <li><Link to="/internal/pilots/pilot-runbook-20-40">Pilot Runbook</Link></li>
           </ul>
         </details>
       </main>

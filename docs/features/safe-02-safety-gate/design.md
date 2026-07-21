@@ -98,7 +98,7 @@ This practice is not suitable right now.
 
 Shadow work can intensify distress when you're already in a vulnerable state. Consider:
 - [Mindfulness Basics →](/docs/modules/mindfulness-basics) — a gentler starting point
-- [Crisis resources →](/docs/safety/crisis-resources) — free, confidential support
+- [Crisis resources →](/internal/safety/crisis-resources) — free, confidential support
 - Returning to this module when you feel more settled
 
 [ Return to module list ]

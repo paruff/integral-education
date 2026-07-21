@@ -36,6 +36,10 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
+:::info Before this module
+This module assumes you have a basic mindfulness practice and some emotional labeling skill. Mindfulness gives you the witnessing capacity to observe projections without getting caught in them. Emotional granularity helps you name the specific feelings that signal when a projection is active.
+:::
+
 ## 🧠 Learn
 
 **Shadow** = the disowned aspects of self — qualities, impulses, and capacities that were deemed unacceptable and pushed out of conscious awareness.

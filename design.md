@@ -1,112 +1,110 @@
-# Design: LSC-01 — Implement live spaced retrieval prompts at module end
+# Design: LSC-02 — Implement learner progress persistence (localStorage)
 
 ## Architecture
 
-Two new React components in `src/components/`:
+Client-side only. No backend. Uses localStorage with two keys:
+- `iel_progress_v1` — module completion/level data
+- `iel_reflections_v1` — daily reflection entries
 
-### RetrievalCard
-
-```
-┌────────────────────────────────┐
-│ Card 3 of 7                    │
-│                                │
-│ Q: [question text displayed]   │
-│                                │
-│ [ Show Answer ↓ ]  (clickable) │
-│                                │
-│ -- after reveal --             │
-│ A: [answer text displayed]     │
-│                                │
-│ [ I remembered ] [ Need review]│
-└────────────────────────────────┘
-```
-
-State: `{ revealed, outcome }` (per card, local state)
-Props: `{ question, answer, onComplete(outcome) }`
-
-### RetrievalPrompt
+## Data Flow
 
 ```
-┌────────────────────────────────┐
-│ Review: [Module Name]          │
-│                                │
-│ [ RetrievalCard sequence ]     │
-│ [ one card at a time ]         │
-│                                │
-│ -- after all cards done --     │
-│ Score: 5/7 correct             │
-│                                │
-│ Schedule your follow-up:       │
-│ □ "Review [Module] — [24h]"   │
-│ □ "Review [Module] — [7d]"    │
-└────────────────────────────────┘
+useProgress hook
+  → localStorage.getItem('iel_progress_v1')
+  → parse JSON
+  → React state (with fallback for missing/private browsing)
+  → onUpdate: localStorage.setItem('iel_progress_v1', JSON.stringify(data))
+  → try/catch for all operations
+
+ModuleComplete component
+  → calls useProgress()
+  → renders "Mark complete" button + level selector (1-4 radio)
+  → on change: calls useProgress().updateModule(moduleId, { completed, level, lastVisited })
+
+my-progress.mdx page
+  → calls useProgress()
+  → renders: summary (X modules completed), table of modules with levels, days since last activity
+  → "Clear my progress" button → useProgress().clear()
+  → Private browsing notice if localStorage unavailable
+
+daily-template.mdx
+  → On mount: load from localStorage('iel_reflections_v1')
+  → Fillable text areas for each section
+  → Auto-save on blur (debounced) or explicit save button
+  → Display last saved timestamp
 ```
 
-State: `{ currentIndex, scores[], completed }`
-Props: `{ moduleName, cards[{q, a}] }`
+## Component Architecture
 
-## Data flow
+### useProgress.js
 
 ```
-RetrievalPrompt renders → shows card 0
-  → User clicks "Show Answer" → answer revealed
-  → User clicks "I remembered" / "Need review" → score recorded, onComplete
-  → next card shown (or completion screen)
-
-Completion:
-  → Calculate score (correct/total)
-  → Render "Schedule" section
-  → Copy-to-clipboard buttons for 24h + 7d text
+useProgress() → {
+  data: {
+    modules: {
+      [moduleId]: {
+        completed: bool,
+        level: 1|2|3|4|null,
+        lastVisited: ISO8601
+      }
+    },
+    lastUpdated: ISO8601
+  },
+  updateModule(moduleId, partial),
+  getModule(moduleId) → {...},
+  clear(),
+  isAvailable: bool,  // false if localStorage unavailable
+  getDaysSinceLastActivity() → number
+}
 ```
 
-## Module format change
+### ModuleComplete.jsx
 
-Before:
-```md
-## 🧠 Anki Cards
-
-Q: What is...
-A: ...
-
-Q: What is...
-A: ...
+```
+┌─────────────────────────────────────────┐
+│ Module Progress                          │
+│                                          │
+│ Current level: ○ 1  ○ 2  ○ 3  ○ 4      │
+│                                          │
+│ [✓ Mark as complete]                     │
+│                                          │
+│ (if completed) ✓ Completed on [date]     │
+└─────────────────────────────────────────┘
 ```
 
-After:
-```mdx
-import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+### my-progress.mdx
 
-<RetrievalPrompt moduleName="Module Title" cards={[
-  {q: "What is...", a: "..."},
-  {q: "What is...", a: "..."},
-]} />
+```
+┌─────────────────────────────────────────┐
+│ My Progress                               │
+│                                           │
+│ You've completed X of Y modules           │
+│ Last activity: [days] days ago            │
+│                                           │
+│ Module           | Level | Completed |    │
+│──────────────────|───────|───────────|    │
+│ Mindfulness      |   3   |    ✓      |    │
+│ Cognitive Bias   |   2   |    ✓      |    │
+│ ...              |       |           |    │
+│                                           │
+│ [Clear my progress]                        │
+└─────────────────────────────────────────┘
 ```
 
-## Styling
+## Files
 
-- Infima theme variables (--ifm-color-*, etc.)
-- Card container: bordered, rounded, padding
-- Question: visible, medium weight
-- Answer: hidden state (blurred/reveal button), revealed (normal text)
-- Buttons: primary (I remembered), secondary (Need review)
-- Copy buttons: code-style preformatted text with copy icon
-- Responsive: full-width on mobile
+| File | Action | Purpose |
+|------|--------|---------|
+| `src/hooks/useProgress.js` | **Create** | localStorage hook for progress |
+| `src/components/ModuleComplete/index.js` | **Create** | Mark complete + level selector |
+| `src/components/ModuleComplete/styles.module.css` | **Create** | Styling |
+| `docs/my-progress.mdx` | **Create** | Progress dashboard page |
+| `docs/reflections/daily-template.md` | **Convert to .mdx** | Interactive reflection template |
+| 5 module files | **Modify** | Add ModuleComplete component |
 
-## Module change scope
+## Scope Limits
 
-55 modules across 2 batches:
-- Batch 1 (5 modules): cognitive-bias-101.md, shadow-integration-101.md, amber-mythic-orientation.mdx, shadow-work-foundation.mdx, emotional-intelligence-somatic-line.mdx
-- Batch 2 (50 modules): all remaining
-
-## Component imports in modules
-
-Module files already import from `@site/src/components/` (e.g., CrisisResourceBanner, ShadowGate, NextStep). Adding `RetrievalPrompt` follows the existing import pattern — placed after frontmatter, before other component imports.
-
-## Risk assessment
-
-| Risk | Severity | Mitigation |
-|------|----------|------------|
-| Multi-line answers break JSON-like structure | Medium | Escape newlines in MDX cards array; use JSX-friendly formatting |
-| Build breaks from MDX parse errors in cards prop | Medium | Test build after each batch of 5-10 modules |
-| Keyboard accessibility gaps | Low | Use standard button elements + tabIndex; test with keyboard only |
-| sessionState loss on page navigation | Low | Expected behavior — sessionStorage only, consistent with ShadowGate pattern |
+- Batch 1: 5 modules (cognitive-bias-101, mindfulness-basics, shadow-integration-101, emotional-granularity, systems-thinking-101)
+- Remaining modules deferred to batch 2
+- No sidebar/navbar changes
+- No backend required

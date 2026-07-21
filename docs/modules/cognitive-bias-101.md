@@ -23,6 +23,7 @@ prerequisites: None
 import NextStep from '@site/src/components/NextStep';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleComplete from '@site/src/components/ModuleComplete';
 
 
 <ModuleMeta />
@@ -90,5 +91,7 @@ Apply this in real life:
   {q: "What is the Dunning-Kruger effect?", a: "Overestimating competence in areas where one has little knowledge"},
   {q: "What is steelmanning?", a: "Stating the strongest possible version of an opposing argument"},
 ]} />
+
+<ModuleComplete moduleId="cognitive-bias-101" moduleTitle="Cognitive Bias 101" />
 
 <NextStep />

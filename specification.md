@@ -1,29 +1,31 @@
-# Specification: LSC-01 — Implement live spaced retrieval prompts at module end
+# Specification: LSC-02 — Implement learner progress persistence (localStorage)
 
 ## Problem
 
-Every module has a `## 🧠 Anki Cards` section with Q&A pairs rendered as static text. There is no reveal mechanism (answer always visible), no self-scoring, and no delivery schedule. The single most evidence-supported mechanism for long-term retention — retrieval practice — is designed but not deployed.
+There is no mechanism to remember where a learner is across sessions. A learner who self-assessed at Level 2 in Mindfulness Basics, then returns to the site tomorrow, has no system memory of this. The Daily Reflection Template is a static markdown page — it cannot be filled in or saved.
 
 ## Requirements
 
 ### Functional
-- Create `RetrievalCard` component: shows question, hides answer until click/tap, tracks correct/incorrect per session in component state
-- Create `RetrievalPrompt` component: wraps Anki cards as `RetrievalCard` instances, renders sequentially (one at a time), after all reviewed shows scheduling section
-- Schedule section: pre-formatted copy-to-clipboard text for 24h and 7d reminders: "Review [Module Name] — [date + 24h]" and "Review [Module Name] — [date + 7d]"
-- Replace `## 🧠 Anki Cards` static blocks with `<RetrievalPrompt cards={[...]} />` in all 55 modules
-- Component is keyboard accessible, works without mouse
+- Create `src/hooks/useProgress.js` — reads/writes to localStorage key `iel_progress_v1`
+- Schema: `{ modules: { [moduleId]: { completed: bool, level: 1|2|3|4|null, lastVisited: ISO8601 } }, lastUpdated: ISO8601 }`
+- Create `src/components/ModuleComplete.jsx` — "Mark complete" button + level selector (1–4) at module end, wired to useProgress
+- Create `docs/my-progress.mdx` — dashboard page reading from useProgress, showing modules completed, current level per module, days since last activity
+- Convert `docs/reflections/daily-template.md` to interactive MDX with fillable text areas saving to localStorage key `iel_reflections_v1`
+- "Clear my progress" button on progress page
+- All localStorage operations wrapped in try/catch with graceful fallback for private browsing mode
+- Add ModuleComplete component to 5 representative modules (batch 1), plus batch 2 for remaining modules
 
 ### Non-Functional
+- Follows existing `src/components/` and `src/hooks/` patterns
 - Infima theme variables for styling
-- Keyboard accessible (tab, enter/space for reveal, arrow for correct/incorrect)
-- Follows existing `src/components/` patterns
+- Keyboard accessible
 - `npm run build` passes
-- No persistence (sessionStorage only, cleared on browser close)
 
 ## Acceptance Criteria
-1. `RetrievalCard` component: question visible, answer hidden by default, click/tap reveals answer, "I remembered" / "Need to review" buttons post-reveal
-2. `RetrievalPrompt` component: cards rendered sequentially, scoring tracked, after all done: (a) score summary, (b) schedule section with copy-to-clipboard for 24h + 7d
-3. At least 3 modules updated with `<RetrievalPrompt>` replacing `## 🧠 Anki Cards` (sample: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation)
-4. Remaining 52 modules updated in subsequent batches — all 55 modules converted
-5. Component keyboard navigable (tab, enter/space, no mouse required)
-6. `npm run build` passes with zero errors
+1. `useProgress` hook created at `src/hooks/useProgress.js` — reads/writes `iel_progress_v1` with correct schema, try/catch for private browsing
+2. `ModuleComplete` component exists at `src/components/ModuleComplete/` — "Mark complete" button + level selector (1–4), reads/writes progress via useProgress
+3. `docs/my-progress.mdx` page renders: modules completed count, current level per module, days since last activity, "Clear my progress" button
+4. `docs/reflections/daily-template.mdx` converted to interactive — fillable text areas, saves to `iel_reflections_v1`, try/catch fallback
+5. ModuleComplete added to 5 representative modules (batch 1)
+6. `npm run build` passes

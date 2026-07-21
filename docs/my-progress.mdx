@@ -1,0 +1,87 @@
+---
+id: my-progress
+title: My Progress
+sidebar_label: My Progress
+description: Track your learning progress across all modules.
+---
+
+import useProgress from '@site/src/hooks/useProgress';
+
+export function ProgressDashboard() {
+  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity } = useProgress();
+
+  if (!isAvailable) {
+    return (
+      <div className="alert alert--warning" role="alert">
+        <strong>Progress tracking unavailable.</strong> Your browser is in private browsing mode or does not support local storage. Progress will not be saved.
+      </div>
+    );
+  }
+
+  const daysSince = getDaysSinceLastActivity();
+  const moduleIds = Object.keys(data.modules || {});
+  const totalModules = moduleIds.length;
+
+  return (
+    <div>
+      <div className="margin-top--md margin-bottom--md">
+        <p><strong>Modules completed:</strong> {completedCount} of {totalModules}</p>
+        {daysSince !== null && (
+          <p><strong>Last activity:</strong> {daysSince === 0 ? 'Today' : `${daysSince} day${daysSince === 1 ? '' : 's'} ago`}</p>
+        )}
+      </div>
+
+      {totalModules === 0 && (
+        <div className="alert alert--info" role="alert">
+          You haven't started any modules yet. Visit a module page to begin tracking your progress.
+        </div>
+      )}
+
+      {totalModules > 0 && (
+        <table className="margin-top--md">
+          <thead>
+            <tr>
+              <th>Module</th>
+              <th>Level</th>
+              <th>Completed</th>
+              <th>Last Visited</th>
+            </tr>
+          </thead>
+          <tbody>
+            {moduleIds.map((id) => {
+              const mod = data.modules[id];
+              if (!mod) return null;
+              return (
+                <tr key={id}>
+                  <td>{id.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase())}</td>
+                  <td>{mod.level ? `Level ${mod.level}` : '—'}</td>
+                  <td>{mod.completed ? '✓' : '—'}</td>
+                  <td>{mod.lastVisited ? new Date(mod.lastVisited).toLocaleDateString() : '—'}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      )}
+
+      <div className="margin-top--lg">
+        <button
+          className="button button--danger"
+          onClick={() => {
+            if (window.confirm('This will clear all your progress data. Are you sure?')) {
+              clear();
+            }
+          }}
+        >
+          Clear my progress
+        </button>
+      </div>
+    </div>
+  );
+}
+
+## My Progress
+
+Track your learning journey across all modules. Your progress is stored locally in your browser.
+
+<ProgressDashboard />

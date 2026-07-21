@@ -27,6 +27,7 @@ prerequisites:
 import NextStep from '@site/src/components/NextStep';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import ModuleComplete from '@site/src/components/ModuleComplete';
 
 
 <ModuleMeta />
@@ -96,4 +97,6 @@ Apply this in real life:
   {q: "What is a leverage point?", a: "A place in a system where small changes produce large effects"},
   {q: "What is the difference between a reinforcing and balancing loop?", a: "Reinforcing loops amplify change (growth or collapse); balancing loops stabilize the system toward a goal"}
 } />
+
+<ModuleComplete moduleId="systems-thinking-101" moduleTitle="Systems Thinking 101" />
 

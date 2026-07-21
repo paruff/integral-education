@@ -28,6 +28,7 @@ prerequisites:
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import Tooltip from '@site/src/components/Tooltip';
 
 
 <ModuleMeta />
@@ -57,7 +58,7 @@ Research by Lisa Feldman Barrett shows that people with higher emotional granula
 Research suggests these outcomes — though note that the causal direction is still being established in intervention studies. The correlational evidence is strong; whether training granularity directly causes the benefits is still under investigation.
 
 Core skills:
-- **Differentiation** — distinguishing similar emotions (anxiety vs. dread vs. apprehension)
+- **Differentiation** — <Tooltip term="Differentiation" definition="Distinguishing similar emotional states — anxiety vs dread vs apprehension — rather than collapsing them into a general 'bad' feeling. A core skill of emotional granularity.">distinguishing similar emotions (anxiety vs. dread vs. apprehension)</Tooltip>
 - **Labeling** — finding the right word for the felt sense
 - **Context** — connecting emotion to its trigger and meaning
 

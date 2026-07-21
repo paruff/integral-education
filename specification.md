@@ -1,29 +1,16 @@
-# Specification: NAV-01 — Separate learner navigation from internal documentation
+# Specification: NAV-02 — Standardize end-of-module CTA pattern across all modules
 
 ## Problem
-
-The Docusaurus sidebar exposes Implementation, Quality, Pilots, and Safety sections to all visitors. These create cognitive noise for learners.
+Most modules end with only Docusaurus prev/next arrows. Learners hit a dead end with no clear next action.
 
 ## Requirements
+- ModuleFooter component with: next module, parent QuickStart, reflection link, ModuleComplete button
+- moduleMap.js mapping each module to its next module and parent QuickStart
+- All modules updated with ModuleFooter replacing <NextStep />
+- Build passes
 
-### Functional
-- Separate sidebar configs: `learnerSidebar` and `internalSidebar`
-- `learnerSidebar`: Introduction, QuickStarts, Self/Emotional/Interpersonal/Cognitive/Spiritual/Moral Lines, Modules (Stage Dev, State Training, Core Skills, Shadow Work), Maps, Reflection, Prototype
-- `internalSidebar`: Implementation, Quality, Safety Standards, Pilots — accessible via `/internal/` route
-- Remove internal docs sections from learner sidebar entirely
-- Navbar links only to learner-facing pages: Find Your Path, Modules, Maps & Tools
-- Footer includes "Facilitator & contributor docs" link to `/internal/`
-- Internal docs moved to `internal/` directory from `docs/implementation/`, `docs/quality/`, `docs/safety/`, `docs/pilots/`
-
-### Non-Functional
-- `npm run build` passes
-- No lost module content — learner-facing docs unchanged
-- Internal docs remain accessible at `/internal/...` URLs
-
-## Acceptance Criteria
-1. `sidebars.js` exports `learnerSidebar` only (no internal sections)
-2. Internal docs moved to `internal/` directory
-3. Internal docs accessible at `/internal/implementation/...`, `/internal/quality/...`, etc.
-4. Navbar shows: Find Your Path, Modules, Maps & Tools (no internal sections)
-5. Footer has "Facilitator & contributor docs" → `/internal/`
-6. `npm run build` passes
+## ACs
+1. ModuleFooter component created with all four slots
+2. moduleMap.js maps every module to next + QuickStart
+3. All modules have <ModuleFooter /> at end
+4. Build passes

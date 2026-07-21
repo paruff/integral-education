@@ -23,6 +23,7 @@ prerequisites:
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import Tooltip from '@site/src/components/Tooltip';
 
 
 <ModuleMeta />
@@ -36,7 +37,7 @@ The mind naturally wanders. Mindfulness is not the absence of thought, but the *
 Key distinctions:
 - **Attention** — what you focus on
 - **Awareness** — the space in which experience occurs
-- **Meta-cognition** — awareness of your own awareness
+- **Meta-cognition** — <Tooltip term="Meta-cognition" definition="Awareness of your own awareness — observing the observer rather than being caught in thought">awareness of your own awareness</Tooltip>
 
 ---
 

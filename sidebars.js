@@ -215,6 +215,7 @@ const learnerSidebar = {
       items: [
         'maps/glossary',
         'maps/aqal-overview',
+        'maps/aqal-glossary',
         'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',
         'maps/emotional-line-stage-map',

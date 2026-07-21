@@ -25,6 +25,7 @@ prerequisites:
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
 import ShadowGate from '@site/src/components/ShadowGate';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import Tooltip from '@site/src/components/Tooltip';
 
 <CrisisResourceBanner />
 
@@ -42,12 +43,12 @@ This module assumes you have a basic mindfulness practice and some emotional lab
 
 ## 🧠 Learn
 
-**Shadow** = the disowned aspects of self — qualities, impulses, and capacities that were deemed unacceptable and pushed out of conscious awareness.
+**<Tooltip term="Shadow" definition="Disowned aspects of the self — qualities, impulses, and capacities pushed out of conscious awareness and often projected onto others. Includes both negative (dark shadow) and positive (golden shadow) qualities.">Shadow</Tooltip>** = the disowned aspects of self — qualities, impulses, and capacities that were deemed unacceptable and pushed out of conscious awareness.
 
 Carl Jung identified the shadow as the storehouse of everything we have rejected about ourselves. Paradoxically, what we reject in ourselves, we often project onto others.
 
 Key concepts:
-- **Projection** — attributing your own disowned traits to other people
+- **<Tooltip term="Projection" definition="The unconscious act of attributing your own disowned feelings, traits, or impulses to someone else. A core mechanism in shadow formation.">Projection</Tooltip>** — attributing your own disowned traits to other people
 - **Trigger** — the emotional charge that signals a shadow is active
 - **Integration** — consciously owning and relating to the disowned quality
 

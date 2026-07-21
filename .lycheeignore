@@ -3,3 +3,7 @@
 # Issue: https://github.com/paruff/integral-education/issues/338
 https://doi.org/10.1177/0963721414550708
 https://doi.org/10.1037/a0027600
+
+# Root-relative internal links (NAV-01) — lychee cannot resolve root-relative paths
+# in local files without a base URL. These work correctly in the Docusaurus build.
+/internal/

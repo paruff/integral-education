@@ -1,46 +1,45 @@
-# Review Report — LSC-03: Convert "Find Your Path" to deliver confirmed, personalized recommendation
+# Review Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Session
 
-- **Session ID:** `lsc-03-20260720`
-- **Branch:** `feature/lsc-03-find-your-path-assessment`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| Four mirror paragraphs replace old explanations | ✅ | All four RESULTS entries updated |
-| Reflects learner's specific answer pattern | ✅ | "Your answers suggest you tend to rely on…" / "are comfortable weighing evidence…" / "naturally see situations from multiple angles…" / "span a range of approaches…" |
-| 2-3 sentences each | ✅ | All four are 3 sentences |
-| No AQAL terminology | ✅ | Zero hits for: Amber, Rational, Pluralistic, Integral, developmental, stage, level, centre-of-gravity |
-| Direct CTA button retained | ✅ | `<Link to={result.recommended}>` unchanged |
-| Routing logic untouched | ✅ | tally(), RESULTS mapping, JSX rendering all verified |
-| All-paths grid retained | ✅ | Recommended badge intact |
-| `npm run build` passes | ✅ | [SUCCESS] |
+| RetrievalCard component exists | ✅ | `src/components/RetrievalCard/index.js` + `styles.module.css` |
+| Answer hidden by default | ✅ | `useState(false)` → button → `setRevealed(true)` |
+| I remembered / Need review buttons | ✅ | Two buttons, both keyboard focusable |
+| RetrievalPrompt wraps cards sequentially | ✅ | `currentIndex` state, `RetrievalCard` component per card |
+| Scoring tracked per session | ✅ | `scores[]` array in component state |
+| Completion screen with score | ✅ | Score circle, message, schedule section |
+| Copy-to-clipboard 24h + 7d | ✅ | `navigator.clipboard.writeText()` with textarea fallback |
+| 55 modules converted | ✅ | All static Anki sections replaced |
+| Build passes | ✅ | `[SUCCESS]` |
 
 ## Scope Discipline
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only `explanation` text strings changed in one file. No new components, no CSS changes, no page structure changes, no sidebar/navbar changes. |
-| Unnecessary changes | **None.** tally() logic, JSX rendering, CSS — all left untouched per spec. |
+| Scope creep | **None.** Components built as specified; module conversion limited to Anki card replacement. |
+| Unnecessary changes | **None.** Module content outside Anki section untouched. |
 
 ## Maintainability
 
-- Change is self-contained in one file (`src/pages/start.js`)
-- Mirror paragraphs use consistent "Your answers suggest…" framing across all four
-- No new dependencies, no new patterns introduced
+- Components follow existing `src/components/` pattern (index.js + styles.module.css)
+- Infima theme variables used throughout (no hardcoded colors)
+- Keyboard accessible: standard button elements, aria-labels
+- Single source of truth for styling (CSS modules)
 
-## Safety/Tone Assessment
+## Risk Assessment
 
-| Mirror | Potential Risk | Assessment |
-|--------|---------------|------------|
-| A-dominant | Could sound like "you're a rule-follower" | ✅ Reframed as strength: "These are real strengths — and there are also times when…" |
-| B-dominant | Could sound like "you're coldly analytical" | ✅ Reframed as foundation: "That analytical skill is a powerful foundation" |
-| C-dominant | Could sound like "you can't decide" | ✅ Reframed as capacity: "That perspective-taking capacity is a genuine strength" |
-| mixed | Could sound like "you're unfocused" | ✅ Normalized: "which is completely normal; different situations genuinely call for different ways" |
-
-All follow the developmental-vocabulary rule: "Never name another stage to the audience" — no stage labels anywhere in mirror text.
+| Risk | Severity | Mitigation |
+|------|----------|------------|
+| Copy-to-clipboard fails in older browsers | Low | Fallback to textarea select + execCommand |
+| Long answers overflow card | Low | CSS handles overflow with scroll |
+| sessionStorage unavailable (rare) | None | Scores are in component state only; no persistence attempted |
 
 ## Review Result
 

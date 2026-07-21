@@ -1,50 +1,54 @@
-# Build Report — LSC-03: Convert "Find Your Path" to deliver confirmed, personalized recommendation
+# Build Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Summary
 
-Replaced the four result `explanation` paragraphs in `src/pages/start.js` with 2–3 sentence personalized mirror paragraphs that reflect the learner's specific answer pattern back — rather than describing the recommended path generically. The existing routing logic (tally(), 3-of-4 threshold, RESULTS mapping, all four result states, all-paths grid, retake) was confirmed correct and left untouched.
+Created two React components (`RetrievalCard` + `RetrievalPrompt`) to replace static Anki card sections with interactive retrieval practice. Converted all 55 module files from static `## 🧠 Anki Cards` Q/A blocks to `<RetrievalPrompt>` component with reveal-on-click, self-scoring, and copy-to-clipboard schedule reminders.
 
 ## Session
 
-- **Session ID:** `lsc-03-20260720`
-- **Branch:** `feature/lsc-03-find-your-path-assessment`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
-## Build Approach
+## Components Created
 
-Minimal-change: only string literals in the `RESULTS{}` object were modified. No structural changes to the component, no new files, no CSS changes.
+| Component | File | Purpose |
+|-----------|------|---------|
+| `RetrievalCard` | `src/components/RetrievalCard/index.js` + `styles.module.css` | Individual flashcard: question visible, answer hidden until click, "I remembered" / "Need review" buttons |
+| `RetrievalPrompt` | `src/components/RetrievalPrompt/index.js` + `styles.module.css` | Wrapper: sequential card review, scoring, schedule section with copy-to-clipboard 24h/7d reminders |
 
-### Verified correct (no change)
+## RetrievalCard States
 
-| Component | Status |
-|-----------|--------|
-| QUESTIONS[] (4 questions, a/b/c options) | ✅ Verified |
-| ALL_PATHS[] (6 paths + slug mappings) | ✅ Verified |
-| tally() function (3-of-4 threshold, mixed fallback) | ✅ Verified |
-| RESULTS{} structure (title, recommended, alt, altLink) | ✅ Verified |
-| JSX rendering (result box, all-paths grid, retake) | ✅ Verified |
-| CSS styling | ✅ Verified |
+```
+UNREVEALED → [Show Answer ↓] click → REVEALED
+  → [I remembered] / [Need to review] buttons → OUTCOME
+  → Badge: "✓ Remembered" or "↻ Marked for review"
+```
 
-## Mirror Paragraphs Implemented
+## RetrievalPrompt States
 
-| Result | Mirror text (before → after) |
-|--------|----------------------------|
-| A-dominant → Clear Thinking Path | "Your answers suggest you tend to rely on established sources, trusted guidance, and clear rules…" (3 sentences) |
-| B-dominant → Multiple Perspectives Path | "Your answers suggest you are comfortable weighing evidence, reasoning things through…" (3 sentences) |
-| C-dominant → Integrating Perspectives Path | "Your answers suggest you naturally see situations from multiple angles…" (3 sentences) |
-| mixed → Personal to Integral | "Your answers span a range of approaches — which is completely normal…" (3 sentences) |
+```
+ACTIVE → sequential RetrievalCards (one at a time)
+  → card completed → next card
+  → all cards done → COMPLETION
+    → Score summary: X/Y correct
+    → Schedule section: copy-to-clipboard for 24h + 7d
+```
 
-All mirror paragraphs:
-- Reflect the learner's specific answer pattern (not a generic path description)
-- Use non-labeling language per developmental-vocabulary skill (no AQAL terms/stages)
-- Connect the pattern to why that specific path fits
+## Module Conversion
+
+| Batch | Modules | Status |
+|-------|---------|--------|
+| Batch 1 (manual) | 5 modules: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation, shadow-work-foundation, emotional-intelligence-somatic-line | ✅ Done |
+| Batch 2 (script) | 50 remaining modules | ✅ Done |
+
+**Total: 55 modules converted, 0 old Anki Cards remaining**
 
 ## Files Changed
 
-| File | Action | Purpose |
-|------|--------|---------|
-| `src/pages/start.js` | **Modified** | Replaced 4 explanation strings with mirror paragraphs |
-
-No other files touched.
+| Category | Count |
+|----------|-------|
+| New component files | 4 (`src/components/RetrievalCard/`, `src/components/RetrievalPrompt/`) |
+| Modified modules | 55 (`docs/modules/*.md`, `docs/modules/*.mdx`) |
 
 ## Validation
 
@@ -52,7 +56,8 @@ No other files touched.
 npm run build → [SUCCESS] Generated static files in "build".
 ```
 
-Pre-existing broken anchor warnings in shadow modules — not caused by this change.
+- Pre-existing broken anchor warnings (emoji-based heading IDs) — not caused by this change
+- One fix applied: double-quotes in `relativism-limits-of-pluralism.mdx` title escaped to single quotes
 
 ## Blockers
 

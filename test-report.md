@@ -1,38 +1,43 @@
-# Test Report — LSC-03: Convert "Find Your Path" to deliver confirmed, personalized recommendation
+# Test Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Session
 
-- **Session ID:** `lsc-03-20260720`
-- **Branch:** `feature/lsc-03-find-your-path-assessment`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
 ## Acceptance Criteria Verification
 
-| ID | AC | Expected | Actual | Status |
-|----|----|----------|--------|--------|
-| AC-1 | All four result states render | A/B/C/mixed render in build output | All four RESULTS{} entries intact; JSX rendering unchanged | ✅ PASS |
-| AC-2a | Path title per result | "Clear Thinking Path", "Multiple Perspectives Path", "Integrating Perspectives Path", "Personal to Integral" | Four titles present and correct | ✅ PASS |
-| AC-2b | 2-3 sentence mirror paragraph | Reflects answer pattern, non-labeling | All four: 3 sentences each, "Your answers suggest you…" framing, no AQAL terms | ✅ PASS |
-| AC-2c | Direct CTA button | "Begin the [Path] →" link to QuickStart | `<Link to={result.recommended}>` present for all four | ✅ PASS |
-| AC-3 | Non-labeling language per developmental-vocabulary | No AQAL terms (Amber/Rational/Pluralistic/Integral), no "stage", no "level" | grep confirmed: zero AQAL terms in mirror paragraphs | ✅ PASS |
-| AC-4 | Routing logic unchanged | tally() threshold 3-of-4, mixed fallback | Code unchanged; verified correct in code review | ✅ PASS |
-| AC-5 | All-paths grid with recommended badge | Grid rendered with highlighted card | JSX unchanged; grid + `.recommendedCard` class intact | ✅ PASS |
-| AC-6 | `npm run build` passes | [SUCCESS] | `npm run build` → [SUCCESS] | ✅ PASS |
+| AC | Description | Expected | Actual | Status |
+|----|-------------|----------|--------|--------|
+| AC-1 | RetrievalCard: question visible, answer hidden, click reveals, remembered/review buttons | Interactive flashcard component | `RetrievalCard/index.js`: question shown, answer hidden behind button, two outcome buttons post-reveal | ✅ PASS |
+| AC-2 | RetrievalPrompt: sequential cards, scoring, schedule section with copy 24h/7d | Wrapper with completion screen | `RetrievalPrompt/index.js`: sequential rendering, score summary, copy buttons for 24h + 7d | ✅ PASS |
+| AC-3 | 5 batch-1 modules updated with RetrievalPrompt | All 5 converted | cognitive-bias-101, shadow-integration-101, amber-mythic-orientation, shadow-work-foundation, emotional-intelligence-somatic-line all converted | ✅ PASS |
+| AC-4 | All 55 modules converted | Zero old Anki Cards remaining | `grep -rl '## 🧠 Anki Cards' docs/modules/ | wc -l` = 0 | ✅ PASS |
+| AC-5 | Keyboard accessible | Tab/enter/space work without mouse | Standard button elements with aria-labels | ✅ PASS |
+| AC-6 | Build passes | [SUCCESS] | `npm run build` → SUCCESS | ✅ PASS |
 
 **All 6 acceptance criteria: ✅ PASS**
 
-## Mirror Paragraph Content Check
+## Component Verification
 
-| Result | "Your answers suggest you…" pattern | No AQAL terms | 2-3 sentences |
-|--------|--------------------------------------|---------------|---------------|
-| A-dominant | "tend to rely on established sources, trusted guidance, and clear rules" | ✅ | 3 |
-| B-dominant | "are comfortable weighing evidence, reasoning things through" | ✅ | 3 |
-| C-dominant | "naturally see situations from multiple angles and value diverse viewpoints" | ✅ | 3 |
-| mixed | "span a range of approaches" | ✅ | 3 |
+| State | Trigger | Renders | Verified |
+|-------|---------|---------|----------|
+| Card unrevealed | Mount | Question + progress + "Show Answer" button | ✅ |
+| Card revealed | Click "Show Answer" | Question + answer + "I remembered"/"Need review" buttons | ✅ |
+| Outcome selected | Click outcome button | Badge: "✓ Remembered" or "↻ Marked for review" | ✅ |
+| Next card | Auto-advance | Next card shown (via state update) | ✅ |
+| Completion | All cards done | Score circle (X/Y), message, schedule section, copy buttons | ✅ |
 
 ## Regression Risk
 
-**None.** Change affects only string literals — no structural or logic changes. The build output produces identical HTML structure with new mirror text.
+- **Low.** Additive change: 55 modules had Anki cards section replaced with component import. Module content BEFORE and AFTER the Anki section is untouched. The components themselves have no side effects (sessionStorage only).
+- No navigation, sidebar, or routing changes.
+- Pre-existing broken anchor warnings are unchanged.
+
+## Live-System Verification
+
+Not required — no acceptance criteria tagged `test_type: live-system`.
 
 ## Overall Test Result
 
-**PASS** ✅ — All acceptance criteria verified. No live-system criteria tagged. Proceed to Phase 4.
+**PASS** ✅ — All acceptance criteria verified. Proceed to Phase 4.

@@ -1,50 +1,50 @@
 [
   {
-    "id": "lsc-03-1",
-    "description": "Verify current routing logic in src/pages/start.js: tally function, 3-of-4 threshold, all four result states exist",
-    "type": "verification",
+    "id": "lsc-01-1",
+    "description": "Create RetrievalCard component: question visible, answer hidden/revealed on click, I remembered/Need review buttons, keyboard accessible",
+    "type": "code",
     "test_type": "unit",
     "dependsOn": [],
-    "acceptance": "All four result keys (A-dominant, B-dominant, C-dominant, mixed) present in RESULTS object; tally() correctly counts and thresholds at max ≥ 3"
+    "acceptance": "Component renders question, hides answer, click reveals, tracks correct/incorrect, keyboard navigable (tab/enter)"
   },
   {
-    "id": "lsc-03-2",
-    "description": "Replace A-dominant explanation with 2-3 sentence mirror paragraph reflecting answer pattern (relies on sources/rules)",
+    "id": "lsc-01-2",
+    "description": "Create RetrievalPrompt component: wraps cards sequentially, scoring, schedule section with copy-to-clipboard 24h/7d",
     "type": "code",
     "test_type": "unit",
-    "dependsOn": ["lsc-03-1"],
-    "acceptance": "Mirror text: (a) references the answer pattern, (b) is 2-3 sentences, (c) does not name AQAL terms/stages, (d) connects pattern to why Clear Thinking Path fits"
+    "dependsOn": ["lsc-01-1"],
+    "acceptance": "Renders cards one at a time, scores, shows schedule section after all done, copy buttons work"
   },
   {
-    "id": "lsc-03-3",
-    "description": "Replace B-dominant explanation with mirror paragraph reflecting analytical/evidence-based answer pattern",
-    "type": "code",
-    "test_type": "unit",
-    "dependsOn": ["lsc-03-1"],
-    "acceptance": "Mirror text: (a) references the analytical answer pattern, (b) is 2-3 sentences, (c) no AQAL terms, (d) connects to Multiple Perspectives Path"
-  },
-  {
-    "id": "lsc-03-4",
-    "description": "Replace C-dominant explanation with mirror paragraph reflecting multi-perspective answer pattern",
-    "type": "code",
-    "test_type": "unit",
-    "dependsOn": ["lsc-03-1"],
-    "acceptance": "Mirror text: (a) references multi-perspective answer pattern, (b) is 2-3 sentences, (c) no AQAL terms, (d) connects to Integrating Perspectives Path"
-  },
-  {
-    "id": "lsc-03-5",
-    "description": "Replace mixed explanation with mirror paragraph reflecting flexible/spanning answer pattern",
-    "type": "code",
-    "test_type": "unit",
-    "dependsOn": ["lsc-03-1"],
-    "acceptance": "Mirror text: (a) references spanning/flexible pattern, (b) is 2-3 sentences, (c) no AQAL terms, (d) connects to Personal to Integral Path"
-  },
-  {
-    "id": "lsc-03-6",
-    "description": "Verify npm run build passes with no errors",
+    "id": "lsc-01-3",
+    "description": "Verify build passes with new components (no module changes yet)",
     "type": "verification",
     "test_type": "integration",
-    "dependsOn": ["lsc-03-2", "lsc-03-3", "lsc-03-4", "lsc-03-5"],
-    "acceptance": "npm run build output shows [SUCCESS] with zero errors (warnings acceptable if pre-existing)"
+    "dependsOn": ["lsc-01-1", "lsc-01-2"],
+    "acceptance": "npm run build passes — components exist but not yet imported by any module"
+  },
+  {
+    "id": "lsc-01-4",
+    "description": "Replace Anki cards with RetrievalPrompt in 5 representative modules (batch 1)",
+    "type": "code",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-3"],
+    "acceptance": "5 modules updated: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation, shadow-work-foundation, emotional-intelligence-somatic-line"
+  },
+  {
+    "id": "lsc-01-5",
+    "description": "Replace Anki cards with RetrievalPrompt in remaining 50 modules (batch 2)",
+    "type": "code",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-4"],
+    "acceptance": "All 55 modules converted from static Anki section to RetrievalPrompt component"
+  },
+  {
+    "id": "lsc-01-6",
+    "description": "Verify npm run build passes after all module replacements",
+    "type": "verification",
+    "test_type": "integration",
+    "dependsOn": ["lsc-01-5"],
+    "acceptance": "npm run build → [SUCCESS] with zero errors across all 55 converted modules"
   }
 ]

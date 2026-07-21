@@ -24,6 +24,7 @@ practiceTime: 25
 ---
 
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
@@ -244,41 +245,19 @@ This module's practices prepare the *interior* of repair — the self-awareness 
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="EI-10 · Relational Repair & Conflict Navigation" cards={
+  {q: "What is the central claim of the rupture-and-repair model of relational trust development?", a: "Relational trust is built not by continuous attunement but by the repeated cycle of misattunement → distress → repair. It is the experience of rupture being survived and resolved that builds deep relational resilience — not the avoidance of rupture."},
+  {q: "Name Gottman's Four Horsemen in order of increasing lethality to relationships.", a: "Criticism, defensiveness, stonewalling, contempt — with contempt identified as the most predictive of relationship dissolution because it communicates fundamental disrespect for the other person's worth."},
+  {q: "What is a repair attempt, and what makes it effective according to Gottman's research?", a: "A repair attempt is any verbal or nonverbal action that interrupts conflict escalation and invites de-escalation — from \"I need a break\" to a shared joke. Effectiveness depends less on the sophistication of the attempt than on the partner's willingness to accept it, which in turn reflects the overall positive-to-negative ratio (5:1) of the relationship."},
+  {q: "What are the four steps of the repair sequence in order?", a: "Acknowledgement (recognising impact without qualification), Accountability (naming your specific contribution), Amends (stating a concrete behavioral intention), and Reconnection (affirming the relational bond)."},
+  {q: "What is the critical distinction between \"accountability\" and \"global self-criticism\" in the repair sequence?", a: "Accountability names the specific behavior that contributed to the rupture and its impact (\"I raised my voice and that wasn't okay\"). Global self-criticism generalises to character (\"I'm just a terrible communicator\") — which actually deflects accountability by centering the speaker's feelings rather than the other's experience."},
+  {q: "Name the four components of the NVC framework in order.", a: "Observation (specific, evaluation-free description of the behavior), Feeling (the speaker's actual emotion, not an interpretation of the other's intent), Need (the underlying universal need that was not met), Request (a specific, actionable, present-tense ask that allows for \"no\")."},
+  {q: "How does developmental stage shape the experience and meaning of conflict at Conformist, Achiever, and Strategist altitudes?", a: "At Conformist, conflict threatens group belonging — the default is avoidance or exclusion. At Achiever, conflict is a problem to solve — the focus is solution-finding, which can bypass relational and emotional dimensions. At Strategist, conflict becomes developmental information — the capacity to be activated and still remain curious expands. Each stage has its characteristic shadow: avoidance, relational thinness, and intellectualization respectively."},
+  {q: "What does Amy Edmondson's psychological safety research identify as the relational and organisational precondition for repair attempts?", a: "Interpersonal risk-taking — including initiating repair — requires perceived psychological safety: the shared belief that the environment will not punish vulnerability, honest communication, or raising concerns. In low-safety environments, repair attempts carry asymmetric risk that particularly affects those with less institutional power."},
+  {q: "How do power dynamics create asymmetry in conflict navigation across role, developmental stage, and social identity?", a: "Lower-power parties face material stakes that higher-power parties do not (job security, belonging, social consequences). Stage asymmetry can produce pseudo-resolution where the lower-stage person accommodates rather than genuinely repairs. Social identity asymmetry means parties from historically marginalised groups carry systemic risk that predates the specific conflict. Ethical repair requires awareness of who has more to lose and whose courage repair initiation requires."},
+  {q: "Why is NVC described as a practical repair *tool* rather than a developmental framework?", a: "NVC provides a structured communication format (observation / feeling / need / request) that reduces blame and increases first-person accuracy. It does not map to any AQAL stage and can be used at any altitude — though its effectiveness depends on genuine self-knowledge and presence rather than syntactic correctness. It is most useful as a preparation tool before a repair conversation, not as a real-time script."}
+} />
 
-**Q:** What is the central claim of the rupture-and-repair model of relational trust development?
-**A:** Relational trust is built not by continuous attunement but by the repeated cycle of misattunement → distress → repair. It is the experience of rupture being survived and resolved that builds deep relational resilience — not the avoidance of rupture.
-
-**Q:** Name Gottman's Four Horsemen in order of increasing lethality to relationships.
-**A:** Criticism, defensiveness, stonewalling, contempt — with contempt identified as the most predictive of relationship dissolution because it communicates fundamental disrespect for the other person's worth.
-
-**Q:** What is a repair attempt, and what makes it effective according to Gottman's research?
-**A:** A repair attempt is any verbal or nonverbal action that interrupts conflict escalation and invites de-escalation — from "I need a break" to a shared joke. Effectiveness depends less on the sophistication of the attempt than on the partner's willingness to accept it, which in turn reflects the overall positive-to-negative ratio (5:1) of the relationship.
-
-**Q:** What are the four steps of the repair sequence in order?
-**A:** Acknowledgement (recognising impact without qualification), Accountability (naming your specific contribution), Amends (stating a concrete behavioral intention), and Reconnection (affirming the relational bond).
-
-**Q:** What is the critical distinction between "accountability" and "global self-criticism" in the repair sequence?
-**A:** Accountability names the specific behavior that contributed to the rupture and its impact ("I raised my voice and that wasn't okay"). Global self-criticism generalises to character ("I'm just a terrible communicator") — which actually deflects accountability by centering the speaker's feelings rather than the other's experience.
-
-**Q:** Name the four components of the NVC framework in order.
-**A:** Observation (specific, evaluation-free description of the behavior), Feeling (the speaker's actual emotion, not an interpretation of the other's intent), Need (the underlying universal need that was not met), Request (a specific, actionable, present-tense ask that allows for "no").
-
-**Q:** How does developmental stage shape the experience and meaning of conflict at Conformist, Achiever, and Strategist altitudes?
-**A:** At Conformist, conflict threatens group belonging — the default is avoidance or exclusion. At Achiever, conflict is a problem to solve — the focus is solution-finding, which can bypass relational and emotional dimensions. At Strategist, conflict becomes developmental information — the capacity to be activated and still remain curious expands. Each stage has its characteristic shadow: avoidance, relational thinness, and intellectualization respectively.
-
-**Q:** What does Amy Edmondson's psychological safety research identify as the relational and organisational precondition for repair attempts?
-**A:** Interpersonal risk-taking — including initiating repair — requires perceived psychological safety: the shared belief that the environment will not punish vulnerability, honest communication, or raising concerns. In low-safety environments, repair attempts carry asymmetric risk that particularly affects those with less institutional power.
-
-**Q:** How do power dynamics create asymmetry in conflict navigation across role, developmental stage, and social identity?
-**A:** Lower-power parties face material stakes that higher-power parties do not (job security, belonging, social consequences). Stage asymmetry can produce pseudo-resolution where the lower-stage person accommodates rather than genuinely repairs. Social identity asymmetry means parties from historically marginalised groups carry systemic risk that predates the specific conflict. Ethical repair requires awareness of who has more to lose and whose courage repair initiation requires.
-
-**Q:** Why is NVC described as a practical repair *tool* rather than a developmental framework?
-**A:** NVC provides a structured communication format (observation / feeling / need / request) that reduces blame and increases first-person accuracy. It does not map to any AQAL stage and can be used at any altitude — though its effectiveness depends on genuine self-knowledge and presence rather than syntactic correctness. It is most useful as a preparation tool before a repair conversation, not as a real-time script.
-
----
-
-## ⏱️ Retrieval Schedule
 
 | Interval | Activity |
 | :--- | :--- |

@@ -26,6 +26,7 @@ prerequisites:
 - rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 
@@ -117,20 +118,12 @@ Apply this in real life:
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="Emotional Granularity" cards={
+  {q: "What is emotional granularity?", a: "The ability to make fine-grained distinctions between emotional states"},
+  {q: "What are the benefits of high emotional granularity?", a: "Less intense emotions during stress, faster recovery, better decisions under pressure"},
+  {q: "Who is the researcher associated with emotional granularity?", a: "Lisa Feldman Barrett"}
+} />
 
-Q: What is emotional granularity?
-A: The ability to make fine-grained distinctions between emotional states
-
-Q: What are the benefits of high emotional granularity?
-A: Less intense emotions during stress, faster recovery, better decisions under pressure
-
-Q: Who is the researcher associated with emotional granularity?
-A: Lisa Feldman Barrett
-
----
-
-## Knowledge Retention &amp; Retrieval
 To transition this cognitive taxonomy into long-term functional capacity, execute the following retrieval practice:
 - **24-Hour Interval:** Re-run the core differentiation exercise using a completely different recent emotional event.
 - **72-Hour Interval:** Apply the model to a live, active emotional situation in your daily life and log the granular labels.

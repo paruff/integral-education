@@ -22,6 +22,7 @@ prerequisites: None
 ---
 import NextStep from '@site/src/components/NextStep';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 
 <ModuleMeta />
@@ -83,18 +84,11 @@ Apply this in real life:
 
 ---
 
-## 🧠 Anki Cards
-
-Q: What is a cognitive bias?
-A: A systematic error in thinking that affects judgments and decisions
-
-Q: What is confirmation bias?
-A: The tendency to seek information that confirms existing beliefs
-
-Q: What is the Dunning-Kruger effect?
-A: Overestimating competence in areas where one has little knowledge
-
-Q: What is steelmanning?
-A: Stating the strongest possible version of an opposing argument
+<RetrievalPrompt moduleName="Cognitive Bias 101" cards={[
+  {q: "What is a cognitive bias?", a: "A systematic error in thinking that affects judgments and decisions"},
+  {q: "What is confirmation bias?", a: "The tendency to seek information that confirms existing beliefs"},
+  {q: "What is the Dunning-Kruger effect?", a: "Overestimating competence in areas where one has little knowledge"},
+  {q: "What is steelmanning?", a: "Stating the strongest possible version of an opposing argument"},
+]} />
 
 <NextStep />

@@ -39,6 +39,7 @@ prerequisites:
 
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
 import ShadowGate from '@site/src/components/ShadowGate';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 <CrisisResourceBanner />
 
@@ -292,28 +293,15 @@ Shadow work is generally safe at the recognition level described in this module.
 
 ---
 
-## 🧠 Anki Cards
-
-Q: What is the Jungian definition of shadow?
-A: Any aspect of the self that has been disowned, dissociated, or de-identified — pushed out of first-person awareness into the second or third person. It includes both negative and positive qualities.
-
-Q: What is the positive shadow (golden shadow)?
-A: Strengths, capacities, and gifts that the self cannot claim and projects onto others — experienced as belonging to admired people rather than as available to oneself.
-
-Q: What is the 3-2-1 Shadow Process?
-A: A structured reintegration practice (Wilber et al., 2008): Face the projection as a third-person object (3), speak to it in second person (2), then speak as it in first person (1) — reversing the pronoun displacement of shadow formation.
-
-Q: What are Assagioli's subpersonalities?
-A: Semi-autonomous psychological sub-systems, each with its own worldview, affect, and behavioral style. What Jung called "shadow" is often a cluster of subpersonalities that have been disowned. Integration involves building conscious relationship with each one.
-
-Q: What is the pre/trans fallacy in the context of shadow work?
-A: The error of confusing pre-rational regression or emotional flooding (which temporarily reduces capacity) with genuine trans-rational shadow integration (which expands capacity). Both can produce strong affect; the distinguishing markers are what happens to capacity, self-authorship, and trigger charge afterward.
-
-Q: Name three structural characteristics of projection.
-A: (1) Disproportionate emotional charge; (2) rigid certainty about the quality attributed to the other; (3) resistance to disconfirmation.
-
-Q: What are the four distinguishing markers between genuine shadow integration and regression/flooding?
-A: (1) Integration expands capacity; regression contracts it. (2) Integration preserves a witnessing perspective; regression collapses self-authorship. (3) Integration reduces trigger charge; catharsis alone does not. (4) Integration produces stable groundedness; regression produces depletion or raw openness without durable change.
+<RetrievalPrompt moduleName="Shadow Work Foundation" cards={[
+  {q: "What is the Jungian definition of shadow?", a: "Any aspect of the self that has been disowned, dissociated, or de-identified — pushed out of first-person awareness into the second or third person. It includes both negative and positive qualities."},
+  {q: "What is the positive shadow (golden shadow)?", a: "Strengths, capacities, and gifts that the self cannot claim and projects onto others — experienced as belonging to admired people rather than as available to oneself."},
+  {q: "What is the 3-2-1 Shadow Process?", a: "A structured reintegration practice (Wilber et al., 2008): Face the projection as a third-person object (3), speak to it in second person (2), then speak as it in first person (1) — reversing the pronoun displacement of shadow formation."},
+  {q: "What are Assagioli's subpersonalities?", a: "Semi-autonomous psychological sub-systems, each with its own worldview, affect, and behavioral style. What Jung called \"shadow\" is often a cluster of subpersonalities that have been disowned. Integration involves building conscious relationship with each one."},
+  {q: "What is the pre/trans fallacy in the context of shadow work?", a: "The error of confusing pre-rational regression or emotional flooding (which temporarily reduces capacity) with genuine trans-rational shadow integration (which expands capacity). Both can produce strong affect; the distinguishing markers are what happens to capacity, self-authorship, and trigger charge afterward."},
+  {q: "Name three structural characteristics of projection.", a: "(1) Disproportionate emotional charge; (2) rigid certainty about the quality attributed to the other; (3) resistance to disconfirmation."},
+  {q: "What are the four distinguishing markers between genuine shadow integration and regression/flooding?", a: "(1) Integration expands capacity; regression contracts it. (2) Integration preserves a witnessing perspective; regression collapses self-authorship. (3) Integration reduces trigger charge; catharsis alone does not. (4) Integration produces stable groundedness; regression produces depletion or raw openness without durable change."},
+]} />
 
 ---
 

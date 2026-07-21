@@ -1,28 +1,28 @@
-# Verification Report — LSC-03: Convert "Find Your Path" to deliver confirmed, personalized recommendation
+# Verification Report — LSC-01: Implement live spaced retrieval prompts at module end
 
 ## Session
 
-- **Session ID:** `lsc-03-20260720`
-- **Branch:** `feature/lsc-03-find-your-path-assessment`
+- **Session ID:** `lsc-01-20260721`
+- **Branch:** `feature/lsc-01-retrieval-prompt`
 
 ## Claim Verification
 
 | Claim | Evidence | Verified |
 |-------|----------|----------|
-| Only `src/pages/start.js` modified | `git diff origin/main --name-only` = 1 file | ✅ TRUE |
-| Four `explanation` strings replaced | `grep -c "Your answers suggest" src/pages/start.js` = 4 | ✅ TRUE |
-| tally() function unchanged | `git diff origin/main -- src/pages/start.js` shows no tally changes | ✅ TRUE |
-| No AQAL terms in mirror paragraphs | `grep -iE "amber|rational|pluralistic|integral.*stage|developmental.*level|centre.of.gravity" src/pages/start.js` = 0 | ✅ TRUE |
-| Build passes | `npm run build` → `[SUCCESS] Generated static files` | ✅ TRUE |
-| No layout/structural changes | `git diff origin/main -- src/pages/start.js` = only string replacements in RESULTS{} | ✅ TRUE |
+| RetrievalCard component exists | `ls src/components/RetrievalCard/index.js` exists | ✅ TRUE |
+| RetrievalPrompt component exists | `ls src/components/RetrievalPrompt/index.js` exists | ✅ TRUE |
+| 55 modules have RetrievalPrompt import | `grep -rl RetrievalPrompt docs/modules/ \| wc -l` = 55 | ✅ TRUE |
+| Zero old Anki Card sections remain | `grep -rl '## 🧠 Anki Cards' docs/modules/ \| wc -l` = 0 | ✅ TRUE |
+| Build passes | `npm run build` → `[SUCCESS]` | ✅ TRUE |
+| No other directories changed | `git diff origin/main --name-only` shows only `docs/modules/` + `src/components/Retrieval{Card,Prompt}/` | ✅ TRUE |
 
 ## Summary
 
 | Category | Claims | Verified True | Verified False |
 |----------|--------|---------------|----------------|
-| File changes | 2 | 2 | 0 |
-| Content changes | 2 | 2 | 0 |
-| Non-regression | 2 | 2 | 0 |
+| File existence | 2 | 2 | 0 |
+| Module conversion | 2 | 2 | 0 |
+| Build + scope | 2 | 2 | 0 |
 | **Total** | **6** | **6** | **0** |
 
 ## Verification Result

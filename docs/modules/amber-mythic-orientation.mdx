@@ -32,6 +32,7 @@ practiceTime: 10
 prerequisites: None
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 
 import Admonition from '@theme/Admonition';
@@ -252,28 +253,15 @@ Carry the orientation from this module into your daily context:
 
 ---
 
-## 🧠 Anki Cards
-
-Q: What is the Amber/Mythic stage called in Spiral Dynamics?
-A: Blue/Amber — characterized by absolutistic thinking, sacrifice for deferred reward, order and righteousness, and stability through clear rules.
-
-Q: What does Cook-Greuter call the Amber stage?
-A: The Conformist stage — where identity is fully fused with role, group, and social norms; deviation from group expectations feels existentially threatening.
-
-Q: What is Kegan's Stage 3 and what is its key limitation for adult development?
-A: The Interpersonal stage — the self is co-constructed through relationships and authority. The limitation is the absence of an independent self-authored standpoint from which to adjudicate conflicting expectations.
-
-Q: What is Fowler's Synthetic-Conventional faith?
-A: A stage in which faith provides an authoritative and coherent narrative identity — felt and lived, not yet critically examined. Authority is vested in persons and institutions embodying the tradition.
-
-Q: Name four gifts of the Amber/Mythic stage.
-A: Moral conviction, community identity and belonging, willingness to sacrifice and serve, narrative coherence (and role clarity and reliability).
-
-Q: Name four developmental limitations associated with the Amber/Mythic stage in adult development.
-A: Authority dependence, in-group/out-group rigidity, concrete-literal thinking (difficulty with ambiguity), and externalized self-evaluation.
-
-Q: Why is understanding the gifts of Amber necessary before introducing its limitations?
-A: Because learners at or near Amber will disengage or feel pathologized if limitations are named first. Strengths-first framing is both respectful and more effective for supporting developmental growth.
+<RetrievalPrompt moduleName="Amber/Mythic Orientation" cards={[
+  {q: "What is the Amber/Mythic stage called in Spiral Dynamics?", a: "Blue/Amber — characterized by absolutistic thinking, sacrifice for deferred reward, order and righteousness, and stability through clear rules."},
+  {q: "What does Cook-Greuter call the Amber stage?", a: "The Conformist stage — where identity is fully fused with role, group, and social norms; deviation from group expectations feels existentially threatening."},
+  {q: "What is Kegan's Stage 3 and what is its key limitation for adult development?", a: "The Interpersonal stage — the self is co-constructed through relationships and authority. The limitation is the absence of an independent self-authored standpoint from which to adjudicate conflicting expectations."},
+  {q: "What is Fowler's Synthetic-Conventional faith?", a: "A stage in which faith provides an authoritative and coherent narrative identity — felt and lived, not yet critically examined. Authority is vested in persons and institutions embodying the tradition."},
+  {q: "Name four gifts of the Amber/Mythic stage.", a: "Moral conviction, community identity and belonging, willingness to sacrifice and serve, narrative coherence (and role clarity and reliability)."},
+  {q: "Name four developmental limitations associated with the Amber/Mythic stage in adult development.", a: "Authority dependence, in-group/out-group rigidity, concrete-literal thinking (difficulty with ambiguity), and externalized self-evaluation."},
+  {q: "Why is understanding the gifts of Amber necessary before introducing its limitations?", a: "Because learners at or near Amber will disengage or feel pathologized if limitations are named first. Strengths-first framing is both respectful and more effective for supporting developmental growth."},
+]} />
 
 ---
 

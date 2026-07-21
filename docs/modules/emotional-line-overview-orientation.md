@@ -27,6 +27,7 @@ difficulty: Intermediate
 readingTime: 8
 practiceTime: 12
 prerequisites: None
+line: emotional
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

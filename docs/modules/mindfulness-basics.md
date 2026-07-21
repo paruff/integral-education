@@ -20,6 +20,7 @@ readingTime: 10
 practiceTime: 15
 prerequisites:
 - rational-orange-orientation
+line: somatic
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';

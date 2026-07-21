@@ -30,6 +30,8 @@ tags:
 difficulty: Advanced
 readingTime: 14
 practiceTime: 25
+line: emotional
+line_secondary: interpersonal
 ---
 
 import ModuleMeta from '@site/src/components/ModuleMeta';

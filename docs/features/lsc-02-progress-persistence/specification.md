@@ -1,4 +1,6 @@
 # Specification: LSC-02 — Implement learner progress persistence (localStorage)
+> **Issue #318** | **Archived from feature-flow session**
+
 
 ## Problem
 

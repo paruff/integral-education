@@ -1,0 +1,110 @@
+import { useState, useCallback, useEffect } from 'react';
+
+const STORAGE_KEY = 'iel_progress_v1';
+
+const DEFAULT_DATA = {
+  modules: {},
+  lastUpdated: null,
+};
+
+function loadFromStorage() {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      // Ensure schema is valid
+      if (parsed && typeof parsed === 'object' && parsed.modules) {
+        return parsed;
+      }
+    }
+    return { ...DEFAULT_DATA };
+  } catch {
+    // Private browsing or storage unavailable
+    return null;
+  }
+}
+
+function saveToStorage(data) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export default function useProgress() {
+  const [data, setData] = useState(() => loadFromStorage());
+  const [isAvailable, setIsAvailable] = useState(() => {
+    try {
+      localStorage.setItem('__iel_test__', '1');
+      localStorage.removeItem('__iel_test__');
+      return true;
+    } catch {
+      return false;
+    }
+  });
+
+  // If storage was unavailable on load, data is null
+  const safeData = data || { ...DEFAULT_DATA };
+
+  const updateModule = useCallback((moduleId, updates) => {
+    const now = new Date().toISOString();
+    setData((prev) => {
+      const current = prev || { ...DEFAULT_DATA };
+      const newData = {
+        ...current,
+        modules: {
+          ...current.modules,
+          [moduleId]: {
+            ...(current.modules[moduleId] || {}),
+            ...updates,
+            lastVisited: now,
+          },
+        },
+        lastUpdated: now,
+      };
+      saveToStorage(newData);
+      return newData;
+    });
+  }, []);
+
+  const getModule = useCallback(
+    (moduleId) => {
+      if (!safeData.modules) return null;
+      return safeData.modules[moduleId] || null;
+    },
+    [safeData]
+  );
+
+  const clear = useCallback(() => {
+    setData({ ...DEFAULT_DATA, lastUpdated: new Date().toISOString() });
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {
+      // Ignore
+    }
+  }, []);
+
+  const getDaysSinceLastActivity = useCallback(() => {
+    if (!safeData.lastUpdated) return null;
+    const last = new Date(safeData.lastUpdated);
+    const now = new Date();
+    const diff = Math.floor((now - last) / (1000 * 60 * 60 * 24));
+    return diff;
+  }, [safeData]);
+
+  const completedCount = Object.values(safeData.modules || {}).filter(
+    (m) => m.completed
+  ).length;
+
+  return {
+    data: safeData,
+    isAvailable,
+    updateModule,
+    getModule,
+    clear,
+    getDaysSinceLastActivity,
+    completedCount,
+  };
+}

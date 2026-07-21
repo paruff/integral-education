@@ -1,50 +1,50 @@
 [
   {
-    "id": "lsc-01-1",
-    "description": "Create RetrievalCard component: question visible, answer hidden/revealed on click, I remembered/Need review buttons, keyboard accessible",
+    "id": "lsc-02-1",
+    "description": "Create useProgress hook at src/hooks/useProgress.js with correct schema, try/catch for private browsing, clear method",
     "type": "code",
     "test_type": "unit",
     "dependsOn": [],
-    "acceptance": "Component renders question, hides answer, click reveals, tracks correct/incorrect, keyboard navigable (tab/enter)"
+    "acceptance": "Hook reads/writes iel_progress_v1 with correct schema, all ops wrapped in try/catch, returns isAvailable bool"
   },
   {
-    "id": "lsc-01-2",
-    "description": "Create RetrievalPrompt component: wraps cards sequentially, scoring, schedule section with copy-to-clipboard 24h/7d",
+    "id": "lsc-02-2",
+    "description": "Create ModuleComplete component with Mark complete button + level selector (1-4), wired to useProgress",
     "type": "code",
     "test_type": "unit",
-    "dependsOn": ["lsc-01-1"],
-    "acceptance": "Renders cards one at a time, scores, shows schedule section after all done, copy buttons work"
+    "dependsOn": ["lsc-02-1"],
+    "acceptance": "Component renders level radio + Mark complete button, updates progress on interaction"
   },
   {
-    "id": "lsc-01-3",
-    "description": "Verify build passes with new components (no module changes yet)",
-    "type": "verification",
-    "test_type": "integration",
-    "dependsOn": ["lsc-01-1", "lsc-01-2"],
-    "acceptance": "npm run build passes — components exist but not yet imported by any module"
-  },
-  {
-    "id": "lsc-01-4",
-    "description": "Replace Anki cards with RetrievalPrompt in 5 representative modules (batch 1)",
+    "id": "lsc-02-3",
+    "description": "Create docs/my-progress.mdx page showing modules completed, level per module, days since last activity, Clear button",
     "type": "code",
     "test_type": "integration",
-    "dependsOn": ["lsc-01-3"],
-    "acceptance": "5 modules updated: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation, shadow-work-foundation, emotional-intelligence-somatic-line"
+    "dependsOn": ["lsc-02-1"],
+    "acceptance": "Page renders progress summary, table, Clear button, private browsing notice"
   },
   {
-    "id": "lsc-01-5",
-    "description": "Replace Anki cards with RetrievalPrompt in remaining 50 modules (batch 2)",
+    "id": "lsc-02-4",
+    "description": "Convert docs/reflections/daily-template.md to interactive MDX with fillable text areas saving to iel_reflections_v1",
     "type": "code",
     "test_type": "integration",
-    "dependsOn": ["lsc-01-4"],
-    "acceptance": "All 55 modules converted from static Anki section to RetrievalPrompt component"
+    "dependsOn": ["lsc-02-1"],
+    "acceptance": "Text areas are fillable, save to localStorage on blur, display last saved timestamp"
   },
   {
-    "id": "lsc-01-6",
-    "description": "Verify npm run build passes after all module replacements",
+    "id": "lsc-02-5",
+    "description": "Add ModuleComplete component to 5 representative modules (batch 1)",
+    "type": "code",
+    "test_type": "integration",
+    "dependsOn": ["lsc-02-2"],
+    "acceptance": "5 modules have ModuleComplete at end: cognitive-bias-101, mindfulness-basics, shadow-integration-101, emotional-granularity, systems-thinking-101"
+  },
+  {
+    "id": "lsc-02-6",
+    "description": "Verify npm run build passes",
     "type": "verification",
     "test_type": "integration",
-    "dependsOn": ["lsc-01-5"],
-    "acceptance": "npm run build → [SUCCESS] with zero errors across all 55 converted modules"
+    "dependsOn": ["lsc-02-3", "lsc-02-4", "lsc-02-5"],
+    "acceptance": "npm run build → [SUCCESS] with zero errors"
   }
 ]

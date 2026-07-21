@@ -25,6 +25,7 @@ prerequisites:
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
 import ShadowGate from '@site/src/components/ShadowGate';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleComplete from '@site/src/components/ModuleComplete';
 
 <CrisisResourceBanner />
 
@@ -114,6 +115,8 @@ Apply this in real life:
 **Grounding:** If distress arises, pause and use a grounding reset — take several slow, natural breaths, name five things you can see, and place both feet flat on the floor.
 
 **Escalation:** If distress persists after grounding, step away from the practice and contact a trusted support person or qualified counsellor. Do not continue the exercise alone.
+
+<ModuleComplete moduleId="shadow-integration-101" moduleTitle="Shadow Integration 101" />
 
 <NextStep />
 

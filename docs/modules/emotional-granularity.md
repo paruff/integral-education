@@ -28,6 +28,7 @@ prerequisites:
 import NextStep from '@site/src/components/NextStep';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import ModuleComplete from '@site/src/components/ModuleComplete';
 
 
 <ModuleMeta />
@@ -128,6 +129,8 @@ To transition this cognitive taxonomy into long-term functional capacity, execut
 - **24-Hour Interval:** Re-run the core differentiation exercise using a completely different recent emotional event.
 - **72-Hour Interval:** Apply the model to a live, active emotional situation in your daily life and log the granular labels.
 - **7-Day Interval:** Re-examine your original 3-candidate emotion list from your first practice session. Assess whether your interpretation of the primary emotional label has evolved after a week of reflection.
+
+<ModuleComplete moduleId="emotional-granularity" moduleTitle="Emotional Granularity" />
 
 ## Next Steps
 

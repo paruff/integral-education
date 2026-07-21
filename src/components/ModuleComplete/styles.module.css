@@ -1,0 +1,131 @@
+.wrapper {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background: var(--ifm-background-color);
+}
+
+.heading {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.unavailable {
+  font-size: 0.9rem;
+  color: var(--ifm-color-warning-dark);
+  margin: 0;
+}
+
+.levelSection {
+  margin-bottom: 1.25rem;
+}
+
+.levelLabel {
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.levelRadios {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.levelRadio {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  transition: background 0.15s;
+}
+
+.levelRadio:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.levelRadio:has(input:checked) {
+  background: var(--ifm-color-primary-lightest);
+  border-color: var(--ifm-color-primary);
+}
+
+.radioInput {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.radioLabel {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+.radioDesc {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.1rem;
+}
+
+.completeSection {
+  margin-bottom: 0.75rem;
+}
+
+.completeBtn {
+  padding: 0.6rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.completeBtn:hover {
+  opacity: 0.9;
+}
+
+.completeBtn:focus-visible {
+  outline: 2px solid var(--ifm-color-primary-darker);
+  outline-offset: 2px;
+}
+
+.completedBtn {
+  padding: 0.6rem 1.5rem;
+  background: var(--ifm-color-success-lightest);
+  color: var(--ifm-color-success-darker);
+  border: 1px solid var(--ifm-color-success);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.completedBtn:hover {
+  background: var(--ifm-color-success);
+  color: var(--ifm-color-white);
+}
+
+.completedBtn:focus-visible {
+  outline: 2px solid var(--ifm-color-success-darker);
+  outline-offset: 2px;
+}
+
+.savedNotice {
+  font-size: 0.85rem;
+  color: var(--ifm-color-success-darker);
+  margin: 0.5rem 0 0;
+  font-weight: 600;
+}
+
+.completedDate {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 0.25rem 0 0;
+}

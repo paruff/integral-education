@@ -24,6 +24,7 @@ prerequisites:
 import NextStep from '@site/src/components/NextStep';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import ModuleComplete from '@site/src/components/ModuleComplete';
 
 
 <ModuleMeta />
@@ -90,4 +91,6 @@ Apply this in real life:
   {q: "What is the difference between attention and awareness?", a: "Attention is focused; awareness is the open space in which experience occurs"},
   {q: "What is meta-cognition in mindfulness?", a: "Awareness of your own awareness — observing the observer"}
 } />
+
+<ModuleComplete moduleId="mindfulness-basics" moduleTitle="Mindfulness Basics" />
 

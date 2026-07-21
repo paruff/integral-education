@@ -92,7 +92,7 @@ const RESULTS = {
   'A-dominant': {
     title: 'Clear Thinking Path',
     explanation:
-      'Your responses suggest you value clarity, structure, and trusted guidance. The Clear Thinking Path is designed to help you build skills in evidence-based reasoning and critical thinking — while honouring the values and frameworks that have served you well. It is not about abandoning what you know, but adding new tools for when situations get more complex.',
+      'Your answers suggest you tend to rely on established sources, trusted guidance, and clear rules when making decisions. These are real strengths — and there are also times when evidence-based reasoning opens doors that rules alone cannot. The Clear Thinking Path is designed to build that second skill without asking you to set aside the first.',
     recommended: '/docs/quickstarts/amber-to-rational',
     alt: 'You might also find the Personal to Integral path helpful as a broader starting point.',
     altLink: '/docs/quickstarts/personal-to-integral',
@@ -100,7 +100,7 @@ const RESULTS = {
   'B-dominant': {
     title: 'Multiple Perspectives Path',
     explanation:
-      'Your responses suggest you are comfortable with analytical thinking — weighing evidence, reasoning things through, and forming your own conclusions. The Multiple Perspectives Path is designed to help you expand this strength by learning to hold and integrate viewpoints very different from your own. It builds on your analytical skill rather than replacing it.',
+      'Your answers suggest you are comfortable weighing evidence, reasoning things through, and forming your own conclusions. That analytical skill is a powerful foundation. The Multiple Perspectives Path builds on it by helping you hold and integrate viewpoints very different from your own — which is where the hardest decisions usually live.',
     recommended: '/docs/quickstarts/rational-to-pluralistic',
     alt: 'If you want to strengthen your analytical foundations first, the Clear Thinking Path is a good starting point.',
     altLink: '/docs/quickstarts/amber-to-rational',
@@ -108,7 +108,7 @@ const RESULTS = {
   'C-dominant': {
     title: 'Integrating Perspectives Path',
     explanation:
-      'Your responses suggest you naturally see situations from multiple angles and value diverse perspectives. The Integrating Perspectives Path is designed for people who have already done significant perspective-taking work and are now asking: how do I weave all these views together into something coherent and actionable?',
+      'Your answers suggest you naturally see situations from multiple angles and value diverse viewpoints. That perspective-taking capacity is a genuine strength. The Integrating Perspectives Path helps you weave all those views together into something coherent and actionable — the jump from seeing many truths to working with all of them at once.',
     recommended: '/docs/quickstarts/pluralistic-to-integral',
     alt: 'If you are still developing your comfort with multiple perspectives, the Multiple Perspectives Path may be a better starting point.',
     altLink: '/docs/quickstarts/rational-to-pluralistic',
@@ -116,7 +116,7 @@ const RESULTS = {
   mixed: {
     title: 'Personal to Integral',
     explanation:
-      'Your responses span a range of approaches — which is completely normal. Different situations call for different ways of thinking. The Personal to Integral path offers a broad foundation: it starts with building self-awareness and practical skills, then gradually introduces systems thinking and multiple-perspective approaches. It is designed to meet you where you are.',
+      'Your answers span a range of approaches — which is completely normal; different situations genuinely call for different ways of thinking. You are likely someone who moves flexibly between evidence, values, and perspectives depending on what the moment demands. The Personal to Integral Path is a broad foundation designed to meet you where you are and gradually introduce more integrative skills across all of those modes.',
     recommended: '/docs/quickstarts/personal-to-integral',
     alt: 'If you are drawn to a specific area, explore any of the paths below.',
     altLink: null,

@@ -45,13 +45,27 @@ Key distinctions:
 **Duration:** 10–20 min
 
 **Instructions:**
-1. Sit comfortably with spine upright
-2. Close eyes or soften gaze downward
-3. Focus attention on the physical sensation of breathing
+1. Find a comfortable position — sitting in a chair, cross-legged on a cushion, or lying down all work. If you have back pain, lying flat with knees bent or sitting with your back supported is fine.
+2. Close your eyes or soften your gaze downward
+3. Focus attention on the physical sensation of breathing — the air moving in and out, the rise and fall of your chest or belly
 4. When the mind wanders (it will), gently notice and return
-5. End with 2 minutes of open awareness
+5. End with 2 minutes of open awareness — let your attention go wherever it naturally goes. Don't try to focus on anything. Just notice whatever arises and passes.
 
 **Frequency:** Daily, minimum 10 minutes
+
+---
+
+## 🚧 Common Obstacles
+
+**Mind-wandering is not failure.** The brain is designed to wander. Every time you notice it and return, you are practicing exactly the skill this exercise builds. The goal is not to stop thoughts — it is to notice them and choose where to place attention. The noticing itself is the success.
+
+**Drowsiness.** If you regularly fall asleep during practice, try: sitting up instead of lying down, practicing with eyes open, practicing at a different time of day, or splashing cold water on your face before starting. Brief drowsiness is normal — if it persists across sessions, your body may genuinely need rest.
+
+**Restlessness.** The feeling of wanting to stop, move, or check your phone is common for beginners. Try shortening the practice to 5 minutes. The restlessness often peaks around the 2–3 minute mark and then recedes. Sitting with the discomfort for just one more minute is a training effect.
+
+**Emotional releases.** Mindfulness can surface sadness, anxiety, or irritation that was already present but unfelt. If this happens, you can: open your eyes, place both feet on the floor, and take three slow breaths. You do not need to push through strong emotion — you can stop the practice. This is not a failure; it is awareness working.
+
+**"Nothing is happening."** Beginners often feel they are doing it wrong because nothing dramatic occurs. Most meditation is ordinary. The effects of mindfulness accumulate over weeks and months, not minutes. Think of it like physical exercise: a single workout does not transform your body, but consistent practice does.
 
 ---
 

@@ -1,153 +1,112 @@
-# Design: SAFE-02 — Enforce Tier 1 safety gate at module entry for all shadow modules
+# Design: LSC-01 — Implement live spaced retrieval prompts at module end
 
-## Component: `src/components/ShadowGate/`
+## Architecture
 
-### Structure
+Two new React components in `src/components/`:
 
-```
-src/components/ShadowGate/
-├── index.js              — React component with gate logic
-└── styles.module.css     — Infima-themed styling
-```
-
-### Component State
-
-```js
-{
-  acknowledged: false,    // true → gate hidden, content shown
-  blocked: false,         // true → blocking message shown
-  distress: null,         // 1–10 or null
-  contraindications: [], // checked items
-  mindfulnessDone: false, // checkbox
-}
-```
-
-### Gate Flow
+### RetrievalCard
 
 ```
-┌─────────────────────────────────┐
-│ ShadowGate — Tier 1 Entry Check │
-│                                 │
-│ Consent: "I understand this     │
-│ module involves shadow work..." │
-│                                 │
-│ □ I have completed or attempted │
-│   Mindfulness Basics            │
-│                                 │
-│ Contraindications (check any):  │
-│ □ Acute trauma response         │
-│ □ Active PTSD without support   │
-│ □ Current crisis state          │
-│                                 │
-│ Current distress level: 1–10    │
-│ ○ 1 ○ 2 ○ 3 ○ 4 ○ 5            │
-│ ○ 6 ○ 7 ○ 8 ○ 9 ○ 10           │
-│                                 │
-│ [ I'm ready to proceed → ]      │
-└─────────────────────────────────┘
-         │
-         ▼
-  ┌──────────────┐    YES   ┌──────────────────┐
-  │ Distress ≥ 7? │────────▶│ BLOCK: grounding  │
-  └──────────────┘          │ + crisis banner   │
-         │ NO               └──────────────────┘
-         ▼
-  ┌──────────────────┐ YES  ┌──────────────────┐
-  │ Contraindication? │────▶│ BLOCK: "not       │
-  └──────────────────┘      │ suitable" + links │
-         │ NO               └──────────────────┘
-         ▼
-  ┌──────────────────┐
-  │ Gate passes       │
-  │ → hide gate       │
-  │ → show content    │
-  │ → sessionStorage  │
-  └──────────────────┘
+┌────────────────────────────────┐
+│ Card 3 of 7                    │
+│                                │
+│ Q: [question text displayed]   │
+│                                │
+│ [ Show Answer ↓ ]  (clickable) │
+│                                │
+│ -- after reveal --             │
+│ A: [answer text displayed]     │
+│                                │
+│ [ I remembered ] [ Need review]│
+└────────────────────────────────┘
 ```
 
-### sessionStorage
+State: `{ revealed, outcome }` (per card, local state)
+Props: `{ question, answer, onComplete(outcome) }`
 
-```js
-// Key: 'shadow-gate-acknowledged'
-// Value: 'true'
-// Set when gate passes; cleared on browser close.
+### RetrievalPrompt
+
+```
+┌────────────────────────────────┐
+│ Review: [Module Name]          │
+│                                │
+│ [ RetrievalCard sequence ]     │
+│ [ one card at a time ]         │
+│                                │
+│ -- after all cards done --     │
+│ Score: 5/7 correct             │
+│                                │
+│ Schedule your follow-up:       │
+│ □ "Review [Module] — [24h]"   │
+│ □ "Review [Module] — [7d]"    │
+└────────────────────────────────┘
 ```
 
-On component mount: if `sessionStorage.getItem('shadow-gate-acknowledged') === 'true'`, skip gate and show module content immediately.
+State: `{ currentIndex, scores[], completed }`
+Props: `{ moduleName, cards[{q, a}] }`
 
-### Blocking States
+## Data flow
 
-**Distress ≥ 7 block:**
 ```
-⚠️ Your current distress level is high.
+RetrievalPrompt renders → shows card 0
+  → User clicks "Show Answer" → answer revealed
+  → User clicks "I remembered" / "Need review" → score recorded, onComplete
+  → next card shown (or completion screen)
 
-We recommend grounding first before beginning this practice:
-- Place both feet flat on the floor
-- Take several slow, natural breaths
-- Name five things you can see
-
-<CrisisResourceBanner />
-
-[ I've grounded and still want to proceed ]
-[ Return to safety resources ]
+Completion:
+  → Calculate score (correct/total)
+  → Render "Schedule" section
+  → Copy-to-clipboard buttons for 24h + 7d text
 ```
 
-**Contraindication block:**
-```
-This practice is not suitable right now.
+## Module format change
 
-Shadow work can intensify distress when you're already in a vulnerable state. Consider:
-- [Mindfulness Basics →](/docs/modules/mindfulness-basics) — a gentler starting point
-- [Crisis resources →](/docs/safety/crisis-resources) — free, confidential support
-- Returning to this module when you feel more settled
+Before:
+```md
+## 🧠 Anki Cards
 
-[ Return to module list ]
-```
+Q: What is...
+A: ...
 
-### Props
-
-```jsx
-<ShadowGate>
-  {/* Module content renders here when gate passes */}
-  {children}
-</ShadowGate>
+Q: What is...
+A: ...
 ```
 
-## Target Modules (12)
-
-All modules with "shadow" in filename:
-1. `integral-shadow-teal-trap.mdx`
-2. `moral-line-shadow-moral-injury.mdx`
-3. `shadow-321-process.mdx`
-4. `shadow-collective-cultural.mdx`
-5. `shadow-immunity-to-change.mdx`
-6. `shadow-in-relationships.mdx`
-7. `shadow-integration-101.md`
-8. `shadow-persona-mask.mdx`
-9. `shadow-positive-projection.mdx`
-10. `shadow-spiritual-bypassing.mdx`
-11. `shadow-work-foundation.mdx`
-12. `spiritual-line-shadow-integration.mdx`
-
-## Module Integration Pattern
-
-Wrap entire module body content in `<ShadowGate>`:
-
+After:
 ```mdx
-import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
-import ShadowGate from '@site/src/components/ShadowGate';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
-<CrisisResourceBanner />
-<ShadowGate>
-
-## 🧠 Learn
-...module content...
-
-</ShadowGate>
+<RetrievalPrompt moduleName="Module Title" cards={[
+  {q: "What is...", a: "..."},
+  {q: "What is...", a: "..."},
+]} />
 ```
 
-## Constraints
-- No new npm dependencies
-- Infima theme variables only
-- sessionStorage not localStorage (per-session, not persistent)
-- Must not interfere with CrisisResourceBanner or ModuleMeta
+## Styling
+
+- Infima theme variables (--ifm-color-*, etc.)
+- Card container: bordered, rounded, padding
+- Question: visible, medium weight
+- Answer: hidden state (blurred/reveal button), revealed (normal text)
+- Buttons: primary (I remembered), secondary (Need review)
+- Copy buttons: code-style preformatted text with copy icon
+- Responsive: full-width on mobile
+
+## Module change scope
+
+55 modules across 2 batches:
+- Batch 1 (5 modules): cognitive-bias-101.md, shadow-integration-101.md, amber-mythic-orientation.mdx, shadow-work-foundation.mdx, emotional-intelligence-somatic-line.mdx
+- Batch 2 (50 modules): all remaining
+
+## Component imports in modules
+
+Module files already import from `@site/src/components/` (e.g., CrisisResourceBanner, ShadowGate, NextStep). Adding `RetrievalPrompt` follows the existing import pattern — placed after frontmatter, before other component imports.
+
+## Risk assessment
+
+| Risk | Severity | Mitigation |
+|------|----------|------------|
+| Multi-line answers break JSON-like structure | Medium | Escape newlines in MDX cards array; use JSX-friendly formatting |
+| Build breaks from MDX parse errors in cards prop | Medium | Test build after each batch of 5-10 modules |
+| Keyboard accessibility gaps | Low | Use standard button elements + tabIndex; test with keyboard only |
+| sessionState loss on page navigation | Low | Expected behavior — sessionStorage only, consistent with ShadowGate pattern |

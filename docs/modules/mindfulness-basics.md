@@ -22,6 +22,7 @@ prerequisites:
 - rational-orange-orientation
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 
@@ -84,15 +85,9 @@ Apply this in real life:
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="Mindfulness Basics" cards={
+  {q: "What is mindfulness?", a: "Non-judgmental present-moment awareness"},
+  {q: "What is the difference between attention and awareness?", a: "Attention is focused; awareness is the open space in which experience occurs"},
+  {q: "What is meta-cognition in mindfulness?", a: "Awareness of your own awareness — observing the observer"}
+} />
 
-Q: What is mindfulness?
-A: Non-judgmental present-moment awareness
-
-Q: What is the difference between attention and awareness?
-A: Attention is focused; awareness is the open space in which experience occurs
-
-Q: What is meta-cognition in mindfulness?
-A: Awareness of your own awareness — observing the observer
-
-<NextStep />

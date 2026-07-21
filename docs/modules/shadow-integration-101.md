@@ -24,6 +24,7 @@ prerequisites:
 
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
 import ShadowGate from '@site/src/components/ShadowGate';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 <CrisisResourceBanner />
 
@@ -92,16 +93,11 @@ Apply this in real life:
 
 ---
 
-## 🧠 Anki Cards
-
-Q: What is shadow in Jungian psychology?
-A: The disowned aspects of self — qualities pushed out of conscious awareness
-
-Q: What is shadow projection?
-A: Attributing your own disowned traits to other people
-
-Q: What is the goal of shadow integration?
-A: To make the unconscious conscious — own and relate to disowned qualities
+<RetrievalPrompt moduleName="Shadow Integration 101" cards={[
+  {q: "What is shadow in Jungian psychology?", a: "The disowned aspects of self — qualities pushed out of conscious awareness"},
+  {q: "What is shadow projection?", a: "Attributing your own disowned traits to other people"},
+  {q: "What is the goal of shadow integration?", a: "To make the unconscious conscious — own and relate to disowned qualities"},
+]} />
 
 ---
 

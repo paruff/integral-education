@@ -1,0 +1,119 @@
+.card {
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--ifm-background-color);
+}
+
+.progress {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+}
+
+.question {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  line-height: 1.6;
+}
+
+.answer {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.revealBtn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.revealBtn:hover {
+  opacity: 0.9;
+}
+
+.revealBtn:focus-visible {
+  outline: 2px solid var(--ifm-color-primary-darker);
+  outline-offset: 2px;
+}
+
+.actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.rememberedBtn {
+  padding: 0.5rem 1.25rem;
+  background: var(--ifm-color-success);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.rememberedBtn:hover {
+  opacity: 0.9;
+}
+
+.rememberedBtn:focus-visible {
+  outline: 2px solid var(--ifm-color-success-darker);
+  outline-offset: 2px;
+}
+
+.reviewBtn {
+  padding: 0.5rem 1.25rem;
+  background: transparent;
+  color: var(--ifm-color-warning-darker);
+  border: 1px solid var(--ifm-color-warning-darker);
+  border-radius: 0.5rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.reviewBtn:hover {
+  background: var(--ifm-color-warning-lightest);
+}
+
+.reviewBtn:focus-visible {
+  outline: 2px solid var(--ifm-color-warning-darker);
+  outline-offset: 2px;
+}
+
+.correctBadge {
+  padding: 0.4rem 0.8rem;
+  background: var(--ifm-color-success-lightest);
+  color: var(--ifm-color-success-darker);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}
+
+.reviewBadge {
+  padding: 0.4rem 0.8rem;
+  background: var(--ifm-color-warning-lightest);
+  color: var(--ifm-color-warning-darker);
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+}

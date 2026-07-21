@@ -30,6 +30,7 @@ readingTime: 12
 practiceTime: 15
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
@@ -260,41 +261,19 @@ Use this rubric to locate your current empathic accuracy practice:
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="EI-09 · Perspective-Taking & Empathic Accuracy" cards={
+  {q: "What are the three types of empathy Zaki differentiates, and what does each involve?", a: "(1) **Affective empathy** — feeling *with* another; experiencing resonance with their emotional state. (2) **Cognitive empathy** — thinking *about* another; perspective-taking without necessarily feeling the resonance. (3) **Compassionate empathy** — caring *for* another; a motivational orientation toward their wellbeing combining resonance with action orientation."},
+  {q: "What is empathic distress substitution, and why does it occur?", a: "Empathic distress substitution occurs when affective resonance with another's distress becomes so intense that the person withdraws from genuine contact with the other's experience and redirects helping behaviour toward reducing their own distress. It arises from high affective empathy without sufficient self-regulation or compassionate orientation to sustain genuine contact."},
+  {q: "What is Theory of Mind (ToM), and why is it the cognitive prerequisite for interpersonal development above Kegan's Imperial altitude?", a: "ToM is the capacity to attribute independent mental states — beliefs, desires, emotions, intentions — to other people and to understand that those states may differ from one's own. It is the prerequisite for interpersonal development above Imperial altitude because genuine concern for another's interior experience requires the structural capacity to represent that experience as distinct from one's own — without ToM, what appears to be empathy is primarily projection."},
+  {q: "What is Epley's \"egocentrism as the default,\" and what does it imply for perspective accuracy?", a: "Epley's research shows that the default cognitive strategy for perspective-taking is to anchor on one's own experience and adjust toward the other's — but this adjustment is systematically insufficient. The result is that our perspective inferences are dominated by our own experience far more than we recognise. Implication: the subjective feeling of having understood another person is not reliable evidence of accuracy; accuracy requires active verification."},
+  {q: "What is the most practically useful finding from Epley's mindreading research for interpersonal practice?", a: "That accuracy improves substantially when people *ask direct questions* rather than relying on mental simulation — and yet people routinely avoid asking because of embarrassment or false confidence that they already know. The practical implication: treat perspective inferences as hypotheses, and develop the habit of asking verification questions."},
+  {q: "What does Zaki's research show about the belief that empathy is a fixed trait?", a: "The fixed-trait belief is itself an obstacle to empathic development: people who believe empathy is fixed put significantly less effort into empathising in challenging or costly situations, whereas those who believe empathy is trainable invest more effort and show measurable accuracy improvement. Empathic accuracy is trainable — but only if you believe it is."},
+  {q: "In AQAL integral theory, what is the developmental sequence of perspectives, and how does it map onto interpersonal development?", a: "1st-person (my experience, from the inside) → 2nd-person (genuine I–Thou encounter with another's experience) → 3rd-person (view-from-nowhere, objective standpoint) → 4th-person and above (coordination of all perspectives; meta-awareness of perspective-taking itself). Empathic accuracy errors are structurally 1st-person defaults masquerading as 2nd-person perspective-taking — advancing the Interpersonal Line means developing genuinely 2nd-person contact, which requires verified rather than inferred access to the other's experience."},
+  {q: "What distinguishes this module (EI-09) from the Perspective-Taking Capacity module in the Stage Development section?", a: "The Perspective-Taking Capacity module addresses perspective-taking as a *stage-transition* competency — the cognitive shift from Amber in-group reasoning to Rational multi-perspectival judgment. EI-09 addresses perspective-taking as a trainable *Interpersonal Line* skill — specifically the affective and accuracy dimensions, grounded in Zaki's empathy research and Epley's egocentrism findings. The stage module provides the cognitive scaffold; this module develops relational precision."},
+  {q: "What is a verification question, and what distinguishes it from a leading question?", a: "A verification question is a direct, open inquiry that holds your perspective inference as a hypothesis to be tested rather than a fact to be confirmed. It is genuinely open — you are willing to receive a surprising answer. A leading question contains the expected answer within the question (\"You were upset, right?\") and functions primarily to confirm the inference rather than to check it."},
+  {q: "What does the Pre/Trans Checkpoint for empathic accuracy say?", a: "The ability to describe another person's perspective fluently and analytically — 3rd-person language about their inner states — is not the same as genuine 2nd-person contact. Conceptual fluency about perspectives is not empathic accuracy. A person can write a sophisticated account of why someone is anxious without having ever verified what that person is actually experiencing."}
+} />
 
-**Q:** What are the three types of empathy Zaki differentiates, and what does each involve?
-**A:** (1) **Affective empathy** — feeling *with* another; experiencing resonance with their emotional state. (2) **Cognitive empathy** — thinking *about* another; perspective-taking without necessarily feeling the resonance. (3) **Compassionate empathy** — caring *for* another; a motivational orientation toward their wellbeing combining resonance with action orientation.
-
-**Q:** What is empathic distress substitution, and why does it occur?
-**A:** Empathic distress substitution occurs when affective resonance with another's distress becomes so intense that the person withdraws from genuine contact with the other's experience and redirects helping behaviour toward reducing their own distress. It arises from high affective empathy without sufficient self-regulation or compassionate orientation to sustain genuine contact.
-
-**Q:** What is Theory of Mind (ToM), and why is it the cognitive prerequisite for interpersonal development above Kegan's Imperial altitude?
-**A:** ToM is the capacity to attribute independent mental states — beliefs, desires, emotions, intentions — to other people and to understand that those states may differ from one's own. It is the prerequisite for interpersonal development above Imperial altitude because genuine concern for another's interior experience requires the structural capacity to represent that experience as distinct from one's own — without ToM, what appears to be empathy is primarily projection.
-
-**Q:** What is Epley's "egocentrism as the default," and what does it imply for perspective accuracy?
-**A:** Epley's research shows that the default cognitive strategy for perspective-taking is to anchor on one's own experience and adjust toward the other's — but this adjustment is systematically insufficient. The result is that our perspective inferences are dominated by our own experience far more than we recognise. Implication: the subjective feeling of having understood another person is not reliable evidence of accuracy; accuracy requires active verification.
-
-**Q:** What is the most practically useful finding from Epley's mindreading research for interpersonal practice?
-**A:** That accuracy improves substantially when people *ask direct questions* rather than relying on mental simulation — and yet people routinely avoid asking because of embarrassment or false confidence that they already know. The practical implication: treat perspective inferences as hypotheses, and develop the habit of asking verification questions.
-
-**Q:** What does Zaki's research show about the belief that empathy is a fixed trait?
-**A:** The fixed-trait belief is itself an obstacle to empathic development: people who believe empathy is fixed put significantly less effort into empathising in challenging or costly situations, whereas those who believe empathy is trainable invest more effort and show measurable accuracy improvement. Empathic accuracy is trainable — but only if you believe it is.
-
-**Q:** In AQAL integral theory, what is the developmental sequence of perspectives, and how does it map onto interpersonal development?
-**A:** 1st-person (my experience, from the inside) → 2nd-person (genuine I–Thou encounter with another's experience) → 3rd-person (view-from-nowhere, objective standpoint) → 4th-person and above (coordination of all perspectives; meta-awareness of perspective-taking itself). Empathic accuracy errors are structurally 1st-person defaults masquerading as 2nd-person perspective-taking — advancing the Interpersonal Line means developing genuinely 2nd-person contact, which requires verified rather than inferred access to the other's experience.
-
-**Q:** What distinguishes this module (EI-09) from the Perspective-Taking Capacity module in the Stage Development section?
-**A:** The Perspective-Taking Capacity module addresses perspective-taking as a *stage-transition* competency — the cognitive shift from Amber in-group reasoning to Rational multi-perspectival judgment. EI-09 addresses perspective-taking as a trainable *Interpersonal Line* skill — specifically the affective and accuracy dimensions, grounded in Zaki's empathy research and Epley's egocentrism findings. The stage module provides the cognitive scaffold; this module develops relational precision.
-
-**Q:** What is a verification question, and what distinguishes it from a leading question?
-**A:** A verification question is a direct, open inquiry that holds your perspective inference as a hypothesis to be tested rather than a fact to be confirmed. It is genuinely open — you are willing to receive a surprising answer. A leading question contains the expected answer within the question ("You were upset, right?") and functions primarily to confirm the inference rather than to check it.
-
-**Q:** What does the Pre/Trans Checkpoint for empathic accuracy say?
-**A:** The ability to describe another person's perspective fluently and analytically — 3rd-person language about their inner states — is not the same as genuine 2nd-person contact. Conceptual fluency about perspectives is not empathic accuracy. A person can write a sophisticated account of why someone is anxious without having ever verified what that person is actually experiencing.
-
----
-
-## ⏱️ Retrieval Schedule
 
 | Interval | When | Activity |
 |:---|:---|:---|

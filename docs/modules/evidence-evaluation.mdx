@@ -37,6 +37,7 @@ practiceTime: 10
 prerequisites: None
 ---
 import NextStep from '@site/src/components/NextStep';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 
 
@@ -326,29 +327,15 @@ Evidence evaluation is a daily-use skill, not a special procedure for extraordin
 
 ---
 
-## 🧠 Anki Cards
+<RetrievalPrompt moduleName="Evidence Evaluation & Scientific Literacy" cards={
+  {q: "What is the epistemological shift from Amber to Rational knowing?", a: "From authority-based knowing (\"Who said it?\") to evidence-based knowing (\"How well is this supported?\"). The shift is additive — evidence evaluation is added to authority-trust, not substituted for it."},
+  {q: "What does SIFT stand for?", a: "Stop (pause before reacting); Investigate the source (check who produced it before reading deeply); Find better coverage (seek independent corroboration); Trace claims (follow cited claims to their original source)."},
+  {q: "Why is correlation not the same as causation?", a: "Two variables can co-occur for many reasons other than one causing the other — including third-variable confounds and reverse causation. Establishing causation requires a study design that can isolate the variable of interest and rule out alternatives, such as a randomized controlled experiment."},
+  {q: "In the source quality rubric, what distinguishes peer-reviewed research from authoritative expert opinion?", a: "Peer-reviewed research reports original studies with transparent methods, submitted to independent expert review before publication. Expert opinion synthesizes evidence through the judgment of qualified practitioners or institutions but does not necessarily present original data or transparent methods."},
+  {q: "What does a systematic review add beyond a single randomized controlled trial?", a: "A systematic review aggregates findings from multiple independent studies using defined inclusion criteria, reducing the influence of any single study's limitations and providing a more reliable summary of the evidence base across diverse samples and contexts."},
+  {q: "What is Perry's concept of \"Contextual Relativism\" and why does it matter for evidence evaluation?", a: "The recognition that views differ in quality — some are better supported than others — rather than all views being equally valid (Multiplicity) or truth being simply what authorities assert (Dualism). It is the epistemological position that makes evidence evaluation both possible and necessary."}
+} />
 
-Q: What is the epistemological shift from Amber to Rational knowing?
-A: From authority-based knowing ("Who said it?") to evidence-based knowing ("How well is this supported?"). The shift is additive — evidence evaluation is added to authority-trust, not substituted for it.
-
-Q: What does SIFT stand for?
-A: Stop (pause before reacting); Investigate the source (check who produced it before reading deeply); Find better coverage (seek independent corroboration); Trace claims (follow cited claims to their original source).
-
-Q: Why is correlation not the same as causation?
-A: Two variables can co-occur for many reasons other than one causing the other — including third-variable confounds and reverse causation. Establishing causation requires a study design that can isolate the variable of interest and rule out alternatives, such as a randomized controlled experiment.
-
-Q: In the source quality rubric, what distinguishes peer-reviewed research from authoritative expert opinion?
-A: Peer-reviewed research reports original studies with transparent methods, submitted to independent expert review before publication. Expert opinion synthesizes evidence through the judgment of qualified practitioners or institutions but does not necessarily present original data or transparent methods.
-
-Q: What does a systematic review add beyond a single randomized controlled trial?
-A: A systematic review aggregates findings from multiple independent studies using defined inclusion criteria, reducing the influence of any single study's limitations and providing a more reliable summary of the evidence base across diverse samples and contexts.
-
-Q: What is Perry's concept of "Contextual Relativism" and why does it matter for evidence evaluation?
-A: The recognition that views differ in quality — some are better supported than others — rather than all views being equally valid (Multiplicity) or truth being simply what authorities assert (Dualism). It is the epistemological position that makes evidence evaluation both possible and necessary.
-
----
-
-## ⏱️ Retrieval Schedule
 
 | Interval | Activity |
 |---|---|

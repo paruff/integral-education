@@ -1,30 +1,29 @@
-# Specification: SAFE-02 — Enforce Tier 1 safety gate at module entry for all shadow modules
+# Specification: LSC-01 — Implement live spaced retrieval prompts at module end
 
 ## Problem
 
-The Shadowwork Safety Standard defines Tier 1 entry criteria: informed consent, baseline regulation (Mindfulness Basics), distress ≤ 3/10, contraindications confirmed. None are enforced. A learner can open Shadow Integration 101 from the homepage with zero prior exposure or in acute distress.
+Every module has a `## 🧠 Anki Cards` section with Q&A pairs rendered as static text. There is no reveal mechanism (answer always visible), no self-scoring, and no delivery schedule. The single most evidence-supported mechanism for long-term retention — retrieval practice — is designed but not deployed.
 
 ## Requirements
 
 ### Functional
-- Create `src/components/ShadowGate/` component — pre-module consent and readiness check
-- Gate displays four elements: (a) consent statement, (b) contraindications checklist, (c) distress self-report (1–10), (d) Mindfulness Basics confirmation
-- Client-side only — uses `sessionStorage` so gate does not fire on every page reload within a session
-- If distress ≥ 7: block entry, display grounding prompt and CrisisResourceBanner
-- If contraindication checked: block entry, display "This practice is not suitable right now" with links to Mindfulness Basics and crisis resources
-- Gate injected at top of all 12 shadow modules (filename contains "shadow")
+- Create `RetrievalCard` component: shows question, hides answer until click/tap, tracks correct/incorrect per session in component state
+- Create `RetrievalPrompt` component: wraps Anki cards as `RetrievalCard` instances, renders sequentially (one at a time), after all reviewed shows scheduling section
+- Schedule section: pre-formatted copy-to-clipboard text for 24h and 7d reminders: "Review [Module Name] — [date + 24h]" and "Review [Module Name] — [date + 7d]"
+- Replace `## 🧠 Anki Cards` static blocks with `<RetrievalPrompt cards={[...]} />` in all 55 modules
+- Component is keyboard accessible, works without mouse
 
 ### Non-Functional
 - Infima theme variables for styling
-- Keyboard accessible
+- Keyboard accessible (tab, enter/space for reveal, arrow for correct/incorrect)
 - Follows existing `src/components/` patterns
-- `npm run build` must pass
+- `npm run build` passes
+- No persistence (sessionStorage only, cleared on browser close)
 
 ## Acceptance Criteria
-1. ShadowGate component exists at `src/components/ShadowGate/`
-2. Gate displays consent statement, contraindications checklist, distress 1–10 radio, Mindfulness Basics confirmation
-3. Distress ≥ 7 blocks entry with grounding prompt + crisis banner
-4. Contraindication checked blocks entry with "not suitable" message + links
-5. sessionStorage acknowledgment prevents re-fire within session
-6. Gate injected into all 12 shadow modules
-7. `npm run build` passes
+1. `RetrievalCard` component: question visible, answer hidden by default, click/tap reveals answer, "I remembered" / "Need to review" buttons post-reveal
+2. `RetrievalPrompt` component: cards rendered sequentially, scoring tracked, after all done: (a) score summary, (b) schedule section with copy-to-clipboard for 24h + 7d
+3. At least 3 modules updated with `<RetrievalPrompt>` replacing `## 🧠 Anki Cards` (sample: cognitive-bias-101, shadow-integration-101, amber-mythic-orientation)
+4. Remaining 52 modules updated in subsequent batches — all 55 modules converted
+5. Component keyboard navigable (tab, enter/space, no mouse required)
+6. `npm run build` passes with zero errors

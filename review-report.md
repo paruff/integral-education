@@ -1,52 +1,46 @@
-# Review Report — SAFE-02: Enforce Tier 1 safety gate at module entry for all shadow modules
+# Review Report — LSC-03: Convert "Find Your Path" to deliver confirmed, personalized recommendation
 
 ## Session
 
-- **Session ID:** `safe-02-20260720`
-- **Branch:** `fix/safe-02-safety-gate-banner`
+- **Session ID:** `lsc-03-20260720`
+- **Branch:** `feature/lsc-03-find-your-path-assessment`
 
 ## Correctness
 
 | Requirement | Status | Notes |
 |-------------|--------|-------|
-| ShadowGate component created | ✅ | `src/components/ShadowGate/index.js` + `styles.module.css` |
-| Consent statement displayed | ✅ | I quadrant framing, no therapy claims |
-| Contraindications: trauma, PTSD, crisis | ✅ | Three checkboxes matching safety standard |
-| Distress 1-10 radio | ✅ | 10 radio buttons; 7-10 marked with danger color |
-| Mindfulness Basics confirmation | ✅ | Checkbox with link to module |
-| Distress ≥ 7 blocks | ✅ | Grounding box + CrisisResourceBanner + override |
-| Contraindication blocks | ✅ | "Not suitable" + links to MB + crisis resources |
-| sessionStorage acknowledgment | ✅ | per-session; cleared on browser close |
-| Gate in all 12 shadow modules | ✅ | Confirmed by grep |
-| Build passes | ✅ | SUCCESS |
-
-**Verdict: All requirements satisfied.**
+| Four mirror paragraphs replace old explanations | ✅ | All four RESULTS entries updated |
+| Reflects learner's specific answer pattern | ✅ | "Your answers suggest you tend to rely on…" / "are comfortable weighing evidence…" / "naturally see situations from multiple angles…" / "span a range of approaches…" |
+| 2-3 sentences each | ✅ | All four are 3 sentences |
+| No AQAL terminology | ✅ | Zero hits for: Amber, Rational, Pluralistic, Integral, developmental, stage, level, centre-of-gravity |
+| Direct CTA button retained | ✅ | `<Link to={result.recommended}>` unchanged |
+| Routing logic untouched | ✅ | tally(), RESULTS mapping, JSX rendering all verified |
+| All-paths grid retained | ✅ | Recommended badge intact |
+| `npm run build` passes | ✅ | [SUCCESS] |
 
 ## Scope Discipline
 
 | Dimension | Assessment |
 |-----------|------------|
-| Scope creep | **None.** Only the 12 shadow modules (filename contains "shadow"). State modules excluded per spec. |
-| SAFE-01 dependency | ✅ Included CrisisResourceBanner + crisis-resources page since not yet merged |
-| Unnecessary changes | **None.** Gate wrapper only; all module content preserved intact. |
+| Scope creep | **None.** Only `explanation` text strings changed in one file. No new components, no CSS changes, no page structure changes, no sidebar/navbar changes. |
+| Unnecessary changes | **None.** tally() logic, JSX rendering, CSS — all left untouched per spec. |
 
-## Safety Assessment
+## Maintainability
 
-| Aspect | Assessment |
-|--------|------------|
-| Gate severity | Distress block at ≥ 7 (not the ideal ≤ 3 from safety standard) — pragmatic floor, not best-practice ceiling |
-| Override path | Distress block has "I've grounded and still want to proceed" escape — respects learner autonomy |
-| No override for contraindications | Contraindication block has no override — correct: "not suitable right now" |
-| sessionStorage vs localStorage | sessionStorage clears on browser close — correct for per-session gate |
-| CrisisResourceBanner integration | Crisis banner rendered in distress block state |
+- Change is self-contained in one file (`src/pages/start.js`)
+- Mirror paragraphs use consistent "Your answers suggest…" framing across all four
+- No new dependencies, no new patterns introduced
 
-## Risk Assessment
+## Safety/Tone Assessment
 
-| Risk | Severity | Mitigation |
-|------|----------|------------|
-| Gate fatigue (learners dismiss without reading) | Medium | Gate is structural (must interact), not a cookie banner — requires explicit consent/check action |
-| sessionStorage unavailable (rare) | Low | Gate shows; on next page load within session, gate re-fires (acceptable degradation) |
-| Pre-existing broken anchors | Low | Not caused by these changes; pre-existing in all 12 shadow modules |
+| Mirror | Potential Risk | Assessment |
+|--------|---------------|------------|
+| A-dominant | Could sound like "you're a rule-follower" | ✅ Reframed as strength: "These are real strengths — and there are also times when…" |
+| B-dominant | Could sound like "you're coldly analytical" | ✅ Reframed as foundation: "That analytical skill is a powerful foundation" |
+| C-dominant | Could sound like "you can't decide" | ✅ Reframed as capacity: "That perspective-taking capacity is a genuine strength" |
+| mixed | Could sound like "you're unfocused" | ✅ Normalized: "which is completely normal; different situations genuinely call for different ways" |
+
+All follow the developmental-vocabulary rule: "Never name another stage to the audience" — no stage labels anywhere in mirror text.
 
 ## Review Result
 

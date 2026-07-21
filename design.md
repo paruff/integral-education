@@ -1,153 +1,72 @@
-# Design: SAFE-02 — Enforce Tier 1 safety gate at module entry for all shadow modules
+# Design: LSC-03 — Convert "Find Your Path" to deliver confirmed, personalized recommendation
 
-## Component: `src/components/ShadowGate/`
+## Architecture
 
-### Structure
+The assessment is a standalone React page (`src/pages/start.js`) with no external dependencies:
+- `<Layout>` wrapper from Docusaurus
+- `<Link>` from `@docusaurus/Link`
+- CSS modules (`start.module.css`)
 
-```
-src/components/ShadowGate/
-├── index.js              — React component with gate logic
-└── styles.module.css     — Infima-themed styling
-```
+No API calls, no backend, no state persistence. Entirely client-side.
 
-### Component State
-
-```js
-{
-  acknowledged: false,    // true → gate hidden, content shown
-  blocked: false,         // true → blocking message shown
-  distress: null,         // 1–10 or null
-  contraindications: [], // checked items
-  mindfulnessDone: false, // checkbox
-}
-```
-
-### Gate Flow
+## Data flow
 
 ```
-┌─────────────────────────────────┐
-│ ShadowGate — Tier 1 Entry Check │
-│                                 │
-│ Consent: "I understand this     │
-│ module involves shadow work..." │
-│                                 │
-│ □ I have completed or attempted │
-│   Mindfulness Basics            │
-│                                 │
-│ Contraindications (check any):  │
-│ □ Acute trauma response         │
-│ □ Active PTSD without support   │
-│ □ Current crisis state          │
-│                                 │
-│ Current distress level: 1–10    │
-│ ○ 1 ○ 2 ○ 3 ○ 4 ○ 5            │
-│ ○ 6 ○ 7 ○ 8 ○ 9 ○ 10           │
-│                                 │
-│ [ I'm ready to proceed → ]      │
-└─────────────────────────────────┘
-         │
-         ▼
-  ┌──────────────┐    YES   ┌──────────────────┐
-  │ Distress ≥ 7? │────────▶│ BLOCK: grounding  │
-  └──────────────┘          │ + crisis banner   │
-         │ NO               └──────────────────┘
-         ▼
-  ┌──────────────────┐ YES  ┌──────────────────┐
-  │ Contraindication? │────▶│ BLOCK: "not       │
-  └──────────────────┘      │ suitable" + links │
-         │ NO               └──────────────────┘
-         ▼
-  ┌──────────────────┐
-  │ Gate passes       │
-  │ → hide gate       │
-  │ → show content    │
-  │ → sessionStorage  │
-  └──────────────────┘
+User selects Q1-Q4 → answers{} → Submit → tally(answers)
+  → counts{a:, b:, c:} → max ≥ 3? → A/B/C-dominant
+                              → max < 3? → mixed
+  → RESULTS[key] → { title, explanation, recommended, alt, altLink }
+  → Rendered in <div role="region" aria-label="Your recommended path">
+  → Below result: all-paths grid with recommended badge
 ```
 
-### sessionStorage
+## Change scope — minimal
 
-```js
-// Key: 'shadow-gate-acknowledged'
-// Value: 'true'
-// Set when gate passes; cleared on browser close.
-```
+Only the `explanation` field in each `RESULTS{}` entry needs to change. Everything else is verified correct and stays:
 
-On component mount: if `sessionStorage.getItem('shadow-gate-acknowledged') === 'true'`, skip gate and show module content immediately.
+| Component | Status | Change |
+|-----------|--------|--------|
+| QUESTIONS[] | Verified working | No change |
+| ALL_PATHS[] | Verified mapping | No change |
+| tally() | Verified: 3-of-4 threshold, mixed fallback | No change |
+| RESULT.title | Path name (e.g. "Clear Thinking Path") | No change |
+| RESULT.recommended | Link to QuickStart | No change |
+| RESULT.alt | Alternate path text | No change |
+| RESULT.altLink | Alternate path link | No change |
+| **RESULT.explanation** | **Path-descriptive paragraph → mirror paragraph** | **Replace** |
+| JSX rendering | Verified correct | No change |
+| CSS (start.module.css) | Verified working | No change |
 
-### Blocking States
+## Mirror paragraph design
 
-**Distress ≥ 7 block:**
-```
-⚠️ Your current distress level is high.
+Each result gets a 2–3 sentence paragraph that:
+1. Reflects the learner's specific answer pattern back (e.g., "Your answers suggest you tend to…")
+2. Uses the developmental-vocabulary skill's Amber/Rational/Pluralistic voice (the assessment targets learners ranging across these stages)
+3. Names no stages, labels, or AQAL terms
+4. Connects the pattern to why that specific path is a good fit (not a generic description of the path)
 
-We recommend grounding first before beginning this practice:
-- Place both feet flat on the floor
-- Take several slow, natural breaths
-- Name five things you can see
+### Mirror templates
 
-<CrisisResourceBanner />
+**A-dominant** (→ Amber-to-Rational / Clear Thinking Path):
+"Your answers suggest you tend to rely on established sources, trusted guidance, and clear rules. These are real strengths — and there are also times when evidence-based reasoning opens doors that rules alone can't. The Clear Thinking Path is designed to build that second skill without asking you to abandon the first."
 
-[ I've grounded and still want to proceed ]
-[ Return to safety resources ]
-```
+**B-dominant** (→ Rational-to-Pluralistic / Multiple Perspectives Path):
+"Your answers suggest you're comfortable weighing evidence, reasoning things through, and forming your own conclusions. That analytical skill is a powerful foundation. The Multiple Perspectives Path builds on it by helping you hold and integrate viewpoints very different from your own — which is where the hardest decisions usually live."
 
-**Contraindication block:**
-```
-This practice is not suitable right now.
+**C-dominant** (→ Pluralistic-to-Integral / Integrating Perspectives Path):
+"Your answers suggest you naturally see situations from multiple angles and value diverse viewpoints. That perspective-taking capacity is a genuine strength. The Integrating Perspectives Path helps you weave all those views together into something coherent and actionable — the jump from seeing many truths to working with all of them at once."
 
-Shadow work can intensify distress when you're already in a vulnerable state. Consider:
-- [Mindfulness Basics →](/docs/modules/mindfulness-basics) — a gentler starting point
-- [Crisis resources →](/docs/safety/crisis-resources) — free, confidential support
-- Returning to this module when you feel more settled
+**mixed** (→ Personal-to-Integral):
+"Your answers span a range of approaches — which is completely normal; different situations genuinely call for different ways of thinking. You're likely someone who moves flexibly between evidence, values, and perspectives depending on what the moment demands. The Personal to Integral Path is a broad foundation designed to meet you where you are and gradually introduce more integrative skills across all of those modes."
 
-[ Return to module list ]
-```
+## Risk assessment
 
-### Props
+| Risk | Severity | Mitigation |
+|------|----------|------------|
+| Mirror text sounds like a personality label | Low | Use "Your answers suggest you tend to…" framing — always about response pattern, not identity |
+| Build break from MDX-in-JSX | Low | file is `.js` (not `.mdx`); no MDX syntax in use |
+| Regression on existing routing | None | No code changed except string literals in RESULTS.explanation |
 
-```jsx
-<ShadowGate>
-  {/* Module content renders here when gate passes */}
-  {children}
-</ShadowGate>
-```
+## Dependencies
 
-## Target Modules (12)
-
-All modules with "shadow" in filename:
-1. `integral-shadow-teal-trap.mdx`
-2. `moral-line-shadow-moral-injury.mdx`
-3. `shadow-321-process.mdx`
-4. `shadow-collective-cultural.mdx`
-5. `shadow-immunity-to-change.mdx`
-6. `shadow-in-relationships.mdx`
-7. `shadow-integration-101.md`
-8. `shadow-persona-mask.mdx`
-9. `shadow-positive-projection.mdx`
-10. `shadow-spiritual-bypassing.mdx`
-11. `shadow-work-foundation.mdx`
-12. `spiritual-line-shadow-integration.mdx`
-
-## Module Integration Pattern
-
-Wrap entire module body content in `<ShadowGate>`:
-
-```mdx
-import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
-import ShadowGate from '@site/src/components/ShadowGate';
-
-<CrisisResourceBanner />
-<ShadowGate>
-
-## 🧠 Learn
-...module content...
-
-</ShadowGate>
-```
-
-## Constraints
-- No new npm dependencies
-- Infima theme variables only
-- sessionStorage not localStorage (per-session, not persistent)
-- Must not interfere with CrisisResourceBanner or ModuleMeta
+- **None.** Standalone page. No component imports, no module dependencies.

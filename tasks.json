@@ -1,35 +1,50 @@
-{
-  "tasks": [
-    {
-      "id": "1",
-      "title": "Create ShadowGate component",
-      "description": "Create src/components/ShadowGate/index.js and styles.module.css. Component renders consent check, contraindications list, distress radio (1-10), Mindfulness Basics confirmation. Blocks entry if distress ≥ 7 or contraindication checked. Uses sessionStorage for per-session acknowledgment.",
-      "dependencies": [],
-      "acceptance_criteria": [
-        {"id": "AC-1", "description": "ShadowGate component exists at src/components/ShadowGate/", "test_type": "unit"},
-        {"id": "AC-2", "description": "Gate displays consent, contraindications, distress 1-10, Mindfulness Basics check", "test_type": "unit"},
-        {"id": "AC-3", "description": "Distress ≥ 7 blocks entry with grounding + crisis banner", "test_type": "unit"},
-        {"id": "AC-4", "description": "Contraindication blocks entry with 'not suitable' message + links", "test_type": "unit"},
-        {"id": "AC-5", "description": "sessionStorage prevents re-fire within session", "test_type": "unit"}
-      ]
-    },
-    {
-      "id": "2",
-      "title": "Wrap all 12 shadow modules in ShadowGate",
-      "description": "Wrap module body content in <ShadowGate>...</ShadowGate> in all 12 modules with 'shadow' in filename. Gate renders below CrisisResourceBanner.",
-      "dependencies": ["1"],
-      "acceptance_criteria": [
-        {"id": "AC-6", "description": "Gate injected into all 12 shadow modules", "test_type": "unit"}
-      ]
-    },
-    {
-      "id": "3",
-      "title": "Validate build",
-      "description": "Run npm run build and verify no errors.",
-      "dependencies": ["1", "2"],
-      "acceptance_criteria": [
-        {"id": "AC-7", "description": "npm run build passes", "test_type": "unit"}
-      ]
-    }
-  ]
-}
+[
+  {
+    "id": "lsc-03-1",
+    "description": "Verify current routing logic in src/pages/start.js: tally function, 3-of-4 threshold, all four result states exist",
+    "type": "verification",
+    "test_type": "unit",
+    "dependsOn": [],
+    "acceptance": "All four result keys (A-dominant, B-dominant, C-dominant, mixed) present in RESULTS object; tally() correctly counts and thresholds at max ≥ 3"
+  },
+  {
+    "id": "lsc-03-2",
+    "description": "Replace A-dominant explanation with 2-3 sentence mirror paragraph reflecting answer pattern (relies on sources/rules)",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": ["lsc-03-1"],
+    "acceptance": "Mirror text: (a) references the answer pattern, (b) is 2-3 sentences, (c) does not name AQAL terms/stages, (d) connects pattern to why Clear Thinking Path fits"
+  },
+  {
+    "id": "lsc-03-3",
+    "description": "Replace B-dominant explanation with mirror paragraph reflecting analytical/evidence-based answer pattern",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": ["lsc-03-1"],
+    "acceptance": "Mirror text: (a) references the analytical answer pattern, (b) is 2-3 sentences, (c) no AQAL terms, (d) connects to Multiple Perspectives Path"
+  },
+  {
+    "id": "lsc-03-4",
+    "description": "Replace C-dominant explanation with mirror paragraph reflecting multi-perspective answer pattern",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": ["lsc-03-1"],
+    "acceptance": "Mirror text: (a) references multi-perspective answer pattern, (b) is 2-3 sentences, (c) no AQAL terms, (d) connects to Integrating Perspectives Path"
+  },
+  {
+    "id": "lsc-03-5",
+    "description": "Replace mixed explanation with mirror paragraph reflecting flexible/spanning answer pattern",
+    "type": "code",
+    "test_type": "unit",
+    "dependsOn": ["lsc-03-1"],
+    "acceptance": "Mirror text: (a) references spanning/flexible pattern, (b) is 2-3 sentences, (c) no AQAL terms, (d) connects to Personal to Integral Path"
+  },
+  {
+    "id": "lsc-03-6",
+    "description": "Verify npm run build passes with no errors",
+    "type": "verification",
+    "test_type": "integration",
+    "dependsOn": ["lsc-03-2", "lsc-03-3", "lsc-03-4", "lsc-03-5"],
+    "acceptance": "npm run build output shows [SUCCESS] with zero errors (warnings acceptable if pre-existing)"
+  }
+]

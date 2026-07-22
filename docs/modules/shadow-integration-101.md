@@ -85,8 +85,8 @@ The goal is not to eliminate shadow — it's to make the unconscious conscious.
 |-------|-----------|
 | 1 | Notices emotional triggers in real time |
 | 2 | Identifies a possible projection without excessive defense |
-| 3 | Owns a disowned trait and relates to it with compassion |
-| 4 | Uses shadow work to deepen relationships and creativity |
+| 3 | Owns a disowned trait and relates to it with compassion . *Example: "I noticed I was unusually irritated by a colleague who keeps promoting their work in meetings. I asked myself: 'Is there a part of me that wants to self-promote but feels it is not allowed?' The answer was yes."*. *Example: "I noticed I was unusually irritated by a colleague who keeps promoting their work. I asked myself: is there a part of me that wants to self-promote but feels it is not allowed? The answer was yes."*|
+| 4 | Uses shadow work to deepen relationships and creativity . *Example: "I caught myself mid-sentence during a dinner argument with my brother. I was about to call him 'controlling,' and I realized — I was the one trying to control the conversation. I stopped, named my projection out loud, and the whole tone of the exchange shifted."*. *Example: "I caught myself mid-sentence during dinner with my brother. I was about to call him controlling, and I realized — I was trying to control the conversation. I named my projection out loud and the tone shifted."*|
 
 ---
 

@@ -92,6 +92,11 @@ Core skills:
 
 ## Assessment Rubric
 
+
+**Level 3 example:** "Instead of telling my friend I felt 'stressed,' I named three distinct emotions: dread before my Monday standup, guilt about the delayed project, and resentment that I took on too much work."
+
+**Level 4 example:** "When my manager gave difficult feedback, I felt a heat rise in my chest and named it as shame rather than just 'bad.' I also noticed I was angry that I felt shame, which helped me separate the reaction from the message."
+
 This rubric aligns with the AQAL Competency Map Emotional Line L1–L2 indicators:
 
 | Competency Indicator | Emerging | Proficient |

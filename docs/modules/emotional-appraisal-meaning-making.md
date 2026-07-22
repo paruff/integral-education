@@ -17,6 +17,7 @@ tags:
 difficulty: Intermediate
 readingTime: 10
 practiceTime: 10
+line: emotional
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';

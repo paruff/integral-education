@@ -19,6 +19,7 @@ difficulty: Beginner
 readingTime: 10
 practiceTime: 10
 prerequisites: None
+line: cognitive
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';

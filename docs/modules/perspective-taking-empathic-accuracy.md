@@ -28,6 +28,7 @@ prerequisites:
 difficulty: Intermediate
 readingTime: 12
 practiceTime: 15
+line: interpersonal
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';

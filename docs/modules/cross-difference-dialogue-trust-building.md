@@ -19,6 +19,7 @@ tags:
 difficulty: Advanced
 readingTime: 14
 practiceTime: 25
+line: interpersonal
 ---
 
 ## AQAL Mapping

@@ -21,6 +21,7 @@ tags:
 difficulty: Intermediate
 readingTime: 12
 practiceTime: 25
+line: interpersonal
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

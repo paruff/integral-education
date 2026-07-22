@@ -9,6 +9,8 @@ import Term from '@site/src/components/Term';
 
 ## 🧭 Personal → Integral (QuickStart)
 
+
+**Why this sequence?** This path works from foundation to application. Mindfulness establishes the witnessing capacity that makes emotional work possible — you cannot name what you cannot notice. Emotional granularity then provides the precision needed for shadow work: tracking projections requires knowing exactly what you feel and why. Each step builds the capacity the next step requires.
 **Goal:** Move from conventional self-awareness to an integral, multi-perspectival understanding of yourself and the world.
 
 **Time commitment:** 3–6 weeks (20–30 min/day)

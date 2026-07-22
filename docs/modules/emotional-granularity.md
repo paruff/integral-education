@@ -24,6 +24,7 @@ readingTime: 10
 practiceTime: 12
 prerequisites:
 - rational-orange-orientation
+line: emotional
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

@@ -20,6 +20,7 @@ tags:
 difficulty: Intermediate
 readingTime: 10
 practiceTime: 10
+line: interpersonal
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';

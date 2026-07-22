@@ -20,6 +20,7 @@ readingTime: 10
 practiceTime: 15
 prerequisites:
 - pluralistic-green-orientation
+line: cross-cutting
 ---
 
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';

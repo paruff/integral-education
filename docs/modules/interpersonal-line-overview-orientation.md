@@ -11,6 +11,7 @@ states: ["reflective"]
 types: ["self-paced", "dialogue-supported"]
 
 tags: ["interpersonal-line", "Kegan", "Buber", "attachment", "Siegel", "relational-development", "subject-object", "I-Thou", "growing-up", "developmental-lines", "AQAL", "EI-08"]
+line: interpersonal
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 

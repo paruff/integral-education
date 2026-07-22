@@ -23,6 +23,7 @@ readingTime: 10
 practiceTime: 10
 prerequisites:
 - rational-orange-orientation
+line: cognitive
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';

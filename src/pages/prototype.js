@@ -1,31 +1,21 @@
-import React, {useMemo, useState} from 'react';
+import React, {useState, useMemo} from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import ShadowGate from '@site/src/components/ShadowGate';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import styles from './prototype.module.css';
 
 const pathways = [
-  {
-    id: 'integral-foundations',
-    title: 'Pathway A: Integral Foundations',
-    weeks: 4,
-    focus: 'AQAL literacy, systems perspective, transfer'
-  },
-  {
-    id: 'shadow-foundations',
-    title: 'Pathway B: Shadow Foundations',
-    weeks: 4,
-    focus: 'Low-risk shadow integration with safety scaffolds'
-  }
+  { id: 'integral-foundations', title: 'Integral Foundations', weeks: 4, focus: 'AQAL literacy, systems perspective' },
+  { id: 'shadow-foundations', title: 'Shadow Foundations', weeks: 4, focus: 'Low-risk shadow integration with safety scaffolds' },
 ];
 
 const readinessLevels = ['New to Integral', 'Some Experience', 'Facilitator Track'];
 
-const practiceSteps = [
-  'Consent and readiness check',
-  'Practice briefing and contraindications',
-  'Timed practice (3-10 min)',
-  'Grounding and de-escalation options',
-  'Reflection capture and retrieval prompt'
+const SAMPLE_CARDS = [
+  { q: 'What is the difference between attention and awareness?', a: 'Attention is focused; awareness is the open space in which experience occurs' },
+  { q: 'What is meta-cognition?', a: 'Awareness of your own awareness — observing the observer rather than being caught in thought' },
+  { q: 'What is confirmation bias?', a: 'The tendency to seek information that confirms existing beliefs' },
 ];
 
 function scoreLabel(score) {
@@ -41,7 +31,7 @@ export default function PrototypePage() {
   const [aqalScore, setAqalScore] = useState(3);
   const [evidenceScore, setEvidenceScore] = useState(3);
   const [transferScore, setTransferScore] = useState(3);
-  const [safetyAck, setSafetyAck] = useState(false);
+  const [gatePassed, setGatePassed] = useState(false);
 
   const selected = useMemo(
     () => pathways.find((p) => p.id === selectedPathway) || pathways[0],
@@ -52,22 +42,17 @@ export default function PrototypePage() {
 
   return (
     <Layout
-      title="Try a Practice Session"
-      description="Explore how a guided learning practice works, choose a path, and see how your progress is tracked.">
+      title="Interactive Demo"
+      description="Step through a guided practice, try the retrieval loop, and see how your progress is tracked.">
       <main className={styles.wrapper}>
         <section className={styles.hero}>
-          <h1>Try a Practice Session</h1>
+          <h1>Interactive Demo</h1>
           <p>
-            Choose a learning path, step through a guided practice, and see how
-            your progress is tracked.
+            This is a live demo of the actual platform components — the consent gate,
+            retrieval practice, and progress tracking that every module uses. Choose
+            a path, step through a guided practice, and see how learner progress works.
           </p>
         </section>
-
-        <div className={styles.callout}>
-          <strong>This is a demo — not a full session.</strong>
-          <br />
-          Explore how a guided practice works before you begin. No progress is saved.
-        </div>
 
         <section className={styles.grid}>
           <article className={styles.card}>
@@ -90,9 +75,7 @@ export default function PrototypePage() {
               value={readiness}
               onChange={(e) => setReadiness(e.target.value)}>
               {readinessLevels.map((level) => (
-                <option key={level} value={level}>
-                  {level}
-                </option>
+                <option key={level} value={level}>{level}</option>
               ))}
             </select>
 
@@ -101,84 +84,74 @@ export default function PrototypePage() {
               <p>{selected.focus}</p>
               <p>Planned length: {selected.weeks} weeks</p>
             </div>
-          </article>
 
-          <article className={styles.card}>
-            <h2>Begin Your Practice</h2>
-            <ol className={styles.stepList}>
-              {practiceSteps.map((step) => (
-                <li key={step}>{step}</li>
-              ))}
-            </ol>
-            <label className={styles.checkboxRow}>
-              <input
-                type="checkbox"
-                checked={safetyAck}
-                onChange={(e) => setSafetyAck(e.target.checked)}
-                aria-label="I have read the consent language and stop rules"
-              />
-              I have read consent language and stop rules.
-            </label>
-            <div aria-live="polite" aria-atomic="true" className={styles.note}>
-              {safetyAck
-                ? 'Safety gate passed: practice can proceed.'
-                : 'Safety gate pending: review consent and safety instructions before practice.'}
-            </div>
-          </article>
-
-          <article className={styles.card}>
-            <h2>How Review Works</h2>
-            <ul className={styles.retrievalList}>
-              <li>24h: 5-question mixed recall check</li>
-              <li>72h: short scenario application prompt</li>
-              <li>7d: reflective transfer task</li>
-            </ul>
-            <p>
-              Interleaving progression: <strong>AABBCC</strong> in early modules,
-              then <strong>ABCABC</strong> for advanced transfer.
+            <p style={{marginTop: '1rem', fontSize: '0.9rem'}}>
+              Your pathway: <strong>{readiness} → {selected.title}</strong>. Each
+              module in this path builds on the previous one — start with the first
+              module and work through in sequence.
             </p>
           </article>
 
           <article className={styles.card}>
+            <h2>Begin Your Practice</h2>
+
+            <ShadowGate>
+              <div style={{padding: '1rem 0'}}>
+                <h3>Practice unlocked ✓</h3>
+                <p>Safety gate passed. Here is your practice flow:</p>
+                <ol className={styles.stepList}>
+                  <li>Consent and readiness check — completed</li>
+                  <li>Practice briefing: 3-minute body scan</li>
+                  <li>Timed practice: follow the breath for 3 minutes</li>
+                  <li>Grounding: notice your feet on the floor, three slow breaths</li>
+                  <li>Reflection: what did you notice during the practice?</li>
+                </ol>
+                {gatePassed ? (
+                  <div className={styles.infoBox}>
+                    <strong>✓ Practice completed</strong>
+                    <p>In a real module, your progress would now be saved to your dashboard.</p>
+                  </div>
+                ) : (
+                  <button
+                    className="button button--primary"
+                    onClick={() => setGatePassed(true)}
+                    style={{marginTop: '0.5rem'}}>
+                    Complete Practice
+                  </button>
+                )}
+              </div>
+            </ShadowGate>
+          </article>
+
+          <article className={styles.card}>
+            <h2>Try the Retrieval Loop</h2>
+            <RetrievalPrompt moduleName="Mindfulness Basics" cards={SAMPLE_CARDS} />
+          </article>
+
+          <article className={styles.card}>
             <h2>How You Are Assessed</h2>
+            <p style={{fontSize: '0.9rem', marginBottom: '1rem'}}>
+              Move the sliders to see how your self-assessment maps to a developmental band.
+              In real modules, these are replaced by the rubric at the end of each module.
+            </p>
+
             <div className={styles.sliderGroup}>
               <label id="aqalLabel">AQAL completeness</label>
-              <input
-                type="range"
-                min="1"
-                max="5"
-                step="0.5"
-                value={aqalScore}
+              <input type="range" min="1" max="5" step="0.5" value={aqalScore}
                 onChange={(e) => setAqalScore(Number(e.target.value))}
-                aria-labelledby="aqalLabel"
-                aria-valuetext={`${aqalScore} out of 5`}
-              />
+                aria-labelledby="aqalLabel" aria-valuetext={`${aqalScore} out of 5`} />
             </div>
             <div className={styles.sliderGroup}>
               <label id="evidenceLabel">Evidence quality</label>
-              <input
-                type="range"
-                min="1"
-                max="5"
-                step="0.5"
-                value={evidenceScore}
+              <input type="range" min="1" max="5" step="0.5" value={evidenceScore}
                 onChange={(e) => setEvidenceScore(Number(e.target.value))}
-                aria-labelledby="evidenceLabel"
-                aria-valuetext={`${evidenceScore} out of 5`}
-              />
+                aria-labelledby="evidenceLabel" aria-valuetext={`${evidenceScore} out of 5`} />
             </div>
             <div className={styles.sliderGroup}>
               <label id="transferLabel">Transfer feasibility</label>
-              <input
-                type="range"
-                min="1"
-                max="5"
-                step="0.5"
-                value={transferScore}
+              <input type="range" min="1" max="5" step="0.5" value={transferScore}
                 onChange={(e) => setTransferScore(Number(e.target.value))}
-                aria-labelledby="transferLabel"
-                aria-valuetext={`${transferScore} out of 5`}
-              />
+                aria-labelledby="transferLabel" aria-valuetext={`${transferScore} out of 5`} />
             </div>
             <div className={styles.infoBox}>
               <p>Average score: <strong>{avg}</strong></p>
@@ -192,10 +165,6 @@ export default function PrototypePage() {
           <ul>
             <li><Link to="/internal/implementation/backlog">Backlog</Link></li>
             <li><Link to="/docs/maps/aqal-competency-map">AQAL Competency Map</Link></li>
-            <li><Link to="/docs/maps/ilp-practice-taxonomy">ILP Practice Taxonomy</Link></li>
-            <li><Link to="/internal/quality/evidence-vetting-checklist">Evidence Checklist</Link></li>
-            <li><Link to="/internal/safety/shadowwork-safety-standard">Shadowwork Safety Standard</Link></li>
-            <li><Link to="/internal/pilots/pilot-runbook-20-40">Pilot Runbook</Link></li>
           </ul>
         </details>
       </main>

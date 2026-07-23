@@ -216,6 +216,7 @@ const learnerSidebar = {
         'maps/glossary',
         'maps/aqal-overview',
         'maps/aqal-glossary',
+        'maps/amber-rational-progress-assessment',
         'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',
         'maps/emotional-line-stage-map',

@@ -1,0 +1,106 @@
+{
+  "skill": "plan",
+  "status": "pass",
+  "tasks": [
+    {
+      "id": "EI-22-01",
+      "title": "Create docs/pilots/pilot-interpersonal-line.md pilot runbook",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 280,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-01: File exists at docs/pilots/pilot-interpersonal-line.md",
+        "AC-02: Frontmatter includes id, title, description, sidebar_label",
+        "AC-03: Pilot Objectives section defines validation targets: module sequence, L1→L3 progression, perspective-taking and repair practice safety, trust-building across difference",
+        "AC-04: Participant Criteria section includes Kegan stage diversity targets (30% Institutional, 40% boundary, 30% Interindividual), deliberate social identity diversity recruitment, clinical screening language, and participant range (15-20)",
+        "AC-05: Consent & Screening section includes Tier 2 risk disclosure and references EI-20 Safety Addendum screening criteria for conflict material (EI-10) and cross-difference dialogue (EI-11)",
+        "AC-06: Facilitation Requirements section specifies cross-cultural dialogue experience, clinical backup for EI-10 and EI-11, and Tier 2 protocol activation",
+        "AC-07: Data Collection section defines pre/post perspective-taking accuracy measure (IRI or equivalent), trust rating, weekly practice log, module completion tracking, safety incident log, and weeks 4 and 8 qualitative debriefs",
+        "AC-08: Revision Triggers section defines safety incident trigger and >30% drop-off trigger with immediate review/pause procedure",
+        "AC-09: Module Sequence & Timeline section presents 8-week schedule mapping all 4 core modules plus integration capstone to weeks with time estimates",
+        "AC-10: All module cross-references use correct relative paths and existing file IDs",
+        "AC-11: Safety Addendum reference points to internal/safety/emotional-interpersonal-safety-addendum.md"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-22-02",
+      "title": "[HUMAN-REQUIRED] Recruit 15-20 diverse participants, obtain consent, administer screening",
+      "type": "human",
+      "agent": "human",
+      "estimated_lines": 0,
+      "dependencies": ["EI-22-01"],
+      "skills": [],
+      "acceptance_criteria": [
+        "AC-12: 15-20 participants recruited meeting Kegan stage diversity and social identity diversity targets",
+        "AC-13: Informed consent obtained from all participants including Tier 2 risk disclosure for EI-10 and EI-11",
+        "AC-14: Screening administered per EI-20 addendum criteria for conflict material and cross-difference dialogue"
+      ],
+      "test_type": "live-system"
+    },
+    {
+      "id": "EI-22-03",
+      "title": "[HUMAN-REQUIRED] Run 8-week pilot with qualified facilitator and clinical backup; collect all data",
+      "type": "human",
+      "agent": "human",
+      "estimated_lines": 0,
+      "dependencies": ["EI-22-02"],
+      "skills": [],
+      "acceptance_criteria": [
+        "AC-15: Pilot executed for 8 weeks with minimum 15 participants",
+        "AC-16: Licensed clinical backup available throughout, with specific availability during EI-10 and EI-11 sessions",
+        "AC-17: Safety incident log maintained with zero unmitigated Tier 2 incidents",
+        "AC-18: All six data collection instruments administered on schedule"
+      ],
+      "test_type": "live-system"
+    },
+    {
+      "id": "EI-22-04",
+      "title": "[HUMAN-REQUIRED] Compile post-pilot revision report; create backlog issues from findings",
+      "type": "human",
+      "agent": "human",
+      "estimated_lines": 0,
+      "dependencies": ["EI-22-03"],
+      "skills": [],
+      "acceptance_criteria": [
+        "AC-19: Post-pilot revision report published with findings from all data collection instruments",
+        "AC-20: Module revision recommendations documented with evidence from pilot data",
+        "AC-21: Findings converted to new backlog issues for module revision"
+      ],
+      "test_type": "live-system"
+    },
+    {
+      "id": "EI-22-05",
+      "title": "Validate build passes with no new errors",
+      "type": "verification",
+      "agent": "build",
+      "estimated_lines": 0,
+      "dependencies": ["EI-22-01"],
+      "skills": ["build/governance-enforcement"],
+      "acceptance_criteria": [
+        "AC-22: npm run build exits zero with no new errors"
+      ],
+      "test_type": "integration"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": ["EI-22-01", "EI-22-02", "EI-22-03", "EI-22-04", "EI-22-05"],
+    "edges": [
+      ["EI-22-01", "EI-22-02"],
+      ["EI-22-01", "EI-22-05"],
+      ["EI-22-02", "EI-22-03"],
+      ["EI-22-03", "EI-22-04"]
+    ]
+  },
+  "summary": {
+    "total_tasks": 5,
+    "copilot_tasks": 2,
+    "human_tasks": 3,
+    "total_estimated_lines": 280,
+    "critical_path": ["EI-22-01", "EI-22-02", "EI-22-03", "EI-22-04"],
+    "parallel_opportunities": [["EI-22-02", "EI-22-05"]],
+    "skills_used": ["build/code-generation", "build/governance-enforcement"]
+  }
+}

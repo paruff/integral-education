@@ -241,6 +241,7 @@ const learnerSidebar = {
         'maps/aqal-competency-map',
         'maps/emotional-line-stage-map',
         'maps/ilp-practice-taxonomy',
+        'maps/cognitive-line-developmental-profile',
         'maps/state-identification-assessment',
         'maps/state-stage-integration-map',
         'maps/shadow-developmental-lines-map',

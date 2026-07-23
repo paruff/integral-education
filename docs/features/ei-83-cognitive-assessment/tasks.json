@@ -1,0 +1,106 @@
+{
+  "skill": "plan",
+  "status": "pass",
+  "tasks": [
+    {
+      "id": "EI-83-01",
+      "title": "Create CognitiveLineAssessment.jsx React component",
+      "type": "code",
+      "agent": "build",
+      "estimated_lines": 400,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-01: Component file exists at src/components/CognitiveLineAssessment.jsx",
+        "AC-02: Section A renders 8 graduated cognitive tasks with radio-button options tagged to MHC levels",
+        "AC-03: Section B renders 4 dialectical thinking problems with text input and Basseches rubric self-evaluation",
+        "AC-04: Section C renders 5 metacognitive reflection text inputs",
+        "AC-05: Results page shows cognitive operations profile, domain-specificity note, top-3 module recommendations, and explicit disclaimer",
+        "AC-06: Export to Journal copies results to clipboard and shows confirmation",
+        "AC-07: No persistent data storage (results in component state only)"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-83-02",
+      "title": "Create CSS module for CognitiveLineAssessment component",
+      "type": "code",
+      "agent": "build",
+      "estimated_lines": 120,
+      "dependencies": ["EI-83-01"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-08: CSS module file exists at src/components/CognitiveLineAssessment.module.css",
+        "AC-09: Styles follow existing CSS module conventions (Docusaurus theme variables, responsive breakpoints)",
+        "AC-10: Sections, questions, options, results, and export button all have appropriate styling"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-83-03",
+      "title": "Create MDX wrapper page at docs/maps/cognitive-line-developmental-profile.mdx",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 20,
+      "dependencies": ["EI-83-01"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-11: MDX file exists at docs/maps/cognitive-line-developmental-profile.mdx",
+        "AC-12: Frontmatter includes id, title, sidebar_label, description",
+        "AC-13: Imports and renders CognitiveLineAssessment component",
+        "AC-14: Follows amber-rational-progress-assessment.mdx pattern"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-83-04",
+      "title": "Add Cognitive Line Developmental Profile to sidebars.js Maps category",
+      "type": "code",
+      "agent": "build",
+      "estimated_lines": 1,
+      "dependencies": ["EI-83-03"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-15: 'maps/cognitive-line-developmental-profile' added to MAPS items array",
+        "AC-16: Entry does not break existing sidebar structure"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-83-05",
+      "title": "Validate build passes with no errors",
+      "type": "verification",
+      "agent": "build",
+      "estimated_lines": 0,
+      "dependencies": ["EI-83-01", "EI-83-02", "EI-83-03", "EI-83-04"],
+      "skills": ["build/governance-enforcement"],
+      "acceptance_criteria": [
+        "AC-17: npm run build exits zero with no new errors",
+        "AC-18: Cognitive Line Developmental Profile page accessible at /docs/maps/cognitive-line-developmental-profile",
+        "AC-19: Component renders without React errors or warnings"
+      ],
+      "test_type": "integration"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": ["EI-83-01", "EI-83-02", "EI-83-03", "EI-83-04", "EI-83-05"],
+    "edges": [
+      ["EI-83-01", "EI-83-02"],
+      ["EI-83-01", "EI-83-03"],
+      ["EI-83-03", "EI-83-04"],
+      ["EI-83-01", "EI-83-05"],
+      ["EI-83-02", "EI-83-05"],
+      ["EI-83-03", "EI-83-05"],
+      ["EI-83-04", "EI-83-05"]
+    ]
+  },
+  "summary": {
+    "total_tasks": 5,
+    "copilot_tasks": 5,
+    "human_tasks": 0,
+    "total_estimated_lines": 540,
+    "critical_path": ["EI-83-01", "EI-83-03", "EI-83-04", "EI-83-05"],
+    "parallel_opportunities": [["EI-83-02", "EI-83-03"]],
+    "skills_used": ["build/code-generation", "build/governance-enforcement"]
+  }
+}

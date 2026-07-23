@@ -349,6 +349,8 @@ END
 >
 > ---
 
+For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard) and the [Emotional & Interpersonal Line Safety Addendum](/internal/safety/emotional-interpersonal-safety-addendum).
+
 ## 🩺 Clinical Safety Sign-off (Human-required)
 
 - **Review Status:** PENDING

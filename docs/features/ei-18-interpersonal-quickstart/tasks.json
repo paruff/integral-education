@@ -1,0 +1,56 @@
+{
+  "skill": "plan",
+  "status": "pass",
+  "tasks": [
+    {
+      "id": "EI-18-01",
+      "title": "Create docs/quickstarts/interpersonal-line-development.md",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 130,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-01: File exists at correct path with proper frontmatter",
+        "AC-02: Three audience profiles with routing to EI-09/EI-10/EI-11",
+        "AC-03: Five-step module sequence: EI-08 → EI-09 → EI-10 → EI-11 → EI-13",
+        "AC-04: Per-step transition signals and goals",
+        "AC-05: Outcomes and Next Steps sections"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-18-02",
+      "title": "Add Interpersonal QuickStart to homepage and sidebar",
+      "type": "code",
+      "agent": "build",
+      "estimated_lines": 12,
+      "dependencies": ["EI-18-01"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-06: Homepage card added to QuickStarts section",
+        "AC-07: Sidebar entry added under QuickStarts category after somatic-line-development"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-18-03",
+      "title": "Validate build and cross-reference links",
+      "type": "verification",
+      "agent": "build",
+      "estimated_lines": 0,
+      "dependencies": ["EI-18-01", "EI-18-02"],
+      "skills": ["build/governance-enforcement"],
+      "acceptance_criteria": [
+        "AC-08: npm run build exits zero",
+        "AC-09: All module links resolve correctly",
+        "AC-10: Homepage and sidebar render correctly"
+      ],
+      "test_type": "integration"
+    }
+  ],
+  "summary": {
+    "total_tasks": 3,
+    "total_estimated_lines": 142
+  }
+}

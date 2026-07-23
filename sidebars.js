@@ -19,6 +19,7 @@ const learnerSidebar = {
         'quickstarts/spiritual-line-development',
         'quickstarts/cognitive-line-development',
         'quickstarts/somatic-line-development',
+        'quickstarts/emotional-line-development',
       ],
     },
     {

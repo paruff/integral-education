@@ -209,6 +209,6 @@ Evidence quality uses Tier A (strong convergent evidence), Tier B (moderate evid
 
 **If distress continues:** Contact a trusted support person or qualified practitioner. If you are in immediate danger or at risk of harming yourself, call local emergency services. For the United States: 988 Suicide & Crisis Lifeline. For the UK: Samaritans at 116 123. International: findahelpline.com.
 
-For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard) and the [State Development Safety Standard](/internal/safety/state-development-safety-standard).
+For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard), the [State Development Safety Standard](/internal/safety/state-development-safety-standard), and the [Somatic Line Safety Addendum](/internal/safety/somatic-line-safety-addendum).
 
 <ModuleFooter />

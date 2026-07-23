@@ -107,6 +107,14 @@ export default function Home() {
               </Link>
             </article>
             <article className="homepage-card">
+              <h3>Interpersonal Line Development</h3>
+              <p>Build perspective-taking, conflict repair, and cross-difference dialogue — from relational awareness to full interpersonal integration.</p>
+              <p className="homepage-card-meta">Estimated time: 25–40 min per module</p>
+              <Link className="homepage-card-cta" to="/docs/quickstarts/interpersonal-line-development">
+                Begin →
+              </Link>
+            </article>
+            <article className="homepage-card">
               <h3>Emotional Line Development</h3>
               <p>Build emotional vocabulary, regulation, and relational skill — from naming feelings to full emotional integration.</p>
               <p className="homepage-card-meta">Estimated time: 20–40 min per module</p>

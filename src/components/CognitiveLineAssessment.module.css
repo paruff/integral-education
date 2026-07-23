@@ -1,0 +1,451 @@
+/* ═══ CognitiveLineAssessment.module.css ═══ */
+
+.assessment {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.results {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ── Section ── */
+
+.section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.sectionIntro {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sectionStatus {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* ── Question Card ── */
+
+.questionCard {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  background: var(--ifm-color-emphasis-0);
+}
+
+.questionNumber {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-500);
+  margin-bottom: 0.5rem;
+}
+
+.questionText {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* ── Radio Option ── */
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.optionLabel:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+.optionLabel:has(input:checked) {
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, var(--ifm-background-color));
+  border-color: var(--ifm-color-primary);
+}
+
+.radio {
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+  accent-color: var(--ifm-color-primary);
+}
+
+.optionText {
+  flex: 1;
+}
+
+/* ── Textarea ── */
+
+.textareaLabel {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-background-color);
+  color: var(--ifm-font-color-base);
+  font-size: 0.9rem;
+  font-family: inherit;
+  line-height: 1.6;
+  resize: vertical;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--ifm-color-primary) 20%, transparent);
+}
+
+/* ── Rubric ── */
+
+.rubric {
+  margin-top: 0.75rem;
+  padding: 0.75rem;
+  border: 1px dashed var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  background: var(--ifm-color-emphasis-0);
+}
+
+.rubricTitle {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.75rem;
+}
+
+.rubricRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+  gap: 1rem;
+}
+
+.rubricRow:last-child {
+  border-bottom: none;
+}
+
+.rubricCriterion {
+  font-size: 0.85rem;
+  flex: 1;
+  line-height: 1.45;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.rubricOptions {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+.rubricLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.15s;
+}
+
+.rubricLabel:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+.rubricLabel:has(input:checked) {
+  background: color-mix(in srgb, var(--ifm-color-primary) 12%, var(--ifm-background-color));
+  border-color: var(--ifm-color-primary);
+}
+
+/* ── Submit ── */
+
+.submitArea {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.submitButton {
+  padding: 0.75rem 2.5rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submitHint {
+  font-size: 0.85rem;
+  color: var(--ifm-color-warning-dark);
+  margin-bottom: 1rem;
+}
+
+.privacyNote {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 0.75rem;
+}
+
+/* ── Results ── */
+
+.resultsTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--ifm-color-primary);
+}
+
+.resultSection {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+}
+
+.resultSection h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resultNote {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+/* ── MHC Bars ── */
+
+.mhcBars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.mhcBarRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mhcLabel {
+  width: 160px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: right;
+  flex-shrink: 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.mhcBarTrack {
+  flex: 1;
+  height: 20px;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.mhcBarFill {
+  height: 100%;
+  background: var(--ifm-color-emphasis-400);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  min-width: 4px;
+}
+
+.mhcBarDominant {
+  background: var(--ifm-color-primary);
+}
+
+.mhcCount {
+  width: 70px;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+  flex-shrink: 0;
+}
+
+.dominantNote {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ── Module List ── */
+
+.moduleList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.moduleList li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.moduleList li::before {
+  content: '📘 ';
+}
+
+/* ── Disclaimer ── */
+
+.disclaimer {
+  background: var(--ifm-color-emphasis-0);
+  border-left: 4px solid var(--ifm-color-warning-dark);
+}
+
+.disclaimer h3 {
+  color: var(--ifm-color-warning-dark);
+}
+
+.disclaimer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Result Actions ── */
+
+.resultActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.exportButton {
+  padding: 0.6rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.exportButton:hover {
+  opacity: 0.88;
+}
+
+.resetButton {
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.resetButton:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* ── Responsive ── */
+
+@media screen and (max-width: 600px) {
+  .section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.15rem;
+  }
+
+  .questionCard {
+    padding: 0.75rem;
+  }
+
+  .mhcBarRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .mhcLabel {
+    width: auto;
+    text-align: left;
+  }
+
+  .mhcCount {
+    width: auto;
+  }
+
+  .rubricRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .resultActions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}

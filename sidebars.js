@@ -34,20 +34,29 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Emotional Line',
+      collapsible: true,
+      collapsed: false,
       items: [
         'modules/emotional-line-overview-orientation',
         'modules/emotion-regulation-foundations',
+        'modules/affect-labelling-somatic-correlation',
+        'modules/emotional-intelligence-somatic-line',
         'modules/emotional-appraisal-meaning-making',
+        'modules/emotional-granularity',
         'modules/emotional-interpersonal-integration',
       ],
     },
     {
       type: 'category',
       label: 'Interpersonal Line',
+      collapsible: true,
+      collapsed: false,
       items: [
         'modules/interpersonal-line-overview-orientation',
-        'modules/relational-repair-conflict-navigation',
         'modules/perspective-taking-empathic-accuracy',
+        'modules/co-regulation-relational-attunement',
+        'modules/relational-repair-conflict-navigation',
+        'modules/cross-difference-dialogue-trust-building',
         'modules/emotional-interpersonal-integration',
       ],
     },
@@ -175,7 +184,6 @@ const learnerSidebar = {
           items: [
             'modules/mindfulness-basics',
             'modules/mindfulness-deepening',
-            'modules/emotional-granularity',
             'modules/cognitive-bias-101',
             'modules/critical-thinking-foundations',
             'modules/evidence-evaluation',

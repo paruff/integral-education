@@ -197,6 +197,15 @@ Each line of development is relatively independent. A learner may be at L3 on co
 | L3 | Integrates somatic awareness into cognitive and interpersonal tasks | Uses body signals as real-time feedback during a conversation or decision; names when a somatic signal contradicts a cognitive appraisal; adjusts behavior based on the somatic signal | Integrated practice reflection | Somatic-integration episodes logged ≥ 3 times per week |
 | L4 | Teaches somatic practices and designs body-informed protocols | Leads a somatic practice session for a group; designs a body-informed protocol (e.g., body check-in before team meetings); evaluates participant somatic awareness change | Facilitation recording; protocol document | Participant somatic vocabulary breadth increases ≥ 30% post-session |
 
+**Worked Examples and Evidence:** (Per CONT-05 and SOM-01 evidence discipline.)
+
+| Level | Worked Example | Evidence |
+|-------|---------------|----------|
+| L1 | "Last week during a tense meeting, I noticed my jaw was clenched and my shoulders were up near my ears. I could not name what I was feeling yet — just that my body was tight. I wrote 'tension in jaw and shoulders' in my log." | Tier B — Body awareness as prerequisite for emotional differentiation (Garfinkel & Critchley, 2017); interoceptive accuracy is trainable with repeated practice |
+| L2 | "Before a difficult conversation with my brother, I did two minutes of slow breathing. My heart was still racing when we started, but I noticed the difference — I was activated but not overwhelmed. Afterward I logged: 'Breathing shifted me from 7/10 to 4/10. Better than last time I tried nothing.'" | Tier B — Autonomic regulation through breath practices (Porges, 2011; but note PVT's specific neuroanatomical claims are contested — see SOM-01); self-regulation is a trainable skill |
+| L3 | "During a job interview, I felt a knot in my stomach when they asked about my last role. My mind said 'answer confidently.' My body said 'this question is about something you are still processing.' I paused for a breath and chose to answer honestly rather than perform confidence. The somatic signal was more accurate than my cognitive appraisal." | Tier A — Interoceptive accuracy correlates with decision quality under uncertainty (Farb et al., 2015); somatic signals as valid information source |
+| L4 | "I designed a 3-minute body check-in for our team: feet on floor, one breath, name one sensation. After six weeks of doing this before standups, three team members independently told me they had started using it at home. One said: 'I did not realise how much tension I was carrying until I had a structured way to notice it.'" | Tier B — Clinical/practitioner evidence for body-informed protocols (Ogden et al., 2006); teaching somatic skills to others consolidates own competence |
+
 ### Spiritual/Meaning Line
 
 **Competency statement:** Articulates a coherent meaning framework that integrates multiple worldviews without dogmatism.

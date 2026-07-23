@@ -109,6 +109,15 @@ const learnerSidebar = {
     },
     {
       type: 'category',
+      label: 'Somatic Line',
+      collapsible: true,
+      collapsed: false,
+      items: [
+        'modules/somatic-line-overview',
+      ],
+    },
+    {
+      type: 'category',
       label: 'Modules',
       link: {
         type: 'generated-index',

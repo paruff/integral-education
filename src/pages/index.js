@@ -106,6 +106,14 @@ export default function Home() {
                 Begin →
               </Link>
             </article>
+            <article className="homepage-card">
+              <h3>Emotional Line Development</h3>
+              <p>Build emotional vocabulary, regulation, and relational skill — from naming feelings to full emotional integration.</p>
+              <p className="homepage-card-meta">Estimated time: 20–40 min per module</p>
+              <Link className="homepage-card-cta" to="/docs/quickstarts/emotional-line-development">
+                Begin →
+              </Link>
+            </article>
           </div>
         </section>
         <section className="container homepage-section">

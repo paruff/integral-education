@@ -1,0 +1,90 @@
+{
+  "skill": "plan",
+  "status": "pass",
+  "tasks": [
+    {
+      "id": "EI-17-01",
+      "title": "Create docs/quickstarts/emotional-line-development.md QuickStart file",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 100,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-01: File exists at docs/quickstarts/emotional-line-development.md",
+        "AC-02: Frontmatter includes id, title, description, sidebar_label, sidebar_position (12)",
+        "AC-03: Three audience profiles with routing to different starting modules",
+        "AC-04: All seven Emotional line modules sequenced with reading/practice times and cumulative total",
+        "AC-05: Transition signals (ready-to-advance indicators) between each module",
+        "AC-06: Outcomes section listing developed capabilities",
+        "AC-07: Next Steps section with links to related resources",
+        "AC-08: All module links use correct relative paths and matching file IDs",
+        "AC-09: Tier 2 safety note for somatic emotion tracking (Step 5)"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-17-02",
+      "title": "Add Emotional Line Development card to homepage QuickStarts section",
+      "type": "code",
+      "agent": "build",
+      "estimated_lines": 10,
+      "dependencies": ["EI-17-01"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-10: Homepage card added with title, description, estimated time, and Link CTA",
+        "AC-11: Card links to /docs/quickstarts/emotional-line-development",
+        "AC-12: Card follows existing homepage-card pattern (article, h3, p, Link)"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-17-03",
+      "title": "Add QuickStart to sidebar (sidebars.js)",
+      "type": "code",
+      "agent": "build",
+      "estimated_lines": 2,
+      "dependencies": ["EI-17-01"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-13: Sidebar entry added under QuickStarts category",
+        "AC-14: Entry key is 'quickstarts/emotional-line-development'",
+        "AC-15: Placed after 'quickstarts/somatic-line-development' in the array"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-17-04",
+      "title": "Validate build and cross-reference links",
+      "type": "verification",
+      "agent": "build",
+      "estimated_lines": 0,
+      "dependencies": ["EI-17-01", "EI-17-02", "EI-17-03"],
+      "skills": ["build/governance-enforcement"],
+      "acceptance_criteria": [
+        "AC-16: `npm run build` exits zero with no new errors",
+        "AC-17: All seven module links resolve correctly (no 404s)",
+        "AC-18: QuickStart accessible at /docs/quickstarts/emotional-line-development",
+        "AC-19: Homepage card renders and links correctly",
+        "AC-20: Sidebar entry appears under QuickStarts category"
+      ],
+      "test_type": "integration"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": ["EI-17-01", "EI-17-02", "EI-17-03", "EI-17-04"],
+    "edges": [
+      ["EI-17-01", "EI-17-02"],
+      ["EI-17-01", "EI-17-03"],
+      ["EI-17-02", "EI-17-04"],
+      ["EI-17-03", "EI-17-04"]
+    ]
+  },
+  "summary": {
+    "total_tasks": 4,
+    "total_estimated_lines": 112,
+    "critical_path": ["EI-17-01", "EI-17-02", "EI-17-04"],
+    "parallel_opportunities": [["EI-17-02", "EI-17-03"]],
+    "skills_used": ["build/code-generation", "build/governance-enforcement"]
+  }
+}

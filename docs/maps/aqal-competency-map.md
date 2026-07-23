@@ -164,6 +164,15 @@ Each line of development is relatively independent. A learner may be at L3 on co
 | L3 | Identifies emotion triggers, appraisals, and chooses regulation strategy | Traces the appraisal chain from event → interpretation → emotion; selects a regulation strategy based on emotion type and context; adjusts strategy when initial approach is insufficient | Emotion-regulation practice log | Strategy effectiveness rated ≥ 3/4 across ≥ 3 distinct emotion events |
 | L4 | Teaches emotional granularity and co-regulates with others | Facilitates an emotion-vocabulary exercise; recognizes and names group-level emotional dynamics; documents co-regulation moves | Facilitation recording; group emotional climate report | Participant granularity scores improve ≥ 0.5 points post-session |
 
+#### Evidence Signals — Emotional Line
+
+| Level | Assessment Cues / Artifacts | Real-Context Example | Module Reference |
+|---|---|---|---|
+| L1 | Emotion check-in log with timestamps; facilitator observation of vocabulary use during debrief | "After a tense meeting, I wrote in my log: 'frustrated, anxious, relieved.' Three distinct words — last month I would have just written 'stressed.'" | [Emotional Line Overview](../modules/emotional-line-overview-orientation); [Emotional Granularity](../modules/emotional-granularity) |
+| L2 | Completed emotion wheel with body-sensation mapping; granularity journal entries showing distinction between similar emotions | "My partner asked how I was feeling and instead of 'fine' I said: 'disappointed about the project delay, but also relieved that the deadline was extended.' I named the mixed state and the body sensation — tight shoulders for disappointment, released exhale for relief." | [Emotional Granularity](../modules/emotional-granularity); [Affect Labelling & Somatic Correlation](../modules/affect-labelling-somatic-correlation) |
+| L3 | Emotion-regulation practice log with appraisal chain traces; documented strategy pivots | "I noticed I was irritated with a colleague. I traced it: event (they missed a deadline) → interpretation ('they don't respect my time') → emotion (anger). I caught the interpretation before acting on the anger and asked them what happened — they were dealing with a family emergency. The strategy shift from confrontation to curiosity prevented an unnecessary conflict." | [Emotion Regulation Foundations](../modules/emotion-regulation-foundations); [Emotional Appraisal & Meaning-Making](../modules/emotional-appraisal-meaning-making) |
+| L4 | Facilitation recording with co-regulation moves annotated; group emotional climate report; participant pre/post granularity scores | "I ran a 30-minute emotion-vocabulary workshop for my team. Before: average 4.2 emotion terms used. After: 6.1. One participant told me afterward: 'I didn't realize how much I was flattening my experience until I had more words.'" | [Emotional Intelligence & Somatic Line](../modules/emotional-intelligence-somatic-line); [Emotional–Interpersonal Integration](../modules/emotional-interpersonal-integration) |
+
 ### Moral Line
 
 **Competency statement:** Makes transparent value tradeoffs with awareness of stakeholder impact.
@@ -185,6 +194,15 @@ Each line of development is relatively independent. A learner may be at L3 on co
 | L2 | Navigates moderate disagreement and adapts communication style to the audience | Adjusts vocabulary and register for a non-expert audience; de-escalates minor conflict with a verbal strategy; follows up to repair a misunderstanding | Dialogue recording; conflict repair log | Peer satisfaction rating ≥ 4/5 post-interaction |
 | L3 | Builds trust across significant difference (role, culture, worldview) | Facilitates a cross-difference conversation that results in mutual understanding; names and works with power dynamics explicitly; documents relationship history and repair | Cross-difference dialogue report | Pre/post trust rating improves ≥ 1.5 points (1–7 scale) |
 | L4 | Designs collaboration structures and coaches teams through relational complexity | Writes a team collaboration protocol; trains peers in conflict-navigation skills; evaluates team health metrics over time | Protocol document; team health dashboard; coaching log | Team collaboration score improves ≥ 15% over 6 weeks |
+
+#### Evidence Signals — Interpersonal Line
+
+| Level | Assessment Cues / Artifacts | Real-Context Example | Module Reference |
+|---|---|---|---|
+| L1 | Peer observation checklist with specific behavioral markers; self-report on listening and participation | "During our group project, I made sure to let each person finish their point before I spoke. Afterward, a teammate said they felt heard — they had never said that to me before." | [Interpersonal Line Overview](../modules/interpersonal-line-overview-orientation) |
+| L2 | Dialogue recording with conflict repair annotations; peer satisfaction rating; communication adaptation log | "A colleague and I disagreed about the project direction. Instead of escalating or avoiding, I said: 'Let me make sure I understand your concern before I respond.' I restated their position, and they confirmed I had it right. We then found a middle path neither of us had seen initially." | [Relational Repair & Conflict Navigation](../modules/relational-repair-conflict-navigation); [Perspective-Taking & Empathic Accuracy](../modules/perspective-taking-empathic-accuracy) |
+| L3 | Cross-difference dialogue report with power-dynamic annotations; pre/post trust survey; documented repair sequence | "I facilitated a conversation between two team members from different cultural backgrounds who had been avoiding each other for weeks. I named the avoidance pattern explicitly, acknowledged the power differential, and helped each person articulate what they needed to feel safe in the conversation. They agreed to a follow-up check-in, and both reported reduced tension afterward." | [Cross-Difference Dialogue & Trust-Building](../modules/cross-difference-dialogue-trust-building); [Co-Regulation & Relational Attunement](../modules/co-regulation-relational-attunement) |
+| L4 | Team collaboration protocol document; peer coaching log; team health dashboard with 6-week trend data | "I designed a conflict-navigation protocol for our cross-functional team. After 6 weeks: team satisfaction scores improved 18%, meeting interruptions decreased, and one previously silent team member began contributing regularly. A peer I trained is now running the protocol independently." | [Multiperspectival Leadership in Action](../modules/multiperspectival-leadership-action); [Emotional–Interpersonal Integration](../modules/emotional-interpersonal-integration) |
 
 ### Somatic Line
 
@@ -330,6 +348,7 @@ The following sections of this map require validation by subject-matter experts 
 |---|---|---|
 | Developmental level progression indicators (L1–L4) align with established developmental theory (Piaget, Kegan, Loevinger, Wilber) | Developmental psychologist or integral theorist | Pending |
 | Emotional and somatic line indicators align with evidence-based affective science | Affective scientist or licensed clinician | Pending |
+| Interpersonal line indicators and evidence signals align with developmental and social psychology research on perspective-taking, conflict, and dialogue | Developmental psychologist or social psychologist | Pending |
 | Moral line indicators align with moral psychology literature (Kohlberg, Gilligan, Haidt) | Ethics or moral psychology specialist | Pending |
 | States competency indicators are consistent with contemplative science research | Contemplative science researcher or senior practitioner | Pending |
 | Type adaptation rules do not introduce bias or stereotype harm | Diversity, equity, and inclusion reviewer | Pending |

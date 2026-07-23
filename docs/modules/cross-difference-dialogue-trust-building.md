@@ -284,4 +284,6 @@ Developmental altitude influences the arc. Lower-altitude patterns often seek fa
 
 **Facilitator note:** In group settings, Exercise (a) requires facilitator-supported context and debrief. Confirm consent, offer opt-out without penalty, and intervene immediately if participants show overwhelm or interpersonal escalation.
 
+For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard) and the [Emotional & Interpersonal Line Safety Addendum](/internal/safety/emotional-interpersonal-safety-addendum).
+
 **Safety review sign-off:** **[HUMAN-REQUIRED]** Licensed clinician review required before publication. Current status: pending.

@@ -23,6 +23,7 @@ Canonical references:
 | Family | Primary Aim | Typical Formats | AQAL Primary Quadrant |
 |---|---|---|---|
 | Body | Regulation, vitality, embodiment | Breathwork, mobility, posture resets, walking practice | It (Upper-Right) |
+| Somatic | Interoceptive awareness, nervous system regulation, embodied presence | Grounding, body scan, breath awareness, co-regulation | I / It (Upper-Left + Upper-Right) |
 | Mind | Attention and cognition | Focus drills, bias checks, metacognitive journaling | I (Upper-Left) |
 | Spirit/Meaning | Perspective widening and meaning coherence | Contemplative sits, gratitude, values reflection | I (Upper-Left) |
 | Shadow | Projection awareness and integration | Trigger logs, role reversal, parts dialogue | I / We |
@@ -52,6 +53,20 @@ All practices are described along five standard dimensions.
 | Intensity levels | Low: seated breath or gentle stretch; Moderate: sustained movement or bodyweight sequence; High: vigorous aerobic or advanced postural work |
 | Contraindications | Recent injury or surgery; chronic pain without practitioner guidance; cardiovascular contraindications for high-intensity formats |
 | Setup requirements | Quiet space with room to move; comfortable clothing; no equipment required for Low/Medium; mat recommended for Long |
+
+### 2.1b Somatic
+
+**Definition:** Practices that develop interoceptive awareness, nervous system regulation, and embodied presence — distinct from Body practices (physical conditioning) and Mind practices (cognitive reflection). The somatic line is the infrastructure all other developmental lines rest on.
+
+| Dimension | Values |
+|---|---|
+| Duration bands | Short (2–5 min): grounding, single breath exercise; Medium (10–15 min): body scan, progressive relaxation; Long (20–30 min): full somatic practice session with integration time |
+| Intensity levels | Low: seated check-in (name one sensation); Moderate: guided body scan or movement-based regulation; High: trauma-adjacent material, partner co-regulation, or extended interoceptive tracking |
+| Contraindications | Active trauma history without practitioner support; dissociation or depersonalisation patterns; body-image disorders; recent somatic practice-related destabilisation. Label these practices as facilitator-recommended minimum (Tier 2). |
+| Setup requirements | Quiet space with option to sit or lie down; comfortable, non-restrictive clothing; facilitator present for Tier 2 practices; grounding resources immediately accessible |
+| Stage/Tier requirements | **Tier 1 (solo-safe):** grounding, breath awareness (without prescribed ratios — see SAFE-03), naming one body sensation. **Tier 2 (facilitator-recommended minimum):** body scan, progressive relaxation, co-regulation partner exercise. **Tier 3 (facilitator-required):** trauma-adjacent somatic work, extended interoceptive tracking with history of dissociation. |
+| Practice catalogue | Grounding (feet on floor, name 5 things visible, slow breath); Breath awareness (notice natural breath rhythm, no prescribed counts); Body scan (guided, region-by-region — see SOM-01 Practice section); Movement-based regulation (gentle shaking, stretching, walking meditation); Co-regulation practice (partner breathing, shared grounding — facilitator present for initial sessions) |
+| Cross-references | [Somatic Line Overview](../modules/somatic-line-overview) (SOM-01); [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard); SAFE-03 (no prescribed breath-count ratios) |
 
 ### 2.2 Mind
 
@@ -125,6 +140,21 @@ Each ladder covers **Levels 1–4** (Beginner → Advanced). Criteria for advanc
 **Criteria for advancing:** Demonstrate the target practice independently for 5+ sessions before progressing. Self-reported skill and reflection artifact required.
 
 **Fallback alternatives:** Learners with mobility limitations use seated or reclined breath-based practices at any level. Reduce duration before intensity.
+
+---
+
+### 3.1b Somatic
+
+| Level | Name | Criteria to Enter | Example Practices | Developmental Line Focus |
+|---|---|---|---|---|
+| 1 | Body-Aware | No prior practice needed | Grounding (feet on floor, slow breath, name 5 things visible); name one body sensation | Somatic awareness |
+| 2 | Self-Regulating | Completed Level 1 for 5+ sessions; can identify regulation state (regulated/hyper/hypo) | Guided body scan (10 min); breath awareness without prescribed ratios; gentle movement-based regulation | Somatic + Emotional regulation |
+| 3 | Somatically Integrated | Consistent body scan practice for 3+ weeks; uses body signals during decisions | Progressive relaxation; interoceptive tracking during conversation; co-regulation with partner | Somatic + Cognitive + Interpersonal |
+| 4 | Embodied Facilitator | Spontaneous somatic self-regulation; teaches or designs body-informed protocols | Leading group grounding; designing body check-in protocols; evaluating participant somatic change | Somatic + Facilitation + Systemic design |
+
+**Criteria for advancing:** Demonstrate target practice independently for 5+ sessions at Current Level. Facilitator present for Level 3+ partner practices.
+
+**Fallback alternatives:** Learners with trauma history use grounding only at Level 1; progress to body scan only with facilitator present. No prescribed breath-count ratios at any level (per SAFE-03). Reduce duration before intensity; stop if dissociative response occurs.
 
 ---
 
@@ -293,6 +323,8 @@ Each practice implementation must define the following fields:
 |---|---|---|---|---|---|---|
 | ILP-BODY-001 | Body | Short (3–5 min) | Low | Low | 1 | Daily pre-module reset |
 | ILP-BODY-003 | Body | Long (20–30 min) | Moderate | Low | 1 | Weekly embodiment review |
+| ILP-SOMATIC-001 | Somatic | Short (2–5 min) | Low | Low | 1 | Pre-module grounding (feet, breath, 5 things) |
+| ILP-SOMATIC-002 | Somatic | Medium (10–15 min) | Moderate | Medium | 2 | Guided body scan; co-regulation with partner (facilitator present) |
 | ILP-MIND-002 | Mind | Short (3–5 min) | Low | Low | 1 | End-of-lesson bias prompt |
 | ILP-MIND-004 | Mind | Medium (10–15 min) | Moderate | Low | 1 | Weekly bias recall check |
 | ILP-SPIRIT-001 | Spirit/Meaning | Short (3–5 min) | Low | Low | 1 | Morning values anchor |

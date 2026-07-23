@@ -588,6 +588,7 @@ Before publishing any shadowwork content or facilitating any session:
 
 - [State Development Safety Standard](./state-development-safety-standard)
 - [Emotional & Interpersonal Line Safety Addendum](./emotional-interpersonal-safety-addendum) — Tier 2 triggers for emotional and interpersonal line practices
+- [Somatic Line Safety Addendum](./somatic-line-safety-addendum) — Tier 2/3 triggers for somatic line practices
 
 ---
 

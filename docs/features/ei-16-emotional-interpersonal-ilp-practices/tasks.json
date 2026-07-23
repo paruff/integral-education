@@ -1,0 +1,199 @@
+{
+  "skill": "plan",
+  "status": "pass",
+  "tasks": [
+    {
+      "id": "EI-16-01",
+      "title": "Add Emotional and Interpersonal rows to Practice Families Overview (Section 1)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 5,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-01: Emotional row added with primary aim 'Affective differentiation and regulation', formats 'Journaling, body tracking, conversational labelling, cognitive reappraisal', AQAL quadrant 'I'",
+        "AC-02: Interpersonal row added with primary aim 'Relational skill and connection quality', formats 'Dialogue protocols, partner exercises, self-audit, written repair', AQAL quadrant 'We'"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-02",
+      "title": "Add Emotional line taxonomy dimensions (Section 2.8)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 15,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-03: Section 2.8 added with duration bands, intensity levels, contraindications, setup requirements, stage/tier requirements, practice catalogue, and cross-references",
+        "AC-04: Contraindications include active trauma history without support, dissociation patterns, and recent destabilization — labelled Tier 2",
+        "AC-05: Cross-references link to Emotional Line Stage Map, Emotional modules (EI-01 through EI-06), Emotional & Interpersonal Safety Addendum"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-03",
+      "title": "Add Interpersonal line taxonomy dimensions (Section 2.9)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 15,
+      "dependencies": [],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-06: Section 2.9 added with duration bands, intensity levels, contraindications, setup requirements, stage/tier requirements, practice catalogue, and cross-references",
+        "AC-07: Contraindications include active abusive/unsafe relationships, power imbalances that undermine voluntary participation, and active relational trauma",
+        "AC-08: Cross-references link to Interpersonal Line Stage Map, Interpersonal modules (EI-08 through EI-11), Emotional & Interpersonal Safety Addendum"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-04",
+      "title": "Add Emotional line progression ladder (Section 3.8)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 20,
+      "dependencies": ["EI-16-02"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-09: Four levels defined (L1–L4) with names, criteria to enter, example practices, and developmental line focus for each",
+        "AC-10: L1 'Emotion-Aware' — emotion wheel journalling entry; L2 'Emotionally Literate' — ABC chain analysis, reappraisal; L3 'Self-Regulating' — somatic tracking, affect labelling in conversation; L4 'Emotionally Facilitative' — designing emotion practices, co-regulation facilitation",
+        "AC-11: Criteria for advancing specified per level",
+        "AC-12: Fallback alternatives documented: reduce duration/intensity, shift to cognitive reflection for somatic destabilization"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-05",
+      "title": "Add Interpersonal line progression ladder (Section 3.9)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 20,
+      "dependencies": ["EI-16-03"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-13: Four levels defined (L1–L4) with names, criteria to enter, example practices, and developmental line focus for each",
+        "AC-14: L1 'Relational Observer' — perspective accuracy verification; L2 'Skill Builder' — Four Horsemen self-audit; L3 'Dialogue Practitioner' — PACE attunement, NVC repair drafting, cross-difference dialogue; L4 'Relational Facilitator' — facilitating cross-difference dialogue, designing relational practices",
+        "AC-15: Criteria for advancing specified per level",
+        "AC-16: Fallback alternatives documented: solo written exercises when no partner available, reduce scope before skipping"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-06",
+      "title": "Add five Emotional line practice entries to Example Taxonomy Entries (Section 7)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 10,
+      "dependencies": ["EI-16-02", "EI-16-04"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-17: ILP-EMOT-001 Emotion wheel journaling — Short (5–10 min), Low, Risk Low, Tier 1",
+        "AC-18: ILP-EMOT-002 ABC chain analysis — Medium (10–15 min), Low-Moderate, Risk Low, Tier 1",
+        "AC-19: ILP-EMOT-003 Reappraisal micro-practice — Short (5–10 min), Low, Risk Low, Tier 1",
+        "AC-20: ILP-EMOT-004 Somatic emotion tracking — Medium (10–15 min), Moderate, Risk Medium, Tier 2",
+        "AC-21: ILP-EMOT-005 Affect labelling in conversation — Live practice, Low, Risk Low-Medium, Tier 1",
+        "AC-22: Retrieval hook provided for each entry"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-07",
+      "title": "Add five Interpersonal line practice entries to Example Taxonomy Entries (Section 7)",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 10,
+      "dependencies": ["EI-16-03", "EI-16-05"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-23: ILP-INT-001 Perspective accuracy verification — Live practice, Low, Risk Low, Tier 1",
+        "AC-24: ILP-INT-002 PACE attunement listening — Medium (10–15 min), Moderate, Risk Medium, Tier 2",
+        "AC-25: ILP-INT-003 Four Horsemen self-audit — Medium (10–15 min), Moderate, Risk Low, Tier 1",
+        "AC-26: ILP-INT-004 NVC repair attempt drafting — Medium (15–20 min), Moderate, Risk Medium, Tier 1",
+        "AC-27: ILP-INT-005 Cross-difference dialogue — Long (20–30 min), Moderate-High, Risk Medium-Elevated, Tier 2",
+        "AC-28: Retrieval hook provided for each entry"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-08",
+      "title": "Add full practice card details for Emotional line practices",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 120,
+      "dependencies": ["EI-16-06"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-29: Five practice cards with all 12 fields: Practice ID, Family, AQAL tags, Duration, Intensity, Tier, Instructions, Reflection prompt, Evidence capture, Safety notes, Fallback practice, Escalation trigger",
+        "AC-30: Emotion wheel journaling (ILP-EMOT-001): instructions for using an emotion wheel, evidence from EI-02 Emotional Granularity",
+        "AC-31: ABC chain analysis (ILP-EMOT-002): instructions for Activating event → Belief → Consequence chain, evidence from EI-05 Emotional Appraisal",
+        "AC-32: Reappraisal micro-practice (ILP-EMOT-003): instructions for cognitive reappraisal in real time, evidence from Gross process model (EI-05)",
+        "AC-33: Somatic emotion tracking (ILP-EMOT-004): Tier 2, body scan for emotional data, contra: trauma history without support, evidence from EI-06",
+        "AC-34: Affect labelling in conversation (ILP-EMOT-005): instructions for naming affect during live dialogue, evidence from EI-01 Emotional Line Overview"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-09",
+      "title": "Add full practice card details for Interpersonal line practices",
+      "type": "content",
+      "agent": "build",
+      "estimated_lines": 120,
+      "dependencies": ["EI-16-07"],
+      "skills": ["build/code-generation"],
+      "acceptance_criteria": [
+        "AC-35: Five practice cards with all 12 fields: Practice ID, Family, AQAL tags, Duration, Intensity, Tier, Instructions, Reflection prompt, Evidence capture, Safety notes, Fallback practice, Escalation trigger",
+        "AC-36: Perspective accuracy verification (ILP-INT-001): instructions for checking understanding against partner's actual experience, evidence from EI-09",
+        "AC-37: PACE attunement listening (ILP-INT-002): Tier 2, Playful-Accepting-Curious-Empathic listening protocol, contra: attachment distress, evidence from EI-08 + Hughes",
+        "AC-38: Four Horsemen self-audit (ILP-INT-003): instructions for auditing criticism/contempt/defensiveness/stonewalling, evidence from EI-10 + Gottman",
+        "AC-39: NVC repair attempt drafting (ILP-INT-004): NVC observation-feeling-need-request format, evidence from EI-10 + Rosenberg",
+        "AC-40: Cross-difference dialogue (ILP-INT-005): Tier 2, structured dialogue across identity difference, contra: identity threat/minority stress, evidence from EI-11"
+      ],
+      "test_type": "unit"
+    },
+    {
+      "id": "EI-16-10",
+      "title": "Update Launch Readiness Checklist (Section 10) and validate build",
+      "type": "verification",
+      "agent": "build",
+      "estimated_lines": 10,
+      "dependencies": ["EI-16-01", "EI-16-02", "EI-16-03", "EI-16-04", "EI-16-05", "EI-16-06", "EI-16-07", "EI-16-08", "EI-16-09"],
+      "skills": ["build/governance-enforcement"],
+      "acceptance_criteria": [
+        "AC-41: Launch Readiness Checklist updated with checkboxes for Emotional and Interpersonal families",
+        "AC-42: Cross-reference links validated (no 404s)",
+        "AC-43: `npm run build` exits zero with no errors",
+        "AC-44: All practice IDs follow ILP-{FAMILY}-{NNN} convention",
+        "AC-45: No orphaned section numbering (2.8, 2.9, 3.8, 3.9 follow sequentially)"
+      ],
+      "test_type": "integration"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": ["EI-16-01", "EI-16-02", "EI-16-03", "EI-16-04", "EI-16-05", "EI-16-06", "EI-16-07", "EI-16-08", "EI-16-09", "EI-16-10"],
+    "edges": [
+      ["EI-16-02", "EI-16-04"],
+      ["EI-16-03", "EI-16-05"],
+      ["EI-16-02", "EI-16-06"],
+      ["EI-16-04", "EI-16-06"],
+      ["EI-16-03", "EI-16-07"],
+      ["EI-16-05", "EI-16-07"],
+      ["EI-16-06", "EI-16-08"],
+      ["EI-16-07", "EI-16-09"],
+      ["EI-16-01", "EI-16-10"],
+      ["EI-16-08", "EI-16-10"],
+      ["EI-16-09", "EI-16-10"]
+    ]
+  },
+  "summary": {
+    "total_tasks": 10,
+    "total_estimated_lines": 345,
+    "critical_path": ["EI-16-02", "EI-16-04", "EI-16-06", "EI-16-08", "EI-16-10"],
+    "parallel_opportunities": [
+      ["EI-16-01", "EI-16-02", "EI-16-03"],
+      ["EI-16-04", "EI-16-05"],
+      ["EI-16-06", "EI-16-07"],
+      ["EI-16-08", "EI-16-09"]
+    ],
+    "skills_used": ["build/code-generation", "build/governance-enforcement"]
+  }
+}

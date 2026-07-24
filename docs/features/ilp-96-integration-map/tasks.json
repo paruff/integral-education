@@ -1,0 +1,31 @@
+{
+  "version": "1.0", "issue": "96", "component": "integral-life-practice-integration",
+  "tasks": [
+    {"id":"ilp96-t01","label":"Create frontmatter, intro, and Why Parallel Practice section","status":"pending","agent":"feature-flow","skills":["module-authoring"],"acceptance":[
+      {"id":"ac-t01-01","test_type":"recon","description":"Frontmatter with id, title, sidebar_label, description, tags"},
+      {"id":"ac-t01-02","test_type":"recon","description":"Introduction explains what ILP is and cross-suite integration purpose"},
+      {"id":"ac-t01-03","test_type":"recon","description":"Why Parallel Practice: 3-4 paragraphs with synergy examples and ILP citation"}
+    ]},
+    {"id":"ilp96-t02","label":"Create 12-week integration matrix","status":"pending","agent":"feature-flow","skills":["module-authoring"],"acceptance":[
+      {"id":"ac-t02-01","test_type":"recon","description":"12 rows × 4 columns: State Practice / Stage Work / Shadow Work / Community"},
+      {"id":"ac-t02-02","test_type":"recon","description":"Each cell specifies recommended module or practice"},
+      {"id":"ac-t02-03","test_type":"recon","description":"Draws from all three platform suites"}
+    ]},
+    {"id":"ilp96-t03","label":"Create Community/Cohort Recommendation section","status":"pending","agent":"feature-flow","skills":["module-authoring"],"acceptance":[
+      {"id":"ac-t03-01","test_type":"recon","description":"Explains why self-directed practice is limited without intersubjective support"},
+      {"id":"ac-t03-02","test_type":"recon","description":"Recommends practice group of 3-8 people"},
+      {"id":"ac-t03-03","test_type":"recon","description":"Provides basic cohort agreement template"},
+      {"id":"ac-t03-04","test_type":"recon","description":"Cites Kegan and Mezirow"}
+    ]},
+    {"id":"ilp96-t04","label":"Create Synergies & Tensions section","status":"pending","agent":"feature-flow","skills":["module-authoring"],"acceptance":[
+      {"id":"ac-t04-01","test_type":"recon","description":"At least 5 specific interaction patterns between suites"},
+      {"id":"ac-t04-02","test_type":"recon","description":"Each pattern has concrete example"}
+    ]},
+    {"id":"ilp96-t05","label":"Add cross-references, citations, sidebar, and build","status":"pending","agent":"feature-flow","skills":["docusaurus-conventions","evidence-vetting"],"acceptance":[
+      {"id":"ac-t05-01","test_type":"recon","description":"Cross-references 3 QuickStarts, Facilitator Guides, ILP Taxonomy"},
+      {"id":"ac-t05-02","test_type":"recon","description":"Citations with Tier A/B/C quality ratings"},
+      {"id":"ac-t05-03","test_type":"recon","description":"Sidebar entry after ilp-practice-taxonomy"},
+      {"id":"ac-t05-04","test_type":"live-system","description":"npm run build passes with zero errors"}
+    ]}
+  ]
+}

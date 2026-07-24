@@ -1,34 +1,45 @@
-# Build Report — NAV-01: Separate learner navigation from internal documentation
+# Build Report — EI-90 Moral Line Developmental Profile Assessment
+
+**Session:** ei90-20260724-0001
+**Date:** 2026-07-24
 
 ## Summary
 
-Refactored Docusaurus configuration to use dual docs plugin instances — one for learner-facing content (`docs/`) and one for internal documentation (`internal/`). Removed Implementation, Quality, Safety, and Pilots sections from the learner sidebar. Updated all cross-links.
+Implemented the Moral Line Developmental Profile Assessment component and its supporting files. Followed the CognitiveLineAssessment component pattern as specified in the design. Created 3 new files and modified 1 existing file.
 
-## Session
+## Files Changed
 
-- **Session ID:** `nav-01-20260721`
-- **Branch:** `feature/nav-01-separate-navigation`
+| File | Action | Lines |
+|------|--------|-------|
+| `src/components/MoralLineAssessment.jsx` | Created | ~520 |
+| `src/components/MoralLineAssessment.module.css` | Created | ~395 |
+| `docs/maps/moral-line-developmental-profile.mdx` | Created | ~22 |
+| `sidebars.js` | Modified | +1 |
 
-## Changes
+## Tasks Completed
 
-| File | Action | Purpose |
-|------|--------|---------|
-| `docs/implementation/` → `internal/implementation/` | **Moved** | Internal docs |
-| `docs/quality/` → `internal/quality/` | **Moved** | Internal docs |
-| `docs/pilots/` → `internal/pilots/` | **Moved** | Internal docs |
-| `docs/safety/` → `internal/safety/` | **Moved** (crisis-resources.md kept in docs/safety/) | Internal docs |
-| `sidebars.js` | **Rewritten** | Learner-only sidebar (no Implementation/Quality/Safety/Pilots) |
-| `sidebarsInternal.js` | **Created** | Internal docs sidebar |
-| `docusaurus.config.js` | **Modified** | Dual plugin instances, updated navbar/footer |
-| 58 cross-link files | **Modified** | Updated `../safety/`, `../quality/` etc. to `/internal/` paths |
+| Task ID | Description | Status |
+|---------|-------------|--------|
+| ei90-t01 | Create DIT dilemma content (3 justice-track dilemmas with 8 tagged considerations each) | ✅ |
+| ei90-t02 | Create care-track dilemma content (2 dilemmas with 6 considerations each) | ✅ |
+| ei90-t03 | Create moral courage gap questions (5 Likert items) | ✅ |
+| ei90-t04 | Implement MoralLineAssessment.jsx component | ✅ |
+| ei90-t05 | Create MoralLineAssessment.module.css | ✅ |
+| ei90-t06 | Create MDX wrapper page at docs/maps/moral-line-developmental-profile.mdx | ✅ |
+| ei90-t07 | Add sidebar entry to sidebars.js Maps category | ✅ |
+| ei90-t08 | Build validation and PR | ✅ |
 
-## Validation
+## Validation Results
 
-```
-npm run build → [SUCCESS] Generated static files in "build".
-```
-
-All broken links resolved. Pre-existing anchor warnings (emoji-based heading IDs) unchanged.
+| Check | Result |
+|-------|--------|
+| `npm run build` | ✅ PASS — zero errors |
+| Component file exists | ✅ |
+| CSS module exists | ✅ |
+| MDX wrapper exists | ✅ |
+| Sidebar entry added | ✅ |
+| Schema tags hidden from learner | ✅ — tags are in data, never rendered |
+| No persistent storage | ✅ — all useState, no localStorage |
 
 ## Blockers
 

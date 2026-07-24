@@ -1,0 +1,537 @@
+/* ═══ MoralLineAssessment.module.css ═══ */
+
+.assessment {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.results {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* ── Framing Message ── */
+
+.framingMessage {
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-0);
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.framingMessage p {
+  margin: 0;
+}
+
+/* ── Section ── */
+
+.section {
+  margin-bottom: 2.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+}
+
+.sectionTitle {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+}
+
+.sectionIntro {
+  font-size: 0.95rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.sectionStatus {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-bottom: 1.25rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* ── Question Card ── */
+
+.questionCard {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  background: var(--ifm-color-emphasis-0);
+}
+
+.questionNumber {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-500);
+  margin-bottom: 0.5rem;
+}
+
+.dilemmaTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-heading-color);
+}
+
+.scenarioText {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.actionQuestion {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.questionText {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+/* ── Action Options (Yes/No binary) ── */
+
+.actionOptions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+/* ── Radio Option (shared with likert labels) ── */
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  font-size: 0.9rem;
+}
+
+.optionLabel:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+.optionLabel:has(input:checked) {
+  background: color-mix(in srgb, var(--ifm-color-primary) 8%, var(--ifm-background-color));
+  border-color: var(--ifm-color-primary);
+}
+
+.radio {
+  flex-shrink: 0;
+  accent-color: var(--ifm-color-primary);
+}
+
+.optionText {
+  flex: 1;
+}
+
+/* ── Considerations Section ── */
+
+.considerationsSection {
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.considerationsHeader {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.75rem;
+}
+
+.considerationRow {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-100);
+}
+
+.considerationRow:last-of-type {
+  border-bottom: none;
+}
+
+.considerationText {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+/* ── Likert Scale ── */
+
+.likertScale {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.likertLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.likertLabel:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-primary-lighter);
+}
+
+.likertLabel:has(input:checked) {
+  background: color-mix(in srgb, var(--ifm-color-primary) 15%, var(--ifm-background-color));
+  border-color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.likertLabel input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.likertValue {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* ── Legend ── */
+
+.likertLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.courageLegend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+}
+
+.legendItem {
+  white-space: nowrap;
+}
+
+/* ── Submit ── */
+
+.submitArea {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.submitButton {
+  padding: 0.75rem 2.5rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s, transform 0.15s;
+}
+
+.submitButton:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.submitHint {
+  font-size: 0.85rem;
+  color: var(--ifm-color-warning-dark);
+  margin-bottom: 1rem;
+}
+
+.privacyNote {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-top: 0.75rem;
+}
+
+/* ── Results ── */
+
+.resultsTitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: var(--ifm-color-primary);
+}
+
+.resultSection {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+}
+
+.resultSection h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.resultNote {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
+/* ── Schema Bars ── */
+
+.schemaBars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.schemaBarRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.schemaLabel {
+  width: 200px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-align: right;
+  flex-shrink: 0;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.schemaBarTrack {
+  flex: 1;
+  height: 20px;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.schemaBarFill {
+  height: 100%;
+  background: var(--ifm-color-emphasis-400);
+  border-radius: 4px;
+  transition: width 0.5s ease;
+  min-width: 4px;
+}
+
+.schemaBarDominant {
+  background: var(--ifm-color-primary);
+}
+
+.schemaCount {
+  width: 50px;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-500);
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.dominantNote {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* ── Gap Display ── */
+
+.gapDisplay {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.gapValue {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.gapScale {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-500);
+  margin-left: 0.25rem;
+}
+
+.gapNote {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  line-height: 1.6;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: var(--ifm-color-emphasis-0);
+  border-radius: 4px;
+}
+
+/* ── Module List ── */
+
+.moduleList {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
+.moduleList li {
+  padding: 0.4rem 0;
+  font-size: 0.95rem;
+}
+
+.moduleList li::before {
+  content: '📘 ';
+}
+
+/* ── Disclaimer ── */
+
+.disclaimer {
+  background: var(--ifm-color-emphasis-0);
+  border-left: 4px solid var(--ifm-color-warning-dark);
+}
+
+.disclaimer h3 {
+  color: var(--ifm-color-warning-dark);
+}
+
+.disclaimer p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Result Actions ── */
+
+.resultActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.exportButton {
+  padding: 0.6rem 1.5rem;
+  background: var(--ifm-color-primary);
+  color: var(--ifm-color-white);
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.exportButton:hover {
+  opacity: 0.88;
+}
+
+.resetButton {
+  padding: 0.6rem 1.5rem;
+  background: transparent;
+  color: var(--ifm-color-emphasis-700);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.resetButton:hover {
+  background: var(--ifm-color-emphasis-100);
+}
+
+/* ── Responsive ── */
+
+@media screen and (max-width: 600px) {
+  .section {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.15rem;
+  }
+
+  .questionCard {
+    padding: 0.75rem;
+  }
+
+  .schemaBarRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .schemaLabel {
+    width: auto;
+    text-align: left;
+  }
+
+  .schemaCount {
+    width: auto;
+    text-align: left;
+  }
+
+  .actionOptions {
+    flex-direction: column;
+  }
+
+  .likertScale {
+    gap: 0.3rem;
+  }
+
+  .likertLabel {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .resultActions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+
+  .framingMessage {
+    font-size: 0.9rem;
+    padding: 0.75rem 1rem;
+  }
+}

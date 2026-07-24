@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "issue": "177 (GH #90)",
+  "component": "MoralLineAssessment",
+  "tasks": [
+    {
+      "id": "ei90-t01",
+      "label": "Create DIT dilemma content (3 justice-track dilemmas with 8 tagged considerations each)",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t01-01", "test_type": "recon", "description": "3 dilemmas defined in SECTION_A_DILEMMAS: Heinz, Whistleblower, Triage" },
+        { "id": "ac-t01-02", "test_type": "recon", "description": "Each dilemma has 8 considerations tagged PI, MN, or PC" },
+        { "id": "ac-t01-03", "test_type": "recon", "description": "Schema tags hidden from learner display" }
+      ]
+    },
+    {
+      "id": "ei90-t02",
+      "label": "Create care-track dilemma content (2 dilemmas with 6 considerations each)",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t02-01", "test_type": "recon", "description": "2 care-track dilemmas defined" },
+        { "id": "ac-t02-02", "test_type": "recon", "description": "Each has 6 care-oriented considerations (relational, contextual)" }
+      ]
+    },
+    {
+      "id": "ei90-t03",
+      "label": "Create moral courage gap questions (5 Likert items)",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t03-01", "test_type": "recon", "description": "5 Likert-scale questions defined" },
+        { "id": "ac-t03-02", "test_type": "recon", "description": "Questions map to Narvaez/Rest action gap construct" }
+      ]
+    },
+    {
+      "id": "ei90-t04",
+      "label": "Implement MoralLineAssessment.jsx component",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["learner-experience"],
+      "acceptance": [
+        { "id": "ac-t04-01", "test_type": "recon", "description": "Three sections rendered: A (dilemmas), B (care), C (courage gap)" },
+        { "id": "ac-t04-02", "test_type": "recon", "description": "Schema scoring: PI/MN/PC proportions computed per dilemma and aggregated" },
+        { "id": "ac-t04-03", "test_type": "recon", "description": "Care track score computed" },
+        { "id": "ac-t04-04", "test_type": "recon", "description": "Moral courage gap interpretation bands displayed" },
+        { "id": "ac-t04-05", "test_type": "recon", "description": "Results page with schema bar chart, care score, modules, disclaimer" },
+        { "id": "ac-t04-06", "test_type": "recon", "description": "Export to Journal via Clipboard API" },
+        { "id": "ac-t04-07", "test_type": "recon", "description": "Partial submission supported (profile from available data)" },
+        { "id": "ac-t04-08", "test_type": "unit", "description": "No persistent storage — all state in React useState" },
+        { "id": "ac-t04-09", "test_type": "recon", "description": "Dual-track framing displayed at assessment opening" },
+        { "id": "ac-t04-10", "test_type": "recon", "description": "DIT methodology disclaimer displayed on results page" },
+        { "id": "ac-t04-11", "test_type": "recon", "description": "Reset button clears all state and returns to assessment form" }
+      ]
+    },
+    {
+      "id": "ei90-t05",
+      "label": "Create MoralLineAssessment.module.css",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["learner-experience"],
+      "acceptance": [
+        { "id": "ac-t05-01", "test_type": "recon", "description": "CSS Module with Docusaurus theme variables" },
+        { "id": "ac-t05-02", "test_type": "recon", "description": "Responsive breakpoint at max-width: 600px" },
+        { "id": "ac-t05-03", "test_type": "recon", "description": "Inputs, buttons, radio styling follow CognitiveLineAssessment pattern" }
+      ]
+    },
+    {
+      "id": "ei90-t06",
+      "label": "Create MDX wrapper page at docs/maps/moral-line-developmental-profile.mdx",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["docusaurus-conventions"],
+      "acceptance": [
+        { "id": "ac-t06-01", "test_type": "recon", "description": "Frontmatter with id, title, sidebar_label, description" },
+        { "id": "ac-t06-02", "test_type": "recon", "description": "Imports MoralLineAssessment via @site alias" },
+        { "id": "ac-t06-03", "test_type": "recon", "description": "No # H1 heading in body (title renders as H1)" }
+      ]
+    },
+    {
+      "id": "ei90-t07",
+      "label": "Add sidebar entry to sidebars.js Maps category",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["docusaurus-conventions"],
+      "acceptance": [
+        { "id": "ac-t07-01", "test_type": "recon", "description": "maps/moral-line-developmental-profile added to Maps items" }
+      ]
+    },
+    {
+      "id": "ei90-t08",
+      "label": "Build validation and PR",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["docusaurus-conventions"],
+      "acceptance": [
+        { "id": "ac-t08-01", "test_type": "live-system", "description": "npm run build passes with zero errors" },
+        { "id": "ac-t08-02", "test_type": "recon", "description": "PR opened against main with all files included" }
+      ]
+    }
+  ]
+}

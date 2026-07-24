@@ -242,6 +242,7 @@ const learnerSidebar = {
         'maps/emotional-line-stage-map',
         'maps/ilp-practice-taxonomy',
         'maps/cognitive-line-developmental-profile',
+        'maps/spiritual-line-developmental-profile',
         'maps/state-identification-assessment',
         'maps/state-stage-integration-map',
         'maps/shadow-developmental-lines-map',

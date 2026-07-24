@@ -1,0 +1,109 @@
+{
+  "version": "1.0",
+  "issue": "160 (GH #74)",
+  "component": "spiritual-line-practice-architecture",
+  "tasks": [
+    {
+      "id": "ei74-t01",
+      "label": "Create module frontmatter, position-in-sequence, overview, and modified mastery loop",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t01-01", "test_type": "recon", "description": "Frontmatter includes id, title, sidebar_label, description, quadrants, level, lines, states, types, tags, difficulty, readingTime, practiceTime, prerequisites, line" },
+        { "id": "ac-t01-02", "test_type": "recon", "description": "Position-in-sequence references spiritual-line-post-metaphysical-integral-religion prerequisite" },
+        { "id": "ac-t01-03", "test_type": "recon", "description": "Overview explains practice architecture as the operational path from conceptual understanding to developmental shift" },
+        { "id": "ac-t01-04", "test_type": "recon", "description": "Modified Mastery Loop explained: Orient → Practice (Embody) → Reflect → Assess → Integrate; Embody is most substantive" }
+      ]
+    },
+    {
+      "id": "ei74-t02",
+      "label": "Write Learn, Orient, and AQAL Mapping sections",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t02-01", "test_type": "recon", "description": "AQAL Mapping table with Quadrants, Levels, Lines, States, Types dimensions" },
+        { "id": "ac-t02-02", "test_type": "recon", "description": "Learn section lists 4 specific, assessable learning objectives" },
+        { "id": "ac-t02-03", "test_type": "recon", "description": "Orient explains state-to-trait mechanism: sustained state access + integration + shadow work + relational container" },
+        { "id": "ac-t02-04", "test_type": "recon", "description": "Orient includes practice tradition mapping table: 4 Fowler stages × practice traditions × stage-appropriate use × transition challenge" },
+        { "id": "ac-t02-05", "test_type": "recon", "description": "Orient cites contemplative neuroscience (Lutz, Dunne & Davidson, 2007) and Wilber's state-to-trait model" }
+      ]
+    },
+    {
+      "id": "ei74-t03",
+      "label": "Write Encounter section — Spiritual Practice Audit",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t03-01", "test_type": "recon", "description": "Spiritual Practice Audit: learner maps current practices to Fowler stages" },
+        { "id": "ac-t03-02", "test_type": "recon", "description": "Audit asks: Is this practice appropriate for current stage? Challenging or reinforcing?" },
+        { "id": "ac-t03-03", "test_type": "recon", "description": "Audit prompts identification of stage-transition practice adaptation needs" }
+      ]
+    },
+    {
+      "id": "ei74-t04",
+      "label": "Write Embody section — 12-week practice schedule",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t04-01", "test_type": "recon", "description": "12-week schedule with three streams: State Practice, Shadow Integration, Tradition Practice" },
+        { "id": "ac-t04-02", "test_type": "recon", "description": "Three calibrated entry points based on Fowler stage (Mythic-Literal, Individuative-Reflective, Conjunctive+)" },
+        { "id": "ac-t04-03", "test_type": "recon", "description": "Weekly protocols specified for each stream with concrete activities" },
+        { "id": "ac-t04-04", "test_type": "recon", "description": "State practices reference modules: gross-state-awareness, subtle-state-access, causal-witness-state, nondual-awareness-orientation" },
+        { "id": "ac-t04-05", "test_type": "recon", "description": "Shadow practices reference modules: shadow-work-foundation, shadow-321-process, shadow-spiritual-bypassing" },
+        { "id": "ac-t04-06", "test_type": "recon", "description": "Embody is the most substantive section (longest, most detailed)" }
+      ]
+    },
+    {
+      "id": "ei74-t05",
+      "label": "Write Reflect, Assess, Integrate sections",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t05-01", "test_type": "recon", "description": "Reflect section: 4 weekly reflection prompts specific to spiritual practice" },
+        { "id": "ac-t05-02", "test_type": "recon", "description": "Assess section: self-assessment rubric with 4 criteria × 4 levels (Not yet / Emerging / Developing / Stable)" },
+        { "id": "ac-t05-03", "test_type": "recon", "description": "Assess section: passing threshold specified" },
+        { "id": "ac-t05-04", "test_type": "recon", "description": "Integrate section: 12-week synthesis summary with concrete outputs (shifts, contradictions, next-cycle plan)" }
+      ]
+    },
+    {
+      "id": "ei74-t06",
+      "label": "Write section on practice through stage transitions",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t06-01", "test_type": "recon", "description": "Addresses what happens when devotional prayer (Stage 3) is encountered at Stage 4 (Individuative-Reflective)" },
+        { "id": "ac-t06-02", "test_type": "recon", "description": "Provides guidance for maintaining practice continuity without bypassing transition" },
+        { "id": "ac-t06-03", "test_type": "recon", "description": "Cites Fowler and Parks Daloz (Faithful Journeys, 2011) on practice through transitions" }
+      ]
+    },
+    {
+      "id": "ei74-t07",
+      "label": "Write Retrieval Schedule, Evidence and Citations, and Safety Note",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring", "evidence-vetting", "safety-classification"],
+      "acceptance": [
+        { "id": "ac-t07-01", "test_type": "recon", "description": "Retrieval Schedule with spaced intervals (24h, 72h, 7d) and specific activities" },
+        { "id": "ac-t07-02", "test_type": "recon", "description": "Evidence and Citations table with 5+ entries, each with source, quality tier, and caveat" },
+        { "id": "ac-t07-03", "test_type": "recon", "description": "Safety Note rated Tier 1 with consent, right to stop, contraindications, stop rules, grounding, escalation" }
+      ]
+    },
+    {
+      "id": "ei74-t08",
+      "label": "Add sidebar entry and validate build",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["docusaurus-conventions"],
+      "acceptance": [
+        { "id": "ac-t08-01", "test_type": "recon", "description": "modules/spiritual-line-practice-architecture added to Spiritual Line category in sidebars.js" },
+        { "id": "ac-t08-02", "test_type": "live-system", "description": "npm run build passes with zero errors" }
+      ]
+    }
+  ]
+}

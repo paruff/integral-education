@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "issue": "106",
+  "component": "RationalPluralisticAssessment",
+  "tasks": [
+    {
+      "id": "rp106-t01",
+      "label": "Create Section A — Late-Orange Recognition questions (8 scenario-based)",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t01-01", "test_type": "recon", "description": "8 scenario-based questions defined covering late-Orange signals: disillusionment, meaning-deficit, autonomy limits, systemic awareness, worldview meta-cognition, openness, valuing emotional/relational" },
+        { "id": "ac-t01-02", "test_type": "recon", "description": "Each question has 3 response options: Orange-default, transitional, Pluralistic-default" },
+        { "id": "ac-t01-03", "test_type": "recon", "description": "Questions are behavioral scenarios, not trait self-ratings" }
+      ]
+    },
+    {
+      "id": "rp106-t02",
+      "label": "Create Section B — Pluralistic Capacities questions (12 across 5 domains)",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t02-01", "test_type": "recon", "description": "12 questions distributed across 5 domains (empathy 3, ethics 2, ecology 2, dialogue 3, relativism 2)" },
+        { "id": "ac-t02-02", "test_type": "recon", "description": "Each question tagged with domain for domain-level scoring" },
+        { "id": "ac-t02-03", "test_type": "recon", "description": "Scenario-based with Orange/transitional/Pluralistic response options" }
+      ]
+    },
+    {
+      "id": "rp106-t03",
+      "label": "Create Section C — Green Shadow Awareness questions (6)",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["module-authoring"],
+      "acceptance": [
+        { "id": "ac-t03-01", "test_type": "recon", "description": "6 questions covering: epistemic cowardice, green-on-green aggression, consensus compulsion, relativism paralysis, performative empathy, spiritual bypass" },
+        { "id": "ac-t03-02", "test_type": "recon", "description": "Each response option reveals degree of Green shadow awareness" }
+      ]
+    },
+    {
+      "id": "rp106-t04",
+      "label": "Implement RationalPluralisticAssessment.jsx component",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["learner-experience"],
+      "acceptance": [
+        { "id": "ac-t04-01", "test_type": "recon", "description": "Three sections rendered sequentially on single page (not wizard)" },
+        { "id": "ac-t04-02", "test_type": "recon", "description": "Descriptive profile: emerging capacities, consolidated strengths, growing edges" },
+        { "id": "ac-t04-03", "test_type": "recon", "description": "Domain-level breakdown with visual bars across 5 domains" },
+        { "id": "ac-t04-04", "test_type": "recon", "description": "Top-3 module recommendations with brief rationale per recommendation" },
+        { "id": "ac-t04-05", "test_type": "recon", "description": "Framing message: maps not territories, tendencies not fixed identities" },
+        { "id": "ac-t04-06", "test_type": "recon", "description": "Facilitated Support callout triggers when Section A >=5 Orange + Section B <=4 Pluralistic" },
+        { "id": "ac-t04-07", "test_type": "recon", "description": "Export to Journal via Clipboard API with fallback" },
+        { "id": "ac-t04-08", "test_type": "recon", "description": "Retake Assessment resets all state" },
+        { "id": "ac-t04-09", "test_type": "recon", "description": "No persistent storage — all state in React useState" },
+        { "id": "ac-t04-10", "test_type": "recon", "description": "No stage labels visible to learner (uses emerging/consolidated/growing edge)" },
+        { "id": "ac-t04-11", "test_type": "recon", "description": "Partial submission supported with appropriate caveats" }
+      ]
+    },
+    {
+      "id": "rp106-t05",
+      "label": "Create MDX wrapper page and sidebar entry",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["docusaurus-conventions"],
+      "acceptance": [
+        { "id": "ac-t05-01", "test_type": "recon", "description": "Frontmatter with id, title, sidebar_label, description" },
+        { "id": "ac-t05-02", "test_type": "recon", "description": "Imports RationalPluralisticAssessment via @site alias" },
+        { "id": "ac-t05-03", "test_type": "recon", "description": "No # H1 heading in body (title renders as H1)" },
+        { "id": "ac-t05-04", "test_type": "recon", "description": "Sidebar entry added to Maps category after amber-rational-progress-assessment" }
+      ]
+    },
+    {
+      "id": "rp106-t06",
+      "label": "Build validation",
+      "status": "pending",
+      "agent": "feature-flow",
+      "skills": ["docusaurus-conventions"],
+      "acceptance": [
+        { "id": "ac-t06-01", "test_type": "live-system", "description": "npm run build passes with zero errors" }
+      ]
+    }
+  ]
+}

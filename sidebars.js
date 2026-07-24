@@ -243,6 +243,7 @@ const learnerSidebar = {
         'maps/aqal-competency-map',
         'maps/emotional-line-stage-map',
         'maps/ilp-practice-taxonomy',
+        'maps/integral-life-practice-integration',
         'maps/cognitive-line-developmental-profile',
         'maps/spiritual-line-developmental-profile',
         'maps/state-identification-assessment',

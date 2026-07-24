@@ -1,35 +1,30 @@
-# Cross-Validation Report — EI-90 Moral Line Developmental Profile Assessment
+# Cross-Validation Report — EI-74 Spiritual Line Practice Architecture Module
 
-**Session:** ei90-20260724-0001
+**Session:** ei74-20260724-0001
 **Date:** 2026-07-24
 
 ## Cross-Validation Summary
 
-Checks that review and verification findings are mutually consistent with the original specification and design.
-
 | Check | Source A | Source B | Result |
 |-------|----------|----------|--------|
-| Spec FR-01 (three sections) vs Build | specification.md §FR-01 | build-report.md: 3 sections rendered | ✅ consistent |
-| Spec FR-02 (8 considerations per dilemma) vs Build | specification.md §FR-02 | verification: SECTION_A_DILEMMAS each has 8 considerations | ✅ consistent |
-| Spec FR-03 (PI/MN/PC scoring) vs Build | specification.md §FR-03 | build-report.md: computeSchemaProfile() | ✅ consistent |
-| Spec FR-04 (care track 6 considerations) vs Build | specification.md §FR-04 | verification: 6 considerations per care dilemma | ✅ consistent |
-| Spec FR-05 (5 courage gap questions) vs Build | specification.md §FR-05 | verification: 5 questions in SECTION_C_QUESTIONS | ✅ consistent |
-| Spec FR-06 (results page with chart, scores, modules, disclaimer) vs Build | specification.md §FR-06 | build-report.md: results view ✓ | ✅ consistent |
-| Spec FR-07 (dual-track framing) vs Build | specification.md §FR-07 | verification: framing message at opening | ✅ consistent |
-| Spec FR-08 (no persistent storage) vs Build | specification.md §FR-08 | verification: no localStorage, all useState | ✅ consistent |
-| Spec FR-09 (partial submission) vs Build | specification.md §FR-09 | build-report.md: handleSubmit fires regardless of completion | ✅ consistent |
-| NFR-01 (CSS Modules) vs Build | specification.md §NFR-01 | verification: MoralLineAssessment.module.css | ✅ consistent |
-| NFR-02 (mobile responsive 600px) vs Build | specification.md §NFR-02 | verification: `@media (max-width: 600px)` | ✅ consistent |
-| NFR-04 (no stage labels visible) vs Build | specification.md §NFR-04 | verification: schema tags hidden in data | ✅ consistent |
-| NFR-06 (single-page, not wizard) vs Build | specification.md §NFR-06 | build-report: all sections on one page | ✅ consistent |
-| Design pattern (follow CognitiveLineAssessment) vs Build | design.md | review-report.md: "Follows CognitiveLineAssessment component pattern" | ✅ consistent |
-| Design constraint (@site alias) vs Build | design.md | verification: import uses @site alias | ✅ consistent |
-| Design constraint (Docusaurus Link) vs Build | design.md | verification: Link imported and used | ✅ consistent |
-| Design constraint (useCallback export) vs Build | design.md | verification: handleExport uses useCallback | ✅ consistent |
-| Sidebar entry placement | design.md | verification: entry added to Maps items | ✅ consistent |
-| Module recommendation mapping (spec §5) vs Build | specification.md §5 | review-report: 5 modules referenced across 3 schema profiles | ✅ consistent |
+| FR-01 (modified Mastery Loop) vs Build | spec §FR-01 | build: Orient → Encounter → Practice (Embody) → Reflect → Assess → Integrate | ✅ consistent |
+| FR-02 (state-to-trait mechanism, three elements) vs Build | spec §FR-02 | build: "Three Parallel Elements" section with isolation-failure analysis | ✅ consistent |
+| FR-03 (practice tradition mapping table) vs Build | spec §FR-03 | build: 4-row table with Fowler stages, traditions, use, challenges | ✅ consistent |
+| FR-04 (Spiritual Practice Audit) vs Build | spec §FR-04 | build: Encounter section with 3 audit questions | ✅ consistent |
+| FR-05 (12-week schedule, 3 streams, 3 entry points) vs Build | spec §FR-05 | build: 12-row schedule table, 3 entry points | ✅ consistent |
+| FR-06 (practice through stage transitions) vs Build | spec §FR-06 | build: devotional prayer Stage 3→4 example with 3-step guidance | ✅ consistent |
+| FR-07 (AQAL Mapping) vs Build | spec §FR-07 | build: 5-dimension AQAL table | ✅ consistent |
+| FR-08 (Learn objectives) vs Build | spec §FR-08 | build: 4 bullet learning objectives | ✅ consistent |
+| FR-09 (standard sections) vs Build | spec §FR-09 | build: Overview, Reflect, Assess, Integrate, Retrieval, Citations, Safety Note all present | ✅ consistent |
+| NFR-01 (follow cognitive-line pattern) vs Build | spec §NFR-01 | build: same section names, ordering, table formats as cognitive-line-practice-architecture.mdx | ✅ consistent |
+| NFR-02 (frontmatter fields) vs Build | spec §NFR-02 | build: all 15 frontmatter fields present | ✅ consistent |
+| NFR-03 (ModuleFooter, ModuleMeta imports) vs Build | spec §NFR-03 | build: both imports present | ✅ consistent |
+| Design template choice vs Build | design.md | build: follows cognitive-line-practice-architecture structure | ✅ consistent |
+| Design three parallel elements mapping vs Build | design.md | build: explicit mapping of 3 elements to 3 streams | ✅ consistent |
+| Design 12-week schedule structure vs Build | design.md | build: table matches design's week-by-week content plan | ✅ consistent |
+| Design sidebar placement vs Build | design.md | build: entry after spiritual-line-shadow-integration | ✅ consistent |
 | Review approval vs Verification PASS | review-report.md (APPROVED) | verification-report.md (PASS) | ✅ consistent |
 
 ## Cross-Validation Result
 
-**PASS** — All 20 cross-checks are consistent across specification, design, build, test, review, and verification. No contradictions found between what was asked for and what was delivered.
+**PASS** — All 17 cross-checks are consistent across specification, design, build, test, review, and verification. No contradictions found.

@@ -1,32 +1,32 @@
-# Verification Report — EI-90 Moral Line Developmental Profile Assessment
+# Verification Report — EI-74 Spiritual Line Practice Architecture Module
 
-**Session:** ei90-20260724-0001
+**Session:** ei74-20260724-0001
 **Date:** 2026-07-24
 
 ## Verification Summary
 
 | Claim | Source | Evidence | Result |
 |-------|--------|----------|--------|
-| MoralLineAssessment.jsx exists at src/components/ | build-report.md | File exists (39,011 bytes) | ✅ verified_true |
-| MoralLineAssessment.module.css exists | build-report.md | File exists (9,404 bytes) | ✅ verified_true |
-| moral-line-developmental-profile.mdx exists | build-report.md | File exists (1,872 bytes) | ✅ verified_true |
-| sidebars.js modified with maps entry | build-report.md | `git diff --stat` shows +1 line | ✅ verified_true |
+| spiritual-line-practice-architecture.mdx exists | build-report.md | File exists at docs/modules/ | ✅ verified_true |
+| sidebars.js modified with Spiritual Line entry | build-report.md | `grep -n "spiritual-line-practice-architecture" sidebars.js` found at line 86 | ✅ verified_true |
 | npm run build passes with zero errors | test-report.md | Build output: `[SUCCESS] Generated static files in "build".` | ✅ verified_true |
-| Schema tags (PI/MN/PC) are in data, never rendered | test-report.md | Search confirms tags only in data arrays, not in JSX output | ✅ verified_true |
-| No localStorage, all useState | test-report.md | Only `useState` and `useCallback` hooks used; no `localStorage` references | ✅ verified_true |
-| Dual-track framing displayed at opening | test-report.md | `.framingMessage` div rendered before any sections | ✅ verified_true |
-| DIT disclaimer on results page | test-report.md | Disclaimer section in results view with 4 paragraphs | ✅ verified_true |
-| Reset clears all 4 state objects | test-report.md | `handleReset` calls setters for all 4 state variables | ✅ verified_true |
-| Three sections match spec (A: dilemmas, B: care, C: courage) | test-report.md | JSX has 3 `<section>` elements matching description | ✅ verified_true |
-| 3 justice dilemmas with 8 considerations each | test-report.md | `SECTION_A_DILEMMAS` array length 3, each with 8-consideration arrays | ✅ verified_true |
-| 2 care dilemmas with 6 considerations each | test-report.md | `SECTION_B_DILEMMAS` array length 2, each with 6-consideration arrays | ✅ verified_true |
-| 5 courage gap questions | test-report.md | `SECTION_C_QUESTIONS` array length 5 | ✅ verified_true |
-| Mobile responsive at 600px breakpoint | test-report.md | CSS contains `@media screen and (max-width: 600px)` rule | ✅ verified_true |
-| Component imported via @site alias in MDX | test-report.md | MDX frontmatter has `import MoralLineAssessment from '@site/src/components/MoralLineAssessment.jsx'` | ✅ verified_true |
-| CSS uses Docusaurus theme variables | test-report.md | CSS references `--ifm-color-primary`, `--ifm-color-emphasis-*` | ✅ verified_true |
-| Export uses Clipboard API with fallback | test-report.md | `handleExport` has try/catch with `navigator.clipboard.writeText` and fallback | ✅ verified_true |
-| Module recommendations linked with Docusaurus Link | test-report.md | `import Link from '@docusaurus/Link'` used in module list | ✅ verified_true |
-| MDX has no # H1 heading | test-report.md | MDX uses `## H2` for heading; title from frontmatter | ✅ verified_true |
+| Frontmatter includes all required fields | test-report.md | Frontmatter block has id, title, sidebar_label, description, quadrants, level, lines, states, types, tags, difficulty, readingTime, practiceTime, prerequisites, line | ✅ verified_true |
+| ModuleFooter and ModuleMeta imported | test-report.md | `import ModuleFooter` and `import ModuleMeta` present at top of MDX | ✅ verified_true |
+| Three parallel elements explicitly named in Orient | test-report.md | "Three Parallel Elements" section with 3 numbered items + isolation-failure analysis | ✅ verified_true |
+| Practice tradition mapping table with 4 Fowler stages | test-report.md | Table with rows for Mythic-Literal, Individuative-Reflective, Conjunctive, Post-metaphysical | ✅ verified_true |
+| Spiritual Practice Audit with 3 questions | test-report.md | 3 numbered questions in Encounter section | ✅ verified_true |
+| 12-week schedule table with week-by-week detail | test-report.md | 12-row table with Stream 1/2/3 columns | ✅ verified_true |
+| Three entry points (A/B/C) stage-calibrated | test-report.md | Entry A (Mythic-Literal), Entry B (Individuative-Reflective), Entry C (Conjunctive+) described before schedule | ✅ verified_true |
+| Practice through stage transitions section | test-report.md | Heading with devotional prayer Stage 3→4 example, 3-step guidance | ✅ verified_true |
+| 6 citations with tier and caveat | test-report.md | Evidence table with Lutz, Wilber, Fowler, Parks Daloz, Welwood/Masters, Trungpa | ✅ verified_true |
+| Safety Note Tier 1 with all required fields | test-report.md | Consent, right to stop, contraindications, stop rules, grounding, escalation, non-therapy disclaimer | ✅ verified_true |
+| Self-assessment rubric with 4 criteria × 4 levels | test-report.md | Table with Not yet / Emerging / Developing / Stable columns | ✅ verified_true |
+| Passing threshold specified | test-report.md | "12/16 with no criterion below 2" | ✅ verified_true |
+| Retrieval Schedule with 24h/72h/7d/28d intervals | test-report.md | 4-row table with specific activities per interval | ✅ verified_true |
+| Cross-references to state modules | test-report.md | Links to gross-state-awareness, subtle-state-access, causal-witness-state, nondual-awareness-orientation | ✅ verified_true |
+| Cross-references to shadow modules | test-report.md | Links to shadow-work-foundation, shadow-321-process, shadow-spiritual-bypassing | ✅ verified_true |
+| No new components or API calls | review-report.md | File is pure MDX, no React components, no fetch/AJAX | ✅ verified_true |
+| Module is additive only (no existing file modifications) | review-report.md | Only new file + 1 sidebar insertion | ✅ verified_true |
 
 ## Verification Result
 

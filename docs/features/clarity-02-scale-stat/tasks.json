@@ -1,0 +1,36 @@
+[
+  {
+    "id": "T1",
+    "summary": "Add scale/depth stat line to homepage below How It Works",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC1",
+        "description": "Stat line appears on homepage after How It Works section",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC2",
+        "description": "Contains verified module count (75 modules)",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC3",
+        "description": "Contains verified developmental line count (7 lines)",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC4",
+        "description": "References evidence-tiered citations",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC5",
+        "description": "npm run build passes",
+        "test_type": "unit"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  }
+]

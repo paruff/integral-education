@@ -86,6 +86,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <p className={styles.scaleStat}>
+          75 modules · 7 developmental lines · Evidence-tiered citations throughout
+        </p>
         <section className="container homepage-section">
           <h2>🧭 QuickStarts</h2>
           <p>Choose a curated learning path and begin your journey in minutes.</p>

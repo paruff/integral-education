@@ -34,3 +34,12 @@
   color: var(--ifm-color-white);
   text-decoration: none;
 }
+
+.scaleStat {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 1rem auto;
+  max-width: 600px;
+  line-height: 1.5;
+}

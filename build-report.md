@@ -1,28 +1,27 @@
-# Build Report
+# Build Report — CLARITY-03
 
 ## Summary
-Added a scale/depth stat line to the homepage to communicate the platform's scope — 75 modules across 7 developmental lines with evidence-tiered citations — as specified in CLARITY-02.
+Replaced the third Featured Module card on the homepage (Shadow Integration) with Amber/Mythic Orientation, signaling the platform's real differentiation in developmental stage theory.
 
 ## Files Changed
 | File | Change |
 |------|--------|
-| `src/pages/index.js` | Added `<p className={styles.scaleStat}>` between "How It Works" section and "QuickStarts" section |
-| `src/pages/index.module.css` | Added `.scaleStat` CSS class (muted color, smaller font, centered) |
+| `src/pages/index.js` | Replaced Shadow Integration card (lines 159-169) with Amber/Mythic Orientation card in Featured Modules section |
 
 ## Tasks Completed
 | Task ID | Summary | Status |
 |---------|---------|--------|
-| T1 | Add scale/depth stat line to homepage below How It Works | ✅ Complete |
+| TASK-004 | Replace Shadow Integration card with Amber/Mythic Orientation in src/pages/index.js | ✅ Complete |
+| TASK-005 | Run npm run build to validate | ✅ Complete |
 
 ## Validation Results
-- **`npm run build`**: ✅ PASS (static files generated successfully)
+- **`npm run build`**: ✅ PASS (`[SUCCESS] Generated static files in "build"`)
 - **Pre-existing broken anchor warnings**: Unrelated to this change (all in shadow/integral modules)
-- **Module count verified**: 75 .md/.mdx files in `docs/modules/`
-- **Developmental line count verified**: 7 lines (cognitive, emotional, interpersonal, moral, self, shadow, spiritual)
+- **No CSS changes**: Existing card styles reused
+- **No new dependencies**
 
 ## Scope Discipline
-- Single `<p>` element insertion between existing sections
-- Single CSS class addition
-- No new dependencies
-- No restructuring of the homepage
-- No changes to any other component or page
+- Only the third featured module card was modified
+- Mindfulness Basics and Emotional Granularity remain unchanged as accessible entry points
+- No homepage restructuring
+- No CSS changes required

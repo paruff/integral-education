@@ -1,46 +1,48 @@
-# Review Report — CLARITY-02
+# Review Report — CLARITY-03
 
 ## Review Scope
-Review of commit `81704e1` implementing CLARITY-02: Add scale/depth stat line to homepage.
+Review of changes to `src/pages/index.js` implementing CLARITY-03: Replace Shadow Integration feature module card with Amber/Mythic Orientation.
 
 ## 1. Correctness
 
 | Check | Result | Notes |
 |-------|--------|-------|
-| Implementation matches specification | ✅ PASS | Spec requires stat line "below hero or below 'How It Works'". Implementation places it between "How It Works" and "QuickStarts" — correct |
-| Contains verified module count (75) | ✅ PASS | Text: "75 modules". Verified count: `ls docs/modules/ | wc -l` = 75 |
-| Contains verified developmental line count (7) | ✅ PASS | Text: "7 developmental lines". Verified: 7 lines (cognitive, emotional, interpersonal, moral, self, shadow, spiritual) |
-| References evidence-tiered citations | ✅ PASS | Text: "Evidence-tiered citations throughout" |
-| `npm run build` passes | ✅ PASS | Build succeeds with `[SUCCESS]` |
-| No new dependencies | ✅ PASS | No new imports or packages |
-| No homepage restructuring | ✅ PASS | Single `<p>` element inserted between existing sections |
+| Third card is Amber/Mythic Orientation (was Shadow Integration) | ✅ PASS | Source confirmation at lines 159-169; live HTML confirms `<h3>Amber/Mythic Orientation</h3>` |
+| Blurb mentions Kegan, Cook-Greuter, or Fowler | ✅ PASS | "grounded in Kegan, Cook-Greuter, and Fowler, not just typology" — mentions all three |
+| Link points to amber-mythic-orientation | ✅ PASS | `to="/docs/modules/amber-mythic-orientation"` — verified module file exists |
+| Difficulty badge is Beginner | ✅ PASS | `<span className="homepage-level-badge">Beginner</span>` |
+| Read time is 8 min | ✅ PASS | `<span className="homepage-card-meta">Read time: 8 min</span>` |
+| First two cards unchanged | ✅ PASS | Mindfulness Basics and Emotional Granularity untouched |
+| `npm run build` passes | ✅ PASS | `[SUCCESS]` |
+| No new dependencies | ✅ PASS | No changes to package.json |
+| No CSS changes | ✅ PASS | Only `index.js` modified |
 
 ## 2. Scope Discipline
 
 | Check | Result | Notes |
 |-------|--------|-------|
-| Only files in scope changed | ✅ PASS | Only `src/pages/index.js` and `src/pages/index.module.css` modified for this feature |
-| No unnecessary changes | ✅ PASS | Changes are minimal: +3 lines in index.js, +9 lines in index.module.css |
-| No scope creep | ✅ PASS | Implementation matches design.md exactly — no extra features or modifications |
+| Only intended file changed | ✅ PASS | Only `src/pages/index.js` modified |
+| No unnecessary changes | ✅ PASS | Exactly one card replaced with matching structure |
+| No scope creep | ✅ PASS | No extra features, no reformatting, no unrelated changes |
 
 ## 3. Maintainability
 
 | Check | Result | Notes |
 |-------|--------|-------|
-| Follows existing project patterns | ✅ PASS | Uses CSS Modules pattern (consistent with rest of `index.module.css`), follows existing homepage section ordering |
-| Naming convention matches | ✅ PASS | `.scaleStat` follows existing camelCase pattern for CSS Module class names in this file (`.heroBanner`, `.secondaryCta`) |
-| Minimal, readable code | ✅ PASS | Single `<p>` with one CSS class — no complexity introduced |
+| Follows existing card pattern | ✅ PASS | Same JSX structure, same CSS classes, same pattern as other cards |
+| Module path is valid | ✅ PASS | `docs/modules/amber-mythic-orientation.mdx` exists |
+| No dead code left | ✅ PASS | Shadow Integration card fully replaced, no leftover references |
 
 ## 4. Risk Assessment
 
 | Risk | Assessment | Notes |
 |------|------------|-------|
-| Security | ✅ None | Static text only, no user input or XSS vector |
-| Performance | ✅ None | Single `<p>` element — negligible impact |
-| Breaking changes | ✅ None | Purely additive change between existing sections |
-| SEO / Accessibility | ✅ None | Additional content in `<main>` — improves page content |
-| Regression | ✅ None | No existing functionality modified |
+| Security | ✅ None | Static text and link replacement, no user input |
+| Performance | ✅ None | Single card text replacement — zero performance impact |
+| Breaking changes | ✅ None | Only a card content swap, no structural changes |
+| Broken link | ✅ None | Target module `amber-mythic-orientation.mdx` verified to exist |
+| Accessibility | ✅ None | Same HTML structure, same heading hierarchy |
 
 ## Review Result
 
-**APPROVED** — All checks pass. No issues found. Proceed to Phase 4.5 (Verification).
+**APPROVED** — All checks pass. Proceed to Phase 4.5 (Verification).

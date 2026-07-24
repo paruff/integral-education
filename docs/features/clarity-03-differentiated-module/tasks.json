@@ -1,0 +1,51 @@
+{
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Create specification.md",
+      "status": "completed",
+      "dependencies": [],
+      "acceptanceCriteria": ["specification.md exists with AC table"]
+    },
+    {
+      "id": "TASK-002",
+      "title": "Create design.md",
+      "status": "completed",
+      "dependencies": [],
+      "acceptanceCriteria": ["design.md exists with component changes"]
+    },
+    {
+      "id": "TASK-003",
+      "title": "Create tasks.json",
+      "status": "completed",
+      "dependencies": [],
+      "acceptanceCriteria": ["tasks.json exists with task list"]
+    },
+    {
+      "id": "TASK-004",
+      "title": "Replace Shadow Integration card with Amber/Mythic Orientation in src/pages/index.js",
+      "status": "pending",
+      "dependencies": ["TASK-001", "TASK-002", "TASK-003"],
+      "acceptanceCriteria": [
+        "Third card title is 'Amber/Mythic Orientation'",
+        "Third card blurb mentions Kegan/Cook-Greuter/Fowler",
+        "Third card links to /docs/modules/amber-mythic-orientation",
+        "Third card shows Beginner badge and 8 min read time"
+      ]
+    },
+    {
+      "id": "TASK-005",
+      "title": "Run npm run build to validate",
+      "status": "pending",
+      "dependencies": ["TASK-004"],
+      "acceptanceCriteria": ["Build passes without errors"]
+    },
+    {
+      "id": "TASK-006",
+      "title": "Commit, push, and create PR",
+      "status": "pending",
+      "dependencies": ["TASK-005"],
+      "acceptanceCriteria": ["Changes committed to feat/clarity-03-differentiated-module branch", "PR created"]
+    }
+  ]
+}

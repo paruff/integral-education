@@ -26,6 +26,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Self Line',
+      description: 'Your sense of identity and self-concept — from conformist and achiever through individualist to unitive awareness.',
       items: [
         'modules/self-line-overview-psychograph',
         'modules/self-line-conventional-conformist-achiever',
@@ -37,6 +38,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Emotional Line',
+      description: 'Your capacity to recognise, regulate, and work with emotion — from basic affect labelling to emotional granularity and relational integration.',
       collapsible: true,
       collapsed: false,
       items: [
@@ -52,6 +54,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Interpersonal Line',
+      description: 'Your ability to relate across difference — from perspective-taking and empathic accuracy to collaborative meaning-making and trust across divides.',
       collapsible: true,
       collapsed: false,
       items: [
@@ -66,6 +69,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Cognitive Line',
+      description: 'Your thinking capabilities — from concrete and formal operations through postformal reasoning to metasystematic and vision-logic.',
       items: [
         'modules/cognitive-line-overview-orientation',
         'modules/cognitive-line-concrete-to-formal',
@@ -77,6 +81,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Spiritual Line',
+      description: 'Your relationship with meaning, mystery, and transcendence — from mythic belief through rational inquiry to post-metaphysical integral practice.',
       items: [
         'modules/spiritual-line-overview-orientation',
         'modules/spiritual-line-mythic-to-rational',
@@ -89,6 +94,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Moral Line',
+      description: 'Your sense of justice and care — from conventional reasoning through postconventional imagination to integral ethics and moral repair.',
       items: [
         'modules/moral-line-overview-dual-track',
         'modules/moral-line-conventional-reasoning',
@@ -100,6 +106,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Shadow Work',
+      description: 'Work with what runs beneath awareness — the 3-2-1 process, persona masks, spiritual bypassing, and collective cultural shadow.',
       items: [
         'modules/shadow-work-foundation',
         'modules/shadow-321-process',
@@ -114,6 +121,7 @@ const learnerSidebar = {
     {
       type: 'category',
       label: 'Somatic Line',
+      description: 'Your embodied presence and body-based awareness — the felt sense that anchors every other line of development.',
       collapsible: true,
       collapsed: false,
       items: [
@@ -194,6 +202,7 @@ const learnerSidebar = {
         {
           type: 'category',
           label: 'Core Skills',
+          description: 'Foundational tools for learning across all lines — mindfulness, critical thinking, systems thinking, and evidence evaluation.',
           collapsible: true,
           collapsed: true,
           items: [
@@ -208,6 +217,7 @@ const learnerSidebar = {
         {
           type: 'category',
           label: 'Shadow Work',
+          description: 'Core shadow practices within the module path — from shadow foundation through the 3-2-1 process to applications in relationships and culture.',
           collapsible: true,
           collapsed: true,
           items: [

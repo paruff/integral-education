@@ -1,0 +1,28 @@
+{
+  "version":"1.0","issue":"93","component":"ShadowAssessment",
+  "tasks":[
+    {"id":"sw93-t01","label":"Create ethical framing gate + Section A (10 shadow mechanism questions)","status":"pending","agent":"feature-flow","skills":["learner-experience","safety-classification"],"acceptance":[
+      {"id":"ac-t01-01","test_type":"recon","description":"Full-screen ethical framing before questions; learner must acknowledge"},
+      {"id":"ac-t01-02","test_type":"recon","description":"10 scenario-based questions across 5 shadow mechanisms"},
+      {"id":"ac-t01-03","test_type":"recon","description":"Descriptive profile output, not score/ranking"}
+    ]},
+    {"id":"sw93-t02","label":"Create Section B (8 developmental line shadow questions) + Section C (12 bypassing items)","status":"pending","agent":"feature-flow","skills":["learner-experience"],"acceptance":[
+      {"id":"ac-t02-01","test_type":"recon","description":"8 questions adapted from shadow-lines map"},
+      {"id":"ac-t02-02","test_type":"recon","description":"12 bypassing items on 1-5 Likert scale"}
+    ]},
+    {"id":"sw93-t03","label":"Implement results page with profiles, module recs, Facilitated Support trigger, Export","status":"pending","agent":"feature-flow","skills":["learner-experience"],"acceptance":[
+      {"id":"ac-t03-01","test_type":"recon","description":"Integrated profile summary with 3-5 sentences per section"},
+      {"id":"ac-t03-02","test_type":"recon","description":"Top-3 module recommendations"},
+      {"id":"ac-t03-03","test_type":"recon","description":"Facilitated Support callout triggers on 3+ trauma-adjacent indicators"},
+      {"id":"ac-t03-04","test_type":"recon","description":"Export to Journal via Clipboard API"},
+      {"id":"ac-t03-05","test_type":"recon","description":"All inputs have ARIA labels, keyboard navigable"},
+      {"id":"ac-t03-06","test_type":"recon","description":"No persistent storage"}
+    ]},
+    {"id":"sw93-t04","label":"Create MDX wrapper, sidebar, and build validation","status":"pending","agent":"feature-flow","skills":["docusaurus-conventions"],"acceptance":[
+      {"id":"ac-t04-01","test_type":"recon","description":"MDX frontmatter with id, title, sidebar_label, description"},
+      {"id":"ac-t04-02","test_type":"recon","description":"Imports ShadowAssessment via @site alias"},
+      {"id":"ac-t04-03","test_type":"recon","description":"Sidebar entry in Maps"},
+      {"id":"ac-t04-04","test_type":"live-system","description":"npm run build passes with zero errors"}
+    ]}
+  ]
+}

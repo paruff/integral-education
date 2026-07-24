@@ -1,6 +1,6 @@
-# Review Report — EI-90 Moral Line Developmental Profile Assessment
+# Review Report — EI-74 Spiritual Line Practice Architecture Module
 
-**Session:** ei90-20260724-0001
+**Session:** ei74-20260724-0001
 **Date:** 2026-07-24
 
 ## Review Summary
@@ -15,44 +15,44 @@
 ## Correctness
 
 The implementation matches the specification:
-- Three-section structure (A: justice dilemmas, B: care dilemmas, C: courage gap) ✅
-- DIT scoring methodology with PI/MN/PC schema tags hidden from learner ✅
-- Dual-track framing displayed at opening ✅
-- Results page with bar chart, care score, courage gap, module recommendations, disclaimer ✅
-- Export to Journal via Clipboard API with fallback ✅
-- Partial submission supported ✅
-- No persistent storage (all useState) ✅
-- Reset button clears all state ✅
-- CSS Modules with Docusaurus theme variables ✅
-- Mobile-responsive at 600px breakpoint ✅
+- Modified Mastery Loop: Orient → Encounter → Practice (Embody) → Reflect → Assess → Integrate ✅
+- Orient explains three parallel elements (state access, integration, container) with isolation-failure analysis ✅
+- Practice tradition mapping table: 4 Fowler stages × traditions × appropriate use × transition challenge ✅
+- Spiritual Practice Audit with 3 questions ✅
+- 12-week schedule with 3 streams and 3 entry points ✅
+- Practice through stage transitions with devotional prayer example ✅
+- AQAL Mapping table ✅
+- 4 learning objectives ✅
+- Standard sections: Overview, Reflect, Assess, Integrate, Retrieval Schedule, Evidence & Citations, Safety Note ✅
+- Frontmatter with all required fields, ModuleFooter and ModuleMeta imports ✅
 
 ## Scope
 
-Changes are scoped to exactly 4 files (3 new, 1 modified):
-- No modifications to existing components
+Changes are scoped to exactly 2 files (1 new module + 1 sidebar modification):
+- No modifications to existing modules
 - No changes to Docusaurus config
 - No new dependencies
 - No API calls introduced
 - No infrastructure changes
+- No React components
 
 ## Maintainability
 
-- Follows CognitiveLineAssessment component pattern (same structure: data constants → scoring helpers → export helper → component)
-- Scoring logic in pure functions, separate from rendering
-- CSS follows same class naming conventions as the reference component
-- Module links use Docusaurus `Link` component
-- Export uses `useCallback` per the established pattern
-- Stage labels hidden in data, not in rendering
+- Follows cognitive-line-practice-architecture.mdx structure exactly (same section names, ordering, table formats)
+- Cross-references use relative MDX links consistent with existing modules
+- Citation format follows Tier A/B/C standard with caveats
+- Safety Note follows Tier 1 classification standard
+- Three parallel elements model is explicitly named and mapped to the three streams — clear pedagogical architecture
 
 ## Risk Assessment
 
 | Risk | Assessment |
 |------|------------|
-| Security | None — no data transmission, no API calls, no localStorage |
-| Performance | Low — all computation is client-side on modest data (3 dilemmas × 8 ratings + 2 × 6 + 5 questions) |
-| Breaking changes | None — only additions |
-| Privacy | Strong — no persistent storage, all state in React component, privacy note displayed |
-| Safety | Tier 1 content — no clinical claims, clear disclaimers about non-diagnostic use |
+| Security | None — static MDX, no data collection |
+| Performance | None — static content, no client-side computation |
+| Breaking changes | None — additive only |
+| Privacy | N/A — static educational content |
+| Safety | Tier 1 — includes appropriate warnings about contemplative practice destabilization, grounding alternatives, and escalation path |
 
 ## Review Decision
 

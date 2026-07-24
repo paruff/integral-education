@@ -83,6 +83,7 @@ const learnerSidebar = {
         'modules/spiritual-line-conjunctive-universalizing',
         'modules/spiritual-line-post-metaphysical-integral-religion',
         'modules/spiritual-line-shadow-integration',
+        'modules/spiritual-line-practice-architecture',
       ],
     },
     {

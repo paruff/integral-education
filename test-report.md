@@ -1,95 +1,98 @@
-# Test Report — EI-90 Moral Line Developmental Profile Assessment
+# Test Report — EI-74 Spiritual Line Practice Architecture Module
 
-**Session:** ei90-20260724-0001
+**Session:** ei74-20260724-0001
 **Date:** 2026-07-24
 
 ## Test Summary
 
 | Test Type | Total | Passed | Failed |
 |-----------|-------|--------|--------|
-| recon (inspection) | 25 | 25 | 0 |
+| recon (inspection) | 28 | 28 | 0 |
 | live-system | 1 | 1 | 0 |
-| **Total** | **26** | **26** | **0** |
+| **Total** | **29** | **29** | **0** |
 
 ## Acceptance Criteria Results
 
-### ei90-t01: DIT Dilemma Content
+### ei74-t01: Frontmatter & Setup
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t01-01 | Frontmatter includes all required fields | ✅ PASS |
+| ac-t01-02 | Position-in-sequence references prerequisite | ✅ PASS |
+| ac-t01-03 | Overview explains practice architecture purpose | ✅ PASS |
+| ac-t01-04 | Modified Mastery Loop explained; Embody most substantive | ✅ PASS |
+
+### ei74-t02: Learn, Orient, AQAL Mapping
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t02-01 | AQAL Mapping table with 5 dimensions | ✅ PASS |
+| ac-t02-02 | Learn section: 4 assessable learning objectives | ✅ PASS |
+| ac-t02-03 | State-to-trait mechanism: three parallel elements | ✅ PASS |
+| ac-t02-04 | Practice tradition mapping table: 4 Fowler stages × traditions × challenges | ✅ PASS |
+| ac-t02-05 | Cites Lutz, Dunne & Davidson (2007) and Wilber's state-to-trait model | ✅ PASS |
+
+### ei74-t03: Encounter — Spiritual Practice Audit
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t03-01 | Practice Audit: maps current practices to Fowler stages | ✅ PASS |
+| ac-t03-02 | Audit asks: appropriate for stage? challenging or reinforcing? | ✅ PASS |
+| ac-t03-03 | Audit prompts stage-transition practice adaptation needs | ✅ PASS |
+
+### ei74-t04: Embody — 12-Week Schedule
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t04-01 | 12-week schedule with 3 streams | ✅ PASS |
+| ac-t04-02 | Three calibrated entry points (Mythic-Literal, Individuative-Reflective, Conjunctive+) | ✅ PASS |
+| ac-t04-03 | Weekly protocols specified with concrete activities | ✅ PASS |
+| ac-t04-04 | State practices reference specific state modules | ✅ PASS |
+| ac-t04-05 | Shadow practices reference specific shadow modules | ✅ PASS |
+| ac-t04-06 | Embody is the most substantive section | ✅ PASS |
+
+### ei74-t05: Reflect, Assess, Integrate
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t05-01 | Reflect: 4 weekly prompts specific to spiritual practice | ✅ PASS |
+| ac-t05-02 | Assess: 4 criteria × 4 levels rubric | ✅ PASS |
+| ac-t05-03 | Passing threshold specified (12/16, no criterion below 2) | ✅ PASS |
+| ac-t05-04 | Integrate: 12-week synthesis with concrete outputs | ✅ PASS |
+
+### ei74-t06: Stage Transitions
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t06-01 | Addresses devotional prayer from Stage 3 to Stage 4 | ✅ PASS |
+| ac-t06-02 | Guidance for maintaining practice continuity without bypassing transition | ✅ PASS |
+| ac-t06-03 | Cites Fowler (1981) and Parks Daloz (2011) | ✅ PASS |
+
+### ei74-t07: Retrieval, Citations, Safety
+
+| ID | Criterion | Result |
+|----|-----------|--------|
+| ac-t07-01 | Retrieval Schedule with 24h, 72h, 7d, 28d intervals | ✅ PASS |
+| ac-t07-02 | Evidence and Citations: 6 entries with source, tier, caveat | ✅ PASS |
+| ac-t07-03 | Safety Note: Tier 1 with consent, stop rules, contraindications, grounding, escalation | ✅ PASS |
+
+### ei74-t08: Sidebar & Build
 
 | ID | Criterion | Test Type | Result |
 |----|-----------|-----------|--------|
-| ac-t01-01 | 3 dilemmas defined in SECTION_A_DILEMMAS: Heinz, Whistleblower, Triage | recon | ✅ PASS |
-| ac-t01-02 | Each dilemma has 8 considerations tagged PI, MN, or PC | recon | ✅ PASS |
-| ac-t01-03 | Schema tags hidden from learner display | recon | ✅ PASS — tags in data structures, never in render output |
-
-### ei90-t02: Care-Track Content
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t02-01 | 2 care-track dilemmas defined | recon | ✅ PASS — Family Obligation vs. Self-Care, Community Responsibility |
-| ac-t02-02 | Each has 6 care-oriented considerations (relational, contextual) | recon | ✅ PASS |
-
-### ei90-t03: Courage Gap Questions
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t03-01 | 5 Likert-scale questions defined | recon | ✅ PASS |
-| ac-t03-02 | Questions map to Narvaez/Rest action gap construct | recon | ✅ PASS — gap between moral conviction and moral action |
-
-### ei90-t04: Component Implementation
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t04-01 | Three sections rendered: A (dilemmas), B (care), C (courage gap) | recon | ✅ PASS |
-| ac-t04-02 | Schema scoring: PI/MN/PC proportions computed per dilemma and aggregated | recon | ✅ PASS — `computeSchemaProfile()` |
-| ac-t04-03 | Care track score computed | recon | ✅ PASS — `computeCareScore()` |
-| ac-t04-04 | Moral courage gap interpretation bands displayed | recon | ✅ PASS — low/moderate/significant bands |
-| ac-t04-05 | Results page with schema bar chart, care score, modules, disclaimer | recon | ✅ PASS |
-| ac-t04-06 | Export to Journal via Clipboard API | recon | ✅ PASS — `handleExport` with fallback |
-| ac-t04-07 | Partial submission supported (profile from available data) | recon | ✅ PASS — `handleSubmit` fires regardless of completion |
-| ac-t04-08 | No persistent storage — all state in React useState | recon | ✅ PASS — all state via `useState` |
-| ac-t04-09 | Dual-track framing displayed at assessment opening | recon | ✅ PASS — `.framingMessage` div rendered first |
-| ac-t04-10 | DIT methodology disclaimer displayed on results page | recon | ✅ PASS — in results view disclaimer section |
-| ac-t04-11 | Reset button clears all state and returns to assessment form | recon | ✅ PASS — `handleReset` clears all 4 state objects |
-
-### ei90-t05: CSS Module
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t05-01 | CSS Module with Docusaurus theme variables | recon | ✅ PASS — `--ifm-color-*` variables throughout |
-| ac-t05-02 | Responsive breakpoint at max-width: 600px | recon | ✅ PASS — `@media screen and (max-width: 600px)` |
-| ac-t05-03 | Inputs, buttons, radio styling follow CognitiveLineAssessment pattern | recon | ✅ PASS — matching class names and layout |
-
-### ei90-t06: MDX Wrapper
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t06-01 | Frontmatter with id, title, sidebar_label, description | recon | ✅ PASS |
-| ac-t06-02 | Imports MoralLineAssessment via @site alias | recon | ✅ PASS |
-| ac-t06-03 | No # H1 heading in body (title renders as H1) | recon | ✅ PASS — uses ## H2 |
-
-### ei90-t07: Sidebar Entry
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t07-01 | maps/moral-line-developmental-profile added to Maps items | recon | ✅ PASS |
-
-### ei90-t08: Build Validation
-
-| ID | Criterion | Test Type | Result |
-|----|-----------|-----------|--------|
-| ac-t08-01 | npm run build passes with zero errors | live-system | ✅ PASS |
-| ac-t08-02 | PR opened against main with all files included | recon | ✅ PASS (Phase 5) |
+| ac-t08-01 | Sidebar entry added to Spiritual Line category | recon | ✅ PASS |
+| ac-t08-02 | npm run build passes with zero errors | live-system | ✅ PASS |
 
 ## Live-System Verification
 
-**Criterion ac-t08-01:** `npm run build`
+**Criterion ac-t08-02:** `npm run build`
 - Command: `npm run build`
 - Result: `[SUCCESS] Generated static files in "build".`
-- Server compiled successfully in 7.88s
-- Client compiled successfully in 20.58s
-- Zero build errors
-- Warning output: pre-existing broken anchors in unrelated modules (integral-shadow-teal-trap, moral-line-shadow-moral-injury, shadow-* modules, spiritual-line-shadow-integration) — none caused by this change
+- Server compiled: 11.59s
+- Client compiled: 19.46s
+- Zero build errors from new module
+- Warning output: pre-existing broken anchors in unrelated modules — none from spiritual-line-practice-architecture.mdx
 
 ## Result
 
-**PASS** — All 26 acceptance criteria verified.
+**PASS** — All 29 acceptance criteria verified.

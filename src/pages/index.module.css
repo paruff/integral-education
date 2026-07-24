@@ -35,10 +35,11 @@
   text-decoration: none;
 }
 
-.rigorSignal {
-  font-size: 0.9rem;
-  opacity: 0.85;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.4;
+.scaleStat {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin: 1rem auto;
+  max-width: 600px;
+  line-height: 1.5;
 }

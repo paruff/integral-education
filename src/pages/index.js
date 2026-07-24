@@ -157,13 +157,13 @@ export default function Home() {
               </Link>
             </article>
             <article className="homepage-card">
-              <h3>Shadow Integration</h3>
-              <p>Focus area: Recognizing disowned patterns and integrating them safely.</p>
+              <h3>Amber/Mythic Orientation</h3>
+              <p>Understand your current developmental stage with dignity — grounded in Kegan, Cook-Greuter, and Fowler, not just typology.</p>
               <div className="homepage-card-meta-row">
-                <span className="homepage-level-badge">Intermediate</span>
-                <span className="homepage-card-meta">Read time: 12 min</span>
+                <span className="homepage-level-badge">Beginner</span>
+                <span className="homepage-card-meta">Read time: 8 min</span>
               </div>
-              <Link className="homepage-card-cta" to="/docs/modules/shadow-integration-101">
+              <Link className="homepage-card-cta" to="/docs/modules/amber-mythic-orientation">
                 Open module →
               </Link>
             </article>

@@ -1,68 +1,63 @@
-# Verification Report — CLARITY-02
+# Verification Report — CLARITY-03
 
 ## Evidence-Based Verification
 
-Each claim from the build and test reports is verified against actual file content, command output, or build artifacts.
+Each claim from the build, test, and review reports is verified against actual file content, command output, or build artifacts.
 
-### Claim 1: Stat line added between "How It Works" and "QuickStarts"
+### Claim 1: Shadow Integration card replaced with Amber/Mythic Orientation
 **Status:** ✅ verified_true
-**Evidence:** `src/pages/index.js` lines 89-91:
+**Evidence:** `src/pages/index.js` lines 159-169:
 ```jsx
-<p className={styles.scaleStat}>
-  75 modules · 7 developmental lines · Evidence-tiered citations throughout
-</p>
+<article className="homepage-card">
+  <h3>Amber/Mythic Orientation</h3>
+  ...(blurb, badges, link)...
+</article>
 ```
-Context: follows `</section>` (How It Works, line 88), precedes `<section>` (QuickStarts, line 92).
+No `<h3>Shadow Integration</h3>` found in featured modules section.
 
-### Claim 2: `.scaleStat` CSS class added
+### Claim 2: Blurb mentions Kegan, Cook-Greuter, or Fowler
 **Status:** ✅ verified_true
-**Evidence:** `src/pages/index.module.css` lines 38-45:
-```css
-.scaleStat {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--ifm-color-emphasis-600);
-  margin: 1rem auto;
-  max-width: 600px;
-  line-height: 1.5;
-}
+**Evidence:** Line 161: `"Understand your current developmental stage with dignity — grounded in Kegan, Cook-Greuter, and Fowler, not just typology."`
+
+### Claim 3: Link points to amber-mythic-orientation
+**Status:** ✅ verified_true
+**Evidence:** Line 166: `to="/docs/modules/amber-mythic-orientation"`
+Module file exists: `docs/modules/amber-mythic-orientation.mdx`
+
+### Claim 4: Badge is "Beginner", read time is "8 min"
+**Status:** ✅ verified_true
+**Evidence:** Lines 163-164:
+```jsx
+<span className="homepage-level-badge">Beginner</span>
+<span className="homepage-card-meta">Read time: 8 min</span>
 ```
 
-### Claim 3: `npm run build` passes
+### Claim 5: First two featured cards unchanged
 **Status:** ✅ verified_true
-**Evidence:** Build output: `[SUCCESS] Generated static files in "build"`. Zero errors. Pre-existing broken anchor warnings are unrelated (shadow/integral modules with emoji-anchor mismatches).
+**Evidence:** Lines 137-157: Mindfulness Basics and Emotional Granularity cards unchanged.
 
-### Claim 4: Module count verified at 75
+### Claim 6: `npm run build` passes
 **Status:** ✅ verified_true
-**Evidence:** `ls docs/modules/*.{md,mdx} 2>/dev/null | wc -l` returns `75`.
+**Evidence:** `[SUCCESS] Generated static files in "build"`. Zero errors.
 
-### Claim 5: Developmental line count verified at 7
+### Claim 7: No new dependencies
 **Status:** ✅ verified_true
-**Evidence:** Seven distinct developmental lines with module content: cognitive, emotional, interpersonal, moral, self, shadow, spiritual. Design.md confirms this list.
+**Evidence:** `package.json` unchanged (verified via `git diff`).
 
-### Claim 6: No new dependencies introduced
+### Claim 8: No CSS changes
 **Status:** ✅ verified_true
-**Evidence:** `git diff HEAD~1 -- package.json` — no changes. No new imports in `index.js`.
+**Evidence:** Only `src/pages/index.js` changed; CSS files unmodified.
 
-### Claim 7: No homepage restructuring
+### Claim 9: Live system AC-01 through AC-05 verified against running server
 **Status:** ✅ verified_true
-**Evidence:** Only 3 lines added to `index.js` (the `<p>` element block). No sections reordered, no existing content modified.
-
-### Claim 8: All 5 acceptance criteria pass
-**Status:** ✅ verified_true
-**Evidence:** Cross-referenced against source:
-- AC1: Stat line at line 89-91, between How It Works and QuickStarts ✅
-- AC2: Text "75 modules" in stat line ✅
-- AC3: Text "7 developmental lines" in stat line ✅
-- AC4: Text "Evidence-tiered citations throughout" ✅
-- AC5: `npm run build` → `[SUCCESS]` ✅
+**Evidence:** HTTP 200 response at `http://localhost:3001/integral-education/`. Raw HTML confirms all five ACs. See test-report.md for full command output.
 
 ## Summary
 
 | Claim Source | Claims | Verified True | Verified False |
 |-------------|--------|---------------|----------------|
-| build-report.md | 7 | 7 | 0 |
-| test-report.md | 5 | 5 | 0 |
-| review-report.md | 8 | 8 | 0 |
+| build-report.md | 5 | 5 | 0 |
+| test-report.md | 6 | 6 | 0 |
+| review-report.md | 6 | 6 | 0 |
 
 **Result: PASS** — All claims verified true. No false or unverified claims.

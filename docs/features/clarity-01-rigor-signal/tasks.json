@@ -1,0 +1,41 @@
+[
+  {
+    "id": "T1",
+    "summary": "Add rigor-signaling sentence to homepage hero",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC1",
+        "description": "Sentence appears directly below hero subtext in src/pages/index.js",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC2",
+        "description": "Sentence references peer-reviewed developmental psychology",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC3",
+        "description": "Sentence names Kegan and at least one other researcher",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC4",
+        "description": "Sentence includes evidence-tiering claim",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC5",
+        "description": "Tone is confident, not defensive",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC6",
+        "description": "npm run build passes",
+        "test_type": "unit"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  }
+]

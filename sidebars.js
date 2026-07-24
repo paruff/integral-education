@@ -238,6 +238,7 @@ const learnerSidebar = {
         'maps/aqal-overview',
         'maps/aqal-glossary',
         'maps/amber-rational-progress-assessment',
+        'maps/rational-pluralistic-progress-assessment',
         'maps/pluralistic-integral-progress-assessment',
         'maps/aqal-label-crosswalk',
         'maps/aqal-competency-map',

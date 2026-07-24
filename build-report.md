@@ -1,25 +1,28 @@
-# Build Report — RP-106 Rational → Pluralistic Stage Progress Self-Assessment
-
-**Session:** rp106-20260724-0001
-**Date:** 2026-07-24
+# Build Report
 
 ## Summary
-Implemented 26-question, 3-section self-assessment following AmberRationalAssessment pattern. Scenario-based questions with o/t/p response options. Descriptive profile (not scores). Green shadow awareness section. Facilitated Support callout trigger. 3 files created, 1 modified.
+Added a scale/depth stat line to the homepage to communicate the platform's scope — 75 modules across 7 developmental lines with evidence-tiered citations — as specified in CLARITY-02.
 
-## Files
-| File | Action | Lines |
-|------|--------|-------|
-| `src/components/RationalPluralisticAssessment.jsx` | Created | ~420 |
-| `docs/maps/rational-pluralistic-progress-assessment.mdx` | Created | ~18 |
-| `docs/features/rp-106-progress-self-assessment/` | Created (spec/design/tasks) | ~300 |
-| `sidebars.js` | Modified | +1 |
+## Files Changed
+| File | Change |
+|------|--------|
+| `src/pages/index.js` | Added `<p className={styles.scaleStat}>` between "How It Works" section and "QuickStarts" section |
+| `src/pages/index.module.css` | Added `.scaleStat` CSS class (muted color, smaller font, centered) |
 
-## Validation
-| Check | Result |
-|-------|--------|
-| `npm run build` | ✅ PASS — zero errors |
-| 26 questions (8+12+6) | ✅ |
-| Scenario-based (not trait self-report) | ✅ |
-| Descriptive profile (no scores/stage labels) | ✅ |
-| Facilitated Support callout trigger | ✅ |
-| No persistent storage | ✅ |
+## Tasks Completed
+| Task ID | Summary | Status |
+|---------|---------|--------|
+| T1 | Add scale/depth stat line to homepage below How It Works | ✅ Complete |
+
+## Validation Results
+- **`npm run build`**: ✅ PASS (static files generated successfully)
+- **Pre-existing broken anchor warnings**: Unrelated to this change (all in shadow/integral modules)
+- **Module count verified**: 75 .md/.mdx files in `docs/modules/`
+- **Developmental line count verified**: 7 lines (cognitive, emotional, interpersonal, moral, self, shadow, spiritual)
+
+## Scope Discipline
+- Single `<p>` element insertion between existing sections
+- Single CSS class addition
+- No new dependencies
+- No restructuring of the homepage
+- No changes to any other component or page

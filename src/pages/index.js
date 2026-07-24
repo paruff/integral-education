@@ -56,6 +56,18 @@ export default function Home() {
         </section>
         <section className="container homepage-section">
           <h2>How It Works</h2>
+          <p>
+            <strong>Stages</strong> describe your overall centre of gravity — how you make meaning
+            of authority, truth, and belonging. <strong>Lines</strong> describe specific
+            capacities — emotional, cognitive, interpersonal, somatic — that can each develop
+            somewhat independently of your overall stage. Most people are further along in some
+            lines than others.
+          </p>
+          <p>
+            For example, you might reason about ethics at a Rational level while your emotional
+            line is still developing — that&apos;s normal, and it&apos;s exactly what
+            line-specific QuickStarts are for.
+          </p>
           <div className="homepage-loop-grid">
             <div className="homepage-loop-item">
               <span className="homepage-loop-icon">📘</span>

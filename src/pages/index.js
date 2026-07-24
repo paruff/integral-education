@@ -14,6 +14,9 @@ function HomepageHeader() {
           Build practical skills for thinking clearly, relating better, and acting with purpose.
           Designed for curious adults, coaches, educators, and teams.
         </p>
+        <p className={styles.rigorSignal}>
+          Built on peer-reviewed developmental psychology — Kegan, Cook-Greuter, Kohlberg — with every claim tiered by evidence quality, not just integral theory retold.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--lg homepage-primary-cta"

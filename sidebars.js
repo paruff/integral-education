@@ -127,7 +127,7 @@ const learnerSidebar = {
         type: 'generated-index',
         slug: '/modules',
         title: 'Modules',
-        description: 'Browse standalone learning units across the integral curriculum.',
+        description: 'Browse standalone learning units across the integral curriculum. Self-guided content currently begins at the Amber/Mythic stage. Earlier stages (Magic, Red) involve developmental needs — nervous system safety, tribal belonging, embodied selfhood — that are better supported through relational and somatic containers than self-guided text. Fork-specific content for earlier stages is planned.',
       },
       items: [
         {

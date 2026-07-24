@@ -1,44 +1,29 @@
-# Verification Report — CLARITY-05
+# Verification Report — NAV-05
 
 ## Evidence-Based Verification
 
-### Claim 1: "Stage Development" category has `description` field
+### Claim 1: Scope note added to Modules generated-index description
 **Status:** ✅ verified_true
-**Evidence:** `sidebars.js` lines 135-137:
-```js
-{
-  type: 'category',
-  label: 'Stage Development',
-  description: 'Your long-term centre of gravity — the developmental stage that shapes how you make meaning. See the AQAL Overview for how stages differ from states.',
+**Evidence:** `sidebars.js` lines 130:
+```
+description: 'Browse standalone learning units across the integral curriculum. Self-guided content currently begins at the Amber/Mythic stage. Earlier stages (Magic, Red) involve developmental needs — nervous system safety, tribal belonging, embodied selfhood — that are better supported through relational and somatic containers than self-guided text. Fork-specific content for earlier stages is planned.',
 ```
 
-### Claim 2: "State Training" category has `description` field
+### Claim 2: No Red/Magic content exists
 **Status:** ✅ verified_true
-**Evidence:** `sidebars.js` lines 181-183:
-```js
-{
-  type: 'category',
-  label: 'State Training',
-  description: 'Temporary experiences of consciousness (from ordinary waking to deep meditative states) that can be accessed at any stage. See the AQAL Overview for how states differ from stages.',
-```
+**Evidence:** `ls docs/modules/ | grep -i -E 'red|magic|beige|purple'` returns empty. Sidebar "Stage Development" starts at `amber-mythic-orientation`.
 
-### Claim 3: AQAL Overview has state/stage distinction
+### Claim 3: Content begins at Amber/Mythic stated in note
 **Status:** ✅ verified_true
-**Evidence:** `docs/maps/aqal-overview.md` contains:
-- "Depth (Levels)" section (lines 71-87): explains developmental stages
-- "Experience (States)" section (lines 105-115): explains temporary states
-- "4-Path Lens" (lines 142-145): distinguishes "Growing Up" from "Waking Up"
-- 11 occurrences of Levels/Stages/States across the file
+**Evidence:** Text contains "Self-guided content currently begins at the Amber/Mythic stage."
 
-### Claim 4: Descriptions reference AQAL Overview (not duplication)
+### Claim 4: Earlier stages' needs acknowledged
 **Status:** ✅ verified_true
-**Evidence:** Both descriptions end with: "See the AQAL Overview for how stages differ from states." — links to existing content rather than rewriting.
+**Evidence:** Text contains "Earlier stages (Magic, Red) involve developmental needs — nervous system safety, tribal belonging, embodied selfhood"
 
-### Claim 5: Descriptions appear in build output
+### Claim 5: Tone is factual/non-apologetic
 **Status:** ✅ verified_true
-**Evidence:** Built JS files contain both phrases:
-- `build/assets/js/02381ec2.863b980e.js`: "long-term centre of gravity", "Temporary experiences of consciousness"
-- Multiple JS chunks confirmed
+**Evidence:** Missing apologetic keywords: "unfortunately", "sorry", "we don't have", "confession". Contains factual framing: "begins at", "involve", "better supported through", "is planned".
 
 ### Claim 6: `npm run build` passes
 **Status:** ✅ verified_true
@@ -54,6 +39,6 @@
 |-------------|--------|---------------|----------------|
 | build-report.md | 5 | 5 | 0 |
 | test-report.md | 6 | 6 | 0 |
-| review-report.md | 6 | 6 | 0 |
+| review-report.md | 4 | 4 | 0 |
 
 **Result: PASS** — All claims verified true.

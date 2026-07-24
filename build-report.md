@@ -1,29 +1,26 @@
-# Build Report — CLARITY-05
+# Build Report — NAV-05
 
 ## Summary
-Added one-sentence `description` fields to the "Stage Development" and "State Training" sidebar categories in `sidebars.js`, clarifying the state-vs-stage distinction and referencing the AQAL Overview page for further detail.
+Updated the Modules generated-index description in `sidebars.js` to include a scope boundary note confirming that self-guided content begins at Amber/Mythic, with a factual explanation of why earlier stages require different containers and a signal that fork-specific content is planned.
 
 ## Files Changed
 | File | Change |
 |------|--------|
-| `sidebars.js` | Added `description` field to "Stage Development" category (line 136) and "State Training" category (line 183) |
+| `sidebars.js` | Expanded Modules generated-index `description` to include scope boundary note |
 
 ## Tasks Completed
 | Task ID | Summary | Status |
 |---------|---------|--------|
-| T1 | Add `description` to 'Stage Development' category | ✅ Complete |
-| T2 | Add `description` to 'State Training' category | ✅ Complete |
-| T3 | Confirm AQAL Overview has state/stage distinction; reference it | ✅ Complete |
-| T4 | Run `npm run build` to validate | ✅ Complete |
+| T1 | Audit: confirmed no Red/Magic content below Amber exists | ✅ Complete |
+| T2 | Update generated-index description with scope boundary note | ✅ Complete |
+| T3 | Run `npm run build` to validate | ✅ Complete |
 
 ## Validation Results
 - **`npm run build`**: ✅ PASS (`[SUCCESS] Generated static files in "build"`)
+- **Content audit**: 75 modules in `docs/modules/`, all Amber+. No Red, Magic, Beige, or Purple content exists
 - **Pre-existing broken anchor warnings**: Unrelated to this change
-- **No new dependencies**: ✅
-- **No CSS changes**: ✅
-- **No new files**: ✅
 
 ## Scope Discipline
 - Only `sidebars.js` modified
-- Two `description` fields added — no structural changes
-- Descriptions reference AQAL Overview rather than duplicating content
+- Only the `description` string was updated — no structural changes
+- No new files, no CSS changes, no module content changes

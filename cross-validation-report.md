@@ -1,4 +1,4 @@
-# Cross-Validation Report — CLARITY-05
+# Cross-Validation Report — NAV-05
 
 ## Consistency Check
 
@@ -6,42 +6,28 @@
 
 | Spec Requirement | Design Coverage | Consistent? |
 |-----------------|-----------------|-------------|
-| Category description for "Stage Development" | `description` field with stage explanation | ✅ |
-| Category description for "State Training" | `description` field with state explanation | ✅ |
-| AQAL Overview has distinction; link instead of duplicate | Confirmed content exists; descriptions reference AQAL Overview | ✅ |
-| `npm run build` passes | Confirmed | ✅ |
-| No new dependencies | Confirmed | ✅ |
-| No restructuring of sidebar | Only `description` fields added | ✅ |
+| Scope note on Modules index | Update generated-index description in sidebars.js | ✅ |
+| States content begins at Amber/Mythic | Text includes explicit Amber/Mythic statement | ✅ |
+| Acknowledges earlier stages' needs | Text lists nervous system safety, tribal belonging, embodied selfhood | ✅ |
+| Tone factual and non-apologetic | Design includes tone check section | ✅ |
+| `npm run build` passes | Confirmed in risk assessment | ✅ |
 
 ### Design ↔ Build
 
 | Design Decision | Build Implementation | Consistent? |
 |----------------|---------------------|-------------|
-| Stage Development description text | Exactly matches design.md | ✅ |
-| State Training description text | Exactly matches design.md | ✅ |
-| Modify sidebars.js only | Only sidebars.js changed (plus reports) | ✅ |
-| Reference AQAL Overview | Both descriptions end with "See the AQAL Overview..." | ✅ |
+| Replace Modules generated-index description | Description updated in sidebars.js | ✅ |
+| Proposed text matches design | Text matches design.md exactly | ✅ |
 
-### Spec ↔ Build (Acceptance Criteria)
+### Spec ↔ Build (ACs)
 
 | AC | Spec | Build | Test | Consistent? |
 |----|------|-------|------|-------------|
-| AC-01: Stage Development description | ✓ | ✓ | ✓ | ✅ |
-| AC-02: State Training description | ✓ | ✓ | ✓ | ✅ |
-| AC-03a: AQAL Overview confirmed | ✓ | ✓ | ✓ | ✅ |
-| AC-03b: Links to AQAL Overview | ✓ | ✓ | ✓ | ✅ |
-| AC-04: Descriptions render | ✓ | ✓ | ✓ | ✅ |
+| AC-01: Scope note on Modules index | ✓ | ✓ | ✓ | ✅ |
+| AC-02: States content begins at Amber/Mythic | ✓ | ✓ | ✓ | ✅ |
+| AC-03: Acknowledges earlier stages' needs | ✓ | ✓ | ✓ | ✅ |
+| AC-04: Tone factual/non-apologetic | ✓ | ✓ | ✓ | ✅ |
 | AC-05: Build passes | ✓ | ✓ | ✓ | ✅ |
-
-### Build ↔ Test ↔ Review ↔ Verification
-
-| Assertion | Build | Test | Review | Verification | Consistent? |
-|-----------|-------|------|--------|-------------|-------------|
-| Stage Development description added | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
-| State Training description added | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
-| AQAL Overview referenced | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
-| Build passes | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
-| No scope creep | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
 
 ## Summary
 

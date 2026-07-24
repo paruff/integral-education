@@ -1,0 +1,59 @@
+[
+  {
+    "id": "T1",
+    "summary": "Audit modules directory and sidebar to confirm no content below Amber/Mythic exists",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC0",
+        "description": "Confirmed: no Red, Magic-Mythic, Beige, or Purple modules in docs/modules/ or sidebar",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T2",
+    "summary": "Update Modules generated-index description in sidebars.js to include scope boundary note",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-01",
+        "description": "Scope note appears in the generated-index description (renders on /docs/modules)",
+        "test_type": "integration"
+      },
+      {
+        "id": "AC-02",
+        "description": "Note states content begins at Amber/Mythic stage",
+        "test_type": "integration"
+      },
+      {
+        "id": "AC-03",
+        "description": "Note acknowledges earlier stages (Magic, Red) involve different developmental needs",
+        "test_type": "integration"
+      },
+      {
+        "id": "AC-04",
+        "description": "Note tone is factual and non-apologetic (human review)",
+        "test_type": "review"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T3",
+    "summary": "Run npm run build to validate",
+    "depends_on": ["T2"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-05",
+        "description": "npm run build passes without errors",
+        "test_type": "build"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  }
+]

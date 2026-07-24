@@ -133,6 +133,7 @@ const learnerSidebar = {
         {
           type: 'category',
           label: 'Stage Development',
+          description: 'Your long-term centre of gravity — the developmental stage that shapes how you make meaning. See the AQAL Overview for how stages differ from states.',
           collapsible: true,
           collapsed: true,
           items: [
@@ -179,6 +180,7 @@ const learnerSidebar = {
         {
           type: 'category',
           label: 'State Training',
+          description: 'Temporary experiences of consciousness (from ordinary waking to deep meditative states) that can be accessed at any stage. See the AQAL Overview for how states differ from stages.',
           collapsible: true,
           collapsed: true,
           items: [

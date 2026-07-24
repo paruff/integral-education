@@ -1,53 +1,47 @@
-# Cross-Validation Report — CLARITY-03
+# Cross-Validation Report — CLARITY-05
 
 ## Consistency Check
-
-Cross-referencing specification, design, build, test, review, and verification reports for mutual consistency.
 
 ### Spec ↔ Design
 
 | Spec Requirement | Design Coverage | Consistent? |
 |-----------------|-----------------|-------------|
-| Replace third Featured Module card (Shadow Integration) | Replace lines 156-166 with Amber/Mythic card | ✅ Consistent |
-| New card blurb hints at Kegan/Cook-Greuter/Fowler grounding | "grounded in Kegan, Cook-Greuter, and Fowler, not just typology" | ✅ Consistent |
-| Link to `/docs/modules/amber-mythic-orientation` | `to="/docs/modules/amber-mythic-orientation"` | ✅ Consistent |
-| Keep Mindfulness Basics and Emotional Granularity | First two cards unchanged | ✅ Consistent |
-| `npm run build` passes | Confirmed in risk assessment | ✅ Consistent |
-| No new dependencies | Noted in risk assessment | ✅ Consistent |
-| No CSS changes | Explicit "No CSS Changes" section | ✅ Consistent |
+| Category description for "Stage Development" | `description` field with stage explanation | ✅ |
+| Category description for "State Training" | `description` field with state explanation | ✅ |
+| AQAL Overview has distinction; link instead of duplicate | Confirmed content exists; descriptions reference AQAL Overview | ✅ |
+| `npm run build` passes | Confirmed | ✅ |
+| No new dependencies | Confirmed | ✅ |
+| No restructuring of sidebar | Only `description` fields added | ✅ |
 
 ### Design ↔ Build
 
 | Design Decision | Build Implementation | Consistent? |
 |----------------|---------------------|-------------|
-| Replace Shadow Integration card with Amber/Mythic Orientation | Lines 159-169 replaced exactly per design spec | ✅ Consistent |
-| Title: "Amber/Mythic Orientation" | `<h3>Amber/Mythic Orientation</h3>` | ✅ Consistent |
-| Blurb: mentions Kegan/Cook-Greuter/Fowler | Matches design.md text exactly | ✅ Consistent |
-| Link: `/docs/modules/amber-mythic-orientation` | Matches exactly | ✅ Consistent |
-| Badge: Beginner | `homepage-level-badge">Beginner<` | ✅ Consistent |
-| Read time: 8 min | `homepage-card-meta">Read time: 8 min<` | ✅ Consistent |
-| Only `src/pages/index.js` modified | Git diff confirms only that file | ✅ Consistent |
+| Stage Development description text | Exactly matches design.md | ✅ |
+| State Training description text | Exactly matches design.md | ✅ |
+| Modify sidebars.js only | Only sidebars.js changed (plus reports) | ✅ |
+| Reference AQAL Overview | Both descriptions end with "See the AQAL Overview..." | ✅ |
 
 ### Spec ↔ Build (Acceptance Criteria)
 
-| AC | Spec | Build | Live System | Consistent? |
-|----|------|-------|-------------|-------------|
-| AC-01 | 3 Featured Module cards: Mindfulness, Emotional, Amber | ✓ | ✓ HTTP confirmed | ✅ |
-| AC-02 | Third card title "Amber/Mythic Orientation" | ✓ | ✓ HTTP confirmed | ✅ |
-| AC-03 | Blurb mentions Kegan/Cook-Greuter/Fowler | ✓ | ✓ HTTP confirmed | ✅ |
-| AC-04 | Links to `/docs/modules/amber-mythic-orientation` | ✓ | ✓ HTTP confirmed | ✅ |
-| AC-05 | Beginner badge, 8 min read time | ✓ | ✓ HTTP confirmed | ✅ |
-| AC-06 | `npm run build` passes | ✓ | ✓ [SUCCESS] | ✅ |
+| AC | Spec | Build | Test | Consistent? |
+|----|------|-------|------|-------------|
+| AC-01: Stage Development description | ✓ | ✓ | ✓ | ✅ |
+| AC-02: State Training description | ✓ | ✓ | ✓ | ✅ |
+| AC-03a: AQAL Overview confirmed | ✓ | ✓ | ✓ | ✅ |
+| AC-03b: Links to AQAL Overview | ✓ | ✓ | ✓ | ✅ |
+| AC-04: Descriptions render | ✓ | ✓ | ✓ | ✅ |
+| AC-05: Build passes | ✓ | ✓ | ✓ | ✅ |
 
 ### Build ↔ Test ↔ Review ↔ Verification
 
 | Assertion | Build | Test | Review | Verification | Consistent? |
 |-----------|-------|------|--------|-------------|-------------|
-| Card replaced correctly | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
+| Stage Development description added | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
+| State Training description added | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
+| AQAL Overview referenced | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
 | Build passes | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
-| All ACs pass | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
 | No scope creep | ✓ | ✓ | ✓ | ✓ verified_true | ✅ |
-| Live system verified | N/A | ✓ | N/A | ✓ verified_true | ✅ |
 
 ## Summary
 
@@ -58,4 +52,4 @@ Cross-referencing specification, design, build, test, review, and verification r
 | Spec ↔ Build (ACs) | ✅ |
 | Build ↔ Test ↔ Review ↔ Verification | ✅ |
 
-**Result: PASS** — All artifacts mutually consistent with each other and with the original specification and design. Proceed to Phase 5.
+**Result: PASS** — All artifacts mutually consistent. Proceed to Phase 5.

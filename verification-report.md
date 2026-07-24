@@ -1,56 +1,52 @@
-# Verification Report — CLARITY-03
+# Verification Report — CLARITY-05
 
 ## Evidence-Based Verification
 
-Each claim from the build, test, and review reports is verified against actual file content, command output, or build artifacts.
-
-### Claim 1: Shadow Integration card replaced with Amber/Mythic Orientation
+### Claim 1: "Stage Development" category has `description` field
 **Status:** ✅ verified_true
-**Evidence:** `src/pages/index.js` lines 159-169:
-```jsx
-<article className="homepage-card">
-  <h3>Amber/Mythic Orientation</h3>
-  ...(blurb, badges, link)...
-</article>
-```
-No `<h3>Shadow Integration</h3>` found in featured modules section.
-
-### Claim 2: Blurb mentions Kegan, Cook-Greuter, or Fowler
-**Status:** ✅ verified_true
-**Evidence:** Line 161: `"Understand your current developmental stage with dignity — grounded in Kegan, Cook-Greuter, and Fowler, not just typology."`
-
-### Claim 3: Link points to amber-mythic-orientation
-**Status:** ✅ verified_true
-**Evidence:** Line 166: `to="/docs/modules/amber-mythic-orientation"`
-Module file exists: `docs/modules/amber-mythic-orientation.mdx`
-
-### Claim 4: Badge is "Beginner", read time is "8 min"
-**Status:** ✅ verified_true
-**Evidence:** Lines 163-164:
-```jsx
-<span className="homepage-level-badge">Beginner</span>
-<span className="homepage-card-meta">Read time: 8 min</span>
+**Evidence:** `sidebars.js` lines 135-137:
+```js
+{
+  type: 'category',
+  label: 'Stage Development',
+  description: 'Your long-term centre of gravity — the developmental stage that shapes how you make meaning. See the AQAL Overview for how stages differ from states.',
 ```
 
-### Claim 5: First two featured cards unchanged
+### Claim 2: "State Training" category has `description` field
 **Status:** ✅ verified_true
-**Evidence:** Lines 137-157: Mindfulness Basics and Emotional Granularity cards unchanged.
+**Evidence:** `sidebars.js` lines 181-183:
+```js
+{
+  type: 'category',
+  label: 'State Training',
+  description: 'Temporary experiences of consciousness (from ordinary waking to deep meditative states) that can be accessed at any stage. See the AQAL Overview for how states differ from stages.',
+```
+
+### Claim 3: AQAL Overview has state/stage distinction
+**Status:** ✅ verified_true
+**Evidence:** `docs/maps/aqal-overview.md` contains:
+- "Depth (Levels)" section (lines 71-87): explains developmental stages
+- "Experience (States)" section (lines 105-115): explains temporary states
+- "4-Path Lens" (lines 142-145): distinguishes "Growing Up" from "Waking Up"
+- 11 occurrences of Levels/Stages/States across the file
+
+### Claim 4: Descriptions reference AQAL Overview (not duplication)
+**Status:** ✅ verified_true
+**Evidence:** Both descriptions end with: "See the AQAL Overview for how stages differ from states." — links to existing content rather than rewriting.
+
+### Claim 5: Descriptions appear in build output
+**Status:** ✅ verified_true
+**Evidence:** Built JS files contain both phrases:
+- `build/assets/js/02381ec2.863b980e.js`: "long-term centre of gravity", "Temporary experiences of consciousness"
+- Multiple JS chunks confirmed
 
 ### Claim 6: `npm run build` passes
 **Status:** ✅ verified_true
 **Evidence:** `[SUCCESS] Generated static files in "build"`. Zero errors.
 
-### Claim 7: No new dependencies
+### Claim 7: Only sidebars.js modified
 **Status:** ✅ verified_true
-**Evidence:** `package.json` unchanged (verified via `git diff`).
-
-### Claim 8: No CSS changes
-**Status:** ✅ verified_true
-**Evidence:** Only `src/pages/index.js` changed; CSS files unmodified.
-
-### Claim 9: Live system AC-01 through AC-05 verified against running server
-**Status:** ✅ verified_true
-**Evidence:** HTTP 200 response at `http://localhost:3001/integral-education/`. Raw HTML confirms all five ACs. See test-report.md for full command output.
+**Evidence:** `git diff --stat` shows only `sidebars.js` changed (plus report files).
 
 ## Summary
 
@@ -60,4 +56,4 @@ Module file exists: `docs/modules/amber-mythic-orientation.mdx`
 | test-report.md | 6 | 6 | 0 |
 | review-report.md | 6 | 6 | 0 |
 
-**Result: PASS** — All claims verified true. No false or unverified claims.
+**Result: PASS** — All claims verified true.

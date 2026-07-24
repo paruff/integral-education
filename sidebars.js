@@ -245,6 +245,7 @@ const learnerSidebar = {
         'maps/state-identification-assessment',
         'maps/state-stage-integration-map',
         'maps/shadow-developmental-lines-map',
+        'maps/moral-line-developmental-profile',
       ],
     },
     {

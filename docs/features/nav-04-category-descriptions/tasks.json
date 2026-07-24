@@ -1,0 +1,170 @@
+[
+  {
+    "id": "T1",
+    "summary": "Audit sidebars.js to identify all module grouping categories missing descriptions",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC0",
+        "description": "10 category objects identified as missing descriptions: Self Line, Emotional Line, Interpersonal Line, Cognitive Line, Spiritual Line, Moral Line, Shadow Work (top-level), Somatic Line, Core Skills, Shadow Work (under Modules)",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T2",
+    "summary": "Add description field to Self Line category (line 28)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-01",
+        "description": "Self Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T3",
+    "summary": "Add description field to Emotional Line category (line 38)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-02",
+        "description": "Emotional Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T4",
+    "summary": "Add description field to Interpersonal Line category (line 53)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-03",
+        "description": "Interpersonal Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T5",
+    "summary": "Add description field to Cognitive Line category (line 67)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-04",
+        "description": "Cognitive Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T6",
+    "summary": "Add description field to Spiritual Line category (line 79)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-05",
+        "description": "Spiritual Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T7",
+    "summary": "Add description field to Moral Line category (line 91)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-06",
+        "description": "Moral Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T8",
+    "summary": "Add description field to top-level Shadow Work category (line 102)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-07",
+        "description": "Shadow Work (top-level) sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T9",
+    "summary": "Add description field to Somatic Line category (line 115)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-08",
+        "description": "Somatic Line sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T10",
+    "summary": "Add description field to Core Skills category (line 196)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-09",
+        "description": "Core Skills (under Modules) sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T11",
+    "summary": "Add description field to Shadow Work under Modules category (line 210)",
+    "depends_on": ["T1"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-10",
+        "description": "Shadow Work (under Modules) sidebar category has a one-sentence description",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T12",
+    "summary": "Run npm run build to validate",
+    "depends_on": ["T2", "T3", "T4", "T5", "T6", "T7", "T8", "T9", "T10", "T11"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-13",
+        "description": "npm run build passes without errors",
+        "test_type": "build"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  }
+]

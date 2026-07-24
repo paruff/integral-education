@@ -1,18 +1,25 @@
-# Test Report — NAV-05
+# Test Report — NAV-04
 
 ## Acceptance Criteria Verification
 
-| ID | Description | Test Type | Result | Evidence |
-|----|-------------|-----------|--------|----------|
-| AC0 | Confirmed: no Red/Magic content exists below Amber | integration | ✅ PASS | `ls docs/modules/` shows 75 files, all Amber+. Sidebar "Stage Development" starts at `amber-mythic-orientation`. No Red, Magic, Beige, or Purple modules |
-| AC-01 | Scope note appears on Modules index (generated-index description) | integration | ✅ PASS | `sidebars.js` description field updated. Description found in built JS: `grep "Self-guided content" build/assets/js/*.js` returns matches |
-| AC-02 | Note states content begins at Amber/Mythic | integration | ✅ PASS | Description text: "Self-guided content currently begins at the Amber/Mythic stage." |
-| AC-03 | Note acknowledges earlier stages involve different developmental needs | integration | ✅ PASS | Description text: "Earlier stages (Magic, Red) involve developmental needs — nervous system safety, tribal belonging, embodied selfhood — that are better supported through relational and somatic containers" |
-| AC-04 | Note tone is factual and non-apologetic | review | ✅ PASS | No apologetic language. States facts: "begins at", "involve developmental needs", "better supported through", "is planned" — all neutral/forward-looking |
-| AC-05 | `npm run build` passes | build | ✅ PASS | `[SUCCESS] Generated static files in "build"` |
+| ID | Criterion | Test Type | Result | Evidence |
+|----|-----------|-----------|--------|----------|
+| AC-01 | Self Line sidebar category has a description | integration | ✅ PASS | `description: 'Your sense of identity'` present in Self Line category object |
+| AC-02 | Emotional Line sidebar category has a description | integration | ✅ PASS | `description: 'Your capacity to recognise'` present in Emotional Line category object |
+| AC-03 | Interpersonal Line sidebar category has a description | integration | ✅ PASS | `description: 'Your ability to relate'` present in Interpersonal Line category object |
+| AC-04 | Cognitive Line sidebar category has a description | integration | ✅ PASS | `description: 'Your thinking capabilities'` present in Cognitive Line category object |
+| AC-05 | Spiritual Line sidebar category has a description | integration | ✅ PASS | `description: 'Your relationship with meaning'` present in Spiritual Line category object |
+| AC-06 | Moral Line sidebar category has a description | integration | ✅ PASS | `description: 'Your sense of justice'` present in Moral Line category object |
+| AC-07 | Shadow Work (top-level) sidebar category has a description | integration | ✅ PASS | `description: 'Work with what runs beneath awareness'` present in top-level Shadow Work object |
+| AC-08 | Somatic Line sidebar category has a description | integration | ✅ PASS | `description: 'Your embodied presence'` present in Somatic Line category object |
+| AC-09 | Core Skills (under Modules) sidebar category has a description | integration | ✅ PASS | `description: 'Foundational tools for learning'` present in Core Skills category object |
+| AC-10 | Shadow Work (under Modules) sidebar category has a description | integration | ✅ PASS | `description: 'Core shadow practices within the module path'` present in under-Modules Shadow Work object |
+| AC-11 | Descriptions are one sentence each, consistent in voice and length | review | ✅ PASS | All descriptions are 1 sentence (~15-25 words), all follow `"[noun phrase] — [elaboration]"` pattern |
+| AC-12 | Descriptions tone matches CLARITY-05 Stage Development/State Training descriptions | review | ✅ PASS | Same pattern: plain language, em-dash elaboration, no AQAL jargon |
+| AC-13 | `npm run build` passes | build | ✅ PASS | `[SUCCESS] Generated static files in "build"` |
 
 ## Phase 3.5 — Live System Verification
 **N/A** — No acceptance criteria are tagged `test_type: live-system`.
 
 ## Result
-**PASS** — All 6 acceptance criteria verified. Proceed to Phase 4.
+**PASS** — All 13 acceptance criteria verified. Proceed to Phase 4.

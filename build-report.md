@@ -1,27 +1,29 @@
-# Build Report — CLARITY-03
+# Build Report — CLARITY-05
 
 ## Summary
-Replaced the third Featured Module card on the homepage (Shadow Integration) with Amber/Mythic Orientation, signaling the platform's real differentiation in developmental stage theory.
+Added one-sentence `description` fields to the "Stage Development" and "State Training" sidebar categories in `sidebars.js`, clarifying the state-vs-stage distinction and referencing the AQAL Overview page for further detail.
 
 ## Files Changed
 | File | Change |
 |------|--------|
-| `src/pages/index.js` | Replaced Shadow Integration card (lines 159-169) with Amber/Mythic Orientation card in Featured Modules section |
+| `sidebars.js` | Added `description` field to "Stage Development" category (line 136) and "State Training" category (line 183) |
 
 ## Tasks Completed
 | Task ID | Summary | Status |
 |---------|---------|--------|
-| TASK-004 | Replace Shadow Integration card with Amber/Mythic Orientation in src/pages/index.js | ✅ Complete |
-| TASK-005 | Run npm run build to validate | ✅ Complete |
+| T1 | Add `description` to 'Stage Development' category | ✅ Complete |
+| T2 | Add `description` to 'State Training' category | ✅ Complete |
+| T3 | Confirm AQAL Overview has state/stage distinction; reference it | ✅ Complete |
+| T4 | Run `npm run build` to validate | ✅ Complete |
 
 ## Validation Results
 - **`npm run build`**: ✅ PASS (`[SUCCESS] Generated static files in "build"`)
-- **Pre-existing broken anchor warnings**: Unrelated to this change (all in shadow/integral modules)
-- **No CSS changes**: Existing card styles reused
-- **No new dependencies**
+- **Pre-existing broken anchor warnings**: Unrelated to this change
+- **No new dependencies**: ✅
+- **No CSS changes**: ✅
+- **No new files**: ✅
 
 ## Scope Discipline
-- Only the third featured module card was modified
-- Mindfulness Basics and Emotional Granularity remain unchanged as accessible entry points
-- No homepage restructuring
-- No CSS changes required
+- Only `sidebars.js` modified
+- Two `description` fields added — no structural changes
+- Descriptions reference AQAL Overview rather than duplicating content

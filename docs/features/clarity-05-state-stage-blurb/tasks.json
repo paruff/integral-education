@@ -1,0 +1,63 @@
+[
+  {
+    "id": "T1",
+    "summary": "Add `description` field to 'Stage Development' sidebar category in sidebars.js",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC1a",
+        "description": "'Stage Development' category object in sidebars.js has a `description` field clarifying long-term developmental stages",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T2",
+    "summary": "Add `description` field to 'State Training' sidebar category in sidebars.js",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC2a",
+        "description": "'State Training' category object in sidebars.js has a `description` field clarifying temporary states of consciousness",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T3",
+    "summary": "Confirm AQAL Overview already has state/stage distinction and reference it in descriptions",
+    "depends_on": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC3a",
+        "description": "AQAL Overview page confirmed to have state vs stage content (Levels + States sections + 4-Path Lens)",
+        "test_type": "integration"
+      },
+      {
+        "id": "AC3b",
+        "description": "Category descriptions reference AQAL Overview rather than duplicating full explanation",
+        "test_type": "integration"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  },
+  {
+    "id": "T4",
+    "summary": "Run npm run build to validate",
+    "depends_on": ["T1", "T2", "T3"],
+    "acceptance_criteria": [
+      {
+        "id": "AC5a",
+        "description": "npm run build passes without errors",
+        "test_type": "build"
+      }
+    ],
+    "effort": "XS",
+    "skills": ["code-generation"]
+  }
+]

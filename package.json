@@ -16,8 +16,7 @@
     "token-audit:save": "bash scripts/token-audit.sh --save",
     "validate-frontmatter": "node scripts/validate-frontmatter.js",
     "content-graph": "node scripts/generate-content-graph.js",
-    "content-graph:save": "node scripts/generate-content-graph.js --output docs/.content-graph.json",
-    "postinstall": "npx lefthook install"
+    "content-graph:save": "node scripts/generate-content-graph.js --output docs/.content-graph.json"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",

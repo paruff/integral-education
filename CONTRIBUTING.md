@@ -27,7 +27,7 @@ All contributors must:
 1. **File an issue** — Describe what you want to contribute. Tag with the appropriate label (`module`, `platform`, `safety`, `bug`).
 2. **Wait for triage** — A maintainer will confirm the contribution is in scope before you begin work.
 3. **Create a branch** — Branch from `main`. Use a descriptive name: `fix/broken-link-xyz` or `feat/amber-shadow-module`.
-4. **Develop** — Follow the standards below. Run `npm run build` before committing.
+4. **Develop** — Follow the standards below. Run `npm run build` before committing. If working locally, run `npx lefthook install` once after `npm install` to activate pre-commit hooks.
 5. **Open a pull request** — Reference the issue number. Include a summary of changes and any caveats.
 6. **Pass CI** — All workflows must pass (quality, content protocol, security).
 7. **Human review** — At least one maintainer must review and approve. Tier 2 content additionally requires clinician sign-off.

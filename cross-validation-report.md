@@ -1,18 +1,25 @@
-# Cross-Validation Report — UX-25-REV
+# Cross-Validation Report — UX-26
 
 ## Consistency Matrix
 
 | Source | Claim | Implementation | Consistent? |
 |---|---|---|---|
-| **spec.md** | Audit target elements for heading-tag usage | All confirmed h1/h2/h3 | ✓ |
-| **spec.md** | No heading-like elements using non-heading markup | None found | ✓ |
-| **spec.md** | Body/badges/sidebar unaffected | All confirmed non-heading elements | ✓ |
-| **design.md** | Table of element types and inheritance | All entries verified true | ✓ |
-| **review-report.md** | APPROVED | Consistent with audit findings | ✓ |
-| **verification-report.md** | All claims true | Every claim verified by code inspection | ✓ |
+| **Approved proposal** | AQAL quadrant motif as CSS background | `conic-gradient` with 4 sections on `::before` | ✓ |
+| **Approved proposal** | Labels as real rendered text | 4 `<span>` elements with actual text content | ✓ |
+| **Reviewer feedback** | "Framework made visible, not just ornament" | Semantic I/We/It/Its labels in AQAL-standard positions | ✓ |
+| **Reviewer feedback** | Contrast check before shipping | Python WCAG: 6.54:1 on hero title | ✓ |
+| **spec.md** | AC-1 through AC-6 | All ACs pass | ✓ |
+| **design.md** | Gradient spec + label positions + animation | All 3 match implementation | ✓ |
+| **review-report.md** | APPROVED | Consistent with changes | ✓ |
+| **verification-report.md** | All claims true | Every claim verified by evidence | ✓ |
 
-## Dependency Check
-UX-24-REV (Lora font) is merged. UX-25-REV's audit confirms that UX-24-REV's global `--ifm-heading-font-family` approach inherently handles all the consistency concerns this issue raised.
+## Non-Requirement Check
+| Item | Status |
+|---|---|
+| Hero content, CTAs, layout unchanged | ✓ Confirmed |
+| No JavaScript added | ✓ Confirmed |
+| No SVG, image assets added | ✓ Confirmed |
+| No new dependencies | ✓ Confirmed |
 
 ## Result
-**PASS** — audit findings are internally consistent and confirmed by evidence. No gaps found between UX-24-REV's implementation and UX-25-REV's consistency requirements.
+**PASS** — all findings mutually consistent with the approved design and reviewer feedback.

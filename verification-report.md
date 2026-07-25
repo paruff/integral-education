@@ -1,30 +1,48 @@
-# Verification Report — UX-25-REV
+# Verification Report — UX-26
 
 ## Evidence Check
 
-### Claim: "Hero headline is h1 and inherits Lora"
-- **Evidence:** `src/pages/index.js` line 12: `<h1 className="hero__title">` — h1 element inherits `--ifm-heading-font-family: Lora`
+### Claim: "Conic-gradient renders behind hero text"
+- **Evidence:** `.aqalMotif::before` has `conic-gradient` with 4 alternating white sections at 4-8% opacity; `position: absolute; inset: 0` in `.aqalMotif` positioned within `position: relative` `.heroBanner`
 - **Verified:** ✓ TRUE
 
-### Claim: "QuickStart titles are heading elements"
-- **Evidence:** Homepage cards use `<h3>` (lines 98, 106, 114, 122); QuickStart pages use `##` which renders as `<h2>` in Docusaurus MDX
+### Claim: "Four real quadrant labels in DOM"
+- **Evidence:** `src/pages/index.js` lines 12-15: `<span>I</span>`, `<span>We</span>`, `<span>It</span>`, `<span>Its</span>`
 - **Verified:** ✓ TRUE
 
-### Claim: "Maps titles are heading elements"
-- **Evidence:** Homepage cards use `<h3>` (lines 178, 187, 196, 204); Maps pages use `##` → `<h2>` (line 7 in aqal-overview)
+### Claim: "Labels use Lora at low opacity"
+- **Evidence:** `font-family: Lora, Georgia, serif` + `color: rgba(255,255,255,0.10)` in `.aqalLabel`
 - **Verified:** ✓ TRUE
 
-### Claim: "Body/badges/sidebar stay on system sans-serif"
-- **Evidence:** Body uses `<p>`, badges use `<span>`, sidebar uses Docusaurus theme `<nav>` — none are heading elements; all inherit `--ifm-font-family-base` (system-ui stack, unchanged)
+### Claim: "Fade-in animation with reduced-motion support"
+- **Evidence:** `@keyframes aqalReveal` (1.5s opacity) + `@media (prefers-reduced-motion: reduce) { animation: none; opacity: 1; }`
+- **Verified:** ✓ TRUE
+
+### Claim: "pointer-events: none"
+- **Evidence:** `pointer-events: none` on `.aqalMotif`
+- **Verified:** ✓ TRUE
+
+### Claim: "aria-hidden on motif"
+- **Evidence:** `aria-hidden="true"` on the motif `<div>` in JSX
+- **Verified:** ✓ TRUE
+
+### Claim: "WCAG contrast verified"
+- **Evidence:** Python WCAG calculation: white on `#1a6b3c` = 6.54:1 (passes AA at 4.5:1)
 - **Verified:** ✓ TRUE
 
 ### Claim: "Build passes"
 - **Evidence:** `[SUCCESS] Generated static files in "build"`
 - **Verified:** ✓ TRUE
 
-### Claim: "No code changes needed"
-- **Evidence:** `git diff HEAD -- ':(exclude)docs/features/*' ':(exclude)*-report.md' ':(exclude)*.json'` shows zero changes to any source or module file
-- **Verified:** ✓ TRUE
+## All Artifacts Present
+| Artifact | Exists |
+|---|---|
+| specification.md | ✓ |
+| design.md | ✓ |
+| tasks.json | ✓ |
+| build-report.md | ✓ |
+| test-report.md | ✓ |
+| review-report.md | ✓ |
 
 ## Result
-**PASS** — every claim is verified true. No code changes needed.
+**PASS** — every claim is verified true.

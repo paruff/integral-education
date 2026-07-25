@@ -11,6 +11,68 @@
   }
 }
 
+/* ─── AQAL Quadrant Motif ──────────────────────────────────────────────── */
+
+.aqalMotif {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  animation: aqalReveal 1.5s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .aqalMotif {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+@keyframes aqalReveal {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.aqalMotif::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: conic-gradient(
+    from 45deg,
+    rgba(255,255,255,0.04)   0deg,
+    rgba(255,255,255,0.08)  90deg,
+    rgba(255,255,255,0.04) 180deg,
+    rgba(255,255,255,0.08) 270deg,
+    rgba(255,255,255,0.04) 360deg
+  );
+}
+
+.aqalLabel {
+  position: absolute;
+  color: rgba(255,255,255,0.10);
+  font-family: Lora, Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  user-select: none;
+  line-height: 1;
+}
+
+.aqalLabelI  { top: 8%;  left: 5%; }
+.aqalLabelIt { top: 8%;  right: 5%; }
+.aqalLabelWe { bottom: 12%; left: 5%; }
+.aqalLabelIts{ bottom: 12%; right: 5%; }
+
+@media screen and (max-width: 996px) {
+  .aqalLabel {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .aqalLabelI  { top: 5%;  left: 3%; }
+  .aqalLabelIt { top: 5%;  right: 3%; }
+  .aqalLabelWe { bottom: 8%; left: 3%; }
+  .aqalLabelIts{ bottom: 8%; right: 3%; }
+}
+
 .buttons {
   display: flex;
   align-items: center;

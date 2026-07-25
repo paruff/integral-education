@@ -40,7 +40,27 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 | **States** (Experience) | Reflective waking state with capacity for sustained inward attention. The practice requires a regulated baseline — not for use during acute emotional activation. |
 | **Types** (Style) | Language-dominant learners may find labelling natural but somatic access challenging; body-dominant learners may have rich somatic awareness but limited precision vocabulary. Both patterns are common and this module accommodates both starting points. |
 
-## Theoretical Frameworks
+## 🧭 Orient
+
+:::info Before this module
+This module builds on [Emotional Line Overview & Orientation](./emotional-line-overview-orientation) and [Emotional Granularity](./emotional-granularity). Complete those first if you have not already — this module assumes you can already distinguish several distinct emotion words and have a basic map of the emotional line.
+:::
+
+This module sits at the junction of the emotional and somatic lines: it teaches the specific skill of pairing a precisely named emotion with the body sensation it corresponds to. Understanding this matters because affect labelling is one of the few emotion-regulation skills with a well-replicated neural mechanism behind it — it is not a soft skill, it is a trainable capacity with a measurable physiological signature.
+
+## 🌿 Encounter
+
+Notice, before any framework names it, how emotion actually arrives. It is rarely first a word. It is a tightening in the chest before you have decided what to call it. A hollow drop in the stomach when the phone rings with unfamiliar news. A flush of heat up the neck in a meeting where something was said that landed wrong. The body knows first, and the mind's naming — "I'm anxious," "I'm hurt," "I'm furious" — arrives a half-beat later, if it arrives with any precision at all.
+
+Most of us live with a mismatch: either we feel the sensation clearly and reach for a vague, catch-all word ("I'm stressed," "I'm off"), or we can produce a fluent emotional vocabulary while the body itself stays strangely quiet, unreached by the label. Neither is a failure — both are simply the starting point this module works from.
+
+What follows below gives this everyday experience a name and a mechanism: why naming settles the nervous system, why the body has its own vocabulary, and why the gap between feeling and word is a skill, not a fixed trait.
+
+## 🧠 Learn
+
+The five frameworks below approach affect labelling from neuroscience, decision science, cross-cultural body-mapping, constructionist, and developmental angles. Together they explain both why naming an emotion changes its felt intensity, and how the capacity to do so develops.
+
+## Five Framework Lenses: Affect Labelling & Somatic Correlation
 
 ### 1. Lieberman's Affect Labelling (fMRI)
 
@@ -62,7 +82,7 @@ Lisa Feldman Barrett's predictive processing model (2017) argues that emotions a
 
 Robert Kegan's constructive-developmental framework (1982; 1994) provides the structural logic for how the relationship to body sensation develops. At the **Instrumental (Orange)** stage, the body is an object to be managed — sensations are data to be optimised. At the **Socialised (Green)** stage, the body becomes a site of relational attunement — sensations are signals of connection or disconnection. At the **Self-Authoring (Orange → Green transition)**, the person can observe their somatic-emotional patterns and choose how to relate to them. The developmental arc moves from being *subject to* body sensation (embedded in it, controlled by it) to having sensation as *object* (observable, nameable, usable as information).
 
-## Gifts
+## The Gifts of Affect Labelling & Somatic Correlation
 
 ### Naming Tames the Nervous System
 
@@ -84,7 +104,7 @@ People who can label emotions with precision are less vulnerable to emotional fl
 
 When you can name what you are feeling with precision and correlate it to a body sensation, you can communicate more effectively with others. Instead of vague "I'm stressed" or reactive silence, you can say "I notice a tightness in my chest and I think it's anticipatory dread about our conversation." That specificity makes relational repair, boundary-setting, and collaborative meaning-making possible in ways that general emotional vocabulary cannot.
 
-## Limitations and Shadows
+## The Developmental Limitations and Shadows of Affect Labelling
 
 ### Labelling Can Become Avoidance
 
@@ -155,6 +175,12 @@ Write down all candidate labels.
 - What did I learn about how this emotion lives in my body?
 - What was the relationship between the sensory description and the emotion label — did one come more easily than the other?
 - Is there any residual sensation that wants acknowledgment?
+
+## ⚓ Stabilize
+
+Completing the Emotion-Somatic Mapping Protocol once, or reading the frameworks above, gives you a *conceptual* map of how affect labelling works — it does not, by itself, install the trained capacity for interoceptive accuracy and label-sensation correlation that this module describes. Being able to explain the RVLPFC-amygdala mechanism is a different achievement from reliably noticing a body signal *before* the emotion overtakes you. Treat today's practice as a first data point, not evidence the skill is now automatic.
+
+The body-emotion correlations referenced above (Nummenmaa et al.'s topography maps in particular) were produced primarily in Nordic and East Asian samples, and somatic-attention practices more broadly were developed largely in WEIRD contexts. If your own cultural, linguistic, or family background maps emotion to the body differently than the patterns described here, trust your own felt correlations over the illustrative maps — the underlying claim (that emotion has a body signature at all) is more robust than any particular map of where.
 
 ## Reflect
 

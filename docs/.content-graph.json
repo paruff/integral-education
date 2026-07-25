@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T20:45:02.663Z",
+  "generated": "2026-07-25T21:19:01.228Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,15 +49,15 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 0,
+      "full": 3,
       "total": 77,
-      "percentage": 0
+      "percentage": 4
     },
     "journeyStepGaps": {
-      "orient": 27,
-      "encounter": 34,
-      "learn": 27,
-      "stabilize": 27,
+      "orient": 25,
+      "encounter": 31,
+      "stabilize": 25,
+      "learn": 24,
       "integrate": 11,
       "retrieval schedule": 37,
       "frameworks": 59,
@@ -101,18 +101,13 @@
         "emotion-regulation",
         "--"
       ],
-      "goldStandardSections": 13,
+      "goldStandardSections": 17,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "learn",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "amber-mythic-orientation",
@@ -1653,16 +1648,13 @@
         "AQAL",
         "EI-08"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 19,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "encounter",
-        "learn"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "late-green-emergence-signals",
@@ -3235,18 +3227,13 @@
         "somatic-line",
         "tier-2"
       ],
-      "goldStandardSections": 12,
+      "goldStandardSections": 16,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "learn",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "spiritual-line-conjunctive-universalizing",

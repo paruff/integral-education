@@ -32,7 +32,27 @@ line: interpersonal
 | **States** (Experience) | Reflective waking state; relational presence under moderate difference-related stress. |
 | **Types** (Style) | Solo reflection + structured partner/small-group dialogue with clear facilitation boundaries. |
 
-## Theoretical Frameworks
+## 🧭 Orient
+
+:::info Before this module
+This module builds on [Interpersonal Line Overview & Orientation](./interpersonal-line-overview-orientation), [Perspective-Taking & Empathic Accuracy](./perspective-taking-empathic-accuracy), and [Relational Repair & Conflict Navigation](./relational-repair-conflict-navigation). Complete those first — this module assumes you can already recognize rupture and take another's perspective, and builds those into a dedicated cross-difference practice.
+:::
+
+This module sits at the highest-complexity end of the Interpersonal line: sustaining genuine trust-building contact when role, culture, worldview, or developmental center of gravity differ significantly, and power is often unequal. Understanding this matters because ordinary communication skills — the ones that work well when people already share enough context — reliably break down here, and something more deliberate is needed.
+
+## 🌿 Encounter
+
+Notice, before any framework names it, what it actually feels like to talk with someone whose assumptions are not yours. A small tightening when they say something that lands as dismissive, even if they didn't mean it that way. The pull to over-explain, or to go quiet, the moment you sense your view will not be easily understood. The subtle calculation — often below conscious awareness — of how much this costs to say, given who is listening and what power they hold.
+
+This is not a failure of communication technique. It is the ordinary texture of contact across real difference: goodwill and misunderstanding arriving together, trust building in fits and starts, rupture showing up not as a dramatic rupture but as a small flinch that either gets named or quietly accumulates.
+
+What follows gives this everyday experience a structure: why some trust-building moves work at one developmental altitude and land as hollow at another, how power shapes who gets to speak before anyone opens their mouth, and what it actually takes to move from contact through rupture to repair.
+
+## 🧠 Learn
+
+The five frameworks below approach cross-difference dialogue from philosophical, dialogic, critical-pedagogical, skills-based, and developmental angles. Together they explain both why ordinary communication skills are insufficient here and what a more deliberate practice requires.
+
+## Five Framework Lenses: Cross-Difference Dialogue & Trust-Building
 
 ### Martin Buber — I–Thou / I–It
 
@@ -54,7 +74,7 @@ Isaacs operationalizes dialogue capacity through four trainable skills: listenin
 
 This model distinguishes what tends to generate trust at different developmental altitudes: Conformist (shared belonging), Achiever (competence and reliability), Individualist (authentic disclosure), Strategist (curiosity across difference). Cross-stage trust-building requires simultaneously speaking multiple trust languages.
 
-## Gifts
+## The Gifts of Cross-Difference Dialogue
 
 ### Deep Relational Courage
 
@@ -76,7 +96,7 @@ It expands collective thinking by making room for perspectives that are usually 
 
 It supports dialogue that stays human even when formal authority, social location, or institutional status are unequal.
 
-## Limitations / Shadows
+## The Developmental Limitations and Shadows of Cross-Difference Dialogue
 
 The very commitment to openness that makes cross-difference dialogue possible can, at the boundary, become over-accommodation that abandons necessary boundaries.
 
@@ -88,7 +108,7 @@ The very commitment to trust-building that makes long-term collaboration possibl
 
 **Pre/Trans note:** Emotional intensity in cross-difference dialogue can look similar across very different structures. Pre-rational fusion may appear as "deep unity," while post-rational mutuality includes both deep contact and stable differentiation. The distinguishing marker is whether participants can hold self-boundary, perspective complexity, and accountability at the same time.
 
-## Learn
+## Applying the Lenses: Skills, Trust Languages, and Power
 
 Ordinary communication skills are often optimized for clarity, efficiency, or agreement. Cross-difference dialogue is more demanding: it requires sustaining genuine contact when values, identity, status, and developmental meaning-making differ. In those conditions, the task is not just exchanging information; it is building trust without erasing difference.
 
@@ -161,6 +181,12 @@ Developmental altitude influences the arc. Lower-altitude patterns often seek fa
 4. **Map repair attempts (4 minutes).** Record what helped repair and what failed.
 5. **Trust inventory (4 minutes).** List concrete behaviors that have built trust and behaviors that have eroded trust.
 6. **Next relational move (2 minutes).** Write one low-risk, high-integrity action you can take this week to support trust.
+
+## ⚓ Stabilize
+
+Completing the Assumption Suspension Drill once, or reading the frameworks above, gives you a *conceptual* map of cross-difference dialogue — it does not, by itself, install the trained capacity to stay in genuine contact when a real difference is activated and the stakes are high. Being able to name Isaacs's four skills is a different achievement from actually voicing, suspending, and listening in the moment identity or belonging feels threatened. Treat today's practice as a first rehearsal, not evidence the skill now holds under real pressure.
+
+The trust languages and dialogue frameworks referenced above were developed primarily in Western organizational and philosophical contexts, and what counts as appropriate directness, disclosure, or challenge varies significantly by culture, role, and power position. If your own cultural or professional context signals trust differently than the examples above suggest, trust your own read of what actually builds safety in your specific relationships over the illustrative models.
 
 ## Reflect
 

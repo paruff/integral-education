@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T21:10:13.460Z",
+  "generated": "2026-07-25T21:33:48.817Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,21 +49,21 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 2,
+      "full": 5,
       "total": 77,
-      "percentage": 3
+      "percentage": 6
     },
     "journeyStepGaps": {
-      "orient": 25,
-      "encounter": 32,
+      "orient": 22,
+      "encounter": 29,
       "learn": 25,
-      "stabilize": 25,
+      "stabilize": 22,
       "integrate": 11,
-      "retrieval schedule": 37,
-      "frameworks": 59,
-      "gifts": 65,
+      "retrieval schedule": 36,
+      "frameworks": 58,
+      "gifts": 64,
       "facilitator note": 63,
-      "limitations": 50,
+      "limitations": 49,
       "reflect": 12,
       "assess": 3,
       "aqal mapping": 5,
@@ -843,17 +843,13 @@
         "tier-2",
         "safety-critical"
       ],
-      "goldStandardSections": 14,
+      "goldStandardSections": 18,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "ecological-systems-consciousness",
@@ -1122,17 +1118,13 @@
         "EI-13",
         "tier-1"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 19,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "emotional-line-overview-orientation",
@@ -2468,21 +2460,13 @@
         "tier-2",
         "safety-critical"
       ],
-      "goldStandardSections": 10,
+      "goldStandardSections": 17,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "relativism-limits-of-pluralism",

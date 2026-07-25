@@ -30,8 +30,6 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-**Position in sequence:** This is the tenth module in the **Emotional Intelligence** suite and the primary repair-and-conflict module for the Interpersonal Line. It builds on the co-regulation foundation of [Co-regulation & Relational Attunement](./co-regulation-relational-attunement) (EI-06) and deepens the repair threads introduced in [Shadow in Relationships](./shadow-in-relationships). The L3 and L4 indicators on the AQAL Interpersonal Competency Map — *building trust across significant difference* and *navigating power dynamics in conflict* — require this module's repair framework as their practical substrate. Prerequisites: EI-08, EI-06.
-
 ---
 
 ## 🗺️ AQAL Mapping
@@ -46,9 +44,27 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
+## 🧭 Orient
+
+:::info Before this module
+This module builds on [Interpersonal Line Overview & Orientation](./interpersonal-line-overview-orientation) and [Co-regulation & Relational Attunement](./co-regulation-relational-attunement). Complete those first — this module assumes you can already recognize your own activation in relational contact, and turns to what happens once connection actually breaks: rupture, and the deliberate work of repairing it.
+:::
+
+This module trains the highest-leverage skill in the Interpersonal line's middle stages: navigating the moment trust is strained, not by avoiding conflict but by moving through it in a way that builds rather than erodes it. Understanding this matters because most relationships are not undone by the presence of conflict — they are undone by the absence of repair.
+
+## 🌿 Encounter
+
+Notice, before any framework names it, what a fresh rupture actually feels like in the body: the sudden tightening, the urge to defend or withdraw, the replay of the exchange that won't quite settle. Even in a relationship you trust, a sharp word or a missed cue can leave a residue that lingers long after the conversation has moved on.
+
+Most of us default to one of two moves when this happens — smoothing it over quickly and hoping it dissolves, or saying nothing and letting it quietly accumulate. Both can feel like keeping the peace. Neither is actually repair, and the difference is not obvious until you have language for what repair requires.
+
+What follows gives this everyday experience a structure: why rupture is not a sign of relational failure but the raw material trust is built from, what specific behaviors reliably corrode that trust, and what a deliberate repair sequence actually asks of both people.
+
 ## 🧠 Learn
 
 This module trains the capacity to navigate interpersonal rupture — not to avoid conflict, but to move through it in ways that strengthen rather than erode relational trust.
+
+## Framework Lenses: Rupture, Repair, and Conflict Navigation
 
 ### 1. Rupture and Repair as the Developmental Engine of Relational Trust
 
@@ -135,6 +151,21 @@ At Strategist / early Teal altitude, there is sufficient self-authoring capacity
 
 ---
 
+## The Gifts of Relational Repair & Conflict Navigation
+
+- **Trust built through repair outlasts trust built through avoidance.** A relationship where ruptures are survived and repaired develops a depth of confidence — *this can be hard between us and we can still come back* — that a relationship where conflict is simply avoided never has occasion to earn (see §1).
+- **A wider behavioral repertoire in the moment of activation.** Instead of two default moves — smooth over, or shut down — the Four Horsemen antidotes give you specific, learnable alternatives to reach for in real time (§2).
+- **The capacity to take accountability without collapsing into self-erasure.** Naming your specific contribution to a rupture, distinct from global self-criticism or from deflecting the blame outward, is itself a developmental achievement — not a natural default for most people (§3).
+- **An honest accounting of power, rather than a naive assumption of symmetry.** Recognising who has more to lose in a given conflict — by role, developmental stage, or social identity — lets repair be designed with real conditions in mind, not an idealised even footing (§5).
+
+## The Developmental Limitations and Shadows of Relational Repair & Conflict Navigation
+
+Each stage-relative pattern described in §6 carries its own characteristic shadow: the Conformist tendency to call resumed normalcy "resolution" when nothing was actually acknowledged; the Achiever tendency toward relationally thin problem-solving that fixes the issue while leaving the person unseen; the Strategist tendency to intellectualise conflict as "developmental information" in a way that quietly defends against the felt impact of the rupture. None of these is a flaw to eliminate — they are the predictable edge of whatever altitude is currently doing the work, and the practice is to notice the pattern rather than judge it.
+
+Two further limitations apply across all stages. First, the Four Horsemen framework, used carelessly, becomes a weapon: cataloguing the other person's patterns rather than examining your own is itself a form of contempt (§2). Second, NVC's four-part structure can be recited without being inhabited — "When you did X, I felt Y" delivered defensively, as a script rather than genuine self-inquiry, misses the point entirely and can land as more corrosive than plain speech (§4). Both frameworks are only as good as the self-awareness brought to them.
+
+---
+
 ## 🧘 Practice
 
 **Duration:** 25–30 minutes for the full sequence. Each exercise can be completed separately.
@@ -192,6 +223,14 @@ Take one statement from the conflict — something you said, or something you wa
 **Step 5 — Request:** Write a specific, actionable, present-tense request — something the other person could actually do. Check that it is a request (which allows for "no") rather than a demand (which does not).
 
 **Step 6 — Reflection:** Compare the original statement with the NVC translation. What changed? What was hidden in the original that the translation surfaces? What does this tell you about what you were actually trying to communicate?
+
+---
+
+## ⚓ Stabilize
+
+Working through the Four Horsemen self-assessment once, or being able to recite the four-step repair sequence, gives you a *conceptual* map of rupture and repair — it does not, by itself, install the capacity to actually initiate repair when a real rupture is fresh and the stakes are high. Naming your Horseman pattern in a calm, reflective state is a different achievement from noticing it rising in real time, mid-conversation, and reaching for the antidote instead. Treat today's practice as rehearsal for a future repair conversation, not evidence that the pattern has already changed.
+
+The frameworks above — Gottman's research, the repair sequence, NVC — were developed and validated primarily with Western (largely US) couples and organisational samples, and norms around directness, apology, and emotional disclosure in conflict vary significantly across cultures and families. If your own background frames acknowledgement, accountability, or reconnection differently than the examples above assume, trust your own read of what genuine repair requires in your specific relationships over the illustrative scripts.
 
 ---
 
@@ -259,6 +298,7 @@ This module's practices prepare the *interior* of repair — the self-awareness 
   {q: "Why is NVC described as a practical repair *tool* rather than a developmental framework?", a: "NVC provides a structured communication format (observation / feeling / need / request) that reduces blame and increases first-person accuracy. It does not map to any AQAL stage and can be used at any altitude — though its effectiveness depends on genuine self-knowledge and presence rather than syntactic correctness. It is most useful as a preparation tool before a repair conversation, not as a real-time script."}
 } />
 
+## ⏱️ Retrieval Schedule
 
 | Interval | Activity |
 | :--- | :--- |

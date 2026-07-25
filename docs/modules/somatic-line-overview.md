@@ -26,7 +26,25 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 | **States** (Experience) | Gross waking (baseline somatic awareness), subtle (felt energy and interior body landscape), flow (peak somatic integration), and autonomic states (hyperarousal, hypoarousal, ventral vagal regulation). |
 | **Types** (Style) | Trauma history is the primary type variable — somatic practices land differently depending on whether the body is experienced as a safe home or a site of past threat. Gender, culture, and neurotype also shape the body's felt relationship to attention and regulation. |
 
-## Theoretical Frameworks
+## 🧭 Orient
+
+**Position in sequence:** This is the orientation module for the Somatic developmental line — the line overview that introduces the line's structure before the line's stage-specific and practice modules. No prerequisites are required, though this module pairs naturally with the [Emotional Line Overview & Orientation](./emotional-line-overview-orientation) module, since interoception underlies both lines.
+
+Understanding this line matters because the body is not a passive vehicle for the mind — it is a primary source of information, regulation, and presence that every other developmental line depends on, whether or not that dependency is consciously recognized.
+
+## 🌿 Encounter
+
+Before any framework names it, the body already knows. A held breath before you consciously register the threat. A wave of nausea before you can say what's wrong. An exhale that arrives on its own the moment real safety returns. The nervous system is reading the room continuously, faster than thought, and reporting its findings the only way it can — as sensation.
+
+Most people spend most of a day with only partial access to this channel: aware enough to notice when the body's report becomes loud (a racing heart, a locked jaw), but not attuned enough to catch its quieter, earlier signals — the ones that, caught in time, offer the most choice. The gap between a body that is constantly informing and a mind that is only occasionally listening is exactly what this line addresses.
+
+What follows gives this everyday experience its structure: how interoception is measured, why the nervous system organizes around safety and threat the way it does, and what the developmental arc from reflexive reactivity to integrated embodiment actually looks like.
+
+## 🧠 Learn
+
+The five frameworks below approach the somatic line from interoception research, polyvagal theory, somatic trauma treatment, constructive-developmental, and AQAL angles. Together they explain both the mechanics of body-based knowing and its stage-by-stage developmental arc.
+
+## Five Framework Lenses: The Somatic Line
 
 ### 1. Interoception Research (Garfinkel & Critchley)
 
@@ -48,7 +66,7 @@ Kegan's subject-object theory does not directly address the somatic line, but th
 
 Within the integral framework, the somatic line develops from reflexive reactivity (Archaic) through impulsive discharge (Red), rule-governed regulation (Amber), instrumental management (Orange), relational and felt presence (Green), and integrated embodiment where somatic intelligence participates in whole-person meaning-making (Integral). This is a theoretical synthesis — the specific stage descriptors are Wilber's framework applied to somatic development, not independently validated empirical findings.
 
-## Gifts
+## The Gifts of Somatic Development
 
 ### The Body Knows Before the Mind Does
 
@@ -70,7 +88,7 @@ The developmental arc from impulse (I do what my body demands) to regulation (I 
 
 When cognitive processing is overwhelmed, when emotional intensity exceeds verbal capacity, when spiritual practice becomes disembodied — the body is the anchor. Feet on the floor, breath in the belly, hands on a solid surface. The somatic line provides the grounding infrastructure that all other developmental work depends on.
 
-## Limitations and Shadows
+## The Developmental Limitations and Shadows of the Somatic Line
 
 ### The Body Can Be a Site of Harm
 
@@ -113,6 +131,12 @@ Somatic aliveness is a genuine characteristic of early-stage development and als
 5. **Whole-body awareness (3 minutes).** Expand your attention to hold the whole body at once — not scanning region by region, but sensing the entire body as a unified field. If you lose the sense of wholeness, return to the breath and expand again.
 
 6. **Return (3 minutes).** Wiggle your fingers and toes. Slowly open your eyes. Take one more full breath. Notice how your body feels now compared to when you started.
+
+## ⚓ Stabilize
+
+Completing a single body scan, or reading the frameworks above, gives you a *conceptual* map of interoception and nervous system regulation — it does not, by itself, widen your window of tolerance or install a new baseline of regulatory capacity. Being able to name the ventral vagal state is a different achievement from actually settling into it under real stress. Treat today's scan as one data point in a long practice, not evidence that regulation has already changed.
+
+The frameworks above (Polyvagal Theory especially) were developed and popularized largely in Western clinical and research contexts, and the specific vocabulary for body-awareness — which sensations get named, which are considered normal to attend to — varies across cultures and families. If your own background frames bodily attention differently than the language used here, trust your own felt experience over the terminology; the underlying claim (that the body carries regulable, informative signal) is more robust than any one culture's way of naming it.
 
 ## Reflect
 

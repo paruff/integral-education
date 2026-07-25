@@ -28,11 +28,6 @@ function HomepageHeader() {
             to="/start">
             Find Your Path →
           </Link>
-          <Link
-            className={styles.secondaryCta}
-            to="/prototype">
-            Open Prototype
-          </Link>
         </div>
       </div>
     </header>
@@ -208,11 +203,11 @@ export default function Home() {
             </article>
             <article className="homepage-tool-card">
               <h3>
-                <span>🖱️</span> Interactive Prototype
+                <span>🖱️</span> Platform Demo
               </h3>
-              <p>Preview pathway selection, safety checks, and assessment flow in one place.</p>
+              <p>Try an interactive walkthrough of pathway selection, safety gates, practice flows, and progress tracking.</p>
               <Link className="homepage-card-cta" to="/prototype">
-                Open prototype →
+                Try the demo →
               </Link>
             </article>
           </div>

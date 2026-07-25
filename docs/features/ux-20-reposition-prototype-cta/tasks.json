@@ -1,0 +1,54 @@
+[
+  {
+    "id": "T1",
+    "title": "Remove Open Prototype link from hero CTA row",
+    "description": "Delete the third `<Link>` in the `.buttons` div of the homepage hero header.",
+    "dependencies": [],
+    "files": ["src/pages/index.js"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "\"Open Prototype\" link is removed from the `.buttons` div in the hero section",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC-5",
+        "description": "\"Get Started →\" and \"Find Your Path →\" remain unchanged",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Rename Maps & Tools prototype card",
+    "description": "Update the title, description, and CTA text of the prototype entry in the Maps & Tools section to reflect a user-facing demo label.",
+    "dependencies": ["T1"],
+    "files": ["src/pages/index.js"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-2",
+        "description": "Maps & Tools card is renamed from \"Interactive Prototype\" to a user-facing demo title",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC-3",
+        "description": "Card CTA updated from \"Open prototype →\" to describe a demo action",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T3",
+    "title": "Verify build passes",
+    "description": "Run `npm run build` to confirm no broken links or compilation errors.",
+    "dependencies": ["T2"],
+    "files": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC-4",
+        "description": "`npm run build` succeeds",
+        "test_type": "integration"
+      }
+    ]
+  }
+]

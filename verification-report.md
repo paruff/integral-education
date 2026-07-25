@@ -1,24 +1,40 @@
-# Verification Report — MOD-01
+# Verification Report — UX-20
 
-## Verification Result: PASS
+## Evidence Check
 
-All claims from build-report.md, test-report.md, and review-report.md verified against evidence.
+### Claim: "Open Prototype removed from hero CTA"
+- **Evidence:** `git diff` shows lines 31–35 (the `<Link>` to `/prototype`) deleted from the `.buttons` div
+- **Verified:** ✓ TRUE
 
-## Claim Verification
+### Claim: "Maps & Tools card renamed to Platform Demo / Try the demo →"
+- **Evidence:** `git diff` shows title changed from "Interactive Prototype" to "Platform Demo" and CTA from "Open prototype →" to "Try the demo →"
+- **Verified:** ✓ TRUE
 
-| # | Claim | Evidence | Result |
-|---|-------|----------|--------|
-| 1 | Mindfulness Basics prereq = None | `grep 'prerequisites: None' docs/modules/mindfulness-basics.md` — matched | verified_true |
-| 2 | Mindfulness Deepening difficulty = Intermediate | `grep 'difficulty: Intermediate' docs/modules/mindfulness-deepening.mdx` — matched | verified_true |
-| 3 | Emotional Granularity prereq = None | `grep 'prerequisites: None' docs/modules/emotional-granularity.md` — matched | verified_true |
-| 4 | Gross State Awareness prereq = None | `grep 'prerequisites: None' docs/modules/gross-state-awareness.mdx` — matched | verified_true |
-| 5 | Flow Peak Experience prereq = None | `grep 'prerequisites: None' docs/modules/flow-peak-experience.mdx` — matched | verified_true |
-| 6 | Subtle State Access prereq = None | `grep 'prerequisites: None' docs/modules/subtle-state-access.mdx` — matched | verified_true |
-| 7 | Only 6 module files modified | `git diff --name-only` shows 6 module files + report/feature files | verified_true |
-| 8 | No other module frontmatter changed | Checked: no other Beginner module has rational-orange prereq | verified_true |
+### Claim: "Get Started → and Find Your Path → remain unchanged"
+- **Evidence:** `git diff` shows no changes to those lines; `grep` confirms their presence
+- **Verified:** ✓ TRUE
 
-## Unverified / False Claims
+### Claim: "npm run build succeeds"
+- **Evidence:** Build completed with `[SUCCESS] Generated static files in "build"`; `build/index.html` exists
+- **Verified:** ✓ TRUE
 
-None. All 8 report claims verified true.
+### Claim: "Only src/pages/index.js changed"
+- **Evidence:** `git diff HEAD -- ':(exclude)docs/features/ux-20-reposition-prototype-cta/*' ':(exclude)build-report.md' ':(exclude)*.md'` shows only index.js changes (excluding new doc files and reports)
+- **Verified:** ✓ TRUE
 
-## Verification Result: PASS
+### Claim: "No security/performance/breaking changes"
+- **Evidence:** Diff contains only JSX text content changes — no new imports, no routing, no logic, no CSS
+- **Verified:** ✓ TRUE
+
+## All Artifacts Present
+| Artifact | Exists |
+|---|---|
+| `specification.md` | ✓ |
+| `design.md` | ✓ |
+| `tasks.json` | ✓ |
+| `build-report.md` | ✓ |
+| `test-report.md` | ✓ |
+| `review-report.md` | ✓ |
+
+## Result
+**PASS** — every claim is verified true.

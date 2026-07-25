@@ -1,40 +1,58 @@
-# Review Report — NAV-04
+# Review Report — ROUTE-02
 
-## 1. Correctness
+## Review Result: APPROVED
 
-| Check | Result | Notes |
-|-------|--------|-------|
-| Descriptions added to all 10 target categories | ✅ PASS | Verified by grep — all 10 have unique descriptions |
-| Descriptions are one sentence each | ✅ PASS | Longest is ~15 words; all are single sentences |
-| Consistent voice and length | ✅ PASS | All follow `"[noun phrase] — [elaboration]"` pattern matching CLARITY-05 |
-| Tone matches CLARITY-05 | ✅ PASS | Same plain-language, no AQAL jargon, em-dash structural split |
-| Stage Development/State Training descriptions unmodified | ✅ PASS | CLARITY-05 descriptions preserved exactly |
-| `npm run build` passes | ✅ PASS | `[SUCCESS]` |
+## Correctness
+Implementation matches specification and design exactly:
+- 3 line-diagnostic questions added (pressure, difficult conversations, growth area)
+- LINE_RESULTS with 4 states (emotional, interpersonal, self, mixed)
+- tallyLine() with 2-of-3 threshold and mixed fallback
+- Two-phase flow: Phase 1 (stage) → Phase 2 (line) → combined results
+- ResultBox sub-component for DRY rendering of both result types
+- Stage/line distinction explanation box between recommendation sections
+- ALL_PATHS expanded from 6 to 8 paths with Emotional and Interpersonal lines
+- Recommended badges show "Stage", "Line", or "Stage + Line" based on matching
+- Mirror paragraphs use "Your answers suggest..." framing — non-labeling, non-pathologizing
 
-## 2. Scope Discipline
+## Scope Discipline
+| File | Change | Appropriate |
+|------|--------|-------------|
+| `src/pages/start.js` | Major — page restructured for two-phase flow | ✓ Core file |
+| `src/pages/start.module.css` | Additions only — 6 new class blocks | ✓ No existing rules changed |
+| `build-report.md` | Replaced (from NAV-04 session) | ✓ Required artifact |
+| `test-report.md` | Replaced (from NAV-04 session) | ✓ Required artifact |
 
-| Check | Result | Notes |
-|-------|--------|-------|
-| Only intended file changed | ✅ PASS | Only `sidebars.js` |
-| No unnecessary changes | ✅ PASS | Only `description` fields added — no structural changes |
-| No scope creep | ✅ PASS | Did not add `_category_.json` files, did not alter labels or items |
+No changes to: sidebar, navbar, other pages, module content, configuration files.
 
-## 3. Maintainability
+## Pattern Compliance
+- Follows existing component structure (functional component with hooks)
+- LINE_QUESTIONS mirrors QUESTIONS array pattern (id, text, options)
+- LINE_RESULTS mirrors RESULTS mapping pattern (title, explanation, recommended, alt, altLink)
+- tallyLine() mirrors tally() pattern with appropriate threshold adjustment
+- CSS additions follow existing naming conventions (camelCase, scoped to component)
+- ResultBox extraction demonstrates good refactoring (removes duplicate rendering logic)
 
-| Check | Result | Notes |
-|-------|--------|-------|
-| Follows project patterns | ✅ PASS | Uses same `description` field approach as CLARITY-05 |
-| No content duplication | ✅ PASS | Descriptions are unique per category |
-| Easy to update | ✅ PASS | Single string per category in sidebars.js |
+## Maintainability
+- **Clarity:** Phase state machine (`null` → `'stage'` → `'complete'`) is well-commented and intuitive
+- **Separation:** Stage and line concerns are in separate data structures and separate rendering blocks
+- **Testability:** tallyLine() is a pure function, easily unit-testable independent of the component
+- **Regression safety:** tally(), QUESTIONS[], RESULTS{} preserved verbatim — zero risk to existing stage routing
+- **No new dependencies** — vanilla React, Docusaurus Link, and CSS modules only
 
-## 4. Risk Assessment
+## Risk Assessment
+| Risk | Severity | Finding |
+|------|----------|---------|
+| Security | None | Client-side only, no user data sent anywhere, no authentication |
+| Performance | None | No additional network calls, no heavy computations |
+| Breaking changes | None | No API surface, no exported interfaces, no page route changes |
+| Regression | None | Stage routing code preserved verbatim |
+| Edge cases | Covered | Mixed results for both stage and line, all 4 states handled |
+| Unnecessary removal | Low | Removed "/line-profile" link from results — replaced by integrated line recommendation |
 
-| Risk | Assessment | Notes |
-|------|------------|-------|
-| Security | ✅ None | Static text |
-| Performance | ✅ None | String metadata only |
-| Breaking changes | ✅ None | No sidebar restructure, no module content changes |
-| Description renders incorrectly | ✅ Low | Docusaurus v3 supports description field on all category types |
+## Requested Changes
+None.
 
-## Review Result
-**APPROVED** — All checks pass. Proceed to Phase 4.5.
+## Reviewer Notes
+1. The removal of the old `/line-profile` link is intentional and correct — the integrated line recommendation replaces the separate link. The `/line-profile` standalone page remains accessible through other navigation.
+2. The `build-report.md` and `test-report.md` diff includes changes from the prior NAV-04 session; the only files changed within the ROUTE-02 scope are `src/pages/start.js` and `src/pages/start.module.css`.
+3. Line question language was designed to describe observable behaviors (not personality traits), consistent with the developmental-vocabulary skill guidelines.

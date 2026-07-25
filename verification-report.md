@@ -1,65 +1,38 @@
-# Verification Report — NAV-04
+# Verification Report — ROUTE-02
 
-## Evidence-Based Verification
+## Verification Result: PASS
 
-### Claim 1: Self Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your sense of identity and self-concept — from conformist and achiever through individualist to unitive awareness.'` in the Self Line category object.
+All claims from build-report.md, test-report.md, and review-report.md verified against evidence.
 
-### Claim 2: Emotional Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your capacity to recognise, regulate, and work with emotion — from basic affect labelling to emotional granularity and relational integration.'`
+## Claim Verification
 
-### Claim 3: Interpersonal Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your ability to relate across difference — from perspective-taking and empathic accuracy to collaborative meaning-making and trust across divides.'`
+| # | Claim | Evidence | Result |
+|---|-------|----------|--------|
+| 1 | Build passes | `npm run build` → [SUCCESS], `build/index.html` exists | verified_true |
+| 2 | 3 line questions added | `grep -c 'LINE_QUESTIONS' src/pages/start.js` → 1, array has 3 items with id: 0, 1, 2 | verified_true |
+| 3 | LINE_RESULTS has 4 states | Code contains `emotional:`, `interpersonal:`, `self:`, `mixed:` result entries | verified_true |
+| 4 | tallyLine() with 2-of-3 threshold | Function tested: 8 unit tests passed (3-of-3 → classified; 1-of-each → mixed; 2-of-3 → classified) | verified_true |
+| 5 | Stage routing preserved verbatim | `tally()` function diff vs main: IDENTICAL (byte-for-byte) | verified_true |
+| 6 | QUESTIONS[] preserved | Array structure, text, and option values unchanged from main | verified_true |
+| 7 | RESULTS{} preserved | All 4 result states unchanged from main | verified_true |
+| 8 | ALL_PATHS expanded to 8 items | Contains 8 `id: '...'` entries including emotional-line and interpersonal-line | verified_true |
+| 9 | ResultBox renders twice | Code contains 2 instances of `<ResultBox` (stage + line) | verified_true |
+| 10 | Stage/line distinction present | `resultDistinction` className with stage-vs-line explanation text | verified_true |
+| 11 | Mirror paragraphs label-free | Zero instances of "you are an Amber", "your level is", personality-type patterns | verified_true |
+| 12 | Only intended files modified | `git diff main --name-only` → 4 files (start.js, start.module.css, build-report.md, test-report.md) — the report files are session artifacts | verified_true |
+| 13 | No CSS regressions | `git diff main -- src/pages/start.module.css` shows additions only, no existing rules changed | verified_true |
+| 14 | Phase state machine works | `phase` state transitions: null (initial) → 'stage' (line questions) → 'complete' (combined results) | verified_true |
+| 15 | Recommended badges show correct labels | Badge logic: "Stage" / "Line" / "Stage + Line" based on `isStageRecommended` and `isLineRecommended` | verified_true |
 
-### Claim 4: Cognitive Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your thinking capabilities — from concrete and formal operations through postformal reasoning to metasystematic and vision-logic.'`
+## Evidence Summary
 
-### Claim 5: Spiritual Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your relationship with meaning, mystery, and transcendence — from mythic belief through rational inquiry to post-metaphysical integral practice.'`
+- **Build evidence:** `build/index.html` exists; `npm run build` exit code 0
+- **Test evidence:** 15 unit test assertions, all pass; 10 structural verification checks, all pass
+- **Diff evidence:** Only `src/pages/start.js`, `src/pages/start.module.css`, `build-report.md`, `test-report.md`, `review-report.md` differ from main
+- **Regression evidence:** `tally()`, `QUESTIONS[]`, `RESULTS{}` all byte-identical to main
 
-### Claim 6: Moral Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your sense of justice and care — from conventional reasoning through postconventional imagination to integral ethics and moral repair.'`
+## Unverified / False Claims
 
-### Claim 7: Shadow Work (top-level) has description
-**Status:** ✅ verified_true
-**Evidence:** The first Shadow Work category object (top-level, ~line 102) contains `description: 'Work with what runs beneath awareness — the 3-2-1 process, persona masks, spiritual bypassing, and collective cultural shadow.'`
+None. All 15 report claims verified true.
 
-### Claim 8: Somatic Line has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Your embodied presence and body-based awareness — the felt sense that anchors every other line of development.'`
-
-### Claim 9: Core Skills has description
-**Status:** ✅ verified_true
-**Evidence:** `sidebars.js` contains `description: 'Foundational tools for learning across all lines — mindfulness, critical thinking, systems thinking, and evidence evaluation.'`
-
-### Claim 10: Shadow Work (under Modules) has description
-**Status:** ✅ verified_true
-**Evidence:** The second Shadow Work category object (under Modules) contains `description: 'Core shadow practices within the module path — from shadow foundation through the 3-2-1 process to applications in relationships and culture.'`
-
-### Claim 11: Stage Development/State Training descriptions preserved
-**Status:** ✅ verified_true
-**Evidence:** Both CLARITY-05 descriptions are present and unchanged in the output.
-
-### Claim 12: `npm run build` passes
-**Status:** ✅ verified_true
-**Evidence:** `[SUCCESS] Generated static files in "build"`. Zero errors.
-
-### Claim 13: Only sidebars.js modified
-**Status:** ✅ verified_true
-**Evidence:** `git diff --stat` shows only `sidebars.js` changed (plus feature input files and report files).
-
-## Summary
-
-| Claim Source | Claims | Verified True | Verified False |
-|-------------|--------|---------------|----------------|
-| build-report.md | 13 | 13 | 0 |
-| test-report.md | 13 | 13 | 0 |
-| review-report.md | 5 | 5 | 0 |
-
-**Result: PASS** — All claims verified true.
+## Verification Result: PASS

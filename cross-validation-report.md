@@ -1,88 +1,123 @@
-# UX-27 · Accessibility Pass — Cross-Validation Report
+# Cross-Validation Report: MM-01 — Magic/Purple Stage Orientation Module
 
-## Summary
-**Cross-validation result: PASS.** All artifacts are internally consistent with the original specification and design. No contradictions between review findings and verification evidence. No gaps between what was asked for and what was delivered.
-
----
-
-## Consistency Checks
-
-### 1. Specification → Build Report
-
-| Spec Requirement | Build Report Claim | Consistent? |
-|---|---|---|
-| Re-run axe-core audit | "Baseline audit: 6 violations; Post-remediation: 0 violations" | ✅ |
-| Run Lighthouse scan | "100/100 on all 6 scored pages" | ✅ |
-| Check keyboard focus states | "12 :focus-visible rules across all interactive components" | ✅ |
-| Check color contrast with #1a6b3c | 5 contrast fixes documented with rationale | ✅ |
-| Check tier badge semantics | "2 · Guided" text label confirmed | ✅ |
-| Document and remediate findings | Complete findings table with per-file fixes | ✅ |
-| npm run build passes | "[SUCCESS] Generated static files" | ✅ |
-
-**No gaps**: All 7 specification requirements have corresponding build-report claims.
-
-### 2. Design → Implementation
-
-| Design Component | Implementation Verified | Consistent? |
-|---|---|---|
-| Audit: axe-core + Lighthouse | Both scripts executed, output artifacts exist | ✅ |
-| `src/css/custom.css` — link contrast + focus | Link underline rules + homepage-primary-cta:focus-visible added | ✅ |
-| `src/pages/index.module.css` — contrast + focus | scaleStat → #6c757d + secondaryCta:focus-visible added | ✅ |
-| `src/components/ShadowGate/` — contrast + focus | distressHigh → #c62828, primaryButton → #fff, both :focus-visible | ✅ |
-| `src/components/RetrievalCard/` — contrast | progress → #6c757d | ✅ |
-| `src/components/ModuleMeta/` — badge semantics | Verified text label present (no code change needed) | ✅ |
-| CSS-only, no new dependencies | Zero JS changes, zero new packages | ✅ |
-
-**No gaps**: All 7 design-impacted components have corresponding implementation changes or verified-no-change.
-
-### 3. Review Report → Verification Report
-
-| Review Claim | Verification Finding | Contradiction? |
-|---|---|---|
-| "4 source files changed" | `git diff` confirms exactly 4 files in `src/` | ✅ None |
-| "12 :focus-visible rules" | `grep` count = 12 | ✅ None |
-| "0 axe-core violations" | `axe-report.json` total = 0 | ✅ None |
-| "Lighthouse 100/100 on all scored" | `lighthouse-scores.json` confirms | ✅ None |
-| "No JS logic changes" | `git diff` shows zero JS/JSX diffs | ✅ None |
-| "APPROVED — low risk" | Verification PASS — all claims verified_true | ✅ None |
-
-**No contradictions**: Every review claim was independently verified as true. The verification report did not surface any claim as `verified_false`.
-
-### 4. Acceptance Criteria Coverage
-
-| AC | Spec Requirement | Test Report Result | Verification Evidence | Consistent? |
-|---|---|---|---|---|
-| AC-1 | axe-core zero violations | PASS | artifacts/axe-report.json → 0 | ✅ |
-| AC-2 | Lighthouse ≥ 90 | PASS | artifacts/lighthouse-scores.json → all ≥ 100 | ✅ |
-| AC-3 | Keyboard focus states | PASS | grep count = 12 :focus-visible rules | ✅ |
-| AC-4 | Color contrast #1a6b3c | PASS | Source diffs confirmed + 0 post-fix violations | ✅ |
-| AC-5 | Tier badge semantics | PASS | ModuleMeta `tierLabel(2)` → "2 · Guided" | ✅ |
-| AC-6 | Findings documented | PASS | build-report.md exists with complete table | ✅ |
-| AC-7 | Build passes | PASS | build/index.html exists, exit 0 | ✅ |
-
-**Full coverage**: All 7 ACs have consistent evidence chains from spec → test claim → verification evidence.
-
-### 5. Cross-Document Gaps
-
-| Check | Finding |
-|---|---|
-| Does build-report mention all files design.md said would be impacted? | Yes — all 4 CSS files listed in design are in build-report |
-| Does test-report reference acceptance criteria that match tasks.json? | Yes — all 7 ACs from tasks.json appear in test-report |
-| Does review-report acknowledge all spec requirements? | Yes — correctness section maps each AC to evidence |
-| Does verification report check all review claims? | Yes — 17 claims checked, 17 verified_true |
-| Are any ACs untestable or missing evidence? | No — all 7 ACs have evidence in either automation output or grep/code inspection |
+## Cross-Validation Purpose
+Verify mutual consistency across all artifacts: specification.md → design.md → tasks.json → module file → build-report.md → test-report.md → review-report.md → verification-report.md
 
 ---
 
-## Final Consistency Verdict
+## Artifact Consistency Matrix
 
-| Dimension | Status |
-|---|---|
-| Spec-completeness | ✅ All 7 requirements addressed |
-| Design-implementation alignment | ✅ All 7 components checked |
-| Review-verification agreement | ✅ Zero contradictions in 17 claims |
-| Acceptance criteria coverage | ✅ 7/7 PASS with evidence chains |
-| No unaddressed specification gaps | ✅ None found |
+| Artifact | Exists | Aligns with Spec | Aligns with Design | Aligns with Tasks |
+|----------|--------|------------------|-------------------|-------------------|
+| specification.md | ✅ | — | ✅ | ✅ |
+| design.md | ✅ | ✅ | — | ✅ |
+| tasks.json | ✅ | ✅ | ✅ | — |
+| magic-purple-stage-orientation.mdx | ✅ | ✅ | ✅ | ✅ |
+| build-report.md | ✅ | ✅ | ✅ | ✅ |
+| test-report.md | ✅ | ✅ | ✅ | ✅ |
+| review-report.md | ✅ | ✅ | ✅ | ✅ |
+| verification-report.md | ✅ | ✅ | ✅ | ✅ |
 
-## Result
-**PASS** — specification, design, build, test, review, and verification artifacts are mutually consistent. No contradictions. No gaps. Continue to Phase 5 (Delivery Preparation).
+---
+
+## Detailed Cross-Checks
+
+### 1. Specification ↔ Specification → Module File (All 12 ACs traced)
+
+| Spec AC | Module Implementation | Consistent |
+|---------|----------------------|------------|
+| AC1: File exists, 13 sections | File at `docs/modules/magic-purple-stage-orientation.mdx`, 13 sections | ✅ |
+| AC2: Frontmatter complete, no `# ` heading | 100% frontmatter compliance; zero `# ` in body | ✅ |
+| AC3: Introduction frames as educational/facilitator | "Position in sequence: educational/facilitator-oriented" | ✅ |
+| AC4: AQAL Mapping 5 dimensions | Quadrants, Levels, Lines, States, Types all populated | ✅ |
+| AC5: Four framework lenses | Spiral Dynamics Purple, Gebser magic, Attachment, Polyvagal | ✅ |
+| AC6: Gifts 5+, no hedging, sincere-reader test | 5 gifts; zero hedging words in Gifts section | ✅ |
+| AC7: Limitations structural + Pre/Trans | 3 structural + dedicated Pre/Trans table | ✅ |
+| AC8: Practice Tier 1, duration, numbered | 10-15 min, 5 prompts, journaling only | ✅ |
+| AC9: Evidence 6+, 4+ Tier A/B, polyvagal caveat | 8 citations, 8 Tier A/B, polyvagal Tier B + caveat | ✅ |
+| AC10: Safety Tier 1, educational, stop rules | Tier 1 template with all required elements | ✅ |
+| AC11: Build passes | `npm run build` → SUCCESS | ✅ |
+| AC12: Module in sidebar/graph | Content graph: 76 modules (was 75) | ✅ |
+
+### 2. Design → Module File (Architecture Compliance)
+
+| Design Element | Module Implementation | Consistent |
+|----------------|----------------------|------------|
+| Template: amber-mythic-orientation.mdx | Exact structural match | ✅ |
+| Component imports: ModuleFooter, RetrievalPrompt, Admonition, ModuleMeta | All 4 imported and used | ✅ |
+| Hybrid framing (MM-00) | Introduction states "educational/facilitator-oriented" | ✅ |
+| No somatic instruction (Tier 1 constraint) | Practice = journaling only | ✅ |
+| Pre/Trans note required | Dedicated subsection with comparison table | ✅ |
+| Vocabulary discipline (Magenta/Purple) | Gifts/Limitations use tribe, ritual, belonging, story | ✅ |
+| Structural framing for limitations | "Because Purple locates identity in the tribe..." | ✅ |
+
+### 3. Tasks → Execution (All 18 tasks traced)
+
+| Task | Status | Output Verified |
+|------|--------|-----------------|
+| mm-01-1: Load skills | Done | Skills loaded in session |
+| mm-01-2: Frontmatter | Done | Frontmatter matches template |
+| mm-01-3: Introduction | Done | Hybrid framing present |
+| mm-01-4: AQAL Mapping | Done | 5 dimensions populated |
+| mm-01-5: Frameworks | Done | 4 lenses with subsections |
+| mm-01-6: Gifts | Done | 5 items, no hedging |
+| mm-01-7: Limitations + Pre/Trans | Done | 3 structural + table |
+| mm-01-8: Practice | Done | Tier 1, 10-15 min, 5 steps |
+| mm-01-9: Reflect | Done | 5 prompts, no somatic |
+| mm-01-10: Assess | Done | 5 criteria, threshold stated |
+| mm-01-11: Integrate | Done | 4 activities, behavioral |
+| mm-01-12: Facilitator Note | Done | In Admonition with framing/structure/watch-fors/adaptations |
+| mm-01-13: Anki Cards | Done | 8 cards via RetrievalPrompt |
+| mm-01-14: Retrieval Schedule | Done | 4 intervals, escalating |
+| mm-01-15: Evidence | Done | 8 citations, 8 Tier A/B, polyvagal caveat |
+| mm-01-16: Safety Note | Done | Tier 1 template complete |
+| mm-01-17: Self-audit | Done | All checklist items confirmed |
+| mm-01-18: Build verification | Done | `npm run build` PASS |
+
+### 4. Test Report → Module (Evidence-Backed)
+
+| Test Report Claim | Module Evidence | Verified |
+|-------------------|----------------|----------|
+| 13 sections present | 11 `##` + Safety Note + Facilitator Note | ✅ |
+| Frontmatter 100% | validate-frontmatter: 76/76 | ✅ |
+| 8 citations, 8 Tier A/B | Evidence table rows | ✅ |
+| Polyvagal Tier B caveat | "contested in neuroscience literature (Grossman & Taylor, 2007; Beauchaine, 2015)" | ✅ |
+| 8 Anki cards | `grep -c "{q:"` = 8 | ✅ |
+| Safety Tier 1 | Safety Note block | ✅ |
+
+### 5. Review Report → Module (Findings Consistent)
+
+| Review Finding | Module Evidence | Consistent |
+|----------------|----------------|------------|
+| Spec compliance: PASS | All 12 ACs verified | ✅ |
+| Design compliance: PASS | Template matched, components used | ✅ |
+| Evidence vetting: PASS | 8/8 Tier A/B, polyvagal caveat | ✅ |
+| Safety Tier 1: PASS | No Tier 2 triggers in Practice | ✅ |
+| Vocabulary: PASS | Gifts/Limitations use Magenta vocab | ✅ |
+| Gold standard: PASS | 13 sections, all checklist items | ✅ |
+| Docusaurus: PASS | Build succeeds, no broken anchors in this module | ✅ |
+
+### 6. Verification Report → All Artifacts (Evidence-Backed)
+
+| Verification Claim | Source Artifact | Verified |
+|--------------------|----------------|----------|
+| All claims in build-report verified | Module file | ✅ |
+| All claims in test-report verified | Module file + test commands | ✅ |
+| All claims in review-report verified | Module file | ✅ |
+| No false claims found | Cross-check of all reports | ✅ |
+
+---
+
+## Inconsistencies Found
+
+| Severity | Inconsistency | Resolution |
+|----------|--------------|------------|
+| None | — | — |
+
+---
+
+## Cross-Validation Decision
+
+**PASS** — All artifacts are mutually consistent. The module file faithfully implements the specification, follows the design, completes all tasks, passes all tests, satisfies review criteria, and all claims are evidence-verified.
+
+No conflicts, gaps, or contradictions detected across the 8-artifact chain.

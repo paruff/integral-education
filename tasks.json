@@ -1,1 +1,128 @@
-[{"id":"cont-01-1","description":"Add causal caveat to emotional-granularity.md","type":"code","test_type":"unit"},{"id":"cont-01-2","description":"Fix Dunning-Kruger definition in cognitive-bias-101.md","type":"code","test_type":"unit"},{"id":"cont-01-3","description":"Build verification","type":"verification","test_type":"integration"}]
+[
+  {
+    "id": "mm-01-1",
+    "description": "Load and internalize all required skills: module-authoring (13-section gold standard), safety-classification (Tier 1 vs Tier 2 boundaries, Pre/Trans note), developmental-vocabulary (Magenta/Purple word substitution, sincere-reader test), evidence-vetting (tier-rating system, polyvagal caveat rule), docusaurus-conventions (MDX components). Read amber-mythic-orientation.mdx as structural template.",
+    "type": "analysis",
+    "test_type": "unit",
+    "depends_on": []
+  },
+  {
+    "id": "mm-01-2",
+    "description": "Write module frontmatter matching Amber template pattern: id, title, sidebar_label, description, quadrants, level, lines, states, types, tags, difficulty, readingTime, practiceTime, prerequisites, line. Use 'magic-purple-stage-orientation' as id.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-1"]
+  },
+  {
+    "id": "mm-01-3",
+    "description": "Write introduction with hybrid framing: educational content about this developmental stage, useful for facilitators and adults recognizing Magic-stage patterns in themselves. Include position-in-sequence statement.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-2"]
+  },
+  {
+    "id": "mm-01-4",
+    "description": "Write Section 1 (AQAL Mapping): all 5 dimensions (Quadrants, Levels, Lines, States, Types) populated. Emphasize We (collective interior) and Its (collective exterior — the land, the tribe). Growing Up path included.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-3"]
+  },
+  {
+    "id": "mm-01-5",
+    "description": "Write Section 2 (Theoretical Frameworks): four lenses — Spiral Dynamics Purple, Gebser magic structure, attachment theory (secure base / co-regulation), polyvagal-informed states (with Tier B caveat per evidence-vetting).",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-3"]
+  },
+  {
+    "id": "mm-01-6",
+    "description": "Write Section 3 (Gifts): 5+ items covering belonging, ritual, participation with living world, felt safety in tribe, meaning through story/repetition. Zero hedging language. Pass sincere-reader test (read as sincere Magenta-stage person).",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-5"]
+  },
+  {
+    "id": "mm-01-7",
+    "description": "Write Section 4 (Limitations / Shadows): structurally framed (no contempt language). Cover undifferentiated self/other boundary, magical causality, vulnerability to manipulation. Include Pre/Trans fallacy note.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-6"]
+  },
+  {
+    "id": "mm-01-8",
+    "description": "Write Section 5 (Practice): Tier 1 only — education + journaling. Duration 10–15 minutes. Numbered steps. No somatic instruction, no shadow work, no identity disruption. Named 'Magic-Stage Recognition Practice' or similar.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-7"]
+  },
+  {
+    "id": "mm-01-9",
+    "description": "Write Section 6 (Reflect): 5+ prompts. Cognitive/reflective only (no somatic check-in prompts — stay Tier 1). Mix journaling and dialogue prompts.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-8"]
+  },
+  {
+    "id": "mm-01-10",
+    "description": "Write Section 7 (Assess): rubric with 3–6 behavioral criteria, passing threshold. Criteria focused on understanding and recognition skills, not practice execution.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-9"]
+  },
+  {
+    "id": "mm-01-11",
+    "description": "Write Section 8 (Integrate): 3+ activities tied to existing daily moments, behavioral not conceptual.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-10"]
+  },
+  {
+    "id": "mm-01-12",
+    "description": "Write Section 9 (Facilitator Note): proper framing for groups, adaptation notes for facilitators and non-Magenta audiences. Following Amber module's facilitator note pattern.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-8"]
+  },
+  {
+    "id": "mm-01-13",
+    "description": "Write Section 10 (Anki Cards): 8+ Q&A pairs via RetrievalPrompt component. Mix matching: definition, application, distinction. Cover full module, not just frameworks.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-11"]
+  },
+  {
+    "id": "mm-01-14",
+    "description": "Write Section 11 (Retrieval Schedule): 4 intervals, escalating from recall to application.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-13"]
+  },
+  {
+    "id": "mm-01-15",
+    "description": "Write Section 12 (Evidence and Citations): 6+ sources, 4+ Tier A/B, polyvagal Tier B Player with contested-mechanisms caveat, APA 7th format.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-5"]
+  },
+  {
+    "id": "mm-01-16",
+    "description": "Write Section 13 (Safety Note): Tier 1 template. Educational, not therapeutic. Stop rules. Grounding: feet on floor, name 5 things, slow breaths at settling pace.",
+    "type": "code",
+    "test_type": "unit",
+    "depends_on": ["mm-01-8"]
+  },
+  {
+    "id": "mm-01-17",
+    "description": "Self-audit: 13-section checklist, vocabulary check (no contempt language, audience-appropriate framing), Pre-Club check, no therapeutic claims, no # heading in body.",
+    "type": "verification",
+    "test_type": "unit",
+    "depends_on": ["mm-01-2", "mm-01-3", "mm-01-4", "mm-01-5", "mm-01-6", "mm-01-7", "mm-01-8", "mm-01-9", "mm-01-10", "mm-01-11", "mm-01-12", "mm-01-13", "mm-01-14", "mm-01-15", "mm-01-16"]
+  },
+  {
+    "id": "mm-01-18",
+    "description": "Build verification: npm run build must pass with no errors or warnings for this module.",
+    "type": "verification",
+    "test_type": "live-system",
+    "depends_on": ["mm-01-17"]
+  }
+]

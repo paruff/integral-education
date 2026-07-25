@@ -15,9 +15,6 @@ line: interpersonal
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 
-
-**Position in sequence:** This is the first module in the **Interpersonal Line** suite (EI-08). It provides the theoretical and experiential foundation for all subsequent Interpersonal Line modules. No prerequisites are required, though familiarity with the [AQAL Overview](../maps/aqal-overview) is helpful. Learners who have completed [Emotional Line Overview & Orientation](./emotional-line-overview-orientation) or [Self Line Overview & Psychograph](./self-line-overview-psychograph) will find this module deepens and differentiates those foundations into the relational domain specifically.
-
 ---
 
 ## 🗺️ AQAL Mapping
@@ -34,7 +31,29 @@ import ModuleFooter from '@site/src/components/ModuleFooter';
 
 ---
 
-## Theoretical Frameworks
+## 🧭 Orient
+
+:::info Before this module
+No prerequisites are required, though familiarity with the [AQAL Overview](../maps/aqal-overview) is helpful. Learners who have completed [Emotional Line Overview & Orientation](./emotional-line-overview-orientation) or [Self Line Overview & Psychograph](./self-line-overview-psychograph) will find this module deepens and differentiates those foundations into the relational domain specifically.
+:::
+
+**Position in sequence:** This is the first module in the **Interpersonal Line** suite (EI-08). It provides the theoretical and experiential foundation for all subsequent Interpersonal Line modules.
+
+Understanding this line matters because interpersonal capacity is not the same thing as emotional warmth or cognitive sophistication — a person can be highly articulate and deeply caring and still lack the structural capacity to hold a self-authored position under real relational pressure. This module gives you the map for locating where your own relational range currently sits.
+
+## 🌿 Encounter
+
+Notice, before any framework names it, how differently relationships actually land. Some conversations feel effortless — disagreement moves through without threat, closeness deepens without either person disappearing into it. Others feel like walking on a surface that could give way at any moment: a raised voice, a withdrawn tone, a hint of disapproval, and the ground shifts.
+
+This variability is not simply a matter of who you're talking to, or how good your communication skills are. The same person can feel securely met by one relationship and thrown into anxious scrambling by another that touches a different structural edge. What changes is not your intelligence or your good intentions — it's the underlying capacity available to you in that particular relational terrain.
+
+What follows gives this everyday experience a structure: why some relational patterns feel automatic and untouchable while others feel freely chosen, and what actually has to develop for that to change.
+
+## 🧠 Learn
+
+The five frameworks below approach interpersonal development from constructive-developmental, attachment, philosophical, interpersonal-neurobiological, and AQAL angles. Together they explain both the structural logic of relational capacity and its stage-by-stage arc.
+
+## Five Framework Lenses: The Interpersonal Line
 
 **1. Kegan's Subject–Object Theory (Constructive Developmentalism)**
 
@@ -70,7 +89,7 @@ The Interpersonal line develops primarily in the Lower-Left (LL) quadrant — th
 
 ---
 
-## Gifts
+## The Gifts of Interpersonal Development
 
 ### Relational Perception
 
@@ -98,7 +117,7 @@ Interpersonal development includes the structural understanding of how trust is 
 
 ---
 
-## Limitations and Shadows
+## The Developmental Limitations and Shadows of Interpersonal Development
 
 ### The Shadow of Imperial Altitude
 

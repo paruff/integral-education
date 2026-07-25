@@ -22,8 +22,7 @@ tags:
 difficulty: Beginner
 readingTime: 10
 practiceTime: 12
-prerequisites:
-- rational-orange-orientation
+prerequisites: None
 line: emotional
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';

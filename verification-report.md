@@ -1,4 +1,4 @@
-# Verification Report — UX-19
+# Verification Report — MOD-01
 
 ## Verification Result: PASS
 
@@ -8,14 +8,14 @@ All claims from build-report.md, test-report.md, and review-report.md verified a
 
 | # | Claim | Evidence | Result |
 |---|-------|----------|--------|
-| 1 | Personal → Integral: "3–6 weeks" | `grep "3–6 weeks" src/pages/index.js` → found on card line | verified_true |
-| 2 | Amber → Rational: "10–20 weeks" | `grep "10–20 weeks" src/pages/index.js` → found on card line | verified_true |
-| 3 | Interpersonal: "4–6 weeks" | `grep "4–6 weeks" src/pages/index.js` → found on card line | verified_true |
-| 4 | Emotional: "3–5 weeks" | `grep "3–5 weeks" src/pages/index.js` → found on card line | verified_true |
-| 5 | Consistent "Time commitment:" label | `grep "Time commitment:" src/pages/index.js` → 4 matches (one per card) | verified_true |
-| 6 | No "Estimated time:" labels remain | `grep "Estimated time" src/pages/index.js` → 0 matches | verified_true |
-| 7 | Only index.js modified | `git diff --name-only` → only `src/pages/index.js` and report files | verified_true |
-| 8 | Values match QuickStart pages | All 4 cross-referenced against QuickStart source files | verified_true |
+| 1 | Mindfulness Basics prereq = None | `grep 'prerequisites: None' docs/modules/mindfulness-basics.md` — matched | verified_true |
+| 2 | Mindfulness Deepening difficulty = Intermediate | `grep 'difficulty: Intermediate' docs/modules/mindfulness-deepening.mdx` — matched | verified_true |
+| 3 | Emotional Granularity prereq = None | `grep 'prerequisites: None' docs/modules/emotional-granularity.md` — matched | verified_true |
+| 4 | Gross State Awareness prereq = None | `grep 'prerequisites: None' docs/modules/gross-state-awareness.mdx` — matched | verified_true |
+| 5 | Flow Peak Experience prereq = None | `grep 'prerequisites: None' docs/modules/flow-peak-experience.mdx` — matched | verified_true |
+| 6 | Subtle State Access prereq = None | `grep 'prerequisites: None' docs/modules/subtle-state-access.mdx` — matched | verified_true |
+| 7 | Only 6 module files modified | `git diff --name-only` shows 6 module files + report/feature files | verified_true |
+| 8 | No other module frontmatter changed | Checked: no other Beginner module has rational-orange prereq | verified_true |
 
 ## Unverified / False Claims
 

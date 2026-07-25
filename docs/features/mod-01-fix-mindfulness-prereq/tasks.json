@@ -1,0 +1,34 @@
+{
+  "issue": "#419",
+  "title": "MOD-01: Fix Mindfulness Basics prerequisite mismatch",
+  "tasks": [
+    {
+      "id": "mod-01-01",
+      "description": "Fix Mindfulness Basics prerequisites: remove rational-orange-orientation, set to None",
+      "acceptance_criteria": ["AC-01"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "mod-01-02",
+      "description": "Fix Mindfulness Deepening difficulty: change from Beginner to Intermediate to match its prereq",
+      "acceptance_criteria": ["AC-02"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "mod-01-03",
+      "description": "Verify no other module frontmatter was modified",
+      "acceptance_criteria": ["AC-03"],
+      "test_type": "integration",
+      "depends_on": ["mod-01-01", "mod-01-02"]
+    },
+    {
+      "id": "mod-01-04",
+      "description": "Verify npm run build passes",
+      "acceptance_criteria": ["AC-04"],
+      "test_type": "build",
+      "depends_on": ["mod-01-03"]
+    }
+  ]
+}

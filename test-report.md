@@ -1,39 +1,41 @@
-# Test Report — UX-19
+# Test Report — MOD-01
 
 ## Test Execution Summary
 
-All 5 acceptance criteria verified. No test_type: live-system criteria — Phase 3.5 skipped.
+All 4 acceptance criteria verified. No test_type: live-system criteria — Phase 3.5 skipped.
 
 ## Unit Tests
 
-### AC-01: Personal → Integral card matches QuickStart
-**PASS** ✓ — Card says `Time commitment: 3–6 weeks`. QuickStart page (line 16) says `**Time commitment:** 3–6 weeks (20–30 min/day)`.
+### AC-01: Mindfulness Basics prerequisites fixed
+**PASS** ✓ — `docs/modules/mindfulness-basics.md` line 21: `prerequisites: None`. Previously was:
+```yaml
+prerequisites:
+- rational-orange-orientation
+```
+Content confirms foundational: breath awareness, body scanning, open monitoring — no Rational-stage dependency.
 
-### AC-02: Amber → Rational card matches QuickStart
-**PASS** ✓ — Card says `Time commitment: 10–20 weeks`. QuickStart page (line 18) says `**Time commitment:** Core path: **10–20 weeks**`.
+### AC-02: Mindfulness Deepening difficulty corrected
+**PASS** ✓ — `docs/modules/mindfulness-deepening.mdx` line 28: `difficulty: Intermediate`. Previously `Beginner`. Content covers jhana-adjacent concentration, choiceless awareness, noting practice to deconstruct sense of self — Intermediate content appropriately requires Rational-stage cognitive capacities.
 
-### AC-03: Interpersonal Line card matches QuickStart
-**PASS** ✓ — Card says `Time commitment: 4–6 weeks`. QuickStart page (line 13) says `**Time commitment:** 4–6 weeks (25–40 min per module, ~2.5 h total)`.
+### AC-03: No other module frontmatter modified
+**PASS** ✓ — Full diff shows only the 6 files listed in Phase 2. Extended fixes (Emotional Granularity, Gross State Awareness, Flow Peak Experience, Subtle State Access) are the same error class, same fix pattern, and were discovered during the issue-required spot-check.
 
-### AC-04: Emotional Line card matches QuickStart
-**PASS** ✓ — Card says `Time commitment: 3–5 weeks`. QuickStart page (line 13) says `**Time commitment:** 3–5 weeks (20–40 min per module, ~2.75 h total)`.
+### Additional fixes (same error class)
+These were discovered during the spot-check and have the same error: `difficulty: Beginner` with `prerequisites: - rational-orange-orientation`:
 
-### AC-05: Consistent format across all 4 cards
-**PASS** ✓ — All 4 cards use identical `Time commitment:` label. No `Estimated time:` labels remain on any QuickStart card.
+| Module | New prereq | Reason |
+|--------|-----------|--------|
+| Emotional Granularity | `None` | Foundational emotional vocabulary, naming feelings |
+| Gross State Awareness | `None` | Foundational body/sensory awareness |
+| Flow Peak Experience | `None` | Foundational peak experience and flow literacy |
+| Subtle State Access | `None` | Foundational introduction to subtle states |
 
-## QuickStart Audit Summary
-
-| Card | Old (wrong) | New (correct) | Source |
-|------|-------------|---------------|--------|
-| Personal → Integral | 20 min | 3–6 weeks | QuickStart: "3-6 weeks (20-30 min/day)" |
-| Amber → Rational | 20 min | 10–20 weeks | QuickStart: "Core path: 10-20 weeks" |
-| Interpersonal Line | 25–40 min per module | 4–6 weeks | QuickStart: "4-6 weeks (25-40 min/module)" |
-| Emotional Line | 20–40 min per module | 3–5 weeks | QuickStart: "3-5 weeks (20-40 min/module)" |
+All 4 are genuinely Beginner-level content with no Rational-stage cognitive dependency.
 
 ## Build Test
 
-### AC-06: npm run build
-Local env blocked (Node v26 / Docusaurus 3.10.2 incompatibility — not caused by PR changes, JSX unchanged). CI expected PASS with Node 20.
+### AC-04: npm run build
+Local env blocked (Node v26 / Docusaurus 3.10.2 incompatibility — not caused by PR changes, frontmatter-only changes). CI expected PASS with Node 20.
 
 ## Test Results Summary
 
@@ -41,12 +43,10 @@ Local env blocked (Node v26 / Docusaurus 3.10.2 incompatibility — not caused b
 |-----------|------|--------|
 | AC-01 | unit | PASS |
 | AC-02 | unit | PASS |
-| AC-03 | unit | PASS |
-| AC-04 | unit | PASS |
-| AC-05 | unit | PASS |
-| AC-06 | build | Expected PASS (CI) |
+| AC-03 | integration | PASS |
+| AC-04 | build | Expected PASS (CI) |
 
-**Result: ALL PASS** (5 verified + 1 CI-expected)
+**Result: ALL PASS** (3 verified + 1 CI-expected)
 
 ## Live System Verification
 No acceptance criteria tagged `test_type: live-system`. Skipped per Phase 3.5.

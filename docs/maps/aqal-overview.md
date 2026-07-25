@@ -152,6 +152,7 @@ Use this lens when it improves learner accessibility:
 - [Choose a QuickStart →](../quickstarts/personal-to-integral) — a curated learning path based on where you are right now
 - [Explore the Competency Map →](./aqal-competency-map) — see how skills map across quadrants and levels
 - [Not sure where to begin? →](../quickstarts/personal-to-integral) — a broad starting point that meets you where you are
+- [What this platform can and cannot do →](../about/what-this-platform-does) — an honest evidence-grounded statement about what the platform supports and what it does not claim
 
 ## Resources
 

@@ -97,10 +97,16 @@
   text-decoration: none;
 }
 
+.secondaryCta:focus-visible {
+  outline: 2px solid var(--ifm-color-white);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .scaleStat {
   text-align: center;
   font-size: 0.85rem;
-  color: var(--ifm-color-emphasis-600);
+  color: #6c757d;
   margin: 1rem auto;
   max-width: 600px;
   line-height: 1.5;

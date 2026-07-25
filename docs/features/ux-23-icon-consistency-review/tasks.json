@@ -1,0 +1,28 @@
+[
+  {
+    "id": "T1",
+    "title": "Standardize inconsistent heading emoji across all module files",
+    "description": "Replace 7 inconsistent emoji patterns with the standard emoji across all affected module MD/MDX files.",
+    "dependencies": [],
+    "files": [],
+    "acceptance_criteria": [
+      { "id": "AC-1", "description": "🔗 Integrate → 🔄 Integrate in all 29 affected files", "test_type": "unit" },
+      { "id": "AC-2", "description": "📚 Learn → 🧠 Learn in all 17 affected files", "test_type": "unit" },
+      { "id": "AC-3", "description": "🧲 Stabilize → ⚓ Stabilize in all 27 affected files", "test_type": "unit" },
+      { "id": "AC-4", "description": "🧘 Reflect → 🔍 Reflect in all 7 affected files", "test_type": "unit" },
+      { "id": "AC-5", "description": "🚨 When to Seek Support → 🆘 When to Seek Support in both affected files", "test_type": "unit" },
+      { "id": "AC-6", "description": "🔍 Encounter → 🌿 Encounter in all 20 affected files", "test_type": "unit" },
+      { "id": "AC-7", "description": "🗺️ AQAL Mapping in all 9 files missing the emoji", "test_type": "unit" }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Verify build passes",
+    "description": "Run `npm run build` to confirm no compilation errors from changes.",
+    "dependencies": ["T1"],
+    "files": [],
+    "acceptance_criteria": [
+      { "id": "AC-8", "description": "`npm run build` succeeds", "test_type": "integration" }
+    ]
+  }
+]

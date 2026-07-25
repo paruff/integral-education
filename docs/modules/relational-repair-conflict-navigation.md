@@ -34,7 +34,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | This module's focus |
 | :--- | :--- |
@@ -221,7 +221,7 @@ Use this five-point scale to self-assess your current capacity in each area:
 
 ---
 
-## 🔗 Integrate
+## 🔄 Integrate
 
 This module's practices prepare the *interior* of repair — the self-awareness and communication clarity needed to enter a repair conversation. Integration happens in the actual relational encounter.
 

@@ -1,33 +1,32 @@
-# Review Report — UX-22
+# Review Report — UX-23-REV
 
 ## Review Result: APPROVED
 
 ### Correctness
 | Check | Result | Notes |
 |---|---|---|
-| Implementation matches spec | ✓ PASS | All 5 ACs satisfied |
-| Implementation matches design | ✓ PASS | safety_tier frontmatter + TIER badge per design |
-| Tier classification accuracy | ✓ PASS | All 17 modules use CrisisResourceBanner or ShadowGate → correctly classified as Tier 2 |
+| Implementation matches spec | ✓ PASS | All 8 ACs satisfied; all 7 inconsistency patterns fixed |
+| Audit accuracy | ✓ PASS | All 7 patterns confirmed as genuine inconsistencies before fixing |
 
 ### Scope
 | Check | Result | Notes |
 |---|---|---|
-| No unnecessary changes | ✓ PASS | Only designated files changed |
-| ModuleMeta unchanged for non-tiered modules | ✓ PASS | Tier 1 modules have no `safety_tier` → badge not rendered |
+| No unnecessary changes | ✓ PASS | Only emoji substitutions in headings; no content, CSS, or component changes |
+| No scope creep | ✓ PASS | Issue was audit-first; inconsistencies found and fixed per spec |
 
 ### Maintainability
 | Check | Result | Notes |
 |---|---|---|
-| Follows existing badge pattern | ✓ PASS | Uses same `.badge`, `.icon`, `.label`, `.value` classes and CSS custom property pattern |
-| Extensible to Tier 3 | ✓ PASS | TIER_CONFIG supports tier 3; condition `>= 2` includes tier 3 |
-| Accessibility | ✓ PASS | Badge includes text label ("2 · Guided"), not color alone |
+| Visual language consistency | ✓ PASS | Every concept now uses the same emoji site-wide: 🧠 Learn, 🌿 Encounter, 🔄 Integrate, ⚓ Stabilize, 🔍 Reflect, 🆘 Support, 🗺️ AQAL Mapping |
+| No new patterns introduced | ✓ PASS | Only replaced existing emoji with the more-used variant |
 
 ### Risk
 | Check | Result | Notes |
 |---|---|---|
-| Security | ✓ NONE | Frontmatter + UI badge only |
-| Performance | ✓ NONE | No runtime overhead beyond existing badge logic |
-| Breaking changes | ✓ NONE | No existing code paths modified; new field optional |
+| Security | ✓ NONE | Emoji in markdown headings only |
+| Performance | ✓ NONE | No runtime impact |
+| Breaking changes | ✓ NONE | No anchor links broken (emoji in heading anchors handled by Docusaurus) |
+| Build | ✓ PASS | `npm run build` succeeds |
 
 ## Recommendation
 **APPROVED** — proceed to Verification.

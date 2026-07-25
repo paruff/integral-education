@@ -31,7 +31,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | This module's focus |
 | :--- | :--- |
@@ -178,7 +178,7 @@ Co-regulation breaks down predictably when: (a) one party is chronically dysregu
 
 ---
 
-## 🧲 Stabilize
+## ⚓ Stabilize
 
 ### Co-regulation Is Not Emotional Merger
 

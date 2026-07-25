@@ -41,7 +41,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | This module's focus |
 |:---|:---|
@@ -204,7 +204,7 @@ Write brief responses to each of the following:
 
 ---
 
-## 🧲 Stabilize
+## ⚓ Stabilize
 
 ### Verification Is Not Interrogation
 

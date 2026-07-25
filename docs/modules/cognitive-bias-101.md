@@ -76,7 +76,7 @@ Key biases to know:
 
 ---
 
-## 🔗 Integrate
+## 🔄 Integrate
 
 Apply this in real life:
 - Pause before forming conclusions and ask: *Am I being systematic?*

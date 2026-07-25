@@ -91,7 +91,7 @@ The goal is not to eliminate shadow — it's to make the unconscious conscious.
 
 ---
 
-## 🔗 Integrate
+## 🔄 Integrate
 
 Apply this in real life:
 - When criticized, ask: "Is there truth here I'm resisting?"

@@ -22,7 +22,7 @@ practiceTime: 25
 line: interpersonal
 ---
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | This module's focus |
 |-----------|---------------------|

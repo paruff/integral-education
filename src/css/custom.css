@@ -47,6 +47,11 @@
   color: var(--ifm-color-white);
 }
 
+.homepage-primary-cta:focus-visible {
+  outline: 2px solid var(--ifm-color-primary-darker);
+  outline-offset: 2px;
+}
+
 .navbar-start-here {
   background-color: rgba(var(--ifm-color-primary-rgb), 0.12);
   background-color: color-mix(in srgb, var(--ifm-color-primary) 12%, transparent);
@@ -173,6 +178,28 @@
 }
 
 /* ─── WCAG contrast fixes (UX-17) ──────────────────────────────────────── */
+
+/* ─── link-in-text-block: links in body text need a non-color indicator ── */
+/*     forest green #1a6b3c has only 2.55:1 contrast with surrounding #1c1e21 body text. */
+/*     Underline provides the required non-color distinction. */
+article p a,
+article li a,
+article span a,
+main p a,
+main li a,
+main span a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+article p a:hover,
+article li a:hover,
+article span a:hover,
+main p a:hover,
+main li a:hover,
+main span a:hover {
+  text-decoration-thickness: 2px;
+}
 
 /* Active breadcrumb: #2e8555 on #f2f2f2 = 4.07:1 → use darker green */
 .breadcrumbs__item--active .breadcrumbs__link {

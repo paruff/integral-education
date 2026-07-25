@@ -1,0 +1,119 @@
+[
+  {
+    "id": "T1",
+    "title": "Run axe-core WCAG AA audit",
+    "description": "Build site, serve on port 3099, run scripts/audit-a11y.mjs against all 7 pages, capture violations.",
+    "dependencies": [],
+    "files": ["scripts/audit-a11y.mjs"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "axe-core reports zero WCAG 2.1 A/AA violations across all 7 audited pages",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Run Lighthouse accessibility scan",
+    "description": "Run scripts/lighthouse-score.mjs for accessibility category, capture scores for all 7 pages.",
+    "dependencies": ["T1"],
+    "files": ["scripts/lighthouse-score.mjs"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-2",
+        "description": "Lighthouse accessibility score is >= 90 on all scored pages",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "T3",
+    "title": "Manual keyboard focus state audit",
+    "description": "Review CSS for :focus-visible styles on all interactive elements. Check links, buttons, form inputs, nav items. Identify any missing focus indicators.",
+    "dependencies": ["T1"],
+    "files": ["src/css/custom.css", "src/pages/index.module.css", "src/components/*/styles.module.css"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-3",
+        "description": "All interactive elements have a visible focus indicator when keyboard-navigated",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T4",
+    "title": "Manual color contrast verification",
+    "description": "Check forest green #1a6b3c against all CSS backgrounds where it appears as text color. Verify 4.5:1 for normal text, 3:1 for large text.",
+    "dependencies": ["T1"],
+    "files": ["src/css/custom.css", "src/pages/index.module.css", "src/components/ModuleMeta/styles.module.css", "src/components/NextStep/styles.module.css"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-4",
+        "description": "Primary-green text passes WCAG AA contrast minimums in all tested contexts",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T5",
+    "title": "Verify safety-tier badge does not rely on color alone",
+    "description": "Check ModuleMeta TIER badge renders both icon and text label. Confirm information is available without relying on color perception.",
+    "dependencies": ["T1"],
+    "files": ["src/components/ModuleMeta/index.js"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-5",
+        "description": "Safety-tier TIER badge renders both text label and icon",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T6",
+    "title": "Remediate all findings",
+    "description": "Fix any violations, missing focus states, or contrast issues identified in T1-T5. Document each fix with file, change, and rationale.",
+    "dependencies": ["T1", "T2", "T3", "T4", "T5"],
+    "files": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC-6",
+        "description": "All findings are documented in build-report.md with remediation applied and verified",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T7",
+    "title": "Re-run audit to confirm zero violations",
+    "description": "Re-run axe-core and Lighthouse after remediation. Must produce zero violations and scores >= 90.",
+    "dependencies": ["T6"],
+    "files": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "axe-core reports zero WCAG 2.1 A/AA violations across all 7 audited pages (post-remediation)",
+        "test_type": "integration"
+      },
+      {
+        "id": "AC-2",
+        "description": "Lighthouse accessibility score >= 90 on all scored pages (post-remediation)",
+        "test_type": "integration"
+      }
+    ]
+  },
+  {
+    "id": "T8",
+    "title": "Verify build passes",
+    "description": "Run npm run build to confirm no compilation errors after all changes.",
+    "dependencies": ["T6"],
+    "files": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC-7",
+        "description": "npm run build succeeds",
+        "test_type": "integration"
+      }
+    ]
+  }
+]

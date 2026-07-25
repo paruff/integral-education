@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T21:33:48.817Z",
+  "generated": "2026-07-25T21:38:42.881Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,17 +49,17 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 5,
+      "full": 6,
       "total": 77,
-      "percentage": 6
+      "percentage": 8
     },
     "journeyStepGaps": {
-      "orient": 22,
+      "orient": 23,
       "encounter": 29,
-      "learn": 25,
-      "stabilize": 22,
+      "stabilize": 23,
+      "learn": 21,
       "integrate": 11,
-      "retrieval schedule": 36,
+      "retrieval schedule": 37,
       "frameworks": 58,
       "gifts": 64,
       "facilitator note": 63,
@@ -67,7 +67,7 @@
       "reflect": 12,
       "assess": 3,
       "aqal mapping": 5,
-      "evidence": 21,
+      "evidence": 20,
       "practice": 4
     },
     "orphanModules": 0,
@@ -1383,19 +1383,13 @@
         "organizational-design",
         "developmental-leadership"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 24,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "learn",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "integral-ethics-beyond-relativism",

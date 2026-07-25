@@ -23,6 +23,9 @@ function HomepageHeader() {
         <p className={styles.rigorSignal}>
           Built on peer-reviewed developmental psychology — Kegan, Cook-Greuter, Kohlberg — with every claim tiered by evidence quality, not just integral theory retold.
         </p>
+        <p className={styles.rigorSignal}>
+          We hold ourselves to the same evidence standard: <Link to="/docs/about/what-this-platform-does">what this platform can and cannot do</Link>, grounded in population-level developmental research.
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--lg button--secondary"
@@ -92,9 +95,6 @@ export default function Home() {
         </section>
         <p className={styles.scaleStat}>
           75 modules · 7 developmental lines · Evidence-tiered citations throughout
-        </p>
-        <p className={styles.rigorSignal} style={{ marginTop: '1rem', fontSize: '0.9rem' }}>
-          We hold ourselves to the same evidence standard: <Link to="/docs/about/what-this-platform-does">what this platform can and cannot do</Link>, grounded in population-level developmental research.
         </p>
         <section className="container homepage-section">
           <h2>🧭 QuickStarts</h2>

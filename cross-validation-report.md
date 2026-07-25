@@ -1,4 +1,4 @@
-# Cross-Validation Report — LINES-SYNTH-01
+# Cross-Validation Report — EFFICACY-01
 
 ## Cross-Validation Result: PASS
 
@@ -10,50 +10,47 @@ All artifacts are mutually consistent with each other and with the original spec
 
 | Specification Requirement | Build Implementation | Match |
 |---------------------------|---------------------|-------|
-| Synthesis page at `docs/maps/line-profile-overview.md` | File created at correct path | ✓ |
-| Stages-vs-lines distinction with AQAL link | "Stages vs. Lines" section links to `#skills-lines` and `#depth-levels` | ✓ |
-| Seven lines with one-sentence descriptions | Table with name, description, overview link | ✓ |
-| Self line included | Present as `Self (Ego)` with explanatory note | ✓ |
-| Worked example of uneven development | 5-line fictional composite with 3 distinct levels | ✓ |
-| Explicit no-assessment statement | "No Formal Cross-Line Assessment Yet" section | ✓ |
-| Cross-links from AQAL Overview | Added + Self line added to line list | ✓ |
-| Cross-links from all seven overview modules | All 7 verified | ✓ |
+| Page at `docs/about/what-this-platform-does.md` | File created at correct path | ✓ |
+| Can vs. cannot distinction | "What This Platform Can Reliably Do" + "What the Evidence Does Not Support" sections | ✓ |
+| Kegan/Cook-Greuter data at Tier B with caveat | Both cited with "population estimates, not individual predictions" caveat | ✓ |
+| Coach/therapist/mentor/peer cohort recommendation | "The Role of Relationship in Development" section with 3 specific recommendations | ✓ |
+| "Not an upsell" explicitly stated | "This is not an upsell. The platform has no commercial coaching service..." | ✓ |
+| Non-linearity and regression addressed | "Development Is Not a Straight Line" with 3 sub-sections | ✓ |
+| Homepage link | Added beneath rigor signal in hero | ✓ |
+| All QuickStarts audited | 13 QuickStarts reviewed; 3 updated with scope boundaries | ✓ |
+| Confident, not self-defeating tone | Page leads with affirmative capabilities, closes with "genuine value is real" | ✓ |
 
 ### 2. Design ↔ Build
 
 | Design Element | Build Implementation | Match |
 |---------------|---------------------|-------|
-| Page structure (7 sections) | Stages vs Lines → Seven Lines → Uneven Development → Worked Example → No Assessment → Cross-References | ✓ |
-| Line descriptions match overview modules | Descriptions drawn from each module's actual focus | ✓ |
-| Worked example: Maria, 34 | Fictional composite with 5 lines at 3 levels | ✓ |
-| Daily-life explanation: 3 scenarios | Meetings, relationships, body | ✓ |
-| Cross-link placement: before `<ModuleFooter />` | All 7 cross-links placed at consistent location | ✓ |
-| Self line in AQAL Overview | Added as seventh line in Skills section | ✓ |
+| 8-section page structure | All 8 planned sections present | ✓ |
+| Hero section link placement | Beneath scaleStat in hero, using existing rigorSignal styling | ✓ |
+| Amber→Rational scope addition | "What This QuickStart Does Not Do" after Learner Expectations | ✓ |
+| Rational→Pluralistic scope addition | "What This QuickStart Does Not Do" after What Comes Next | ✓ |
+| Moral Line scope addition | "Scope" section before Companion Materials | ✓ |
+| 10 QuickStarts already adequate | Confirmed — no unnecessary changes made | ✓ |
 
 ### 3. Review ↔ Verification
 
 | Review Claim | Verification Finding | Consistent |
 |-------------|---------------------|------------|
-| Approved — all requirements met | All 15 verification claims verified_true | ✓ |
+| Approved — all requirements met | All 13 verification claims verified_true | ✓ |
 | No security risk | Static markdown only | ✓ |
-| No breaking changes | Only additive edits | ✓ |
-| No over-claiming | Explicit fictional composite label + assessment disclaimer | ✓ |
-| Self line gap in AQAL filled | Self line added with explanation | ✓ |
+| No dead links | All cross-references internally verified | ✓ |
+| Self-defeating framing avoided | Can section precedes Cannot; closing is affirmative | ✓ |
+| QuickStart scope notes added | 3 QuickStarts updated with consistent format | ✓ |
 
 ### 4. Tasks ↔ Completion
 
 | Task ID | Build Report | Verification | Consistent |
 |---------|-------------|-------------|------------|
-| lines-synth-01-01 | ✓ | File exists, all ACs met | ✓ |
-| lines-synth-01-02 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-03 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-04 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-05 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-06 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-07 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-08 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-09 | ✓ | Cross-link confirmed | ✓ |
-| lines-synth-01-10 | ⚠ Local env blocked | CI expected PASS | N/A |
+| efficacy-01-01 | ✅ | Page exists, all 6 ACs met | ✓ |
+| efficacy-01-02 | ✅ | Homepage link confirmed | ✓ |
+| efficacy-01-03 | ✅ | Scope section + cross-link in Amber→Rational | ✓ |
+| efficacy-01-04 | ✅ | Scope section + cross-link in Rational→Pluralistic | ✓ |
+| efficacy-01-05 | ✅ | Scope section + cross-link in Moral Line | ✓ |
+| efficacy-01-06 | ⚠ CI-expected | Node v26 local blocker; CI with Node 20 | N/A |
 
 ## Inconsistencies
 

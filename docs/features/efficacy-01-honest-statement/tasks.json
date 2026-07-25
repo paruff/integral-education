@@ -1,0 +1,48 @@
+{
+  "issue": "#409",
+  "title": "EFFICACY-01: Add honest 'what this platform can and cannot do' statement",
+  "tasks": [
+    {
+      "id": "efficacy-01-01",
+      "description": "Create efficacy statement page at docs/about/what-this-platform-does.md",
+      "acceptance_criteria": ["AC-01", "AC-02", "AC-03", "AC-04", "AC-05", "AC-06"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "efficacy-01-02",
+      "description": "Add visible homepage link to the efficacy statement in src/pages/index.js",
+      "acceptance_criteria": ["AC-07"],
+      "test_type": "integration",
+      "depends_on": ["efficacy-01-01"]
+    },
+    {
+      "id": "efficacy-01-03",
+      "description": "Audit and scope-note Amber → Rational QuickStart goal section",
+      "acceptance_criteria": ["AC-08"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "efficacy-01-04",
+      "description": "Audit and scope-note Rational → Pluralistic QuickStart goal section",
+      "acceptance_criteria": ["AC-08"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "efficacy-01-05",
+      "description": "Audit and scope-note Moral Line QuickStart",
+      "acceptance_criteria": ["AC-08"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "efficacy-01-06",
+      "description": "Verify npm run build passes on CI",
+      "acceptance_criteria": ["AC-09"],
+      "test_type": "build",
+      "depends_on": ["efficacy-01-01", "efficacy-01-02", "efficacy-01-03", "efficacy-01-04", "efficacy-01-05"]
+    }
+  ]
+}

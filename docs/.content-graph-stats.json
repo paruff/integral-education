@@ -45,15 +45,15 @@
     "Unknown": 2
   },
   "goldStandardCompliance": {
-    "full": 0,
+    "full": 2,
     "total": 77,
-    "percentage": 0
+    "percentage": 3
   },
   "journeyStepGaps": {
-    "orient": 27,
-    "encounter": 34,
-    "learn": 27,
-    "stabilize": 27,
+    "orient": 25,
+    "encounter": 32,
+    "learn": 25,
+    "stabilize": 25,
     "integrate": 11,
     "retrieval schedule": 37,
     "frameworks": 59,

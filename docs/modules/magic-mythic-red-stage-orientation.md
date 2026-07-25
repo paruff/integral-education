@@ -41,8 +41,6 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-**Position in sequence:** This is the second module in the **Magic/Purple → Red/Amber** developmental sequence, following [Magic/Purple Stage Orientation](./magic-purple-stage-orientation). It provides the conceptual and experiential foundation for understanding the Magic-Mythic/Red stage — the emergence of individual selfhood and personal power out of the tribal matrix that Purple provides. This is the stage the Amber/Mythic Orientation module implicitly assumes as prior; this module fills that gap directly.
-
 ---
 
 ## 🗺️ AQAL Mapping
@@ -59,7 +57,33 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-## 🧠 Theoretical Frameworks
+## 🧭 Orient
+
+:::info Before this module
+This module assumes familiarity with [Magic/Purple Stage Orientation](./magic-purple-stage-orientation), the first module in the Magic/Purple → Red/Amber developmental sequence.
+:::
+
+**Position in sequence:** This is the second module in the **Magic/Purple → Red/Amber** developmental sequence, following Magic/Purple Stage Orientation. It provides the conceptual and experiential foundation for understanding the Magic-Mythic/Red stage — the emergence of individual selfhood and personal power out of the tribal matrix that Purple provides. This is the stage the Amber/Mythic Orientation module implicitly assumes as prior; this module fills that gap directly.
+
+Understanding this stage matters because Red is where courage, honest self-assertion, and personal power are first discovered — capacities every later stage depends on, and capacities that get suppressed rather than integrated in adults, teams, and cultures that treat all self-assertion as a problem to manage.
+
+---
+
+## 🌿 Encounter
+
+Before any framework names it, Red has a felt shape: an "I" pushing free of the group's grip for the first time, discovering that its own wants, its own body, its own will belong to it alone. There is a charge in this — a rawness, an aliveness — that no tribal ritual could grant, because it can only be seized by the individual pushing outward against the group's edge.
+
+The world, from inside a Red-organized moment, is not a shared field to be tended but an arena to be won. Other people sort quickly into strong or weak, ally or obstacle, threat or prize. A win lands in the body as pure, uncomplicated triumph. A loss lands as fuel for the next attempt, not as data for quiet reflection. Consequence, if it is felt at all, is felt now — in this body, in this moment — not as a chain of implications stretching into next week.
+
+This is not cruelty and it is not a flaw waiting to be corrected. It is what an emerging self feels like before it has developed the capacity to hold another person's inner world as equally real and equally weighty as its own. Naming this from outside — as courage, as vitality, as impulsivity, as domination — is exactly what the frameworks below attempt to do with the same honesty and dignity given to every other stage in this sequence.
+
+---
+
+## 🧠 Learn
+
+The four frameworks below approach Magic-Mythic/Red from developmental, phenomenological, moral, and neurophysiological angles. Read together, they explain both why this stage feels the way it does from the inside, and why it carries the specific gifts and limitations described later in this module.
+
+## Four Framework Lenses: Magic-Mythic/Red
 
 ### Spiral Dynamics: Red
 
@@ -190,6 +214,14 @@ An adult who exercises clear self-interest, sets a firm boundary, or acts with d
 4. **Courage:** Identify a moment you acted despite fear or uncertainty. What did you do, and what did it cost you to do it?
 
 5. **The pull toward domination:** Without shame, notice a recent moment when you wanted to win, dominate, or come out on top at someone else's expense. What need was underneath that pull? (This prompt is for honest noticing only — there is no requirement to act on or resolve what you notice.)
+
+---
+
+## ⚓ Stabilize
+
+Reading this module, or completing the practice above, gives you a *conceptual* map of Magic-Mythic/Red — it does not, by itself, change your own structural relationship to power, impulse, or self-assertion. Recognizing a domination pattern intellectually and being able to hold it with more choice in the moment it arises are two different kinds of development, on two different timescales. Do not mistake the clarity of "I understand Red now" for the slower, embodied work of actually building the pause between impulse and action.
+
+This module's language of "power," "domination," and "assertion" draws on cross-cultural developmental and moral-psychology research, but the specific cultural scripts for expressing personal power — what counts as appropriately assertive versus aggressive, how directness is read, how conflict is voiced — vary by culture, gender socialization, and context. The underlying developmental logic (an emerging self discovering its own will and power) is the generalizable claim here, not any particular culture's rules for how that discovery should look or sound.
 
 ---
 

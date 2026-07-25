@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T20:15:32.951Z",
+  "generated": "2026-07-25T20:45:02.663Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,9 +49,26 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 54,
+      "full": 0,
       "total": 77,
-      "percentage": 70
+      "percentage": 0
+    },
+    "journeyStepGaps": {
+      "orient": 27,
+      "encounter": 34,
+      "learn": 27,
+      "stabilize": 27,
+      "integrate": 11,
+      "retrieval schedule": 37,
+      "frameworks": 59,
+      "gifts": 65,
+      "facilitator note": 63,
+      "limitations": 50,
+      "reflect": 12,
+      "assess": 3,
+      "aqal mapping": 5,
+      "evidence": 21,
+      "practice": 4
     },
     "orphanModules": 0,
     "avgSectionsPerModule": 16
@@ -89,7 +106,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "learn",
+        "stabilize"
+      ]
     },
     {
       "id": "amber-mythic-orientation",
@@ -123,7 +146,12 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize"
+      ]
     },
     {
       "id": "authentic-dialogue-collaborative-meaning",
@@ -166,7 +194,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "authority-autonomy-transition",
@@ -206,7 +242,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "causal-witness-state",
@@ -241,7 +287,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "co-regulation-relational-attunement",
@@ -277,7 +333,19 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "integrate",
+        "reflect",
+        "assess",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-bias-101",
@@ -304,7 +372,19 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "aqal mapping",
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-dissonance-bridge",
@@ -341,7 +421,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-line-concrete-to-formal",
@@ -378,7 +467,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-line-metasystematic-vision-logic",
@@ -423,7 +518,11 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-line-overview-orientation",
@@ -463,7 +562,13 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "evidence",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-line-postformal-operations",
@@ -507,7 +612,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cognitive-line-practice-architecture",
@@ -543,7 +654,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "encounter",
+        "stabilize",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "community-belonging-collective-intelligence",
@@ -589,7 +708,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "contextual-ethics-moral-complexity",
@@ -631,7 +758,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "retrieval schedule",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "critical-thinking-foundations",
@@ -667,7 +802,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "cross-difference-dialogue-trust-building",
@@ -703,7 +848,12 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize"
+      ]
     },
     {
       "id": "ecological-systems-consciousness",
@@ -749,7 +899,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "retrieval schedule",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "emotion-regulation-foundations",
@@ -785,7 +943,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "encounter",
+        "integrate",
+        "reflect",
+        "assess",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "emotional-appraisal-meaning-making",
@@ -819,7 +987,19 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "integrate",
+        "reflect",
+        "assess",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "emotional-granularity",
@@ -847,7 +1027,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "emotional-intelligence-somatic-line",
@@ -891,7 +1080,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "emotional-interpersonal-integration",
@@ -930,7 +1127,12 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize"
+      ]
     },
     {
       "id": "emotional-line-overview-orientation",
@@ -961,7 +1163,15 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "encounter",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "empathy-perspective-plurality",
@@ -1005,7 +1215,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "evidence-evaluation",
@@ -1042,7 +1261,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "flow-peak-experience",
@@ -1076,7 +1305,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "gross-state-awareness",
@@ -1107,7 +1345,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "healthy-hierarchy-actualization-gradient",
@@ -1153,7 +1401,14 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "learn",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations"
+      ]
     },
     {
       "id": "integral-ethics-beyond-relativism",
@@ -1198,7 +1453,14 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "integral-life-practice-embodying-2nd-tier",
@@ -1247,7 +1509,17 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "reflect",
+        "retrieval schedule",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "integral-shadow-teal-trap",
@@ -1294,7 +1566,14 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "integral-teal-orientation",
@@ -1339,7 +1618,11 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "learn",
+        "evidence"
+      ]
     },
     {
       "id": "interpersonal-line-overview-orientation",
@@ -1375,7 +1658,11 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "encounter",
+        "learn"
+      ]
     },
     {
       "id": "late-green-emergence-signals",
@@ -1421,7 +1708,16 @@
       "hasPractice": false,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "practice",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "late-orange-disillusionment",
@@ -1459,7 +1755,16 @@
       "hasPractice": false,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "practice",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "magic-mythic-red-stage-orientation",
@@ -1496,7 +1801,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "learn",
+        "stabilize"
+      ]
     },
     {
       "id": "magic-purple-stage-orientation",
@@ -1531,7 +1842,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "learn",
+        "stabilize"
+      ]
     },
     {
       "id": "mindfulness-basics",
@@ -1558,7 +1875,19 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "aqal mapping",
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "mindfulness-deepening",
@@ -1594,7 +1923,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "moral-line-conventional-reasoning",
@@ -1632,7 +1971,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "moral-line-imagination-integral-ethics",
@@ -1675,7 +2020,12 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "moral-line-overview-dual-track",
@@ -1717,7 +2067,14 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "encounter",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "moral-line-postconventional-reasoning",
@@ -1756,7 +2113,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "moral-line-shadow-moral-injury",
@@ -1798,7 +2161,12 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "multiperspectival-leadership-action",
@@ -1845,7 +2213,15 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "nondual-awareness-orientation",
@@ -1883,7 +2259,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "perspective-taking-capacity",
@@ -1920,7 +2305,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "perspective-taking-empathic-accuracy",
@@ -1956,7 +2351,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "integrate",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "pluralistic-green-orientation",
@@ -1995,7 +2400,12 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "aqal mapping",
+        "learn",
+        "evidence"
+      ]
     },
     {
       "id": "rational-orange-orientation",
@@ -2029,7 +2439,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule"
+      ]
     },
     {
       "id": "relational-repair-conflict-navigation",
@@ -2067,7 +2483,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations"
+      ]
     },
     {
       "id": "relativism-limits-of-pluralism",
@@ -2116,7 +2541,16 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "integrate",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "self-line-conventional-conformist-achiever",
@@ -2157,7 +2591,12 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "evidence",
+        "frameworks",
+        "facilitator note"
+      ]
     },
     {
       "id": "self-line-integration-practice",
@@ -2197,7 +2636,14 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "stabilize",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "self-line-overview-psychograph",
@@ -2236,7 +2682,16 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "self-line-postautonomous-construct-aware-unitive",
@@ -2278,7 +2733,14 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "self-line-postconventional-individualist-strategist",
@@ -2319,7 +2781,14 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-321-process",
@@ -2357,7 +2826,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-collective-cultural",
@@ -2400,7 +2877,14 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "learn",
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts"
+      ]
     },
     {
       "id": "shadow-immunity-to-change",
@@ -2440,7 +2924,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-in-relationships",
@@ -2482,7 +2972,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-integration-101",
@@ -2512,7 +3010,19 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "aqal mapping",
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-persona-mask",
@@ -2554,7 +3064,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-positive-projection",
@@ -2595,7 +3113,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-spiritual-bypassing",
@@ -2635,7 +3161,15 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "reflect",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "shadow-work-foundation",
@@ -2673,7 +3207,14 @@
       "hasPractice": false,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "practice",
+        "reflect",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "somatic-line-overview",
@@ -2699,7 +3240,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": true
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "learn",
+        "stabilize"
+      ]
     },
     {
       "id": "spiritual-line-conjunctive-universalizing",
@@ -2736,7 +3283,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "spiritual-line-mythic-to-rational",
@@ -2778,7 +3331,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "spiritual-line-overview-orientation",
@@ -2819,7 +3378,14 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "spiritual-line-post-metaphysical-integral-religion",
@@ -2863,7 +3429,13 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "spiritual-line-practice-architecture",
@@ -2901,7 +3473,14 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "stabilize",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "spiritual-line-shadow-integration",
@@ -2949,7 +3528,14 @@
       "hasPractice": false,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "practice",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "facilitator note"
+      ]
     },
     {
       "id": "subtle-state-access",
@@ -2981,7 +3567,17 @@
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "systems-thinking-101",
@@ -3011,7 +3607,19 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "aqal mapping",
+        "orient",
+        "encounter",
+        "stabilize",
+        "retrieval schedule",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     },
     {
       "id": "vision-logic-metasystematic-thinking",
@@ -3056,7 +3664,15 @@
       "hasPractice": true,
       "hasEvidence": false,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false
+      "hasFacilitatorNote": false,
+      "missingJourneySteps": [
+        "learn",
+        "evidence",
+        "frameworks",
+        "gifts",
+        "limitations",
+        "facilitator note"
+      ]
     }
   ],
   "edges": [

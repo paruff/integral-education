@@ -1,40 +1,30 @@
-# Verification Report — UX-24-REV
+# Verification Report — UX-25-REV
 
 ## Evidence Check
 
-### Claim: "Lora font loaded via Google Fonts @import"
-- **Evidence:** `@import url(...fonts.googleapis.com...Lora...)` at line 1 of `src/css/custom.css`; Lora string found in `build/assets/css/styles.*.css`
+### Claim: "Hero headline is h1 and inherits Lora"
+- **Evidence:** `src/pages/index.js` line 12: `<h1 className="hero__title">` — h1 element inherits `--ifm-heading-font-family: Lora`
 - **Verified:** ✓ TRUE
 
-### Claim: "Heading font-family set to Lora"
-- **Evidence:** `--ifm-heading-font-family: Lora, Georgia, serif` in `:root` block (line 11)
+### Claim: "QuickStart titles are heading elements"
+- **Evidence:** Homepage cards use `<h3>` (lines 98, 106, 114, 122); QuickStart pages use `##` which renders as `<h2>` in Docusaurus MDX
 - **Verified:** ✓ TRUE
 
-### Claim: "System sans-serif stays on body/badges/UI"
-- **Evidence:** No changes to `--ifm-font-family-base`; no CSS alterations to badge, navbar, sidebar selectors
+### Claim: "Maps titles are heading elements"
+- **Evidence:** Homepage cards use `<h3>` (lines 178, 187, 196, 204); Maps pages use `##` → `<h2>` (line 7 in aqal-overview)
 - **Verified:** ✓ TRUE
 
-### Claim: "Light-mode primary is #1a6b3c"
-- **Evidence:** `--ifm-color-primary: #1a6b3c` at line 12; all derived values confirmed
-- **Verified:** ✓ TRUE
-
-### Claim: "Dark-mode primary unchanged (#25c2a0)"
-- **Evidence:** `git diff` shows 0 changes in `[data-theme='dark']` block; `#25c2a0` confirmed at line 27
+### Claim: "Body/badges/sidebar stay on system sans-serif"
+- **Evidence:** Body uses `<p>`, badges use `<span>`, sidebar uses Docusaurus theme `<nav>` — none are heading elements; all inherit `--ifm-font-family-base` (system-ui stack, unchanged)
 - **Verified:** ✓ TRUE
 
 ### Claim: "Build passes"
 - **Evidence:** `[SUCCESS] Generated static files in "build"`
 - **Verified:** ✓ TRUE
 
-## All Artifacts Present
-| Artifact | Exists |
-|---|---|
-| specification.md | ✓ |
-| design.md | ✓ |
-| tasks.json | ✓ |
-| build-report.md | ✓ |
-| test-report.md | ✓ |
-| review-report.md | ✓ |
+### Claim: "No code changes needed"
+- **Evidence:** `git diff HEAD -- ':(exclude)docs/features/*' ':(exclude)*-report.md' ':(exclude)*.json'` shows zero changes to any source or module file
+- **Verified:** ✓ TRUE
 
 ## Result
-**PASS** — every claim is verified true.
+**PASS** — every claim is verified true. No code changes needed.

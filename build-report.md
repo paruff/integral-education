@@ -1,36 +1,33 @@
-# Build Report — UX-24-REV
+# Build Report — UX-25-REV
 
 ## Summary
-Added Lora as a display typeface for headings and replaced the Docusaurus-default green with a deliberate brand forest green. Single CSS file changed.
+Performed a typography consistency audit across the site following UX-24-REV's introduction of Lora as a display typeface. Found that the global `--ifm-heading-font-family` approach already applies Lora consistently to all target elements — no code changes needed.
+
+## Audit Results
+| Target | HTML Element | Lora? |
+|---|---|---|
+| Hero headline | `<h1>` | ✓ |
+| QuickStart titles (homepage) | `<h3>` | ✓ |
+| QuickStart titles (pages) | `<h2>` (MDX ##) | ✓ |
+| Maps card titles (homepage) | `<h3>` | ✓ |
+| Maps titles (doc pages) | `<h2>` (MDX ##) | ✓ |
+| Module page titles | `<h1>` (Docusaurus layout) | ✓ |
+| Section headers | `<h2>` | ✓ |
+| Body text, badges | `<p>`, `<span>` | ✗ (correct: system sans-serif) |
+| Sidebar, breadcrumbs | Docusaurus theme | ✗ (correct: system sans-serif) |
 
 ## Files Changed
-| File | Change |
-|---|---|
-| `src/css/custom.css` | Added Lora @import, set heading font-family, updated 8 color variables |
+None — audit only. Lora is applied globally via `--ifm-heading-font-family` in `src/css/custom.css` (set by UX-24-REV).
 
 ## Tasks Completed
 | ID | Title | Status |
 |---|---|---|
-| T1 | Add Lora display font to custom.css | ✓ Complete |
-| T2 | Replace light-mode green with deliberate brand color | ✓ Complete |
-| T3 | Verify build passes | ✓ Complete |
-
-## Changes Detail
-### Typography
-- Added Google Fonts `@import` for Lora (400, 500, 600, 700 weights + italic)
-- Set `--ifm-heading-font-family: Lora, Georgia, serif`
-- All h1–h6 now render in Lora; body, badges, navbar, sidebar stay on system sans-serif
-
-### Color
-- Light-mode primary: `#2e8555` → `#1a6b3c` (Docusaurus default → brand forest green)
-- Derived palette updated to match (dark: `#165a31`, darkest: `#0f3a20`, light: `#218243`, etc.)
-- Dark-mode: unchanged (`#25c2a0`)
+| T1 | Audit typography consistency across all target elements | ✓ Complete (audit only; no changes needed) |
 
 ## Validation Results
 | Gate | Result |
 |---|---|
 | `npm run build` | ✓ PASS |
-| Lora in built CSS | ✓ Confirmed in `build/assets/css/styles.*.css` |
 
 ## Blockers
 None.

@@ -1,25 +1,18 @@
-# Cross-Validation Report — UX-24-REV
+# Cross-Validation Report — UX-25-REV
 
 ## Consistency Matrix
 
 | Source | Claim | Implementation | Consistent? |
 |---|---|---|---|
-| **Approved proposal** | Lora for heading moments only | `--ifm-heading-font-family` set; body/UI variables unchanged | ✓ |
-| **Approved proposal** | Forest green `#1a6b3c` light mode | `--ifm-color-primary` and cascade updated | ✓ |
-| **Approved proposal** | Dark mode unchanged | `[data-theme='dark']` block: 0 diffs | ✓ |
-| **spec.md** | AC-1 through AC-6 | All 6 ACs pass | ✓ |
-| **design.md** | Import + heading variable + color table | All 3 design items match implementation | ✓ |
-| **review-report.md** | APPROVED | Consistent with changes | ✓ |
-| **verification-report.md** | All claims true | Every claim verified by evidence | ✓ |
+| **spec.md** | Audit target elements for heading-tag usage | All confirmed h1/h2/h3 | ✓ |
+| **spec.md** | No heading-like elements using non-heading markup | None found | ✓ |
+| **spec.md** | Body/badges/sidebar unaffected | All confirmed non-heading elements | ✓ |
+| **design.md** | Table of element types and inheritance | All entries verified true | ✓ |
+| **review-report.md** | APPROVED | Consistent with audit findings | ✓ |
+| **verification-report.md** | All claims true | Every claim verified by code inspection | ✓ |
 
-## Non-Requirement Check
-| Item | Status |
-|---|---|
-| Badge-pill CSS untouched | ✓ Confirmed |
-| Card CSS untouched | ✓ Confirmed |
-| Callout CSS untouched | ✓ Confirmed |
-| No component structure changes | ✓ Confirmed |
-| No module content changes | ✓ Confirmed |
+## Dependency Check
+UX-24-REV (Lora font) is merged. UX-25-REV's audit confirms that UX-24-REV's global `--ifm-heading-font-family` approach inherently handles all the consistency concerns this issue raised.
 
 ## Result
-**PASS** — all findings mutually consistent with the approved proposal and specification.
+**PASS** — audit findings are internally consistent and confirmed by evidence. No gaps found between UX-24-REV's implementation and UX-25-REV's consistency requirements.

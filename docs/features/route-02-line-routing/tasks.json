@@ -1,0 +1,141 @@
+{
+  "tasks": [
+    {
+      "id": "route-02-01",
+      "description": "Add LINE_QUESTIONS array with 3 line-diagnostic questions",
+      "file": "src/pages/start.js",
+      "depends_on": [],
+      "acceptance_criteria": [
+        {
+          "id": "AC-02",
+          "description": "3 line-diagnostic questions added with non-labeling, observable-behavior language",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-03",
+          "description": "Question options map to emotional, interpersonal, self keys",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "route-02-02",
+      "description": "Add LINE_RESULTS mapping with mirror paragraphs for emotional, interpersonal, self, and mixed",
+      "file": "src/pages/start.js",
+      "depends_on": ["route-02-01"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-09",
+          "description": "Mirror paragraphs use non-labeling, non-pathologizing language per developmental-vocabulary skill",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "route-02-03",
+      "description": "Add tallyLine() function with 2-of-3 threshold and mixed fallback",
+      "file": "src/pages/start.js",
+      "depends_on": ["route-02-01"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-04",
+          "description": "Line tally uses 2-of-3 threshold; returns emotional/interpersonal/self/mixed",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "route-02-04",
+      "description": "Replace submitted boolean with phase state machine (null → 'stage' → 'line' → 'complete')",
+      "file": "src/pages/start.js",
+      "depends_on": ["route-02-01"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-01",
+          "description": "Existing stage flow works correctly through the new phase state machine",
+          "test_type": "unit"
+        }
+      ]
+    },
+    {
+      "id": "route-02-05",
+      "description": "Add Phase 2 UI: line question rendering between Phase 1 submission and final results",
+      "file": "src/pages/start.js",
+      "depends_on": ["route-02-04"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-05",
+          "description": "Phase 2 renders 3 line questions after Phase 1 submission, before final results",
+          "test_type": "integration"
+        }
+      ]
+    },
+    {
+      "id": "route-02-06",
+      "description": "Add combined results rendering with both stage and line recommendation sections",
+      "file": "src/pages/start.js",
+      "depends_on": ["route-02-02", "route-02-05"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-05",
+          "description": "Results show both stage and line recommendations in clearly labeled sections",
+          "test_type": "integration"
+        },
+        {
+          "id": "AC-06",
+          "description": "Stage and line recommendations use distinct visual sections with explanatory headers",
+          "test_type": "integration"
+        }
+      ]
+    },
+    {
+      "id": "route-02-07",
+      "description": "Expand ALL_PATHS to include Emotional Line and Interpersonal Line QuickStarts",
+      "file": "src/pages/start.js",
+      "depends_on": ["route-02-06"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-07",
+          "description": "All-paths grid displays 6 paths including Emotional Line and Interpersonal Line",
+          "test_type": "integration"
+        },
+        {
+          "id": "AC-08",
+          "description": "Recommended badge appears on both stage and line recommended paths",
+          "test_type": "integration"
+        }
+      ]
+    },
+    {
+      "id": "route-02-08",
+      "description": "Add minimal CSS for line results section and phase transition",
+      "file": "src/pages/start.module.css",
+      "depends_on": ["route-02-06"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-06",
+          "description": "Phase transition shows progress indicator; line result section visually distinct from stage result",
+          "test_type": "integration"
+        }
+      ]
+    },
+    {
+      "id": "route-02-09",
+      "description": "Verify npm run build passes and all routing logic is correct",
+      "file": "all",
+      "depends_on": ["route-02-01", "route-02-02", "route-02-03", "route-02-04", "route-02-05", "route-02-06", "route-02-07", "route-02-08"],
+      "acceptance_criteria": [
+        {
+          "id": "AC-01",
+          "description": "Existing stage routing (tally function, 3-of-4 threshold) unchanged and verified correct",
+          "test_type": "unit"
+        },
+        {
+          "id": "AC-10",
+          "description": "npm run build passes with zero errors",
+          "test_type": "build"
+        }
+      ]
+    }
+  ]
+}

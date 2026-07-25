@@ -203,6 +203,71 @@
   margin-top: 1.5rem;
 }
 
+/* ── Phase titles ────────────────────────────────────── */
+
+.phaseTitle {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.25rem;
+}
+
+.phaseSubtitle {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 0 0 1rem;
+}
+
+/* ── Phase 2: stage result preview ───────────────────── */
+
+.phaseResultPreview {
+  border: 1px solid #b3d4f5;
+  background: #f0f7ff;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  margin: 0.5rem 0 0;
+}
+
+.phaseResultPreviewTitle {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+}
+
+.phaseResultPreviewText {
+  font-size: 0.92rem;
+  margin: 0 0 0.5rem;
+  color: #444;
+}
+
+.phaseResultPreviewHint {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #666;
+  font-style: italic;
+}
+
+/* ── Phase divider ────────────────────────────────────── */
+
+.phaseDivider {
+  border: none;
+  border-top: 1px solid #d6dde6;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ── Combined results: stage/line distinction ─────────── */
+
+.resultDistinction {
+  background: #f8f9fa;
+  border: 1px solid #d6dde6;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.resultDistinction p {
+  margin: 0;
+}
+
 @media screen and (max-width: 767px) {
   .allPathsGrid {
     grid-template-columns: 1fr;

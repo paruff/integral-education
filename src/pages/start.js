@@ -5,6 +5,8 @@ import styles from './start.module.css';
 
 // ─── Assessment data ──────────────────────────────────────────────────────────
 // Zero AQAL terminology. Mapped to observable life situations.
+// Phase 1: stage routing (4 questions, a/b/c options)
+// Phase 2: line routing (3 questions, emotional/interpersonal/self options)
 
 const QUESTIONS = [
   {
@@ -45,6 +47,40 @@ const QUESTIONS = [
   },
 ];
 
+// ─── Line-diagnostic questions (Phase 2) ──────────────────────────────────────
+// Options map to: emotional, interpersonal, self
+// Language describes observable behaviors, not traits or labels.
+
+const LINE_QUESTIONS = [
+  {
+    id: 0,
+    text: 'When I feel under pressure, I tend to:',
+    options: [
+      { value: 'emotional', label: 'Feel flooded by strong feelings — I have trouble naming what I\'m experiencing.' },
+      { value: 'interpersonal', label: 'Pull back from people or shut down — conflict and tension feel hard to stay present with.' },
+      { value: 'self', label: 'Feel unsettled at a deeper level — my sense of who I am and what I believe feels shaky.' },
+    ],
+  },
+  {
+    id: 1,
+    text: 'In difficult or high-stakes conversations, I most often:',
+    options: [
+      { value: 'emotional', label: 'Get overwhelmed by emotion and lose the ability to think clearly.' },
+      { value: 'interpersonal', label: 'Focus so much on the other person that I lose track of my own needs and boundaries.' },
+      { value: 'self', label: 'Notice that something about my identity or values is being challenged — it touches deeper than the topic.' },
+    ],
+  },
+  {
+    id: 2,
+    text: 'The area I feel the strongest need for growth right now is:',
+    options: [
+      { value: 'emotional', label: 'Understanding and working with my feelings — I feel driven by emotions I don\'t fully understand.' },
+      { value: 'interpersonal', label: 'Navigating relationships with more skill — I want to handle conflict and closeness better.' },
+      { value: 'self', label: 'Understanding how my sense of self has developed — there are patterns I can feel but can\'t yet name.' },
+    ],
+  },
+];
+
 // ─── All available paths ────────────────────────────────────────────────────
 
 const ALL_PATHS = [
@@ -73,6 +109,18 @@ const ALL_PATHS = [
     to: '/docs/quickstarts/pluralistic-to-integral',
   },
   {
+    id: 'emotional-line',
+    title: 'Emotional Line Development',
+    description: 'Build emotional vocabulary, regulation, and somatic awareness.',
+    to: '/docs/quickstarts/emotional-line-development',
+  },
+  {
+    id: 'interpersonal-line',
+    title: 'Interpersonal Line Development',
+    description: 'Build perspective-taking, empathy, and relational repair skills.',
+    to: '/docs/quickstarts/interpersonal-line-development',
+  },
+  {
     id: 'self-line',
     title: 'Understanding Yourself',
     description: 'Explore how your sense of self develops over time.',
@@ -86,7 +134,7 @@ const ALL_PATHS = [
   },
 ];
 
-// ─── Results mapping ─────────────────────────────────────────────────────────
+// ─── Stage results mapping (unchanged from ROUTE-01) ─────────────────────────
 
 const RESULTS = {
   'A-dominant': {
@@ -123,6 +171,43 @@ const RESULTS = {
   },
 };
 
+// ─── Line results mapping (new for ROUTE-02) ─────────────────────────────────
+
+const LINE_RESULTS = {
+  emotional: {
+    title: 'Emotional Line Development',
+    explanation:
+      'Your answers suggest that emotional experiences — naming feelings, staying grounded under pressure, and working with emotional intensity — are areas where focused attention could make a meaningful difference. The Emotional Line path builds emotional vocabulary, regulation skill, and somatic awareness in a structured, stage-aware sequence.',
+    recommended: '/docs/quickstarts/emotional-line-development',
+    alt: 'If you also want to build relational skills alongside emotional awareness, the Interpersonal Line path is a natural complement.',
+    altLink: '/docs/quickstarts/interpersonal-line-development',
+  },
+  interpersonal: {
+    title: 'Interpersonal Line Development',
+    explanation:
+      'Your answers suggest that relational skill — navigating conflict, staying present with others during tension, and balancing your own needs with another person\'s perspective — is an area where focused attention could be particularly valuable. The Interpersonal Line path builds perspective-taking, empathic accuracy, and relational repair skills in a structured sequence.',
+    recommended: '/docs/quickstarts/interpersonal-line-development',
+    alt: 'If you also want to strengthen emotional awareness as a foundation for relational work, the Emotional Line path is a natural starting point.',
+    altLink: '/docs/quickstarts/emotional-line-development',
+  },
+  self: {
+    title: 'Understanding Yourself',
+    explanation:
+      'Your answers suggest that identity and meaning-making — how you understand who you are, what shapes your values, and why certain challenges feel so personal — is an area where deeper exploration could be especially useful. The Self Line path maps how identity develops across stages and provides practices for understanding your own meaning-making structure.',
+    recommended: '/docs/quickstarts/self-line-development',
+    alt: 'If you are also interested in how emotional patterns shape your sense of self, the Emotional Line path is a helpful complement.',
+    altLink: '/docs/quickstarts/emotional-line-development',
+  },
+  mixed: {
+    title: 'Emotional Line Development',
+    explanation:
+      'Your answers span multiple areas — which is completely normal. The Emotional and Interpersonal lines are strongly connected: emotional skill supports relational skill, and relationships are where emotional patterns become most visible. We suggest starting with the Emotional Line path for foundational skills, or the Interpersonal path if relationships are your primary concern right now.',
+    recommended: '/docs/quickstarts/emotional-line-development',
+    alt: 'If relationships are your primary concern, start with the Interpersonal Line path instead.',
+    altLink: '/docs/quickstarts/interpersonal-line-development',
+  },
+};
+
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
 function tally(answers) {
@@ -139,6 +224,20 @@ function tally(answers) {
   return 'mixed';
 }
 
+function tallyLine(answers) {
+  const counts = { emotional: 0, interpersonal: 0, self: 0 };
+  for (const val of Object.values(answers)) {
+    if (counts[val] !== undefined) counts[val] += 1;
+  }
+  const max = Math.max(...Object.values(counts));
+  // Require at least 2 of 3 for classification; otherwise mixed
+  if (max < 2) return 'mixed';
+  if (counts.emotional === max) return 'emotional';
+  if (counts.interpersonal === max) return 'interpersonal';
+  if (counts.self === max) return 'self';
+  return 'mixed';
+}
+
 function getRecommendedPathTitle(resultKey) {
   const info = RESULTS[resultKey];
   if (!info) return null;
@@ -146,63 +245,130 @@ function getRecommendedPathTitle(resultKey) {
   return match ? match.title : null;
 }
 
+function getRecommendedLinePathTitle(resultKey) {
+  const info = LINE_RESULTS[resultKey];
+  if (!info) return null;
+  const match = ALL_PATHS.find((p) => p.to === info.recommended);
+  return match ? match.title : null;
+}
+
+// ─── Result box sub-component (shared for stage and line) ────────────────────
+
+function ResultBox({ label, result, styles: s }) {
+  return (
+    <section className={s.resultBox} role="region" aria-label={label}>
+      <h2 className={s.resultTitle}>{result.title}</h2>
+      <p className={s.explanation}>{result.explanation}</p>
+
+      <div className={s.recommendedActions}>
+        <Link to={result.recommended} className={s.primaryPath}>
+          Begin the {result.title} →
+        </Link>
+      </div>
+
+      {result.alt && (
+        <p className={s.altText}>
+          {result.alt}
+          {result.altLink && (
+            <>
+              {' '}
+              <Link to={result.altLink}>Explore that path →</Link>
+            </>
+          )}
+        </p>
+      )}
+    </section>
+  );
+}
+
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function StartPage() {
-  const [answers, setAnswers] = useState({});
-  const [submitted, setSubmitted] = useState(false);
+  const [stageAnswers, setStageAnswers] = useState({});
+  const [lineAnswers, setLineAnswers] = useState({});
+  // phase: null → showing stage questions
+  //        'stage' → stage submitted, showing line questions
+  //        'complete' → both submitted, showing combined results
+  const [phase, setPhase] = useState(null);
 
-  const answered = Object.keys(answers).length;
-  const total = QUESTIONS.length;
-  const allAnswered = answered === total;
+  const stageAnswered = Object.keys(stageAnswers).length;
+  const stageTotal = QUESTIONS.length;
+  const stageAllAnswered = stageAnswered === stageTotal;
 
-  function handleSelect(questionId, value) {
-    setAnswers((prev) => ({ ...prev, [questionId]: value }));
+  const lineAnswered = Object.keys(lineAnswers).length;
+  const lineTotal = LINE_QUESTIONS.length;
+  const lineAllAnswered = lineAnswered === lineTotal;
+
+  function handleStageSelect(questionId, value) {
+    setStageAnswers((prev) => ({ ...prev, [questionId]: value }));
   }
 
-  function handleSubmit() {
-    if (allAnswered) setSubmitted(true);
+  function handleLineSelect(questionId, value) {
+    setLineAnswers((prev) => ({ ...prev, [questionId]: value }));
+  }
+
+  function handleStageSubmit() {
+    if (stageAllAnswered) setPhase('stage');
+  }
+
+  function handleLineSubmit() {
+    if (lineAllAnswered) setPhase('complete');
   }
 
   function handleReset() {
-    setAnswers({});
-    setSubmitted(false);
+    setStageAnswers({});
+    setLineAnswers({});
+    setPhase(null);
   }
 
-  const resultKey = submitted ? tally(answers) : null;
-  const result = resultKey ? RESULTS[resultKey] : null;
+  const stageResultKey = phase !== null ? tally(stageAnswers) : null;
+  const stageResult = stageResultKey ? RESULTS[stageResultKey] : null;
+
+  const lineResultKey = phase === 'complete' ? tallyLine(lineAnswers) : null;
+  const lineResult = lineResultKey ? LINE_RESULTS[lineResultKey] : null;
+
+  // Determine recommended paths for the all-paths grid badges
+  const stageRecommendedPath = stageResult ? stageResult.recommended : null;
+  const lineRecommendedPath = lineResult ? lineResult.recommended : null;
 
   return (
     <Layout
       title="Find Your Path"
-      description="Answer a few questions to discover which learning path fits where you are right now."
+      description="Answer a few questions to discover which learning paths fit where you are right now."
     >
       <main className={styles.wrapper}>
         <h1>Find Your Path</h1>
         <p>
-          Answer four questions about how you tend to approach decisions, truth,
-          disagreement, and confidence. There are no right or wrong answers —
-          this is about finding the starting point that fits where you are{' '}
+          Answer a few questions about how you tend to approach decisions,
+          disagreement, and growth. There are no right or wrong answers —
+          this is about finding the starting points that fit where you are{' '}
           <em>right now</em>.
         </p>
 
         <div className={styles.disclaimer} role="alert">
           <strong>This is a self-reflection tool, not a clinical assessment.</strong>{' '}
           It cannot diagnose or evaluate any condition. It exists only to help you
-          choose a learning path that matches your current approach to thinking and
+          choose learning paths that match your current approach to thinking and
           decision-making.
         </div>
 
-        {!submitted && (
+        {/* ── Phase 1: Stage questions ──────────────────────────────────── */}
+        {phase === null && (
           <>
+            <h2 className={styles.phaseTitle}>Part 1: How You Think</h2>
+            <p className={styles.phaseSubtitle}>
+              These questions help identify which approach to reasoning and
+              decision-making fits you best right now.
+            </p>
+
             <progress
               className={styles.progressBar}
-              value={answered}
-              max={total}
-              aria-label={`${answered} of ${total} questions answered`}
+              value={stageAnswered}
+              max={stageTotal}
+              aria-label={`${stageAnswered} of ${stageTotal} questions answered`}
             />
             <p className={styles.progressLabel}>
-              {answered} of {total} questions answered
+              {stageAnswered} of {stageTotal} questions answered
             </p>
 
             {QUESTIONS.map((q) => (
@@ -216,8 +382,8 @@ export default function StartPage() {
                       type="radio"
                       name={`q${q.id}`}
                       value={opt.value}
-                      checked={answers[q.id] === opt.value}
-                      onChange={() => handleSelect(q.id, opt.value)}
+                      checked={stageAnswers[q.id] === opt.value}
+                      onChange={() => handleStageSelect(q.id, opt.value)}
                       className={styles.optionInput}
                     />
                     {opt.label}
@@ -228,48 +394,116 @@ export default function StartPage() {
 
             <button
               className={styles.submitBtn}
-              onClick={handleSubmit}
-              disabled={!allAnswered}
-              aria-disabled={!allAnswered}
+              onClick={handleStageSubmit}
+              disabled={!stageAllAnswered}
+              aria-disabled={!stageAllAnswered}
             >
-              See My Recommendation
+              See My Stage Recommendation
             </button>
           </>
         )}
 
-        {submitted && result && (
+        {/* ── Phase 2: Line questions ───────────────────────────────────── */}
+        {phase === 'stage' && (
           <>
-            <div className={styles.resultBox} role="region" aria-label="Your recommended path">
-              <h2 className={styles.resultTitle}>
-                Your Recommended Starting Point: {result.title}
-              </h2>
-              <p className={styles.explanation}>{result.explanation}</p>
-
-              <div className={styles.recommendedActions}>
-                <Link to={result.recommended} className={styles.primaryPath}>
-                  Begin the {result.title} →
-                </Link>
-              </div>
-
-              {result.alt && (
-                <p className={styles.altText}>
-                  {result.alt}
-                  {result.altLink && (
-                    <>
-                      {' '}
-                      <Link to={result.altLink}>Explore that path →</Link>
-                    </>
-                  )}
+            {stageResult && (
+              <div className={styles.phaseResultPreview} role="region" aria-label="Your stage path recommendation">
+                <h2 className={styles.phaseResultPreviewTitle}>
+                  Your Stage Path: {stageResult.title}
+                </h2>
+                <p className={styles.phaseResultPreviewText}>{stageResult.explanation}</p>
+                <p className={styles.phaseResultPreviewHint}>
+                  Hold onto that — you'll see your full results at the end.
+                  Now, a few more questions to find your line focus.
                 </p>
-              )}
+              </div>
+            )}
+
+            <hr className={styles.phaseDivider} />
+
+            <h2 className={styles.phaseTitle}>Part 2: What to Focus On</h2>
+            <p className={styles.phaseSubtitle}>
+              These questions help identify which area of development —
+              emotional skill, relational skill, or self-understanding —
+              might be most useful to work on right now.
+            </p>
+
+            <progress
+              className={styles.progressBar}
+              value={lineAnswered}
+              max={lineTotal}
+              aria-label={`${lineAnswered} of ${lineTotal} questions answered`}
+            />
+            <p className={styles.progressLabel}>
+              {lineAnswered} of {lineTotal} questions answered
+            </p>
+
+            {LINE_QUESTIONS.map((q) => (
+              <fieldset key={q.id} className={styles.questionBlock}>
+                <legend className={styles.questionText}>
+                  {q.id + 1}. {q.text}
+                </legend>
+                {q.options.map((opt, idx) => (
+                  <label key={idx} className={styles.optionLabel}>
+                    <input
+                      type="radio"
+                      name={`line-q${q.id}`}
+                      value={opt.value}
+                      checked={lineAnswers[q.id] === opt.value}
+                      onChange={() => handleLineSelect(q.id, opt.value)}
+                      className={styles.optionInput}
+                    />
+                    {opt.label}
+                  </label>
+                ))}
+              </fieldset>
+            ))}
+
+            <button
+              className={styles.submitBtn}
+              onClick={handleLineSubmit}
+              disabled={!lineAllAnswered}
+              aria-disabled={!lineAllAnswered}
+            >
+              See My Full Recommendation
+            </button>
+          </>
+        )}
+
+        {/* ── Combined results ───────────────────────────────────────────── */}
+        {phase === 'complete' && stageResult && lineResult && (
+          <>
+            <h2 className={styles.phaseTitle}>Your Recommendations</h2>
+
+            <ResultBox label="Your stage path recommendation" result={stageResult} styles={styles} />
+
+            <div className={styles.resultDistinction}>
+              <p>
+                <strong>Stage paths</strong> address <em>how</em> you approach reasoning and decision-making
+                — the kind of thinking you tend to rely on.{' '}
+                <strong>Line paths</strong> address <em>what domain</em> to develop
+                — the specific capacity that could use focused attention right now.
+                These are complementary. You can follow both.
+              </p>
             </div>
+
+            <ResultBox label="Your line path recommendation" result={lineResult} styles={styles} />
 
             <div className={styles.allPathsSection}>
               <h2>All Learning Paths</h2>
-              <p>Here are all the curated paths available. Your recommendation is highlighted.</p>
+              <p>Here are all the curated paths available. Your stage and line recommendations are highlighted.</p>
               <div className={styles.allPathsGrid}>
                 {ALL_PATHS.map((path) => {
-                  const isRecommended = path.to === result.recommended;
+                  const isStageRecommended = path.to === stageRecommendedPath;
+                  const isLineRecommended = path.to === lineRecommendedPath;
+                  const isRecommended = isStageRecommended || isLineRecommended;
+                  const badgeLabel = isStageRecommended && isLineRecommended
+                    ? 'Stage + Line'
+                    : isStageRecommended
+                      ? 'Stage'
+                      : isLineRecommended
+                        ? 'Line'
+                        : null;
                   return (
                     <article
                       key={path.id}
@@ -278,7 +512,7 @@ export default function StartPage() {
                       <h3>
                         {path.title}
                         {isRecommended && (
-                          <span className={styles.recommendedBadge}>Recommended</span>
+                          <span className={styles.recommendedBadge}>{badgeLabel}</span>
                         )}
                       </h3>
                       <p>{path.description}</p>
@@ -295,9 +529,6 @@ export default function StartPage() {
               <button className={styles.resetBtn} onClick={handleReset}>
                 Retake Assessment
               </button>
-              <p style={{ marginTop: '1rem' }}>
-                <Link to="/line-profile">Take your Line Profile →</Link> — find which developmental lines to focus on next.
-              </p>
             </div>
           </>
         )}

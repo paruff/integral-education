@@ -1,0 +1,35 @@
+[
+  {
+    "id": "T1",
+    "title": "Add AQAL motif container and labels to hero JSX",
+    "description": "Add a <div> with 4 <span> labels (I, It, We, Its) inside the hero <header>, before the .container div, with aria-hidden=\"true\".",
+    "dependencies": [],
+    "files": ["src/pages/index.js"],
+    "acceptance_criteria": [
+      { "id": "AC-2", "description": "Four real quadrant labels are present in the DOM", "test_type": "unit" }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Add CSS for motif gradient, labels, and animation",
+    "description": "Add CSS rules for .aqalMotif (gradient, animation, pointer-events: none), .aqalLabel (positioning, font, opacity), and label-specific positioning classes.",
+    "dependencies": ["T1"],
+    "files": ["src/pages/index.module.css"],
+    "acceptance_criteria": [
+      { "id": "AC-1", "description": "Conic-gradient renders behind hero text", "test_type": "unit" },
+      { "id": "AC-3", "description": "Labels use Lora at low opacity as faint texture", "test_type": "unit" },
+      { "id": "AC-4", "description": "Fade-in animation with reduced-motion support", "test_type": "unit" },
+      { "id": "AC-5", "description": "pointer-events: none on motif", "test_type": "integration" }
+    ]
+  },
+  {
+    "id": "T3",
+    "title": "Verify build and run contrast check",
+    "description": "Run npm run build to confirm no CSS/JSX errors, then verify WCAG AA contrast for hero title against the #1a6b3c background.",
+    "dependencies": ["T2"],
+    "files": [],
+    "acceptance_criteria": [
+      { "id": "AC-6", "description": "npm run build succeeds", "test_type": "integration" }
+    ]
+  }
+]

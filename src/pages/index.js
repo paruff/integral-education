@@ -8,6 +8,12 @@ import styles from './index.module.css';
 function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
+      <div className={styles.aqalMotif} aria-hidden="true">
+        <span className={`${styles.aqalLabel} ${styles.aqalLabelI}`}>I</span>
+        <span className={`${styles.aqalLabel} ${styles.aqalLabelWe}`}>We</span>
+        <span className={`${styles.aqalLabel} ${styles.aqalLabelIt}`}>It</span>
+        <span className={`${styles.aqalLabel} ${styles.aqalLabelIts}`}>Its</span>
+      </div>
       <div className="container">
         <h1 className="hero__title">Develop yourself across mind, body, and relationships</h1>
         <p className="hero__subtitle">

@@ -1,0 +1,72 @@
+[
+  {
+    "id": "T1",
+    "title": "Add safety_tier frontmatter to Tier 2 modules",
+    "description": "Add `safety_tier: 2` to the frontmatter of all 17 modules that use CrisisResourceBanner or ShadowGate.",
+    "dependencies": [],
+    "files": [
+      "docs/modules/self-line-integration-practice.mdx",
+      "docs/modules/shadow-collective-cultural.mdx",
+      "docs/modules/nondual-awareness-orientation.mdx",
+      "docs/modules/shadow-work-foundation.mdx",
+      "docs/modules/shadow-positive-projection.mdx",
+      "docs/modules/shadow-spiritual-bypassing.mdx",
+      "docs/modules/shadow-integration-101.md",
+      "docs/modules/integral-shadow-teal-trap.mdx",
+      "docs/modules/integral-life-practice-embodying-2nd-tier.mdx",
+      "docs/modules/causal-witness-state.mdx",
+      "docs/modules/shadow-321-process.mdx",
+      "docs/modules/shadow-in-relationships.mdx",
+      "docs/modules/shadow-immunity-to-change.mdx",
+      "docs/modules/shadow-persona-mask.mdx",
+      "docs/modules/moral-line-shadow-moral-injury.mdx",
+      "docs/modules/spiritual-line-shadow-integration.mdx",
+      "docs/modules/subtle-state-access.mdx"
+    ],
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "All 17 Tier 2 modules have `safety_tier: 2` in frontmatter",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Add TIER badge to ModuleMeta component",
+    "description": "Extend the ModuleMeta component to read the `safety_tier` frontmatter field and render a styled TIER badge when tier ≥ 2.",
+    "dependencies": ["T1"],
+    "files": ["src/components/ModuleMeta/index.js"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-2",
+        "description": "ModuleMeta component renders a TIER badge when safety_tier is 2 or 3",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC-3",
+        "description": "Tier 2 badge shows \"TIER 2 · Guided\" matching existing pill style",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC-4",
+        "description": "Tier 1 modules (no safety_tier) do not render a tier badge",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T3",
+    "title": "Verify build passes",
+    "description": "Run `npm run build` to confirm no frontmatter or compilation errors.",
+    "dependencies": ["T2"],
+    "files": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC-5",
+        "description": "`npm run build` succeeds",
+        "test_type": "integration"
+      }
+    ]
+  }
+]

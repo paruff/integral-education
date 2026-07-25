@@ -1,19 +1,22 @@
-# Test Report — UX-21
+# Test Report — UX-22
 
 ## Test Results
 
 | AC ID | Criterion | Test Type | Result |
 |---|---|---|---|
-| AC-1 | "Find Your Path →" uses primary button style (`homepage-primary-cta` filled green) | unit | ✓ PASS |
-| AC-2 | "Get Started →" uses secondary button style (`button--secondary` outline/ghost) | unit | ✓ PASS |
-| AC-3 | Both link targets (`/start` and `/docs/intro`) unchanged | unit | ✓ PASS |
-| AC-4 | `npm run build` succeeds | integration | ✓ PASS |
+| AC-1 | All 17 Tier 2 modules have `safety_tier: 2` in frontmatter | unit | ✓ PASS (grep confirms 17 matches) |
+| AC-2 | ModuleMeta renders TIER badge when `safety_tier` is 2 or 3 | unit | ✓ PASS (component condition: `safetyTier && safetyTier >= 2`) |
+| AC-3 | Tier 2 badge shows "2 · Guided" with existing pill style | unit | ✓ PASS (TIER_CONFIG label + badge CSS classes + CSS custom properties) |
+| AC-4 | Tier 1 modules do not render a tier badge | unit | ✓ PASS (no `safety_tier` → `safetyTier` is undefined → condition short-circuits) |
+| AC-5 | `npm run build` succeeds | integration | ✓ PASS |
 
 ## Regression Check
-No regression risk — pure CSS class swap on two existing `<Link>` elements in one file.
+- No changes to existing ModuleMeta behavior for non-tiered modules
+- Existing DIFFICULTY_CONFIG, TIME, STAGE, and PREREQUISITES rendering untouched
+- No CSS changes — existing badge styles reused
 
 ## Phase 3.5 — Live System Verification
-N/A — no acceptance criteria tagged `test_type: live-system`. Skipping.
+N/A — no acceptance criteria tagged `test_type: live-system`.
 
 ## Overall
 **PASS** — all acceptance criteria pass.

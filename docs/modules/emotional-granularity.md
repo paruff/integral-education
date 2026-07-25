@@ -37,7 +37,7 @@ import Tooltip from '@site/src/components/Tooltip';
 This module assumes you have a basic mindfulness practice — the capacity to observe your experience without immediately reacting to it. Being able to notice what you feel is the foundation on which naming what you feel is built.
 :::
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 | Dimension | Framework Mapping |
 | :--- | :--- |
 | **Quadrant** | **Primary Upper-Left (UL):** Interior-individual emotional differentiation and interoceptive refinement. <br />**Secondary Lower-Left (LL):** Interpersonal communication of granular emotional states within shared cultural contexts. |
@@ -115,7 +115,7 @@ This rubric aligns with the AQAL Competency Map Emotional Line L1–L2 indicator
 
 ---
 
-## 🔗 Integrate
+## 🔄 Integrate
 
 Apply this in real life:
 - Replace "I'm stressed" with a more precise emotion before conversations

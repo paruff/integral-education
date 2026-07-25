@@ -90,7 +90,7 @@ Key distinctions:
 
 ---
 
-## 🔗 Integrate
+## 🔄 Integrate
 
 Apply this in real life:
 - Pause for 3 breaths before responding in conversation

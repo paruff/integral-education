@@ -81,7 +81,7 @@ Key concepts:
 
 ---
 
-## 🔗 Integrate
+## 🔄 Integrate
 
 Apply this in real life:
 - Before intervening, ask: "What feedback loops am I triggering?"

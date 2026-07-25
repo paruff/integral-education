@@ -20,7 +20,7 @@ import ModuleFooter from '@site/src/components/ModuleFooter';
 
 ---
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | This module's focus |
 |-----------|-------------------|

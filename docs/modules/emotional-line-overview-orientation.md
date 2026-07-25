@@ -157,7 +157,7 @@ Optional synthesis prompt: "If my Emotional line were one level more developed i
 
 ---
 
-## 🧲 Stabilize
+## ⚓ Stabilize
 
 ## Pre/Trans Checkpoint for the Emotional Line
 

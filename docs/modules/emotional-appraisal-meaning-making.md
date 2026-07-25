@@ -31,7 +31,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-## AQAL Mapping
+## 🗺️ AQAL Mapping
 
 | Dimension | Mapping |
 | :--- | :--- |
@@ -140,7 +140,7 @@ This exercise develops the capacity to trace, test, and update a real appraisal 
 
 ---
 
-## 🧲 Stabilize
+## ⚓ Stabilize
 
 ### Intellectualisation as Avoidance
 

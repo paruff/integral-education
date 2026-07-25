@@ -112,16 +112,27 @@ function extractSections(content) {
   const headingRegex = /^## (.+)$/gm;
   let match;
   while ((match = headingRegex.exec(content)) !== null) {
-    sections.push(match[1].replace(/[🌀🧠⚓🔍🆘🌿🗺️🛡️📊📚⚠️⌛⏱️]/g, '').trim());
+    sections.push(match[1].replace(/[🌀🧠⚓🔍🆘🌿🗺️🛡️📊📚⚠️⌛⏱️🧭🧘🔄]/g, '').trim());
   }
   return sections;
 }
 
-// Safety Note is commonly implemented as a Docusaurus admonition
-// (`:::note Safety Note` / `<Admonition title="Safety Note">`), or under a
-// custom-named heading like "When to Seek Support" — a deliberate journey-
-// template pattern, not a gap. Detect all forms so modules aren't flagged as
-// missing a section that's genuinely present, just not literally H2 "Safety".
+// Journey-template skeleton (see .agents/skills/module-authoring/SKILL.md):
+// AQAL Mapping -> Orient -> Encounter -> Learn -> Practice -> Stabilize ->
+// Integrate -> Reflect -> Assess -> Retrieval Schedule -> Evidence and
+// Citations, with Facilitator Note / Safety Note as admonitions rather than
+// H2 headings. Theoretical Frameworks / Gifts / Limitations fold into
+// custom-named headings inside Learn (e.g. "Four Framework Lenses", "The
+// Gifts of Orange") so they're matched by keyword alias, not literal text.
+const JOURNEY_STEPS = [
+  'aqal mapping', 'orient', 'encounter', 'learn', 'practice', 'stabilize',
+  'integrate', 'reflect', 'assess', 'retrieval schedule', 'evidence',
+];
+const CONCEPT_ALIASES = {
+  frameworks: ['framework'],
+  gifts: ['gift'],
+  limitations: ['limitation', 'shadow'],
+};
 const SAFETY_HEADING_ALIASES = ['safety', 'seek support', 'seek help'];
 
 function hasAdmonitionSection(content, sections, label) {
@@ -131,8 +142,26 @@ function hasAdmonitionSection(content, sections, label) {
   const fencedRegex = new RegExp(`^:::\\w+.*${labelLower}`, 'im');
   if (fencedRegex.test(content)) return true;
   const componentRegex = new RegExp(`<Admonition[^>]*title=["'][^"']*${labelLower}`, 'i');
-  if (componentRegex.test(content)) return true;
-  return false;
+  return componentRegex.test(content);
+}
+
+function hasConcept(sections, aliases) {
+  return sections.some(s => aliases.some(a => s.toLowerCase().includes(a)));
+}
+
+function checkJourneySkeleton(sections, content) {
+  const found = sections.map(s => s.toLowerCase());
+  const missing = [];
+  for (const step of JOURNEY_STEPS) {
+    if (found.some(f => f.includes(step) || step.includes(f))) continue;
+    missing.push(step);
+  }
+  for (const [concept, aliases] of Object.entries(CONCEPT_ALIASES)) {
+    if (!hasConcept(sections, aliases)) missing.push(concept);
+  }
+  if (!hasAdmonitionSection(content, sections, 'facilitator')) missing.push('facilitator note');
+  if (!hasAdmonitionSection(content, sections, 'safety')) missing.push('safety note');
+  return missing;
 }
 
 function inferStage(fm) {
@@ -226,6 +255,7 @@ function main() {
       hasEvidence: sections.some(s => s.toLowerCase().includes('evidence')),
       hasSafetyNote: hasAdmonitionSection(content, sections, 'safety'),
       hasFacilitatorNote: hasAdmonitionSection(content, sections, 'facilitator'),
+      missingJourneySteps: checkJourneySkeleton(sections, content),
     };
 
     modules[node.id] = node;
@@ -296,10 +326,17 @@ function main() {
     difficultyCounts[node.difficulty] = (difficultyCounts[node.difficulty] || 0) + 1;
   }
 
-  // Gold-standard compliance
-  const fullGoldStandard = nodes.filter(n =>
-    n.hasAQAL && n.hasPractice && n.hasEvidence && n.hasSafetyNote
-  ).length;
+  // Journey-template compliance (key name kept as goldStandardCompliance for
+  // CI backward-compat — see .github/workflows/ci-quality.yml — but this now
+  // measures full journey-skeleton coverage, not the old flat 13-section list)
+  const fullGoldStandard = nodes.filter(n => n.missingJourneySteps.length === 0).length;
+
+  const journeyStepGaps = {};
+  for (const node of nodes) {
+    for (const step of node.missingJourneySteps) {
+      journeyStepGaps[step] = (journeyStepGaps[step] || 0) + 1;
+    }
+  }
 
   const orphanModules = nodes.filter(n =>
     n.prerequisites.length > 0 &&
@@ -321,6 +358,7 @@ function main() {
         total: nodes.length,
         percentage: Math.round((fullGoldStandard / nodes.length) * 100),
       },
+      journeyStepGaps,
       orphanModules: orphanModules.length,
       avgSectionsPerModule: Math.round(
         nodes.reduce((sum, n) => sum + n.goldStandardSections, 0) / nodes.length

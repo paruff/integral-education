@@ -7,7 +7,10 @@
  * 2. Safety tiers are consistent (tier-2 tag requires safety_tier: 2 frontmatter)
  * 3. Format field is present and valid
  * 4. No prohibited vocabulary in public-facing modules
- * 5. Gold-standard section coverage (13 sections)
+ * 5. Journey-template section coverage (AQAL Mapping / Orient / Encounter /
+ *    Learn / Practice / Stabilize / Integrate / Reflect / Assess / Retrieval
+ *    Schedule / Evidence, plus Frameworks/Gifts/Limitations folded into Learn
+ *    and Facilitator/Safety Note as admonitions)
  *
  * Usage: node scripts/validate-frontmatter.js [--fix]
  */
@@ -23,24 +26,34 @@ const REQUIRED_FIELDS = ['id', 'title', 'description'];
 // Valid format values
 const VALID_FORMATS = ['text-reflection', 'embodied-guided', 'facilitated-group'];
 
-// The 13 gold-standard sections (## headings)
-const GOLD_STANDARD_SECTIONS = [
+// Journey-template skeleton (see .agents/skills/module-authoring/SKILL.md):
+// AQAL Mapping -> Orient -> Encounter -> Learn -> Practice -> Stabilize ->
+// Integrate -> Reflect -> Assess -> Retrieval Schedule -> Evidence and
+// Citations. Facilitator Note / Safety Note are admonitions, not H2s.
+const JOURNEY_STEPS = [
   'AQAL Mapping',
-  'Theoretical Frameworks',
-  'Gifts',
-  'Limitations',
-  'Shadows',
+  'Orient',
+  'Encounter',
+  'Learn',
   'Practice',
+  'Stabilize',
+  'Integrate',
   'Reflect',
   'Assess',
-  'Integrate',
-  'Facilitator Note',
-  'Anki Cards',
   'Retrieval Schedule',
   'Evidence',
-  'Citations',
-  'Safety Note',
 ];
+
+// Theoretical Frameworks / Gifts / Limitations fold into custom-named
+// headings inside Learn (e.g. "Four Framework Lenses", "The Gifts of
+// Orange") rather than literal "## Theoretical Frameworks" — matched by
+// keyword alias, not exact substring, so a custom heading isn't wrongly
+// flagged as a missing section.
+const CONCEPT_ALIASES = {
+  'Frameworks': ['framework'],
+  'Gifts': ['gift'],
+  'Limitations': ['limitation', 'shadow'],
+};
 
 // Prohibited vocabulary in learner-facing modules (not tagged 'integral' or 'internal')
 const PROHIBITED_VOCABULARY = [
@@ -116,7 +129,7 @@ const HEADING_ALIASES = {
 
 function hasAdmonitionSection(content, sections, label) {
   const labelLower = label.toLowerCase();
-  const aliases = HEADING_ALIASES[labelLower] || [];
+  const aliases = [labelLower, ...(HEADING_ALIASES[labelLower] || [])];
   if (sections.some(s => aliases.some(a => s.toLowerCase().includes(a)))) return true;
   const fencedRegex = new RegExp(`^:::\\w+.*${labelLower}`, 'im');
   if (fencedRegex.test(content)) return true;
@@ -125,20 +138,26 @@ function hasAdmonitionSection(content, sections, label) {
 }
 
 function checkGoldStandard(sections, content) {
-  const found = new Set(sections.map(s => s.toLowerCase()));
+  const found = sections.map(s => s.toLowerCase());
   const missing = [];
-  for (const section of GOLD_STANDARD_SECTIONS) {
-    const sectionLower = section.toLowerCase();
-    // Check if any section heading contains a key fragment of the gold standard section
-    const matched = Array.from(found).some(f =>
-      f.includes(sectionLower) || sectionLower.includes(f)
-    );
-    if (matched) continue;
-    if (ADMONITION_SECTIONS.includes(section) && hasAdmonitionSection(content, sections, sectionLower)) {
-      continue;
-    }
-    missing.push(section);
+
+  for (const step of JOURNEY_STEPS) {
+    const stepLower = step.toLowerCase();
+    const matched = found.some(f => f.includes(stepLower) || stepLower.includes(f));
+    if (!matched) missing.push(step);
   }
+
+  for (const [concept, aliases] of Object.entries(CONCEPT_ALIASES)) {
+    const matched = found.some(f => aliases.some(a => f.includes(a)));
+    if (!matched) missing.push(concept);
+  }
+
+  for (const section of ADMONITION_SECTIONS) {
+    if (!hasAdmonitionSection(content, sections, section.toLowerCase())) {
+      missing.push(section);
+    }
+  }
+
   return missing;
 }
 

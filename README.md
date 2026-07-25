@@ -6,6 +6,8 @@
 
 A mastery-based learning platform built on the [AQAL framework](https://integrallife.com/) — All Quadrants, All Levels, All Lines, All States, All Types. Live at **[paruff.github.io/integral-education](https://paruff.github.io/integral-education/)**.
 
+**Latest release:** [v0.2.0-alpha](https://github.com/paruff/integral-education/releases/tag/v0.2.0-alpha) — UX design system, WCAG 2.1 AA compliance, Somatic/Emotional/Interpersonal lines, developmental assessments. See [CHANGELOG](CHANGELOG.md) for full details.
+
 Built with [Docusaurus](https://docusaurus.io/) and deployed to GitHub Pages.
 
 ## What You Get

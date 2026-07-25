@@ -99,6 +99,14 @@ Apply this in real life:
 
 ---
 
+## Safety Note
+
+**Tier:** 1 — Standard reflective content
+
+This module involves breath-focused and open-monitoring attention practice. As noted above, mindfulness can surface sadness, anxiety, or irritation that was already present but unfelt — you can always stop the practice, open your eyes, and ground through the feet and breath. If distress persists beyond the session, pause and speak with a trusted person. This content is educational, not therapeutic.
+
+---
+
 <RetrievalPrompt moduleName="Mindfulness Basics" cards={
   {q: "What is mindfulness?", a: "Non-judgmental present-moment awareness"},
   {q: "What is the difference between attention and awareness?", a: "Attention is focused; awareness is the open space in which experience occurs"},

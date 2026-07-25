@@ -85,6 +85,14 @@ Apply this in real life:
 
 ---
 
+## Safety Note
+
+**Tier:** 1 — Standard reflective content
+
+This module involves reflective and cognitive practices. If any material surfaces significant distress, pause and speak with a trusted person. This content is educational, not therapeutic.
+
+---
+
 <RetrievalPrompt moduleName="Cognitive Bias 101" cards={[
   {q: "What is a cognitive bias?", a: "A systematic error in thinking that affects judgments and decisions"},
   {q: "What is confirmation bias?", a: "The tendency to seek information that confirms existing beliefs"},

@@ -90,6 +90,14 @@ Apply this in real life:
 
 ---
 
+## Safety Note
+
+**Tier:** 1 — Standard reflective content
+
+This module involves analytical reflection and mapping of systems you are part of. If this practice surfaces significant distress — for example, mapping a family or relationship system that touches on genuine conflict — pause and speak with a trusted person. This content is educational, not therapeutic.
+
+---
+
 <RetrievalPrompt moduleName="Systems Thinking 101" cards={
   {q: "What is a feedback loop?", a: "A causal chain where output becomes input, either reinforcing or balancing the system"},
   {q: "What is emergence in systems thinking?", a: "Properties that arise from the interaction of parts and cannot be reduced to any single part"},

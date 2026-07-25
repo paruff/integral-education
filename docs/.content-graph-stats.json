@@ -45,10 +45,10 @@
     "Unknown": 2
   },
   "goldStandardCompliance": {
-    "full": 10,
+    "full": 54,
     "total": 77,
-    "percentage": 13
+    "percentage": 70
   },
-  "orphanModules": 1,
+  "orphanModules": 0,
   "avgSectionsPerModule": 16
 }

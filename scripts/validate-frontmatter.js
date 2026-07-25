@@ -103,7 +103,28 @@ function extractSections(content) {
   return sections;
 }
 
-function checkGoldStandard(sections, filePath) {
+// Safety Note and Facilitator Note are commonly implemented as Docusaurus
+// admonitions (`:::note Safety Note` / `<Admonition title="Safety Note">`)
+// rather than literal `## ` H2 headings — check both forms so a module isn't
+// flagged as missing a section that's genuinely present, just not H2-wrapped.
+const ADMONITION_SECTIONS = ['Facilitator Note', 'Safety Note'];
+// "Safety Note" is also legitimately expressed as a custom-named heading like
+// "When to Seek Support" under the journey-template pattern.
+const HEADING_ALIASES = {
+  'safety note': ['seek support', 'seek help'],
+};
+
+function hasAdmonitionSection(content, sections, label) {
+  const labelLower = label.toLowerCase();
+  const aliases = HEADING_ALIASES[labelLower] || [];
+  if (sections.some(s => aliases.some(a => s.toLowerCase().includes(a)))) return true;
+  const fencedRegex = new RegExp(`^:::\\w+.*${labelLower}`, 'im');
+  if (fencedRegex.test(content)) return true;
+  const componentRegex = new RegExp(`<Admonition[^>]*title=["'][^"']*${labelLower}`, 'i');
+  return componentRegex.test(content);
+}
+
+function checkGoldStandard(sections, content) {
   const found = new Set(sections.map(s => s.toLowerCase()));
   const missing = [];
   for (const section of GOLD_STANDARD_SECTIONS) {
@@ -112,9 +133,11 @@ function checkGoldStandard(sections, filePath) {
     const matched = Array.from(found).some(f =>
       f.includes(sectionLower) || sectionLower.includes(f)
     );
-    if (!matched) {
-      missing.push(section);
+    if (matched) continue;
+    if (ADMONITION_SECTIONS.includes(section) && hasAdmonitionSection(content, sections, sectionLower)) {
+      continue;
     }
+    missing.push(section);
   }
   return missing;
 }
@@ -158,7 +181,7 @@ function validateFile(filePath) {
 
   // 4. Gold standard section coverage
   const sections = extractSections(content);
-  const missingSections = checkGoldStandard(sections, filePath);
+  const missingSections = checkGoldStandard(sections, content);
   if (missingSections.length > 0) {
     warnings.push(`Missing gold-standard sections: ${missingSections.join(', ')}`);
   }
@@ -181,11 +204,14 @@ function validateFile(filePath) {
     console.log(`  ❌ ${relativePath}`);
     errors.forEach(e => console.log(`       ${e}`));
     exitCode = 1;
+    return 'error';
   } else if (warnings.length > 0) {
     console.log(`  ⚠️  ${relativePath}`);
     warnings.forEach(w => console.log(`       ${w}`));
+    return 'warning';
   } else {
     console.log(`  ✅ ${relativePath}`);
+    return 'pass';
   }
 }
 
@@ -205,14 +231,9 @@ function main() {
     const stat = fs.statSync(filePath);
     if (stat.isFile()) {
       validated++;
-      const before = exitCode;
-      validateFile(filePath);
-      if (exitCode === 0 && before === exitCode) {
-        passed++;
-      } else if (exitCode === 0) {
-        // was warned
-        warned++;
-      }
+      const status = validateFile(filePath);
+      if (status === 'pass') passed++;
+      else if (status === 'warning') warned++;
     }
   }
 

@@ -19,7 +19,12 @@ types:
   - self-paced
   - journaling-based
   - practice-design
-prerequisites: "Completion of the Emotional line suite (EI-01 through EI-06) and the Interpersonal line suite (EI-08 through EI-11)."
+prerequisites:
+  - emotional-line-overview-orientation
+  - interpersonal-line-overview-orientation
+  - perspective-taking-empathic-accuracy
+  - relational-repair-conflict-navigation
+  - cross-difference-dialogue-trust-building
 tags:
   - emotional-line
   - interpersonal-line

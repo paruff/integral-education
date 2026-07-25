@@ -1,5 +1,6 @@
 ---
 id: shadow-integration-101
+hide_table_of_contents: true
 title: Shadow Integration
 description: An introduction to shadow work using Wilber's 3-2-1 Process — face, talk to, and be the disowned parts of self for greater wholeness and psychological integration.
 quadrants:

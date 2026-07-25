@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T22:25:51.706Z",
+  "generated": "2026-07-25T22:35:04.400Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,21 +49,21 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 16,
+      "full": 19,
       "total": 77,
-      "percentage": 21
+      "percentage": 25
     },
     "journeyStepGaps": {
       "learn": 19,
       "integrate": 11,
       "retrieval schedule": 35,
-      "frameworks": 55,
-      "gifts": 61,
-      "facilitator note": 60,
+      "frameworks": 54,
+      "gifts": 58,
+      "facilitator note": 57,
       "orient": 18,
       "encounter": 24,
       "stabilize": 18,
-      "limitations": 46,
+      "limitations": 45,
       "reflect": 12,
       "assess": 3,
       "aqal mapping": 4,
@@ -504,16 +504,13 @@
         "network-logic",
         "growing-up"
       ],
-      "goldStandardSections": 19,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "cognitive-line-overview-orientation",
@@ -1966,17 +1963,13 @@
         "Narvaez",
         "AQAL"
       ],
-      "goldStandardSections": 19,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "moral-line-overview-dual-track",
@@ -2107,17 +2100,13 @@
         "AQAL",
         "cross-suite"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "multiperspectival-leadership-action",

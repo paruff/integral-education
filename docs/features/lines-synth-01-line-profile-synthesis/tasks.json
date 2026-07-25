@@ -1,0 +1,100 @@
+{
+  "tasks": [
+    {
+      "id": "lines-synth-01-01",
+      "description": "Create synthesis page at docs/maps/line-profile-overview.md with stages-vs-lines distinction, seven-line table, worked example, and no-assessment honesty note",
+      "file": "docs/maps/line-profile-overview.md",
+      "depends_on": [],
+      "acceptance_criteria": [
+        { "id": "AC-01", "description": "Synthesis page exists at correct path", "test_type": "unit" },
+        { "id": "AC-02", "description": "Stages-vs-lines distinction with link to AQAL Overview", "test_type": "unit" },
+        { "id": "AC-03", "description": "All seven lines with description and overview link", "test_type": "unit" },
+        { "id": "AC-04", "description": "Self line included in seven-line table", "test_type": "unit" },
+        { "id": "AC-05", "description": "Worked example with at least 4 lines at different levels", "test_type": "unit" },
+        { "id": "AC-06", "description": "Worked example explains what uneven development means for daily experience", "test_type": "unit" },
+        { "id": "AC-07", "description": "Explicit statement that no formal cross-line assessment tool exists yet", "test_type": "unit" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-02",
+      "description": "Add cross-link from AQAL Overview Skills section to new Line Profile Overview page",
+      "file": "docs/maps/aqal-overview.md",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-08", "description": "AQAL Overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-03",
+      "description": "Add cross-link from Self Line Overview to new Line Profile Overview",
+      "file": "docs/modules/self-line-overview-psychograph.mdx",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Self line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-04",
+      "description": "Add cross-link from Emotional Line Overview to new Line Profile Overview",
+      "file": "docs/modules/emotional-line-overview-orientation.md",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Emotional line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-05",
+      "description": "Add cross-link from Interpersonal Line Overview to new Line Profile Overview",
+      "file": "docs/modules/interpersonal-line-overview-orientation.md",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Interpersonal line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-06",
+      "description": "Add cross-link from Cognitive Line Overview to new Line Profile Overview",
+      "file": "docs/modules/cognitive-line-overview-orientation.mdx",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Cognitive line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-07",
+      "description": "Add cross-link from Spiritual Line Overview to new Line Profile Overview",
+      "file": "docs/modules/spiritual-line-overview-orientation.mdx",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Spiritual line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-08",
+      "description": "Add cross-link from Moral Line Overview to new Line Profile Overview",
+      "file": "docs/modules/moral-line-overview-dual-track.mdx",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Moral line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-09",
+      "description": "Add cross-link from Somatic Line Overview to new Line Profile Overview",
+      "file": "docs/modules/somatic-line-overview.md",
+      "depends_on": ["lines-synth-01-01"],
+      "acceptance_criteria": [
+        { "id": "AC-09", "description": "Somatic line overview links to line-profile-overview", "test_type": "integration" }
+      ]
+    },
+    {
+      "id": "lines-synth-01-10",
+      "description": "Verify npm run build passes",
+      "file": "all",
+      "depends_on": ["lines-synth-01-01", "lines-synth-01-02", "lines-synth-01-03", "lines-synth-01-04", "lines-synth-01-05", "lines-synth-01-06", "lines-synth-01-07", "lines-synth-01-08", "lines-synth-01-09"],
+      "acceptance_criteria": [
+        { "id": "AC-10", "description": "npm run build passes with zero errors", "test_type": "build" }
+      ]
+    }
+  ]
+}

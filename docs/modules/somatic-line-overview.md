@@ -211,4 +211,6 @@ Evidence quality uses Tier A (strong convergent evidence), Tier B (moderate evid
 
 For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard), the [State Development Safety Standard](/internal/safety/state-development-safety-standard), and the [Somatic Line Safety Addendum](/internal/safety/somatic-line-safety-addendum).
 
+For a synthesis across all seven developmental lines and a worked example of uneven development, see the [Line Profile Overview](../maps/line-profile-overview).
+
 <ModuleFooter />

@@ -1,4 +1,4 @@
-# Cross-Validation Report — ROUTE-02
+# Cross-Validation Report — LINES-SYNTH-01
 
 ## Cross-Validation Result: PASS
 
@@ -10,51 +10,50 @@ All artifacts are mutually consistent with each other and with the original spec
 
 | Specification Requirement | Build Implementation | Match |
 |---------------------------|---------------------|-------|
-| 3 line-diagnostic questions | LINE_QUESTIONS array with 3 entries (id: 0, 1, 2) | ✓ |
-| Both stage and line recommendation shown | ResultBox rendered twice: stage then line | ✓ |
-| Clearly distinguished sections | Labeled aria-labels + resultDistinction explanation box | ✓ |
-| 2-of-3 threshold for line routing | `if (max < 2) return 'mixed'` in tallyLine() | ✓ |
-| All-paths grid includes line QuickStarts | emotional-line and interpersonal-line added to ALL_PATHS | ✓ |
-| npm run build passes | Build exit code 0; build/index.html generated | ✓ |
-| Mirror paragraphs non-labeling | Zero labeling patterns found; "Your answers suggest" framing | ✓ |
-| No changes to sidebar/navbar | Only start.js and start.module.css modified | ✓ |
+| Synthesis page at `docs/maps/line-profile-overview.md` | File created at correct path | ✓ |
+| Stages-vs-lines distinction with AQAL link | "Stages vs. Lines" section links to `#skills-lines` and `#depth-levels` | ✓ |
+| Seven lines with one-sentence descriptions | Table with name, description, overview link | ✓ |
+| Self line included | Present as `Self (Ego)` with explanatory note | ✓ |
+| Worked example of uneven development | 5-line fictional composite with 3 distinct levels | ✓ |
+| Explicit no-assessment statement | "No Formal Cross-Line Assessment Yet" section | ✓ |
+| Cross-links from AQAL Overview | Added + Self line added to line list | ✓ |
+| Cross-links from all seven overview modules | All 7 verified | ✓ |
 
 ### 2. Design ↔ Build
 
 | Design Element | Build Implementation | Match |
 |---------------|---------------------|-------|
-| Phase state machine (null → stage → complete) | `phase` state: null → 'stage' → 'complete' | ✓ |
-| ResultBox sub-component extraction | `function ResultBox({ label, result, styles })` | ✓ |
-| Stage result preview during Phase 2 | `phaseResultPreview` div with stage title and explanation | ✓ |
-| resultDistinction explanation | Box with "Stage paths address how… Line paths address what domain" | ✓ |
-| Recommended badge: Stage / Line / Stage+Line | Ternary logic on `isStageRecommended` && `isLineRecommended` | ✓ |
-| 8 paths in ALL_PATHS grid | Count: 8 `id:` entries | ✓ |
-| tallyLine 2-of-3 threshold | Implemented as designed | ✓ |
+| Page structure (7 sections) | Stages vs Lines → Seven Lines → Uneven Development → Worked Example → No Assessment → Cross-References | ✓ |
+| Line descriptions match overview modules | Descriptions drawn from each module's actual focus | ✓ |
+| Worked example: Maria, 34 | Fictional composite with 5 lines at 3 levels | ✓ |
+| Daily-life explanation: 3 scenarios | Meetings, relationships, body | ✓ |
+| Cross-link placement: before `<ModuleFooter />` | All 7 cross-links placed at consistent location | ✓ |
+| Self line in AQAL Overview | Added as seventh line in Skills section | ✓ |
 
 ### 3. Review ↔ Verification
 
 | Review Claim | Verification Finding | Consistent |
 |-------------|---------------------|------------|
 | Approved — all requirements met | All 15 verification claims verified_true | ✓ |
-| Stage routing preserved verbatim | `tally()` byte-identical to main | ✓ |
-| QUESTIONS[] unchanged | Byte-identical to main | ✓ |
-| RESULTS{} unchanged | Byte-identical to main | ✓ |
-| No regressions on existing code | CSS additions only; no existing rules modified | ✓ |
-| Only intended files modified | 2 source files + 3 report artifacts | ✓ |
+| No security risk | Static markdown only | ✓ |
+| No breaking changes | Only additive edits | ✓ |
+| No over-claiming | Explicit fictional composite label + assessment disclaimer | ✓ |
+| Self line gap in AQAL filled | Self line added with explanation | ✓ |
 
 ### 4. Tasks ↔ Completion
 
-| Task ID | Description | Build Report Status | Verification Status | Consistent |
-|---------|-------------|--------------------|--------------------|-------------|
-| route-02-01 | LINE_QUESTIONS array | ✓ Complete | File contains LINE_QUESTIONS | ✓ |
-| route-02-02 | LINE_RESULTS mapping | ✓ Complete | File contains LINE_RESULTS with 4 states | ✓ |
-| route-02-03 | tallyLine() function | ✓ Complete | Function present; 8 unit tests pass | ✓ |
-| route-02-04 | Phase state machine | ✓ Complete | Phase states: null, 'stage', 'complete' | ✓ |
-| route-02-05 | Phase 2 UI | ✓ Complete | Line questions rendered in phase==='stage' block | ✓ |
-| route-02-06 | Combined results | ✓ Complete | 2 ResultBox instances with distinction box | ✓ |
-| route-02-07 | Expanded ALL_PATHS | ✓ Complete | 8 paths, emotional and interpersonal present | ✓ |
-| route-02-08 | CSS additions | ✓ Complete | 6 new class blocks in start.module.css | ✓ |
-| route-02-09 | Build verification | ✓ Complete | npm run build [SUCCESS] | ✓ |
+| Task ID | Build Report | Verification | Consistent |
+|---------|-------------|-------------|------------|
+| lines-synth-01-01 | ✓ | File exists, all ACs met | ✓ |
+| lines-synth-01-02 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-03 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-04 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-05 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-06 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-07 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-08 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-09 | ✓ | Cross-link confirmed | ✓ |
+| lines-synth-01-10 | ⚠ Local env blocked | CI expected PASS | N/A |
 
 ## Inconsistencies
 

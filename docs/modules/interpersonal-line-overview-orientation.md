@@ -336,4 +336,6 @@ This platform does not provide therapy or emergency care.
 
 :::
 
+For a synthesis across all seven developmental lines and a worked example of uneven development, see the [Line Profile Overview](../maps/line-profile-overview).
+
 <ModuleFooter />

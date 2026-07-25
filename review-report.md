@@ -1,58 +1,54 @@
-# Review Report — ROUTE-02
+# Review Report — LINES-SYNTH-01
 
 ## Review Result: APPROVED
 
 ## Correctness
 Implementation matches specification and design exactly:
-- 3 line-diagnostic questions added (pressure, difficult conversations, growth area)
-- LINE_RESULTS with 4 states (emotional, interpersonal, self, mixed)
-- tallyLine() with 2-of-3 threshold and mixed fallback
-- Two-phase flow: Phase 1 (stage) → Phase 2 (line) → combined results
-- ResultBox sub-component for DRY rendering of both result types
-- Stage/line distinction explanation box between recommendation sections
-- ALL_PATHS expanded from 6 to 8 paths with Emotional and Interpersonal lines
-- Recommended badges show "Stage", "Line", or "Stage + Line" based on matching
-- Mirror paragraphs use "Your answers suggest..." framing — non-labeling, non-pathologizing
+- Synthesis page at correct path (`docs/maps/line-profile-overview.md`) ✓
+- Stages-vs-lines distinction with AQAL Overview links ✓
+- Seven-line table with one-sentence descriptions and module links ✓
+- Self line included with explanation of why it's the seventh ✓
+- Worked example with 5 lines at 3 different levels ✓
+- Daily-life impact explained across 3 scenarios ✓
+- Explicit honesty note: "no formal cross-line assessment tool exists yet" ✓
+- 8 cross-links added (AQAL Overview + 7 line overviews) ✓
 
 ## Scope Discipline
 | File | Change | Appropriate |
 |------|--------|-------------|
-| `src/pages/start.js` | Major — page restructured for two-phase flow | ✓ Core file |
-| `src/pages/start.module.css` | Additions only — 6 new class blocks | ✓ No existing rules changed |
-| `build-report.md` | Replaced (from NAV-04 session) | ✓ Required artifact |
-| `test-report.md` | Replaced (from NAV-04 session) | ✓ Required artifact |
+| `docs/maps/line-profile-overview.md` | **New** — 280+ line synthesis | ✓ Core deliverable |
+| `docs/maps/aqal-overview.md` | +2 lines: Self line + cross-link | ✓ Fills gap in existing content |
+| 7 line overview modules | +1 line each: cross-link | ✓ Minimal, non-intrusive |
 
-No changes to: sidebar, navbar, other pages, module content, configuration files.
+No changes to: sidebar, navbar, build config, dependencies, other pages.
 
-## Pattern Compliance
-- Follows existing component structure (functional component with hooks)
-- LINE_QUESTIONS mirrors QUESTIONS array pattern (id, text, options)
-- LINE_RESULTS mirrors RESULTS mapping pattern (title, explanation, recommended, alt, altLink)
-- tallyLine() mirrors tally() pattern with appropriate threshold adjustment
-- CSS additions follow existing naming conventions (camelCase, scoped to component)
-- ResultBox extraction demonstrates good refactoring (removes duplicate rendering logic)
+## Content Quality
+- Stages-vs-lines section is concise — links to AQAL Overview rather than duplicating content ✓
+- Line descriptions are accurate reflections of each overview module's actual focus ✓
+- Worked example is explicitly labeled "fictional composite" — no over-claiming ✓
+- The assessment honesty note uses the same discipline as QS-01's Personal→Integral overclaim fix ✓
+- Language follows developmental-vocabulary guidelines: "this is not a failure of character or effort" framing ✓
+- Self line correctly described as "architecturally central thread" with Cook-Greuter citation ✓
 
 ## Maintainability
-- **Clarity:** Phase state machine (`null` → `'stage'` → `'complete'`) is well-commented and intuitive
-- **Separation:** Stage and line concerns are in separate data structures and separate rendering blocks
-- **Testability:** tallyLine() is a pure function, easily unit-testable independent of the component
-- **Regression safety:** tally(), QUESTIONS[], RESULTS{} preserved verbatim — zero risk to existing stage routing
-- **No new dependencies** — vanilla React, Docusaurus Link, and CSS modules only
+- Pure markdown — no JSX, no imports, no state ✓
+- Links are relative, not hardcoded ✓
+- Table format is standard and extensible ✓
 
 ## Risk Assessment
 | Risk | Severity | Finding |
 |------|----------|---------|
-| Security | None | Client-side only, no user data sent anywhere, no authentication |
-| Performance | None | No additional network calls, no heavy computations |
-| Breaking changes | None | No API surface, no exported interfaces, no page route changes |
-| Regression | None | Stage routing code preserved verbatim |
-| Edge cases | Covered | Mixed results for both stage and line, all 4 states handled |
-| Unnecessary removal | Low | Removed "/line-profile" link from results — replaced by integrated line recommendation |
+| Security | None | Static markdown, no user input |
+| Performance | None | No additional dependencies |
+| Breaking changes | None | No existing pages modified beyond cross-links |
+| Dead links | None | All 7 overview module paths verified |
+| Over-claiming | None | Explicit disclaimer about no formal assessment |
+| Self line inconsistency with AQAL Overview | None | Noted and explained in the synthesis page |
 
 ## Requested Changes
 None.
 
 ## Reviewer Notes
-1. The removal of the old `/line-profile` link is intentional and correct — the integrated line recommendation replaces the separate link. The `/line-profile` standalone page remains accessible through other navigation.
-2. The `build-report.md` and `test-report.md` diff includes changes from the prior NAV-04 session; the only files changed within the ROUTE-02 scope are `src/pages/start.js` and `src/pages/start.module.css`.
-3. Line question language was designed to describe observable behaviors (not personality traits), consistent with the developmental-vocabulary skill guidelines.
+1. The Self line was missing from the AQAL Overview's existing six-line list — added it alongside the cross-link to the synthesis page. This corrects a gap in the framework documentation.
+2. The worked example uses 5 lines (Cognitive, Emotional, Interpersonal, Moral, Somatic) but not Spiritual — this is intentional; not every profile shows every line, and the example demonstrates what's most common.
+3. The synthesis page was placed in `docs/maps/` (not `docs/modules/`) because it's a reference/overview document, not a learning module.

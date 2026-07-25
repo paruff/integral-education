@@ -102,7 +102,7 @@ export default function Home() {
             <article className="homepage-card">
               <h3>Personal → Integral</h3>
               <p>Move from self-growth basics to AQAL-informed development habits.</p>
-              <p className="homepage-card-meta">Estimated time: 20 min</p>
+              <p className="homepage-card-meta">Time commitment: 3–6 weeks</p>
               <Link className="homepage-card-cta" to="/docs/quickstarts/personal-to-integral">
                 Begin →
               </Link>
@@ -110,7 +110,7 @@ export default function Home() {
             <article className="homepage-card">
               <h3>Amber → Rational</h3>
               <p>Build critical thinking skills while transitioning into modern worldview logic.</p>
-              <p className="homepage-card-meta">Estimated time: 20 min</p>
+              <p className="homepage-card-meta">Time commitment: 10–20 weeks</p>
               <Link className="homepage-card-cta" to="/docs/quickstarts/amber-to-rational">
                 Begin →
               </Link>
@@ -118,7 +118,7 @@ export default function Home() {
             <article className="homepage-card">
               <h3>Interpersonal Line Development</h3>
               <p>Build perspective-taking, conflict repair, and cross-difference dialogue — from relational awareness to full interpersonal integration.</p>
-              <p className="homepage-card-meta">Estimated time: 25–40 min per module</p>
+              <p className="homepage-card-meta">Time commitment: 4–6 weeks</p>
               <Link className="homepage-card-cta" to="/docs/quickstarts/interpersonal-line-development">
                 Begin →
               </Link>
@@ -126,7 +126,7 @@ export default function Home() {
             <article className="homepage-card">
               <h3>Emotional Line Development</h3>
               <p>Build emotional vocabulary, regulation, and relational skill — from naming feelings to full emotional integration.</p>
-              <p className="homepage-card-meta">Estimated time: 20–40 min per module</p>
+              <p className="homepage-card-meta">Time commitment: 3–5 weeks</p>
               <Link className="homepage-card-cta" to="/docs/quickstarts/emotional-line-development">
                 Begin →
               </Link>

@@ -1,0 +1,48 @@
+{
+  "issue": "#418",
+  "title": "UX-19: Fix contradictory time estimates between homepage and QuickStart pages",
+  "tasks": [
+    {
+      "id": "ux-19-01",
+      "description": "Update Personal → Integral card time estimate from '20 min' to '3–6 weeks'",
+      "acceptance_criteria": ["AC-01"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "ux-19-02",
+      "description": "Update Amber → Rational card time estimate from '20 min' to '10–20 weeks'",
+      "acceptance_criteria": ["AC-02"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "ux-19-03",
+      "description": "Update Interpersonal Line card time estimate from '25–40 min per module' to '4–6 weeks'",
+      "acceptance_criteria": ["AC-03"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "ux-19-04",
+      "description": "Update Emotional Line card time estimate from '20–40 min per module' to '3–5 weeks'",
+      "acceptance_criteria": ["AC-04"],
+      "test_type": "unit",
+      "depends_on": []
+    },
+    {
+      "id": "ux-19-05",
+      "description": "Verify all 4 cards use consistent 'Time commitment:' labeling format",
+      "acceptance_criteria": ["AC-05"],
+      "test_type": "unit",
+      "depends_on": ["ux-19-01", "ux-19-02", "ux-19-03", "ux-19-04"]
+    },
+    {
+      "id": "ux-19-06",
+      "description": "Verify npm run build passes",
+      "acceptance_criteria": ["AC-06"],
+      "test_type": "build",
+      "depends_on": ["ux-19-05"]
+    }
+  ]
+}

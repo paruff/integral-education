@@ -96,9 +96,10 @@ Lines are relatively independent developmental streams:
 - **Moral** — What is right?
 - **Interpersonal** — How do I relate?
 - **Somatic** — How do I inhabit my body?
+- **Self (Ego)** — Who am I, and how has my identity been constructed?
 - **Spiritual** — What is the nature of existence?
 
-A person can be at different levels on different lines (e.g., high cognitive, low emotional).
+A person can be at different levels on different lines (e.g., high cognitive, low emotional). See the [Line Profile Overview](./line-profile-overview) for a synthesis across all seven lines and a worked example of uneven development.
 
 ---
 

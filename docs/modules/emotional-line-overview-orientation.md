@@ -267,4 +267,6 @@ This module is rated **Tier 1 (self-guided, low intensity)**. It is conceptual a
 
 :::
 
+For a synthesis across all seven developmental lines and a worked example of uneven development, see the [Line Profile Overview](../maps/line-profile-overview).
+
 <ModuleFooter />

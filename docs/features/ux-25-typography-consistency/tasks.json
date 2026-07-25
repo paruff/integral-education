@@ -1,0 +1,16 @@
+[
+  {
+    "id": "T1",
+    "title": "Audit typography consistency across all target elements",
+    "description": "Verify that all homepage hero, QuickStart, Maps, and module page title elements use proper heading tags (h1-h3) and therefore inherit Lora from --ifm-heading-font-family. Verify body/badges/sidebar/breadcrumbs use non-heading elements.",
+    "dependencies": [],
+    "files": [],
+    "acceptance_criteria": [
+      { "id": "AC-1", "description": "Homepage hero h1 uses Lora", "test_type": "unit" },
+      { "id": "AC-2", "description": "QuickStart titles use Lora", "test_type": "unit" },
+      { "id": "AC-3", "description": "Maps titles use Lora", "test_type": "unit" },
+      { "id": "AC-4", "description": "Body/badges/sidebar/breadcrumbs stay on system sans-serif", "test_type": "unit" },
+      { "id": "AC-5", "description": "npm run build succeeds", "test_type": "integration" }
+    ]
+  }
+]

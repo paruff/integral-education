@@ -1,40 +1,36 @@
-# Verification Report — UX-20
+# Verification Report — UX-21
 
 ## Evidence Check
 
-### Claim: "Open Prototype removed from hero CTA"
-- **Evidence:** `git diff` shows lines 31–35 (the `<Link>` to `/prototype`) deleted from the `.buttons` div
+### Claim: "Find Your Path → uses homepage-primary-cta class"
+- **Evidence:** `git diff` confirms class changed from `{styles.secondaryCta}` to `"button button--lg homepage-primary-cta"`
 - **Verified:** ✓ TRUE
 
-### Claim: "Maps & Tools card renamed to Platform Demo / Try the demo →"
-- **Evidence:** `git diff` shows title changed from "Interactive Prototype" to "Platform Demo" and CTA from "Open prototype →" to "Try the demo →"
+### Claim: "Get Started → uses button--secondary class"
+- **Evidence:** `git diff` confirms class changed from `"button button--lg homepage-primary-cta"` to `"button button--lg button--secondary"`
 - **Verified:** ✓ TRUE
 
-### Claim: "Get Started → and Find Your Path → remain unchanged"
-- **Evidence:** `git diff` shows no changes to those lines; `grep` confirms their presence
+### Claim: "Link targets (/start and /docs/intro) unchanged"
+- **Evidence:** `git diff` shows no changes to `to=` attributes; `sed` confirms both targets present
 - **Verified:** ✓ TRUE
 
 ### Claim: "npm run build succeeds"
-- **Evidence:** Build completed with `[SUCCESS] Generated static files in "build"`; `build/index.html` exists
+- **Evidence:** Build completed with `[SUCCESS] Generated static files in "build"`
 - **Verified:** ✓ TRUE
 
 ### Claim: "Only src/pages/index.js changed"
-- **Evidence:** `git diff HEAD -- ':(exclude)docs/features/ux-20-reposition-prototype-cta/*' ':(exclude)build-report.md' ':(exclude)*.md'` shows only index.js changes (excluding new doc files and reports)
-- **Verified:** ✓ TRUE
-
-### Claim: "No security/performance/breaking changes"
-- **Evidence:** Diff contains only JSX text content changes — no new imports, no routing, no logic, no CSS
+- **Evidence:** `git diff --stat` shows only `src/pages/index.js` modified
 - **Verified:** ✓ TRUE
 
 ## All Artifacts Present
 | Artifact | Exists |
 |---|---|
-| `specification.md` | ✓ |
-| `design.md` | ✓ |
-| `tasks.json` | ✓ |
-| `build-report.md` | ✓ |
-| `test-report.md` | ✓ |
-| `review-report.md` | ✓ |
+| specification.md | ✓ |
+| design.md | ✓ |
+| tasks.json | ✓ |
+| build-report.md | ✓ |
+| test-report.md | ✓ |
+| review-report.md | ✓ |
 
 ## Result
 **PASS** — every claim is verified true.

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "T1",
+    "title": "Swap primary/secondary styling on hero CTAs",
+    "description": "In `src/pages/index.js`, change 'Get Started →' from `button button--lg homepage-primary-cta` to `button button--lg button--secondary`, and 'Find Your Path →' from `styles.secondaryCta` to `button button--lg homepage-primary-cta`.",
+    "dependencies": [],
+    "files": ["src/pages/index.js"],
+    "acceptance_criteria": [
+      {
+        "id": "AC-1",
+        "description": "\"Find Your Path →\" uses primary button style (`button--primary` filled green)",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC-2",
+        "description": "\"Get Started →\" uses secondary button style (`button--secondary` outline/ghost)",
+        "test_type": "unit"
+      },
+      {
+        "id": "AC-3",
+        "description": "Both link targets (`/start` and `/docs/intro`) are unchanged",
+        "test_type": "unit"
+      }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Verify build passes",
+    "description": "Run `npm run build` to confirm no broken links or compilation errors.",
+    "dependencies": ["T1"],
+    "files": [],
+    "acceptance_criteria": [
+      {
+        "id": "AC-4",
+        "description": "`npm run build` succeeds",
+        "test_type": "integration"
+      }
+    ]
+  }
+]

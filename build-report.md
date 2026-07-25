@@ -1,26 +1,23 @@
-# Build Report — UX-20
+# Build Report — UX-21
 
 ## Summary
-Repositioned "Open Prototype" out of the hero CTA row and renamed it to "Platform Demo" / "Try the demo →" in the Maps & Tools section.
+Swapped primary/secondary visual treatment on the two hero CTAs: "Find Your Path →" is now the primary filled-green button, "Get Started →" is the secondary outline/ghost button.
 
 ## Files Changed
 | File | Change |
 |---|---|
-| `src/pages/index.js` | Removed "Open Prototype" hero link (lines 31–35); renamed Maps & Tools card (lines 209–217) |
+| `src/pages/index.js` | Swapped CSS classes on the two hero `<Link>` elements (lines 21–30) |
 
 ## Tasks Completed
 | ID | Title | Status |
 |---|---|---|
-| T1 | Remove Open Prototype link from hero CTA row | ✓ Complete |
-| T2 | Rename Maps & Tools prototype card | ✓ Complete |
-| T3 | Verify build passes | ✓ Complete |
+| T1 | Swap primary/secondary styling on hero CTAs | ✓ Complete |
+| T2 | Verify build passes | ✓ Complete |
 
 ## Validation Results
 | Gate | Result |
 |---|---|
-| Lint | N/A (no JSX lint script configured) |
-| Typecheck | N/A (no TypeScript — JSX project) |
 | `npm run build` | ✓ PASS (production build succeeded; only pre-existing broken anchor warnings) |
 
 ## Blockers
-None. The broken anchor warnings are pre-existing in shadow modules, unrelated to this change.
+None.

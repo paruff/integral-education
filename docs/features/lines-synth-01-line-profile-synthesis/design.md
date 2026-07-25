@@ -85,7 +85,7 @@ Maria, 34
 
 | File | Where to add link |
 |------|-------------------|
-| `docs/maps/aqal-overview.md` | In "Skills (Lines)" section, after line 102: "See the [Line Profile Overview](./line-profile-overview) for a synthesis across all seven lines." |
+| `docs/maps/aqal-overview.md` | In "Skills (Lines)" section, after line 102: "See the [Line Profile Overview](../../maps/line-profile-overview) for a synthesis across all seven lines." |
 | `self-line-overview-psychograph.mdx` | In Cross-References / "Self Line Suite" section |
 | `emotional-line-overview-orientation.md` | In Cross-References section |
 | `interpersonal-line-overview-orientation.md` | In Cross-References section |

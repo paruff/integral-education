@@ -1,10 +1,10 @@
 {
-  "generated": "2026-07-25T14:15:21.701Z",
-  "totalModules": 75,
-  "totalEdges": 157,
+  "generated": "2026-07-25T19:18:29.718Z",
+  "totalModules": 77,
+  "totalEdges": 158,
   "stats": {
     "stageDistribution": {
-      "Unknown": 35,
+      "Unknown": 36,
       "Amber": 1,
       "Rational → Pluralistic": 8,
       "Amber → Rational": 7,
@@ -14,6 +14,7 @@
       "Teal": 1,
       "Green": 2,
       "Orange": 2,
+      "Red": 1,
       "Orange → Green → Teal (Integral)": 1,
       "Rational → Integral": 1,
       "Amber → Integral": 1,
@@ -22,11 +23,11 @@
     },
     "lineCoverage": {
       "emotional": 46,
-      "cognitive": 64,
-      "moral": 50,
-      "interpersonal": 52,
+      "cognitive": 66,
+      "moral": 52,
+      "interpersonal": 54,
       "spiritual": 11,
-      "somatic": 21,
+      "somatic": 23,
       "self": 22,
       "ecological": 1,
       "values": 2,
@@ -34,22 +35,22 @@
       "systems": 2
     },
     "safetyTiers": {
-      "tier-1": 53,
+      "tier-1": 55,
       "tier-2": 22
     },
     "formats": {
-      "embodied-guided": 22,
+      "embodied-guided": 24,
       "text-reflection": 53
     },
     "difficulties": {
       "Intermediate": 37,
-      "Beginner": 17,
+      "Beginner": 19,
       "Advanced": 19,
       "Unknown": 2
     },
     "goldStandardCompliance": {
       "full": 10,
-      "total": 75,
+      "total": 77,
       "percentage": 13
     },
     "orphanModules": 1,
@@ -1418,6 +1419,76 @@
       "hasAQAL": true,
       "hasPractice": false,
       "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "magic-mythic-red-stage-orientation",
+      "title": "Magic-Mythic/Red Stage Orientation",
+      "file": "docs/modules/magic-mythic-red-stage-orientation.md",
+      "stage": "Red",
+      "stageTarget": "Red",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "somatic"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "magic-purple-stage-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "red",
+        "magic-mythic",
+        "spiral-dynamics",
+        "gebser",
+        "kohlberg",
+        "somatic",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 11,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "magic-purple-stage-orientation",
+      "title": "Magic/Purple Stage Orientation",
+      "file": "docs/modules/magic-purple-stage-orientation.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Purple",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "somatic"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "purple",
+        "magic",
+        "spiral-dynamics",
+        "gebser",
+        "attachment-theory",
+        "polyvagal",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 11,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
       "hasSafetyNote": false
     },
     {
@@ -3056,6 +3127,11 @@
     {
       "source": "rational-orange-orientation",
       "target": "late-green-emergence-signals",
+      "type": "prerequisite"
+    },
+    {
+      "source": "magic-purple-stage-orientation",
+      "target": "magic-mythic-red-stage-orientation",
       "type": "prerequisite"
     },
     {

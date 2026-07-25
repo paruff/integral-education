@@ -43,10 +43,6 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 <ModuleMeta />
 
-**Position in sequence:** This is the capstone module for the combined **Emotional** and **Interpersonal** line arc. It assumes prior work in both suites and focuses on the pattern learners encounter most often in adult life: emotional capacity and relational capacity rarely mature at the same speed, and the gap between them is what shows up in conflict, trust, teamwork, and repair.
-
-**Prerequisites:** Completion of the Emotional line suite (EI-01 through EI-06) and the Interpersonal line suite (EI-08 through EI-11).
-
 ---
 
 ## 🗺️ AQAL Mapping
@@ -61,7 +57,27 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 ---
 
-## Theoretical Frameworks
+## 🧭 Orient
+
+:::info Before this module
+This is the capstone module for the combined **Emotional** and **Interpersonal** line arc: completion of the Emotional line suite (EI-01 through EI-06) and the Interpersonal line suite (EI-08 through EI-11), including [Emotional Line Overview & Orientation](./emotional-line-overview-orientation), [Interpersonal Line Overview & Orientation](./interpersonal-line-overview-orientation), [Perspective-Taking & Empathic Accuracy](./perspective-taking-empathic-accuracy), [Relational Repair & Conflict Navigation](./relational-repair-conflict-navigation), and [Cross-Difference Dialogue & Trust-Building](./cross-difference-dialogue-trust-building).
+:::
+
+This module focuses on the pattern learners encounter most often in adult life: emotional capacity and relational capacity rarely mature at the same speed, and the gap between them is what shows up in conflict, trust, teamwork, and repair. Understanding this matters because most adult relational friction is not a communication problem or a character flaw — it is evidence that one of these two lines is quietly lagging the other.
+
+## 🌿 Encounter
+
+Notice, before any framework names it, how often you can explain a relational dynamic clearly and still find yourself caught inside it moments later. You can articulate exactly why your colleague reacted defensively — and still feel the same defensive tightening rise in your own chest when the roles reverse. You can coach a friend through a conflict with real insight, and then fumble the same conflict in your own life.
+
+This gap between understanding and enactment is not hypocrisy. It is the ordinary signature of two related but separate developmental lines — one tracking what you can *feel and name*, the other tracking what you can *do with another person* — running at different speeds.
+
+What follows gives this everyday experience a structure: why the two lines couple and diverge the way they do, what the gap characteristically looks like at each developmental altitude, and how to design a practice that closes it in real behavior, not just in understanding.
+
+## 🧠 Learn
+
+The five frameworks below approach emotional–interpersonal integration from constructive-developmental, affective-science, regulation-process, social-cognitive, and attachment angles. Together they explain both why the two lines diverge and what closes the gap.
+
+## Five Framework Lenses: Emotional–Interpersonal Integration
 
 ### 1. Kegan's Subject–Object Theory
 
@@ -85,7 +101,7 @@ Attachment and team-learning research explain why sustained relational container
 
 ---
 
-## Learn
+## Applying the Lenses: Coupling, the Characteristic Gap, and the We-Space
 
 ### 1. The Emotional–Interpersonal Coupling
 
@@ -129,7 +145,7 @@ A good We-space does not remove friction. It lowers the cost of using friction a
 
 ---
 
-## Gifts
+## The Gifts of Emotional–Interpersonal Integration
 
 ### Precision Under Pressure
 
@@ -157,7 +173,7 @@ This integration becomes a multiplier for other lines. Cognitive insight, ethica
 
 ---
 
-## Limitations and Shadows
+## The Developmental Limitations and Shadows of Emotional–Interpersonal Integration
 
 ### Analysis Without Contact
 
@@ -202,6 +218,14 @@ Early emotional flooding and later integrated emotional openness can look simila
    - **Review question:** "At day 30, I will ask: Is the gap smaller in real behavior, or only in my understanding?"
 
 This is a design exercise, not a verdict on your worth. If your estimate feels uncertain, that uncertainty is useful data. Write the best current hypothesis and test it through the 30-day plan.
+
+---
+
+## ⚓ Stabilize
+
+Completing the psychograph once, or reading the frameworks above, gives you a *conceptual* map of your emotional–interpersonal gap — it does not, by itself, close that gap in real behavior. Being able to name which line is lagging is a different achievement from actually naming your state, checking the story, and verifying the relational hypothesis in the moment stakes rise. Treat the 30-day plan as the mechanism that does the actual work; today's session only produced the hypothesis to test.
+
+The stage-by-stage integration map above draws on developmental and attachment research conducted primarily in Western contexts, and cultural norms around emotional expression, directness, and disclosure vary significantly. If your own cultural or family background frames emotional openness or relational verification differently than the examples above, trust your own read of what genuine contact looks like in your relationships over the illustrative stage descriptions.
 
 ---
 

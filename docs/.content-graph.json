@@ -838,17 +838,13 @@
         "tier-2",
         "safety-critical"
       ],
-      "goldStandardSections": 14,
+      "goldStandardSections": 18,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "ecological-systems-consciousness",
@@ -1117,17 +1113,13 @@
         "EI-13",
         "tier-1"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 19,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "emotional-line-overview-orientation",
@@ -2454,21 +2446,13 @@
         "tier-2",
         "safety-critical"
       ],
-      "goldStandardSections": 10,
+      "goldStandardSections": 17,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "relativism-limits-of-pluralism",

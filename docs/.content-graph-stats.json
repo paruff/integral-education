@@ -45,21 +45,21 @@
     "Unknown": 2
   },
   "goldStandardCompliance": {
-    "full": 16,
+    "full": 19,
     "total": 77,
-    "percentage": 21
+    "percentage": 25
   },
   "journeyStepGaps": {
     "learn": 19,
     "integrate": 11,
     "retrieval schedule": 35,
-    "frameworks": 55,
-    "gifts": 61,
-    "facilitator note": 60,
+    "frameworks": 54,
+    "gifts": 58,
+    "facilitator note": 57,
     "orient": 18,
     "encounter": 24,
     "stabilize": 18,
-    "limitations": 46,
+    "limitations": 45,
     "reflect": 12,
     "assess": 3,
     "aqal mapping": 4,

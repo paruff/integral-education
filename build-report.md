@@ -1,32 +1,36 @@
-# Build Report — UX-23-REV
+# Build Report — UX-24-REV
 
 ## Summary
-Ran icon consistency audit across all module files. Found and fixed 7 inconsistency patterns affecting 111 files total. Standardized all module heading emoji to use the same icon for the same concept across the entire site.
+Added Lora as a display typeface for headings and replaced the Docusaurus-default green with a deliberate brand forest green. Single CSS file changed.
 
 ## Files Changed
-Approximately 111 module MD/MDX files (7 replacement patterns applied across overlapping file sets).
-
-## Audit Findings
-| Issue | Pattern | Files Fixed |
-|---|---|---|
-| 🔗 → 🔄 Integrate | Link emoji → cycle/refresh emoji | 29 |
-| 📚 → 🧠 Learn | Books emoji → brain emoji | 17 |
-| 🧲 → ⚓ Stabilize | Magnet emoji → anchor emoji | 27 |
-| 🧘 → 🔍 Reflect | Meditation emoji → magnifying glass emoji | 7 |
-| 🚨 → 🆘 When to Seek Support | Siren emoji → SOS emoji | 2 |
-| 🔍 → 🌿 Encounter | Magnifying glass → leaf emoji | 20 |
-| Missing → 🗺️ AQAL Mapping | No emoji → map emoji | 9 |
+| File | Change |
+|---|---|
+| `src/css/custom.css` | Added Lora @import, set heading font-family, updated 8 color variables |
 
 ## Tasks Completed
 | ID | Title | Status |
 |---|---|---|
-| T1 | Standardize 7 inconsistent emoji patterns | ✓ Complete |
-| T2 | Verify build passes | ✓ Complete |
+| T1 | Add Lora display font to custom.css | ✓ Complete |
+| T2 | Replace light-mode green with deliberate brand color | ✓ Complete |
+| T3 | Verify build passes | ✓ Complete |
+
+## Changes Detail
+### Typography
+- Added Google Fonts `@import` for Lora (400, 500, 600, 700 weights + italic)
+- Set `--ifm-heading-font-family: Lora, Georgia, serif`
+- All h1–h6 now render in Lora; body, badges, navbar, sidebar stay on system sans-serif
+
+### Color
+- Light-mode primary: `#2e8555` → `#1a6b3c` (Docusaurus default → brand forest green)
+- Derived palette updated to match (dark: `#165a31`, darkest: `#0f3a20`, light: `#218243`, etc.)
+- Dark-mode: unchanged (`#25c2a0`)
 
 ## Validation Results
 | Gate | Result |
 |---|---|
-| `npm run build` | ✓ PASS (only pre-existing broken anchor warnings) |
+| `npm run build` | ✓ PASS |
+| Lora in built CSS | ✓ Confirmed in `build/assets/css/styles.*.css` |
 
 ## Blockers
 None.

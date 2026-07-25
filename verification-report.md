@@ -1,37 +1,29 @@
-# Verification Report — UX-23-REV
+# Verification Report — UX-24-REV
 
 ## Evidence Check
 
-### Claim: "🔗 → 🔄 Integrate in 29 files"
-- **Evidence:** grep for `^## 🔗 Integrate` = 0; `^## 🔄 Integrate` = 59 (including previously correct ones)
+### Claim: "Lora font loaded via Google Fonts @import"
+- **Evidence:** `@import url(...fonts.googleapis.com...Lora...)` at line 1 of `src/css/custom.css`; Lora string found in `build/assets/css/styles.*.css`
 - **Verified:** ✓ TRUE
 
-### Claim: "📚 → 🧠 Learn in 17 files"
-- **Evidence:** grep for `^## 📚 Learn` = 0; `^## 🧠 Learn` = 48
+### Claim: "Heading font-family set to Lora"
+- **Evidence:** `--ifm-heading-font-family: Lora, Georgia, serif` in `:root` block (line 11)
 - **Verified:** ✓ TRUE
 
-### Claim: "🧲 → ⚓ Stabilize in 27 files"
-- **Evidence:** grep for `^## 🧲 Stabilize` = 0; `^## ⚓ Stabilize` = 47
+### Claim: "System sans-serif stays on body/badges/UI"
+- **Evidence:** No changes to `--ifm-font-family-base`; no CSS alterations to badge, navbar, sidebar selectors
 - **Verified:** ✓ TRUE
 
-### Claim: "🧘 → 🔍 Reflect in 7 files"
-- **Evidence:** grep for `^## 🧘 Reflect` = 0; `^## 🔍 Reflect` = 56
+### Claim: "Light-mode primary is #1a6b3c"
+- **Evidence:** `--ifm-color-primary: #1a6b3c` at line 12; all derived values confirmed
 - **Verified:** ✓ TRUE
 
-### Claim: "🚨 → 🆘 When to Seek Support in 2 files"
-- **Evidence:** grep for `^## 🚨 When to Seek Support` = 0
+### Claim: "Dark-mode primary unchanged (#25c2a0)"
+- **Evidence:** `git diff` shows 0 changes in `[data-theme='dark']` block; `#25c2a0` confirmed at line 27
 - **Verified:** ✓ TRUE
 
-### Claim: "🔍 → 🌿 Encounter in 20 files"
-- **Evidence:** grep for `^## 🔍 Encounter` = 0; `^## 🌿 Encounter` appears
-- **Verified:** ✓ TRUE
-
-### Claim: "🗺️ AQAL Mapping in 9 files missing emoji"
-- **Evidence:** grep for `^## AQAL Mapping` without emoji prefix = 0; all 9 targeted files updated
-- **Verified:** ✓ TRUE
-
-### Claim: "npm run build succeeds"
-- **Evidence:** `[SUCCESS] Generated static files in "build"` confirmed
+### Claim: "Build passes"
+- **Evidence:** `[SUCCESS] Generated static files in "build"`
 - **Verified:** ✓ TRUE
 
 ## All Artifacts Present

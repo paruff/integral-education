@@ -1,20 +1,21 @@
-# Test Report — UX-23-REV
+# Test Report — UX-24-REV
 
 ## Test Results
 
 | AC ID | Criterion | Test Type | Result |
 |---|---|---|---|
-| AC-1 | 🔗 Integrate → 🔄 Integrate in all affected files | unit | ✓ PASS (grep confirms 0 remaining 🔗, 59 with 🔄) |
-| AC-2 | 📚 Learn → 🧠 Learn in all affected files | unit | ✓ PASS (grep confirms 0 remaining 📚, 48 with 🧠) |
-| AC-3 | 🧲 Stabilize → ⚓ Stabilize in all affected files | unit | ✓ PASS (0 remaining 🧲, 47 with ⚓) |
-| AC-4 | 🧘 Reflect → 🔍 Reflect in all affected files | unit | ✓ PASS (0 remaining 🧘 heading, 56 with 🔍) |
-| AC-5 | 🚨 → 🆘 When to Seek Support | unit | ✓ PASS (0 remaining 🚨 heading) |
-| AC-6 | 🔍 Encounter → 🌿 Encounter in all affected files | unit | ✓ PASS (0 remaining 🔍 Encounter) |
-| AC-7 | 🗺️ AQAL Mapping added to all 9 files missing it | unit | ✓ PASS (0 AQAL Mapping headings without emoji) |
-| AC-8 | `npm run build` succeeds | integration | ✓ PASS |
+| AC-1 | Lora font loaded and applied to hero h1 | unit | ✓ PASS (`--ifm-heading-font-family: Lora` affects all headings incl. `.hero__title`) |
+| AC-2 | Lora font applied to module page h1 and section h2 | unit | ✓ PASS (Infima applies `--ifm-heading-font-family` to h1–h6 globally) |
+| AC-3 | System sans-serif remains on body, badges, navbar, sidebar | unit | ✓ PASS (`--ifm-font-family-base` untouched = system-ui) |
+| AC-4 | Light-mode primary green is `#1a6b3c` with derived palette | unit | ✓ PASS (confirmed in custom.css :root block) |
+| AC-5 | Dark-mode primary green remains `#25c2a0` | unit | ✓ PASS (confirmed in `[data-theme='dark']` block) |
+| AC-6 | `npm run build` succeeds | integration | ✓ PASS |
 
 ## Regression Check
-No regression risk — emoji swap in headings only. All pre-existing content and section ordering preserved.
+- No component structure changes
+- No module content changes
+- No badge/card/callout CSS changes
+- Dark mode palette: 0 diffs
 
 ## Phase 3.5 — Live System Verification
 N/A — no acceptance criteria tagged `test_type: live-system`.

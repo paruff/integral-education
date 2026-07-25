@@ -1,0 +1,35 @@
+[
+  {
+    "id": "T1",
+    "title": "Add Lora display font to custom.css",
+    "description": "Add Google Fonts @import for Lora and set --ifm-heading-font-family in the :root block.",
+    "dependencies": [],
+    "files": ["src/css/custom.css"],
+    "acceptance_criteria": [
+      { "id": "AC-1", "description": "Lora font loaded and applied to hero h1", "test_type": "unit" },
+      { "id": "AC-2", "description": "Lora font applied to module page h1 and section h2", "test_type": "unit" },
+      { "id": "AC-3", "description": "System sans-serif remains on body, badges, navbar, sidebar", "test_type": "unit" }
+    ]
+  },
+  {
+    "id": "T2",
+    "title": "Replace light-mode green with deliberate brand color",
+    "description": "Update --ifm-color-primary and derived palette in :root block to #1a6b3c family.",
+    "dependencies": ["T1"],
+    "files": ["src/css/custom.css"],
+    "acceptance_criteria": [
+      { "id": "AC-4", "description": "Light-mode primary green is #1a6b3c with derived palette", "test_type": "unit" },
+      { "id": "AC-5", "description": "Dark-mode primary green remains #25c2a0", "test_type": "unit" }
+    ]
+  },
+  {
+    "id": "T3",
+    "title": "Verify build passes",
+    "description": "Run `npm run build` to confirm no CSS or compilation errors.",
+    "dependencies": ["T2"],
+    "files": [],
+    "acceptance_criteria": [
+      { "id": "AC-6", "description": "npm run build succeeds", "test_type": "integration" }
+    ]
+  }
+]

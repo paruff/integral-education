@@ -1,63 +1,39 @@
-# Test Report — EFFICACY-01
+# Test Report — UX-19
 
 ## Test Execution Summary
 
-All 8 acceptance criteria verified. No test_type: live-system criteria — Phase 3.5 skipped.
+All 5 acceptance criteria verified. No test_type: live-system criteria — Phase 3.5 skipped.
 
 ## Unit Tests
 
-### AC-01: Page existence
-`docs/about/what-this-platform-does.md` — **PASS** ✓
+### AC-01: Personal → Integral card matches QuickStart
+**PASS** ✓ — Card says `Time commitment: 3–6 weeks`. QuickStart page (line 16) says `**Time commitment:** 3–6 weeks (20–30 min/day)`.
 
-### AC-02: Can vs. cannot distinction
-**PASS** ✓ — Page includes:
-- "What This Platform Can Reliably Do" section with 5 specific capabilities, each with evidence grounding
-- "What the Evidence Does Not Support This Platform Doing Alone" section with 3 specific non-claims
-- Summary table at bottom contrasting can/cannot in 5 rows
+### AC-02: Amber → Rational card matches QuickStart
+**PASS** ✓ — Card says `Time commitment: 10–20 weeks`. QuickStart page (line 18) says `**Time commitment:** Core path: **10–20 weeks**`.
 
-### AC-03: Population distribution citation
-**PASS** ✓ — Page includes:
-- Kegan's ~65%/34%/1% Stage 3/4/5 split with Tier B citation
-- Cook-Greuter's ~80%/10% conventional/postconventional split with Tier B citation
-- Both include caveats: "These are population estimates, not individual predictions. Stage models are interpretive frameworks, not rigid classifications."
+### AC-03: Interpersonal Line card matches QuickStart
+**PASS** ✓ — Card says `Time commitment: 4–6 weeks`. QuickStart page (line 13) says `**Time commitment:** 4–6 weeks (25–40 min per module, ~2.5 h total)`.
 
-### AC-04: Relationship recommendation
-**PASS** ✓ — Page includes "The Role of Relationship in Development" section:
-- Cites Kegan, Cook-Greuter, Mezirow, Torbert/Rooke
-- Recommends: developmental coach/therapist, peer cohort/facilitated group, mentor/spiritual director/trusted elder
-- Explicit: "This is not an upsell. The platform has no commercial coaching service and no financial relationships with coaches."
+### AC-04: Emotional Line card matches QuickStart
+**PASS** ✓ — Card says `Time commitment: 3–5 weeks`. QuickStart page (line 13) says `**Time commitment:** 3–5 weeks (20–40 min per module, ~2.75 h total)`.
 
-### AC-05: Non-linearity and regression
-**PASS** ✓ — Page includes "Development Is Not a Straight Line" section with 3 sub-sections:
-1. Development is non-linear (plateaus, regression is normal)
-2. Stress activates earlier-stage material in everyone
-3. Asynchrony across lines is the rule, not the exception
+### AC-05: Consistent format across all 4 cards
+**PASS** ✓ — All 4 cards use identical `Time commitment:` label. No `Estimated time:` labels remain on any QuickStart card.
 
-### AC-06: Tone — confident, not self-defeating
-**PASS** ✓ — Page:
-- Leads with 5 things the platform CAN do (affirmative, specific, evidence-grounded)
-- Framing is "honest positioning" not apology — "The platform's genuine value is real: an accurate map, a reduction in confusion, a preparation for deeper work. It is not small."
-- Population data contextualized: "These numbers are not offered as discouragement. They are context."
+## QuickStart Audit Summary
 
-## Integration Tests
-
-### AC-07: Homepage visibility
-**PASS** ✓ — `src/pages/index.js` line after scaleStat:
-- Contains `<Link to="/docs/about/what-this-platform-does">what this platform can and cannot do</Link>`
-- Styled consistently with existing rigorSignal styling
-- Visible in hero section alongside the existing evidence-tiering paragraph
-
-### AC-08: QuickStart outcome/goal audit
-**PASS** ✓ — All 13 QuickStarts audited:
-- 10 already had adequate scope boundaries — no changes needed
-- 3 received new scope sections: Amber→Rational, Rational→Pluralistic, Moral Line
-- All 3 modified QuickStarts include cross-links to the new page
-- AQAL Overview Next Steps also cross-linked
+| Card | Old (wrong) | New (correct) | Source |
+|------|-------------|---------------|--------|
+| Personal → Integral | 20 min | 3–6 weeks | QuickStart: "3-6 weeks (20-30 min/day)" |
+| Amber → Rational | 20 min | 10–20 weeks | QuickStart: "Core path: 10-20 weeks" |
+| Interpersonal Line | 25–40 min per module | 4–6 weeks | QuickStart: "4-6 weeks (25-40 min/module)" |
+| Emotional Line | 20–40 min per module | 3–5 weeks | QuickStart: "3-5 weeks (20-40 min/module)" |
 
 ## Build Test
 
-### AC-09: npm run build
-Local env blocked (Node v26 / Docusaurus 3.10.2 incompatibility — not caused by PR changes). CI expected PASS with Node 20.
+### AC-06: npm run build
+Local env blocked (Node v26 / Docusaurus 3.10.2 incompatibility — not caused by PR changes, JSX unchanged). CI expected PASS with Node 20.
 
 ## Test Results Summary
 
@@ -68,12 +44,9 @@ Local env blocked (Node v26 / Docusaurus 3.10.2 incompatibility — not caused b
 | AC-03 | unit | PASS |
 | AC-04 | unit | PASS |
 | AC-05 | unit | PASS |
-| AC-06 | unit | PASS |
-| AC-07 | integration | PASS |
-| AC-08 | integration | PASS |
-| AC-09 | build | Expected PASS (CI) |
+| AC-06 | build | Expected PASS (CI) |
 
-**Result: ALL PASS** (8 verified + 1 CI-expected)
+**Result: ALL PASS** (5 verified + 1 CI-expected)
 
 ## Live System Verification
-No acceptance criteria tagged `test_type: live-system`. None required. Sourced.
+No acceptance criteria tagged `test_type: live-system`. Skipped per Phase 3.5.

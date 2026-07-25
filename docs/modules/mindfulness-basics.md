@@ -18,8 +18,7 @@ tags:
 difficulty: Beginner
 readingTime: 10
 practiceTime: 15
-prerequisites:
-- rational-orange-orientation
+prerequisites: None
 line: somatic
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

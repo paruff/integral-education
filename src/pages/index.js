@@ -19,12 +19,12 @@ function HomepageHeader() {
         </p>
         <div className={styles.buttons}>
           <Link
-            className="button button--lg homepage-primary-cta"
+            className="button button--lg button--secondary"
             to="/docs/intro">
             Get Started →
           </Link>
           <Link
-            className={styles.secondaryCta}
+            className="button button--lg homepage-primary-cta"
             to="/start">
             Find Your Path →
           </Link>

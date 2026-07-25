@@ -59,6 +59,25 @@ This repository is the **upstream monorepo** for the Integral Education Platform
 - Fork-specific content (e.g. landing page copy) lives **only in the fork**
 - Docusaurus config changes that affect all forks (e.g. plugin upgrades) are coordinated via upstream PR
 
+## North Star Metrics
+
+Every fork must define exactly **one north star metric** that governs all scope and quality decisions. This metric should measure whether the fork is actually useful to its target audience, not vanity metrics like module count or GitHub stars.
+
+| Fork | North Star Metric | Why This Metric |
+|------|------------------|-----------------|
+| **Fork 1** (`integral-amber`) | **QuickStart completion rate:** % of learners who start the Amber→Rational QuickStart and complete all modules in sequence | Fork 1's value is guiding a specific transition. If learners don't complete the sequence, the fork is not achieving its purpose. |
+| **Fork 2** (`integral-rational`) | **Practice adoption rate:** % of learners who report applying at least one practice from the module in daily life within 14 days | Fork 2's modules are skill-heavy. The fork succeeds if skills transfer to daily behaviour, not just conceptual understanding. |
+| **Fork 3** (`integral-pluralistic`) | **Bridge completion rate:** % of learners who complete all three bridge modules (late-green-disillusionment, meta-systemic-thinking, healthy-hierarchy) before starting the Teal orientation | Fork 3's unique risk is premature stage-identification. The metric enforces the developmental sequence. |
+
+**How to use:** Every proposed content addition, removal, or modification to the fork must be evaluated against the north star metric. "Will this improve completion rate?" or "Will this improve practice adoption?" If the answer is no, the change is scope creep.
+
+**Measurement approach:** All forks are static sites (no server-side analytics). Measurement is indirect:
+- Pre/post surveys of pilot participants
+- Self-reported completion checkpoints built into module content
+- Longitudinal follow-up (3-month intervals) with early adopters
+
+Design the fork knowing what metric matters, even if you cannot measure it perfectly at launch.
+
 ## Governance
 
 Each fork has its own:

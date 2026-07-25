@@ -1,0 +1,3697 @@
+{
+  "generated": "2026-07-25T14:15:21.701Z",
+  "totalModules": 75,
+  "totalEdges": 157,
+  "stats": {
+    "stageDistribution": {
+      "Unknown": 35,
+      "Amber": 1,
+      "Rational → Pluralistic": 8,
+      "Amber → Rational": 7,
+      "Pluralistic → Integral": 12,
+      "Integral": 1,
+      "Cross-level capstone: Amber through Integral": 1,
+      "Teal": 1,
+      "Green": 2,
+      "Orange": 2,
+      "Orange → Green → Teal (Integral)": 1,
+      "Rational → Integral": 1,
+      "Amber → Integral": 1,
+      "Amber → Rational (Fowler Stages 2–4)": 1,
+      "Rational/Orange → Integral/Teal (Spiritual line post-conventional)": 1
+    },
+    "lineCoverage": {
+      "emotional": 46,
+      "cognitive": 64,
+      "moral": 50,
+      "interpersonal": 52,
+      "spiritual": 11,
+      "somatic": 21,
+      "self": 22,
+      "ecological": 1,
+      "values": 2,
+      "leadership": 1,
+      "systems": 2
+    },
+    "safetyTiers": {
+      "tier-1": 53,
+      "tier-2": 22
+    },
+    "formats": {
+      "embodied-guided": 22,
+      "text-reflection": 53
+    },
+    "difficulties": {
+      "Intermediate": 37,
+      "Beginner": 17,
+      "Advanced": 19,
+      "Unknown": 2
+    },
+    "goldStandardCompliance": {
+      "full": 10,
+      "total": 75,
+      "percentage": 13
+    },
+    "orphanModules": 1,
+    "avgSectionsPerModule": 16
+  },
+  "nodes": [
+    {
+      "id": "affect-labelling-somatic-correlation",
+      "title": "Affect Labelling & Somatic Correlation",
+      "file": "docs/modules/affect-labelling-somatic-correlation.md",
+      "stage": "Unknown",
+      "stageTarget": null,
+      "lines": [
+        "emotional"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "emotional-line-overview-orientation",
+        "emotional-granularity"
+      ],
+      "readingTime": 10,
+      "practiceTime": 25,
+      "tags": [
+        "emotional-line",
+        "somatic-line",
+        "tier-2",
+        "interoception",
+        "affect-labelling",
+        "emotion-regulation",
+        "--"
+      ],
+      "goldStandardSections": 13,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "amber-mythic-orientation",
+      "title": "Amber/Mythic Stage Orientation",
+      "file": "docs/modules/amber-mythic-orientation.mdx",
+      "stage": "Amber",
+      "stageTarget": "Amber",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 10,
+      "tags": [
+        "amber",
+        "mythic",
+        "spiral-dynamics",
+        "cook-greuter",
+        "kegan",
+        "fowler",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 14,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "authentic-dialogue-collaborative-meaning",
+      "title": "Authentic Dialogue & Collaborative Meaning-Making",
+      "file": "docs/modules/authentic-dialogue-collaborative-meaning.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "interpersonal",
+        "emotional",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "dialogue",
+        "communication",
+        "Bohm",
+        "Buber",
+        "Scharmer",
+        "Isaacs",
+        "council-practice",
+        "I-Thou",
+        "growing-up",
+        "meaning-making",
+        "deep-listening"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "authority-autonomy-transition",
+      "title": "Authority & Autonomy: The Amber → Rational Developmental Arc",
+      "file": "docs/modules/authority-autonomy-transition.mdx",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive",
+        "moral",
+        "emotional",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "amber",
+        "rational",
+        "authority",
+        "autonomy",
+        "kegan",
+        "cook-greuter",
+        "spiral-dynamics",
+        "self-authoring",
+        "grief",
+        "stage-transition",
+        "growing-up",
+        "loevinger",
+        "chickering"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "causal-witness-state",
+      "title": "Causal / Witness State",
+      "file": "docs/modules/causal-witness-state.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "spiritual",
+        "somatic"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "states",
+        "causal",
+        "witness",
+        "self-inquiry",
+        "open-awareness",
+        "aqal",
+        "waking-up"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "co-regulation-relational-attunement",
+      "title": "EI-06 · Co-regulation & Relational Attunement",
+      "file": "docs/modules/co-regulation-relational-attunement.md",
+      "stage": "Unknown",
+      "stageTarget": null,
+      "lines": [
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "emotional-line-overview-orientation",
+        "emotion-regulation-foundations",
+        "emotional-appraisal-meaning-making"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "emotional-line",
+        "interpersonal-line",
+        "co-regulation",
+        "polyvagal",
+        "attunement",
+        "AQAL",
+        "tier-2",
+        "safety-critical"
+      ],
+      "goldStandardSections": 8,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "cognitive-bias-101",
+      "title": "Cognitive Bias Basics",
+      "file": "docs/modules/cognitive-bias-101.md",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "bias",
+        "thinking",
+        "reasoning"
+      ],
+      "goldStandardSections": 5,
+      "hasAQAL": false,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cognitive-dissonance-bridge",
+      "title": "Cognitive Dissonance Bridge",
+      "file": "docs/modules/cognitive-dissonance-bridge.mdx",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive",
+        "moral",
+        "emotional",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "amber",
+        "rational",
+        "cognitive-dissonance",
+        "kegan",
+        "mezirow",
+        "festinger",
+        "subject-object",
+        "disorienting-dilemma",
+        "stage-transition",
+        "growing-up"
+      ],
+      "goldStandardSections": 13,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cognitive-line-concrete-to-formal",
+      "title": "Cognitive Line — Concrete to Formal Operations",
+      "file": "docs/modules/cognitive-line-concrete-to-formal.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Concrete Operational → Formal Operational",
+      "lines": [
+        "cognitive",
+        "self",
+        "emotional",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "cognitive-line-overview-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "cognitive-line",
+        "Piaget",
+        "formal-operations",
+        "concrete-operations",
+        "metacognition",
+        "stress-regression",
+        "adult-learning",
+        "AQAL"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cognitive-line-metasystematic-vision-logic",
+      "title": "Cognitive Line — Metasystematic & Vision-Logic Operations",
+      "file": "docs/modules/cognitive-line-metasystematic-vision-logic.mdx",
+      "stage": "Integral",
+      "stageTarget": "Postformal → Metasystematic",
+      "lines": [
+        "cognitive",
+        "self",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "cognitive-line-postformal-operations"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "cognitive-line",
+        "metasystematic",
+        "vision-logic",
+        "Commons",
+        "Wilber",
+        "Kegan",
+        "Fischer",
+        "cross-paradigmatic",
+        "hierarchical-complexity",
+        "AQAL",
+        "Teal",
+        "integral",
+        "adult-development",
+        "postformal",
+        "network-logic",
+        "growing-up"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cognitive-line-overview-orientation",
+      "title": "Cognitive Line Overview & Orientation",
+      "file": "docs/modules/cognitive-line-overview-orientation.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage (Concrete Operational through Cross-Paradigmatic)",
+      "lines": [
+        "cognitive",
+        "self",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 10,
+      "tags": [
+        "cognitive-line",
+        "Piaget",
+        "Commons",
+        "postformal",
+        "metasystematic",
+        "AQAL",
+        "vision-logic",
+        "growing-up",
+        "stage-development",
+        "developmental-lines",
+        "Basseches",
+        "Fischer",
+        "hierarchical-complexity"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cognitive-line-postformal-operations",
+      "title": "Cognitive Line — Postformal Operations",
+      "file": "docs/modules/cognitive-line-postformal-operations.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Formal Operational → Postformal",
+      "lines": [
+        "cognitive",
+        "self",
+        "emotional",
+        "interpersonal",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "cognitive-line-concrete-to-formal"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "cognitive-line",
+        "postformal",
+        "relativistic-thinking",
+        "dialectical-thinking",
+        "integrative-thinking",
+        "Basseches",
+        "Labouvie-Vief",
+        "Sinnott",
+        "affect-cognition",
+        "vision-logic",
+        "AQAL",
+        "adult-development",
+        "Green",
+        "Teal"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cognitive-line-practice-architecture",
+      "title": "Cognitive Development Practice Architecture",
+      "file": "docs/modules/cognitive-line-practice-architecture.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage cognitive line development",
+      "lines": [
+        "cognitive",
+        "self",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "cognitive-line-metasystematic-vision-logic"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "cognitive-line",
+        "practice-architecture",
+        "Vygotsky",
+        "Commons",
+        "Mezirow",
+        "Schon",
+        "metacognition",
+        "AQAL"
+      ],
+      "goldStandardSections": 14,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "community-belonging-collective-intelligence",
+      "title": "Community, Belonging & Collective Intelligence",
+      "file": "docs/modules/community-belonging-collective-intelligence.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "interpersonal",
+        "emotional",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "collective-intelligence",
+        "community",
+        "belonging",
+        "Scharmer",
+        "Isaacs",
+        "Owen",
+        "Wilber",
+        "Kegan",
+        "Theory-U",
+        "Open-Space",
+        "lower-left-quadrant",
+        "intersubjective",
+        "growing-up",
+        "dialogue"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "contextual-ethics-moral-complexity",
+      "title": "Contextual Ethics & Moral Complexity — Reasoning Beyond Principle",
+      "file": "docs/modules/contextual-ethics-moral-complexity.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "ethics",
+        "moral-development",
+        "kohlberg",
+        "gilligan",
+        "moral-imagination",
+        "restorative-justice",
+        "contextual-ethics",
+        "justice-care-integration",
+        "growing-up",
+        "orange-to-green"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "critical-thinking-foundations",
+      "title": "Critical Thinking Foundations",
+      "file": "docs/modules/critical-thinking-foundations.mdx",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "amber",
+        "rational",
+        "critical-thinking",
+        "toulmin",
+        "logical-fallacies",
+        "argumentation",
+        "intellectual-honesty",
+        "piaget",
+        "paul-elder",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 12,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "cross-difference-dialogue-trust-building",
+      "title": "EI-11 · Cross-Difference Dialogue & Trust-Building",
+      "file": "docs/modules/cross-difference-dialogue-trust-building.md",
+      "stage": "Unknown",
+      "stageTarget": null,
+      "lines": [
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "interpersonal-line-overview-orientation",
+        "perspective-taking-empathic-accuracy",
+        "relational-repair-conflict-navigation"
+      ],
+      "readingTime": 14,
+      "practiceTime": 25,
+      "tags": [
+        "interpersonal-line",
+        "dialogue",
+        "trust",
+        "power-dynamics",
+        "aqal",
+        "EI-11",
+        "tier-2",
+        "safety-critical"
+      ],
+      "goldStandardSections": 14,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "ecological-systems-consciousness",
+      "title": "Ecological & Systems Consciousness — Embeddedness, Grief, and the Living World",
+      "file": "docs/modules/ecological-systems-consciousness.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "ecological",
+        "emotional",
+        "somatic",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "ecology",
+        "systems-thinking",
+        "ecological-consciousness",
+        "Bateson",
+        "Wilber",
+        "Naess",
+        "Macy",
+        "solastalgia",
+        "ecological-grief",
+        "lower-right-quadrant",
+        "spiral-dynamics",
+        "growing-up",
+        "nature-immersion"
+      ],
+      "goldStandardSections": 13,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "emotion-regulation-foundations",
+      "title": "Emotion Regulation Foundations",
+      "file": "docs/modules/emotion-regulation-foundations.mdx",
+      "stage": "Unknown",
+      "stageTarget": "L2-L3 Emotional line development",
+      "lines": [
+        "emotional",
+        "somatic",
+        "cognitive",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "emotional-line-overview-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "emotional-line",
+        "emotion-regulation",
+        "Gross",
+        "reappraisal",
+        "polyvagal",
+        "window-of-tolerance",
+        "AQAL"
+      ],
+      "goldStandardSections": 17,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "emotional-appraisal-meaning-making",
+      "title": "EI-05 · Emotional Appraisal & Meaning-Making",
+      "file": "docs/modules/emotional-appraisal-meaning-making.md",
+      "stage": "Unknown",
+      "stageTarget": null,
+      "lines": [
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "emotional-line-overview-orientation",
+        "emotion-regulation-foundations",
+        "affect-labelling-somatic-correlation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "emotional-line",
+        "appraisal",
+        "aqal",
+        "meaning-making",
+        "abc-model",
+        "cognitive-reappraisal"
+      ],
+      "goldStandardSections": 8,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "emotional-granularity",
+      "title": "Emotional Granularity",
+      "file": "docs/modules/emotional-granularity.md",
+      "stage": "Unknown",
+      "stageTarget": "Personal → Pluralistic",
+      "lines": [
+        "emotional",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "emotions",
+        "affect",
+        "self-awareness"
+      ],
+      "goldStandardSections": 9,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "emotional-intelligence-somatic-line",
+      "title": "Emotional Intelligence & Somatic Line Development",
+      "file": "docs/modules/emotional-intelligence-somatic-line.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "emotional",
+        "somatic",
+        "cognitive",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "emotional-intelligence",
+        "somatic",
+        "interoception",
+        "pre-trans",
+        "goleman",
+        "siegel",
+        "ogden",
+        "wilber",
+        "growing-up",
+        "orange-to-green",
+        "self-regulation",
+        "emotional-granularity"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "emotional-interpersonal-integration",
+      "title": "EI-13 · Emotional–Interpersonal Integration",
+      "file": "docs/modules/emotional-interpersonal-integration.md",
+      "stage": "Cross-level capstone: Amber through Integral",
+      "stageTarget": "Cross-level capstone: Amber through Integral",
+      "lines": [
+        "emotional",
+        "interpersonal",
+        "cognitive",
+        "self"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "Completion of the Emotional line suite (EI-01 through EI-06) and the Interpersonal line suite (EI-08 through EI-11)."
+      ],
+      "readingTime": 14,
+      "practiceTime": 25,
+      "tags": [
+        "emotional-line",
+        "interpersonal-line",
+        "integration",
+        "AQAL",
+        "EI-13",
+        "tier-1"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "emotional-line-overview-orientation",
+      "title": "Emotional Line Overview & Orientation",
+      "file": "docs/modules/emotional-line-overview-orientation.md",
+      "stage": "Unknown",
+      "stageTarget": "Cross-level (L1 through L4 Emotional line development)",
+      "lines": [
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 12,
+      "tags": [
+        "emotional-line",
+        "affective-science",
+        "RULER",
+        "Barrett",
+        "growing-up",
+        "developmental-lines",
+        "AQAL"
+      ],
+      "goldStandardSections": 27,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "empathy-perspective-plurality",
+      "title": "Empathy & Perspective-Plurality — Inhabiting Other Worlds",
+      "file": "docs/modules/empathy-perspective-plurality.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "empathy",
+        "perspective-taking",
+        "intersubjectivity",
+        "Husserl",
+        "Gilligan",
+        "Scharmer",
+        "Kegan",
+        "ethics-of-care",
+        "somatic",
+        "phenomenology",
+        "growing-up"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "evidence-evaluation",
+      "title": "Evidence Evaluation & Scientific Literacy",
+      "file": "docs/modules/evidence-evaluation.mdx",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "amber",
+        "rational",
+        "evidence",
+        "scientific-literacy",
+        "sift",
+        "epistemology",
+        "perry",
+        "piaget",
+        "caulfield",
+        "belenky",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 12,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "flow-peak-experience",
+      "title": "Flow State & Peak Experience",
+      "file": "docs/modules/flow-peak-experience.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Personal → Pluralistic",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "somatic",
+        "spiritual"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "states",
+        "flow",
+        "peak-experience",
+        "csikszentmihalyi",
+        "maslow",
+        "aqal",
+        "waking-up"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "gross-state-awareness",
+      "title": "Gross State Awareness",
+      "file": "docs/modules/gross-state-awareness.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Personal → Pluralistic",
+      "lines": [
+        "somatic",
+        "cognitive"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "states",
+        "gross",
+        "waking",
+        "somatic",
+        "aqal",
+        "embodiment"
+      ],
+      "goldStandardSections": 13,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "healthy-hierarchy-actualization-gradient",
+      "title": "Healthy Hierarchy & the Actualization Gradient",
+      "file": "docs/modules/healthy-hierarchy-actualization-gradient.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "integral",
+        "teal",
+        "2nd-tier",
+        "hierarchy",
+        "holarchy",
+        "dominator-hierarchy",
+        "actualization-hierarchy",
+        "wilber",
+        "laloux",
+        "kegan",
+        "torbert",
+        "koestler",
+        "green",
+        "growing-up",
+        "organizational-design",
+        "developmental-leadership"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "integral-ethics-beyond-relativism",
+      "title": "Integral Ethics: Beyond Relativism & Universalism",
+      "file": "docs/modules/integral-ethics-beyond-relativism.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "moral",
+        "cognitive",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "integral",
+        "teal",
+        "2nd-tier",
+        "ethics",
+        "moral-development",
+        "ethical-altitude",
+        "skillful-means",
+        "upaya",
+        "wilber",
+        "kohlberg",
+        "gilligan",
+        "torbert",
+        "buddhist-ethics",
+        "growing-up",
+        "pluralistic-to-integral"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "integral-life-practice-embodying-2nd-tier",
+      "title": "Integral Life Practice: Embodying 2nd Tier",
+      "file": "docs/modules/integral-life-practice-embodying-2nd-tier.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "somatic",
+        "interpersonal",
+        "moral",
+        "values",
+        "spiritual"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "stage-development",
+        "integral",
+        "teal",
+        "2nd-tier",
+        "ILP",
+        "integral-life-practice",
+        "embodiment",
+        "lines-of-development",
+        "line-asynchrony",
+        "somatic",
+        "shadow-work",
+        "Cook-Greuter",
+        "Wilber",
+        "Torbert",
+        "growing-up",
+        "green-to-teal",
+        "practice-architecture"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "integral-shadow-teal-trap",
+      "title": "Integral Shadow: The Teal Trap",
+      "file": "docs/modules/integral-shadow-teal-trap.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "somatic",
+        "interpersonal",
+        "moral",
+        "values"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "teal-shadow",
+        "integral-shadow",
+        "developmental-ranking",
+        "map-territory",
+        "cognitive-emotional-asynchrony",
+        "integral-bypass",
+        "Wilber",
+        "Cook-Greuter",
+        "Korzybski",
+        "2nd-tier",
+        "AQAL",
+        "lines-asynchrony",
+        "premature-stage-identification",
+        "Welwood",
+        "Masters"
+      ],
+      "goldStandardSections": 22,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "integral-teal-orientation",
+      "title": "Integral/Teal Stage Orientation",
+      "file": "docs/modules/integral-teal-orientation.mdx",
+      "stage": "Teal",
+      "stageTarget": "Teal",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional",
+        "somatic"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 8,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "integral",
+        "teal",
+        "2nd-tier",
+        "Cook-Greuter",
+        "Kegan",
+        "Wilber",
+        "AQAL",
+        "spiral-dynamics",
+        "torbert",
+        "commons",
+        "vision-logic",
+        "metasystematic",
+        "growing-up"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "interpersonal-line-overview-orientation",
+      "title": "EI-08 · Interpersonal Line Overview & Orientation",
+      "file": "docs/modules/interpersonal-line-overview-orientation.md",
+      "stage": "Unknown",
+      "stageTarget": "Cross-level (Imperial through Interindividual — full Interpersonal line arc)",
+      "lines": [
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Unknown",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": null,
+      "practiceTime": null,
+      "tags": [
+        "interpersonal-line",
+        "Kegan",
+        "Buber",
+        "attachment",
+        "Siegel",
+        "relational-development",
+        "subject-object",
+        "I-Thou",
+        "growing-up",
+        "developmental-lines",
+        "AQAL",
+        "EI-08"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "late-green-emergence-signals",
+      "title": "Late-Green Emergence Signals — Recognizing the Edge of Pluralism",
+      "file": "docs/modules/late-green-emergence-signals.mdx",
+      "stage": "Green",
+      "stageTarget": "Green",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "green",
+        "pluralistic",
+        "transition",
+        "integral",
+        "teal",
+        "cook-greuter",
+        "beck-cowan",
+        "kegan",
+        "wilber",
+        "growing-up",
+        "late-green",
+        "emergence",
+        "2nd-tier",
+        "paradox",
+        "hierarchy",
+        "relativism"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": false,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "late-orange-disillusionment",
+      "title": "Late Orange Disillusionment — Navigating the Crack",
+      "file": "docs/modules/late-orange-disillusionment.mdx",
+      "stage": "Orange",
+      "stageTarget": "Orange",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "orange",
+        "rational",
+        "disillusionment",
+        "transition",
+        "pluralistic",
+        "cook-greuter",
+        "frankl",
+        "growing-up",
+        "meaning-making",
+        "arrival-fallacy"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": false,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "mindfulness-basics",
+      "title": "Mindfulness Basics",
+      "file": "docs/modules/mindfulness-basics.md",
+      "stage": "Unknown",
+      "stageTarget": "Personal → Pluralistic",
+      "lines": [
+        "cognitive",
+        "somatic"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "attention",
+        "awareness"
+      ],
+      "goldStandardSections": 6,
+      "hasAQAL": false,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "mindfulness-deepening",
+      "title": "Mindfulness Deepening — Advancing Beyond Basics",
+      "file": "docs/modules/mindfulness-deepening.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Personal → Pluralistic",
+      "lines": [
+        "cognitive",
+        "somatic",
+        "spiritual"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "states",
+        "mindfulness",
+        "concentration",
+        "jhana",
+        "noting",
+        "choiceless-awareness",
+        "aqal",
+        "waking-up"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "moral-line-conventional-reasoning",
+      "title": "Moral Line — Preconventional & Conventional Reasoning",
+      "file": "docs/modules/moral-line-conventional-reasoning.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Preconventional → Conventional",
+      "lines": [
+        "moral",
+        "interpersonal",
+        "self",
+        "cognitive"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "moral-line-overview-dual-track"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "moral-line",
+        "Kohlberg",
+        "Gilligan",
+        "conventional",
+        "preconventional",
+        "stage-3",
+        "stage-4",
+        "care-track",
+        "AQAL"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "moral-line-imagination-integral-ethics",
+      "title": "Moral Line — Moral Imagination & Integral Ethics",
+      "file": "docs/modules/moral-line-imagination-integral-ethics.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Postconventional → Integral",
+      "lines": [
+        "moral",
+        "cognitive",
+        "self",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "moral-line",
+        "moral-imagination",
+        "integral-ethics",
+        "virtue-ethics",
+        "phronesis",
+        "care-ethics",
+        "deontology",
+        "consequentialism",
+        "Kohlberg",
+        "Gilligan",
+        "MacIntyre",
+        "Narvaez",
+        "AQAL"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "moral-line-overview-dual-track",
+      "title": "Moral Line Overview & Dual-Track Orientation",
+      "file": "docs/modules/moral-line-overview-dual-track.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage (Preconventional through Postconventional)",
+      "lines": [
+        "moral",
+        "cognitive",
+        "emotional",
+        "interpersonal",
+        "self"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 12,
+      "tags": [
+        "moral-line",
+        "Kohlberg",
+        "Gilligan",
+        "care-ethics",
+        "justice-ethics",
+        "moral-development",
+        "dual-track",
+        "growing-up",
+        "stage-development",
+        "AQAL",
+        "developmental-lines",
+        "postconventional",
+        "care-track",
+        "justice-track"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "moral-line-postconventional-reasoning",
+      "title": "Moral Line — Postconventional Reasoning (Stages 5–6 & Care Position 3)",
+      "file": "docs/modules/moral-line-postconventional-reasoning.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Conventional → Postconventional",
+      "lines": [
+        "moral",
+        "interpersonal",
+        "self",
+        "cognitive"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "moral-line-conventional-reasoning"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "moral-line",
+        "Kohlberg",
+        "Gilligan",
+        "postconventional",
+        "stage-5",
+        "stage-6",
+        "care-track",
+        "moral-dilemma",
+        "civil-disobedience",
+        "AQAL"
+      ],
+      "goldStandardSections": 21,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "moral-line-shadow-moral-injury",
+      "title": "Moral Line, Shadow & Moral Injury",
+      "file": "docs/modules/moral-line-shadow-moral-injury.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Conventional → Postconventional",
+      "lines": [
+        "moral",
+        "self",
+        "interpersonal",
+        "cognitive",
+        "emotional"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "moral-line-imagination-integral-ethics"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "moral-line",
+        "shadow-work",
+        "moral-shadow",
+        "moral-injury",
+        "3-2-1",
+        "moral-courage",
+        "Kohlberg",
+        "Gilligan",
+        "Shay",
+        "Bandura",
+        "AQAL",
+        "cross-suite"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "multiperspectival-leadership-action",
+      "title": "Multiperspectival Leadership & Action",
+      "file": "docs/modules/multiperspectival-leadership-action.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional",
+        "leadership"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "integral",
+        "teal",
+        "2nd-tier",
+        "leadership",
+        "action-inquiry",
+        "torbert",
+        "laloux",
+        "kegan",
+        "cook-greuter",
+        "wilber",
+        "strategist",
+        "organizational-development",
+        "skillful-means",
+        "developmental-leadership",
+        "growing-up",
+        "pluralistic-to-integral"
+      ],
+      "goldStandardSections": 17,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "nondual-awareness-orientation",
+      "title": "Nondual Awareness Orientation",
+      "file": "docs/modules/nondual-awareness-orientation.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Integral → Transpersonal",
+      "lines": [
+        "cognitive",
+        "spiritual",
+        "somatic",
+        "moral"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 8,
+      "practiceTime": 15,
+      "tags": [
+        "states",
+        "nondual",
+        "dzogchen",
+        "advaita",
+        "zen",
+        "pointing-out",
+        "waking-up",
+        "aqal"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "perspective-taking-capacity",
+      "title": "Perspective-Taking Capacity",
+      "file": "docs/modules/perspective-taking-capacity.mdx",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "amber",
+        "rational",
+        "perspective-taking",
+        "selman",
+        "kohlberg",
+        "wilber",
+        "steel-manning",
+        "dennett",
+        "aqal",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "perspective-taking-empathic-accuracy",
+      "title": "EI-09 · Perspective-Taking & Empathic Accuracy",
+      "file": "docs/modules/perspective-taking-empathic-accuracy.md",
+      "stage": "Unknown",
+      "stageTarget": "Interpersonal Line — Institutional altitude and above (Kegan 4+)",
+      "lines": [
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "interpersonal-line-overview-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "interpersonal-line",
+        "perspective-taking",
+        "empathy",
+        "empathic-accuracy",
+        "theory-of-mind",
+        "Zaki",
+        "Epley",
+        "AQAL",
+        "EI-09",
+        "growing-up"
+      ],
+      "goldStandardSections": 9,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "pluralistic-green-orientation",
+      "title": "Pluralistic/Green Stage Orientation",
+      "file": "docs/modules/pluralistic-green-orientation.mdx",
+      "stage": "Green",
+      "stageTarget": "Green",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 8,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "AQAL",
+        "Cook-Greuter",
+        "Kegan",
+        "spiral-dynamics",
+        "kohlberg",
+        "fowler",
+        "growing-up"
+      ],
+      "goldStandardSections": 14,
+      "hasAQAL": false,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "rational-orange-orientation",
+      "title": "Rational/Orange Stage Orientation",
+      "file": "docs/modules/rational-orange-orientation.mdx",
+      "stage": "Orange",
+      "stageTarget": "Orange",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 10,
+      "tags": [
+        "orange",
+        "rational",
+        "spiral-dynamics",
+        "cook-greuter",
+        "kegan",
+        "piaget",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 13,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "relational-repair-conflict-navigation",
+      "title": "EI-10 · Relational Repair & Conflict Navigation",
+      "file": "docs/modules/relational-repair-conflict-navigation.md",
+      "stage": "Unknown",
+      "stageTarget": null,
+      "lines": [
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "interpersonal-line-overview-orientation",
+        "co-regulation-relational-attunement"
+      ],
+      "readingTime": 12,
+      "practiceTime": 25,
+      "tags": [
+        "interpersonal-line",
+        "conflict-navigation",
+        "relational-repair",
+        "Gottman",
+        "NVC",
+        "Edmondson",
+        "psychological-safety",
+        "power-dynamics",
+        "AQAL",
+        "tier-2",
+        "safety-critical"
+      ],
+      "goldStandardSections": 10,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "relativism-limits-of-pluralism",
+      "title": "Relativism, Pluralism & the Limits of \"All Perspectives Are Valid",
+      "file": "docs/modules/relativism-limits-of-pluralism.mdx",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "pluralistic",
+        "green",
+        "relativism",
+        "perspectivism",
+        "integral",
+        "teal",
+        "Wilber",
+        "Gebser",
+        "Rokeach",
+        "Laloux",
+        "Beck",
+        "Cowan",
+        "performative-contradiction",
+        "aperspectival-madness",
+        "actualization-hierarchy",
+        "dominator-hierarchy",
+        "growing-up",
+        "stage-transition",
+        "second-tier"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "self-line-conventional-conformist-achiever",
+      "title": "Conventional Self — Conformist to Achiever",
+      "file": "docs/modules/self-line-conventional-conformist-achiever.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Conventional Self (Conformist 3 → Achiever 4)",
+      "lines": [
+        "self",
+        "cognitive",
+        "emotional",
+        "interpersonal",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "self-line-overview-psychograph"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "self-line",
+        "ego-development",
+        "conventional-self",
+        "Conformist",
+        "Expert",
+        "Achiever",
+        "Cook-Greuter",
+        "Loevinger",
+        "Kegan",
+        "meaning-making",
+        "AQAL"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "self-line-integration-practice",
+      "title": "Self Line Integration Practice",
+      "file": "docs/modules/self-line-integration-practice.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage Self line integration",
+      "lines": [
+        "self",
+        "cognitive",
+        "emotional",
+        "interpersonal",
+        "moral"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "self-line-postautonomous-construct-aware-unitive"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "self-line",
+        "ego-development",
+        "practice-architecture",
+        "Cook-Greuter",
+        "Kegan",
+        "Torbert",
+        "action-inquiry",
+        "sentence-completion",
+        "shadow-work",
+        "AQAL"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "self-line-overview-psychograph",
+      "title": "Self Line Overview & Psychograph Orientation",
+      "file": "docs/modules/self-line-overview-psychograph.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage (Impulsive through Unitive)",
+      "lines": [
+        "self",
+        "cognitive",
+        "emotional",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 12,
+      "tags": [
+        "self-line",
+        "ego-development",
+        "Cook-Greuter",
+        "Loevinger",
+        "meaning-making",
+        "psychograph",
+        "growing-up",
+        "stage-development",
+        "AQAL",
+        "developmental-lines",
+        "Wilber"
+      ],
+      "goldStandardSections": 15,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "self-line-postautonomous-construct-aware-unitive",
+      "title": "Postautonomous Self — Construct-Aware to Unitive",
+      "file": "docs/modules/self-line-postautonomous-construct-aware-unitive.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Postautonomous Self (Construct-Aware E-9 / Stage 5/6 → Unitive E-9+ / Stage 6)",
+      "lines": [
+        "self",
+        "cognitive",
+        "emotional",
+        "interpersonal",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "self-line-postconventional-individualist-strategist"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "self-line",
+        "ego-development",
+        "postautonomous-self",
+        "Construct-Aware",
+        "Unitive",
+        "Cook-Greuter",
+        "Loevinger",
+        "Wilber-Combs-lattice",
+        "state-stage-distinction",
+        "apophatic",
+        "Fool-archetype",
+        "AQAL"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "self-line-postconventional-individualist-strategist",
+      "title": "Postconventional Self — Individualist to Strategist",
+      "file": "docs/modules/self-line-postconventional-individualist-strategist.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Postconventional Self (Individualist E-7 → Strategist E-8)",
+      "lines": [
+        "self",
+        "cognitive",
+        "emotional",
+        "interpersonal",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "self-line-conventional-conformist-achiever"
+      ],
+      "readingTime": 10,
+      "practiceTime": 12,
+      "tags": [
+        "self-line",
+        "ego-development",
+        "postconventional-self",
+        "Individualist",
+        "Strategist",
+        "Cook-Greuter",
+        "Loevinger",
+        "Kegan",
+        "narrative-identity",
+        "self-authorship",
+        "AQAL"
+      ],
+      "goldStandardSections": 17,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-321-process",
+      "title": "The 3-2-1 Shadow Process",
+      "file": "docs/modules/shadow-321-process.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "3-2-1",
+        "Wilber",
+        "projection",
+        "integration",
+        "somatic",
+        "dream-work",
+        "AQAL"
+      ],
+      "goldStandardSections": 17,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-collective-cultural",
+      "title": "Collective & Cultural Shadow — The Undiscovered Self of Nations and Communities",
+      "file": "docs/modules/shadow-collective-cultural.mdx",
+      "stage": "Orange → Green → Teal (Integral)",
+      "stageTarget": "Orange → Green → Teal (Integral)",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "collective-shadow",
+        "cultural-shadow",
+        "AQAL",
+        "Spiral-Dynamics",
+        "scapegoating",
+        "Girard",
+        "Jung",
+        "Wilber",
+        "amber-shadow",
+        "orange-shadow",
+        "green-shadow",
+        "collective-trauma",
+        "systems-thinking"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-immunity-to-change",
+      "title": "Immunity to Change — Shadow as Hidden Competing Commitment",
+      "file": "docs/modules/shadow-immunity-to-change.mdx",
+      "stage": "Rational → Integral",
+      "stageTarget": "Rational → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "immunity-to-change",
+        "Kegan",
+        "Lahey",
+        "big-assumption",
+        "competing-commitment",
+        "AQAL",
+        "subject-object",
+        "behavioral-experiment",
+        "integral"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-in-relationships",
+      "title": "Shadow in Relationships — Projection, Resentment, and Relational Repair",
+      "file": "docs/modules/shadow-in-relationships.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "relationships",
+        "projection",
+        "projective-identification",
+        "Klein",
+        "resentment",
+        "AQAL",
+        "NVC",
+        "IFS",
+        "object-relations",
+        "Kernberg",
+        "relational-repair"
+      ],
+      "goldStandardSections": 21,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-integration-101",
+      "title": "Shadow Integration",
+      "file": "docs/modules/shadow-integration-101.md",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "emotional",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "shadow",
+        "projection",
+        "self-awareness"
+      ],
+      "goldStandardSections": 6,
+      "hasAQAL": false,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "shadow-persona-mask",
+      "title": "Persona & Mask — The Social Face and Its Shadow",
+      "file": "docs/modules/shadow-persona-mask.mdx",
+      "stage": "Amber → Integral",
+      "stageTarget": "Amber → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "persona",
+        "mask",
+        "Jung",
+        "AQAL",
+        "Amber",
+        "Rational",
+        "role-identity",
+        "belonging",
+        "Goffman",
+        "Cook-Greuter"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-positive-projection",
+      "title": "Positive Shadow — Reclaiming Projected Gold",
+      "file": "docs/modules/shadow-positive-projection.mdx",
+      "stage": "Amber → Rational",
+      "stageTarget": "Amber → Rational",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [
+        "shadow-work-foundation",
+        "shadow-321-process"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "positive-shadow",
+        "golden-shadow",
+        "projection",
+        "admiration",
+        "Amber-Rational",
+        "authority",
+        "self-authoring",
+        "AQAL",
+        "Johnson",
+        "Jung"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-spiritual-bypassing",
+      "title": "Shadow Work — Spiritual Bypassing",
+      "file": "docs/modules/shadow-spiritual-bypassing.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "spiritual-bypassing",
+        "Welwood",
+        "Masters",
+        "Wilber",
+        "pre-trans-fallacy",
+        "transcend-and-include",
+        "AQAL",
+        "integral",
+        "trauma-sensitive"
+      ],
+      "goldStandardSections": 22,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "shadow-work-foundation",
+      "title": "Shadow Work — Foundation & Orientation",
+      "file": "docs/modules/shadow-work-foundation.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 8,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "Jung",
+        "AQAL",
+        "foundations",
+        "projection",
+        "3-2-1",
+        "assagioli",
+        "integral"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": false,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "somatic-line-overview",
+      "title": "Somatic Line Overview & Orientation",
+      "file": "docs/modules/somatic-line-overview.md",
+      "stage": "Unknown",
+      "stageTarget": null,
+      "lines": [
+        "somatic"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Unknown",
+      "format": "embodied-guided",
+      "prerequisites": [],
+      "readingTime": null,
+      "practiceTime": null,
+      "tags": [
+        "somatic-line",
+        "tier-2"
+      ],
+      "goldStandardSections": 12,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true
+    },
+    {
+      "id": "spiritual-line-conjunctive-universalizing",
+      "title": "Spiritual Line — Conjunctive to Universalizing (Fowler Stages 5–6)",
+      "file": "docs/modules/spiritual-line-conjunctive-universalizing.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Pluralistic/Green → early Integral (Fowler Stages 5–6)",
+      "lines": [
+        "spiritual",
+        "cognitive",
+        "moral",
+        "self"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "spiritual-line",
+        "Fowler",
+        "conjunctive-faith",
+        "universalizing-faith",
+        "coincidentia-oppositorum",
+        "second-naivete",
+        "integral-spirituality",
+        "epistemic-humility"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "spiritual-line-mythic-to-rational",
+      "title": "Spiritual Line — Mythic-Literal to Rational (Fowler Stages 2–4)",
+      "file": "docs/modules/spiritual-line-mythic-to-rational.mdx",
+      "stage": "Amber → Rational (Fowler Stages 2–4)",
+      "stageTarget": "Amber → Rational (Fowler Stages 2–4)",
+      "lines": [
+        "spiritual",
+        "cognitive",
+        "moral",
+        "self"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [
+        "spiritual-line-overview-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "spiritual-line",
+        "Fowler",
+        "faith-development",
+        "faith-deconstruction",
+        "Mythic-Literal",
+        "Synthetic-Conventional",
+        "Individuative-Reflective",
+        "demythologizing",
+        "spiritual-transition",
+        "Wilber",
+        "post-metaphysical",
+        "grief",
+        "growing-up"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "spiritual-line-overview-orientation",
+      "title": "Spiritual Line Overview & Orientation",
+      "file": "docs/modules/spiritual-line-overview-orientation.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage (Archaic through Super-Integral)",
+      "lines": [
+        "spiritual",
+        "cognitive",
+        "moral",
+        "self"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 8,
+      "practiceTime": 10,
+      "tags": [
+        "spiritual-line",
+        "Fowler",
+        "faith-development",
+        "spiritual-intelligence",
+        "Wilber",
+        "integral-spirituality",
+        "growing-up",
+        "stage-development",
+        "AQAL",
+        "developmental-lines",
+        "post-metaphysical"
+      ],
+      "goldStandardSections": 19,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "spiritual-line-post-metaphysical-integral-religion",
+      "title": "Post-Metaphysical Spirituality & Integral Religion",
+      "file": "docs/modules/spiritual-line-post-metaphysical-integral-religion.mdx",
+      "stage": "Rational/Orange → Integral/Teal (Spiritual line post-conventional)",
+      "stageTarget": "Rational/Orange → Integral/Teal (Spiritual line post-conventional)",
+      "lines": [
+        "spiritual",
+        "cognitive",
+        "moral",
+        "self"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "spiritual-line",
+        "post-metaphysical",
+        "integral-religion",
+        "three-eyes",
+        "Wilber",
+        "Ricoeur",
+        "Tillich",
+        "second-naivete",
+        "ultimate-concern",
+        "pre-trans-distinction",
+        "spiritual-materialism",
+        "growing-up",
+        "AQAL",
+        "Fowler"
+      ],
+      "goldStandardSections": 20,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "spiritual-line-practice-architecture",
+      "title": "Spiritual Line Practice Architecture",
+      "file": "docs/modules/spiritual-line-practice-architecture.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage spiritual line development",
+      "lines": [
+        "spiritual",
+        "cognitive",
+        "self",
+        "emotional"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "spiritual-line-post-metaphysical-integral-religion"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "spiritual-line",
+        "practice-architecture",
+        "Fowler",
+        "Wilber",
+        "contemplative-practice",
+        "state-to-trait",
+        "AQAL",
+        "spiritual-bypass",
+        "integration"
+      ],
+      "goldStandardSections": 13,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "spiritual-line-shadow-integration",
+      "title": "Spiritual Line & Shadow Integration",
+      "file": "docs/modules/spiritual-line-shadow-integration.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Cross-stage (Mythic-Literal through Post-Metaphysical/Integral)",
+      "lines": [
+        "spiritual",
+        "cognitive",
+        "emotional",
+        "moral",
+        "somatic",
+        "self"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-green-orientation",
+        "integral-teal-orientation"
+      ],
+      "readingTime": 12,
+      "practiceTime": 15,
+      "tags": [
+        "shadow-work",
+        "spiritual-line",
+        "spiritual-shadow",
+        "Fowler",
+        "spiritual-bypassing",
+        "sacred-wound",
+        "religious-trauma",
+        "3-2-1",
+        "Wilber",
+        "Welwood",
+        "Masters",
+        "Winell",
+        "integral-spirituality",
+        "pre-trans-fallacy",
+        "AQAL",
+        "cross-suite"
+      ],
+      "goldStandardSections": 18,
+      "hasAQAL": true,
+      "hasPractice": false,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "subtle-state-access",
+      "title": "Subtle State Access",
+      "file": "docs/modules/subtle-state-access.mdx",
+      "stage": "Unknown",
+      "stageTarget": "Personal → Pluralistic",
+      "lines": [
+        "emotional",
+        "cognitive",
+        "somatic"
+      ],
+      "safetyTier": "tier-2",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [],
+      "readingTime": 10,
+      "practiceTime": 15,
+      "tags": [
+        "states",
+        "subtle",
+        "yoga-nidra",
+        "hypnagogic",
+        "aqal",
+        "waking-up"
+      ],
+      "goldStandardSections": 14,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "systems-thinking-101",
+      "title": "Systems Thinking 101",
+      "file": "docs/modules/systems-thinking-101.md",
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
+      "lines": [
+        "cognitive",
+        "systems"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Intermediate",
+      "format": "text-reflection",
+      "prerequisites": [
+        "rational-orange-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "systems",
+        "complexity",
+        "feedback"
+      ],
+      "goldStandardSections": 5,
+      "hasAQAL": false,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    },
+    {
+      "id": "vision-logic-metasystematic-thinking",
+      "title": "Vision-Logic & Metasystematic Thinking",
+      "file": "docs/modules/vision-logic-metasystematic-thinking.mdx",
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
+      "lines": [
+        "cognitive",
+        "systems",
+        "moral"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "text-reflection",
+      "prerequisites": [
+        "pluralistic-green-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "stage-development",
+        "integral",
+        "teal",
+        "2nd-tier",
+        "vision-logic",
+        "metasystematic",
+        "commons",
+        "wilber",
+        "kegan",
+        "cook-greuter",
+        "basseches",
+        "esbjorn-hargens",
+        "systems-thinking",
+        "paradox",
+        "framework-triangulation",
+        "growing-up",
+        "cognitive"
+      ],
+      "goldStandardSections": 14,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": false,
+      "hasSafetyNote": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "affect-labelling-somatic-correlation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "affect-labelling-somatic-correlation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "authentic-dialogue-collaborative-meaning",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "causal-witness-state",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "co-regulation-relational-attunement",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotion-regulation-foundations",
+      "target": "co-regulation-relational-attunement",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotional-appraisal-meaning-making",
+      "target": "co-regulation-relational-attunement",
+      "type": "prerequisite"
+    },
+    {
+      "source": "cognitive-line-overview-orientation",
+      "target": "cognitive-line-concrete-to-formal",
+      "type": "prerequisite"
+    },
+    {
+      "source": "cognitive-line-postformal-operations",
+      "target": "cognitive-line-metasystematic-vision-logic",
+      "type": "prerequisite"
+    },
+    {
+      "source": "cognitive-line-concrete-to-formal",
+      "target": "cognitive-line-postformal-operations",
+      "type": "prerequisite"
+    },
+    {
+      "source": "cognitive-line-metasystematic-vision-logic",
+      "target": "cognitive-line-practice-architecture",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "community-belonging-collective-intelligence",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "contextual-ethics-moral-complexity",
+      "type": "prerequisite"
+    },
+    {
+      "source": "interpersonal-line-overview-orientation",
+      "target": "cross-difference-dialogue-trust-building",
+      "type": "prerequisite"
+    },
+    {
+      "source": "perspective-taking-empathic-accuracy",
+      "target": "cross-difference-dialogue-trust-building",
+      "type": "prerequisite"
+    },
+    {
+      "source": "relational-repair-conflict-navigation",
+      "target": "cross-difference-dialogue-trust-building",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "ecological-systems-consciousness",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "emotion-regulation-foundations",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "emotional-appraisal-meaning-making",
+      "type": "prerequisite"
+    },
+    {
+      "source": "emotion-regulation-foundations",
+      "target": "emotional-appraisal-meaning-making",
+      "type": "prerequisite"
+    },
+    {
+      "source": "affect-labelling-somatic-correlation",
+      "target": "emotional-appraisal-meaning-making",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "emotional-intelligence-somatic-line",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "empathy-perspective-plurality",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "healthy-hierarchy-actualization-gradient",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "integral-ethics-beyond-relativism",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "integral-life-practice-embodying-2nd-tier",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "integral-shadow-teal-trap",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "integral-teal-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "integral-teal-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "late-green-emergence-signals",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "mindfulness-deepening",
+      "type": "prerequisite"
+    },
+    {
+      "source": "moral-line-overview-dual-track",
+      "target": "moral-line-conventional-reasoning",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "moral-line-imagination-integral-ethics",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "moral-line-imagination-integral-ethics",
+      "type": "prerequisite"
+    },
+    {
+      "source": "moral-line-conventional-reasoning",
+      "target": "moral-line-postconventional-reasoning",
+      "type": "prerequisite"
+    },
+    {
+      "source": "moral-line-imagination-integral-ethics",
+      "target": "moral-line-shadow-moral-injury",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "multiperspectival-leadership-action",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "nondual-awareness-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "nondual-awareness-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "interpersonal-line-overview-orientation",
+      "target": "perspective-taking-empathic-accuracy",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "pluralistic-green-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "interpersonal-line-overview-orientation",
+      "target": "relational-repair-conflict-navigation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "co-regulation-relational-attunement",
+      "target": "relational-repair-conflict-navigation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "relativism-limits-of-pluralism",
+      "type": "prerequisite"
+    },
+    {
+      "source": "self-line-overview-psychograph",
+      "target": "self-line-conventional-conformist-achiever",
+      "type": "prerequisite"
+    },
+    {
+      "source": "self-line-postautonomous-construct-aware-unitive",
+      "target": "self-line-integration-practice",
+      "type": "prerequisite"
+    },
+    {
+      "source": "self-line-postconventional-individualist-strategist",
+      "target": "self-line-postautonomous-construct-aware-unitive",
+      "type": "prerequisite"
+    },
+    {
+      "source": "self-line-conventional-conformist-achiever",
+      "target": "self-line-postconventional-individualist-strategist",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-321-process",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-collective-cultural",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-immunity-to-change",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "shadow-immunity-to-change",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-in-relationships",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-integration-101",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-persona-mask",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "shadow-persona-mask",
+      "type": "prerequisite"
+    },
+    {
+      "source": "shadow-work-foundation",
+      "target": "shadow-positive-projection",
+      "type": "prerequisite"
+    },
+    {
+      "source": "shadow-321-process",
+      "target": "shadow-positive-projection",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-spiritual-bypassing",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "shadow-work-foundation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "spiritual-line-conjunctive-universalizing",
+      "type": "prerequisite"
+    },
+    {
+      "source": "spiritual-line-overview-orientation",
+      "target": "spiritual-line-mythic-to-rational",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "spiritual-line-overview-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "spiritual-line-overview-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "spiritual-line-post-metaphysical-integral-religion",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "spiritual-line-post-metaphysical-integral-religion",
+      "type": "prerequisite"
+    },
+    {
+      "source": "spiritual-line-post-metaphysical-integral-religion",
+      "target": "spiritual-line-practice-architecture",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "spiritual-line-shadow-integration",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "spiritual-line-shadow-integration",
+      "type": "prerequisite"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "systems-thinking-101",
+      "type": "prerequisite"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "vision-logic-metasystematic-thinking",
+      "type": "prerequisite"
+    },
+    {
+      "source": "amber-mythic-orientation",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-dissonance-bridge",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "perspective-taking-capacity",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "authority-autonomy-transition",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "critical-thinking-foundations",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "evidence-evaluation",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-concrete-to-formal",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-postformal-operations",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-postformal-operations",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-practice-architecture",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-metasystematic-vision-logic",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-practice-architecture",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotion-regulation-foundations",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "affect-labelling-somatic-correlation",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-intelligence-somatic-line",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-appraisal-meaning-making",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-interpersonal-integration",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "interpersonal-line-overview-orientation",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "interpersonal-line-overview-orientation",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "perspective-taking-empathic-accuracy",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "relational-repair-conflict-navigation",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cross-difference-dialogue-trust-building",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-interpersonal-integration",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "co-regulation-relational-attunement",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "mindfulness-basics",
+      "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-integration-101",
+      "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "systems-thinking-101",
+      "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "late-green-emergence-signals",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "vision-logic-metasystematic-thinking",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "healthy-hierarchy-actualization-gradient",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-ethics-beyond-relativism",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-shadow-teal-trap",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "multiperspectival-leadership-action",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-life-practice-embodying-2nd-tier",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "causal-witness-state",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-immunity-to-change",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "late-orange-disillusionment",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "empathy-perspective-plurality",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-intelligence-somatic-line",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "contextual-ethics-moral-complexity",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "ecological-systems-consciousness",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "authentic-dialogue-collaborative-meaning",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "community-belonging-collective-intelligence",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "relativism-limits-of-pluralism",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-conventional-conformist-achiever",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-integration-practice",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-postconventional-individualist-strategist",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-conventional-conformist-achiever",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-integration-practice",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-postconventional-individualist-strategist",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-postautonomous-construct-aware-unitive",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-integration-practice",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "gross-state-awareness",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-work-foundation",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-work-foundation",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-321-process",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-positive-projection",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-persona-mask",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-in-relationships",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-collective-cultural",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-immunity-to-change",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-spiritual-bypassing",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "somatic-line-overview",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "mindfulness-basics",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "gross-state-awareness",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-intelligence-somatic-line",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-work-foundation",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-overview-orientation",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-mythic-to-rational",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-conjunctive-universalizing",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-post-metaphysical-integral-religion",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-shadow-integration",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "gross-state-awareness",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "subtle-state-access",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "causal-witness-state",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "nondual-awareness-orientation",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "gross-state-awareness",
+      "target": "state-development",
+      "type": "quickstart-member"
+    }
+  ]
+}

@@ -3,8 +3,9 @@
 [![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
 [![CI Quality](https://github.com/paruff/integral-education/actions/workflows/ci-quality.yml/badge.svg)](https://github.com/paruff/integral-education/actions/workflows/ci-quality.yml)
 [![Deploy](https://github.com/paruff/integral-education/actions/workflows/deploy-gh-pages.yml/badge.svg)](https://github.com/paruff/integral-education/actions/workflows/deploy-gh-pages.yml)
+[![Gold Standard](https://img.shields.io/badge/modules-75-blueviolet)](docs/.content-graph-stats.json)
 
-A mastery-based learning platform built on the [AQAL framework](https://integrallife.com/) — All Quadrants, All Levels, All Lines, All States, All Types. Live at **[paruff.github.io/integral-education](https://paruff.github.io/integral-education/)**.
+A library of 75 learning modules for navigating adult developmental transitions — moving from rule-based thinking to evidence-based reasoning, from analytical to multi-perspectival, from relativism to genuine integration. Every module includes a practice, self-assessment rubric, evidence table, and safety protocols. Live at **[paruff.github.io/integral-education](https://paruff.github.io/integral-education/)**.
 
 **Latest release:** [v0.2.0-alpha](https://github.com/paruff/integral-education/releases/tag/v0.2.0-alpha) — UX design system, WCAG 2.1 AA compliance, Somatic/Emotional/Interpersonal lines, developmental assessments. See [CHANGELOG](CHANGELOG.md) for full details.
 

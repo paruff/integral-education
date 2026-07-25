@@ -3,6 +3,7 @@ id: somatic-line-overview
 title: Somatic Line Overview & Orientation
 sidebar_label: Somatic Line
 description: Understand how body-based knowing and nervous system regulation develop — from reflexive reactivity to flexible self-regulation.
+format: embodied-guided
 tags:
   - somatic-line
   - tier-2

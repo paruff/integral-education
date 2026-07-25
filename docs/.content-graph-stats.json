@@ -1,0 +1,53 @@
+{
+  "stageDistribution": {
+    "Unknown": 35,
+    "Amber": 1,
+    "Rational → Pluralistic": 8,
+    "Amber → Rational": 7,
+    "Pluralistic → Integral": 12,
+    "Integral": 1,
+    "Cross-level capstone: Amber through Integral": 1,
+    "Teal": 1,
+    "Green": 2,
+    "Orange": 2,
+    "Orange → Green → Teal (Integral)": 1,
+    "Rational → Integral": 1,
+    "Amber → Integral": 1,
+    "Amber → Rational (Fowler Stages 2–4)": 1,
+    "Rational/Orange → Integral/Teal (Spiritual line post-conventional)": 1
+  },
+  "lineCoverage": {
+    "emotional": 46,
+    "cognitive": 64,
+    "moral": 50,
+    "interpersonal": 52,
+    "spiritual": 11,
+    "somatic": 21,
+    "self": 22,
+    "ecological": 1,
+    "values": 2,
+    "leadership": 1,
+    "systems": 2
+  },
+  "safetyTiers": {
+    "tier-1": 53,
+    "tier-2": 22
+  },
+  "formats": {
+    "embodied-guided": 22,
+    "text-reflection": 53
+  },
+  "difficulties": {
+    "Intermediate": 37,
+    "Beginner": 17,
+    "Advanced": 19,
+    "Unknown": 2
+  },
+  "goldStandardCompliance": {
+    "full": 10,
+    "total": 75,
+    "percentage": 13
+  },
+  "orphanModules": 1,
+  "avgSectionsPerModule": 16
+}

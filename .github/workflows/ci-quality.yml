@@ -32,8 +32,44 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Frontmatter Validation
+        run: node scripts/validate-frontmatter.js
+
+      - name: Generate Content Graph
+        run: node scripts/generate-content-graph.js
+
+      - name: Record Build Start
+        id: build-start
+        run: echo "time=$(date +%s%N)" >> $GITHUB_OUTPUT
+
       - name: Build Site
+        id: build
         run: npm run build
+        timeout-minutes: 10
+
+      - name: Record Build End
+        id: build-end
+        run: echo "time=$(date +%s%N)" >> $GITHUB_OUTPUT
+
+      - name: Measure Build Metrics
+        id: metrics
+        run: |
+          BUILD_TIME_MS=$(( ${{ steps.build-end.outputs.time }} - ${{ steps.build-start.outputs.time }} ))
+          BUILD_TIME_S=$(( BUILD_TIME_MS / 1000000000 ))
+          SEARCH_INDEX_SIZE=$(wc -c < build/search-index.json 2>/dev/null || echo 0)
+          echo "build_time_seconds=${BUILD_TIME_S}" >> $GITHUB_OUTPUT
+          echo "search_index_bytes=${SEARCH_INDEX_SIZE}" >> $GITHUB_OUTPUT
+
+          # Extract content graph stats
+          if [ -f docs/.content-graph-stats.json ]; then
+            GOLD_STANDARD=$(node -e "console.log(require('./docs/.content-graph-stats.json').goldStandardCompliance.percentage)")
+            MODULES=$(node -e "console.log(require('./docs/.content-graph-stats.json').goldStandardCompliance.total)")
+          else
+            GOLD_STANDARD=0
+            MODULES=0
+          fi
+          echo "gold_standard_pct=${GOLD_STANDARD}" >> $GITHUB_OUTPUT
+          echo "module_count=${MODULES}" >> $GITHUB_OUTPUT
 
       - name: Validate Markdown Links
         uses: lycheeverse/lychee-action@v2
@@ -42,3 +78,15 @@ jobs:
           fail: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Report Metrics
+        if: always()
+        run: |
+          echo "## 📊 Build Metrics" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Metric | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Build time | ${{ steps.metrics.outputs.build_time_seconds }}s |" >> $GITHUB_STEP_SUMMARY
+          echo "| Search index size | ${{ steps.metrics.outputs.search_index_bytes }} bytes |" >> $GITHUB_STEP_SUMMARY
+          echo "| Module count | ${{ steps.metrics.outputs.module_count }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Gold-standard compliance | ${{ steps.metrics.outputs.gold_standard_pct }}% |" >> $GITHUB_STEP_SUMMARY

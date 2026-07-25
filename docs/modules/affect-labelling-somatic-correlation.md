@@ -3,6 +3,7 @@ id: affect-labelling-somatic-correlation
 title: Affect Labelling & Somatic Correlation
 sidebar_label: Affect Labelling & Somatic
 description: Develop the practice of linking emotional experiences to their somatic signatures, improving interoceptive awareness and emotional regulation capacity.
+format: embodied-guided
 prerequisites:
 - emotional-line-overview-orientation
 - emotional-granularity

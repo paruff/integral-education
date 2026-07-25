@@ -13,7 +13,11 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "token-audit": "bash scripts/token-audit.sh",
-    "token-audit:save": "bash scripts/token-audit.sh --save"
+    "token-audit:save": "bash scripts/token-audit.sh --save",
+    "validate-frontmatter": "node scripts/validate-frontmatter.js",
+    "content-graph": "node scripts/generate-content-graph.js",
+    "content-graph:save": "node scripts/generate-content-graph.js --output docs/.content-graph.json",
+    "postinstall": "npx lefthook install"
   },
   "dependencies": {
     "@docusaurus/core": "3.10.2",
@@ -29,6 +33,7 @@
     "@docusaurus/types": "3.10.2",
     "@easyops-cn/docusaurus-search-local": "^0.55.2",
     "canvas": "^3.2.3",
+    "lefthook": "^2.1.10",
     "lighthouse": "^13.4.0",
     "puppeteer": "^25.3.0"
   },

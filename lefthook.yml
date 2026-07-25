@@ -1,0 +1,57 @@
+# lefthook.yml — pre-commit hooks for Integral Education Platform
+# Run `npx lefthook install` after cloning to activate
+
+pre-commit:
+  parallel: true
+  commands:
+    build:
+      tags: [core, safety]
+      run: npm run build
+      skip:
+        - merge
+        - rebase
+      priority: 1
+
+    no-h1-in-body:
+      tags: [content, wcag]
+      run: |
+        if grep -rn "^# " docs/modules/ --include="*.md" --include="*.mdx" 2>/dev/null | grep -v "^Binary"; then
+          echo "❌ H1 heading found in module body (use ## not #)"
+          exit 1
+        fi
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
+    no-placeholders:
+      tags: [content, quality]
+      run: |
+        if grep -rn "TODO\|FIXME" docs/modules/ --include="*.md" --include="*.mdx" 2>/dev/null | grep -v ".git" | grep -v "node_modules"; then
+          echo "❌ Placeholder found (TODO/FIXME)"
+          exit 1
+        fi
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
+    frontmatter-format:
+      tags: [content, validation]
+      run: node scripts/validate-frontmatter.js
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
+    no-merge-conflicts:
+      tags: [git, safety]
+      run: |
+        if grep -rn "^<<<<<<< \|^=======$\|^>>>>>>> " . --include="*.md" --include="*.mdx" --include="*.js" --include="*.json" --include="*.yml" --include="*.yaml" 2>/dev/null | grep -v "node_modules" | grep -v ".git"; then
+          echo "❌ Merge conflict markers found"
+          exit 1
+        fi
+      skip:
+        - merge
+        - rebase
+      priority: 1

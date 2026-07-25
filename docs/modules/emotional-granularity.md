@@ -130,6 +130,14 @@ Apply this in real life:
 
 ---
 
+## Safety Note
+
+**Tier:** 1 — Standard reflective content
+
+This module involves recalling emotionally significant events to practice differentiation and labeling. If this surfaces distress beyond what feels manageable to sit with alone, pause the exercise and speak with a trusted person. This content is educational, not therapeutic.
+
+---
+
 <RetrievalPrompt moduleName="Emotional Granularity" cards={
   {q: "What is emotional granularity?", a: "The ability to make fine-grained distinctions between emotional states"},
   {q: "What are the benefits of high emotional granularity?", a: "Less intense emotions during stress, faster recovery, better decisions under pressure. Note: causal evidence is still developing — correlational findings are strong, intervention studies ongoing"},

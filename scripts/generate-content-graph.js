@@ -117,6 +117,24 @@ function extractSections(content) {
   return sections;
 }
 
+// Safety Note is commonly implemented as a Docusaurus admonition
+// (`:::note Safety Note` / `<Admonition title="Safety Note">`), or under a
+// custom-named heading like "When to Seek Support" — a deliberate journey-
+// template pattern, not a gap. Detect all forms so modules aren't flagged as
+// missing a section that's genuinely present, just not literally H2 "Safety".
+const SAFETY_HEADING_ALIASES = ['safety', 'seek support', 'seek help'];
+
+function hasAdmonitionSection(content, sections, label) {
+  const labelLower = label.toLowerCase();
+  const aliases = labelLower === 'safety' ? SAFETY_HEADING_ALIASES : [labelLower];
+  if (sections.some(s => aliases.some(a => s.toLowerCase().includes(a)))) return true;
+  const fencedRegex = new RegExp(`^:::\\w+.*${labelLower}`, 'im');
+  if (fencedRegex.test(content)) return true;
+  const componentRegex = new RegExp(`<Admonition[^>]*title=["'][^"']*${labelLower}`, 'i');
+  if (componentRegex.test(content)) return true;
+  return false;
+}
+
 function inferStage(fm) {
   if (fm.level && STAGE_TRANSITIONS.some(t => fm.level.includes(t))) {
     return fm.level;
@@ -206,7 +224,8 @@ function main() {
       hasAQAL: sections.some(s => s.toLowerCase().includes('aqal')),
       hasPractice: sections.some(s => s.toLowerCase().includes('practice')),
       hasEvidence: sections.some(s => s.toLowerCase().includes('evidence')),
-      hasSafetyNote: sections.some(s => s.toLowerCase().includes('safety')),
+      hasSafetyNote: hasAdmonitionSection(content, sections, 'safety'),
+      hasFacilitatorNote: hasAdmonitionSection(content, sections, 'facilitator'),
     };
 
     modules[node.id] = node;

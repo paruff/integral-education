@@ -13,6 +13,9 @@
 - Integral Education Platform (AQAL docs/site).
 - Stack: Docusaurus v3, MD/MDX, React, GHA.
 - Constraint: safety, evidence rigor, build-pass docs.
+- Git hooks: lefthook (`lefthook.yml`) only — no husky. Pre-commit runs build,
+  no-h1-in-body, no-placeholders, frontmatter-format, no-merge-conflicts.
+  No `prepare` script; run `npx lefthook install` after clone to activate.
 
 ## Never Do (Project-Specific)
 1. No Tier2/3 shadow content without human sign-off.

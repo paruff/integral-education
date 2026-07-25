@@ -1788,18 +1788,13 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 11,
+      "goldStandardSections": 15,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "learn",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "magic-purple-stage-orientation",
@@ -1829,18 +1824,13 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 11,
+      "goldStandardSections": 15,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "learn",
-        "stabilize"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "mindfulness-basics",

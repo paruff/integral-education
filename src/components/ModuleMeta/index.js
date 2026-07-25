@@ -11,6 +11,25 @@ const DIFFICULTY_CONFIG = {
   Advanced: { colour: '#a50e0e', bg: '#f5d9d6', label: 'Advanced' },
 };
 
+// ─── Safety tier → colour + label ─────────────────────────────────────────────
+
+const TIER_CONFIG = {
+  2: { colour: '#8a4200', bg: '#ffedd1', label: '2 \u00b7 Guided' },
+  3: { colour: '#a50e0e', bg: '#f5d9d6', label: '3 \u00b7 Facilitated' },
+};
+
+function tierLabel(tier) {
+  return TIER_CONFIG[tier]?.label ?? `${tier}`;
+}
+
+function tierColour(tier) {
+  return TIER_CONFIG[tier]?.colour ?? '#666';
+}
+
+function tierBg(tier) {
+  return TIER_CONFIG[tier]?.bg ?? '#f0f0f0';
+}
+
 function difficultyLabel(difficulty) {
   return DIFFICULTY_CONFIG[difficulty]?.label ?? difficulty ?? '—';
 }
@@ -67,6 +86,7 @@ export default function ModuleMeta() {
   const difficulty = fm.difficulty;
   const stage = fm.level;           // existing frontmatter field
   const prerequisites = fm.prerequisites;
+  const safetyTier = fm.safety_tier; // safety classification tier
 
   // Compute total time
   const totalTime =
@@ -75,7 +95,7 @@ export default function ModuleMeta() {
       : null;
 
   // Bail if no metadata at all
-  if (!readingTime && !practiceTime && !difficulty && !stage && !prerequisites) {
+  if (!readingTime && !practiceTime && !difficulty && !stage && !prerequisites && !safetyTier) {
     return null;
   }
 
@@ -128,6 +148,21 @@ export default function ModuleMeta() {
                 ))
               : prerequisites}
           </span>
+        </span>
+      )}
+
+      {safetyTier && safetyTier >= 2 && (
+        <span
+          className={styles.badge}
+          style={{
+            '--meta-badge-colour': tierColour(safetyTier),
+            '--meta-badge-bg': tierBg(safetyTier),
+          }}
+          title={`Safety Tier ${safetyTier}`}
+        >
+          <span className={styles.icon}>⛑️</span>
+          <span className={styles.label}>Tier</span>
+          <span className={styles.value}>{tierLabel(safetyTier)}</span>
         </span>
       )}
     </div>

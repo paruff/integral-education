@@ -1,25 +1,29 @@
-# Verification Report — UX-21
+# Verification Report — UX-22
 
 ## Evidence Check
 
-### Claim: "Find Your Path → uses homepage-primary-cta class"
-- **Evidence:** `git diff` confirms class changed from `{styles.secondaryCta}` to `"button button--lg homepage-primary-cta"`
+### Claim: "All 17 Tier 2 modules have safety_tier: 2"
+- **Evidence:** `grep -r "safety_tier: 2" docs/modules/` returns exactly 17 matches, one per designated module
 - **Verified:** ✓ TRUE
 
-### Claim: "Get Started → uses button--secondary class"
-- **Evidence:** `git diff` confirms class changed from `"button button--lg homepage-primary-cta"` to `"button button--lg button--secondary"`
+### Claim: "ModuleMeta renders TIER badge for tier ≥ 2"
+- **Evidence:** Component code shows `{safetyTier && safetyTier >= 2 && (<span className={styles.badge} ...>)}` rendering a badge with `styles.icon`, `styles.label`, `styles.value`
 - **Verified:** ✓ TRUE
 
-### Claim: "Link targets (/start and /docs/intro) unchanged"
-- **Evidence:** `git diff` shows no changes to `to=` attributes; `sed` confirms both targets present
+### Claim: "Tier 2 badge shows '2 · Guided'"
+- **Evidence:** `TIER_CONFIG[2].label = '2 \u00b7 Guided'`; rendered in `styles.value`
+- **Verified:** ✓ TRUE
+
+### Claim: "Tier 1 modules don't render tier badge"
+- **Evidence:** `mindfulness-basics.md` has no `safety_tier` frontmatter → `safetyTier` is `undefined` → condition short-circuits
 - **Verified:** ✓ TRUE
 
 ### Claim: "npm run build succeeds"
-- **Evidence:** Build completed with `[SUCCESS] Generated static files in "build"`
+- **Evidence:** Build completed with `[SUCCESS] Generated static files in "build"`; no new warnings
 - **Verified:** ✓ TRUE
 
-### Claim: "Only src/pages/index.js changed"
-- **Evidence:** `git diff --stat` shows only `src/pages/index.js` modified
+### Claim: "No CSS changes needed"
+- **Evidence:** `git diff` shows no CSS files modified; existing `.badge[style*="--meta-badge-colour"]` selector reused
 - **Verified:** ✓ TRUE
 
 ## All Artifacts Present

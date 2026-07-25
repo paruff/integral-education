@@ -8,11 +8,13 @@ A mastery-based learning platform built on the [AQAL framework](https://integral
 
 **Latest release:** [v0.2.0-alpha](https://github.com/paruff/integral-education/releases/tag/v0.2.0-alpha) — UX design system, WCAG 2.1 AA compliance, Somatic/Emotional/Interpersonal lines, developmental assessments. See [CHANGELOG](CHANGELOG.md) for full details.
 
+**What This Is Not:** A therapeutic or clinical intervention. This platform provides educational content for self-directed developmental practice. It does not diagnose, treat, or replace professional mental health care. Modules rated Tier 2 include safety protocols and require practitioner support where indicated.
+
 Built with [Docusaurus](https://docusaurus.io/) and deployed to GitHub Pages.
 
 ## What You Get
 
-- **68 learning modules** — stage orientations, developmental lines, shadow work, emotional intelligence, and state practices
+- **75 learning modules** — stage orientations, developmental lines, shadow work, emotional intelligence, and state practices
 - **10 QuickStart paths** — curated pathways for common developmental transitions
 - **AQAL-aware content model** — every module tagged by quadrant, level, line, state, and type
 - **Built-in mastery loop** — Learn → Practice → Reflect → Assess → Integrate
@@ -27,7 +29,7 @@ integral-education/
 ├── sidebars.js
 ├── docs/
 │   ├── intro.md
-│   ├── modules/          # 68 learning modules
+│   ├── modules/          # 75 learning modules
 │   ├── quickstarts/      # 10 curated learning paths
 │   ├── maps/             # AQAL competency map, crosswalks, taxonomies
 │   ├── safety/           # Safety standards and facilitator qualifications
@@ -84,6 +86,18 @@ Every module is held to the [Instructional Design Protocol](docs/quality/instruc
 - **Security**: npm audit (high+), CodeQL analysis, dependency review
 - **Link Checking**: all internal and external links validated
 
+## Testing
+
+This platform uses build integrity and content validation rather than unit tests (no server-side runtime). Run these before every commit:
+
+```bash
+npm run build              # production build (must pass with zero errors)
+npm run serve              # verify production build locally
+npx lychee --no-progress --exclude-all-private --exclude 'localhost' 'docs/**/*.md'  # link check
+```
+
+CI enforces build pass, link validity, accessibility (WCAG 2.1 AA), security (npm audit high+), and content protocol compliance. See [tests/README.md](tests/README.md) for full test documentation.
+
 ## Setup
 
 ```bash
@@ -93,6 +107,8 @@ npm run build   # production build
 ```
 
 ## Contributor Guidance
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing. Key reference documents:
 
 - [Instructional Design Protocol](docs/quality/instructional-design-protocol.md)
 - [AQAL Label Crosswalk](docs/maps/aqal-label-crosswalk.md)
@@ -104,6 +120,14 @@ npm run build   # production build
 - [AQAL Competency Map](docs/maps/aqal-competency-map.md)
 - [ILP Practice Taxonomy](docs/maps/ilp-practice-taxonomy.md)
 - [Implementation Backlog](docs/implementation/backlog.md)
+
+## Suite Context
+
+This repo is part of the [uFawkes platform suite](https://ufawkes.dev) — a collection of tools and standards for developmental education and platform engineering.
+
+## DORA Capability
+
+This repository addresses **DORA AI Capability 3** (AI-accessible internal data): all content is structured Markdown/MDX with standardised frontmatter, making it machine-readable for AI-assisted authoring, auditing, and forking. Quality documentation amplifies all technical capabilities (2023 DORA State of DevOps).
 
 ## License
 

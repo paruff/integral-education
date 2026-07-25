@@ -1,0 +1,34 @@
+# CODEOWNERS — Integral Education Platform
+# Each line is a file pattern followed by one or more owners.
+# Order matters: last matching pattern takes precedence.
+
+# Default owner for everything
+* @paruff
+
+# Core configuration
+/docusaurus.config.js @paruff
+/sidebars.js @paruff
+/package.json @paruff
+
+# Content
+/docs/modules/ @paruff
+/docs/quickstarts/ @paruff
+/docs/maps/ @paruff
+/docs/safety/ @paruff
+
+# Source components
+/src/components/ @paruff
+/src/pages/ @paruff
+/src/css/ @paruff
+
+# CI/CD
+/.github/workflows/ @paruff
+
+# Agent skills
+/.agents/ @paruff
+
+# Fork and governance
+/FORK.md @paruff
+/CONTRIBUTING.md @paruff
+/AI_STANCE.md @paruff
+/ARCHITECTURE.md @paruff

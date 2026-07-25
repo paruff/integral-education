@@ -22,6 +22,12 @@ const config = {
         language: ['en'],
         indexDocs: true,
         indexPages: true,
+        ignoreFiles: [
+          /docs\/features\//,
+          /internal\//,
+          /COPILOT_COST_GUIDE/,
+          /MODEL_ROUTING_GUIDE/,
+        ],
       }),
     ],
     [

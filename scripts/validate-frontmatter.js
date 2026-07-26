@@ -106,15 +106,40 @@ function parseFrontmatter(filePath) {
   return { fm, content };
 }
 
+function cleanHeading(heading) {
+  return heading.replace(/[🌀🧠⚓🔍🆘🌿🗺️🛡️📊📚⚠️]/g, '').trim();
+}
+
 function extractSections(content) {
   const sections = [];
   const headingRegex = /^## (.+)$/gm;
   let match;
   while ((match = headingRegex.exec(content)) !== null) {
-    sections.push(match[1].replace(/[🌀🧠⚓🔍🆘🌿🗺️🛡️📊📚⚠️]/g, '').trim());
+    sections.push(cleanHeading(match[1]));
   }
   return sections;
 }
+
+// Returns the H2 section heading (cleaned) that contains the given string
+// index, or null if the index precedes the first H2.
+function sectionAtIndex(body, index) {
+  const headingRegex = /^## (.+)$/gm;
+  let match;
+  let current = null;
+  while ((match = headingRegex.exec(body)) !== null) {
+    if (match.index > index) break;
+    current = cleanHeading(match[1]);
+  }
+  return current;
+}
+
+// Sections where citing a prohibited term by name is standard academic
+// practice (source theory attribution), not learner-facing jargon leakage.
+const CITATION_SECTION_PATTERN = /framework|evidence|citation|research|gift|limitation/i;
+// The "Pre/Trans Checkpoint" heading is a deliberately-named recurring
+// device used to teach authors/facilitators to avoid the pre/trans fallacy —
+// naming it is the point, not a violation.
+const PRETRANS_CHECKPOINT_PATTERN = /pre[\/-]trans checkpoint/i;
 
 // Safety Note and Facilitator Note are commonly implemented as Docusaurus
 // admonitions (`:::note Safety Note` / `<Admonition title="Safety Note">`)
@@ -190,7 +215,7 @@ function validateFile(filePath) {
   // This is informational for now
 
   // 3. Safety tier consistency
-  const tags = fm.tags || [];
+  const tags = Array.isArray(fm.tags) ? fm.tags : [];
   const hasTier2Tag = tags.includes('tier-2');
   const hasSafetyTier = fm.safety_tier !== undefined;
 
@@ -206,13 +231,26 @@ function validateFile(filePath) {
   }
 
   // 5. Prohibited vocabulary (only check non-integral modules)
-  const isIntegralAudience = tags.includes('teal') || tags.includes('integral');
+  const isIntegralAudience = tags.some(t => /teal|integral/i.test(t));
   if (!isIntegralAudience) {
+    const body = content.replace(/^---[\s\S]*?---\n/, ''); // exclude frontmatter
     for (const word of PROHIBITED_VOCABULARY) {
-      const body = content.replace(/^---[\s\S]*?---\n/, ''); // exclude frontmatter
+      const wordLower = word.toLowerCase();
       // Use word boundary for more precise matching
       const regex = new RegExp(`\\b${word}\\b`, 'gi');
-      if (regex.test(body)) {
+      let match;
+      let flagged = false;
+      while ((match = regex.exec(body)) !== null) {
+        const section = sectionAtIndex(body, match.index);
+        const sectionLower = (section || '').toLowerCase();
+        if (sectionLower === 'aqal mapping' && wordLower === 'aqal') continue;
+        if (section && PRETRANS_CHECKPOINT_PATTERN.test(section) &&
+            (wordLower === 'pre/trans' || wordLower === 'pre-trans')) continue;
+        if (section && CITATION_SECTION_PATTERN.test(section)) continue;
+        flagged = true;
+        break;
+      }
+      if (flagged) {
         warnings.push(`Prohibited vocabulary "${word}" found in learner-facing module body`);
       }
     }

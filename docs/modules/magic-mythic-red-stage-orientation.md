@@ -53,7 +53,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 | **States** (Experience) | Mythic-emergent — the world is populated by heroes, enemies, and magical forces the self can now act upon rather than merely participate in; embodied arousal — intensity, urgency, aliveness |
 | **Style** (Types) | Individual-first; felt power before negotiated fairness; meaning through action, victory, and direct consequence |
 
-**Growing Up path:** This module addresses the Red/Magic-Mythic centre of gravity on the Growing Up path. It orients learners to this developmental location with honesty and dignity — whether they are recognizing it in themselves, in children or teenagers they parent, in teams they lead, or in cultural patterns they navigate.
+**Growing Up path:** This module addresses the Red/Magic-Mythic stage of development on the Growing Up path. It orients learners to this developmental location with honesty and dignity — whether they are recognizing it in themselves, in children or teenagers they parent, in teams they lead, or in cultural patterns they navigate.
 
 ---
 
@@ -243,22 +243,22 @@ Use these prompts for journaling or dialogue after the practice. These prompts a
 
 **Presenting this content in group settings:**
 
-Red is present, to some degree, in every adult — it is the developmental root of assertiveness, courage, and personal agency, and most adults carry unintegrated Red material even when their centre of gravity is much higher. This module carries more risk than most stage-orientation content: its "gifts" (power, self-assertion, courage) sit close to language that, handled carelessly, can be heard as endorsing domination, aggression, or disregard for others. Precision in framing is not optional here.
+Red is present, to some degree, in every adult — it is the developmental root of assertiveness, courage, and personal agency, and most adults carry unintegrated Red material even when they are operating from a much later stage most of the time. This module carries more risk than most stage-orientation content: its "gifts" (power, self-assertion, courage) sit close to language that, handled carelessly, can be heard as endorsing domination, aggression, or disregard for others. Precision in framing is not optional here.
 
 **Framing recommendations:**
 
 - Open with the gifts of Red before naming limitations. Participants who recognize strong Red patterns in themselves will be more able to hear honest developmental analysis if they first feel seen and respected, not managed.
-- Read the Pre/Trans Note aloud or paraphrase it explicitly before discussing limitations. Groups that skip this distinction are the most likely to walk away with the (incorrect) impression that assertiveness or self-interest are themselves signs of immaturity.
+- Read the note distinguishing undeveloped Red from mature adult expression (in the Limitations section) aloud or paraphrase it explicitly before discussing limitations. Groups that skip this distinction are the most likely to walk away with the (incorrect) impression that assertiveness or self-interest are themselves signs of immaturity.
 - Do not frame Red as a problem to be solved, a stage to escape, or a deficiency to overcome. Frame developmental growth as *adding* the capacity to hold others' perspectives and to pause before acting — not as subtracting vitality, courage, or self-respect.
-- Watch for two distinct failure modes in the room: (a) participants who respond with shame or self-condemnation ("I'm just aggressive, I'm toxic") — reassure them the gifts are real and worth keeping; and (b) participants who respond by romanticizing domination ("this proves only the strong survive," "this is just how the world really works") — gently redirect to the Limitations section and the Pre/Trans distinction without contempt or lecturing.
+- Watch for two distinct failure modes in the room: (a) participants who respond with shame or self-condemnation ("I'm just aggressive, I'm toxic") — reassure them the gifts are real and worth keeping; and (b) participants who respond by romanticizing domination ("this proves only the strong survive," "this is just how the world really works") — gently redirect to the Limitations section and its distinction between undeveloped and mature expression without contempt or lecturing.
 - Never use this content to excuse, minimize, or normalize actual abusive, coercive, or domination-based behavior toward a specific person. This is developmental education about a stage of meaning-making, not a justification for how any individual treats another.
 
 **Group facilitation structure:**
 
-1. Present the four-framework overview (Spiral Dynamics, Gebser, Kohlberg, somatic/impulse research) without ranking. Spend equal time on each.
+1. Present the four framework lenses introduced in the Learn section above without ranking. Spend equal time on each.
 2. Invite participants to share an example of a Red gift from their own experience *before* any discussion of limitations.
 3. Only after gifts are named in the group should you introduce limitations — and invite participants to name limitations they *themselves* notice in their own Red patterns, rather than describing limitations in others.
-4. Read or paraphrase the Pre/Trans Note explicitly, and check the room for understanding before moving on.
+4. Read or paraphrase that distinction explicitly, and check the room for understanding before moving on.
 5. Close with the Red-Stage Recognition practice as a homework activity. This ensures the session ends with affirmation rather than deficit framing.
 
 </Admonition>
@@ -274,10 +274,10 @@ Use this rubric after completing the practice and reflection. It is intended for
 | **Framework familiarity** — You can describe the Magic-Mythic/Red stage using at least two of the four frameworks presented | Cannot describe more than one | Can describe two or three with prompting | Can describe all four in your own words without notes |
 | **Gifts recognition** — You can name at least three Red gifts that are genuinely active in your own life | Cannot name any that feel personally true | Can name one or two with effort | Can name three or more with specific examples |
 | **Limitations recognition** — You can name at least two Red limitations you have personally experienced, without shame | Cannot identify any or feels only shame | Can name one with significant discomfort | Can name two or more with equanimity and curiosity |
-| **Pre/Trans distinction** — You can explain the difference between undeveloped Red self-assertion and mature, accountable self-interest or boundary-setting | Cannot articulate a difference | Can gesture at a difference but blur the markers | Can clearly state the distinguishing markers with an example from your own life |
+| **Mature vs. undeveloped distinction** — You can explain the difference between undeveloped Red self-assertion and mature, accountable self-interest or boundary-setting | Cannot articulate a difference | Can gesture at a difference but blur the markers | Can clearly state the distinguishing markers with an example from your own life |
 | **Non-judgmental stance** — You can think about others (or parts of yourself) expressing Red patterns without contempt or superiority | Find it difficult not to judge | Mostly non-judgmental but slipping occurs | Consistently curious and respectful toward Red expression |
 
-**Passing threshold:** Three or more criteria at *Developing* or *Stable*, including the Pre/Trans distinction criterion at least at *Developing*.
+**Passing threshold:** Three or more criteria at *Developing* or *Stable*, including the Mature vs. undeveloped distinction criterion at least at *Developing*.
 
 ---
 
@@ -302,14 +302,14 @@ Carry the orientation from this module into your daily context:
 ## 🃏 Anki Cards
 
 <RetrievalPrompt moduleName="Magic-Mythic/Red Stage Orientation" cards={[
-  {q: "What is the Magic-Mythic/Red stage called in Spiral Dynamics?", a: "Red — characterized by emergent selfhood, power as the primary relational currency, egocentric exchange, heroic mythology, and impulsive present-orientation."},
+  {q: "What are the defining characteristics of the Red value system?", a: "Red — characterized by emergent selfhood, power as the primary relational currency, egocentric exchange, heroic mythology, and impulsive present-orientation."},
   {q: "Where does Gebser place the phenomenology of Red?", a: "At the threshold between the magic and mythic structures of consciousness — an emergent subject-object split, polar/dramatic imagination (hero vs. monster), and image-and-gesture-based knowing, distinct from the fuller mythic structure that follows at Amber."},
   {q: "What is Kohlberg's Stage 2, and how does it map to Red?", a: "The instrumental-relativist orientation — 'right' is what satisfies one's own needs on a fair-exchange basis. It is the moral-line correlate of Red: it has reciprocity and self-interest, but not yet perspective-taking as a moral good in itself."},
   {q: "What does affective neuroscience add to understanding Red?", a: "Panksepp's SEEKING and RAGE systems, and research on urgency (Cyders & Smith) and adolescent reward-sensitivity (Steinberg), ground Red's vitality, courage, and impulsivity in measurable somatic and neurobiological processes."},
   {q: "Name five gifts of the Magic-Mythic/Red stage.", a: "Courage, honest self-assertion, vitality, the capacity to say no, and personal power as distinct from tribal identity."},
   {q: "Name three developmental limitations of the Magic-Mythic/Red stage.", a: "Impulsivity, domination-oriented relating, and a limited capacity to hold others' perspectives as equally real (distinct from Pluralistic-stage perspective-taking)."},
-  {q: "What is the Pre/Trans distinction for Magic-Mythic/Red?", a: "Undeveloped Red domination, impulsivity, and reflexive refusal are not the same as a mature adult's healthy assertiveness, appropriate self-interest, and considered boundary-setting. The key markers: mature expression holds the other's standing as real, is chosen rather than reflexive, and can be explained and adjusted."},
-  {q: "Why is precision in the Pre/Trans distinction especially important for Red content?", a: "Because Red's gifts (power, self-assertion, courage) are the capacities most easily misread as endorsing domination or antisocial behavior if the distinction between undeveloped Red and mature healthy assertiveness is not made exactly."},
+  {q: "Why shouldn't undeveloped Red domination be confused with mature, accountable self-interest?", a: "Undeveloped Red domination, impulsivity, and reflexive refusal are not the same as a mature adult's healthy assertiveness, appropriate self-interest, and considered boundary-setting. The key markers: mature expression holds the other's standing as real, is chosen rather than reflexive, and can be explained and adjusted."},
+  {q: "Why is precision in distinguishing undeveloped Red from mature healthy assertiveness especially important for Red content?", a: "Because Red's gifts (power, self-assertion, courage) are the capacities most easily misread as endorsing domination or antisocial behavior if the distinction between undeveloped Red and mature healthy assertiveness is not made exactly."},
 ]} />
 
 ---

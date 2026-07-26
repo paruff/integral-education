@@ -11,7 +11,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/emotional-appraisal-meaning-making',
   },
   'amber-mythic-orientation': {
-    nextTitle: 'Rational/Orange Stage Orientation',
+    nextTitle: 'Reason, Achievement, and Effectiveness',
     nextLink: '/docs/modules/rational-orange-orientation',
   },
   'authentic-dialogue-collaborative-meaning': {
@@ -55,7 +55,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/cognitive-line-metasystematic-vision-logic',
   },
   'cognitive-line-practice-architecture': {
-    nextTitle: 'Rational/Orange Stage Orientation',
+    nextTitle: 'Reason, Achievement, and Effectiveness',
     nextLink: '/docs/modules/rational-orange-orientation',
   },
   'community-belonging-collective-intelligence': {
@@ -99,7 +99,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/emotional-intelligence-somatic-line',
   },
   'evidence-evaluation': {
-    nextTitle: 'Late Orange Disillusionment',
+    nextTitle: 'Navigating the Crack',
     nextLink: '/docs/modules/late-orange-disillusionment',
   },
   'flow-peak-experience': {
@@ -111,11 +111,11 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/subtle-state-access',
   },
   'healthy-hierarchy-actualization-gradient': {
-    nextTitle: 'Integral Ethics Beyond Relativism',
+    nextTitle: 'Ethics Beyond Relativism',
     nextLink: '/docs/modules/integral-ethics-beyond-relativism',
   },
   'integral-ethics-beyond-relativism': {
-    nextTitle: 'Integral Shadow and the Teal Trap',
+    nextTitle: 'The Trap of Having Arrived',
     nextLink: '/docs/modules/integral-shadow-teal-trap',
   },
   'integral-life-practice-embodying-2nd-tier': {
@@ -131,7 +131,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/vision-logic-metasystematic-thinking',
   },
   'late-green-emergence-signals': {
-    nextTitle: 'Integral / Teal Orientation',
+    nextTitle: 'Systems, Complexity, and Integration',
     nextLink: '/docs/modules/integral-teal-orientation',
   },
   'late-orange-disillusionment': {
@@ -159,7 +159,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/moral-line-conventional-reasoning',
   },
   'moral-line-postconventional-reasoning': {
-    nextTitle: 'Moral Line — Imagination & Integral Ethics',
+    nextTitle: 'Moral Line — Imagination and Ethics',
     nextLink: '/docs/modules/moral-line-imagination-integral-ethics',
   },
   'moral-line-shadow-moral-injury': {
@@ -167,7 +167,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/spiritual-line-overview-orientation',
   },
   'multiperspectival-leadership-action': {
-    nextTitle: 'Integral Life Practice: Embodying 2nd Tier',
+    nextTitle: 'Whole-Person Practice',
     nextLink: '/docs/modules/integral-life-practice-embodying-2nd-tier',
   },
   'nondual-awareness-orientation': {
@@ -175,11 +175,11 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/flow-peak-experience',
   },
   'perspective-taking-capacity': {
-    nextTitle: 'Authority & Autonomy Transition',
+    nextTitle: 'Authority and Autonomy',
     nextLink: '/docs/modules/authority-autonomy-transition',
   },
   'pluralistic-green-orientation': {
-    nextTitle: 'Late-Green Emergence Signals',
+    nextTitle: 'Signs You\'re Ready for More Complexity',
     nextLink: '/docs/modules/late-green-emergence-signals',
   },
   'rational-orange-orientation': {
@@ -187,7 +187,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/cognitive-dissonance-bridge',
   },
   'relativism-limits-of-pluralism': {
-    nextTitle: 'Pluralistic/Green Stage Orientation',
+    nextTitle: 'Pluralism, Empathy, and Belonging',
     nextLink: '/docs/modules/pluralistic-green-orientation',
   },
   'self-line-conventional-conformist-achiever': {
@@ -239,7 +239,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/shadow-persona-mask',
   },
   'shadow-spiritual-bypassing': {
-    nextTitle: 'Integral Shadow and the Teal Trap',
+    nextTitle: 'The Trap of Having Arrived',
     nextLink: '/docs/modules/integral-shadow-teal-trap',
   },
   'shadow-work-foundation': {
@@ -247,7 +247,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/shadow-321-process',
   },
   'spiritual-line-conjunctive-universalizing': {
-    nextTitle: 'Spiritual Line — Post-Metaphysical Integral Religion',
+    nextTitle: 'Post-Metaphysical Spirituality',
     nextLink: '/docs/modules/spiritual-line-post-metaphysical-integral-religion',
   },
   'spiritual-line-mythic-to-rational': {
@@ -255,7 +255,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/spiritual-line-conjunctive-universalizing',
   },
   'spiritual-line-overview-orientation': {
-    nextTitle: 'Spiritual Line — Mythic to Rational',
+    nextTitle: 'Spiritual Line — Literal to Reasoned Faith',
     nextLink: '/docs/modules/spiritual-line-mythic-to-rational',
   },
   'spiritual-line-post-metaphysical-integral-religion': {
@@ -271,7 +271,7 @@ const MODULE_NEXT_STEPS = {
     nextLink: '/docs/modules/causal-witness-state',
   },
   'systems-thinking-101': {
-    nextTitle: 'Amber/Mythic Stage Orientation',
+    nextTitle: 'Values, Belonging, and Structure',
     nextLink: '/docs/modules/amber-mythic-orientation',
   },
   'vision-logic-metasystematic-thinking': {

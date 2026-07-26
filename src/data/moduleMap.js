@@ -3,7 +3,7 @@
 
 const QUICKSTARTS = {
   'amber-to-rational': { title: 'Clear Thinking Path', to: '/docs/quickstarts/amber-to-rational' },
-  'personal-to-integral': { title: 'Personal to Integral', to: '/docs/quickstarts/personal-to-integral' },
+  'personal-to-integral': { title: 'Personal Growth Path', to: '/docs/quickstarts/personal-to-integral' },
   'rational-to-pluralistic': { title: 'Multiple Perspectives Path', to: '/docs/quickstarts/rational-to-pluralistic' },
   'pluralistic-to-integral': { title: 'Integrating Perspectives Path', to: '/docs/quickstarts/pluralistic-to-integral' },
   'self-line-development': { title: 'Understanding Yourself', to: '/docs/quickstarts/self-line-development' },
@@ -15,8 +15,8 @@ export default {
   // Stage Development — Amber→Rational
   'amber-mythic-orientation': { quickstart: 'amber-to-rational', next: { title: 'Cognitive Dissonance Bridge', to: '/docs/modules/cognitive-dissonance-bridge' } },
   'cognitive-dissonance-bridge': { quickstart: 'amber-to-rational', next: { title: 'Perspective-Taking Capacity', to: '/docs/modules/perspective-taking-capacity' } },
-  'perspective-taking-capacity': { quickstart: 'amber-to-rational', next: { title: 'Authority & Autonomy Transition', to: '/docs/modules/authority-autonomy-transition' } },
-  'authority-autonomy-transition': { quickstart: 'amber-to-rational', next: { title: 'Rational/Orange Stage Orientation', to: '/docs/modules/rational-orange-orientation' } },
+  'perspective-taking-capacity': { quickstart: 'amber-to-rational', next: { title: 'Authority and Autonomy', to: '/docs/modules/authority-autonomy-transition' } },
+  'authority-autonomy-transition': { quickstart: 'amber-to-rational', next: { title: 'Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orange-orientation' } },
   'rational-orange-orientation': { quickstart: 'amber-to-rational', next: { title: 'Cognitive Dissonance Bridge', to: '/docs/modules/cognitive-dissonance-bridge' } },
 
   // Stage Development — Rational→Pluralistic
@@ -27,17 +27,17 @@ export default {
   'ecological-systems-consciousness': { quickstart: 'rational-to-pluralistic', next: { title: 'Authentic Dialogue & Collaborative Meaning', to: '/docs/modules/authentic-dialogue-collaborative-meaning' } },
   'authentic-dialogue-collaborative-meaning': { quickstart: 'rational-to-pluralistic', next: { title: 'Community, Belonging & Collective Intelligence', to: '/docs/modules/community-belonging-collective-intelligence' } },
   'community-belonging-collective-intelligence': { quickstart: 'rational-to-pluralistic', next: { title: 'Relativism & Limits of Pluralism', to: '/docs/modules/relativism-limits-of-pluralism' } },
-  'relativism-limits-of-pluralism': { quickstart: 'rational-to-pluralistic', next: { title: 'Pluralistic/Green Orientation', to: '/docs/modules/pluralistic-green-orientation' } },
-  'pluralistic-green-orientation': { quickstart: 'rational-to-pluralistic', next: { title: 'Late-Green Emergence Signals', to: '/docs/modules/late-green-emergence-signals' } },
+  'relativism-limits-of-pluralism': { quickstart: 'rational-to-pluralistic', next: { title: 'Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-green-orientation' } },
+  'pluralistic-green-orientation': { quickstart: 'rational-to-pluralistic', next: { title: 'Signs You\'re Ready for More Complexity', to: '/docs/modules/late-green-emergence-signals' } },
 
   // Stage Development — Pluralistic→Integral
-  'late-green-emergence-signals': { quickstart: 'pluralistic-to-integral', next: { title: 'Integral/Teal Orientation', to: '/docs/modules/integral-teal-orientation' } },
+  'late-green-emergence-signals': { quickstart: 'pluralistic-to-integral', next: { title: 'Systems, Complexity, and Integration', to: '/docs/modules/integral-teal-orientation' } },
   'integral-teal-orientation': { quickstart: 'pluralistic-to-integral', next: { title: 'Vision-Logic & Metasystematic Thinking', to: '/docs/modules/vision-logic-metasystematic-thinking' } },
   'vision-logic-metasystematic-thinking': { quickstart: 'pluralistic-to-integral', next: { title: 'Healthy Hierarchy & Actualization Gradient', to: '/docs/modules/healthy-hierarchy-actualization-gradient' } },
-  'healthy-hierarchy-actualization-gradient': { quickstart: 'pluralistic-to-integral', next: { title: 'Integral Ethics Beyond Relativism', to: '/docs/modules/integral-ethics-beyond-relativism' } },
-  'integral-ethics-beyond-relativism': { quickstart: 'pluralistic-to-integral', next: { title: 'Integral Shadow & Teal Trap', to: '/docs/modules/integral-shadow-teal-trap' } },
+  'healthy-hierarchy-actualization-gradient': { quickstart: 'pluralistic-to-integral', next: { title: 'Ethics Beyond Relativism', to: '/docs/modules/integral-ethics-beyond-relativism' } },
+  'integral-ethics-beyond-relativism': { quickstart: 'pluralistic-to-integral', next: { title: 'The Trap of Having Arrived', to: '/docs/modules/integral-shadow-teal-trap' } },
   'integral-shadow-teal-trap': { quickstart: 'pluralistic-to-integral', next: { title: 'Multiperspectival Leadership', to: '/docs/modules/multiperspectival-leadership-action' } },
-  'multiperspectival-leadership-action': { quickstart: 'pluralistic-to-integral', next: { title: 'ILP — Embodying 2nd Tier', to: '/docs/modules/integral-life-practice-embodying-2nd-tier' } },
+  'multiperspectival-leadership-action': { quickstart: 'pluralistic-to-integral', next: { title: 'Whole-Person Practice', to: '/docs/modules/integral-life-practice-embodying-2nd-tier' } },
   'integral-life-practice-embodying-2nd-tier': { quickstart: 'pluralistic-to-integral', next: null },
 
   // Self Line
@@ -66,16 +66,16 @@ export default {
   'cognitive-line-practice-architecture': { quickstart: 'personal-to-integral', next: null },
 
   // Spiritual Line
-  'spiritual-line-overview-orientation': { quickstart: 'personal-to-integral', next: { title: 'Mythic to Rational', to: '/docs/modules/spiritual-line-mythic-to-rational' } },
+  'spiritual-line-overview-orientation': { quickstart: 'personal-to-integral', next: { title: 'From Literal Belief to Reasoned Faith', to: '/docs/modules/spiritual-line-mythic-to-rational' } },
   'spiritual-line-mythic-to-rational': { quickstart: 'personal-to-integral', next: { title: 'Conjunctive & Universalizing', to: '/docs/modules/spiritual-line-conjunctive-universalizing' } },
-  'spiritual-line-conjunctive-universalizing': { quickstart: 'personal-to-integral', next: { title: 'Post-Metaphysical Integral', to: '/docs/modules/spiritual-line-post-metaphysical-integral-religion' } },
+  'spiritual-line-conjunctive-universalizing': { quickstart: 'personal-to-integral', next: { title: 'Post-Metaphysical Spirituality', to: '/docs/modules/spiritual-line-post-metaphysical-integral-religion' } },
   'spiritual-line-post-metaphysical-integral-religion': { quickstart: 'personal-to-integral', next: { title: 'Spiritual Shadow Integration', to: '/docs/modules/spiritual-line-shadow-integration' } },
   'spiritual-line-shadow-integration': { quickstart: 'personal-to-integral', next: null },
 
   // Moral Line
   'moral-line-overview-dual-track': { quickstart: 'personal-to-integral', next: { title: 'Conventional Reasoning', to: '/docs/modules/moral-line-conventional-reasoning' } },
   'moral-line-conventional-reasoning': { quickstart: 'personal-to-integral', next: { title: 'Postconventional Reasoning', to: '/docs/modules/moral-line-postconventional-reasoning' } },
-  'moral-line-postconventional-reasoning': { quickstart: 'personal-to-integral', next: { title: 'Imagination & Integral Ethics', to: '/docs/modules/moral-line-imagination-integral-ethics' } },
+  'moral-line-postconventional-reasoning': { quickstart: 'personal-to-integral', next: { title: 'Imagination and Ethics', to: '/docs/modules/moral-line-imagination-integral-ethics' } },
   'moral-line-imagination-integral-ethics': { quickstart: 'personal-to-integral', next: { title: 'Shadow & Moral Injury', to: '/docs/modules/moral-line-shadow-moral-injury' } },
   'moral-line-shadow-moral-injury': { quickstart: 'personal-to-integral', next: null },
 

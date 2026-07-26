@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T07:04:59.562Z",
+  "generated": "2026-07-26T07:07:26.549Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,26 +49,26 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 25,
+      "full": 33,
       "total": 77,
-      "percentage": 32
+      "percentage": 43
     },
     "journeyStepGaps": {
-      "learn": 19,
+      "learn": 13,
       "integrate": 11,
-      "retrieval schedule": 34,
-      "frameworks": 48,
-      "gifts": 52,
-      "facilitator note": 51,
+      "retrieval schedule": 27,
+      "frameworks": 41,
+      "gifts": 44,
+      "facilitator note": 44,
       "orient": 18,
       "encounter": 24,
       "stabilize": 17,
-      "limitations": 40,
-      "reflect": 12,
+      "limitations": 39,
+      "reflect": 5,
       "assess": 3,
       "aqal mapping": 4,
       "evidence": 15,
-      "practice": 3
+      "practice": 2
     },
     "orphanModules": 0,
     "avgSectionsPerModule": 17
@@ -2740,20 +2740,13 @@
         "dream-work",
         "AQAL"
       ],
-      "goldStandardSections": 17,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "reflect",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-collective-cultural",
@@ -2791,19 +2784,13 @@
         "collective-trauma",
         "systems-thinking"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 25,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
       "hasFacilitatorNote": true,
-      "missingJourneySteps": [
-        "learn",
-        "reflect",
-        "retrieval schedule",
-        "frameworks",
-        "gifts"
-      ]
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-immunity-to-change",
@@ -2838,18 +2825,13 @@
         "behavioral-experiment",
         "integral"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-in-relationships",
@@ -2886,20 +2868,13 @@
         "Kernberg",
         "relational-repair"
       ],
-      "goldStandardSections": 21,
+      "goldStandardSections": 26,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "reflect",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-integration-101",
@@ -2978,20 +2953,13 @@
         "Goffman",
         "Cook-Greuter"
       ],
-      "goldStandardSections": 18,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "reflect",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-positive-projection",
@@ -3027,20 +2995,13 @@
         "Johnson",
         "Jung"
       ],
-      "goldStandardSections": 19,
+      "goldStandardSections": 24,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "reflect",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-spiritual-bypassing",
@@ -3075,20 +3036,13 @@
         "integral",
         "trauma-sensitive"
       ],
-      "goldStandardSections": 22,
+      "goldStandardSections": 27,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "reflect",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-work-foundation",
@@ -3121,19 +3075,13 @@
         "assagioli",
         "integral"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 19,
       "hasAQAL": true,
-      "hasPractice": false,
+      "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "practice",
-        "reflect",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "somatic-line-overview",

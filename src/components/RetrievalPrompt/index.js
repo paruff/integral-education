@@ -1,13 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import RetrievalCard from '@site/src/components/RetrievalCard';
+import Link from '@docusaurus/Link';
 import useProgress from '@site/src/hooks/useProgress';
 import { slugifyModuleName } from '@site/src/utils/retrieval';
 import styles from './styles.module.css';
 
-function formatDate(daysFromNow) {
-  const d = new Date();
-  d.setDate(d.getDate() + daysFromNow);
-  return d.toLocaleDateString('en-US', {
+function formatDueDate(isoDateString) {
+  return new Date(isoDateString).toLocaleDateString('en-US', {
     weekday: 'short',
     month: 'short',
     day: 'numeric',
@@ -15,12 +14,10 @@ function formatDate(daysFromNow) {
 }
 
 export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
-  const { recordRetrievalReview } = useProgress();
+  const { data, recordRetrievalReview } = useProgress();
   const resolvedModuleId = moduleId || slugifyModuleName(moduleName);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scores, setScores] = useState([]);
-  const [copied24h, setCopied24h] = useState(false);
-  const [copied7d, setCopied7d] = useState(false);
 
   const totalCards = cards.length;
   const completed = scores.length === totalCards && totalCards > 0;
@@ -53,35 +50,12 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [completed]);
 
-  async function copyText(text, setter) {
-    try {
-      await navigator.clipboard.writeText(text);
-      setter(true);
-      setTimeout(() => setter(false), 2000);
-    } catch {
-      // Fallback for older browsers
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      document.body.removeChild(ta);
-      setter(true);
-      setTimeout(() => setter(false), 2000);
-    }
-  }
-
   if (!cards.length) {
     return null;
   }
 
   if (completed) {
-    const date24h = formatDate(1);
-    const date7d = formatDate(7);
-    const text24h = `Review ${moduleName} — ${date24h}`;
-    const text7d = `Review ${moduleName} — ${date7d}`;
+    const scheduleEntry = data.retrievalSchedule?.[resolvedModuleId];
 
     return (
       <div className={styles.wrapper}>
@@ -100,30 +74,18 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
         </div>
 
         <div className={styles.scheduleSection}>
-          <h3>Schedule your follow-up</h3>
-          <p>Copy these reminders to your calendar or to-do list. Spaced review is the most effective way to keep what you learned.</p>
-
-          <div className={styles.copyBlock}>
-            <code className={styles.copyText}>{text24h}</code>
-            <button
-              className={styles.copyBtn}
-              onClick={() => copyText(text24h, setCopied24h)}
-              aria-label={`Copy 24-hour reminder: ${text24h}`}
-            >
-              {copied24h ? 'Copied ✓' : 'Copy'}
-            </button>
-          </div>
-
-          <div className={styles.copyBlock}>
-            <code className={styles.copyText}>{text7d}</code>
-            <button
-              className={styles.copyBtn}
-              onClick={() => copyText(text7d, setCopied7d)}
-              aria-label={`Copy 7-day reminder: ${text7d}`}
-            >
-              {copied7d ? 'Copied ✓' : 'Copy'}
-            </button>
-          </div>
+          <h3>Next Review</h3>
+          {scheduleEntry?.complete ? (
+            <p>You've completed the full review sequence for this module — nice work, this one's consolidated.</p>
+          ) : scheduleEntry?.nextDueDate ? (
+            <p>
+              Come back on <strong>{formatDueDate(scheduleEntry.nextDueDate)}</strong> for your next
+              review. You'll find it listed under "Due for review" on your{' '}
+              <Link to="/my-progress">progress page</Link>.
+            </p>
+          ) : (
+            <p>Your next review date will be scheduled automatically.</p>
+          )}
         </div>
       </div>
     );

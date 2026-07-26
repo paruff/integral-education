@@ -61,54 +61,9 @@
   margin-bottom: 1rem;
 }
 
-.copyBlock {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 0.75rem;
-}
-
-.copyText {
-  flex: 1;
-  padding: 0.5rem 0.75rem;
-  background: var(--ifm-color-emphasis-100);
-  border-radius: 0.4rem;
-  font-size: 0.9rem;
-  border: 1px solid var(--ifm-color-emphasis-200);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.copyBtn {
-  padding: 0.4rem 0.85rem;
-  background: transparent;
-  color: var(--ifm-color-primary);
-  border: 1px solid var(--ifm-color-primary);
-  border-radius: 0.4rem;
-  font-size: 0.85rem;
-  cursor: pointer;
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-
-.copyBtn:hover {
-  background: var(--ifm-color-primary-lightest);
-}
-
-.copyBtn:focus-visible {
-  outline: 2px solid var(--ifm-color-primary-darker);
-  outline-offset: 2px;
-}
-
 @media screen and (max-width: 480px) {
   .scoreSummary {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .copyBlock {
-    flex-direction: column;
-    align-items: stretch;
   }
 }

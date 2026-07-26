@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T07:11:45.400Z",
+  "generated": "2026-07-26T07:18:46.117Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,25 +49,25 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 36,
+      "full": 39,
       "total": 77,
-      "percentage": 47
+      "percentage": 51
     },
     "journeyStepGaps": {
       "learn": 13,
       "integrate": 11,
       "retrieval schedule": 27,
-      "frameworks": 38,
-      "gifts": 41,
-      "facilitator note": 41,
+      "frameworks": 35,
+      "gifts": 38,
+      "facilitator note": 38,
       "orient": 18,
       "encounter": 23,
-      "stabilize": 17,
-      "limitations": 37,
+      "stabilize": 16,
+      "limitations": 34,
       "reflect": 5,
       "assess": 3,
       "aqal mapping": 4,
-      "evidence": 14,
+      "evidence": 12,
       "practice": 2
     },
     "orphanModules": 0,
@@ -2534,19 +2534,13 @@
         "shadow-work",
         "AQAL"
       ],
-      "goldStandardSections": 19,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "stabilize",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "self-line-overview-psychograph",
@@ -2631,19 +2625,13 @@
         "Fool-archetype",
         "AQAL"
       ],
-      "goldStandardSections": 18,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "self-line-postconventional-individualist-strategist",
@@ -2679,19 +2667,13 @@
         "self-authorship",
         "AQAL"
       ],
-      "goldStandardSections": 17,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-321-process",

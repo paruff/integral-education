@@ -29,6 +29,7 @@ import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import Tooltip from '@site/src/components/Tooltip';
+import Admonition from '@theme/Admonition';
 
 
 <ModuleMeta />
@@ -61,6 +62,32 @@ Core skills:
 - **Differentiation** — <Tooltip term="Differentiation" definition="Distinguishing similar emotional states — anxiety vs dread vs apprehension — rather than collapsing them into a general 'bad' feeling. A core skill of emotional granularity.">distinguishing similar emotions (anxiety vs. dread vs. apprehension)</Tooltip>
 - **Labeling** — finding the right word for the felt sense
 - **Context** — connecting emotion to its trigger and meaning
+
+---
+
+## Two Framework Lenses: Barrett's Theory of Constructed Emotion and Brackett's RULER Framework
+
+This module draws on two complementary frameworks. Barrett's Theory of Constructed Emotion explains *why* granularity is possible at all — emotions are constructed in the moment from interoceptive signal and conceptual knowledge, which means a richer emotional vocabulary genuinely changes what you are able to perceive, not just what you are able to describe. Brackett's RULER Framework supplies the *practical skill sequence* — Recognizing, Understanding, Labeling, Expressing, and Regulating emotion — that turns the theoretical claim into a teachable, repeatable practice.
+
+Used together, these lenses explain both the mechanism (why naming can change felt intensity) and the method (how to build the naming skill deliberately). Neither framework alone is sufficient: Barrett's theory without a practice sequence stays abstract, and RULER's skill sequence without the underlying construction theory can be mistaken for a mere vocabulary exercise rather than a genuine perceptual shift.
+
+## The Limitations of Emotional Granularity Training
+
+Emotional granularity training has real boundaries worth stating honestly.
+
+First, as noted above, the causal evidence is incomplete. The correlational link between high granularity and better stress outcomes is well-replicated; whether *training* granularity directly produces those outcomes, versus granularity being a marker of some other underlying capacity, is still being tested in intervention research. Treat the benefits as plausible and worth pursuing, not as an established causal guarantee.
+
+Second, more granularity is not always better in the moment. In genuinely dangerous or fast-moving situations, a quick, coarse read ("threat," "safe") can be more adaptive than a slow search for the precisely correct word. Granularity is a skill for reflective processing, not a replacement for fast threat appraisal.
+
+Third, as the Stabilize section below discusses, an expanded vocabulary can be mistaken for the underlying capacity itself — knowing many emotion words is not the same as being able to access and use that vocabulary under real emotional load.
+
+## 🧭 Orient
+
+You are about to practice resisting your first, most obvious emotion label in favor of a more precise one. Before starting, notice that the first label ("stressed," "bad," "fine") is not wrong — it is simply coarse. The practice below is not about rejecting your first read; it is about treating it as a starting point rather than a finished answer.
+
+## 🌿 Encounter
+
+Bring to mind, right now, whatever low-grade feeling is present for you at this moment — not a major event, just the background hum. Try labeling it with the first word that comes to mind. Now sit with it for ten more seconds and ask whether that word is exactly right, or just close. Most people find the first label is approximately correct but not precisely correct — that gap between "approximately" and "precisely" is exactly what the practice below trains.
 
 ---
 
@@ -115,6 +142,14 @@ This rubric aligns with the AQAL Competency Map Emotional Line L1–L2 indicator
 
 ---
 
+## The Gifts of Emotional Granularity
+
+Precise emotional naming offers something concrete: it can genuinely dampen the intensity of a difficult feeling simply by giving the prefrontal cortex a specific object to work with rather than an undifferentiated wash of "bad." That is not a metaphor — it is one of the more consistent findings in the affective labeling literature.
+
+It also improves the quality of your communication with others. "I'm stressed" tells a partner or colleague very little about what you need. "I'm resentful that I took on too much, not angry at you" gives them something they can actually respond to.
+
+Finally, granularity compounds with practice: each time you push past the first label to find a more precise one, you are building the exact perceptual and conceptual scaffolding that makes the next distinction easier to find. The vocabulary becomes a genuine perceptual tool, not just a naming exercise.
+
 ## 🔄 Integrate
 
 Apply this in real life:
@@ -138,11 +173,22 @@ This module involves recalling emotionally significant events to practice differ
 
 ---
 
+<Admonition type="tip" title="Facilitator Note">
+
+- Have participants keep their first, coarse emotion label visible alongside their final, more precise one — the contrast between the two is the teaching point, not the final label alone.
+- The emotion wheel or vocabulary list works better as a genuine reference tool than a checklist to complete — encourage lingering on 2-3 close candidates rather than picking the first plausible word.
+- Watch for over-intellectualizing: a participant who can recite many emotion words but freezes when asked to label a live, current feeling has not yet built the underlying skill.
+- Remind participants explicitly of the Cultural and Linguistic Relativism point in Stabilize if the group includes people from non-WEIRD linguistic backgrounds — the standard emotion wheel is a scaffold, not a universal map.
+
+</Admonition>
+
 <RetrievalPrompt moduleName="Emotional Granularity" cards={
   {q: "What is emotional granularity?", a: "The ability to make fine-grained distinctions between emotional states"},
   {q: "What are the benefits of high emotional granularity?", a: "Less intense emotions during stress, faster recovery, better decisions under pressure. Note: causal evidence is still developing — correlational findings are strong, intervention studies ongoing"},
   {q: "Who is the researcher associated with emotional granularity?", a: "Lisa Feldman Barrett"}
 } />
+
+## ⏱️ Retrieval Schedule
 
 To transition this cognitive taxonomy into long-term functional capacity, execute the following retrieval practice:
 - **24-Hour Interval:** Re-run the core differentiation exercise using a completely different recent emotional event.

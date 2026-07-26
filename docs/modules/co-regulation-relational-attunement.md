@@ -24,6 +24,7 @@ line: interpersonal
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import Admonition from '@theme/Admonition';
 
 <ModuleMeta />
 
@@ -122,6 +123,30 @@ Leaders who can sustain ventral vagal regulation under organisational pressure �
 **Interpersonal disruptions to co-regulation:**
 Co-regulation breaks down predictably when: (a) one party is chronically dysregulated and lacks self-regulation resources; (b) the relationship holds unresolved ruptures that have not been repaired; (c) there is a significant mismatch in nervous-system baseline between parties; or (d) structural conditions (time pressure, hierarchical power asymmetry, physical environment) prevent genuine presence. Recognising these conditions is the first step to addressing them.
 
+## Two Framework Lenses: Porges's Polyvagal Theory and Siegel's PACE Model
+
+This module draws on two complementary frameworks. Porges's polyvagal theory, via the social engagement system, explains the *physiological channel* through which co-regulation actually travels — voice, face, and proximity acting directly on another's autonomic state beneath the level of conscious cognition. Siegel and Hughes's PACE model describes the *interior orientation* a person needs to hold for that channel to transmit safety rather than noise — playfulness, acceptance, curiosity, and empathy as a quality of presence, not a technique.
+
+The two lenses are complementary rather than interchangeable: Porges explains why co-regulation works at all (the biology of the transmission), while PACE describes what the person offering it needs to be internally doing (the quality of what gets transmitted). Reading only Porges risks treating co-regulation as pure biological mechanism, stripped of the genuine relational orientation PACE names; reading only PACE risks treating attunement as a purely interior or attitudinal matter, missing that it is transmitted through concrete, observable physiological channels.
+
+## The Limitations of These Co-Regulation Frameworks
+
+Both frameworks, foundational as they are to this module, have genuine limits worth naming plainly.
+
+First, as the Evidence section below details, the specific neuroanatomical hierarchy within polyvagal theory — the claim that ventral vagal, sympathetic, and dorsal vagal circuits are phylogenetically layered in the way Porges originally proposed — has been contested by other researchers on anatomical grounds. The functional observation that voice, face, and proximity transmit autonomic safety is well supported; the specific evolutionary architecture underneath it is not settled science.
+
+Second, PACE describes a quality of orientation, not a checklist, which makes it genuinely difficult to teach and assess. A practitioner can learn to perform the outward behaviors — soft eye contact, an unhurried voice — without the underlying orientation being present, and, as the social engagement system predicts, that gap is often detectable at the autonomic level even when it cannot be consciously named.
+
+Third, neither framework fully addresses the cultural and gender variation covered in the Stabilize section below — both describe patterns derived substantially from Western clinical and research contexts, and the specific behavioral expression of safe attunement varies by culture in ways that a universalized reading of either framework can miss.
+
+## 🧭 Orient
+
+You are about to practice offering — and receiving — a form of presence that asks you to set aside your usual instinct to help, fix, or reframe. Before beginning, notice that withholding advice is not withholding care; in this practice, your own regulated nervous system state is the primary thing you have to offer, not your words.
+
+## 🌿 Encounter
+
+Bring to mind, right now, a person in whose presence your own nervous system reliably settles — even slightly. Notice what, specifically, they do: the pace of their voice, the quality of their eye contact, how quickly or slowly they respond. That noticing is the raw material the exercises below ask you to work with deliberately, rather than simply enjoy by accident.
+
 ---
 
 ## 🧘 Practice
@@ -200,6 +225,41 @@ Early developmental co-regulation (the infant-caregiver dyad) and mature adult c
 
 ---
 
+## The Gifts of Co-Regulation
+
+Co-regulation offers something individual self-regulation alone cannot: a second nervous system, willingly and skillfully brought into the field, that can shift a state no amount of solo effort was moving. There is real relief in discovering that regulation does not have to be a solitary achievement.
+
+It also reframes what you have to offer the people around you. A regulated presence — steady voice, unhurried pace, genuine curiosity — is a concrete resource you can bring into a room, not a vague aspiration. Leaders, partners, and friends who cultivate this capacity change the emotional climate of every relationship they enter, often without saying anything at all.
+
+Finally, co-regulation deepens the relationships it moves through. Each cycle of genuine attunement, rupture, and repair builds exactly the kind of relational trust that PACE describes and that secure attachment depends on — the gift compounds rather than depletes with use.
+
+## 🔄 Integrate
+
+- Before a conversation you expect to be emotionally charged, check your own regulation state first — you cannot offer what you do not have.
+- Practice one PACE element deliberately this week (start with Curiosity) in a low-stakes relationship before attempting it in a high-stakes one.
+- Notice, without judgment, one relationship where you tend toward mutual dysregulation rather than co-regulation, and name one concrete condition (pace, privacy, power dynamic) that might shift it.
+
+---
+
+## 🔍 Reflect
+
+- In which of your current relationships does co-regulation happen most naturally? What conditions make that possible?
+- Can you recall a specific moment when someone's regulated presence shifted your own state — what did they actually do?
+- Where do you notice the pull to fix or reframe instead of simply staying present? What is that impulse protecting you from?
+- Has the distinction between co-regulation and emotional merger changed how you think about a relationship in your life?
+
+---
+
+## 📊 Assess
+
+**Emerging:** Can describe co-regulation, the social engagement system, and PACE conceptually, but has not yet noticed these dynamics operating in real time in their own relationships.
+
+**Proficient:** Recognizes, in the moment, when their own state is shifting another's (or vice versa), can distinguish genuine co-regulation from emotional contagion, and can deliberately offer regulated presence without requiring the other person to change first.
+
+This module is the primary bridge from individual regulation capacity (see [Emotion Regulation Foundations](./emotion-regulation-foundations)) to the interpersonal line — self-regulation is the prerequisite that makes genuine co-regulation, rather than mutual dysregulation, possible.
+
+---
+
 ## 📚 Evidence and Citations
 
 | Framework / Claim | Evidence Tier | Notes & Caveats |
@@ -213,11 +273,20 @@ Early developmental co-regulation (the infant-caregiver dyad) and mature adult c
 
 ## 🧠 Knowledge Retention & Retrieval
 
-### Retrieval Schedule
+## ⏱️ Retrieval Schedule
 
 - **24-Hour Interval:** Review the five Learn sub-sections at the level of key terms only (co-regulation, social engagement system, PACE, development arc, practice contexts). For each sub-section, write one sentence in your own words. Do not consult the text until after writing.
 - **72-Hour Interval:** Complete Exercise (b) — Co-regulation Mapping — in full, if you have not already done so. Pay particular attention to Step 3: the pattern analysis. Where do you see the relational conditions that Porges and Siegel identify — prosodic safety, PACE, repair history — operating or absent?
 - **7-Day Interval:** Identify one moment in the past week where co-regulation occurred — either you offering or receiving it. Write a brief account: What were the observable signals (voice, face, proximity, pacing)? What shifted? Which relational conditions were present? How does this instance map against the theoretical framework?
+
+<Admonition type="tip" title="Facilitator Note">
+
+- Run the consent-check script (Step 1 of Exercise a) verbatim the first few times a group does this exercise — improvising it tends to erode the explicit, pressure-free "yes" the exercise depends on.
+- Watch listeners for performed PACE (checklist eye contact, scripted "mm"s) versus genuine curiosity — the social engagement system transmits the difference even when participants can't name it.
+- Do not run Exercise (a) in a group where a significant power or evaluative asymmetry exists between potential partners without additional facilitation safeguards — see the Safety Note's stop conditions.
+- Have a grounding resource ready to offer before the exercise begins, not only if distress appears — normalizing its availability in advance lowers the activation cost of using it.
+
+</Admonition>
 
 ### Anki Flashcards
 

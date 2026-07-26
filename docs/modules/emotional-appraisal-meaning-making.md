@@ -21,6 +21,7 @@ line: emotional
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import Admonition from '@theme/Admonition';
 
 
 <ModuleMeta />
@@ -110,6 +111,30 @@ Appraisal and emotion regulation are not sequential; they are recursive. Changin
 
 This module provides the appraisal-theory foundation for the reappraisal strategies introduced in [Emotion Regulation Foundations](./emotion-regulation-foundations) (EI-02).
 
+## Two Framework Lenses: Lazarus's Appraisal Theory and the ABC Model
+
+This module draws on two complementary frameworks. Lazarus's cognitive appraisal theory is the *explanatory* account — it establishes why emotion follows interpretation rather than event, and names the two-stage primary/secondary appraisal process that produces a given emotional response. The ABC model is the *applied* scaffold — it takes that explanatory claim and turns it into a concrete, three-step procedure (Activating Event, Belief, Consequence) that a person can actually run on their own experience.
+
+The two lenses are meant to be used together: Lazarus's theory tells you *why* the ABC model works, and the ABC model gives Lazarus's theory something to actually do. Using the ABC model without the appraisal-theory grounding risks treating it as a shallow mental trick; citing appraisal theory without the ABC model's applied structure leaves the insight abstract and hard to practice.
+
+## The Limitations of These Appraisal Frameworks
+
+Both frameworks, well-established as they are, have genuine limits.
+
+First, as the Stabilize section below discusses at length, appraisal work can be misused as intellectual bypass — the very clarity that makes the ABC model useful also makes it easy to weaponize against a legitimate emotion rather than to understand one.
+
+Second, the stage-relative appraisal synthesis presented in this module — mapping appraisal signatures onto Self Line altitudes — is, per the Evidence section, a theoretical integration rather than an independently replicated empirical finding. Treat the four stage signatures as a useful diagnostic lens, not a validated taxonomy.
+
+Third, both frameworks were developed and validated predominantly in Western, individualist research and clinical contexts. As the Stabilize section notes, appraisal norms and display rules vary substantially across cultures, and the examples used here should be adapted rather than applied as a universal template.
+
+## 🧭 Orient
+
+You are about to practice slowing down a process that normally happens instantly and unconsciously — the leap from event to feeling. Before beginning, notice that the goal is not to prove your original appraisal wrong; it is simply to make the appraisal visible so you can examine it deliberately.
+
+## 🌿 Encounter
+
+Bring to mind a small emotional reaction you had earlier today — even a minor one, like irritation at a delay or a flicker of worry about a message. Without analyzing it yet, just notice: what did you tell yourself about what that event meant? That noticing, before any formal analysis, is exactly what the ABC Chain Analysis below asks you to do more rigorously.
+
 ---
 
 ## 🧘 Practice
@@ -158,6 +183,41 @@ Appraisal norms and emotional display rules vary substantially across cultural c
 
 ---
 
+## The Gifts of Appraisal Awareness
+
+Seeing the appraisal chain clearly gives you something most people never have direct access to: the specific hinge point between an event and your emotional response to it. That hinge — the B in the ABC chain — is where genuine choice becomes possible, rather than experiencing your emotional life as something that simply happens to you.
+
+It also builds a durable kind of self-knowledge. Once you can reliably name the appraisal underneath a feeling, you start to notice your own recurring interpretive patterns — the same distortion showing up across different events — which is a far more useful unit of self-understanding than any single incident on its own.
+
+Finally, this awareness extends outward: recognizing that other people are running their own appraisal chains, shaped by their own goals and developmental altitude, makes it easier to hold a disagreement as a difference in appraisal rather than a difference in facts.
+
+## 🔄 Integrate
+
+- When you notice a strong emotional reaction this week, pause and name the appraisal (B) underneath it before responding.
+- Keep a running list of which appraisal distortions you personally default to — most people have one or two they reach for far more than others.
+- Practice generating the "perspective lens" alternative appraisal (a different developmental stage's reading) even in situations with no formal ABC analysis — just as a quick mental check.
+
+---
+
+## 🔍 Reflect
+
+- Which appraisal distortion (catastrophizing, personalizing, mind-reading, fortune-telling) do you notice most often in your own thinking?
+- Can you recall a moment when changing your appraisal (B) genuinely shifted your emotional response (C), not just your description of it?
+- Which stage-relative appraisal signature felt most familiar when you read the four examples? Did that surprise you?
+- Where is the line, for you, between using this framework to understand a feeling and using it to talk yourself out of one?
+
+---
+
+## 📊 Assess
+
+**Emerging:** Can explain the ABC model and Lazarus's primary/secondary appraisal distinction, but has not yet traced a full chain from a real personal event.
+
+**Proficient:** Can trace the complete ABC chain from a live emotional reaction in real time, generate genuinely distinct alternative appraisals, and distinguish appraisal revision from intellectualized emotional bypass.
+
+This module supplies the appraisal-theory grounding that the reappraisal strategies in [Emotion Regulation Foundations](./emotion-regulation-foundations) depend on — regulation without appraisal awareness risks becoming technique without understanding.
+
+---
+
 ## 📚 Evidence and Citations
 
 | Framework / Claim | Evidence Tier | Notes & Caveats |
@@ -171,11 +231,20 @@ Appraisal norms and emotional display rules vary substantially across cultural c
 
 ## 🧠 Knowledge Retention & Retrieval
 
-### Retrieval Schedule
+## ⏱️ Retrieval Schedule
 
 - **24-Hour Interval:** Select a new event from today and run steps (a) and (b) of the ABC Chain Analysis. Note whether naming the appraisal (B) explicitly shifts the felt emotion at all.
 - **72-Hour Interval:** Complete the full five-step ABC Chain Analysis with a different moderately charged event. Pay particular attention to step (e): identifying the stage altitude of your original appraisal.
 - **7-Day Interval:** Review your two ABC Chain Analysis entries. Identify one recurring appraisal pattern across both events. Can you trace its developmental stage signature? Has your reappraisal capacity changed over the week?
+
+<Admonition type="tip" title="Facilitator Note">
+
+- Have participants select a genuinely moderate-charge event (4-6/10) for their first ABC Chain Analysis — a common failure mode is choosing a high-intensity event that overwhelms the analytical capacity the exercise depends on.
+- Watch for the intellectualization trap named in Stabilize: a participant who concludes "my appraisal was irrational, so I shouldn't feel this" has used the framework to dismiss the emotion rather than understand it — redirect back to acknowledgement first.
+- The stage-relative appraisal table is a diagnostic lens, not a diagnosis of the participant — avoid letting the exercise become "which stage am I stuck at" self-judgment.
+- Remind participants of the Cultural Variation point in Stabilize if the group includes people from non-Western or collectivist backgrounds — the examples are drawn from a Western individualist frame and may need adaptation.
+
+</Admonition>
 
 ### Anki Flashcards
 
@@ -241,18 +310,21 @@ END
 
 ---
 
-## 🩺 Clinical Safety Sign-off (Human-required)
+:::note Safety Note
 
-> ### ⚠️ Pre-Practice Safety Note
-> Appraisal work is rated **Tier 1 (self-guided, low intensity)** when used with moderately charged events. It can surface activated emotional material, particularly when the appraisal chain connects to identity-level beliefs or unresolved interpersonal situations.
->
-> **Consent:** Proceed only if you are willing to observe emotional activation directly and pause when needed.
->
-> **Contraindications:** Postpone this module if you are in acute psychological distress or dealing with clinical-level dysregulation. This module is educational and is not a substitute for clinical cognitive restructuring support (CBT/REBT) when clinical-level distress is present.
->
-> **Stop rule:** If engaging with your appraisal chain produces intense shame, panic, or emotional flooding, halt immediately. Acknowledge the feeling first ("I feel intense sadness right now"), then use a physical grounding exercise: name 5 things you can see, 4 things you can feel, 3 things you can hear, 2 things you can smell, 1 thing you can taste.
->
-> **Escalation:** If distress remains high, seek support from a qualified clinician before continuing.
+Appraisal work is rated **Tier 1 (self-guided, low intensity)** when used with moderately charged events. It can surface activated emotional material, particularly when the appraisal chain connects to identity-level beliefs or unresolved interpersonal situations.
+
+**Consent:** Proceed only if you are willing to observe emotional activation directly and pause when needed.
+
+**Contraindications:** Postpone this module if you are in acute psychological distress or dealing with clinical-level dysregulation. This module is educational and is not a substitute for clinical cognitive restructuring support (CBT/REBT) when clinical-level distress is present.
+
+**Stop rule:** If engaging with your appraisal chain produces intense shame, panic, or emotional flooding, halt immediately. Acknowledge the feeling first ("I feel intense sadness right now"), then use a physical grounding exercise: name 5 things you can see, 4 things you can feel, 3 things you can hear, 2 things you can smell, 1 thing you can taste.
+
+**Escalation:** If distress remains high, seek support from a qualified clinician before continuing.
+
+:::
+
+## 🩺 Clinical Safety Sign-off (Human-required)
 
 - **Review Status:** PENDING
 - **Reviewer:** [HUMAN REQUIRED]

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T08:01:14.659Z",
+  "generated": "2026-07-26T08:11:34.484Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,29 +49,28 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 55,
+      "full": 59,
       "total": 77,
-      "percentage": 71
+      "percentage": 77
     },
     "journeyStepGaps": {
-      "orient": 15,
-      "encounter": 17,
+      "orient": 12,
+      "encounter": 13,
       "stabilize": 11,
-      "retrieval schedule": 18,
-      "frameworks": 21,
-      "gifts": 22,
-      "limitations": 22,
-      "facilitator note": 22,
-      "integrate": 6,
-      "reflect": 4,
-      "assess": 3,
+      "retrieval schedule": 15,
+      "frameworks": 17,
+      "gifts": 18,
+      "limitations": 18,
+      "facilitator note": 18,
       "learn": 5,
+      "integrate": 3,
+      "reflect": 1,
       "evidence": 7,
       "practice": 2,
       "aqal mapping": 3
     },
     "orphanModules": 0,
-    "avgSectionsPerModule": 18
+    "avgSectionsPerModule": 19
   },
   "nodes": [
     {
@@ -312,24 +311,13 @@
         "tier-2",
         "safety-critical"
       ],
-      "goldStandardSections": 8,
+      "goldStandardSections": 17,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "integrate",
-        "reflect",
-        "assess",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "cognitive-bias-101",
@@ -844,22 +832,13 @@
         "window-of-tolerance",
         "AQAL"
       ],
-      "goldStandardSections": 17,
+      "goldStandardSections": 24,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "encounter",
-        "integrate",
-        "reflect",
-        "assess",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "emotional-appraisal-meaning-making",
@@ -888,24 +867,13 @@
         "abc-model",
         "cognitive-reappraisal"
       ],
-      "goldStandardSections": 8,
+      "goldStandardSections": 17,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "integrate",
-        "reflect",
-        "assess",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "emotional-granularity",
@@ -928,21 +896,13 @@
         "affect",
         "self-awareness"
       ],
-      "goldStandardSections": 10,
+      "goldStandardSections": 16,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "emotional-intelligence-somatic-line",

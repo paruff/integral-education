@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T07:40:29.270Z",
+  "generated": "2026-07-26T07:49:42.165Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,25 +49,25 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 47,
+      "full": 51,
       "total": 77,
-      "percentage": 61
+      "percentage": 66
     },
     "journeyStepGaps": {
       "orient": 18,
-      "encounter": 22,
+      "encounter": 21,
       "stabilize": 15,
-      "retrieval schedule": 23,
-      "frameworks": 28,
-      "gifts": 30,
-      "limitations": 29,
-      "facilitator note": 30,
-      "integrate": 8,
+      "retrieval schedule": 22,
+      "frameworks": 25,
+      "gifts": 26,
+      "limitations": 26,
+      "facilitator note": 26,
+      "integrate": 6,
       "reflect": 4,
       "assess": 3,
       "aqal mapping": 4,
-      "evidence": 10,
-      "learn": 8,
+      "evidence": 8,
+      "learn": 5,
       "practice": 2
     },
     "orphanModules": 0,
@@ -835,20 +835,13 @@
         "growing-up",
         "nature-immersion"
       ],
-      "goldStandardSections": 13,
+      "goldStandardSections": 18,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "integrate",
-        "retrieval schedule",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "emotion-regulation-foundations",
@@ -1016,20 +1009,13 @@
         "self-regulation",
         "emotional-granularity"
       ],
-      "goldStandardSections": 18,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "integrate",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "emotional-interpersonal-integration",
@@ -1095,20 +1081,13 @@
         "developmental-lines",
         "AQAL"
       ],
-      "goldStandardSections": 27,
+      "goldStandardSections": 31,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "encounter",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "empathy-perspective-plurality",
@@ -1379,19 +1358,13 @@
         "growing-up",
         "pluralistic-to-integral"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "integral-life-practice-embodying-2nd-tier",

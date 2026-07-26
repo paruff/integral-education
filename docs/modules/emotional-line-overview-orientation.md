@@ -32,6 +32,7 @@ line: emotional
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import Admonition from '@theme/Admonition';
 
 
 <ModuleMeta />
@@ -73,7 +74,7 @@ Lisa Feldman Barrett's core claim is that emotions are not fixed hardwired packe
 
 Practical implication: emotional development is partly the development of richer emotion concepts. The more precise your emotional vocabulary and context discrimination, the more precise your emotional predictions and regulation options become.
 
-## 3) RULER as the Operational Model (L1–L4 Skill Spine)
+## 3) RULER as the Operational Framework (L1–L4 Skill Spine)
 
 This suite uses Brackett's **RULER** model as the operational scaffold:
 - **R — Recognize** emotions in self and others
@@ -99,6 +100,24 @@ Common psychograph pattern in adult learners:
 - **Somatic line is tightly coupled:** body-signal literacy strongly conditions emotional differentiation and regulation quality.
 
 These are tendencies, not fixed rules; use psychograph inquiry rather than identity claims.
+
+---
+
+## The Limitations of the Emotional Line Framework
+
+The RULER scaffold and the L1–L4 arc are useful operational tools, but they are not a complete account of emotional life. Reducing emotional development to five discrete skills and four levels risks flattening what is, in practice, a highly context-dependent and non-linear process — a person can show L4 co-regulation with a close partner and L1 undifferentiated affect naming under acute professional stress in the same week.
+
+Constructed emotion theory itself remains actively debated within affective science, and this module presents it as a useful working model rather than settled fact. Readers should hold the Barrett framework as one lens among competing accounts (including basic-emotion theories) rather than as the final word on how emotions arise.
+
+Finally, self-report tools like the Emotional Line Self-Portrait are vulnerable to the same blind spots they are meant to reveal: a person with low granular labeling capacity may not recognize the gap in their own responses. Pairing this module with feedback from someone who knows you well, or with a qualified practitioner, corrects for what self-assessment alone cannot see.
+
+---
+
+## 🌿 Encounter
+
+Before working through the concepts below, bring to mind one specific moment from the past week when you felt emotionally activated — not a dramatic event, an ordinary one: a meeting that ran long, a message that landed wrong, a small disappointment. Notice, without yet trying to name or analyze it, what you actually experienced: a body sensation, an urge, a thought that arrived automatically.
+
+Hold that moment loosely as you read. The concepts that follow — constructed emotion, RULER, the L1–L4 arc — are most useful when they are immediately tested against something real rather than absorbed as abstract theory. You will return to this same moment, or one like it, in the Practice section below.
 
 ---
 
@@ -171,6 +190,16 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
+## The Gifts of Emotional Line Literacy
+
+Naming the Emotional line as a distinct developmental thread — separate from mood, temperament, and personality — gives learners a way to track real change over time rather than treating emotional life as a fixed trait. This alone reframes emotional difficulty as a skill gap rather than a character flaw.
+
+The RULER scaffold gives a shared, teachable vocabulary that makes emotional development legible across a cohort or organization, not just within one person's private experience. This shared language is what makes co-regulation and facilitation (L4) possible in the first place — you cannot facilitate a group's emotional climate using a vocabulary only you understand.
+
+The psychograph lens — locating the Emotional line against Self, Cognitive, and Somatic lines — gives learners a diagnostic tool for a specific and common trap: mistaking fluency in one line (conceptual sophistication, spiritual state access, social skill) for development in another. This cross-line awareness is itself a durable asset well beyond the Emotional line specifically.
+
+---
+
 ## 🔄 Integrate
 
 - Pair with [Self Line Overview & Psychograph](./self-line-overview-psychograph) to examine how self-structure frames emotional work.
@@ -216,6 +245,17 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
+<Admonition type="tip" title="Facilitator Note">
+
+- This is the entry module for the Emotional Line suite — allow extra time for the RULER scaffold to land before moving to EI-02, since later modules assume fluency with it
+- The Profile A/B/C asynchrony patterns are diagnostic prompts, not labels; discourage participants from treating a profile match as a fixed identity
+- The Emotional Line Self-Portrait works well as a private written exercise; sharing aloud in a group setting should remain strictly opt-in
+- Watch for participants who can explain the Pre/Trans confusions fluently but have not actually applied them to their own recent behavior — conceptual fluency is the exact trap this module names
+
+</Admonition>
+
+---
+
 <RetrievalPrompt moduleName="Emotional Line Overview & Orientation" cards={
   {q: "In AQAL, what does the Emotional line primarily track?", a: "The development of affective complexity: differentiating, regulating, communicating, and integrating emotional experience with increasing precision."},
   {q: "How is the Emotional line different from mood?", a: "Mood is a diffuse background affective climate; the Emotional line is a developmental capacity trajectory."},
@@ -229,6 +269,7 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
   {q: "What is the difference between suppression and regulation?", a: "Suppression narrows awareness and often increases load; regulation modulates emotion while preserving awareness and adaptive function."}
 } />
 
+## 📚 Evidence and Citations
 
 Evidence quality is rated as Tier A (strong convergent evidence), Tier B (moderate convergent evidence or strong applied/theoretical synthesis), Tier C (provisional or largely heuristic).
 

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T08:29:02.171Z",
+  "generated": "2026-07-26T08:37:12.365Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,24 +49,24 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 67,
+      "full": 71,
       "total": 77,
-      "percentage": 87
+      "percentage": 92
     },
     "journeyStepGaps": {
-      "orient": 6,
-      "encounter": 7,
-      "stabilize": 6,
-      "retrieval schedule": 7,
-      "frameworks": 10,
-      "gifts": 10,
-      "limitations": 10,
-      "facilitator note": 10,
+      "orient": 3,
+      "encounter": 3,
+      "stabilize": 2,
+      "retrieval schedule": 3,
+      "frameworks": 6,
+      "gifts": 6,
+      "limitations": 6,
+      "facilitator note": 6,
       "learn": 3,
       "reflect": 1,
-      "evidence": 7,
+      "evidence": 5,
       "practice": 2,
-      "aqal mapping": 3
+      "aqal mapping": 1
     },
     "orphanModules": 0,
     "avgSectionsPerModule": 20
@@ -1640,24 +1640,13 @@
         "attention",
         "awareness"
       ],
-      "goldStandardSections": 7,
-      "hasAQAL": false,
+      "goldStandardSections": 16,
+      "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "aqal mapping",
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "mindfulness-deepening",
@@ -1984,21 +1973,13 @@
         "waking-up",
         "aqal"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "perspective-taking-capacity",
@@ -3137,22 +3118,13 @@
         "aqal",
         "waking-up"
       ],
-      "goldStandardSections": 14,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "systems-thinking-101",
@@ -3177,24 +3149,13 @@
         "complexity",
         "feedback"
       ],
-      "goldStandardSections": 6,
-      "hasAQAL": false,
+      "goldStandardSections": 15,
+      "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "aqal mapping",
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "vision-logic-metasystematic-thinking",

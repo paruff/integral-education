@@ -7,3 +7,9 @@ https://doi.org/10.1037/a0027600
 # Root-relative internal links (NAV-01) — lychee cannot resolve root-relative paths
 # in local files without a base URL. These work correctly in the Docusaurus build.
 /internal/
+
+# IASP crisis-centre directory — anti-bot 403 against lychee's crawler, resolves
+# fine in a browser. Safety-critical link (crisis resources), used across many
+# modules; ignoring the check rather than removing/replacing the citation.
+https://www.iasp.info/resources/Crisis_Centres
+https://www.iasp.info/resources/Crisis_Centres/

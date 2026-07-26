@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T07:07:26.549Z",
+  "generated": "2026-07-26T07:11:45.400Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,25 +49,25 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 33,
+      "full": 36,
       "total": 77,
-      "percentage": 43
+      "percentage": 47
     },
     "journeyStepGaps": {
       "learn": 13,
       "integrate": 11,
       "retrieval schedule": 27,
-      "frameworks": 41,
-      "gifts": 44,
-      "facilitator note": 44,
+      "frameworks": 38,
+      "gifts": 41,
+      "facilitator note": 41,
       "orient": 18,
-      "encounter": 24,
+      "encounter": 23,
       "stabilize": 17,
-      "limitations": 39,
+      "limitations": 37,
       "reflect": 5,
       "assess": 3,
       "aqal mapping": 4,
-      "evidence": 15,
+      "evidence": 14,
       "practice": 2
     },
     "orphanModules": 0,
@@ -1914,18 +1914,13 @@
         "care-track",
         "AQAL"
       ],
-      "goldStandardSections": 19,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "moral-line-imagination-integral-ethics",
@@ -2006,19 +2001,13 @@
         "care-track",
         "justice-track"
       ],
-      "goldStandardSections": 18,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "encounter",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "moral-line-postconventional-reasoning",
@@ -2052,18 +2041,13 @@
         "civil-disobedience",
         "AQAL"
       ],
-      "goldStandardSections": 21,
+      "goldStandardSections": 24,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "moral-line-shadow-moral-injury",

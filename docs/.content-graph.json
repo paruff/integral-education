@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-25T22:35:04.400Z",
+  "generated": "2026-07-26T07:04:59.562Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,29 +49,29 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 19,
+      "full": 25,
       "total": 77,
-      "percentage": 25
+      "percentage": 32
     },
     "journeyStepGaps": {
       "learn": 19,
       "integrate": 11,
-      "retrieval schedule": 35,
-      "frameworks": 54,
-      "gifts": 58,
-      "facilitator note": 57,
+      "retrieval schedule": 34,
+      "frameworks": 48,
+      "gifts": 52,
+      "facilitator note": 51,
       "orient": 18,
       "encounter": 24,
-      "stabilize": 18,
-      "limitations": 45,
+      "stabilize": 17,
+      "limitations": 40,
       "reflect": 12,
       "assess": 3,
       "aqal mapping": 4,
-      "evidence": 16,
-      "practice": 4
+      "evidence": 15,
+      "practice": 3
     },
     "orphanModules": 0,
-    "avgSectionsPerModule": 16
+    "avgSectionsPerModule": 17
   },
   "nodes": [
     {
@@ -3192,18 +3192,13 @@
         "integral-spirituality",
         "epistemic-humility"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "spiritual-line-mythic-to-rational",
@@ -3240,18 +3235,13 @@
         "grief",
         "growing-up"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "spiritual-line-overview-orientation",
@@ -3287,19 +3277,13 @@
         "developmental-lines",
         "post-metaphysical"
       ],
-      "goldStandardSections": 19,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "spiritual-line-post-metaphysical-integral-religion",
@@ -3338,18 +3322,13 @@
         "AQAL",
         "Fowler"
       ],
-      "goldStandardSections": 20,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "spiritual-line-practice-architecture",
@@ -3382,19 +3361,13 @@
         "spiritual-bypass",
         "integration"
       ],
-      "goldStandardSections": 13,
+      "goldStandardSections": 17,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "stabilize",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "spiritual-line-shadow-integration",
@@ -3437,19 +3410,13 @@
         "AQAL",
         "cross-suite"
       ],
-      "goldStandardSections": 18,
+      "goldStandardSections": 21,
       "hasAQAL": true,
-      "hasPractice": false,
+      "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "practice",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "subtle-state-access",

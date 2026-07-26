@@ -1,4 +1,4 @@
-# TOKEN COST: This file loads on every Copilot/Claude Code/Cursor request.
+# TOKEN COST: This file loads on every AI coding assistant request (Claude Code, GitHub Copilot, Cursor, OpenCode, etc.).
 # Every line is billed on every interaction. Keep it lean.
 # Full details live in .agents/skills/ — load on demand only.
 
@@ -35,6 +35,10 @@
 | Safety classification | .agents/skills/safety-classification/SKILL.md |
 | Developmental vocabulary | .agents/skills/developmental-vocabulary/SKILL.md |
 | Fork readiness audit | .agents/skills/fork-readiness-audit/SKILL.md |
+| QuickStart validation | .agents/skills/quickstart-validator/SKILL.md |
+| Accessibility checks | .agents/skills/accessibility-checker/SKILL.md |
+| AQAL tagging | .agents/skills/aqal-tagger/SKILL.md |
+| Pre-PR deploy validation | .agents/skills/deploy-validator/SKILL.md |
 
 ## Specialized Agent Roles
 | Role | Path |
@@ -49,10 +53,11 @@
 
 ## Context Before Writing Code
 - Architecture overview: ARCHITECTURE.md
+- Product-level discovery/spec/design/tasks: docs/product/
+- Feature-level discovery/spec/design/tasks: docs/features/<slug>/
 - AQAL map: docs/maps/
 - Quality gates: docs/quality/
 
 ## See Also
-- docs/COPILOT_COST_GUIDE.md
+- docs/AI_COST_GUIDE.md
 - docs/MODEL_ROUTING_GUIDE.md
-- .github/copilot-budget.md

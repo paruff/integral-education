@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T08:20:45.428Z",
+  "generated": "2026-07-26T08:29:02.171Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,19 +49,19 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 63,
+      "full": 67,
       "total": 77,
-      "percentage": 82
+      "percentage": 87
     },
     "journeyStepGaps": {
-      "orient": 10,
-      "encounter": 11,
-      "stabilize": 10,
-      "retrieval schedule": 11,
-      "frameworks": 13,
-      "gifts": 14,
-      "limitations": 14,
-      "facilitator note": 14,
+      "orient": 6,
+      "encounter": 7,
+      "stabilize": 6,
+      "retrieval schedule": 7,
+      "frameworks": 10,
+      "gifts": 10,
+      "limitations": 10,
+      "facilitator note": 10,
       "learn": 3,
       "reflect": 1,
       "evidence": 7,
@@ -69,7 +69,7 @@
       "aqal mapping": 3
     },
     "orphanModules": 0,
-    "avgSectionsPerModule": 19
+    "avgSectionsPerModule": 20
   },
   "nodes": [
     {
@@ -264,22 +264,13 @@
         "aqal",
         "waking-up"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "co-regulation-relational-attunement",
@@ -1130,21 +1121,13 @@
         "aqal",
         "waking-up"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "gross-state-awareness",
@@ -1170,22 +1153,13 @@
         "aqal",
         "embodiment"
       ],
-      "goldStandardSections": 13,
+      "goldStandardSections": 20,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "healthy-hierarchy-actualization-gradient",
@@ -1714,22 +1688,13 @@
         "aqal",
         "waking-up"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "moral-line-conventional-reasoning",

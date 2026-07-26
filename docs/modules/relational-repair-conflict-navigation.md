@@ -22,6 +22,7 @@ difficulty: Intermediate
 readingTime: 12
 practiceTime: 25
 line: interpersonal
+safety_tier: 2
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

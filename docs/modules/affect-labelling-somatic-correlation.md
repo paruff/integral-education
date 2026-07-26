@@ -22,6 +22,7 @@ tags:
   - interoception
   - affect-labelling
   - emotion-regulation
+safety_tier: 2
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

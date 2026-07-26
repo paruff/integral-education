@@ -20,6 +20,7 @@ difficulty: Advanced
 readingTime: 14
 practiceTime: 25
 line: interpersonal
+safety_tier: 2
 ---
 
 ## 🗺️ AQAL Mapping

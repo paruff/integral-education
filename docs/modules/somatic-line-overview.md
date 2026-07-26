@@ -8,6 +8,7 @@ tags:
   - somatic-line
   - tier-2
 line: somatic
+safety_tier: 2
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

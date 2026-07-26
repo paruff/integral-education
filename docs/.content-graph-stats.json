@@ -45,27 +45,27 @@
     "Unknown": 2
   },
   "goldStandardCompliance": {
-    "full": 39,
+    "full": 43,
     "total": 77,
-    "percentage": 51
+    "percentage": 56
   },
   "journeyStepGaps": {
-    "learn": 13,
+    "learn": 12,
     "integrate": 11,
-    "retrieval schedule": 27,
-    "frameworks": 35,
-    "gifts": 38,
-    "facilitator note": 38,
+    "retrieval schedule": 26,
+    "frameworks": 31,
+    "gifts": 34,
+    "facilitator note": 34,
     "orient": 18,
-    "encounter": 23,
-    "stabilize": 16,
-    "limitations": 34,
-    "reflect": 5,
+    "encounter": 22,
+    "stabilize": 15,
+    "limitations": 31,
+    "reflect": 4,
     "assess": 3,
     "aqal mapping": 4,
-    "evidence": 12,
+    "evidence": 11,
     "practice": 2
   },
   "orphanModules": 0,
-  "avgSectionsPerModule": 17
+  "avgSectionsPerModule": 18
 }

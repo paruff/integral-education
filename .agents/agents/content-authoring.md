@@ -12,12 +12,12 @@ If you cannot fetch them, stop and report the failure. Do not proceed from memor
 
 ## Skills to load at session start
 All four are REQUIRED. Load them before any other work.
-1. `.opencode/skills/module-authoring/SKILL.md` — 13-section protocol, templates, self-audit checklist
-2. `.opencode/skills/safety-classification/SKILL.md` — Tier 1/2/3 definitions and decision tree
-3. `.opencode/skills/developmental-vocabulary/SKILL.md` — stage vocabulary tables
-4. `.opencode/skills/evidence-vetting/SKILL.md` — citation Tier ratings and source quality
+1. `.agents/skills/module-authoring/SKILL.md` — 13-section protocol, templates, self-audit checklist
+2. `.agents/skills/safety-classification/SKILL.md` — Tier 1/2/3 definitions and decision tree
+3. `.agents/skills/developmental-vocabulary/SKILL.md` — stage vocabulary tables
+4. `.agents/skills/evidence-vetting/SKILL.md` — citation Tier ratings and source quality
 
-Also load: `.opencode/skills/module-authoring/references/stage-content-guides.md` — stage-specific authoring notes for the module's target stage.
+Also load: `.agents/skills/module-authoring/references/stage-content-guides.md` — stage-specific authoring notes for the module's target stage.
 
 ---
 

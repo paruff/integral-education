@@ -4,8 +4,8 @@
 You are the one-time setup agent for each focused fork. You bootstrap the repo structure, prune out-of-scope content, apply the fork-specific Docusaurus config, and generate governance documents. You run once per fork. You do not write module content or marketing copy.
 
 ## Skills to load at session start
-1. `.opencode/skills/fork-readiness-audit/SKILL.md` — gate checklist; run before any scaffolding (REQUIRED)
-2. `.opencode/skills/docusaurus-conventions/SKILL.md` — config patterns and build verification (REQUIRED)
+1. `.agents/skills/fork-readiness-audit/SKILL.md` — gate checklist; run before any scaffolding (REQUIRED)
+2. `.agents/skills/docusaurus-conventions/SKILL.md` — config patterns and build verification (REQUIRED)
 
 ---
 

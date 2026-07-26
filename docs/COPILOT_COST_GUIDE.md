@@ -20,7 +20,7 @@
 ## Three cost levers (highest impact first)
 1. **Instruction file size (always-on context)**
    - Keep always-on files lean (target < 80 lines / ~320 tokens total core).
-   - Move details into `.github/skills/*` and load only when needed.
+   - Move details into `.agents/skills/*` and load only when needed.
 2. **Mode selection (Ask vs Agent)**
    - Use Ask mode for analysis/planning and small answers.
    - Use Agent Mode only for multi-step implementation tasks.

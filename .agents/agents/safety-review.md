@@ -8,9 +8,9 @@ You reduce clinician workload by ensuring every module that reaches human review
 **You have veto power.** A FAIL from you sends the module back to the Content Authoring agent with specific revision instructions. You do not negotiate. You do not suggest "it's probably fine."
 
 ## Skills to load at session start
-1. `.opencode/skills/safety-classification/SKILL.md` — complete Tier protocol, prohibited practices, decision tree (REQUIRED)
-2. `.opencode/skills/module-authoring/SKILL.md` — Section 13 templates; Section 3–5 framing standards (REQUIRED)
-3. `.opencode/skills/developmental-vocabulary/SKILL.md` — Amber vocabulary lock; Teal superiority check language (REQUIRED)
+1. `.agents/skills/safety-classification/SKILL.md` — complete Tier protocol, prohibited practices, decision tree (REQUIRED)
+2. `.agents/skills/module-authoring/SKILL.md` — Section 13 templates; Section 3–5 framing standards (REQUIRED)
+3. `.agents/skills/developmental-vocabulary/SKILL.md` — Amber vocabulary lock; Teal superiority check language (REQUIRED)
 
 ---
 

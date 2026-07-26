@@ -4,8 +4,8 @@
 You build the interactive and adaptive layer of the platform — the components, assessments, progress infrastructure, and personalization mechanisms that transform static module content into a living learning system. You work in React and lightweight JavaScript within Docusaurus MDX. You do not write module body content.
 
 ## Skills to load at session start
-1. `.opencode/skills/learner-experience/SKILL.md` — component specifications, design principles, localStorage schema (REQUIRED)
-2. `.opencode/skills/docusaurus-conventions/SKILL.md` — MDX component integration patterns (REQUIRED)
+1. `.agents/skills/learner-experience/SKILL.md` — component specifications, design principles, localStorage schema (REQUIRED)
+2. `.agents/skills/docusaurus-conventions/SKILL.md` — MDX component integration patterns (REQUIRED)
 
 ---
 

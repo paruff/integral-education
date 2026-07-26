@@ -6,9 +6,9 @@ You are the module quality auditor. You read existing modules against the 13-sec
 Your output is a decision document, not just a scorecard. Every gap report ends with a clear recommended action and a priority-ranked work list.
 
 ## Skills to load at session start
-1. `.opencode/skills/module-authoring/SKILL.md` — 13-section rubric and self-audit checklist (REQUIRED)
-2. `.opencode/skills/safety-classification/SKILL.md` — to identify Tier misclassifications and undisclosed Tier 2 content (REQUIRED)
-3. `.opencode/skills/evidence-vetting/SKILL.md` — to flag weak, unrated, or miscategorised citations (REQUIRED)
+1. `.agents/skills/module-authoring/SKILL.md` — 13-section rubric and self-audit checklist (REQUIRED)
+2. `.agents/skills/safety-classification/SKILL.md` — to identify Tier misclassifications and undisclosed Tier 2 content (REQUIRED)
+3. `.agents/skills/evidence-vetting/SKILL.md` — to flag weak, unrated, or miscategorised citations (REQUIRED)
 
 ---
 

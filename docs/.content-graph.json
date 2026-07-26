@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T08:37:12.365Z",
+  "generated": "2026-07-26T13:16:19.266Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,24 +49,23 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 71,
+      "full": 75,
       "total": 77,
-      "percentage": 92
+      "percentage": 97
     },
     "journeyStepGaps": {
-      "orient": 3,
-      "encounter": 3,
-      "stabilize": 2,
-      "retrieval schedule": 3,
-      "frameworks": 6,
-      "gifts": 6,
-      "limitations": 6,
-      "facilitator note": 6,
-      "learn": 3,
+      "learn": 1,
       "reflect": 1,
-      "evidence": 5,
-      "practice": 2,
-      "aqal mapping": 1
+      "retrieval schedule": 2,
+      "evidence": 2,
+      "frameworks": 2,
+      "gifts": 2,
+      "limitations": 2,
+      "facilitator note": 2,
+      "aqal mapping": 1,
+      "orient": 1,
+      "encounter": 1,
+      "stabilize": 1
     },
     "orphanModules": 0,
     "avgSectionsPerModule": 20
@@ -219,22 +218,13 @@
         "loevinger",
         "chickering"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 22,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "causal-witness-state",
@@ -1483,21 +1473,13 @@
         "hierarchy",
         "relativism"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 21,
       "hasAQAL": true,
-      "hasPractice": false,
-      "hasEvidence": false,
+      "hasPractice": true,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "practice",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "late-orange-disillusionment",
@@ -1530,21 +1512,13 @@
         "meaning-making",
         "arrival-fallacy"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 21,
       "hasAQAL": true,
-      "hasPractice": false,
-      "hasEvidence": false,
+      "hasPractice": true,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "practice",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "magic-mythic-red-stage-orientation",
@@ -2335,21 +2309,13 @@
         "developmental-lines",
         "Wilber"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "self-line-postautonomous-construct-aware-unitive",

@@ -361,12 +361,12 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
 
   if (aCounts.o >= 5 && bCounts.p <= 3) {
     return {
-      title: 'Late Orange — Signs of Disillusionment',
-      description: 'Your responses suggest you may be experiencing the characteristic signals of late-Orange development: achievement no longer fully satisfies, individual optimization has diminishing returns, and questions about meaning are becoming harder to dismiss. This is not a failure — it is a developmental signal.',
-      rationale: 'These modules address the specific experience you are describing: the gap between external success and internal meaning, and the first steps toward a more pluralistic worldview.',
+      title: 'Signs of Disillusionment with Achievement',
+      description: 'Your responses suggest you may be experiencing signals that are common when an achievement-focused way of operating starts to feel insufficient: achievement no longer fully satisfies, individual optimization has diminishing returns, and questions about meaning are becoming harder to dismiss. This is not a failure — it is a developmental signal.',
+      rationale: 'These modules address the specific experience you are describing: the gap between external success and internal meaning, and the first steps toward a more expansive worldview.',
       modules: [
-        { title: 'Late Orange Disillusionment', to: '/docs/modules/late-orange-disillusionment' },
-        { title: 'Rational/Orange Stage Orientation', to: '/docs/modules/rational-orange-orientation' },
+        { title: 'When Effectiveness Isn\'t Enough: Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
+        { title: 'Orientation: Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orange-orientation' },
         { title: 'Cognitive Dissonance Bridge', to: '/docs/modules/cognitive-dissonance-bridge' },
       ],
     };
@@ -374,9 +374,9 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
 
   if (bCounts.t >= 5 && bCounts.p <= 5) {
     return {
-      title: 'In Transition — Emerging Pluralistic Capacities',
-      description: 'Your responses show genuine movement toward Pluralistic ways of making meaning. Several capacities are emerging but not yet consolidated — you are doing the developmental work. The discomfort of transition is the sensation of a worldview reorganizing.',
-      rationale: 'These modules strengthen the specific domains where your Pluralistic capacities are developing and provide structured practice for consolidation.',
+      title: 'In Transition — Emerging New Capacities',
+      description: 'Your responses show genuine movement toward more expansive ways of making meaning. Several capacities are emerging but not yet consolidated — you are doing the developmental work. The discomfort of transition is the sensation of a worldview reorganizing.',
+      rationale: 'These modules strengthen the specific domains where your new capacities are developing and provide structured practice for consolidation.',
       modules: [
         { title: 'Empathy & Perspective-Plurality', to: '/docs/modules/empathy-perspective-plurality' },
         { title: 'Contextual Ethics & Moral Complexity', to: '/docs/modules/contextual-ethics-moral-complexity' },
@@ -387,12 +387,12 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
 
   if (bCounts.p >= 6 && cShadow >= 2) {
     return {
-      title: 'Pluralistic Strengths — With Growing Shadow Awareness',
-      description: 'Your responses indicate well-developed Pluralistic capacities across multiple domains. Your Green shadow awareness responses suggest you are also developing the capacity to see the characteristic blind spots of this stage — which is itself a developmental achievement.',
-      rationale: 'These modules consolidate your Pluralistic strengths while deepening your awareness of Green shadow patterns — the combination that distinguishes mature Pluralistic from performative Green identity.',
+      title: 'Growing Strengths — With Increasing Self-Awareness',
+      description: 'Your responses indicate well-developed capacities for perspective-taking and inclusion across multiple domains. Your shadow-awareness responses suggest you are also developing the capacity to see the characteristic blind spots that can come with this way of operating — which is itself a developmental achievement.',
+      rationale: 'These modules consolidate your current strengths while deepening your awareness of the blind spots that can accompany them — the combination that distinguishes mature perspective-taking from performative inclusion.',
       modules: [
         { title: 'Relativism, Pluralism & The Limits of "All Perspectives Are Valid"', to: '/docs/modules/relativism-limits-of-pluralism' },
-        { title: 'Pluralistic/Green Stage Orientation', to: '/docs/modules/pluralistic-green-orientation' },
+        { title: 'Orientation: Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-green-orientation' },
         { title: 'Community, Belonging & Collective Intelligence', to: '/docs/modules/community-belonging-collective-intelligence' },
       ],
     };
@@ -400,11 +400,11 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
 
   if (bCounts.p >= 6) {
     return {
-      title: 'Consolidated Pluralistic Capacities',
-      description: 'Your responses suggest well-developed capacities for perspective-taking, contextual ethics, and inclusive dialogue. Pluralistic ways of making meaning appear to be operating reliably across domains.',
-      rationale: 'These modules support the natural developmental edge from consolidated Pluralistic capacities toward integral integration — holding multiple perspectives without losing the capacity for judgment and action.',
+      title: 'Consolidated Capacities for Holding Multiple Perspectives',
+      description: 'Your responses suggest well-developed capacities for perspective-taking, contextual ethics, and inclusive dialogue. These ways of making meaning appear to be operating reliably across domains.',
+      rationale: 'These modules support the natural developmental edge from consolidated perspective-taking capacities toward broader integration — holding multiple perspectives without losing the capacity for judgment and action.',
       modules: [
-        { title: 'Pluralistic/Green Stage Orientation', to: '/docs/modules/pluralistic-green-orientation' },
+        { title: 'Orientation: Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-green-orientation' },
         { title: 'Ecological & Systems Consciousness', to: '/docs/modules/ecological-systems-consciousness' },
         { title: 'Relativism, Pluralism & The Limits of "All Perspectives Are Valid"', to: '/docs/modules/relativism-limits-of-pluralism' },
       ],
@@ -414,11 +414,11 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
   return {
     title: 'In Development',
     description: 'Your responses reflect a unique pattern that does not fit neatly into a single profile — which is itself developmentally normal. Most people are uneven across domains, and your specific configuration is worth reflecting on directly rather than fitting into a category.',
-    rationale: 'These modules address foundational capacities across the Rational → Pluralistic transition and can be explored in any order based on your specific interests and growing edges.',
+    rationale: 'These modules address foundational capacities across this transition and can be explored in any order based on your specific interests and growing edges.',
     modules: [
       { title: 'Empathy & Perspective-Plurality', to: '/docs/modules/empathy-perspective-plurality' },
-      { title: 'Late Orange Disillusionment', to: '/docs/modules/late-orange-disillusionment' },
-      { title: 'Rational → Pluralistic QuickStart', to: '/docs/quickstarts/rational-to-pluralistic' },
+      { title: 'When Effectiveness Isn\'t Enough: Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
+      { title: 'Multiple Perspectives Path', to: '/docs/quickstarts/rational-to-pluralistic' },
     ],
   };
 }
@@ -466,7 +466,7 @@ export default function RationalPluralisticAssessment() {
     const domainScores = computeDomainScores(answersB);
     const recs = getModuleRecommendations(answersA, answersB, answersC);
     const lines = [];
-    lines.push('═══ Rational → Pluralistic Stage Progress Self-Assessment ═══');
+    lines.push('═══ Self-Assessment Results ═══');
     lines.push(`Date: ${new Date().toLocaleDateString()}`);
     lines.push('');
     lines.push(`── Profile: ${recs.title} ──`);
@@ -474,7 +474,7 @@ export default function RationalPluralisticAssessment() {
     lines.push('');
     lines.push('── Domain Breakdown ──');
     Object.entries(domainScores).forEach(([key, s]) => {
-      lines.push(`${s.label}: Orange=${s.o} Transitional=${s.t} Pluralistic=${s.p}`);
+      lines.push(`${s.label}: Familiar capacity=${s.o} In progress=${s.t} Newer capacity=${s.p}`);
     });
     lines.push('');
     lines.push('── Recommended Modules ──');
@@ -563,9 +563,9 @@ export default function RationalPluralisticAssessment() {
                 <div style={{ height: '100%', width: `${(s.o / total) * 100}%`, background: 'var(--ifm-color-emphasis-400)', borderRadius: '0 4px 4px 0' }} />
               </div>
               <div style={{ display: 'flex', gap: '1rem', fontSize: '0.8rem', color: 'var(--ifm-color-emphasis-500)', marginTop: '0.2rem' }}>
-                <span>Pluralistic: {s.p}</span>
-                <span>Transitional: {s.t}</span>
-                <span>Orange: {s.o}</span>
+                <span>Newer capacity: {s.p}</span>
+                <span>In progress: {s.t}</span>
+                <span>Familiar capacity: {s.o}</span>
               </div>
             </div>
           );
@@ -587,7 +587,7 @@ export default function RationalPluralisticAssessment() {
           <div style={{ marginTop: '1.5rem', padding: '1rem', background: 'var(--ifm-color-warning-lightest)', borderRadius: '0.75rem', border: '1px solid var(--ifm-color-warning-dark)' }}>
             <h4 style={{ marginTop: 0, color: 'var(--ifm-color-warning-dark)' }}>Consider Facilitated Support</h4>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.6, marginBottom: '0.5rem' }}>
-              Your responses suggest you may be experiencing significant late-Orange disillusionment — meaning-deficit, burnout signals, or a sense that the frameworks that used to work no longer do. This pattern can sometimes indicate developmental readiness, and it can sometimes indicate distress that would benefit from facilitated support rather than self-guided exploration alone.
+              Your responses suggest you may be experiencing significant disillusionment with approaches that used to work — meaning-deficit, burnout signals, or a sense that the frameworks that used to work no longer do. This pattern can sometimes indicate developmental readiness, and it can sometimes indicate distress that would benefit from facilitated support rather than self-guided exploration alone.
             </p>
             <p style={{ fontSize: '0.9rem', lineHeight: 1.6 }}>
               Consider working with a developmental coach, therapist familiar with adult development, or a facilitated group. The modules recommended below are valuable, but they work best alongside relational support when you are navigating the kind of disorientation your responses suggest.
@@ -657,7 +657,7 @@ export default function RationalPluralisticAssessment() {
 
       {/* ── Section B: Pluralistic Capacities ── */}
       <div style={sectionStyle}>
-        <h3 style={sectionTitleStyle}>Section B: Exploring Pluralistic Capacities</h3>
+        <h3 style={sectionTitleStyle}>Section B: Exploring Broader Capacities</h3>
         <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '1rem' }}>
           12 scenario-based questions across five domains: empathy, contextual ethics, ecological awareness, inclusive dialogue, and relativism recognition.
         </p>

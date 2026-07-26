@@ -206,11 +206,11 @@ const STAGE_DESCRIPTIONS = {
 const MODULE_RECOMMENDATIONS = {
   2: [
     { title: 'Spiritual Line Overview & Orientation', to: '/docs/modules/spiritual-line-overview-orientation' },
-    { title: 'Spiritual Line: Mythic to Rational', to: '/docs/modules/spiritual-line-mythic-to-rational' },
+    { title: 'Spiritual Line: Literal to Reasoned Faith', to: '/docs/modules/spiritual-line-mythic-to-rational' },
     { title: 'State Identification Assessment', to: '/docs/maps/state-identification-assessment' },
   ],
   3: [
-    { title: 'Spiritual Line: Mythic to Rational', to: '/docs/modules/spiritual-line-mythic-to-rational' },
+    { title: 'Spiritual Line: Literal to Reasoned Faith', to: '/docs/modules/spiritual-line-mythic-to-rational' },
     { title: 'Spiritual Line Overview & Orientation', to: '/docs/modules/spiritual-line-overview-orientation' },
     { title: 'Spiritual Line Shadow Integration', to: '/docs/modules/spiritual-line-shadow-integration' },
   ],
@@ -221,7 +221,7 @@ const MODULE_RECOMMENDATIONS = {
   ],
   5: [
     { title: 'Spiritual Line: Conjunctive to Universalizing', to: '/docs/modules/spiritual-line-conjunctive-universalizing' },
-    { title: 'Spiritual Line: Post-Metaphysical Integral Religion', to: '/docs/modules/spiritual-line-post-metaphysical-integral-religion' },
+    { title: 'Spiritual Line: Post-Metaphysical Spirituality', to: '/docs/modules/spiritual-line-post-metaphysical-integral-religion' },
     { title: 'State–Stage Integration Map', to: '/docs/maps/state-stage-integration-map' },
   ],
   6: [

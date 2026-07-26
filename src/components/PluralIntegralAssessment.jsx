@@ -18,7 +18,7 @@ const SECTION_A = [
     options: [
       { value: 'a', label: 'Defer to the group — collective wisdom is usually more trustworthy than my individual view.', tag: 'EARLY_GREEN' },
       { value: 'b', label: 'Voice your concern clearly, name the specific harm you foresee, and stay in relationship even if overruled.', tag: 'LATE_GREEN' },
-      { value: 'c', label: 'Frame the decision within a developmental hierarchy ("this group is operating from Orange") to make sense of the disagreement.', tag: 'INTELLECTUAL' },
+      { value: 'c', label: 'Frame the decision within a developmental hierarchy ("this group is operating from an earlier stage") to make sense of the disagreement.', tag: 'INTELLECTUAL' },
       { value: 'd', label: 'Hold the harm concern and the systemic context simultaneously — advocate clearly while remaining curious about what you might be missing.', tag: 'INTEGRAL' },
     ],
   },
@@ -150,7 +150,7 @@ const SECTION_B = [
   {
     id: 'b5',
     title: 'Developmental Stage Applied',
-    task: 'You are advising someone who is strongly Amber/Conformist in their meaning-making and seeking personal growth. What is most accurate about your approach?',
+    task: 'You are advising someone whose meaning-making is strongly grounded in belonging, loyalty, and shared rules, and who is seeking personal growth. What is most accurate about your approach?',
     options: [
       { value: '0', label: 'Present the developmental map and help them see where they are.', score: 0 },
       { value: '1', label: 'Meet them where they are — use their existing framework, then gently introduce stretches.', score: 1 },
@@ -217,8 +217,8 @@ const SECTION_C = [
   {
     id: 'c4',
     shadow: 'PREMATURE_IDENTITY',
-    title: 'Teal Identity',
-    text: 'How long have you considered yourself to be operating primarily from a 2nd-Tier or Teal centre of gravity?',
+    title: 'Sense of Arrival',
+    text: 'How long have you considered yourself to be operating primarily from this stage of development?',
     options: [
       { value: 'shadow', label: 'Since I encountered the model — the description fit immediately and felt like recognition.' },
       { value: 'mixed', label: 'A few years — long enough that I have had the model challenged by real situations.' },
@@ -273,7 +273,7 @@ const SECTION_C = [
     id: 'c9',
     shadow: 'PREMATURE_IDENTITY',
     title: 'Disconfirmation',
-    text: 'Someone you respect observes that, in a recent situation, you behaved in a clearly Green (pluralistic/reactive) rather than Teal way. Your honest first response is:',
+    text: 'Someone you respect observes that, in a recent situation, you behaved in a more reactive, group-consensus-driven way than the more integrated way you like to think you operate. Your honest first response is:',
     options: [
       { value: 'shadow', label: 'Mild defensiveness — the observation feels unfair or over-simplified.' },
       { value: 'mixed', label: 'Some defensiveness followed by genuine curiosity about what they saw.' },
@@ -446,8 +446,8 @@ const SHADOW_LABELS = {
   RANKING: 'Developmental Ranking',
   MAP_TERRITORY: 'Map–Territory Confusion',
   COGNITIVE_EMOTIONAL: 'Cognitive–Emotional Asynchrony',
-  PREMATURE_IDENTITY: 'Premature Teal Identity',
-  SPIRITUAL_BYPASS: 'Spiritual Bypass via Integral Framing',
+  PREMATURE_IDENTITY: 'Premature Sense of Having Arrived',
+  SPIRITUAL_BYPASS: 'Spiritual Bypass via Developmental Framing',
 };
 
 function getGrowingEdges(cScores, dScores) {
@@ -472,7 +472,7 @@ function shadowEdgeDetail(pattern) {
     RANKING: 'Awareness of hierarchy-of-worth assumptions embedded in developmental thinking. Practice: notice ranking impulses without suppression — bring them into inquiry.',
     MAP_TERRITORY: 'Distinguishing developmental maps from lived reality. Practice: for one week, notice every time a framework label closes rather than opens inquiry.',
     COGNITIVE_EMOTIONAL: 'Closing the gap between intellectual understanding of emotional/somatic intelligence and its embodied use. Practice: somatic check-in at the start of each conversation.',
-    PREMATURE_IDENTITY: 'Holding "Teal" as a working hypothesis rather than a settled identity. Practice: seek disconfirming feedback from trusted others monthly.',
+    PREMATURE_IDENTITY: 'Holding this identity as a working hypothesis rather than a settled fact. Practice: seek disconfirming feedback from trusted others monthly.',
     SPIRITUAL_BYPASS: 'Recognising when equanimity is avoiding rather than transcending. Practice: identify one situation in the past month where anger or confrontation was the more mature response.',
   };
   return details[pattern] || '';
@@ -492,20 +492,20 @@ function getModuleRecommendations(aScores, bScore, cScores, dScores) {
   const mods = [];
 
   if (aScores.INTELLECTUAL >= 3) {
-    mods.push({ title: 'Integral Shadow: Teal Trap', to: '/docs/modules/integral-shadow-teal-trap' });
+    mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-teal-trap' });
   }
   if (aScores.LATE_GREEN >= 4) {
-    mods.push({ title: 'Late-Green Emergence Signals', to: '/docs/modules/late-green-emergence-signals' });
+    mods.push({ title: 'Signs You\'re Ready for More Complexity', to: '/docs/modules/late-green-emergence-signals' });
   }
   if (aScores.INTEGRAL >= 3) {
-    mods.push({ title: 'Pluralistic → Integral QuickStart', to: '/docs/quickstarts/pluralistic-to-integral' });
+    mods.push({ title: 'Integrating Perspectives Path', to: '/docs/quickstarts/pluralistic-to-integral' });
   }
   if (bScore.pct < 50) {
     mods.push({ title: 'Vision-Logic & Metasystematic Thinking', to: '/docs/modules/vision-logic-metasystematic-thinking' });
   }
   const shadowPatterns = Object.entries(cScores.shadowCount).filter(([, c]) => c >= 1).map(([p]) => p);
   if (shadowPatterns.includes('RANKING')) {
-    mods.push({ title: 'Integral Shadow: Teal Trap', to: '/docs/modules/integral-shadow-teal-trap' });
+    mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-teal-trap' });
   }
   if (shadowPatterns.includes('COGNITIVE_EMOTIONAL')) {
     mods.push({ title: 'Emotional Intelligence & Somatic Line', to: '/docs/modules/emotional-intelligence-somatic-line' });
@@ -517,7 +517,7 @@ function getModuleRecommendations(aScores, bScore, cScores, dScores) {
     mods.push({ title: 'Relational Repair & Conflict Navigation', to: '/docs/modules/relational-repair-conflict-navigation' });
   }
   // Always include integral orientation
-  mods.push({ title: 'Integral/Teal Stage Orientation', to: '/docs/modules/integral-teal-orientation' });
+  mods.push({ title: 'Orientation: Systems, Complexity, and Integration', to: '/docs/modules/integral-teal-orientation' });
 
   // dedupe by to
   const seen = new Set();
@@ -579,11 +579,11 @@ export default function PluralIntegralAssessment() {
   function handleCopy() {
     if (!submitted) return;
     const lines = [
-      'Pluralistic → Integral Self-Assessment',
+      'Self-Assessment Results',
       `Date: ${new Date().toLocaleDateString()}`,
       '',
-      '── Section A: Late-Green Signals ──',
-      `Late-Green: ${aScores.LATE_GREEN} / ${aTotal}  |  Integral: ${aScores.INTEGRAL} / ${aTotal}  |  Intellectual identification: ${aScores.INTELLECTUAL} / ${aTotal}`,
+      '── Section A: Readiness Signals ──',
+      `Readiness signals: ${aScores.LATE_GREEN} / ${aTotal}  |  Broader integration: ${aScores.INTEGRAL} / ${aTotal}  |  Intellectual identification: ${aScores.INTELLECTUAL} / ${aTotal}`,
       '',
       '── Section B: Vision-Logic Thinking ──',
       `Metasystematic score: ${bScore.total} / ${bScore.max} (${bScore.pct}%)`,
@@ -622,14 +622,13 @@ export default function PluralIntegralAssessment() {
       {/* ── Ethical framing ── */}
       <div style={{ padding: '1.25rem 1.5rem', background: 'var(--ifm-color-warning-lightest, #fffbeb)', border: '2px solid var(--ifm-color-warning)', borderRadius: '0.75rem', marginBottom: '1.5rem' }}>
         <p style={{ margin: 0, fontSize: '1rem', fontWeight: 600 }}>
-          ⚠️ This assessment is designed for late-Green (Pluralistic) learners.
+          ⚠️ This assessment is designed for learners who are already well into this transition.
         </p>
         <p style={{ margin: '0.5rem 0 0', fontSize: '0.9rem', lineHeight: 1.6 }}>
           If you are earlier in your developmental journey, the{' '}
           <Link to="/docs/maps/amber-rational-progress-assessment">Amber → Rational</Link>{' '}
           or Rational → Pluralistic assessments will be more appropriate starting points. Completing this
-          assessment from a predominantly Orange or early-Green centre of gravity is likely to produce
-          misleading results.
+          assessment before reaching this stage of development is likely to produce misleading results.
         </p>
       </div>
 
@@ -646,7 +645,7 @@ export default function PluralIntegralAssessment() {
 
       {/* ── Facilitation callout ── */}
       <div style={{ padding: '1rem 1.25rem', background: 'var(--ifm-color-primary-lightest, #eff6ff)', border: '1px solid var(--ifm-color-primary-light)', borderRadius: '0.75rem', marginBottom: '2rem', fontSize: '0.9rem', lineHeight: 1.7 }}>
-        <strong>Consider Facilitated Support:</strong> For anyone seriously exploring 2nd-Tier
+        <strong>Consider Facilitated Support:</strong> For anyone seriously exploring this stage of
         development, working with a trained developmental coach is strongly recommended. Self-directed
         inquiry at this level has a high rate of shadow-reinforcing rather than shadow-illuminating
         outcomes. See the Facilitation Guide for Developmental Coaches (forthcoming, Issue #57) for
@@ -663,10 +662,10 @@ export default function PluralIntegralAssessment() {
 
           {/* ── Section A ── */}
           <h2 style={{ borderBottom: '2px solid var(--ifm-color-emphasis-200)', paddingBottom: '0.5rem' }}>
-            Section A — Late-Green Signals Recognition
+            Section A — Readiness Signals Recognition
           </h2>
           <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)', marginBottom: '1.25rem' }}>
-            These 8 scenarios explore whether you are genuinely experiencing late-Green emergence or
+            These 8 scenarios explore whether you are genuinely experiencing this readiness or
             primarily identifying with it intellectually. Answer based on what you actually notice
             yourself doing, not what you aspire to do.
           </p>
@@ -727,10 +726,10 @@ export default function PluralIntegralAssessment() {
 
           {/* ── Section C ── */}
           <h2 style={{ borderBottom: '2px solid var(--ifm-color-emphasis-200)', paddingBottom: '0.5rem', marginTop: '2rem' }}>
-            Section C — Integral Shadow Detection
+            Section C — Shadow Pattern Detection
           </h2>
           <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)', marginBottom: '1.25rem' }}>
-            These 10 questions specifically probe known Teal shadow patterns. Honest responses here are
+            These 10 questions specifically probe known shadow patterns at this stage. Honest responses here are
             more useful than aspirational ones. There are no "bad" answers — shadow awareness is itself
             a sign of development.
           </p>
@@ -812,13 +811,13 @@ export default function PluralIntegralAssessment() {
           </div>
 
           {/* ── Section A Results ── */}
-          <h2>Section A — Late-Green Signals Profile</h2>
+          <h2>Section A — Readiness Signals Profile</h2>
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1.5rem' }}>
             {[
-              { label: 'Genuine late-Green emergence', key: 'LATE_GREEN', color: 'var(--ifm-color-success)' },
-              { label: 'Integral indicators', key: 'INTEGRAL', color: 'var(--ifm-color-primary)' },
+              { label: 'Genuine readiness signals', key: 'LATE_GREEN', color: 'var(--ifm-color-success)' },
+              { label: 'Signs of broader integration', key: 'INTEGRAL', color: 'var(--ifm-color-primary)' },
               { label: 'Intellectual identification', key: 'INTELLECTUAL', color: 'var(--ifm-color-warning)' },
-              { label: 'Early-Green responses', key: 'EARLY_GREEN', color: 'var(--ifm-color-emphasis-500)' },
+              { label: 'Earlier-pattern responses', key: 'EARLY_GREEN', color: 'var(--ifm-color-emphasis-500)' },
             ].map(({ label, key, color }) => (
               <div key={key} style={{ padding: '0.75rem', border: '1px solid var(--ifm-color-emphasis-200)', borderRadius: '0.5rem' }}>
                 <div style={{ fontSize: '0.8rem', color: 'var(--ifm-color-emphasis-600)', marginBottom: '0.25rem' }}>{label}</div>
@@ -830,7 +829,7 @@ export default function PluralIntegralAssessment() {
 
           {aScores.INTELLECTUAL >= 3 && (
             <div style={{ padding: '0.75rem 1rem', background: 'var(--ifm-color-warning-lightest, #fffbeb)', borderRadius: '0.5rem', marginBottom: '1rem', fontSize: '0.9rem' }}>
-              ⚠️ <strong>Note:</strong> A notable proportion of your Section A responses indicate intellectual identification rather than embodied late-Green emergence. This is a common and important signal — the ideas are understood, but the embodied reorganisation that marks genuine stage development may still be in progress.
+              ⚠️ <strong>Note:</strong> A notable proportion of your Section A responses indicate intellectual identification rather than embodied readiness. This is a common and important signal — the ideas are understood, but the embodied reorganisation that marks genuine development may still be in progress.
             </div>
           )}
 
@@ -846,7 +845,7 @@ export default function PluralIntegralAssessment() {
                 ? 'Your responses suggest genuine metasystematic reasoning capacity — you can triangulate frameworks, identify structural patterns across levels, and use tension between maps as diagnostic information.'
                 : bScore.pct >= 33
                 ? 'Your responses suggest emerging metasystematic capacity. You can identify cross-system patterns but may still rely on single-framework explanations under pressure.'
-                : 'Your responses suggest systemic (rather than metasystematic) reasoning as the current centre of gravity. This is an important growing edge for 2nd-Tier development. The Vision-Logic & Metasystematic Reasoning module is recommended.'}
+                : 'Your responses suggest systemic (rather than metasystematic) reasoning as the current centre of gravity. This is an important growing edge for this stage of development. The Vision-Logic & Metasystematic Reasoning module is recommended.'}
             </p>
           </div>
 
@@ -883,7 +882,7 @@ export default function PluralIntegralAssessment() {
           <h2 style={{ marginTop: '1.75rem' }}>Section D — Cross-Line Embodiment Profile</h2>
           <p style={{ fontSize: '0.9rem', color: 'var(--ifm-color-emphasis-700)', marginBottom: '1rem' }}>
             Scores below 2.5 indicate a meaningful gap between cognitive development and embodiment on
-            that line — a common and important growing edge at the Pluralistic → Integral threshold.
+            that line — a common and important growing edge at this transition.
           </p>
           {Object.entries(dScores).map(([line, avg]) => (
             <div key={line} style={{ marginBottom: '1rem' }}>

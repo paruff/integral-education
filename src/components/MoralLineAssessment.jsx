@@ -297,7 +297,7 @@ const MODULE_RECOMMENDATIONS = {
       'Your responses engage universal ethical principles, social contracts, and the recognition that laws and norms must themselves be justified by deeper values. This is Kohlberg\'s postconventional stage — moral reasoning that can evaluate the systems it operates within.',
     modules: [
       { title: 'Postconventional Moral Reasoning', to: '/docs/modules/moral-line-postconventional-reasoning' },
-      { title: 'Moral Imagination & Integral Ethics', to: '/docs/modules/moral-line-imagination-integral-ethics' },
+      { title: 'Moral Line — Imagination and Ethics', to: '/docs/modules/moral-line-imagination-integral-ethics' },
       { title: 'Moral Line Overview (Dual Track)', to: '/docs/modules/moral-line-overview-dual-track' },
     ],
   },

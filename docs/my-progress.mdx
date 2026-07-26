@@ -9,7 +9,7 @@ import useProgress from '@site/src/hooks/useProgress';
 import Link from '@docusaurus/Link';
 
 export function ProgressDashboard() {
-  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile } = useProgress();
+  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile, getDueReviews } = useProgress();
 
   if (!isAvailable) {
     return (
@@ -22,9 +22,24 @@ export function ProgressDashboard() {
   const daysSince = getDaysSinceLastActivity();
   const moduleIds = Object.keys(data.modules || {});
   const totalModules = moduleIds.length;
+  const dueReviews = getDueReviews();
 
   return (
     <div>
+      {dueReviews.length > 0 && (
+        <div className="margin-bottom--md" style={{ padding: '1rem', border: '1px solid var(--ifm-color-warning-dark)', borderRadius: '0.75rem', background: 'var(--ifm-color-warning-lightest)' }}>
+          <h3 style={{ marginTop: 0 }}>Due for review</h3>
+          <p style={{ fontSize: '0.9rem' }}>Spaced review works best when it's timely — these modules are ready for another pass.</p>
+          <ul style={{ marginBottom: 0 }}>
+            {dueReviews.map((r) => (
+              <li key={r.moduleId}>
+                <Link to={`/docs/modules/${r.moduleId}`}>{r.moduleName}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
       <div className="margin-top--md margin-bottom--md">
         <p><strong>Modules completed:</strong> {completedCount} of {totalModules}</p>
         {daysSince !== null && (

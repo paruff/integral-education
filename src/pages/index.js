@@ -8,12 +8,6 @@ import styles from './index.module.css';
 function HomepageHeader() {
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className={styles.aqalMotif} aria-hidden="true">
-        <span className={`${styles.aqalLabel} ${styles.aqalLabelI}`}>I</span>
-        <span className={`${styles.aqalLabel} ${styles.aqalLabelWe}`}>We</span>
-        <span className={`${styles.aqalLabel} ${styles.aqalLabelIt}`}>It</span>
-        <span className={`${styles.aqalLabel} ${styles.aqalLabelIts}`}>Its</span>
-      </div>
       <div className="container">
         <h1 className="hero__title">Develop yourself across mind, body, and relationships</h1>
         <p className="hero__subtitle">
@@ -52,13 +46,6 @@ export default function Home() {
       <HomepageHeader />
       <main>
         <section className="container margin-top--lg homepage-section">
-          <h2>Built on the AQAL Framework</h2>
-          <p>
-            We use AQAL to organize learning across inner growth, relationships, behavior, and
-            systems. <Link to="/docs/maps/aqal-overview">Learn more</Link>.
-          </p>
-        </section>
-        <section className="container homepage-section">
           <h2>How It Works</h2>
           <div className="homepage-loop-grid">
             <div className="homepage-loop-item">
@@ -101,16 +88,16 @@ export default function Home() {
           <p>Choose a curated learning path and begin your journey in minutes.</p>
           <div className="homepage-card-grid">
             <article className="homepage-card">
-              <h3>Personal → Integral</h3>
-              <p>Move from self-growth basics to AQAL-informed development habits.</p>
+              <h3>Personal Growth Path</h3>
+              <p>Move from self-growth basics to a structured, multi-perspectival development practice.</p>
               <p className="homepage-card-meta">Time commitment: 3–6 weeks</p>
               <Link className="homepage-card-cta" to="/docs/quickstarts/personal-to-integral">
                 Begin →
               </Link>
             </article>
             <article className="homepage-card">
-              <h3>Amber → Rational</h3>
-              <p>Build critical thinking skills while transitioning into modern worldview logic.</p>
+              <h3>Clear Thinking Path</h3>
+              <p>Build critical thinking skills for navigating complexity with confidence.</p>
               <p className="homepage-card-meta">Time commitment: 10–20 weeks</p>
               <Link className="homepage-card-cta" to="/docs/quickstarts/amber-to-rational">
                 Begin →
@@ -161,7 +148,7 @@ export default function Home() {
               </Link>
             </article>
             <article className="homepage-card">
-              <h3>Amber/Mythic Orientation</h3>
+              <h3>Orientation: Values, Belonging, and Structure</h3>
               <p>Understand your current developmental stage with dignity — grounded in Kegan, Cook-Greuter, and Fowler, not just typology.</p>
               <div className="homepage-card-meta-row">
                 <span className="homepage-level-badge">Beginner</span>

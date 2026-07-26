@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T13:16:19.266Z",
+  "generated": "2026-07-26T13:25:17.525Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,24 +49,11 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 75,
+      "full": 77,
       "total": 77,
-      "percentage": 97
+      "percentage": 100
     },
-    "journeyStepGaps": {
-      "learn": 1,
-      "reflect": 1,
-      "retrieval schedule": 2,
-      "evidence": 2,
-      "frameworks": 2,
-      "gifts": 2,
-      "limitations": 2,
-      "facilitator note": 2,
-      "aqal mapping": 1,
-      "orient": 1,
-      "encounter": 1,
-      "stabilize": 1
-    },
+    "journeyStepGaps": {},
     "orphanModules": 0,
     "avgSectionsPerModule": 20
   },
@@ -1286,22 +1273,13 @@
         "green-to-teal",
         "practice-architecture"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "reflect",
-        "retrieval schedule",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "integral-shadow-teal-trap",
@@ -2592,24 +2570,13 @@
         "projection",
         "self-awareness"
       ],
-      "goldStandardSections": 6,
-      "hasAQAL": false,
+      "goldStandardSections": 15,
+      "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "aqal mapping",
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "shadow-persona-mask",

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T08:11:34.484Z",
+  "generated": "2026-07-26T08:20:45.428Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,21 +49,20 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 59,
+      "full": 63,
       "total": 77,
-      "percentage": 77
+      "percentage": 82
     },
     "journeyStepGaps": {
-      "orient": 12,
-      "encounter": 13,
-      "stabilize": 11,
-      "retrieval schedule": 15,
-      "frameworks": 17,
-      "gifts": 18,
-      "limitations": 18,
-      "facilitator note": 18,
-      "learn": 5,
-      "integrate": 3,
+      "orient": 10,
+      "encounter": 11,
+      "stabilize": 10,
+      "retrieval schedule": 11,
+      "frameworks": 13,
+      "gifts": 14,
+      "limitations": 14,
+      "facilitator note": 14,
+      "learn": 3,
       "reflect": 1,
       "evidence": 7,
       "practice": 2,
@@ -1058,21 +1057,13 @@
         "phenomenology",
         "growing-up"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 20,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "integrate",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "evidence-evaluation",
@@ -2074,22 +2065,13 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "perspective-taking-empathic-accuracy",
@@ -2120,22 +2102,13 @@
         "EI-09",
         "growing-up"
       ],
-      "goldStandardSections": 9,
+      "goldStandardSections": 16,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "integrate",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "pluralistic-green-orientation",
@@ -2293,21 +2266,13 @@
         "stage-transition",
         "second-tier"
       ],
-      "goldStandardSections": 18,
+      "goldStandardSections": 23,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "learn",
-        "integrate",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "self-line-conventional-conformist-achiever",

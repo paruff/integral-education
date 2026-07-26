@@ -32,6 +32,7 @@ line: interpersonal
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import Admonition from '@theme/Admonition';
 
 <ModuleMeta />
 
@@ -134,6 +135,30 @@ This AQAL frame makes explicit what Epley's data demonstrates empirically: advan
 
 > **Pre/Trans Checkpoint:** The ability to describe another person's perspective fluently and analytically (3rd-person language about their inner states) is not the same as genuine 2nd-person contact. A person can write a sophisticated account of why a colleague is anxious without ever having genuinely encountered that colleague's experience from the inside. Conceptual fluency about perspectives is not empathic accuracy.
 
+## Four Framework Lenses: Zaki, Theory of Mind Research, Epley, and Wilber's AQAL Model
+
+This module draws on four complementary lenses, each contributing a distinct piece of the empathic-accuracy picture. Zaki's three-component model names *what* empathy actually is, preventing the common conflation of resonance, understanding, and care. Theory of Mind research (Premack & Woodruff, Baron-Cohen) supplies the cognitive prerequisite — the structural capacity, absent which empathic accuracy cannot get off the ground at all. Epley's egocentrism research explains *why* our confidence in perspective inferences is so often misplaced, and points directly at the remedy. Wilber's AQAL 1st/2nd/3rd-person model supplies the developmental map, situating Epley's finding as a structural pattern (1st-person defaults masquerading as 2nd-person contact) rather than a mere cognitive bias.
+
+Used together, these lenses move from definition (Zaki), to prerequisite (ToM), to diagnosis (Epley), to developmental frame (Wilber). None is sufficient alone: Zaki's taxonomy without Epley's accuracy research risks treating empathy as purely a matter of good intentions; Epley's findings without ToM's developmental grounding could be mistaken for a technique applicable regardless of structural capacity; and the AQAL map without the other three stays descriptive, offering no account of the specific failure mode (egocentric anchoring) it names.
+
+## The Limitations of These Empathic-Accuracy Frameworks
+
+Each framework has genuine boundaries worth stating plainly.
+
+Zaki's three-component taxonomy is a useful clarifying distinction, but the boundaries between affective, cognitive, and compassionate empathy are not always as clean in lived experience as the table above suggests — most real empathic responses involve some blend of all three, and the taxonomy is best used as an analytic lens rather than a claim that these are cleanly separable neural or experiential systems.
+
+Epley's egocentrism findings are robust and well-replicated, but the practical remedy — asking direct verification questions — has real limits. Not every relationship or context tolerates direct verification questions (some cultural, professional, or power-differentiated contexts make direct inquiry costly or inappropriate), and over-reliance on verification questions can itself become a performance that substitutes for genuine attentiveness.
+
+Wilber's AQAL developmental sequence is a theoretical synthesis, not a directly tested empirical finding in its own right — it draws together Piaget, Kegan, and post-metaphysical philosophy, and while broadly convergent with developmental psychology evidence, the specific 1st/2nd/3rd/4th-person framing should be read as an integrative map rather than a separately validated empirical claim.
+
+## 🧭 Orient
+
+You are about to work with a claim that can feel uncomfortable: that your confident sense of understanding another person's experience is not, by itself, reliable evidence that you actually do. Before continuing, notice any resistance to that claim — a felt sense of "but I really do know how they feel" is precisely the confidence Epley's research shows is so often miscalibrated. That noticing is the starting point for the practices below.
+
+## 🌿 Encounter
+
+Bring to mind one person you are currently in relationship with, and recall a recent moment where you felt confident you knew what they were thinking or feeling. Without checking with them, just notice: what is that confidence actually built on — their explicit words, or your own inference filling in the gaps? Hold that question lightly; the Practice exercises below are designed to let you test it directly.
+
 ---
 
 ## 🧘 Practice
@@ -234,6 +259,24 @@ Genuine interpersonal development is built substantially on the willingness to b
 
 ---
 
+## The Gifts of Empathic Accuracy
+
+Verified understanding is one of the more reliable ways to make another person feel genuinely seen — not merely cared about in the abstract, but actually known in the specifics of their experience. That distinction matters more than it might seem: being cared for without being accurately understood can feel lonely even inside a loving relationship.
+
+Empathic accuracy also protects against a subtler cost: the accumulation of small, unverified misreadings that quietly distort a relationship over months or years. A single verification question, asked at the right moment, can prevent a misunderstanding from calcifying into a settled — and wrong — belief about what someone else wants, feels, or needs.
+
+Finally, this practice compounds across relationships. Each time you catch an egocentric inference before acting on it, you strengthen the underlying habit of holding your read on another person as a hypothesis rather than a fact — a habit that generalizes far beyond whichever single relationship prompted the original correction.
+
+## 🔄 Integrate
+
+Carry this practice into ordinary life with three concrete commitments:
+
+- **One verification question per day:** In at least one conversation each day, notice an inference you are making about what someone else thinks or feels, and ask a genuine verification question before acting on it.
+- **Weekly log review:** Once a week, review your Practice (b) log and note any recurring pattern in your inference errors — do you tend to overestimate distress, underestimate it, or assume agreement that isn't there?
+- **Name the empathy type in use:** In moments of relational difficulty, pause to ask which of Zaki's three empathy types the situation actually calls for — affective resonance, cognitive perspective-taking, or compassionate action — rather than defaulting to whichever comes most naturally to you.
+
+---
+
 ## 🔍 Reflect
 
 After completing the Learn section and both Practice exercises, take 10 minutes to write responses to the following:
@@ -261,6 +304,15 @@ Use this rubric to locate your current empathic accuracy practice:
 
 ---
 
+<Admonition type="tip" title="Facilitator Note">
+
+- Emphasize early that verification questions are a relational skill, not an interrogation technique — participants who feel awkward asking them often need reassurance that a warm, natural phrasing carries the same epistemic function as a formal one.
+- Watch for participants who conflate affective resonance with accuracy — feeling strongly moved by someone's distress is not the same as correctly understanding what they are experiencing, and this module's central point is easy to intellectually agree with but hard to actually apply under real emotional pressure.
+- If a participant reports significant relational rupture surfacing during Practice (a) or (b), refer to the "When to Seek Support" section — this module is not designed to carry high-conflict or trauma-adjacent relational material.
+- The Pre/Trans Checkpoint is worth revisiting explicitly: a participant who can write fluently about someone's inner state has not necessarily verified anything — check that the group distinguishes description from contact.
+
+</Admonition>
+
 <RetrievalPrompt moduleName="EI-09 · Perspective-Taking & Empathic Accuracy" cards={
   {q: "What are the three types of empathy Zaki differentiates, and what does each involve?", a: "(1) **Affective empathy** — feeling *with* another; experiencing resonance with their emotional state. (2) **Cognitive empathy** — thinking *about* another; perspective-taking without necessarily feeling the resonance. (3) **Compassionate empathy** — caring *for* another; a motivational orientation toward their wellbeing combining resonance with action orientation."},
   {q: "What is empathic distress substitution, and why does it occur?", a: "Empathic distress substitution occurs when affective resonance with another's distress becomes so intense that the person withdraws from genuine contact with the other's experience and redirects helping behaviour toward reducing their own distress. It arises from high affective empathy without sufficient self-regulation or compassionate orientation to sustain genuine contact."},
@@ -274,6 +326,7 @@ Use this rubric to locate your current empathic accuracy practice:
   {q: "What does the Pre/Trans Checkpoint for empathic accuracy say?", a: "The ability to describe another person's perspective fluently and analytically — 3rd-person language about their inner states — is not the same as genuine 2nd-person contact. Conceptual fluency about perspectives is not empathic accuracy. A person can write a sophisticated account of why someone is anxious without having ever verified what that person is actually experiencing."}
 } />
 
+## ⏱️ Retrieval Schedule
 
 | Interval | When | Activity |
 |:---|:---|:---|

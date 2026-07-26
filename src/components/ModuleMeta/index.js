@@ -47,10 +47,10 @@ function difficultyBg(difficulty) {
 // If a prereq slug isn't in this map, it's still rendered as a link.
 
 const KNOWN_MODULES = {
-  'amber-mythic-orientation': 'Amber/Mythic Orientation',
-  'rational-orange-orientation': 'Rational/Orange Orientation',
-  'pluralistic-green-orientation': 'Pluralistic/Green Orientation',
-  'integral-teal-orientation': 'Integral/Teal Orientation',
+  'amber-mythic-orientation': 'Values, Belonging, and Structure',
+  'rational-orange-orientation': 'Reason, Achievement, and Effectiveness',
+  'pluralistic-green-orientation': 'Pluralism, Empathy, and Belonging',
+  'integral-teal-orientation': 'Systems, Complexity, and Integration',
   'mindfulness-basics': 'Mindfulness Basics',
   'shadow-work-foundation': 'Shadow Work Foundation',
   'shadow-integration-101': 'Shadow Integration',
@@ -84,7 +84,6 @@ export default function ModuleMeta() {
   const readingTime = fm.readingTime;
   const practiceTime = fm.practiceTime;
   const difficulty = fm.difficulty;
-  const stage = fm.level;           // existing frontmatter field
   const prerequisites = fm.prerequisites;
   const safetyTier = fm.safety_tier; // safety classification tier
 
@@ -95,7 +94,7 @@ export default function ModuleMeta() {
       : null;
 
   // Bail if no metadata at all
-  if (!readingTime && !practiceTime && !difficulty && !stage && !prerequisites && !safetyTier) {
+  if (!readingTime && !practiceTime && !difficulty && !prerequisites && !safetyTier) {
     return null;
   }
 
@@ -121,14 +120,6 @@ export default function ModuleMeta() {
           <span className={styles.icon}>📊</span>
           <span className={styles.label}>Level</span>
           <span className={styles.value}>{difficultyLabel(difficulty)}</span>
-        </span>
-      )}
-
-      {stage && (
-        <span className={styles.badge} title="Developmental stage range">
-          <span className={styles.icon}>🧭</span>
-          <span className={styles.label}>Stage</span>
-          <span className={styles.value}>{stage}</span>
         </span>
       )}
 

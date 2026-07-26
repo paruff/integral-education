@@ -1,6 +1,6 @@
 ---
 id: personal-to-integral
-title: Personal → Integral (QuickStart)
+title: Personal Growth Path (QuickStart)
 description: A structured 3–6 week path from conventional self-awareness to integral, multi-perspectival understanding — blending mindfulness, cognitive reframing, and shadow literacy.
 sidebar_position: 1
 ---

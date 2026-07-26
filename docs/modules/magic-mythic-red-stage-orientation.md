@@ -1,7 +1,7 @@
 ---
 id: magic-mythic-red-stage-orientation
-title: Magic-Mythic/Red Stage Orientation
-sidebar_label: Magic-Mythic/Red Orientation
+title: 'Orientation: Power, Impulse, and Self-Assertion'
+sidebar_label: Power, Impulse, and Self-Assertion
 description: An educational orientation to the Magic-Mythic/Red stage — its gifts, worldview, and developmental place — as a foundation for understanding the emergence of individual selfhood and personal power in oneself and others.
 quadrants:
 - I

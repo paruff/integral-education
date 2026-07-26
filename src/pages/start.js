@@ -6,7 +6,7 @@ import styles from './start.module.css';
 // ─── Assessment data ──────────────────────────────────────────────────────────
 // Zero AQAL terminology. Mapped to observable life situations.
 // Phase 1: stage routing (4 questions, a/b/c options)
-// Phase 2: line routing (3 questions, emotional/interpersonal/self options)
+// Phase 2: line routing (5 questions, emotional/interpersonal/self/cognitive/moral options)
 
 const QUESTIONS = [
   {
@@ -48,7 +48,7 @@ const QUESTIONS = [
 ];
 
 // ─── Line-diagnostic questions (Phase 2) ──────────────────────────────────────
-// Options map to: emotional, interpersonal, self
+// Options map to: emotional, interpersonal, self, cognitive, moral
 // Language describes observable behaviors, not traits or labels.
 
 const LINE_QUESTIONS = [
@@ -59,6 +59,8 @@ const LINE_QUESTIONS = [
       { value: 'emotional', label: 'Feel flooded by strong feelings — I have trouble naming what I\'m experiencing.' },
       { value: 'interpersonal', label: 'Pull back from people or shut down — conflict and tension feel hard to stay present with.' },
       { value: 'self', label: 'Feel unsettled at a deeper level — my sense of who I am and what I believe feels shaky.' },
+      { value: 'cognitive', label: 'Struggle to think clearly or hold onto complexity — my thinking gets simpler and more rigid.' },
+      { value: 'moral', label: 'Feel torn about what\'s right, unsure which value should win out.' },
     ],
   },
   {
@@ -68,6 +70,8 @@ const LINE_QUESTIONS = [
       { value: 'emotional', label: 'Get overwhelmed by emotion and lose the ability to think clearly.' },
       { value: 'interpersonal', label: 'Focus so much on the other person that I lose track of my own needs and boundaries.' },
       { value: 'self', label: 'Notice that something about my identity or values is being challenged — it touches deeper than the topic.' },
+      { value: 'cognitive', label: 'Lose track of the bigger picture — I can\'t hold all the moving parts in mind at once.' },
+      { value: 'moral', label: 'Feel caught between competing obligations or values, unsure how to weigh them.' },
     ],
   },
   {
@@ -77,6 +81,30 @@ const LINE_QUESTIONS = [
       { value: 'emotional', label: 'Understanding and working with my feelings — I feel driven by emotions I don\'t fully understand.' },
       { value: 'interpersonal', label: 'Navigating relationships with more skill — I want to handle conflict and closeness better.' },
       { value: 'self', label: 'Understanding how my sense of self has developed — there are patterns I can feel but can\'t yet name.' },
+      { value: 'cognitive', label: 'Thinking through complexity — handling situations with many interacting parts and no clear-cut answer.' },
+      { value: 'moral', label: 'Working through ethical questions — deciding what\'s right when values conflict or the "rules" don\'t clearly apply.' },
+    ],
+  },
+  {
+    id: 3,
+    text: 'When I\'m learning something new and complicated, I tend to:',
+    options: [
+      { value: 'emotional', label: 'Get anxious or overwhelmed before I\'ve even had a chance to understand it.' },
+      { value: 'interpersonal', label: 'Want to talk it through with someone else before I trust my own take on it.' },
+      { value: 'self', label: 'Wonder whether I\'m the kind of person who\'s good at this kind of thing.' },
+      { value: 'cognitive', label: 'Struggle most with holding several moving parts in mind at once — I do better one piece at a time.' },
+      { value: 'moral', label: 'Feel unsure whether there\'s even a "right" way to approach it, or if it\'s just a matter of preference.' },
+    ],
+  },
+  {
+    id: 4,
+    text: 'When two things I care about seem to pull in different directions, I usually:',
+    options: [
+      { value: 'emotional', label: 'Feel the tension in my body before I can name what\'s actually bothering me.' },
+      { value: 'interpersonal', label: 'Worry most about how the people involved will be affected.' },
+      { value: 'self', label: 'Question what this conflict says about who I am or what I stand for.' },
+      { value: 'cognitive', label: 'Try to map out the logic of the situation, but get lost once it gets complex.' },
+      { value: 'moral', label: 'Wrestle with which value should take priority — this is where I get stuck most.' },
     ],
   },
 ];
@@ -125,6 +153,18 @@ const ALL_PATHS = [
     title: 'Understanding Yourself',
     description: 'Explore how your sense of self develops over time.',
     to: '/docs/quickstarts/self-line-development',
+  },
+  {
+    id: 'cognitive-line',
+    title: 'Cognitive Line Development',
+    description: 'Build capacity for complexity — postformal and metasystematic thinking.',
+    to: '/docs/quickstarts/cognitive-line-development',
+  },
+  {
+    id: 'moral-line',
+    title: 'Moral Line Development',
+    description: 'Develop ethical reasoning from conventional to post-conventional stages.',
+    to: '/docs/quickstarts/moral-line-development',
   },
   {
     id: 'shadow-work',
@@ -198,6 +238,22 @@ const LINE_RESULTS = {
     alt: 'If you are also interested in how emotional patterns shape your sense of self, the Emotional Line path is a helpful complement.',
     altLink: '/docs/quickstarts/emotional-line-development',
   },
+  cognitive: {
+    title: 'Cognitive Line Development',
+    explanation:
+      'Your answers suggest that handling complexity — holding several variables in mind at once, thinking through situations with many interacting parts, and reasoning at a level that matches how complicated the world actually is — is an area where focused attention could be especially useful. The Cognitive Line path builds capacity for postformal and metasystematic thinking in a structured, stage-aware sequence.',
+    recommended: '/docs/quickstarts/cognitive-line-development',
+    alt: 'If you also want to build self-understanding alongside cognitive complexity, the Self Line path is a natural complement.',
+    altLink: '/docs/quickstarts/self-line-development',
+  },
+  moral: {
+    title: 'Moral Line Development',
+    explanation:
+      'Your answers suggest that ethical reasoning — weighing competing values, working through situations where the "right" answer isn\'t obvious, and reasoning about fairness and obligation — is an area where focused attention could be especially useful. The Moral Line path builds capacity for post-conventional ethical reasoning in a structured, stage-aware sequence.',
+    recommended: '/docs/quickstarts/moral-line-development',
+    alt: 'If you also want to strengthen perspective-taking alongside moral reasoning, the Interpersonal Line path is a natural complement.',
+    altLink: '/docs/quickstarts/interpersonal-line-development',
+  },
   mixed: {
     title: 'Emotional Line Development',
     explanation:
@@ -225,17 +281,16 @@ function tally(answers) {
 }
 
 function tallyLine(answers) {
-  const counts = { emotional: 0, interpersonal: 0, self: 0 };
+  const counts = { emotional: 0, interpersonal: 0, self: 0, cognitive: 0, moral: 0 };
   for (const val of Object.values(answers)) {
     if (counts[val] !== undefined) counts[val] += 1;
   }
   const max = Math.max(...Object.values(counts));
-  // Require at least 2 of 3 for classification; otherwise mixed
+  // Require at least 2 of 5 for classification; otherwise mixed
   if (max < 2) return 'mixed';
-  if (counts.emotional === max) return 'emotional';
-  if (counts.interpersonal === max) return 'interpersonal';
-  if (counts.self === max) return 'self';
-  return 'mixed';
+  const leaders = Object.keys(counts).filter((key) => counts[key] === max);
+  if (leaders.length > 1) return 'mixed';
+  return leaders[0];
 }
 
 function getRecommendedPathTitle(resultKey) {
@@ -424,8 +479,9 @@ export default function StartPage() {
             <h2 className={styles.phaseTitle}>Part 2: What to Focus On</h2>
             <p className={styles.phaseSubtitle}>
               These questions help identify which area of development —
-              emotional skill, relational skill, or self-understanding —
-              might be most useful to work on right now.
+              emotional skill, relational skill, self-understanding,
+              handling complexity, or ethical reasoning — might be most
+              useful to work on right now.
             </p>
 
             <progress

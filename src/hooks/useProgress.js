@@ -1,10 +1,12 @@
 import { useState, useCallback, useEffect } from 'react';
+import { markIntervalComplete, isDue } from '@site/src/utils/retrieval';
 
 const STORAGE_KEY = 'iel_progress_v1';
 
 const DEFAULT_DATA = {
   modules: {},
   lineProfile: null,
+  retrievalSchedule: {},
   lastUpdated: null,
 };
 
@@ -15,7 +17,8 @@ function loadFromStorage() {
       const parsed = JSON.parse(raw);
       // Ensure schema is valid
       if (parsed && typeof parsed === 'object' && parsed.modules) {
-        return parsed;
+        // Older stored data may predate retrievalSchedule — backfill it.
+        return { retrievalSchedule: {}, ...parsed };
       }
     }
     return { ...DEFAULT_DATA };
@@ -115,6 +118,32 @@ export default function useProgress() {
 
   const hasLineProfile = safeData.lineProfile !== null;
 
+  const recordRetrievalReview = useCallback((moduleId, moduleName) => {
+    const now = new Date().toISOString();
+    setData((prev) => {
+      const current = prev || { ...DEFAULT_DATA };
+      const priorEntry = (current.retrievalSchedule || {})[moduleId];
+      const nextEntry = { ...markIntervalComplete(priorEntry), moduleName };
+      const newData = {
+        ...current,
+        retrievalSchedule: {
+          ...current.retrievalSchedule,
+          [moduleId]: nextEntry,
+        },
+        lastUpdated: now,
+      };
+      saveToStorage(newData);
+      return newData;
+    });
+  }, []);
+
+  const getDueReviews = useCallback(() => {
+    const schedule = safeData.retrievalSchedule || {};
+    return Object.entries(schedule)
+      .filter(([, entry]) => isDue(entry))
+      .map(([moduleId, entry]) => ({ moduleId, moduleName: entry.moduleName, nextDueDate: entry.nextDueDate }));
+  }, [safeData]);
+
   return {
     data: safeData,
     isAvailable,
@@ -124,6 +153,8 @@ export default function useProgress() {
     getDaysSinceLastActivity,
     completedCount,
     updateLineProfile,
+    recordRetrievalReview,
+    getDueReviews,
     hasLineProfile,
   };
 }

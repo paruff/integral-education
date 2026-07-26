@@ -1,5 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import RetrievalCard from '@site/src/components/RetrievalCard';
+import useProgress from '@site/src/hooks/useProgress';
+import { slugifyModuleName } from '@site/src/utils/retrieval';
 import styles from './styles.module.css';
 
 function formatDate(daysFromNow) {
@@ -12,7 +14,9 @@ function formatDate(daysFromNow) {
   });
 }
 
-export default function RetrievalPrompt({ moduleName, cards = [] }) {
+export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
+  const { recordRetrievalReview } = useProgress();
+  const resolvedModuleId = moduleId || slugifyModuleName(moduleName);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scores, setScores] = useState([]);
   const [copied24h, setCopied24h] = useState(false);
@@ -39,6 +43,15 @@ export default function RetrievalPrompt({ moduleName, cards = [] }) {
       setCurrentIndex(scores.length);
     }
   }, [scores.length, currentIndex, totalCards]);
+
+  // Persist the spaced-retrieval schedule once the review finishes.
+  React.useEffect(() => {
+    if (completed) {
+      recordRetrievalReview(resolvedModuleId, moduleName);
+    }
+    // Only fire once, right when `completed` flips true.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [completed]);
 
   async function copyText(text, setter) {
     try {

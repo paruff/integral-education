@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T07:49:42.165Z",
+  "generated": "2026-07-26T08:01:14.659Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -49,26 +49,26 @@
       "Unknown": 2
     },
     "goldStandardCompliance": {
-      "full": 51,
+      "full": 55,
       "total": 77,
-      "percentage": 66
+      "percentage": 71
     },
     "journeyStepGaps": {
-      "orient": 18,
-      "encounter": 21,
-      "stabilize": 15,
-      "retrieval schedule": 22,
-      "frameworks": 25,
-      "gifts": 26,
-      "limitations": 26,
-      "facilitator note": 26,
+      "orient": 15,
+      "encounter": 17,
+      "stabilize": 11,
+      "retrieval schedule": 18,
+      "frameworks": 21,
+      "gifts": 22,
+      "limitations": 22,
+      "facilitator note": 22,
       "integrate": 6,
       "reflect": 4,
       "assess": 3,
-      "aqal mapping": 4,
-      "evidence": 8,
       "learn": 5,
-      "practice": 2
+      "evidence": 7,
+      "practice": 2,
+      "aqal mapping": 3
     },
     "orphanModules": 0,
     "avgSectionsPerModule": 18
@@ -351,24 +351,13 @@
         "thinking",
         "reasoning"
       ],
-      "goldStandardSections": 6,
-      "hasAQAL": false,
+      "goldStandardSections": 15,
+      "hasAQAL": true,
       "hasPractice": true,
-      "hasEvidence": false,
+      "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "aqal mapping",
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "evidence",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "cognitive-dissonance-bridge",
@@ -400,21 +389,13 @@
         "stage-transition",
         "growing-up"
       ],
-      "goldStandardSections": 13,
+      "goldStandardSections": 20,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "cognitive-line-concrete-to-formal",
@@ -742,22 +723,13 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 12,
+      "goldStandardSections": 19,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "cross-difference-dialogue-trust-building",
@@ -1172,22 +1144,13 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 12,
+      "goldStandardSections": 20,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
       "hasSafetyNote": true,
-      "hasFacilitatorNote": false,
-      "missingJourneySteps": [
-        "orient",
-        "encounter",
-        "stabilize",
-        "retrieval schedule",
-        "frameworks",
-        "gifts",
-        "limitations",
-        "facilitator note"
-      ]
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
     },
     {
       "id": "flow-peak-experience",

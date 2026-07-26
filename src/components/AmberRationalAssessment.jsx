@@ -112,9 +112,9 @@ const RESULTS = {
     title: 'Grounded in Tradition',
     description: 'Your answers suggest you draw significant strength from established structures, trusted authorities, and shared values. You have a clear sense of what is right and where you belong — these are genuine developmental achievements, not limitations. Many of the capacities you rely on — loyalty, consistency, reliability — are ones the world deeply needs.',
     modules: [
-      { title: 'Amber/Mythic Stage Orientation', to: '/docs/modules/amber-mythic-orientation' },
+      { title: 'Orientation: Values, Belonging, and Structure', to: '/docs/modules/amber-mythic-orientation' },
       { title: 'Cognitive Dissonance Bridge', to: '/docs/modules/cognitive-dissonance-bridge' },
-      { title: 'Authority & Autonomy Transition', to: '/docs/modules/authority-autonomy-transition' },
+      { title: 'Authority and Autonomy', to: '/docs/modules/authority-autonomy-transition' },
     ],
   },
   'amber-rational-transitional': {
@@ -131,9 +131,9 @@ const RESULTS = {
     title: 'Thinking for Yourself',
     description: 'Your answers suggest you have developed a strong internal compass — you evaluate claims on their evidence, make decisions based on your own reasoning, and can hold your own perspective alongside others without losing yourself. These are the foundational capacities of self-authorship. The next growth edges involve integrating emotional and interpersonal dimensions with this cognitive strength.',
     modules: [
-      { title: 'Rational/Orange Stage Orientation', to: '/docs/modules/rational-orange-orientation' },
+      { title: 'Orientation: Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orange-orientation' },
       { title: 'Evidence Evaluation', to: '/docs/modules/evidence-evaluation' },
-      { title: 'Late Orange Disillusionment', to: '/docs/modules/late-orange-disillusionment' },
+      { title: 'Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
     ],
   },
   'rational-stable': {
@@ -142,8 +142,8 @@ const RESULTS = {
     modules: [
       { title: 'Empathy & Perspective-Plurality', to: '/docs/modules/empathy-perspective-plurality' },
       { title: 'Emotional Intelligence & Somatic Line', to: '/docs/modules/emotional-intelligence-somatic-line' },
-      { title: 'Late Orange Disillusionment', to: '/docs/modules/late-orange-disillusionment' },
-      { title: 'Rational → Pluralistic QuickStart', to: '/docs/quickstarts/rational-to-pluralistic' },
+      { title: 'Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
+      { title: 'Multiple Perspectives Path', to: '/docs/quickstarts/rational-to-pluralistic' },
     ],
   },
 };
@@ -197,7 +197,7 @@ export default function AmberRationalAssessment() {
           const vals = indices.map((i) => answers[i]).filter(Boolean);
           const a = vals.filter((v) => v === 'a').length;
           const c = vals.filter((v) => v === 'c').length;
-          return [domain, { a, c, dominant: a > c ? 'Amber' : c > a ? 'Rational' : 'Mixed' }];
+          return [domain, { a, c, dominant: a > c ? 'Familiar approach' : c > a ? 'Newer approach' : 'Mixed' }];
         })
       )
     : null;
@@ -205,10 +205,10 @@ export default function AmberRationalAssessment() {
   function copyResults() {
     const domainText = domainScores
       ? Object.entries(domainScores)
-          .map(([d, s]) => `${d}: ${s.dominant} (Amber answers: ${s.a}, Rational answers: ${s.c})`)
+          .map(([d, s]) => `${d}: ${s.dominant} (familiar-approach answers: ${s.a}, newer-approach answers: ${s.c})`)
           .join('\n')
       : '';
-    const text = `Amber → Rational Self-Assessment\nDate: ${new Date().toLocaleDateString()}\nResult: ${result?.title}\n\nDomain Breakdown:\n${domainText}\n\nRecommended Modules:\n${result?.modules.map((m) => `- ${m.title}`).join('\n')}`;
+    const text = `Self-Assessment Results\nDate: ${new Date().toLocaleDateString()}\nResult: ${result?.title}\n\nDomain Breakdown:\n${domainText}\n\nRecommended Modules:\n${result?.modules.map((m) => `- ${m.title}`).join('\n')}`;
     navigator.clipboard.writeText(text).catch(() => {});
     const btn = document.getElementById('copy-btn');
     if (btn) {

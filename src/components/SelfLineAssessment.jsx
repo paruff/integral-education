@@ -215,24 +215,24 @@ const SECTION_B_STEMS = [
 // ─── Stage Group Labels ───────────────────────────────────────────────────────
 
 const STAGE_LABELS = {
-  CON: 'Conventional (Conformist / Expert)',
-  ACH: 'Achiever (Late Conventional)',
-  IND: 'Individualist (Early Postconventional)',
-  INT: 'Strategist / Alchemist (Integral)',
+  CON: 'Grounded in Community and Shared Standards',
+  ACH: 'Focused on Effectiveness and Results',
+  IND: 'Examining Your Own Assumptions',
+  INT: 'Holding Multiple Systems and Perspectives at Once',
 };
 
 const STAGE_DESCRIPTIONS = {
-  CON: 'Your responses most frequently reflect the Conformist/Expert action-logic (Cook-Greuter). At this level, meaning-making centres on belonging, role expectations, rules, and the standards of communities and institutions you respect. Reliability, consistency, and meeting shared norms feel important. This is the foundational level of adult societal functioning — the base on which all further development builds.',
-  ACH: 'Your responses most frequently reflect the Achiever action-logic (Cook-Greuter). At this level, meaning-making centres on effectiveness, goal-achievement, and self-improvement. You are oriented toward outcomes, evidence, and continuous development. Most leadership development models are designed for and by this level — it is the dominant centre of gravity in professional culture.',
-  IND: 'Your responses most frequently reflect the Individualist action-logic (Cook-Greuter). At this level, meaning-making shifts from identifying with outcomes to examining the process of meaning-making itself. Questions about identity, relativity, and the limits of conventional frameworks become live. This can feel like a disorienting transition — the certainties of the Achiever stage start to show their seams.',
-  INT: 'Your responses most frequently reflect the Strategist/Alchemist action-logic (Cook-Greuter). At this level, meaning-making becomes systemic and transformative. You are able to hold multiple frameworks simultaneously, see the ways that your own perspective is itself constructed, and act with both deep commitment and genuine epistemic humility. This level is relatively rare across the population.',
+  CON: 'Your responses most frequently reflect a pattern where meaning-making centres on belonging, role expectations, rules, and the standards of communities and institutions you respect. Reliability, consistency, and meeting shared norms feel important. This is a foundational pattern of adult meaning-making — the base on which further development builds.',
+  ACH: 'Your responses most frequently reflect a pattern where meaning-making centres on effectiveness, goal-achievement, and self-improvement. You are oriented toward outcomes, evidence, and continuous development. Most leadership development models are designed for and by this pattern — it is the dominant centre of gravity in professional culture.',
+  IND: 'Your responses most frequently reflect a pattern where meaning-making shifts from identifying with outcomes to examining the process of meaning-making itself. Questions about identity, relativity, and the limits of conventional frameworks become live. This can feel like a disorienting transition — old certainties start to show their seams.',
+  INT: 'Your responses most frequently reflect a pattern where meaning-making becomes systemic and transformative. You are able to hold multiple frameworks simultaneously, see the ways that your own perspective is itself constructed, and act with both deep commitment and genuine epistemic humility. This pattern is relatively rare across the population.',
 };
 
 const MODULE_RECOMMENDATIONS = {
   CON: [
     { title: 'Self Line Overview — The Psychograph', to: '/docs/modules/self-line-overview-psychograph' },
     { title: 'Self Line: Conventional — Conformist to Achiever', to: '/docs/modules/self-line-conventional-conformist-achiever' },
-    { title: 'Amber/Mythic Orientation', to: '/docs/modules/amber-mythic-orientation' },
+    { title: 'Orientation: Values, Belonging, and Structure', to: '/docs/modules/amber-mythic-orientation' },
   ],
   ACH: [
     { title: 'Self Line Overview — The Psychograph', to: '/docs/modules/self-line-overview-psychograph' },
@@ -289,10 +289,10 @@ function buildExportText(profile, sectionBResponses) {
   lines.push('── Section A: Meaning-Making Profile ──');
   lines.push(`Scenarios answered: ${profile.total} of ${SECTION_A_SCENARIOS.length}`);
   lines.push('');
-  lines.push(`  Conventional (Conformist / Expert): ${profile.pct.CON}%  (${profile.counts.CON} responses)`);
-  lines.push(`  Achiever (Late Conventional):        ${profile.pct.ACH}%  (${profile.counts.ACH} responses)`);
-  lines.push(`  Individualist (Early Postconventional): ${profile.pct.IND}%  (${profile.counts.IND} responses)`);
-  lines.push(`  Strategist / Alchemist (Integral):  ${profile.pct.INT}%  (${profile.counts.INT} responses)`);
+  lines.push(`  ${STAGE_LABELS.CON}: ${profile.pct.CON}%  (${profile.counts.CON} responses)`);
+  lines.push(`  ${STAGE_LABELS.ACH}: ${profile.pct.ACH}%  (${profile.counts.ACH} responses)`);
+  lines.push(`  ${STAGE_LABELS.IND}: ${profile.pct.IND}%  (${profile.counts.IND} responses)`);
+  lines.push(`  ${STAGE_LABELS.INT}: ${profile.pct.INT}%  (${profile.counts.INT} responses)`);
   lines.push('');
   if (profile.dominant) {
     lines.push(`Dominant pattern: ${STAGE_LABELS[profile.dominant]}`);
@@ -455,7 +455,7 @@ export default function SelfLineAssessment() {
           <p className={styles.resultNote}>
             The following is a reflection guide, not a scored measure. For each stem, you can
             review your completion alongside interpretive rubrics showing how different
-            action-logics typically respond. The questions below each stem are more important
+            orientations typically respond. The questions below each stem are more important
             than any label.
           </p>
 
@@ -476,7 +476,7 @@ export default function SelfLineAssessment() {
 
                 <details style={{ marginTop: '0.75rem' }}>
                   <summary style={{ cursor: 'pointer', fontSize: '0.9rem', color: 'var(--ifm-color-primary)', fontWeight: 600 }}>
-                    View stage rubric
+                    View example responses
                   </summary>
                   <div style={{ marginTop: '0.75rem', paddingLeft: '0.75rem', borderLeft: '3px solid var(--ifm-color-emphasis-200)' }}>
                     {Object.entries(stem.rubric).map(([stage, example]) => (

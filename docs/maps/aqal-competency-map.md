@@ -3,7 +3,7 @@ id: aqal-competency-map
 title: AQAL Competency Map
 sidebar_label: AQAL Competency Map
 description: A competency framework mapping measurable developmental capacities across all quadrants, levels, lines, states, and types — the canonical design reference for pathway and assessment decisions.
-tags: [aqal, competencies, assessment, progression, evidence]
+tags: [aqal, competencies, assessment, progression, evidence, magic, magic-mythic]
 ---
 
 ## AQAL Competency Map
@@ -19,6 +19,7 @@ This map defines measurable competencies for all quadrants, levels, lines, state
 - Evidence signals are listed as both qualitative and quantitative where applicable.
 - Levels are progression bands, not rigid identity labels. Learners may operate at different levels across different domains.
 - States and types modulate how competencies are expressed; they do not change the core competency structure.
+- **Important distinction:** The L1–L4 rows throughout this map are self-assessable rubrics designed for Amber altitude and above, where reflective self-evaluation is a stable capacity. The [Pre-Conventional Stage Descriptive Reference](#pre-conventional-stage-descriptive-reference) section (Magic/Purple and Magic-Mythic/Red) uses a different format — descriptive facilitator-reference rows, not learner self-assessment rubrics.
 
 ## Developmental Levels (Platform Working Model)
 
@@ -303,6 +304,98 @@ Types are stable styles that cut across levels and states. They shape how compet
 | Time-Constrained Professionals | May demonstrate L3 competency in micro-sessions but under-complete longer practice requirements | Allow micro-format completion paths with equivalent rigor; adjust duration thresholds; require outcome evidence not just time-on-task |
 
 **Design implication:** No single evidence format should be the sole basis for a competency judgment. Provide at least two demonstration modalities per domain (written + performance, or solo + social).
+
+---
+
+## Pre-Conventional Stage Descriptive Reference
+
+> **Facilitator Reference Only — Not for Learner Self-Assessment**
+>
+> The L1–L4 progression framework used throughout this map assumes a degree of self-reflective capacity that is not yet stable at the Magic/Purple or Magic-Mythic/Red developmental altitudes. Self-assessment rubrics presuppose that the learner can take their own developmental structure as an object of reflection — a capacity that is itself a product of later-stage development. For this reason, the standard rubric format is inappropriate as a self-assessment instrument for people whose current centre of gravity is at these stages.
+>
+> The tables below are **facilitator-reference material only**: descriptive patterns that help a practitioner recognize where someone may be centered, design developmentally appropriate support, and honor the genuine gifts present at each stage. These descriptions are not rubrics for learners to score themselves, and they are not intended to be shared directly with someone whose current centre of gravity is at the described stage. Unlike the Amber-and-above rows in this map, they carry no assessment function.
+
+**Cross-references:** [MM-01 · Magic/Purple Stage Orientation](../modules/magic-purple-stage-orientation) | [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/magic-mythic-red-stage-orientation)
+
+---
+
+### Magic/Purple — Facilitator Descriptive Reference
+
+**Stage overview:** Purple/Magic is characterized by participatory embeddedness, tribal belonging, animistic world-sensing, and pre-individual identity. The self is not yet clearly differentiated from the group. Meaning is generated through ritual, repetition, and mythic story. Safety is experienced as belonging, and the world is perceived as alive, animated, and interpersonally responsive.
+
+See [MM-01 · Magic/Purple Stage Orientation](../modules/magic-purple-stage-orientation) for the full stage-level account.
+
+#### Quadrant Expression at Magic/Purple
+
+| Quadrant | Characteristic Expression | Facilitation Notes |
+|---|---|---|
+| **I — Interior-Individual** | Self is experienced as inseparable from the tribal field; personal emotion is felt as collective participation rather than individual state. Emotional states are immediate, somatic, and undifferentiated. Fear of separation from the group is the primary interior signal. | Do not ask for individual self-report or introspection in isolation. Embed reflection in collective ritual or shared practice. Emotional vocabulary exercises will not register unless anchored in familiar group context. |
+| **We — Interior-Collective** | Shared meaning is maintained through story, ritual, ancestry, and taboo. Belonging is unconditional within the in-group; difference is experienced as threat or spirit-influence. Dialogue is participatory rather than deliberate. | Build shared ritual before introducing content. Trust is established through demonstrated group membership and repeated relational contact, not through individual competence signaling. |
+| **It — Exterior-Individual** | Action is guided by embodied habit, imitation, and ritual repetition rather than by explicit instruction or deliberate skill-building. The body participates in collective practice before developing individual behavioral protocols. | Skill-building requires embodied imitation within group context. Written or analytic instruction registers poorly; modeling within the group field is the primary learning mechanism. |
+| **Its — Exterior-Collective** | The world is understood as animated and relational: land, ancestors, spirits, weather, and creatures are participants in a shared field. Systems and structures are felt rather than analyzed. | Avoid abstract systems maps or causal analysis. Environmental and collective forces are best approached through story, symbol, and felt sense rather than structural diagrams. |
+
+#### Line Expression at Magic/Purple
+
+| Line | Characteristic Pattern | What Healthy Expression Looks Like |
+|---|---|---|
+| **Cognitive** | Pre-operational to early concrete. Thinking is animistic, analogical, and participatory. Causality is felt through magical association: adjacent things influence each other; the part stands for the whole; the name is the thing. | Strong narrative intelligence; rich metaphorical and symbolic capacity; receptive to learning through story, imitation, and embodied ritual. Formal-logical analysis is not yet available as a mode. |
+| **Emotional** | Emotions are undifferentiated, immediate, and collective. The distinction between "my feeling" and "the group's feeling" is not yet stable. Dysregulation spreads rapidly through the group field. | Co-regulation through physical proximity, shared rhythm, song, and ritual is the primary stabilizing mechanism. Individual affect labeling is not yet reliably accessible; group emotional climate is the functional unit. |
+| **Moral** | Pre-conventional: punishment-and-obedience orientation. Right action is what the group's taboo system permits; wrong action is what the elder or ritual authority prohibits. Moral logic is embedded in story and precedent, not articulated principle. | Moral learning happens through story, example, and felt consequence within the group. Abstract principle-stating is not yet the appropriate instructional medium. |
+| **Interpersonal** | Attachment is primary; relationship is experienced through co-regulation, proximity, and tribal belonging rather than through negotiated exchange or mutual understanding. People outside the group are not yet fully individuated other-subjects. | Relational attunement and physical co-regulation are primary. Trust requires demonstrated loyalty, ritual participation, and felt belonging — not verbal agreement or contractual assurance. |
+| **Somatic** | The body is the primary site of knowing. Somatic states carry meaning before cognitive processing; rhythm, movement, touch, and sensory participation in the environment are the default intelligence channels. | Somatic and movement-based learning is highly appropriate. Body-based group practices (circle, song, dance, breath) are more effective learning vehicles than verbal or written instruction. |
+| **Spiritual/Meaning** | The world is experienced as alive and responsive. Meaning flows through participation with the sacred field — ancestors, spirits, natural forces — rather than through individual reflection or doctrinal study. | Ritual and participatory practice are the meaning-making vehicles. Attempts to intellectualize or systematize this stage's spiritual engagement will be experienced as disconnecting rather than deepening. |
+
+#### State Expression at Magic/Purple
+
+| State Domain | How States Are Typically Accessed and Expressed |
+|---|---|
+| **Gross/Waking** | Somatic presence is high; focused attention as a deliberate individual practice is not yet stable. Group-field attention during ritual is the primary attentional unit. |
+| **Mythic/Imaginal** | Vivid access to mythic and imaginal experience: ancestors, spirits, and animated entities populate the field and are experienced as real participants. Dream and waking experience are not sharply distinguished. |
+| **Contemplative** | Participatory states of merged awareness with the group, the land, or the sacred field are natural. The individual is not yet sufficiently separate from the field to sustain independent contemplative practice as a subject. |
+
+#### Type Modulation at Magic/Purple
+
+Types (introverted/extraverted, structure-seeking/exploratory, etc.) modulate how the above patterns express, but the stage structure takes precedence: individual style variation is secondary to the collective field at this altitude. Facilitators should not draw individual-level type conclusions about a person without first accounting for the stage context.
+
+---
+
+### Magic-Mythic/Red — Facilitator Descriptive Reference
+
+**Stage overview:** Red/Magic-Mythic is characterized by emergent individualism, power-orientation, egocentric exchange, impulsive present-orientation, and heroic self-assertion. The self has differentiated from the tribal field but has not yet organized under an internalized moral code beyond raw power and exchange. Courage, vitality, directness, and honest self-assertion are the genuine gifts of this stage.
+
+See [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/magic-mythic-red-stage-orientation) for the full stage-level account.
+
+#### Quadrant Expression at Magic-Mythic/Red
+
+| Quadrant | Characteristic Expression | Facilitation Notes |
+|---|---|---|
+| **I — Interior-Individual** | Emotions are immediate, intense, and action-generating. Felt sense of personal power is the primary interior organizing signal. Introspection is limited and unstable; SEEKING and RAGE systems are strongly activated. | Introspective formats will not register well unless framed in terms of power, strength, and personal relevance. Use active and embodied reflection rather than written analysis. Avoid requesting vulnerability or nuanced self-appraisal — these require capacities not yet available at this altitude. |
+| **We — Interior-Collective** | Others are sorted rapidly into ally or obstacle, strong or weak. Group membership is primarily strategic. Loyalty extends only as far as power relationships maintain it. Shared meaning is built through shared action and victory, not through dialogue or deliberate inquiry. | Trust is established through demonstrated strength and reliable exchange. Do not expect collaborative inquiry or mutual recognition; structure group activities around shared challenge and clear, immediate feedback. |
+| **It — Exterior-Individual** | Behavior is impulsive, high-intensity, and directly consequence-driven. Skills are acquired rapidly through action, imitation of strong models, and immediate feedback. Long-range behavioral planning is not yet stable. | Immediate feedback loops are essential. Model desired behavior through visibly respected figures. Use short, action-oriented practice sequences. Delayed consequences do not yet function as stable behavioral regulators. |
+| **Its — Exterior-Collective** | Social structures are experienced through dominance hierarchies: who is at the top, what they can take or command, and where one fits in the power order. Collective systems are interpreted through personal power logic rather than procedural or structural understanding. | Power dynamics in any group must be addressed explicitly and honestly. Ignoring hierarchy at this stage produces confusion or covert power-seeking. Name the structure; do not pretend authority is absent. |
+
+#### Line Expression at Magic-Mythic/Red
+
+| Line | Characteristic Pattern | What Healthy Expression Looks Like |
+|---|---|---|
+| **Cognitive** | Early concrete-operational; egocentric perspective; thinking is concrete, action-oriented, and present-tense. Cause-effect is understood when the chain is short and personally felt. Abstract reasoning and coordinated multiple perspectives are not yet stable. | High responsiveness to concrete examples, action-oriented framing, and immediate relevance. Heroic narrative — challenges, victories, and respected exemplars — is the most effective cognitive medium. |
+| **Emotional** | Emotions are intense, immediate, and action-generating. The link between felt state and behavior is short; impulse moves rapidly into action. Emotional differentiation is limited: strong-positive and strong-negative predominate over nuanced mid-range states. | Co-regulation through physical activity, rhythm, and short-cycle challenge-reward sequences is primary. Emotional vocabulary training must be embedded in action contexts. Brief reflection is possible only immediately after a strongly felt event. |
+| **Moral** | Preconventional Stage 2 (Kohlberg): instrumental exchange — "I'll do what helps me, and I'll respect your deal if you hold your end." No stable internalized moral code beyond immediate consequence and power relation. | Moral learning is best embedded in visible consequence and fair exchange. Abstract moral principles do not yet motivate behavior. Honest acknowledgment of the person's own standards — even if purely self-interested — is more effective than imposing external ethical frameworks prematurely. |
+| **Interpersonal** | Relationships are transactional: others are allies, obstacles, or resources. Trust is built through demonstrated strength and reliable exchange. Empathy for others' inner states is not yet load-bearing; perspective-taking is available only when self-interest is served. | Relational engagement works best when framed around respect and mutual benefit. Do not expect perspective-taking as a primary motivational lever. Respect is the primary trust currency — honor it and it will be reciprocated within the stage's logic. |
+| **Somatic** | High bodily arousal, vitality, and intensity. The body is the primary site of power and agency. Somatic states are strong signals that move rapidly into action. Slow, long-cycle somatic awareness practices are poorly tolerated. | Short, high-intensity movement and breath practices are well received. Somatic intelligence is strong; redirect it rather than suppress it. Grounding practices that connect bodily intensity to felt consequence (not suppression) are the most effective entry points. |
+| **Spiritual/Meaning** | Meaning is generated through heroic action, conquest, and felt power. The sacred is represented by warriors, heroes, and gods of power and victory. Ritual has meaning when it confers or demonstrates strength. | Heroic narrative and embodied challenge are the most accessible meaning-making vehicles. Contemplative or surrender-oriented practices are poorly tolerated at this altitude; strength-honoring and courage-celebrating frames are more resonant. |
+
+#### State Expression at Magic-Mythic/Red
+
+| State Domain | How States Are Typically Accessed and Expressed |
+|---|---|
+| **Gross/Waking** | High physiological arousal and vitality; high-intensity action states predominate. Focused, deliberate attention is available in short bursts when the task is personally relevant and immediately rewarding. |
+| **Mythic/Imaginal** | The imaginal field is populated by heroic figures, enemies, and powerful forces. Peak experiences at this altitude are often felt as direct power encounters — epiphanies of strength, victory, or invincibility — rather than as merged or compassionate states. |
+| **Contemplative** | Sustained stillness and open-monitoring practices are poorly tolerated at this altitude. Brief body-based grounding practices (breath, movement, sensation check) are more accessible and appropriate than extended contemplative sessions. |
+
+#### Type Modulation at Magic-Mythic/Red
+
+Types modulate the expression of Red's characteristic patterns without changing the stage logic: an introverted Red may express power through strategic withdrawal and stealth rather than direct confrontation; an extraverted Red will express it loudly and socially. Structure-seeking Reds channel power through hierarchy and clear command; exploratory Reds express it through improvisation and unpredictability. Facilitators should read type modulation carefully to avoid misreading a quiet or strategic power expression as evidence of a different stage.
 
 ---
 

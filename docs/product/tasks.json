@@ -1,0 +1,97 @@
+{
+  "skill": "plan",
+  "status": "pass",
+  "scope": "product",
+  "source": "docs/product/discovery-draft.md, docs/product/specification.md, docs/product/design.md",
+  "tasks": [
+    {
+      "id": "prod-01",
+      "title": "Wire accessibility audits into CI",
+      "type": "ci-config",
+      "agent": "ux-frontend",
+      "estimated_lines": 30,
+      "dependencies": [],
+      "skills": ["accessibility-checker", "gitops"],
+      "acceptance_criteria": [
+        "AC-01: ci-quality.yml runs scripts/audit-a11y.mjs and/or scripts/lighthouse-audit.mjs against a built/served site",
+        "AC-02: A failing WCAG 2.1 AA check fails the CI job, not just logs a warning",
+        "AC-03: Change is proposed as its own PR per gitops skill's CI-policy-change rule, not bundled into an unrelated change"
+      ],
+      "test_type": "ci"
+    },
+    {
+      "id": "prod-02",
+      "title": "Audit all docs/quickstarts/*.mdx against quickstart-validator checks",
+      "type": "audit",
+      "agent": "audit",
+      "estimated_lines": 0,
+      "dependencies": [],
+      "skills": ["quickstart-validator"],
+      "acceptance_criteria": [
+        "AC-01: Every QuickStart's module links resolve",
+        "AC-02: Every QuickStart's referenced modules carry stage/line tags consistent with the QuickStart's stated audience",
+        "AC-03: Findings reported as a gap report, not silently auto-fixed, per the audit agent's role"
+      ],
+      "test_type": "manual-review"
+    },
+    {
+      "id": "prod-03",
+      "title": "Audit module stage/line/tier tags against aqal-competency-map.md",
+      "type": "audit",
+      "agent": "audit",
+      "estimated_lines": 0,
+      "dependencies": [],
+      "skills": ["aqal-tagger", "safety-classification"],
+      "acceptance_criteria": [
+        "AC-01: Every module's stage/line tags reflect its actual content per aqal-tagger's classification method",
+        "AC-02: Any module spanning two stages' worth of content is flagged for a split decision, not silently dual-tagged",
+        "AC-03: Findings reported as a gap report for human review before any re-tagging PR"
+      ],
+      "test_type": "manual-review"
+    },
+    {
+      "id": "prod-04",
+      "title": "Resolve placement-accuracy feedback-loop gap (design.md open question)",
+      "type": "discovery",
+      "agent": "discover",
+      "estimated_lines": 0,
+      "dependencies": ["prod-02", "prod-03"],
+      "skills": [],
+      "acceptance_criteria": [
+        "AC-01: Either a qualitative (pilot/facilitator feedback) or architectural (server-side, with its own discovery pass) mitigation is chosen and documented",
+        "AC-02: Decision recorded in docs/product/design.md's Open Architectural Questions section",
+        "AC-03: If a server-side component is chosen, it is scoped as its own docs/features/<slug>/ entry, not folded into this task"
+      ],
+      "test_type": "manual-review"
+    },
+    {
+      "id": "prod-05",
+      "title": "Reconcile ARCHITECTURE.md's module/quickstart counts with actual repo state",
+      "type": "docs-fix",
+      "agent": "content-authoring",
+      "estimated_lines": 5,
+      "dependencies": [],
+      "skills": ["architecture"],
+      "acceptance_criteria": [
+        "AC-01: Counts in ARCHITECTURE.md match `find docs/modules -name '*.md*' | wc -l` and `ls docs/quickstarts | wc -l` at time of edit",
+        "AC-02: npm run build passes"
+      ],
+      "test_type": "build"
+    }
+  ],
+  "dependency_graph": {
+    "nodes": ["prod-01", "prod-02", "prod-03", "prod-04", "prod-05"],
+    "edges": [
+      {"from": "prod-02", "to": "prod-04"},
+      {"from": "prod-03", "to": "prod-04"}
+    ]
+  },
+  "summary": {
+    "total_tasks": 5,
+    "total_estimated_lines": 35,
+    "critical_path": ["prod-02", "prod-04"],
+    "parallel_opportunities": ["prod-01", "prod-02", "prod-03", "prod-05"],
+    "skills_used": ["accessibility-checker", "gitops", "quickstart-validator", "aqal-tagger", "safety-classification", "architecture"],
+    "note": "Each task here is product-level and roadmap-shaped. A task graduates to its own docs/features/<slug>/ entry once picked up by feature-flow, per docs/product/README.md."
+  }
+}

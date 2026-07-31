@@ -25,7 +25,7 @@ const config = {
         ignoreFiles: [
           /docs\/features\//,
           /internal\//,
-          /COPILOT_COST_GUIDE/,
+          /AI_COST_GUIDE/,
           /MODEL_ROUTING_GUIDE/,
         ],
       }),

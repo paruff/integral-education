@@ -88,7 +88,7 @@ fi
 
 output_file=/tmp/token-audit-output-$$.txt
 {
-  echo "Copilot Always-On Token Audit"
+  echo "AI Assistant Always-On Token Audit"
   echo "Repo: $REPO_ROOT"
   echo "Date: $(date -u '+%Y-%m-%dT%H:%M:%SZ')"
   echo

@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T13:25:17.525Z",
+  "generated": "2026-07-26T22:05:18.065Z",
   "totalModules": 77,
   "totalEdges": 163,
   "stats": {
@@ -82,8 +82,7 @@
         "tier-2",
         "interoception",
         "affect-labelling",
-        "emotion-regulation",
-        "--"
+        "emotion-regulation"
       ],
       "goldStandardSections": 17,
       "hasAQAL": true,
@@ -95,7 +94,7 @@
     },
     {
       "id": "amber-mythic-orientation",
-      "title": "Amber/Mythic Stage Orientation",
+      "title": "Orientation: Values, Belonging, and Structure",
       "file": "docs/modules/amber-mythic-orientation.mdx",
       "stage": "Amber",
       "stageTarget": "Amber",
@@ -174,7 +173,7 @@
     },
     {
       "id": "authority-autonomy-transition",
-      "title": "Authority & Autonomy: The Amber → Rational Developmental Arc",
+      "title": "Authority and Autonomy: Learning to Think for Yourself",
       "file": "docs/modules/authority-autonomy-transition.mdx",
       "stage": "Amber → Rational",
       "stageTarget": "Amber → Rational",
@@ -1187,7 +1186,7 @@
     },
     {
       "id": "integral-ethics-beyond-relativism",
-      "title": "Integral Ethics: Beyond Relativism & Universalism",
+      "title": "Ethics Beyond Relativism and Universalism",
       "file": "docs/modules/integral-ethics-beyond-relativism.mdx",
       "stage": "Pluralistic → Integral",
       "stageTarget": "Pluralistic → Integral",
@@ -1233,7 +1232,7 @@
     },
     {
       "id": "integral-life-practice-embodying-2nd-tier",
-      "title": "Integral Life Practice: Embodying 2nd Tier",
+      "title": "Whole-Person Practice for Complex Times",
       "file": "docs/modules/integral-life-practice-embodying-2nd-tier.mdx",
       "stage": "Pluralistic → Integral",
       "stageTarget": "Pluralistic → Integral",
@@ -1283,7 +1282,7 @@
     },
     {
       "id": "integral-shadow-teal-trap",
-      "title": "Integral Shadow: The Teal Trap",
+      "title": "The Trap of Believing You''ve Arrived",
       "file": "docs/modules/integral-shadow-teal-trap.mdx",
       "stage": "Pluralistic → Integral",
       "stageTarget": "Pluralistic → Integral",
@@ -1331,7 +1330,7 @@
     },
     {
       "id": "integral-teal-orientation",
-      "title": "Integral/Teal Stage Orientation",
+      "title": "Orientation: Systems, Complexity, and Integration",
       "file": "docs/modules/integral-teal-orientation.mdx",
       "stage": "Teal",
       "stageTarget": "Teal",
@@ -1414,7 +1413,7 @@
     },
     {
       "id": "late-green-emergence-signals",
-      "title": "Late-Green Emergence Signals — Recognizing the Edge of Pluralism",
+      "title": "Signs You''re Ready for More Complexity",
       "file": "docs/modules/late-green-emergence-signals.mdx",
       "stage": "Green",
       "stageTarget": "Green",
@@ -1461,7 +1460,7 @@
     },
     {
       "id": "late-orange-disillusionment",
-      "title": "Late Orange Disillusionment — Navigating the Crack",
+      "title": "When Effectiveness Isn''t Enough: Navigating the Crack",
       "file": "docs/modules/late-orange-disillusionment.mdx",
       "stage": "Orange",
       "stageTarget": "Orange",
@@ -1500,7 +1499,7 @@
     },
     {
       "id": "magic-mythic-red-stage-orientation",
-      "title": "Magic-Mythic/Red Stage Orientation",
+      "title": "Orientation: Power, Impulse, and Self-Assertion",
       "file": "docs/modules/magic-mythic-red-stage-orientation.md",
       "stage": "Red",
       "stageTarget": "Red",
@@ -1538,7 +1537,7 @@
     },
     {
       "id": "magic-purple-stage-orientation",
-      "title": "Magic/Purple Stage Orientation",
+      "title": "Orientation: Patterns, Ritual, and Protection",
       "file": "docs/modules/magic-purple-stage-orientation.mdx",
       "stage": "Unknown",
       "stageTarget": "Purple",
@@ -1678,7 +1677,7 @@
     },
     {
       "id": "moral-line-imagination-integral-ethics",
-      "title": "Moral Line — Moral Imagination & Integral Ethics",
+      "title": "Moral Line — Moral Imagination and Ethics Beyond Rules",
       "file": "docs/modules/moral-line-imagination-integral-ethics.mdx",
       "stage": "Unknown",
       "stageTarget": "Postconventional → Integral",
@@ -2010,7 +2009,7 @@
     },
     {
       "id": "pluralistic-green-orientation",
-      "title": "Pluralistic/Green Stage Orientation",
+      "title": "Orientation: Pluralism, Empathy, and Belonging",
       "file": "docs/modules/pluralistic-green-orientation.mdx",
       "stage": "Green",
       "stageTarget": "Green",
@@ -2050,7 +2049,7 @@
     },
     {
       "id": "rational-orange-orientation",
-      "title": "Rational/Orange Stage Orientation",
+      "title": "Orientation: Reason, Achievement, and Effectiveness",
       "file": "docs/modules/rational-orange-orientation.mdx",
       "stage": "Orange",
       "stageTarget": "Orange",
@@ -2810,7 +2809,7 @@
     },
     {
       "id": "spiritual-line-mythic-to-rational",
-      "title": "Spiritual Line — Mythic-Literal to Rational (Fowler Stages 2–4)",
+      "title": "Spiritual Line — From Literal Belief to Reasoned Faith",
       "file": "docs/modules/spiritual-line-mythic-to-rational.mdx",
       "stage": "Amber → Rational (Fowler Stages 2–4)",
       "stageTarget": "Amber → Rational (Fowler Stages 2–4)",
@@ -2895,7 +2894,7 @@
     },
     {
       "id": "spiritual-line-post-metaphysical-integral-religion",
-      "title": "Post-Metaphysical Spirituality & Integral Religion",
+      "title": "Post-Metaphysical Spirituality: Faith Beyond Literal Metaphysics",
       "file": "docs/modules/spiritual-line-post-metaphysical-integral-religion.mdx",
       "stage": "Rational/Orange → Integral/Teal (Spiritual line post-conventional)",
       "stageTarget": "Rational/Orange → Integral/Teal (Spiritual line post-conventional)",

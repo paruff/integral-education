@@ -314,6 +314,14 @@ Carry the orientation from this module into your daily context:
 
 ---
 
+## 🗺️ Facilitator Reference
+
+Facilitators supporting learners at or near this stage will find descriptive patterns organized by AQAL dimension (quadrants, lines, states, types) in the **AQAL Competency Map**. The Magic-Mythic/Red section there is a **facilitator-reference tool only** — not a self-assessment rubric — and includes facilitation notes for each dimension.
+
+→ [AQAL Competency Map — Magic-Mythic/Red Facilitator Reference](../maps/aqal-competency-map#magic-mythicred--facilitator-descriptive-reference)
+
+---
+
 ## ⏱️ Retrieval Schedule
 
 | Interval | Activity |

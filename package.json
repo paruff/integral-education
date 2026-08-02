@@ -30,7 +30,7 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/types": "3.10.2",
-    "@easyops-cn/docusaurus-search-local": "^0.55.2",
+    "@easyops-cn/docusaurus-search-local": "^0.55.3",
     "canvas": "^3.2.3",
     "lefthook": "^2.1.10",
     "lighthouse": "^13.4.0",

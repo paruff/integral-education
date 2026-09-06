@@ -34,7 +34,7 @@
     "canvas": "^3.2.3",
     "lefthook": "^2.1.12",
     "lighthouse": "^13.4.0",
-    "puppeteer": "^25.9.0"
+    "puppeteer": "^25.10.0"
   },
   "browserslist": {
     "production": [

@@ -7,6 +7,8 @@ tags: [implementation, backlog, roadmap]
 
 ## Integral Platform Backlog
 
+> **Superseded 2026-10-02** by `docs/product/plan.md`, the single product plan. Open items from this file were carried there. Kept for history; do not add new items here.
+
 This backlog is designed so Copilot can implement technical and documentation items directly, while clearly flagging work that requires human judgment, facilitation, ethics review, or participant operations.
 
 ## Tag Legend

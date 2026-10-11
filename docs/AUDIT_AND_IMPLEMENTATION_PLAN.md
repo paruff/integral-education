@@ -6,6 +6,8 @@ description: Point-in-time audit of the integral-education platform (main, 2026-
 
 # Repo Audit & Implementation Plan
 
+> **Superseded 2026-10-02** by `docs/product/plan.md`, the single product plan. Open items from this file were carried there. Kept for history; do not add new items here.
+
 > **Point in time:** `main` @ commit `e8970a1` (2026-07-26), 77 modules / 13 QuickStarts.
 > Method: direct inspection of scripts, CI config, and a fresh re-run of
 > `scripts/validate-frontmatter.js` and `scripts/generate-content-graph.js`

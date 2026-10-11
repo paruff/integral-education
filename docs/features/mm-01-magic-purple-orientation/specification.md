@@ -31,4 +31,4 @@ Per MM-00 decision: **hybrid framing** — educational/facilitator-oriented cont
 9. Evidence: minimum 6 citations; minimum 4 Tier A or B; all Tier C tagged with caveat; polyvagal cited at Tier B with contested-mechanisms caveat
 10. Safety Note classifed Tier 1; no therapeutic outcome claims; "educational, not therapeutic" stated
 11. `npm run build` passes (Docusaurus v3 build, no warnings for this module)
-12. Module registered in sidebar (if new file path not auto-resolved)D
+12. Module registered in sidebar (if new file path not auto-resolved)

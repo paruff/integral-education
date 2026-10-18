@@ -20,6 +20,7 @@ practiceTime: 10
 line: emotional
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import Admonition from '@theme/Admonition';
 
@@ -214,6 +215,8 @@ Finally, this awareness extends outward: recognizing that other people are runni
 
 **Proficient:** Can trace the complete ABC chain from a live emotional reaction in real time, generate genuinely distinct alternative appraisals, and distinguish appraisal revision from intellectualized emotional bypass.
 
+**Passing threshold:** *Proficient*: you have traced at least two full ABC chains from your own live reactions, each with a genuinely different alternative appraisal.
+
 This module supplies the appraisal-theory grounding that the reappraisal strategies in [Emotion Regulation Foundations](./emotion-regulation-foundations) depend on — regulation without appraisal awareness risks becoming technique without understanding.
 
 ---
@@ -230,6 +233,17 @@ This module supplies the appraisal-theory grounding that the reappraisal strateg
 ---
 
 ## 🧠 Knowledge Retention & Retrieval
+
+<RetrievalPrompt moduleName="EI-05 · Emotional Appraisal & Meaning-Making" cards={[
+  {q: "What is the **ABC chain**, and why does changing B matter?", a: "Activating Event (A), Belief/Appraisal (B), Emotional Consequence (C). Because C follows from B rather than directly from A, changing the appraisal can shift the emotion even when the event cannot be changed."},
+  {q: "How does Lazarus's **primary appraisal** differ from **secondary appraisal**?", a: "Primary appraisal asks whether the event is relevant to your goals, safety or well-being, which sets the initial emotional valence. Secondary appraisal asks what coping resources you have, which modulates intensity, for example challenge-anxiety versus threat-anxiety."},
+  {q: "How does **catastrophizing** differ from **fortune-telling**?", a: "Catastrophizing treats a setback as the worst possible outcome. Fortune-telling predicts a negative future outcome as certain when the evidence is genuinely uncertain."},
+  {q: "A friend has not replied, and you tell yourself they must be annoyed with you. Which distortion is this, and what would you do next?", a: "Mind-reading: assuming you know someone's thoughts without sufficient evidence. Keep A identical and write alternative appraisals through the objective, growth and perspective lenses, then note how each changes the emotion at C."},
+  {q: "How would an Achiever and a Strategist each tend to appraise critical feedback on a project?", a: "Achiever: as a threat to performance metrics and status. Strategist: as a question of what it reveals about the system and which perspective is missing. These are idealized signatures and a diagnostic lens, not a hierarchy of correctness."},
+  {q: "What is the **appraisal-regulation loop**, and when does somatic regulation come first?", a: "Changing B shifts C, and the shifted emotion alters attention and the next appraisal, so the process is recursive. When activation is high, somatic tools such as breathing or movement can settle you into the window of tolerance so a fresh appraisal becomes accessible."},
+  {q: "How does valid reappraisal differ from **reality denial**?", a: "Valid reappraisal finds a genuinely present dimension of the event that was previously unweighted; it does not fabricate a more comfortable story or deny harm. If the alternatives feel forced or dishonest, the original appraisal may be accurate and calls for acknowledgement and adaptive coping."},
+  {q: "Self-check: in your last ABC analysis, were you trying to understand the emotion or dismiss it?", a: "If you concluded that your appraisal was irrational so you should not feel this, you slipped into intellectualisation. Emotions that survive careful review are still valid signals that deserve acknowledgement before any regulation attempt."},
+]} />
 
 ## ⏱️ Retrieval Schedule
 

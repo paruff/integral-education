@@ -1,6 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import RetrievalCard from '@site/src/components/RetrievalCard';
 import Link from '@docusaurus/Link';
+import { useLocation } from '@docusaurus/router';
 import useProgress from '@site/src/hooks/useProgress';
 import { slugifyModuleName } from '@site/src/utils/retrieval';
 import styles from './styles.module.css';
@@ -15,7 +16,10 @@ function formatDueDate(isoDateString) {
 
 export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
   const { data, recordRetrievalReview } = useProgress();
-  const resolvedModuleId = moduleId || slugifyModuleName(moduleName);
+  // Key reviews by the module's URL segment so "Due for review" links
+  // (/docs/modules/<id>) resolve; a slug of moduleName often differs.
+  const pageId = useLocation().pathname.match(/\/docs\/modules\/([^/]+)/)?.[1];
+  const resolvedModuleId = moduleId || pageId || slugifyModuleName(moduleName);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [scores, setScores] = useState([]);
 
@@ -44,7 +48,7 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
   // Persist the spaced-retrieval schedule once the review finishes.
   React.useEffect(() => {
     if (completed) {
-      recordRetrievalReview(resolvedModuleId, moduleName);
+      recordRetrievalReview(resolvedModuleId, moduleName, cards);
     }
     // Only fire once, right when `completed` flips true.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -101,6 +105,7 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
         key={currentIndex}
         question={currentCard.q}
         answer={currentCard.a}
+        criteria={currentCard.criteria}
         cardNumber={currentIndex + 1}
         totalCards={totalCards}
         onComplete={handleCardComplete}

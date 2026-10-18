@@ -36,9 +36,25 @@ pre-commit:
         - rebase
       priority: 2
 
+    unit-tests:
+      tags: [core, quality]
+      run: npm test
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
     frontmatter-format:
       tags: [content, validation]
       run: node scripts/validate-frontmatter.js
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
+    retention-check:
+      tags: [content, quality]
+      run: node scripts/check-retention.mjs
       skip:
         - merge
         - rebase

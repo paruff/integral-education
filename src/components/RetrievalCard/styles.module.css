@@ -117,3 +117,48 @@
   font-weight: 600;
   margin-top: 0.75rem;
 }
+
+.attemptLabel {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+.attempt {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--ifm-color-emphasis-400);
+  border-radius: 0.5rem;
+  font: inherit;
+  background: var(--ifm-background-color);
+  color: inherit;
+}
+
+.attempt:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+.yourAnswer {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  padding: 1rem;
+  border: 1px dashed var(--ifm-color-emphasis-400);
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.criteria {
+  margin-bottom: 1rem;
+}
+
+.criteria ul {
+  margin: 0.4rem 0 0;
+}
+
+.compareHint {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+}

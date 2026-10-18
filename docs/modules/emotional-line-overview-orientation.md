@@ -256,7 +256,7 @@ The psychograph lens — locating the Emotional line against Self, Cognitive, an
 
 ---
 
-<RetrievalPrompt moduleName="Emotional Line Overview & Orientation" cards={
+<RetrievalPrompt moduleName="Emotional Line Overview & Orientation" cards={[
   {q: "In AQAL, what does the Emotional line primarily track?", a: "The development of affective complexity: differentiating, regulating, communicating, and integrating emotional experience with increasing precision."},
   {q: "How is the Emotional line different from mood?", a: "Mood is a diffuse background affective climate; the Emotional line is a developmental capacity trajectory."},
   {q: "What is the plain-language core of Barrett's constructed emotion theory?", a: "Emotions are predictions constructed from body signals, prior experience, context, and learned concepts, not fixed hardwired packets."},
@@ -267,7 +267,7 @@ The psychograph lens — locating the Emotional line against Self, Cognitive, an
   {q: "What defines L4 Emotional line capacity?", a: "Co-regulation and facilitation: helping others and groups regulate and integrate emotional dynamics."},
   {q: "What is a key pre/trans confusion in this module?", a: "Intellectual mastery of affective theory being mistaken for emotional development."},
   {q: "What is the difference between suppression and regulation?", a: "Suppression narrows awareness and often increases load; regulation modulates emotion while preserving awareness and adaptive function."}
-} />
+]} />
 
 ## 📚 Evidence and Citations
 

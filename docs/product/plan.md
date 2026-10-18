@@ -50,7 +50,7 @@ close it.
 
 | ID | Task | Files | Proof | Depends |
 | --- | --- | --- | --- | --- |
-| P2-01 | Add `<RetrievalPrompt>` to the 18 modules missing it, plus a check script that fails CI if any module lacks it (FR-04) | 18 modules, `scripts/`, `ci-quality.yml` | 77/77; check in CI | — |
+| P2-01 | Add `<RetrievalPrompt>` to the 19 modules missing it and fix the 50 whose `cards` lacked `[ ]`, plus a check script that fails CI if any module lacks it (FR-04). Done in one PR with P2-05 (same files, same check) | 69 modules, `scripts/check-retention.mjs`, `ci-quality.yml` | 77/77; check in CI | — |
 | P2-02 | Calibration: `RetrievalCard` shows a model answer or criteria before the learner self-rates (FR-10) | `src/components/RetrievalCard/` | Component test | — |
 | P2-03 | Interleaved review: the due-review list mixes cards across modules within a pathway (FR-05). Check current behavior first and change only if needed | `src/components/RetrievalPrompt/`, `src/hooks/useProgress.js` | Test with cards from 3 modules | — |
 | P2-04 | Learner can view and clear local learning data (NFR-05) | `useProgress`, `docs/my-progress.mdx` | Unit test on reset | — |

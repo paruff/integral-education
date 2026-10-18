@@ -114,6 +114,8 @@ As you begin mapping, expect the system to look messier and more interconnected 
 | 3 | Maps complex systems with multiple loops and delays |
 | 4 | Uses systems maps to design interventions and anticipate consequences |
 
+**Passing threshold:** Level 3: you have mapped a real system you are part of, with at least two feedback loops and one delay.
+
 ---
 
 ## The Gifts of Systems Thinking
@@ -166,12 +168,12 @@ This module involves analytical reflection and mapping of systems you are part o
 - If mapping a family or relationship system surfaces genuine distress, follow the Safety Note: pause the analytical exercise and check in directly.
 </Admonition>
 
-<RetrievalPrompt moduleName="Systems Thinking 101" cards={
+<RetrievalPrompt moduleName="Systems Thinking 101" cards={[
   {q: "What is a feedback loop?", a: "A causal chain where output becomes input, either reinforcing or balancing the system"},
   {q: "What is emergence in systems thinking?", a: "Properties that arise from the interaction of parts and cannot be reduced to any single part"},
   {q: "What is a leverage point?", a: "A place in a system where small changes produce large effects"},
   {q: "What is the difference between a reinforcing and balancing loop?", a: "Reinforcing loops amplify change (growth or collapse); balancing loops stabilize the system toward a goal"}
-} />
+]} />
 
 ## ⏱️ Retrieval Schedule
 

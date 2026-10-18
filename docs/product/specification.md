@@ -118,8 +118,9 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
   It schedules later reviews in the learner's browser (`localStorage` via
   `useProgress`), and due reviews appear on the progress page. The old text
   said "sessionStorage only", which no longer matches the live component.
-  *Acceptance:* 77/77 modules (today 59/77). A check script fails CI if any
-  module is missing it.
+  *Acceptance:* 77/77 modules render a working prompt (on 2026-10-18 only
+  8/77 did: 19 had none and 50 passed `cards` without `[ ]`, which renders
+  nothing). `scripts/check-retention.mjs` fails CI if any module is missing it.
 - **FR-08 — Generation.** Each module opens with one or two questions the
   learner tries to answer before reading. The module then returns to them.
   *Acceptance:* `module-authoring` checklist.

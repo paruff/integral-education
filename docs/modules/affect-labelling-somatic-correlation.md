@@ -256,6 +256,17 @@ Use this rubric after completing the practice. It is for honest self-assessment 
 **Q:** What is the pre/trans fallacy as it applies to affect labelling?
 **A:** Mistaking cognitive labelling for emotional regulation. Labelling creates the reflective space for regulation but is not regulation itself. An emotion can be precisely named while still held in the body as residual tension or autonomic activation.
 
+<RetrievalPrompt moduleName="Affect Labelling & Somatic Correlation" cards={[
+  {q: "What is **affect labelling**, and what does it do in the brain?", a: "Affect labelling is putting feelings into words. Naming an emotion engages the right ventrolateral prefrontal cortex (RVLPFC), which inhibits the amygdala's threat response, so emotional reactivity drops."},
+  {q: "How does affect labelling differ from **cognitive reappraisal**?", a: "Affect labelling names the emotion without changing what you think about the situation. Reappraisal reinterprets the situation to change its emotional impact. They are distinct processes."},
+  {q: "In Damasio's somatic marker hypothesis, what are **somatic markers**?", a: "Measurable body responses to a significant stimulus (heart rate, vascular constriction, gut motility, muscle tone) that bias decisions before conscious thinking engages. In this module they are the raw data that affect labelling makes conscious."},
+  {q: "Why does Barrett's constructed emotion theory make labelling formative rather than merely descriptive?", a: "The brain constructs an emotion by combining interoceptive signals with learned emotion concepts and context. So the label you apply helps shape what the emotion becomes, rather than just naming something already fixed."},
+  {q: "You have three candidate labels for a tightness in your chest. How does the protocol say to choose the most accurate one?", a: "Pick the label that, when you say it to yourself, produces a subtle body shift: a release, a confirmation, or a deeper settling. That somatic yes is the criterion, not which label is most comfortable or cognitively convenient."},
+  {q: "Why is believing that labelling an emotion means you have regulated it a pre/trans error?", a: "Labelling is a precursor to regulation: it creates reflective space in which regulation can happen. An emotion can be precisely named while still held in the body as residual tension, breath constriction or autonomic activation."},
+  {q: "Someone rapidly names every emotional flicker but seems to stay in their head. Which shadow is this, and what safeguard does the practice build in?", a: "Labelling as avoidance: the label becomes a shield rather than a bridge. The safeguard is to always pair the label with a somatic check, naming the emotion and feeling where it lives in the body."},
+  {q: "Self-check: are you more somatic-first or label-first, and what is your next step?", a: "Compare Step 4 (sensory description) with Step 5 (labelling): whichever came less easily is the side to practise. If a region felt blank or numb, note that too, since blankness is also somatic information."},
+]} />
+
 ## Retrieval Schedule
 
 | Interval | Activity |

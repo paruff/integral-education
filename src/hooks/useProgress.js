@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
-import { markIntervalComplete, isDue } from '@site/src/utils/retrieval';
+import { markIntervalComplete, isDue, interleaveDueCards } from '@site/src/utils/retrieval';
+import { clearLearnerData } from '@site/src/utils/learnerData';
 
 const STORAGE_KEY = 'iel_progress_v1';
 
@@ -26,6 +27,13 @@ function loadFromStorage() {
     // Private browsing or storage unavailable
     return null;
   }
+}
+
+// Several components each hold their own useProgress state. Writes start from
+// what is in storage now, so one component can't overwrite another's changes
+// (e.g. marking a module complete wiping the review schedule).
+export function latest(prev) {
+  return loadFromStorage() || prev || { ...DEFAULT_DATA };
 }
 
 function saveToStorage(data) {
@@ -55,7 +63,7 @@ export default function useProgress() {
   const updateModule = useCallback((moduleId, updates) => {
     const now = new Date().toISOString();
     setData((prev) => {
-      const current = prev || { ...DEFAULT_DATA };
+      const current = latest(prev);
       const newData = {
         ...current,
         modules: {
@@ -81,13 +89,10 @@ export default function useProgress() {
     [safeData]
   );
 
+  // Clears every learner key (progress, review schedule, reflections).
   const clear = useCallback(() => {
-    setData({ ...DEFAULT_DATA, lastUpdated: new Date().toISOString() });
-    try {
-      localStorage.removeItem(STORAGE_KEY);
-    } catch {
-      // Ignore
-    }
+    setData({ ...DEFAULT_DATA });
+    clearLearnerData(localStorage);
   }, []);
 
   const getDaysSinceLastActivity = useCallback(() => {
@@ -105,7 +110,7 @@ export default function useProgress() {
   const updateLineProfile = useCallback((profile) => {
     const now = new Date().toISOString();
     setData((prev) => {
-      const current = prev || { ...DEFAULT_DATA };
+      const current = latest(prev);
       const newData = {
         ...current,
         lineProfile: profile,
@@ -118,12 +123,17 @@ export default function useProgress() {
 
   const hasLineProfile = safeData.lineProfile !== null;
 
-  const recordRetrievalReview = useCallback((moduleId, moduleName) => {
+  // cards are kept so due reviews can be mixed across modules (getMixedReview).
+  const recordRetrievalReview = useCallback((moduleId, moduleName, cards) => {
     const now = new Date().toISOString();
     setData((prev) => {
-      const current = prev || { ...DEFAULT_DATA };
+      const current = latest(prev);
       const priorEntry = (current.retrievalSchedule || {})[moduleId];
-      const nextEntry = { ...markIntervalComplete(priorEntry), moduleName };
+      const nextEntry = {
+        ...markIntervalComplete(priorEntry),
+        moduleName,
+        cards: cards ?? priorEntry?.cards,
+      };
       const newData = {
         ...current,
         retrievalSchedule: {
@@ -144,6 +154,11 @@ export default function useProgress() {
       .map(([moduleId, entry]) => ({ moduleId, moduleName: entry.moduleName, nextDueDate: entry.nextDueDate }));
   }, [safeData]);
 
+  const getMixedReview = useCallback(
+    () => interleaveDueCards(safeData.retrievalSchedule),
+    [safeData]
+  );
+
   return {
     data: safeData,
     isAvailable,
@@ -155,6 +170,7 @@ export default function useProgress() {
     updateLineProfile,
     recordRetrievalReview,
     getDueReviews,
+    getMixedReview,
     hasLineProfile,
   };
 }

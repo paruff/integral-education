@@ -259,6 +259,8 @@ Use this five-point scale to self-assess your current capacity in each area:
 | **NVC first-person accuracy** | I struggle to separate observation from interpretation, or to identify what I actually felt and needed | I can apply the four NVC components in reflection; accuracy is partial | I can identify observation, feeling, need, and request reliably in reflection, and increasingly in real time |
 | **Power-asymmetric repair** | I have not considered how power dynamics shape conflict navigation | I can identify power asymmetries but find them difficult to name in conflict contexts | I can hold power-asymmetric awareness in repair conversations and adapt my approach accordingly |
 
+**Passing threshold:** 3 or higher on at least four of the five capacities, including **Accountability specificity**.
+
 ---
 
 ## 🔄 Integrate
@@ -286,7 +288,7 @@ This module's practices prepare the *interior* of repair — the self-awareness 
 
 ---
 
-<RetrievalPrompt moduleName="EI-10 · Relational Repair & Conflict Navigation" cards={
+<RetrievalPrompt moduleName="EI-10 · Relational Repair & Conflict Navigation" cards={[
   {q: "What is the central claim of the rupture-and-repair model of relational trust development?", a: "Relational trust is built not by continuous attunement but by the repeated cycle of misattunement → distress → repair. It is the experience of rupture being survived and resolved that builds deep relational resilience — not the avoidance of rupture."},
   {q: "Name Gottman's Four Horsemen in order of increasing lethality to relationships.", a: "Criticism, defensiveness, stonewalling, contempt — with contempt identified as the most predictive of relationship dissolution because it communicates fundamental disrespect for the other person's worth."},
   {q: "What is a repair attempt, and what makes it effective according to Gottman's research?", a: "A repair attempt is any verbal or nonverbal action that interrupts conflict escalation and invites de-escalation — from \"I need a break\" to a shared joke. Effectiveness depends less on the sophistication of the attempt than on the partner's willingness to accept it, which in turn reflects the overall positive-to-negative ratio (5:1) of the relationship."},
@@ -297,7 +299,7 @@ This module's practices prepare the *interior* of repair — the self-awareness 
   {q: "What does Amy Edmondson's psychological safety research identify as the relational and organisational precondition for repair attempts?", a: "Interpersonal risk-taking — including initiating repair — requires perceived psychological safety: the shared belief that the environment will not punish vulnerability, honest communication, or raising concerns. In low-safety environments, repair attempts carry asymmetric risk that particularly affects those with less institutional power."},
   {q: "How do power dynamics create asymmetry in conflict navigation across role, developmental stage, and social identity?", a: "Lower-power parties face material stakes that higher-power parties do not (job security, belonging, social consequences). Stage asymmetry can produce pseudo-resolution where the lower-stage person accommodates rather than genuinely repairs. Social identity asymmetry means parties from historically marginalised groups carry systemic risk that predates the specific conflict. Ethical repair requires awareness of who has more to lose and whose courage repair initiation requires."},
   {q: "Why is NVC described as a practical repair *tool* rather than a developmental framework?", a: "NVC provides a structured communication format (observation / feeling / need / request) that reduces blame and increases first-person accuracy. It does not map to any AQAL stage and can be used at any altitude — though its effectiveness depends on genuine self-knowledge and presence rather than syntactic correctness. It is most useful as a preparation tool before a repair conversation, not as a real-time script."}
-} />
+]} />
 
 ## ⏱️ Retrieval Schedule
 

@@ -123,6 +123,8 @@ As you sit with the instructions below, expect the mind to wander — often, and
 | 3 | Sustains focused attention for 5+ minutes . *Example: "I sat for 10 minutes and my mind wandered maybe 15 times, but each time I noticed within a few seconds and returned to the breath. I never got lost in a thought for more than 30 seconds."*. *Example: "I sat for 10 minutes and my mind wandered maybe 15 times, but each time I noticed within seconds and returned to the breath. I never got lost in thought for more than half a minute."*|
 | 4 | Meta-awareness: observing the observer . *Example: "During an argument with my partner, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*. *Example: "During a tense conversation, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*|
 
+**Passing threshold:** Level 3: you can sit for 5 minutes or more and return to the breath within seconds each time you notice drift.
+
 ---
 
 ## The Gifts of Basic Mindfulness Training
@@ -176,11 +178,11 @@ This module involves breath-focused and open-monitoring attention practice. As n
 - This module has no Tier 2 restrictions, but if a participant reports a personal history of trauma, dissociation, or a diagnosed psychiatric condition, mention that later modules on this platform carry specific safety tiers and prerequisites.
 </Admonition>
 
-<RetrievalPrompt moduleName="Mindfulness Basics" cards={
+<RetrievalPrompt moduleName="Mindfulness Basics" cards={[
   {q: "What is mindfulness?", a: "Non-judgmental present-moment awareness"},
   {q: "What is the difference between attention and awareness?", a: "Attention is focused; awareness is the open space in which experience occurs"},
   {q: "What is meta-cognition in mindfulness?", a: "Awareness of your own awareness — observing the observer"}
-} />
+]} />
 
 ## ⏱️ Retrieval Schedule
 

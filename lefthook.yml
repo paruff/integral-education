@@ -52,6 +52,14 @@ pre-commit:
         - rebase
       priority: 2
 
+    retention-check:
+      tags: [content, quality]
+      run: node scripts/check-retention.mjs
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
     no-merge-conflicts:
       tags: [git, safety]
       run: |

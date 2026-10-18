@@ -22,6 +22,7 @@ practiceTime: 25
 line: interpersonal
 safety_tier: 2
 ---
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 ## 🗺️ AQAL Mapping
 
@@ -265,6 +266,17 @@ The trust languages and dialogue frameworks referenced above were developed prim
 
 **Q:** Which assess criterion is critical with no "Not yet" allowed?  
 **A:** Accounting for power dynamics in who can speak and be heard.
+
+<RetrievalPrompt moduleName="EI-11 · Cross-Difference Dialogue & Trust-Building" cards={[
+  {q: "Why do ordinary communication skills break down in cross-difference dialogue?", a: "They don't address **identity threat** (dignity is protected before logic), **asymmetrical risk** (speaking costs more for some roles), **meaning-system mismatch** (the same words signal different realities), or **trust fragility** (exchanging information alone doesn't restore cooperation)."},
+  {q: "How does Bohm's **dialogue** differ from discussion or debate?", a: "Dialogue is shared inquiry, not persuasion. Its key move is **suspending** assumptions, holding them as hypotheses rather than facts, so participants can see how their thinking is shaping the conversation."},
+  {q: "What are Isaacs's four dialogue skills?", a: "**Listening** for what matters most, **respecting** the other as a legitimate subject, **suspending** your assumptions, and **voicing** your real view clearly without dominating or collapsing."},
+  {q: "What builds trust at each altitude in the stage-relative trust model?", a: "Conformist: shared belonging. Achiever: competence and reliability. Individualist: authentic disclosure. Strategist: curiosity across difference."},
+  {q: "You keep offering evidence of competence, but your colleague seems to want relational sincerity, and both of you feel unseen. What is happening, and what would you do?", a: "A **stage-gap trust mismatch**: each of you is signalling trustworthiness in a language the other doesn't prioritize. Translate explicitly between trust languages, for example by adding authentic disclosure alongside reliability."},
+  {q: "What are the three phases of the developmental arc in cross-difference relationships?", a: "**Contact** (goodwill, curiosity, partial understanding), **rupture** (mismatch, misattunement, identity threat or trust breach), and **repair** (acknowledgment, accountability, renegotiated trust)."},
+  {q: "In a mixed-role meeting, lower-power participants are rarely heard. Which concept applies, and what design moves does the module name?", a: "**Power dynamics**: power shapes whose voice counts before anyone speaks. Design for it with protected turn-taking, impact-check prompts, and permission to challenge dominant frames without penalty."},
+  {q: "Self-check: name one way a strength of this work turns into a shadow at the boundary, and explain how post-rational mutuality differs from pre-rational fusion.", a: "Examples: openness becomes over-accommodation, or trust-building becomes premature reconciliation that skips impact and accountability. Post-rational mutuality holds self-boundary, perspective complexity and accountability together; fusion only looks like \"deep unity.\""},
+]} />
 
 ## Retrieval Schedule
 

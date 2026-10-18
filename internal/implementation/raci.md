@@ -127,10 +127,10 @@ tags: [implementation, governance, raci, M1]
 
 | Role | Named Owner | Contact | Date Assigned |
 |------|-------------|---------|---------------|
-| Product Owner (PO) | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
+| Product Owner (PO) | Phil Ruff | @paruff | 2026-10-18 |
 | Curriculum Lead (CL) | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
 | Subject-Matter Expert (SME) | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
-| Safety Lead (SL) | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
+| Safety Lead (SL) — Tier 2 safety reviewer | Phil Ruff | @paruff | 2026-10-18 |
 | Clinical Advisor (CA) — [HUMAN-REQUIRED] | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
 | Content Reviewer (CR) | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
 | Pilot Coordinator (PC) — [HUMAN-REQUIRED] | `[PLACEHOLDER]` | `[email/handle]` | `[DATE]` |
@@ -144,3 +144,4 @@ tags: [implementation, governance, raci, M1]
 | Version | Date | Author | Change Summary |
 |---------|------|--------|----------------|
 | 0.1 | 2026-04-05 | Copilot | Initial draft for human review |
+| 0.2 | 2026-10-18 | Claude (AI draft), approved by @paruff | Named the Product Owner and the Safety Lead as Tier 2 safety reviewer (P1-03, #511) |

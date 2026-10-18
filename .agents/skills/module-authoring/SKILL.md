@@ -68,7 +68,7 @@ A table covering all 5 AQAL dimensions. Every cell must be populated — no blan
 | **Levels** (Depth) | [Stage or transition addressed] |
 | **Lines** (Skills) | [Which developmental lines this module develops] |
 | **States** (Experience) | [Which states of consciousness are engaged or worked with] |
-| **Types** (Style) | [Relevant type considerations — gender, cultural background, personality, learning style] |
+| **Types** (Style) | [Relevant type considerations — gender, cultural background, personality. Never "learning styles" (FR-11)] |
 ```
 
 ---
@@ -81,6 +81,16 @@ A table covering all 5 AQAL dimensions. Every cell must be populated — no blan
 - State position in sequence if this module belongs to one ("This is the second orientation module in the Amber → Rational sequence...")
 - Name prerequisites explicitly, with a link, if any exist (an `:::info Before this module` admonition works well here)
 - One or two sentences on why this content matters to the learner right now — not just what it covers
+- **Generation (FR-08):** end Orient with one or two questions the learner tries to answer *before* reading. Wrong guesses still help (Richland, Kornell & Kao, 2009). Later in the module (end of Learn or in Stabilize), return to them with a `**Back to your opening questions:**` paragraph that answers them.
+
+```markdown
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. [A question the module answers — about the core concept, not trivia]
+2. [Optional second question]
+:::
+```
 
 ---
 
@@ -102,7 +112,8 @@ A table covering all 5 AQAL dimensions. Every cell must be populated — no blan
 **Theoretical Frameworks (folded in under a custom heading):**
 - Minimum 4 frameworks. Required: at least one developmental framework — Kegan's subject-object theory plus one domain-specific framework is the universal floor.
 - See `references/stage-content-guides.md` for the most appropriate frameworks per stage. Don't default to Spiral Dynamics for every module — for Magenta and Red content it's a framework built by Orange-stage researchers theorizing about pre-Orange experience; supplement with frameworks closer to the stage's own phenomenology (developmental trauma research for Red, relational attachment theory for Magenta).
-- Each framework entry: name, the specific concept relevant to this module, 1–2 sentences of application.
+- Each framework entry: name, the specific concept relevant to this module, 1–2 sentences of application, and its evidence tier inline: `**Evidence tier:** B — [one-line reason or caveat]` (FR-14; tiers as in Evidence and Citations below). The inline tier must match the framework's row in the Evidence table.
+- **Stage models are a lens (FR-14):** where the module uses a stage model (Spiral Dynamics, Kegan, Loevinger/Cook-Greuter, Fowler, etc.), say once, in plain words, that it is a lens for noticing patterns, not a measurement of the learner or a fact about anyone's worth.
 
 **Gifts (folded in under a custom heading, e.g. "The Gifts of Orange"):**
 - 5+ genuine, specific items, each its own `###` sub-heading.
@@ -123,6 +134,7 @@ A table covering all 5 AQAL dimensions. Every cell must be populated — no blan
 **Purpose:** A concrete, step-by-step practice the learner can complete in a single sitting.
 
 **Requirements:**
+- **Worked example first (FR-12):** before the learner practices alone, show one short worked example — a filled-in step, a sample answer, or a brief case walked through. Novices learn more from studying a worked example than from solving cold (Kalyuga et al., 2003)
 - Duration stated explicitly (e.g. 20–25 minutes; if shorter, state why)
 - Setup stated: physical space, materials if any, body position
 - Numbered steps, each self-contained — a learner starting at step 3 knows what to do
@@ -161,6 +173,8 @@ Daily carry-forward activities that embed the module's core practice into existi
 
 Open and generative, not leading — a good prompt doesn't contain its own preferred answer.
 
+**Elaboration (FR-09):** at least two prompts ask *why* or *how* in the learner's own words, and at least one connects the idea to a specific situation in the learner's own life. Prompts that only ask the learner to restate the content ("What are the three stages?") belong in retrieval, not Reflect.
+
 ---
 
 ### 📊 Assess
@@ -181,6 +195,7 @@ A rubric table with a stated passing threshold, written in first-person self-ass
 - Minimum 3 criteria, maximum 6
 - Behavioral and observable — not conceptual ("I understand the concept" is not a criterion)
 - Passing threshold stated explicitly
+- **Calibration (FR-10):** each "Stable" cell names something the learner can check against — a count, an example they can point to, a product they made — so they are not rating a feeling. Learners overrate their own understanding (Dunlosky & Rawson, 2012). Every `<RetrievalPrompt>` card has a model answer (`a:`), which the component shows before the learner self-rates
 
 ---
 
@@ -221,6 +236,30 @@ All empirical claims in the module body require a citation, tier-rated, with all
 - **Tier C:** Expert opinion, single case study, theoretical framework without empirical validation. Use with stated caveat.
 
 Minimum 4 Tier-A or Tier-B sources. No module should rest primarily on Tier-C sources.
+
+---
+
+### 🖼️ Explanatory visual (FR-16)
+
+At least one diagram, in the section whose content has structure: a process, a sequence, a relationship, a contrast, or a map. Place it next to the text it explains — not in a gallery at the end. Not an H2 of its own.
+
+````markdown
+```mermaid
+flowchart LR
+  accTitle: [Short alt text — what the diagram is]
+  accDescr: [One or two sentences — what it shows]
+  A[Label on the node] -->|label on the arrow| B[Next step]
+```
+
+*In words:* [Plain-text description of the same structure. Required when the diagram carries more than one idea.]
+````
+
+**Rules:**
+1. **Explains, never decorates** (coherence: Rey, 2012). No stock photos, icons for their own sake, or a diagram that only repeats a heading. If you remove the diagram and nothing is lost, delete it.
+2. **Labels on the diagram** (contiguity: Ginns, 2006): name nodes and arrows in the diagram, not in a separate legend.
+3. **Accessible:** `accTitle` and `accDescr` in every Mermaid block, plus an *In words:* description when it carries more than one idea (WCAG 2.2 AA). Keep it readable on a phone — about 8 nodes or fewer. Don't hard-code colors; the theme handles light and dark mode.
+4. **Text-based source:** Mermaid (preferred) or inline SVG, never a screenshot, so it can be reviewed in a PR and reused by forks.
+5. **Drawing is extra, not instead:** Practice may ask the learner to draw or map an idea, but only in addition to retrieval, never in place of it.
 
 ---
 
@@ -294,6 +333,16 @@ Complete before opening any PR.
 - [ ] All journey sections present in order: AQAL Mapping → Orient → Encounter → Learn → Practice → Stabilize → Integrate → Reflect → Assess → Retrieval Schedule → Evidence and Citations
 - [ ] Facilitator Note and Safety Note are admonitions, not H2 headings
 - [ ] Theoretical Frameworks, Gifts, and Limitations appear as custom-named H2/H3 subsections inside Learn — never as literal headings called "Theoretical Frameworks," "Gifts," or "Limitations"
+
+**Learning toolkit (FR-08 to FR-12, FR-14, FR-16):**
+- [ ] Generation: `:::tip Before you read` with 1–2 questions at the end of Orient, answered later under `**Back to your opening questions:**`
+- [ ] Elaboration: 2+ Reflect prompts ask why/how in the learner's own words; 1+ ties the idea to their own life; none only restate content
+- [ ] Calibration: "Stable" cells name checkable evidence; every retrieval card has a model answer
+- [ ] No low-utility techniques: rereading, highlighting or summarizing is never the learning activity, including in Retrieval Schedule rows (re-reading one's *own* journal to compare is fine); no "learning styles"
+- [ ] Load: one concept per section; a worked example before independent Practice; no decorative media
+- [ ] Evidence tiers: each framework in Learn shows `**Evidence tier:**` matching the Evidence table; stage models framed as a lens
+- [ ] Visual: at least one Mermaid (or SVG) diagram that explains structure, beside its text, with `accTitle`, `accDescr`, and an *In words:* description if it carries more than one idea
+- [ ] `node scripts/check-toolkit.mjs` passes (checks the mechanical parts of the above)
 
 **Content quality:**
 - [ ] Gifts: 5+ items; no hedging language; sincere-reader test passed

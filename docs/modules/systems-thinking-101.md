@@ -44,6 +44,21 @@ import Admonition from '@theme/Admonition';
 
 This module addresses the exterior (It/Its) quadrants rather than interior experience — it trains a way of *analyzing* systems, not a state of consciousness or a stage of development. It complements the platform's interior-focused states and lines modules by giving learners a structured way to see the systems — teams, families, organizations, ecosystems — within which that interior work takes place.
 
+## 🧭 Orient
+
+This module trains an analytical skill rather than an interior practice — there is no state to enter and no felt experience to cultivate. Before beginning, choose a real system you are currently part of, ideally one with genuine stakes for you, since abstract or hypothetical systems tend to produce diagrams that are technically correct but practically uninteresting.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. A team works harder to meet a deadline, makes more mistakes, and falls further behind. Why might "work harder" be making things worse?
+2. If you could change only one thing about a system you belong to, how would you decide which thing?
+:::
+
+## 🌿 Encounter
+
+As you begin mapping, expect the system to look messier and more interconnected than you initially assumed — most real systems have more feedback loops and longer delays than a first pass reveals. Resist the urge to simplify the diagram prematurely; the goal at this stage is accurate complexity, not a tidy picture.
+
 ## 🧠 Learn
 
 **Systems thinking** = understanding how parts relate to form wholes, and how wholes influence their parts.
@@ -58,9 +73,27 @@ Key concepts:
 - **Delays** — time lags between cause and effect that create oscillation
 - **Leverage points** — places in a system where small changes have large effects
 
+The opening deadline question is two loops working against each other:
+
+```mermaid
+flowchart LR
+  accTitle: Two feedback loops around a deadline
+  accDescr: Working harder increases output, which closes the gap to the deadline. Working harder also raises fatigue, which raises errors and rework, which widens the gap again after a delay.
+  Gap[Gap to deadline] -->|more pressure| Effort[Hours worked]
+  Effort -->|more output| Progress[Work completed]
+  Progress -->|closes| Gap
+  Effort -->|raises| Fatigue[Fatigue]
+  Fatigue -->|raises, after a delay| Errors[Errors and rework]
+  Errors -->|widens| Gap
+```
+
+*In words:* a gap to the deadline creates pressure to work more hours. More hours complete more work, which closes the gap: a balancing loop. More hours also build fatigue, which, after a delay, causes errors and rework that widen the gap again: a reinforcing loop. Because of the delay, "work harder" looks like it is working at first, then makes things worse.
+
 ## Two Framework Lenses: Systems Dynamics and Donella Meadows' Leverage Points
 
-Systems dynamics (Forrester's stocks-and-flows modeling) supplies this module's core vocabulary — stocks, flows, feedback loops, and delays — as a rigorous, diagrammable way of representing how a system's parts interact over time. Donella Meadows' leverage-points framework builds on that vocabulary to answer a more practical question: given a system map, where should a person actually intervene to produce meaningful change, and why do some intervention points (subsidies, taxes) produce far less change than others (goals, paradigms)?
+Systems dynamics (Forrester's stocks-and-flows modeling) supplies this module's core vocabulary — stocks, flows, feedback loops, and delays — as a rigorous, diagrammable way of representing how a system's parts interact over time. **Evidence tier:** B — a foundational modeling framework; its use for personal and psychological systems is an extrapolation.
+
+Donella Meadows' leverage-points framework builds on that vocabulary to answer a more practical question: given a system map, where should a person actually intervene to produce meaningful change, and why do some intervention points (subsidies, taxes) produce far less change than others (goals, paradigms)? **Evidence tier:** B — a widely cited synthesis argued from cases and expert judgment, not a controlled comparison.
 
 These two lenses layer directly: systems dynamics gives you the map, and the leverage-points framework tells you how to read it for action. Used together, they move a learner from simply describing a system accurately to identifying where their own effort is likely to matter — and where it is likely to be wasted on a low-leverage point that feels intuitive but changes little.
 
@@ -72,19 +105,15 @@ The practice also has a characteristic failure mode: intellectualization. Becaus
 
 Finally, leverage points identified on a diagram are not automatically actionable. Meadows herself noted that the highest-leverage points (paradigms, goals) are also the hardest to shift and the most resistant to direct intervention — a systems map can show you where change matters most without making that change any easier to actually achieve.
 
-## 🧭 Orient
-
-This module trains an analytical skill rather than an interior practice — there is no state to enter and no felt experience to cultivate. Before beginning, choose a real system you are currently part of, ideally one with genuine stakes for you, since abstract or hypothetical systems tend to produce diagrams that are technically correct but practically uninteresting.
-
-## 🌿 Encounter
-
-As you begin mapping, expect the system to look messier and more interconnected than you initially assumed — most real systems have more feedback loops and longer delays than a first pass reveals. Resist the urge to simplify the diagram prematurely; the goal at this stage is accurate complexity, not a tidy picture.
-
 ---
 
 ## 🧘 Practice
 
 **Duration:** 15–20 min
+
+**Worked example:** a household where the dishes pile up. *Stocks:* dirty dishes; household patience. *Reinforcing loop:* a full sink makes each person less willing to start, so the pile grows. *Balancing loop:* when the pile passes a threshold, someone snaps and cleans it all, and the stock drops back. *Delay:* resentment from the person who always cleans builds for weeks before it shows. *Leverage point:* a rule ("wash your own plate before bed") rather than another argument — it changes the structure, not one person's effort.
+
+Now map your own system:
 
 **Instructions:**
 1. Choose a system you are part of (team, family, organization, ecosystem)
@@ -98,10 +127,11 @@ As you begin mapping, expect the system to look messier and more interconnected 
 
 ## 🔍 Reflect
 
-- What surprised you about the system you mapped?
-- Where do you see yourself creating unintended consequences?
-- What delay in the system is causing the most confusion?
-- Where is the highest-leverage intervention point?
+- What surprised you about the system you mapped? Why didn't you see it before you drew the map?
+- Where do you see yourself creating unintended consequences? How does your own behavior feed one of the loops?
+- What delay in the system is causing the most confusion? How would the people in it act differently if they could see it?
+- Where is the highest-leverage intervention point, and why would a change there outlast more effort somewhere else?
+- Think of a time a fix you tried made a problem worse. Which loop explains what happened?
 
 ---
 
@@ -111,8 +141,8 @@ As you begin mapping, expect the system to look messier and more interconnected 
 |-------|-----------|
 | 1 | Understands that systems have interconnected parts |
 | 2 | Can identify feedback loops in simple systems |
-| 3 | Maps complex systems with multiple loops and delays |
-| 4 | Uses systems maps to design interventions and anticipate consequences |
+| 3 | Maps complex systems with multiple loops and delays: your map labels at least one reinforcing loop, one balancing loop and one delay |
+| 4 | Uses systems maps to design interventions and anticipate consequences: you can point to a change you made, the loop it targeted, and what happened next |
 
 **Passing threshold:** Level 3: you have mapped a real system you are part of, with at least two feedback loops and one delay.
 
@@ -131,6 +161,8 @@ Finally, the leverage-points framework gives learners a genuinely practical prio
 **Consolidation, not achievement:** There is no final, complete systems map to produce — real systems keep changing, and a map that was accurate six months ago may already be missing a new feedback loop. What stabilises with practice is not a finished diagram but the habit of asking systems-thinking questions (What loop is this? What's the delay? Where's the leverage?) automatically, in the moment, rather than only in a dedicated mapping exercise.
 
 **A baseline for everything else:** The analytical habits this module builds — looking for loops, delays, and leverage rather than single causes — are a general-purpose lens that supports, rather than replaces, the platform's more interior-focused emotional, states, and shadow-integration work. Seeing the system a difficult pattern lives in does not substitute for feeling and processing that pattern directly.
+
+**Back to your opening questions:** working harder closes the deadline gap at first, but fatigue feeds errors and rework back into the gap after a delay, so effort alone can widen it (the diagram in Learn). To choose the one thing to change, look for a leverage point: rules, goals and information flows usually change behavior more than pushing harder on one part.
 
 ## 🔄 Integrate
 

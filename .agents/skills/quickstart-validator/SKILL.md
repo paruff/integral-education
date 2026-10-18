@@ -16,6 +16,7 @@ A QuickStart (`docs/quickstarts/*.mdx`) makes two promises the underlying module
 3. **Sequence matches stated rationale.** If the QuickStart's prose claims an order ("starts with X, then Y, then Z"), the module list must appear in that literal order. A reorder of the list without updating the prose (or vice versa) is the most common drift.
 4. **Prerequisites don't point backward.** If a module later in the sequence declares a `prerequisites` frontmatter field, every prerequisite it names must appear earlier in the same QuickStart's list (or be reasonably assumed prior knowledge) — not later or absent.
 5. **Time commitment is plausible.** The stated "Time commitment" range should roughly track the number and depth of modules listed; flag if a QuickStart lists 12 modules but claims "2–4 weeks."
+6. **Pathway map (FR-16).** The QuickStart shows a text-based diagram (Mermaid, or inline SVG) of its steps in order, marking where reviews fall. Every Mermaid block has `accTitle` and `accDescr`, node labels match the module titles in the list, and the map sits beside the module list it summarizes. The map explains the route — no decorative images. `scripts/audit-a11y.mjs` passes on the built page.
 
 ## How to check it
 

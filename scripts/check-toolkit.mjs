@@ -24,11 +24,11 @@ export function checkModule(text) {
   if (/learning[- ]styles?\b/i.test(text)) problems.push('mentions "learning style(s)" (FR-11)');
   if (/re-?read (the|this) (learn|module|section|lesson|material)/i.test(text)) problems.push('rereading the material is set as a study activity (FR-11)');
 
-  // FR-11: a Retrieval Schedule row must ask for retrieval, not rereading the material.
-  // Rereading the learner's own work (journal, entry, map) is fine.
+  // FR-11: a Retrieval Schedule row that rereads, or opens, material (the module's or the
+  // learner's own) must ask for recall from memory first: "Without looking, ...".
   const schedule = text.match(/^## [^\n]*retrieval schedule[^\n]*\n([\s\S]*?)(?=^## |(?![\s\S]))/im)?.[1] ?? '';
-  const ownWork = /\b(entry|entries|journal|you (wrote|made|drew|created|recorded)|your (own |latest |first |earlier )?(notes?|map|inventory|paragraphs?|commitment|log|writing|diagram|answers?|plan|lists?))\b/i;
-  if (schedule.split('\n').some((row) => /\bre-?read(ing)?\b/i.test(row) && !ownWork.test(row))) problems.push('a Retrieval Schedule row sets rereading the material as the activity; ask for retrieval instead (FR-11)');
+  const rereads = (row) => /\bre-?read(ing)?\b|\bopen (the|your)\b/i.test(row) && !/without looking|from memory/i.test(row);
+  if (schedule.split('\n').some(rereads)) problems.push('a Retrieval Schedule row rereads or opens material without a from-memory step; start with "Without looking, ..." (FR-11)');
 
   if ((text.match(/\*\*Evidence tier:\*\* [ABC]\b/g) ?? []).length < 2) problems.push('fewer than 2 inline "**Evidence tier:** A|B|C" framework tags (FR-14)');
 

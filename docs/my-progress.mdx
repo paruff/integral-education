@@ -7,9 +7,14 @@ description: Track your learning progress across all modules.
 
 import useProgress from '@site/src/hooks/useProgress';
 import Link from '@docusaurus/Link';
+import { useState } from 'react';
+import MixedReview from '@site/src/components/MixedReview';
+import { readLearnerData } from '@site/src/utils/learnerData';
 
 export function ProgressDashboard() {
-  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile, getDueReviews } = useProgress();
+  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile, getDueReviews, getMixedReview, recordRetrievalReview } = useProgress();
+  const [mixedSession, setMixedSession] = useState(null);
+  const [storedData, setStoredData] = useState(null);
 
   if (!isAvailable) {
     return (
@@ -23,6 +28,8 @@ export function ProgressDashboard() {
   const moduleIds = Object.keys(data.modules || {});
   const totalModules = moduleIds.length;
   const dueReviews = getDueReviews();
+  const mixedCards = getMixedReview();
+  const mixedModuleCount = new Set(mixedCards.map((c) => c.moduleId)).size;
 
   return (
     <div>
@@ -37,6 +44,29 @@ export function ProgressDashboard() {
               </li>
             ))}
           </ul>
+        </div>
+      )}
+
+      {(mixedSession || mixedCards.length > 0) && (
+        <div className="margin-bottom--md" style={{ padding: '1rem', border: '1px solid var(--ifm-color-emphasis-300)', borderRadius: '0.75rem' }}>
+          <h3 style={{ marginTop: 0 }}>Mixed review</h3>
+          {mixedSession ? (
+            <MixedReview
+              cards={mixedSession}
+              onComplete={(moduleIds) =>
+                moduleIds.forEach((id) => recordRetrievalReview(id, data.retrievalSchedule[id]?.moduleName))
+              }
+            />
+          ) : (
+            <>
+              <p style={{ fontSize: '0.9rem' }}>
+                {mixedCards.length} questions from {mixedModuleCount} module{mixedModuleCount === 1 ? '' : 's'}, mixed together. Switching between topics feels harder than reviewing one module at a time, and that effort is what makes recall last.
+              </p>
+              <button className="button button--primary" onClick={() => setMixedSession(mixedCards)}>
+                Start mixed review
+              </button>
+            </>
+          )}
         </div>
       )}
 
@@ -108,15 +138,27 @@ export function ProgressDashboard() {
       )}
 
       <div className="margin-top--lg">
+        <h3>Your stored data</h3>
+        <p style={{ fontSize: '0.9rem' }}>
+          Everything below lives only in this browser: module progress, your review schedule and your reflections. Nothing is sent to a server.
+        </p>
+        <details onToggle={(e) => e.currentTarget.open && setStoredData(readLearnerData(localStorage))}>
+          <summary>View my stored data</summary>
+          <pre style={{ maxHeight: '20rem', overflow: 'auto', fontSize: '0.8rem' }}>
+            {JSON.stringify(storedData ?? {}, null, 2)}
+          </pre>
+        </details>
         <button
-          className="button button--danger"
+          className="button button--danger margin-top--md"
           onClick={() => {
-            if (window.confirm('This will clear all your progress data. Are you sure?')) {
+            if (window.confirm('This deletes your progress, review schedule and reflections from this browser. It cannot be undone. Continue?')) {
               clear();
+              setStoredData(readLearnerData(localStorage));
+              setMixedSession(null);
             }
           }}
         >
-          Clear my progress
+          Clear all my learning data
         </button>
       </div>
     </div>
@@ -125,6 +167,6 @@ export function ProgressDashboard() {
 
 ## My Progress
 
-Track your learning journey across all modules. Your progress is stored locally in your browser.
+Track your learning journey across all modules. Your progress, review schedule and reflections are stored only in your browser. You can view or clear them at the bottom of this page.
 
 <ProgressDashboard />

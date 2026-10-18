@@ -35,9 +35,12 @@ test('a diagram without accTitle fails', () => {
   assert.ok(checkModule(noAlt).some((p) => p.includes('accTitle')));
 });
 
-test('a Retrieval Schedule row that rereads the material fails; rereading own work passes', () => {
+test('a Retrieval Schedule row must ask for recall before rereading or opening anything', () => {
   const sched = (row) => `${passing}\n## ⏱️ Retrieval Schedule\n\n| 24 hours | ${row} |\n`;
-  assert.ok(checkModule(sched('Re-read the Gifts section.')).some((p) => p.includes('Retrieval Schedule')));
-  assert.deepEqual(checkModule(sched('Re-read your journal entry and note what changed.')), []);
-  assert.deepEqual(checkModule(sched('Without looking, list the three stages.')), []);
+  const bad = (row) => checkModule(sched(row)).some((p) => p.includes('Retrieval Schedule'));
+  assert.ok(bad('Re-read the Gifts section.'));
+  assert.ok(bad('Open the journal entry you wrote and note what changed.'));
+  assert.ok(!bad('Without looking, list the three stages, then check the Learn section.'));
+  assert.ok(!bad('Without looking, write what your map showed, then open it and compare.'));
+  assert.ok(!bad('Apply one Integrate activity and journal what you noticed.'));
 });

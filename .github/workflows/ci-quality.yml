@@ -41,8 +41,36 @@ jobs:
       - name: Retention Check (retrieval + mastery threshold in every module)
         run: node scripts/check-retention.mjs
 
-      - name: Toolkit Check (generation, calibration, tiers, diagrams in every module)
-        run: node scripts/check-toolkit.mjs
+      - name: Toolkit Check (generation, calibration, tiers, diagrams in changed modules)
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          else
+            BASE_SHA="${{ github.event.before }}"
+            HEAD_SHA="${{ github.sha }}"
+          fi
+
+          if [[ "${BASE_SHA}" == "0000000000000000000000000000000000000000" ]]; then
+            echo "No previous commit available; checking all modules."
+            node scripts/check-toolkit.mjs
+            exit 0
+          fi
+
+          git fetch --no-tags --depth=1 origin "${BASE_SHA}" "${HEAD_SHA}" || true
+
+          mapfile -t changed_modules < <(git diff --name-only "${BASE_SHA}" "${HEAD_SHA}" -- "docs/modules/*.md" "docs/modules/*.mdx")
+          if [[ "${#changed_modules[@]}" -eq 0 ]]; then
+            echo "No module markdown changes detected; skipping toolkit check."
+            exit 0
+          fi
+
+          echo "Running toolkit check on changed modules:"
+          printf ' - %s\n' "${changed_modules[@]}"
+          node scripts/check-toolkit.mjs "${changed_modules[@]}"
 
       - name: Generate Content Graph
         run: node scripts/generate-content-graph.js

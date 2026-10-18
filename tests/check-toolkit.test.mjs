@@ -34,3 +34,10 @@ test('a diagram without accTitle fails', () => {
   const noAlt = passing.replace('  accTitle: Loop\n', '');
   assert.ok(checkModule(noAlt).some((p) => p.includes('accTitle')));
 });
+
+test('a Retrieval Schedule row that rereads the material fails; rereading own work passes', () => {
+  const sched = (row) => `${passing}\n## ⏱️ Retrieval Schedule\n\n| 24 hours | ${row} |\n`;
+  assert.ok(checkModule(sched('Re-read the Gifts section.')).some((p) => p.includes('Retrieval Schedule')));
+  assert.deepEqual(checkModule(sched('Re-read your journal entry and note what changed.')), []);
+  assert.deepEqual(checkModule(sched('Without looking, list the three stages.')), []);
+});

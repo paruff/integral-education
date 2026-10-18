@@ -1,7 +1,9 @@
 # Product Specification
 
 > **Status:** Draft, awaiting Product Owner acceptance (@paruff)
-> **Revised:** 2026-10-02. Rebuilt around evidence-based self-paced learning
+> **Revised:** 2026-10-18. Added visuals (FR-16), stage-specific language
+> (FR-17), separate stage sites (FR-18), success metrics (FR-19) and NFR-06.
+> **Previously:** 2026-10-02. Rebuilt around evidence-based self-paced learning
 > (*Make It Stick* and related research). Corrected FR-04 to match the live
 > `RetrievalPrompt` behavior and fixed stale `docs/quality/` paths.
 >
@@ -44,12 +46,27 @@ They organize navigation and content, and their claims are tiered (FR-14).
 | Generation (try before being taught) | Attempting answers before study improves later learning, even when the attempts are wrong (Richland, Kornell & Kao, 2009) | Moderate | FR-08 |
 | Elaboration, self-explanation, reflection | Elaborative interrogation and self-explanation rated moderate utility (Dunlosky et al., 2013) | Moderate | FR-09 |
 | Calibration | Learners overrate their own answers, and overconfident self-scoring leads them to stop practicing too soon (Dunlosky & Rawson, 2012) | Moderate | FR-10 |
+| Words with pictures (multimedia) | Learners recall and transfer more from words with relevant diagrams than from words alone, across many experiments (Mayer, 2021). Theoretical basis: dual coding (Clark & Paivio, 1991) | Strong | FR-16 |
+| Visuals integrated with text (contiguity) | Placing labels and text next to the picture they describe beats separating them (meta-analysis: Ginns, 2006) | Strong | FR-16 |
+| No decorative or "seductive" visuals (coherence) | Interesting but irrelevant pictures and details lower retention and transfer (meta-analysis: Rey, 2012) | Strong | FR-16 |
+| Concept maps and learner-drawn diagrams | Studying concept maps beats studying text alone (Nesbit & Adesope, 2006), but retrieval beats concept mapping (Karpicke & Blunt, 2011). Drawing to learn rated a useful generative strategy (Fiorella & Mayer, 2016) | Moderate | FR-16 (optional practice, never instead of retrieval) |
+| Fit to prior knowledge | Guidance that helps novices can hinder more advanced learners, and vice versa (expertise reversal; Kalyuga et al., 2003) | Strong | FR-17 |
+| Conversational, relevant language | Conversational style improves learning (meta-analysis: Ginns, Martin & Marsh, 2013). Connecting content to the learner's own life and values raises interest and performance (Hulleman & Harackiewicz, 2009) | Moderate | FR-17 |
+| Matching language to a developmental *stage* | **No direct evidence.** Stage models are a lens (FR-14). Stage-specific language rests on the two rows above and is treated as a hypothesis that FR-19 tests | Untested | FR-17 (design stance) |
+| Separate sites per stage | **No direct evidence** at site level. The case is by analogy with coherence (less irrelevant material). More choice is not reliably harmful or helpful (choice-overload meta-analysis: Scheibehenne et al., 2010). Main risk: learners picking the wrong site, since FR-03 has no validity study | Untested | FR-18 (design stance) |
+| Measuring learning | Performance during study is a poor guide to lasting learning; delayed tests are needed (Soderstrom & Bjork, 2015). Self-assessed knowledge tracks satisfaction more than learning (Sitzmann et al., 2010) | Strong | FR-15, FR-19 |
 | Rereading, highlighting, summarizing | Rated low utility by Dunlosky et al. (2013) | Low | FR-11 (not used as learning activities) |
 | Matching instruction to "learning styles" | No adequate evidence that matching instruction to learning styles improves outcomes (Pashler et al., 2008) | Unsupported | FR-11 (prohibited) |
 
+Visuals are for every learner, not for "visual learners". FR-11's
+learning-styles prohibition still applies.
+
 Citations from protocol §7 were checked against sources on 2026-10-01.
 Karpicke & Blunt, Gollwitzer & Sheeran, Richland et al., Dunlosky & Rawson
-and Pashler et al. are new here and **must be checked by a human before
+and Pashler et al. (added 2026-10-02) and Clark & Paivio, Ginns, Rey,
+Nesbit & Adesope, Fiorella & Mayer, Ginns, Martin & Marsh, Hulleman &
+Harackiewicz, Scheibehenne et al., Soderstrom & Bjork and Sitzmann et al.
+(added 2026-10-18) are AI-sourced and **must be checked by a human before
 merge** (AI policy).
 
 ## Functional Requirements
@@ -115,6 +132,53 @@ merge** (AI policy).
   will…"). It shows visible progress and due reviews, and suggests a
   realistic pace. *Acceptance:* `quickstart-validator` confirms all three.
 
+### Visuals (every module and QuickStart)
+
+- **FR-16 — Explanatory visuals.** Where content has structure (a
+  process, a sequence, a relationship, a contrast, a map), it gets a
+  diagram that carries that structure. Each visual:
+  1. explains, never decorates (no stock photos, no ornamental images);
+  2. sits next to the text it explains, with labels on the diagram rather
+     than in a separate legend where possible;
+  3. has alt text, plus a text description when the diagram carries more
+     than one idea (WCAG 2.2 AA, NFR-02);
+  4. is drawn as text-based source (Mermaid or SVG) so it can be reviewed
+     in a PR and reused by forks.
+  Practice sections may ask the learner to draw or map an idea, but only
+  in addition to retrieval, never in place of it. Each QuickStart shows a
+  pathway map: where the learner is, what is next, and where reviews fall.
+  *Acceptance:* `module-authoring` and `quickstart-validator` checklists;
+  `audit-a11y.mjs` passes.
+
+### Stage-specific language and sites
+
+- **FR-17 — Stage-specific language.** Learner-facing copy on a stage site
+  uses that audience's register, per the `developmental-vocabulary` skill:
+  its words, its framing, examples from its own life, and no naming of
+  other stages. Two rules from the evidence apply to every stage: start
+  from what the learner already knows (expertise reversal) and connect each
+  idea to the learner's own life and values. Evidence tiers (FR-14) are
+  still shown, worded in the audience's register. Honesty is not traded
+  for resonance. *Acceptance:* `developmental-vocabulary` check passes,
+  and at least three readers from the target audience read each
+  QuickStart aloud and explain it back (cognitive interviews). AI is not a
+  substitute for these readers `[HUMAN-REQUIRED]`.
+- **FR-18 — Separate stage sites.** Each stage transition in `FORK.md` is
+  its own site, holding only the modules, QuickStarts and maps for that
+  transition. Sites are built from **this repo**, one Docusaurus config per
+  site (`docusaurus build --config <site>.config.js --out-dir build/<site>`),
+  each with its own title, navbar, sidebar, search and content filter. That
+  way no site names another stage, and a fix lands on every site at once.
+  Separate fork repos are deferred until a site needs its own owners or
+  domain. A module shared by two sites must be written neutrally or split
+  into per-site variants. Stage sites never link to the main AQAL site
+  except through the hub's "choose again" route. A neutral hub page on the main site helps learners choose,
+  using the FR-03 descriptive self-assessment, and every stage site links
+  back to it with a plain "not the right fit? choose again" route. The
+  main site stays the authoring source. *Acceptance:* every site builds in
+  CI; `fork-readiness-audit` scope and vocabulary gates pass before each
+  launch; NFR-06 holds.
+
 ### Evidence honesty and outcomes
 
 - **FR-14 — Evidence tier on developmental claims.** In each module's
@@ -129,6 +193,26 @@ merge** (AI policy).
   drafted with AI and validated by a human `[HUMAN-REQUIRED]`.
   *Acceptance:* study protocol and report in `internal/pilots/`.
 
+- **FR-19 — Success metrics.** Success is judged on learning, measured
+  in this order:
+
+  | Tier | Metric | Source | Target |
+  | --- | --- | --- | --- |
+  | Outcome (headline) | Delayed retention score, ≥7 days after the pathway | FR-15 study | Effect size with interval, reported per stage site |
+  | Process | Reviews completed within 2 days of due | `useProgress`, local | ≥60% for active learners |
+  | Process | Calibration gap: share of cards rated "remembered" then missed at the next review | `useProgress`, local | Falling over a pathway |
+  | Process | Pathway completion; return within 7 and 30 days | Local, plus site analytics if P10-01 approves | Baseline first, then per-site trend |
+  | Fit | Learners who switch stage site after their first visit | Hub analytics | Baseline; a high rate signals mis-placement |
+  | Self-report (never headline) | Perceived usefulness, comfort with stage language | Study survey | Reported separately |
+  | Guardrail | Accessibility violations; safety reports; build | CI, issues | 0; reviewed within 72h; green |
+
+  Process metrics are computed in the learner's browser and shown to them
+  on the progress page. They also serve as FR-13's visible progress. Nothing
+  leaves the browser unless the learner exports it. Any site-wide analytics
+  must be cookieless, aggregate-only and approved by a human (P10-01).
+  *Acceptance:* metrics visible on `docs/my-progress.mdx`; a baseline is
+  recorded in `docs/METRICS.md` before the first stage site launches.
+
 ## Non-Functional Requirements
 
 - **NFR-01 — No server-side runtime.** Static Docusaurus site.
@@ -137,9 +221,19 @@ merge** (AI policy).
 - **NFR-03 — Build integrity.** `npm run build` passes with zero broken
   links on every merge to `main`.
 - **NFR-04 — Fork portability.** Per `ARCHITECTURE.md` § Fork Architecture.
+  Stage sites (FR-18) stay in this repo for now, so content stays portable
+  to a fork later.
 - **NFR-05 — Learner data stays local and visible.** Progress, review
   schedule and reflections live only in the learner's browser, and the
   learner can view and clear them from the progress page.
+
+- **NFR-06 — Per-site learner data.** Stage sites on one origin
+  (`paruff.github.io`) share browser storage, whether they are built from
+  this repo or from forks. Today `useProgress` uses one
+  key, `iel_progress_v1`, so sites would overwrite each other's progress.
+  Storage keys must include the site's `projectName`, and existing data
+  must carry over to the new key. *Acceptance:* unit test with two site
+  keys.
 
 ## Flagged concerns
 
@@ -148,12 +242,19 @@ merge** (AI policy).
    self-paced-only scope. The charter needs revising.
 2. **Self-assessment validity.** FR-03 instruments have no validity study.
    They must stay descriptive and never become placement.
-3. **Unverified citations.** The five new sources above need a human check
-   before this spec is accepted.
+3. **Unverified citations.** The fifteen AI-sourced citations above need a
+   human check before this spec is accepted.
+4. **Stage targeting is a bet.** FR-17 and FR-18 have no direct evidence
+   behind them, and they depend on self-placement (FR-03), which is
+   unvalidated. Launch one stage site first and compare it with the main
+   site on FR-19 before building the others.
+5. **Register versus honesty.** The vocabulary skill tells writers to avoid
+   words like "evidence" for some audiences. FR-14 still applies: tiers
+   are reworded, never dropped.
 
 ## Out of Scope
 
-Clinical therapy, instructor-led, cohort or facilitated delivery,
+Clinical therapy, per-learner tracking or accounts, instructor-led, cohort or facilitated delivery,
 algorithmic placement or grading, personalized AI coaching, and replacing
 AQAL as the organizing map.
 
@@ -162,22 +263,33 @@ AQAL as the organizing map.
 - Adesope, O. O., Trevisan, D. A., & Sundararajan, N. (2017). Rethinking the use of tests. *Review of Educational Research*, 87(3), 659–701.
 - Broadbent, J., & Poon, W. L. (2015). Self-regulated learning strategies and academic achievement in online higher education. *The Internet and Higher Education*, 27, 1–13.
 - Brown, P. C., Roediger, H. L., & McDaniel, M. A. (2014). *Make It Stick: The Science of Successful Learning*. Harvard University Press.
+- Clark, J. M., & Paivio, A. (1991). Dual coding theory and education. *Educational Psychology Review*, 3(3), 149–210.
 - Cepeda, N. J., et al. (2006). Distributed practice in verbal recall tasks. *Psychological Bulletin*, 132(3), 354–380.
 - Dunlosky, J., & Rawson, K. A. (2012). Overconfidence produces underachievement. *Learning and Instruction*, 22(4), 271–280.
 - Dunlosky, J., et al. (2013). Improving students' learning with effective learning techniques. *Psychological Science in the Public Interest*, 14(1), 4–58.
+- Fiorella, L., & Mayer, R. E. (2016). Eight ways to promote generative learning. *Educational Psychology Review*, 28(4), 717–741.
+- Ginns, P. (2006). Integrating information: A meta-analysis of the spatial contiguity and temporal contiguity effects. *Learning and Instruction*, 16(6), 511–525.
+- Ginns, P., Martin, A. J., & Marsh, H. W. (2013). Designing instructional text in a conversational style: A meta-analysis. *Educational Psychology Review*, 25(4), 445–472.
 - Gollwitzer, P. M., & Sheeran, P. (2006). Implementation intentions and goal achievement: A meta-analysis. *Advances in Experimental Social Psychology*, 38, 69–119.
+- Hulleman, C. S., & Harackiewicz, J. M. (2009). Promoting interest and performance in high school science classes. *Science*, 326(5958), 1410–1412.
 - Kalyuga, S., Ayres, P., Chandler, P., & Sweller, J. (2003). The expertise reversal effect. *Educational Psychologist*, 38(1), 23–31.
 - Karpicke, J. D., & Blunt, J. R. (2011). Retrieval practice produces more learning than elaborative studying with concept mapping. *Science*, 331(6018), 772–775.
 - Kulik, C.-L. C., Kulik, J. A., & Bangert-Drowns, R. L. (1990). Effectiveness of mastery learning programs. *Review of Educational Research*, 60(2), 265–299.
 - Mayer, R. E. (2021). *Multimedia Learning* (3rd ed.). Cambridge University Press.
+- Nesbit, J. C., & Adesope, O. O. (2006). Learning with concept and knowledge maps: A meta-analysis. *Review of Educational Research*, 76(3), 413–448.
 - Pashler, H., McDaniel, M., Rohrer, D., & Bjork, R. (2008). Learning styles: Concepts and evidence. *Psychological Science in the Public Interest*, 9(3), 105–119.
 - Reich, J., & Ruipérez-Valiente, J. A. (2019). The MOOC pivot. *Science*, 363(6423), 130–131.
+- Rey, G. D. (2012). A review of research and a meta-analysis of the seductive detail effect. *Educational Research Review*, 7(3), 216–237.
 - Richland, L. E., Kornell, N., & Kao, L. S. (2009). The pretesting effect. *Journal of Experimental Psychology: Applied*, 15(3), 243–257.
 - Rohrer, D., & Taylor, K. (2007). The shuffling of mathematics problems improves learning. *Instructional Science*, 35, 481–498.
+- Scheibehenne, B., Greifeneder, R., & Todd, P. M. (2010). Can there ever be too many options? A meta-analytic review of choice overload. *Journal of Consumer Research*, 37(3), 409–425.
+- Sitzmann, T., Ely, K., Brown, K. G., & Bauer, K. N. (2010). Self-assessment of knowledge: A cognitive learning or affective measure? *Academy of Management Learning & Education*, 9(2), 169–191.
+- Soderstrom, N. C., & Bjork, R. A. (2015). Learning versus performance: An integrative review. *Perspectives on Psychological Science*, 10(2), 176–199.
 
 ## References
 
 - `docs/product/intent.md`, `docs/product/plan.md`
+- `FORK.md` (stage sites), `docs/METRICS.md`
 - `internal/implementation/product-charter.md`
 - `internal/quality/instructional-design-protocol.md` (§7 evidence base, PR #501)
 - `internal/quality/evidence-vetting-checklist.md`

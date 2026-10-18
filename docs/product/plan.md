@@ -1,7 +1,8 @@
 # Product Plan
 
 > **Status:** Draft, awaiting Product Owner acceptance (@paruff)
-> **Date:** 2026-10-02
+> **Date:** 2026-10-02 (revised 2026-10-18: P8 visuals, P9 stage sites and
+> language, P10 metrics, P11 deterministic build and CI)
 > **Implements:** `specification.md`, which serves `intent.md`.
 >
 > This is the **single product-level plan**. It consolidates the planning
@@ -21,6 +22,10 @@ the techniques with the strongest evidence for durable learning
 3. Self-regulation scaffolds on pathways, since self-paced learners need the
    structure a teacher would otherwise give.
 4. Measure retention objectively before claiming the product works.
+5. Explanatory visuals, added in the same PRs as the module toolkit (P8).
+6. Metrics baseline (P10) **before** stage sites (P9). Stage-specific
+   language and separate sites have no direct evidence, so launch one site,
+   compare it with the main site, then decide on the rest.
 
 Each task below is one PR unless noted. **Proof** is what must be true to
 close it.
@@ -89,14 +94,60 @@ Carried over from `v0.3.0-alpha-todo.md` and the backlog. Each item must
 meet the P3 toolkit from the start. None of the Tier 2 items starts before
 P1-03.
 
-- Decide fork vs. main placement for Magic/Red content (#415, #416).
-- Fork track (v0.3.0 #11, #13–#18, #22–#25), including the Tier 2
-  `amber-shadow-moral-certainty` module.
+- Stage content (v0.3.0 #11, #13–#18, #22–#25), including the Tier 2
+  `amber-shadow-moral-certainty` module. Site work moved to P9 (built in
+  this repo, not as forks).
 - Bridge modules: `late-green-disillusionment`, `meta-systemic-thinking`.
   A `healthy-hierarchy*` module already exists, so verify it rather than
   recreate it.
 - Somatic expansion (v0.3.0 #26–#29). Archaic/Magic/Red somatic modules wait
   on a decision about embodied (audio/movement) delivery.
+
+## P8 — Visuals (FR-16)
+
+| ID | Task | Files | Proof | Depends |
+| --- | --- | --- | --- | --- |
+| P8-01 | Enable `@docusaurus/theme-mermaid` (official plugin, same version as core). Add FR-16 visual rules to the `module-authoring` checklist and `quickstart-validator` | `docusaurus.config.js`, `package.json`, both skills | Build passes with one sample diagram; checklists updated | — |
+| P8-02 | Pathway map on each of the 13 QuickStarts: steps, current position, review points | `docs/quickstarts/*` | 13/13; `audit-a11y.mjs` passes | P8-01, P4-02 |
+| P8-03 | Explanatory visuals in modules, done in the same batch PRs as P3-02 so each module is touched once | `docs/modules/*` | Each batch passes the FR-16 checklist | P8-01, P3-01 |
+
+## P9 — Stage sites and stage-specific language (FR-17, FR-18)
+
+| ID | Task | Files | Proof | Depends |
+| --- | --- | --- | --- | --- |
+| P9-01 | `[HUMAN-REQUIRED]` Confirm the stage-site model: multi-config builds from this repo (forks deferred), the three transitions in `FORK.md`, which launches first, and Magic/Red placement (closes #416) | `FORK.md`, decision record | Decision recorded; `FORK.md` updated | — |
+| P9-01a | Multi-site build: a per-site config (title, navbar, sidebar, search, `include` filter) built with `--config` and `--out-dir` into one Pages artifact; CI builds every site | `sites/*.config.js`, `package.json`, deploy workflow | All sites build in CI; a link check fails if a stage site links to another stage or to AQAL pages | P9-01 |
+| P9-02 | Per-site storage key with migration from `iel_progress_v1` (NFR-06) | `src/hooks/useProgress.js` | Unit test: two sites, no overwrite; old data kept | — |
+| P9-03 | Stage-language checks: add FR-17 rules (prior knowledge, relevance, tiers in register) to `developmental-vocabulary`; write a cognitive-interview script for audience readers | `.agents/skills/developmental-vocabulary/`, `internal/pilots/` | Skill and script reviewed | — |
+| P9-04 | Neutral hub page on the main site: descriptive self-placement (FR-03) linking to stage sites, with a "choose again" route (absorbs #415) | `src/pages/` or `docs/` | Build passes; vocabulary check passes | P9-01 |
+| P9-05 | Launch the first stage site: rewrite its QuickStart and modules in stage register; make shared line modules neutral or split them into per-site variants | its site config, `docs/` | Scope and vocabulary gates pass; 3 audience readers per QuickStart `[HUMAN-REQUIRED]` | P9-01a–P9-04, P10-02 |
+| P9-06 | Compare the first site with the main site on FR-19 after 8 weeks; decide on the other two | `docs/METRICS.md` | Decision recorded | P9-05, P10-04 |
+
+## P10 — Success metrics (FR-19)
+
+| ID | Task | Files | Proof | Depends |
+| --- | --- | --- | --- | --- |
+| P10-01 | `[HUMAN-REQUIRED]` Decide on site analytics: none, or a cookieless aggregate-only tool. Record privacy reasoning | decision record | Decision recorded | — |
+| P10-02 | Compute process metrics in the browser (on-time reviews, calibration gap, completion, return) and show them to the learner on the progress page | `src/hooks/useProgress.js`, `docs/my-progress.mdx` | Unit tests per metric | P2-02, P9-02 |
+| P10-03 | Learner-controlled export: download a summary of their own metrics, to share only in a study | `docs/my-progress.mdx` | Learner sees what is exported before saving | P10-02 |
+| P10-04 | Add a learning-metrics section to `docs/METRICS.md` and the monthly ritual in the `metrics` skill; record the baseline | `docs/METRICS.md`, `.agents/skills/metrics/SKILL.md` | Baseline recorded | P10-01, P10-02 |
+
+## P11 — Deterministic build and CI
+
+Goal: a commit that passes locally passes in CI, and what deploys is what
+was tested. Findings from 2026-10-18 are in each row.
+
+| ID | Task | Files | Proof | Depends |
+| --- | --- | --- | --- | --- |
+| P11-01 | Retire pre-commit.ci. The repo has no `.pre-commit-config.yaml` and no pre-commit.ci check runs; uninstall the app if it is installed `[HUMAN-REQUIRED]` (repo settings). Lefthook stays the only hook manager | repo settings, `CONTRIBUTING.md` | App gone; docs name lefthook only | — |
+| P11-02 | One hook definition for local and CI: move the inline shell in `lefthook.yml` into `scripts/check-*.mjs`; CI runs `npx lefthook run pre-commit --all-files`; pin `lefthook` to an exact version | `lefthook.yml`, `scripts/`, `ci-quality.yml`, `package.json` | CI fails on a seeded H1, TODO and conflict marker | — |
+| P11-03 | Pin the toolchain: `.nvmrc` on Node 22 LTS (Node 20 reached end of life in April 2026), `node-version-file` in every workflow, `engines` to match; `ubuntu-24.04` instead of `ubuntu-latest`; plain `grep` instead of unpinned apt `ripgrep` | `.nvmrc`, `.github/workflows/*`, `package.json` | No hard-coded Node version left; build passes | — |
+| P11-04 | Pin GitHub Actions to commit SHAs (Dependabot already updates `github-actions`) | `.github/workflows/*` | No `@vN` tags left | — |
+| P11-05 | Fix the required check that can hang: `Protocol Guardrails` is required but path-filtered, so PRs without `docs/` changes wait forever. Run it on every PR | `content-protocol.yml` | A non-docs PR gets the check | — |
+| P11-06 | Take the network out of the PR gate: internal links fail the build (`markdown.hooks.onBrokenMarkdownLinks: 'throw'`, replacing the deprecated top-level option; `onBrokenAnchors: 'throw'`); external links move to a nightly lychee job that opens an issue on failure | `docusaurus.config.js`, `ci-quality.yml`, new scheduled workflow | PR gate makes no external requests | — |
+| P11-07 | Fix the failing NPM Audit job on `main` | `package.json`, `package-lock.json` | Audit green on `main` | — |
+| P11-08 | Add `npm test` using the built-in `node --test` runner, run in CI and lefthook. P2-02, P2-04, P9-02 and P10-02 need it | `package.json`, `test/` | One passing test in CI | — |
+| P11-09 | Deploy what was tested: deploy uses the build artifact from the CI run on the same commit instead of rebuilding | `deploy-gh-pages.yml`, `ci-quality.yml` | Deployed artifact hash matches the CI artifact | P11-03 |
 
 ## Risks
 
@@ -108,6 +159,11 @@ P1-03.
 | Retention study sample is small | High | Medium | Label results preliminary; report intervals |
 | AI fabricates citations during backfill | Medium | High | Human checks every citation against its source |
 | No Tier 2 safety reviewer | High | Medium | P1-03; P2–P6 don't depend on it |
+| Stage-specific language and sites don't improve learning | Medium | High | One site first; compare on FR-19 before building more (P9-06) |
+| Learners pick the wrong stage site | Medium | Medium | Descriptive hub, "choose again" route, track switches (FR-19) |
+| Stage-register rewrites conflict with the main site's wording | Medium | Medium | Site-specific copy lives in per-site pages or partials; shared modules stay neutral |
+| Diagrams become decoration | Medium | Low | FR-16 checklist: every visual must explain something |
+| Analytics erode learner privacy | Low | High | Cookieless and aggregate-only, or none; human decision (P10-01) |
 
 ## Superseded sources
 

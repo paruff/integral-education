@@ -44,6 +44,12 @@ built on learning-science evidence:
   plan and monitor their own learning do better. So pathways supply the
   structure a teacher would otherwise provide: planning prompts, visible
   progress, scheduled reviews and honest self-checks.
+- **Visuals that explain.** Diagrams carry the structure of an idea next
+  to the text that describes it, and never decorate.
+- **Focused stage sites in the learner's own language.** Each stage
+  transition gets its own site, written in that audience's register. There
+  is no direct evidence for this, so one site launches first and is
+  measured against the main site.
 - **What is taught is labelled honestly.** AQAL and stage models stay the
   organizing map, labelled a lens, not a finding. Any developmental claim
   shown to learners carries its evidence tier.
@@ -57,6 +63,9 @@ built on learning-science evidence:
 | QuickStarts with a planning prompt and visible progress | not tracked | 13 / 13 |
 | Developmental claims carrying an evidence tier | not tracked | 100% of new and revised modules |
 | Retention measured objectively | none | ≥1 self-paced study with a delayed retention test (≥7 days) |
+| QuickStarts with a pathway map; modules with explanatory visuals | 0 / 13; 0 / 77 | 13 / 13; 100% of revised modules |
+| Learning metrics (FR-19) baselined | none | Baseline in `docs/METRICS.md` before the first stage site |
+| Stage sites live and measured | 0 | 1, compared with the main site before deciding on the others |
 
 ## Affected users and systems
 
@@ -102,4 +111,6 @@ built on learning-science evidence:
 3. **Retention test items.** Who validates them? AI may draft items but must
    not validate them.
 4. **Fork scope** (#415, #416). Does Magic/Red stage content stay on the main
-   site?
+   site? Now part of P9-01.
+5. **Which stage site launches first?** `plan.md` P9-01.
+6. **Site analytics.** None, or cookieless aggregate-only? `plan.md` P10-01.

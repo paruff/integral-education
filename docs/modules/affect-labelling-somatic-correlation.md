@@ -49,6 +49,13 @@ This module builds on [Emotional Line Overview & Orientation](./emotional-line-o
 
 This module sits at the junction of the emotional and somatic lines: it teaches the specific skill of pairing a precisely named emotion with the body sensation it corresponds to. Understanding this matters because affect labelling is one of the few emotion-regulation skills with a well-replicated neural mechanism behind it — it is not a soft skill, it is a trainable capacity with a measurable physiological signature.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why might simply putting a feeling into words make it feel less intense?
+2. Why might "I feel stressed" be a less useful description than a sentence about where and how the feeling sits in your body?
+:::
+
 ## 🌿 Encounter
 
 Notice, before any framework names it, how emotion actually arrives. It is rarely first a word. It is a tightening in the chest before you have decided what to call it. A hollow drop in the stomach when the phone rings with unfamiliar news. A flush of heat up the neck in a meeting where something was said that landed wrong. The body knows first, and the mind's naming — "I'm anxious," "I'm hurt," "I'm furious" — arrives a half-beat later, if it arrives with any precision at all.
@@ -65,23 +72,36 @@ The five frameworks below approach affect labelling from neuroscience, decision 
 
 ### 1. Lieberman's Affect Labelling (fMRI)
 
-Matthew Lieberman's research (2007; 2019) demonstrated that the act of putting feelings into words — affect labelling — reliably decreases amygdala activation while increasing prefrontal engagement. The neural mechanism is a regulatory trade-off: naming an emotion recruits the right ventrolateral prefrontal cortex (RVLPFC), which inhibits the amygdala's threat-response. This is not cognitive reappraisal (changing what you think about the situation); it is a distinct process where the mere act of labelling reduces emotional reactivity. The effect has been replicated across multiple fMRI studies and extends to fear conditioning, social rejection, and phobic stimuli.
+Matthew Lieberman's research (2007; 2019) demonstrated that the act of putting feelings into words — affect labelling — reliably decreases amygdala activation while increasing prefrontal engagement. The neural mechanism is a regulatory trade-off: naming an emotion recruits the right ventrolateral prefrontal cortex (RVLPFC), which inhibits the amygdala's threat-response. This is not cognitive reappraisal (changing what you think about the situation); it is a distinct process where the mere act of labelling reduces emotional reactivity. The effect has been replicated across multiple fMRI studies and extends to fear conditioning, social rejection, and phobic stimuli. **Evidence tier:** A — convergent findings across labs; most evidence is from laboratory stimuli, not everyday emotional life.
 
 ### 2. Damasio's Somatic Marker Hypothesis
 
-Antonio Damasio's somatic marker hypothesis (1994) proposes that body-based feeling states are computationally prior to conscious emotional experience. The brain generates a continuous somatosensory map of the body's interior state. When a significant stimulus is encountered, the body responds with measurable changes — heart rate, vascular constriction, gut motility, muscle tone — and these somatic responses act as "markers" that bias decision-making before conscious cognition engages. In this module's context, somatic markers are the raw data that affect labelling makes conscious and legible.
+Antonio Damasio's somatic marker hypothesis (1994) proposes that body-based feeling states are computationally prior to conscious emotional experience. The brain generates a continuous somatosensory map of the body's interior state. When a significant stimulus is encountered, the body responds with measurable changes — heart rate, vascular constriction, gut motility, muscle tone — and these somatic responses act as "markers" that bias decision-making before conscious cognition engages. In this module's context, somatic markers are the raw data that affect labelling makes conscious and legible. **Evidence tier:** B — supported by lesion and skin-conductance studies; the claim that markers come before all conscious emotion is debated.
 
 ### 3. Nummenmaa's Somatic Topography of Emotions
 
-Lauri Nummenmaa and colleagues (2014) induced emotional states and asked participants to report where in the body they felt sensation changes. The resulting maps revealed remarkably consistent cross-cultural patterns: anger activated chest and upper limbs; sadness deactivated extremities; love activated the entire body with a characteristic warmth pattern. These topographies are statistically robust across Finnish, Swedish, and Taiwanese samples, suggesting a biological basis for the body-emotion link. The limitation: these are self-report maps of felt sensation, not direct neural measurement, and individual variation exists within the broad patterns.
+Lauri Nummenmaa and colleagues (2014) induced emotional states and asked participants to report where in the body they felt sensation changes. The resulting maps revealed remarkably consistent cross-cultural patterns: anger activated chest and upper limbs; sadness deactivated extremities; love activated the entire body with a characteristic warmth pattern. These topographies are statistically robust across Finnish, Swedish, and Taiwanese samples, suggesting a biological basis for the body-emotion link. The limitation: these are self-report maps of felt sensation, not direct neural measurement, and individual variation exists within the broad patterns. **Evidence tier:** B — consistent across samples, but based on self-reported sensation.
 
 ### 4. Barrett's Constructed Emotion Theory
 
-Lisa Feldman Barrett's predictive processing model (2017) argues that emotions are not biologically fixed circuits triggered by events but are constructed in the moment by the brain combining interoceptive signals (body sensation), conceptual knowledge (learned emotion categories), and contextual cues. Interoception — the brain's ongoing prediction of the body's internal state — provides the raw physiological signal. The brain then categorises that signal using learned emotion concepts. The practical implication: affect labelling is not just naming a pre-existing emotion; it is an act of construction that shapes what the emotion becomes. This makes the labelling skill not merely descriptive but formative.
+Lisa Feldman Barrett's predictive processing model (2017) argues that emotions are not biologically fixed circuits triggered by events but are constructed in the moment by the brain combining interoceptive signals (body sensation), conceptual knowledge (learned emotion categories), and contextual cues. Interoception — the brain's ongoing prediction of the body's internal state — provides the raw physiological signal. The brain then categorises that signal using learned emotion concepts. The practical implication: affect labelling is not just naming a pre-existing emotion; it is an act of construction that shapes what the emotion becomes. This makes the labelling skill not merely descriptive but formative. **Evidence tier:** B — influential synthesis, contested within affective neuroscience.
+
+```mermaid
+flowchart LR
+  accTitle: From body signal to emotion label
+  accDescr: A body signal is first described in sensory terms, then matched to several candidate emotion labels, then the best fit is chosen by the body's response and re-checked.
+  Signal[Body signal] --> Sensory[Describe it in sensory terms]
+  Sensory --> Candidates[Generate 2 to 4 candidate labels]
+  Candidates --> Choose[Choose the label that fits best]
+  Choose --> Rescan[Re-scan and notice what shifts]
+  Rescan -->|label refined| Candidates
+```
+
+*In words:* the practice moves from a plain body signal, to a sensory description with no emotion word, to several possible labels. You choose the one that fits best, then check the body again. If the sensation does not settle or shift, you return to the candidates and refine.
 
 ### 5. Kegan's Subject-Object Theory Applied to Somatic-Emotional Development
 
-Robert Kegan's constructive-developmental framework (1982; 1994) provides the structural logic for how the relationship to body sensation develops. At the **Instrumental (Orange)** stage, the body is an object to be managed — sensations are data to be optimised. At the **Socialised (Green)** stage, the body becomes a site of relational attunement — sensations are signals of connection or disconnection. At the **Self-Authoring (Orange → Green transition)**, the person can observe their somatic-emotional patterns and choose how to relate to them. The developmental arc moves from being *subject to* body sensation (embedded in it, controlled by it) to having sensation as *object* (observable, nameable, usable as information).
+Robert Kegan's constructive-developmental framework (1982; 1994) provides the structural logic for how the relationship to body sensation develops. At the **Instrumental (Orange)** stage, the body is an object to be managed — sensations are data to be optimised. At the **Socialised (Green)** stage, the body becomes a site of relational attunement — sensations are signals of connection or disconnection. At the **Self-Authoring (Orange → Green transition)**, the person can observe their somatic-emotional patterns and choose how to relate to them. The developmental arc moves from being *subject to* body sensation (embedded in it, controlled by it) to having sensation as *object* (observable, nameable, usable as information). **Evidence tier:** B — the stage framework is well supported by interview research; applying it to body sensation is an extrapolation. Stage models are a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
 
 ## The Gifts of Affect Labelling & Somatic Correlation
 
@@ -137,6 +157,8 @@ For a person with a strong Orange centre of gravity, affect labelling can become
 
 **Duration:** 25 minutes total.
 
+**Worked example (Step 4 and Step 5 only):** someone notices the most prominent sensation is in the upper chest. Sensory description: "Upper chest, warm, a little tight, buzzing and steady, intensity 4." Candidate labels: "nervous anticipation, eagerness, impatience." The one that fits best is "eagerness", because naming it feels like a small settling. The example only shows the wording, so use your own sensation.
+
 **Step 1 — Arrive (3 minutes).** Close your eyes or soften your gaze. Take three natural breaths — no effort to change the breath, just notice its natural rhythm. Feel the weight of your body against the chair or floor. Notice your feet in contact with the ground. Allow your attention to settle into your body rather than your thoughts.
 
 **Step 2 — Body scan for current sensation (5 minutes).** Bring attention slowly through your body:
@@ -181,14 +203,16 @@ Write down all candidate labels.
 
 Completing the Emotion-Somatic Mapping Protocol once, or reading the frameworks above, gives you a *conceptual* map of how affect labelling works — it does not, by itself, install the trained capacity for interoceptive accuracy and label-sensation correlation that this module describes. Being able to explain the RVLPFC-amygdala mechanism is a different achievement from reliably noticing a body signal *before* the emotion overtakes you. Treat today's practice as a first data point, not evidence the skill is now automatic.
 
+**Back to your opening questions:** naming a feeling engages the right ventrolateral prefrontal cortex, which dampens amygdala reactivity, so putting feelings into words tends to lower their intensity. "I feel stressed" is a broad catch-all, while a sensory description plus several candidate labels gives the brain finer information to construct a more precise emotion from.
+
 The body-emotion correlations referenced above (Nummenmaa et al.'s topography maps in particular) were produced primarily in Nordic and East Asian samples, and somatic-attention practices more broadly were developed largely in WEIRD contexts. If your own cultural, linguistic, or family background maps emotion to the body differently than the patterns described here, trust your own felt correlations over the illustrative maps — the underlying claim (that emotion has a body signature at all) is more robust than any particular map of where.
 
 ## Reflect
 
 1. When you first described the sensation in purely sensory terms (Step 4), what did you notice about your relationship to the sensation? Did it feel more present, more distant, or more neutral than when you would normally label an emotion?
-2. Which came more naturally to you — the sensory description or the emotion labelling? What does that tell you about your current balance between somatic and cognitive access?
+2. Which came more naturally to you — the sensory description or the emotion labelling? Why do you think that is, and what does it tell you about your current balance between somatic and cognitive access?
 3. When you held the emotion label alongside the sensation (Step 6), did anything shift in the body? What was the quality of that shift?
-4. Were there candidate labels that felt accurate but uncomfortable? What kept you from selecting them?
+4. Were there candidate labels that felt accurate but uncomfortable? How would you explain, in your own words, what kept you from selecting them?
 5. How does this practice compare to your usual way of identifying emotions? What is one thing that surprised you? (Dialogue prompt: share your answer with a partner and compare starting points — are you more somatic-first or label-first?)
 6. When in your daily life might the affect labelling skill be most useful — in what specific relationship, context, or recurring situation?
 
@@ -198,9 +222,9 @@ Use this rubric after completing the practice. It is for honest self-assessment 
 
 | Criterion | Not yet | Developing | Stable |
 |-----------|---------|------------|--------|
-| **Somatic access** — I can locate and describe at least one specific body sensation in sensory terms (temperature, texture, intensity, location) without immediately naming an emotion | I cannot hold sensory description for more than a few seconds before jumping to a label | I can describe one sensation in 1–2 sensory terms but the body awareness fades quickly | I can sustain sensory description for 2–3 minutes and describe 2+ sensory qualities |
-| **Candidate generation** — When I feel a body sensation, I can generate 2–4 plausible emotion labels before settling on the most accurate one | I habitually use the first label that comes to mind, often a broad category ("anxious," "sad") | I can generate 2 candidates but one is usually dominant regardless of accuracy | I can generate 3+ specific, distinct candidates and choose the most accurate based on body feedback |
-| **Label-sensation correlation** — I can identify whether an emotion label is accurate by noticing the body's response (a settling, release, or intensification when named) | I rely entirely on cognitive reasoning to decide whether a label fits | I sometimes notice a body shift when the right label is used, but cannot reliably distinguish it from cognitive preference | I can reliably feel the difference between a label that is cognitively convenient and one that is somatically accurate |
+| **Somatic access** — I can locate and describe at least one specific body sensation in sensory terms (temperature, texture, intensity, location) without immediately naming an emotion | I cannot hold sensory description for more than a few seconds before jumping to a label | I can describe one sensation in 1–2 sensory terms but the body awareness fades quickly | I can sustain sensory description for 2–3 minutes and describe 2+ sensory qualities; my journal shows one such entry |
+| **Candidate generation** — When I feel a body sensation, I can generate 2–4 plausible emotion labels before settling on the most accurate one | I habitually use the first label that comes to mind, often a broad category ("anxious," "sad") | I can generate 2 candidates but one is usually dominant regardless of accuracy | I can generate 3+ specific, distinct candidates and choose the most accurate based on body feedback; I can point to one journal entry with 3+ candidates |
+| **Label-sensation correlation** — I can identify whether an emotion label is accurate by noticing the body's response (a settling, release, or intensification when named) | I rely entirely on cognitive reasoning to decide whether a label fits | I sometimes notice a body shift when the right label is used, but cannot reliably distinguish it from cognitive preference | I can reliably feel the difference between a label that is cognitively convenient and one that is somatically accurate; I can point to one entry where I changed my label after the re-scan |
 | **Post-labelling regulation** — After labelling, I can stay with the body sensation rather than moving immediately to cognitive analysis or action | Labelling triggers an immediate urge to analyse, fix, or act — I cannot remain with the felt sense | I can stay with the sensation for 30–60 seconds after labelling before the cognitive mind takes over | I can remain with the body sensation for 2+ minutes after labelling, allowing the nervous system to integrate at its own pace |
 
 **Passing threshold:** Stable in at least 2 of 4 criteria, with no "Not yet" in Somatic access or Label-sensation correlation. If Somatic access is still "Not yet," repeat the practice 3 times over 2 weeks before moving to more advanced somatic modules.

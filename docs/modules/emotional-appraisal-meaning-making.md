@@ -45,6 +45,23 @@ import Admonition from '@theme/Admonition';
 
 ---
 
+## 🧭 Orient
+
+You are about to practice slowing down a process that normally happens instantly and unconsciously — the leap from event to feeling. Before beginning, notice that the goal is not to prove your original appraisal wrong; it is simply to make the appraisal visible so you can examine it deliberately.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Two people receive the same critical email. One feels crushed and the other feels motivated. If the email is identical, what explains the difference?
+2. If you cannot change an event, what could you still change that would change how you feel?
+:::
+
+## 🌿 Encounter
+
+Bring to mind a small emotional reaction you had earlier today — even a minor one, like irritation at a delay or a flicker of worry about a message. Without analyzing it yet, just notice: what did you tell yourself about what that event meant? That noticing, before any formal analysis, is exactly what the ABC Chain Analysis below asks you to do more rigorously.
+
+---
+
 ## 🧠 Learn
 
 This module trains the capacity to trace the complete appraisal chain from an event to an emotional response, and then to choose a regulation strategy informed by that chain.
@@ -57,6 +74,19 @@ Emotional experience is not a direct response to an event. It is mediated by cog
 
 Two people can encounter the same event and arrive at entirely different emotions because they appraised it differently. Understanding this chain is the structural foundation for all emotion regulation work.
 
+```mermaid
+flowchart LR
+  accTitle: The appraisal chain from event to emotion
+  accDescr: An event is appraised for relevance and then for coping resources. The appraisal produces an emotion, and the emotion shapes what you notice next, which feeds the next appraisal.
+  Event[Activating event] --> Primary["Primary appraisal: does this matter to me?"]
+  Primary --> Secondary["Secondary appraisal: can I cope?"]
+  Secondary --> Emotion[Emotion and its intensity]
+  Emotion -->|shapes attention| Next[Next appraisal]
+  Next --> Primary
+```
+
+*In words:* an event is first judged for relevance to your goals and safety, then for whether you have the resources to cope. Together these produce the emotion and its intensity. The emotion then shapes what you notice, which feeds the next appraisal, so the chain loops.
+
 ### 2. Lazarus's Cognitive Appraisal Theory
 
 Richard Lazarus established the foundational principle: emotions are not direct responses to events but to the *appraisal* of events (Lazarus, 1991). Two appraisal stages operate in sequence:
@@ -64,7 +94,7 @@ Richard Lazarus established the foundational principle: emotions are not direct 
 - **Primary Appraisal:** Assessing whether an event is relevant to one's goals, safety, or well-being ("Is this good or bad for me?"). Produces the initial emotional valence.
 - **Secondary Appraisal:** Assessing one's coping resources relative to the event ("What can I do about it?"). Modulates emotional intensity and determines whether the response is, for example, challenge-anxiety or threat-anxiety.
 
-The interaction between these two appraisals determines both the type and intensity of the resulting emotion.
+The interaction between these two appraisals determines both the type and intensity of the resulting emotion. **Evidence tier:** A — replicated across self-report, physiological and neuroimaging studies.
 
 ### 3. The ABC Model
 
@@ -74,7 +104,7 @@ The ABC model, originating with Albert Ellis's Rational Emotive Behavior Therapy
 - **B — Belief/Appraisal:** The interpretation, evaluation, or meaning assigned to the event (e.g., "I must succeed at this," "This is unfair," "I am inadequate").
 - **C — Emotional Consequence:** The feeling state produced by B, not by A directly (e.g., anxiety, sadness, anger, relief).
 
-*Key insight:* Because C follows from B (not from A), changing the appraisal at B can shift the emotional outcome at C even when A cannot be changed.
+*Key insight:* Because C follows from B (not from A), changing the appraisal at B can shift the emotional outcome at C even when A cannot be changed. **Evidence tier:** A — well validated, used here as an educational tool, not a clinical intervention.
 
 ### 4. Common Appraisal Distortions
 
@@ -100,7 +130,7 @@ Appraisal is never stage-neutral. The meaning an event acquires depends on the i
 | **Individualist (Late Orange/Pluralistic)** | Authentic self-expression and personal values | "Does this feedback reflect a clash between their expectations and my genuine approach?" | [Pluralistic/Green Orientation](./pluralistic-green-orientation) |
 | **Strategist (Integral/Teal)** | Systemic insight and multi-perspectival integration | "What does this reveal about the system I am operating in, and what perspective am I missing?" | [Integral/Teal Orientation](./integral-teal-orientation) |
 
-*Note:* These are idealized signatures. In practice, individuals regularly carry appraisal patterns from multiple stages simultaneously, and developmental altitude does not determine emotional maturity in a linear way. Stage-relative appraisal is a diagnostic lens, not a hierarchy of correctness.
+*Note:* These are idealized signatures. In practice, individuals regularly carry appraisal patterns from multiple stages simultaneously, and developmental altitude does not determine emotional maturity in a linear way. Stage-relative appraisal is a diagnostic lens, not a hierarchy of correctness. **Evidence tier:** B — a theoretical synthesis, not an independently replicated finding. Treat it as a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
 
 ### 6. The Appraisal–Regulation Loop
 
@@ -110,7 +140,7 @@ Appraisal and emotion regulation are not sequential; they are recursive. Changin
 2. Somatic regulation (breathing, movement) can work downstream — settling the nervous system sufficiently to allow a fresh appraisal to become accessible.
 3. The most durable regulation combines both: use somatic tools to bring yourself within the window of tolerance, then engage the appraisal chain to update the meaning.
 
-This module provides the appraisal-theory foundation for the reappraisal strategies introduced in [Emotion Regulation Foundations](./emotion-regulation-foundations) (EI-02).
+This module provides the appraisal-theory foundation for the reappraisal strategies introduced in [Emotion Regulation Foundations](./emotion-regulation-foundations) (EI-02). **Evidence tier:** A — reappraisal has robust meta-analytic support; the loop framing is this module's synthesis.
 
 ## Two Framework Lenses: Lazarus's Appraisal Theory and the ABC Model
 
@@ -128,19 +158,11 @@ Second, the stage-relative appraisal synthesis presented in this module — mapp
 
 Third, both frameworks were developed and validated predominantly in Western, individualist research and clinical contexts. As the Stabilize section notes, appraisal norms and display rules vary substantially across cultures, and the examples used here should be adapted rather than applied as a universal template.
 
-## 🧭 Orient
-
-You are about to practice slowing down a process that normally happens instantly and unconsciously — the leap from event to feeling. Before beginning, notice that the goal is not to prove your original appraisal wrong; it is simply to make the appraisal visible so you can examine it deliberately.
-
-## 🌿 Encounter
-
-Bring to mind a small emotional reaction you had earlier today — even a minor one, like irritation at a delay or a flicker of worry about a message. Without analyzing it yet, just notice: what did you tell yourself about what that event meant? That noticing, before any formal analysis, is exactly what the ABC Chain Analysis below asks you to do more rigorously.
-
----
-
 ## 🧘 Practice
 
 ### ABC Chain Analysis (25–30 minutes)
+
+**Worked example:** *A:* a colleague replies "ok" to a long message I sent. *B:* "They are annoyed with me." *C:* a flicker of worry. Alternative appraisals of the same A: (objective) "They were busy and replied briefly"; (growth) "I could ask a direct question next time"; (perspective) "They may read short replies as efficient." Testing each, the worry shrinks with the first and third. Only the interpretation changed, not the event.
 
 This exercise develops the capacity to trace, test, and update a real appraisal chain from your own experience.
 
@@ -184,6 +206,8 @@ Appraisal norms and emotional display rules vary substantially across cultural c
 
 ---
 
+**Back to your opening questions:** the email is the same, but each person appraises it differently, first for what it means to their goals and sense of self, then for whether they can cope. That appraisal, not the event, produces the emotion. When the event cannot change, you can change the appraisal (B), which can shift the emotion (C).
+
 ## The Gifts of Appraisal Awareness
 
 Seeing the appraisal chain clearly gives you something most people never have direct access to: the specific hinge point between an event and your emotional response to it. That hinge — the B in the ABC chain — is where genuine choice becomes possible, rather than experiencing your emotional life as something that simply happens to you.
@@ -202,8 +226,8 @@ Finally, this awareness extends outward: recognizing that other people are runni
 
 ## 🔍 Reflect
 
-- Which appraisal distortion (catastrophizing, personalizing, mind-reading, fortune-telling) do you notice most often in your own thinking?
-- Can you recall a moment when changing your appraisal (B) genuinely shifted your emotional response (C), not just your description of it?
+- Which appraisal distortion (catastrophizing, personalizing, mind-reading, fortune-telling) do you notice most often in your own thinking, and why do you think that one is your default?
+- Can you recall a moment when changing your appraisal (B) genuinely shifted your emotional response (C), not just your description of it? How did you tell the difference?
 - Which stage-relative appraisal signature felt most familiar when you read the four examples? Did that surprise you?
 - Where is the line, for you, between using this framework to understand a feeling and using it to talk yourself out of one?
 
@@ -213,7 +237,7 @@ Finally, this awareness extends outward: recognizing that other people are runni
 
 **Emerging:** Can explain the ABC model and Lazarus's primary/secondary appraisal distinction, but has not yet traced a full chain from a real personal event.
 
-**Proficient:** Can trace the complete ABC chain from a live emotional reaction in real time, generate genuinely distinct alternative appraisals, and distinguish appraisal revision from intellectualized emotional bypass.
+**Proficient:** Can trace the complete ABC chain from a live emotional reaction in real time, generate genuinely distinct alternative appraisals, and distinguish appraisal revision from intellectualized emotional bypass. Check: you can show two written chains, each with three alternative appraisals and the emotion each one produced.
 
 **Passing threshold:** *Proficient*: you have traced at least two full ABC chains from your own live reactions, each with a genuinely different alternative appraisal.
 

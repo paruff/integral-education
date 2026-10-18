@@ -66,6 +66,13 @@ This is the capstone module for the combined **Emotional** and **Interpersonal**
 
 This module focuses on the pattern learners encounter most often in adult life: emotional capacity and relational capacity rarely mature at the same speed, and the gap between them is what shows up in conflict, trust, teamwork, and repair. Understanding this matters because most adult relational friction is not a communication problem or a character flaw — it is evidence that one of these two lines is quietly lagging the other.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why can someone coach a friend through a conflict wisely and then handle the same kind of conflict badly in their own life?
+2. When you are sure you know what another person is feeling, how could you find out whether you are right?
+:::
+
 ## 🌿 Encounter
 
 Notice, before any framework names it, how often you can explain a relational dynamic clearly and still find yourself caught inside it moments later. You can articulate exactly why your colleague reacted defensively — and still feel the same defensive tightening rise in your own chest when the roles reverse. You can coach a friend through a conflict with real insight, and then fumble the same conflict in your own life.
@@ -82,23 +89,23 @@ The five frameworks below approach emotional–interpersonal integration from co
 
 ### 1. Kegan's Subject–Object Theory
 
-Kegan's constructive-developmental model clarifies why emotional and interpersonal growth can diverge. A learner may be able to think about emotions and relationships conceptually while still being subject to approval needs, avoidance, or defensive reactivity when the stakes rise (Kegan, 1994).
+Kegan's constructive-developmental model clarifies why emotional and interpersonal growth can diverge. A learner may be able to think about emotions and relationships conceptually while still being subject to approval needs, avoidance, or defensive reactivity when the stakes rise (Kegan, 1994). **Evidence tier:** B — interview-based and widely applied, not a controlled experimental program.
 
 ### 2. Emotional Granularity and Constructed Emotion
 
-Barrett's constructed-emotion account and the emotional granularity literature explain why finer emotional discrimination changes action. When a learner can distinguish embarrassment from rejection, or frustration from fear, the interpersonal options available in the moment become more accurate and less blunt (Kashdan et al., 2015).
+Barrett's constructed-emotion account and the emotional granularity literature explain why finer emotional discrimination changes action. When a learner can distinguish embarrassment from rejection, or frustration from fear, the interpersonal options available in the moment become more accurate and less blunt (Kashdan et al., 2015). **Evidence tier:** B — a review-style synthesis; granularity measures vary across studies.
 
 ### 3. Emotion Regulation Process Model
 
-Gross's process model frames regulation as a sequence of situation selection, attention, appraisal, and response modulation. This is useful here because interpersonal failures often happen when regulation begins too late — after the learner has already committed to a defensive interpretation or behavior (Webb et al., 2012).
+Gross's process model frames regulation as a sequence of situation selection, attention, appraisal, and response modulation. This is useful here because interpersonal failures often happen when regulation begins too late — after the learner has already committed to a defensive interpretation or behavior (Webb et al., 2012). **Evidence tier:** A — meta-analytic support, but no single strategy works best in every context.
 
 ### 4. Empathic Accuracy and Perspective-Taking Research
 
-Epley and Zaki show that people routinely overestimate how accurately they read others and that accuracy improves when inference is treated as a hypothesis to verify rather than as a fact. That makes emotional granularity and interpersonal verification reciprocal skills rather than separate ones (Epley et al., 2004; Schumann et al., 2014).
+Epley and Zaki show that people routinely overestimate how accurately they read others and that accuracy improves when inference is treated as a hypothesis to verify rather than as a fact. That makes emotional granularity and interpersonal verification reciprocal skills rather than separate ones (Epley et al., 2004; Schumann et al., 2014). **Evidence tier:** A — strong experimental evidence; real long-term relationships still need behavioral verification.
 
 ### 5. Attachment, Co-regulation, and Psychological Safety
 
-Attachment and team-learning research explain why sustained relational containers matter. Emotional learning stabilizes faster when the learner has repeated access to attuned feedback, low-cost repair, and enough psychological safety to risk being inaccurate in public (Mikulincer & Shaver, 2007; Edmondson, 1999).
+Attachment and team-learning research explain why sustained relational containers matter. Emotional learning stabilizes faster when the learner has repeated access to attuned feedback, low-cost repair, and enough psychological safety to risk being inaccurate in public (Mikulincer & Shaver, 2007; Edmondson, 1999). **Evidence tier:** B — robust attachment findings and observational team research, which do not establish causality in every setting.
 
 ---
 
@@ -124,6 +131,18 @@ Integrated practice works best when it trains both lines in the same loop:
 2. **Check the appraisal.** Ask what story, assumption, or prediction is driving that emotion.
 3. **Verify the relational hypothesis.** Replace mind-reading with one direct question or one explicit repair statement.
 4. **Review the outcome.** Compare what you assumed, what was actually true, and what changed after verification.
+
+```mermaid
+flowchart LR
+  accTitle: The integrated practice loop
+  accDescr: Four steps run in a loop. Name your state, check the story behind it, verify with the other person, then review what changed and carry that into the next conversation.
+  Name[Name your state precisely] --> Check[Check the story behind it]
+  Check --> Verify[Ask one verifying question]
+  Verify --> Review[Review what you assumed and what was true]
+  Review -->|next conversation| Name
+```
+
+*In words:* the loop starts inside you, by naming your state and checking the story behind it, then moves outward to one verifying question. The review compares what you assumed with what was true, and that comparison sharpens your naming next time.
 
 This loop matters because it pairs internal differentiation with external feedback. The Emotional line develops through more accurate naming and appraisal; the Interpersonal line develops through more accurate verification and repair; the combination accelerates both because each line corrects the blind spots of the other (Epley et al., 2004; Schumann et al., 2014).
 
@@ -202,6 +221,8 @@ Early emotional flooding and later integrated emotional openness can look simila
 
 ### Emotional–Interpersonal Psychograph (25 minutes)
 
+**Worked example (step 3 only):** one person estimates Emotional line at an earlier altitude and Interpersonal at a later one. Their gap sentence reads: "In feedback conversations I read the other person well but go vague about my own reaction, so I agree to things I resent later." The sentence names a place, a pattern and a cost. It is a hypothesis to test, not a verdict.
+
 **Setup:** Choose a quiet place where you can write without interruption for 25 minutes. Have your notes from the Emotional line stage map you used in EI-07 and the Interpersonal line map you used in EI-12 available if possible. Sit in a way that lets you read and write comfortably.
 
 1. **Locate your current Emotional line altitude (5 minutes).** Take a moment and review the Emotional line descriptors you used in EI-07. Write the altitude that currently feels most true in ordinary life, then write one recent example that supports your choice.
@@ -226,16 +247,18 @@ This is a design exercise, not a verdict on your worth. If your estimate feels u
 
 Completing the psychograph once, or reading the frameworks above, gives you a *conceptual* map of your emotional–interpersonal gap — it does not, by itself, close that gap in real behavior. Being able to name which line is lagging is a different achievement from actually naming your state, checking the story, and verifying the relational hypothesis in the moment stakes rise. Treat the 30-day plan as the mechanism that does the actual work; today's session only produced the hypothesis to test.
 
+**Back to your opening questions:** conceptual understanding is easier to stabilize than in-the-moment regulation under social pressure, so the Emotional line can lag even when analysis is sharp (the characteristic gap). To find out whether you read someone correctly, treat your inference as a hypothesis and verify it with one direct question or repair statement, as in step 3 of the loop.
+
 The stage-by-stage integration map above draws on developmental and attachment research conducted primarily in Western contexts, and cultural norms around emotional expression, directness, and disclosure vary significantly. If your own cultural or family background frames emotional openness or relational verification differently than the examples above, trust your own read of what genuine contact looks like in your relationships over the illustrative stage descriptions.
 
 ---
 
 ## Reflect
 
-1. **(Individual — journaling)** In the last month, where did emotional imprecision create an interpersonal problem that looked, on the surface, like a communication problem?
-2. **(Individual — journaling)** Which line is more developed for you right now: Emotional or Interpersonal? What real-life evidence supports that answer?
+1. **(Individual — journaling)** In the last month, where did emotional imprecision create an interpersonal problem that looked, on the surface, like a communication problem? Why was it hard to see the emotional part at the time?
+2. **(Individual — journaling)** Which line is more developed for you right now: Emotional or Interpersonal? What real-life evidence supports that answer, and how do you know it is not just a feeling?
 3. **(Dialogue — with a trusted colleague, partner, or practice partner)** Ask: "When I am under relational pressure, do I become more unclear about my own emotions, more inaccurate about yours, or both?" Listen for concrete examples.
-4. **(Individual — journaling)** What is your most common high-stakes mistake: over-explaining, mind-reading, withdrawing, placating, or escalating? What emotion usually sits underneath it?
+4. **(Individual — journaling)** What is your most common high-stakes mistake: over-explaining, mind-reading, withdrawing, placating, or escalating? How does the emotion usually underneath it drive that mistake, in your own words?
 5. **(Dialogue or journaling)** What kind of We-space helps you grow: one that is highly structured, gently challenging, warm and informal, or explicitly feedback-oriented? What does that tell you about your current edge?
 
 ---
@@ -246,9 +269,9 @@ The stage-by-stage integration map above draws on developmental and attachment r
 
 | Criterion | Not yet | Developing | Stable |
 |-----------|---------|------------|--------|
-| **I can identify my current line gap** | I cannot tell which line is lower, or I change my answer without evidence. | I can name the lower line, but my examples stay general or inconsistent. | I can name the lower line and support it with specific recent behavior. |
-| **I can interrupt assumption with verification** | In charged moments I rely on my first interpretation of the other person. | I sometimes ask clarifying questions after tension has already risen. | I regularly treat my interpersonal inference as a hypothesis and verify it early. |
-| **I can pair self-awareness with relational action** | I either stay inside my own process or jump straight to the other person's process. | I can do both with prompting or after the fact. | I can name my state, check the story, and take one clean relational action in sequence. |
+| **I can identify my current line gap** | I cannot tell which line is lower, or I change my answer without evidence. | I can name the lower line, but my examples stay general or inconsistent. | I can name the lower line and support it with two specific recent behaviors I can point to. |
+| **I can interrupt assumption with verification** | In charged moments I rely on my first interpretation of the other person. | I sometimes ask clarifying questions after tension has already risen. | I regularly treat my interpersonal inference as a hypothesis and verify it early: I can point to three recent times I asked before assuming. |
+| **I can pair self-awareness with relational action** | I either stay inside my own process or jump straight to the other person's process. | I can do both with prompting or after the fact. | I can name my state, check the story, and take one clean relational action in sequence: I can point to one written example of all three. |
 | **I can sustain an integrated 30-day practice** | I design practices that are too vague, too large, or disconnected from daily life. | I can design a realistic practice, but I do not yet review it consistently. | I can run a specific daily cue, a weekly relational test, and a day-30 review with evidence. |
 
 **Passing threshold:** Stable in at least 3 of 4 criteria, with no **Not yet** in **I can identify my current line gap**.

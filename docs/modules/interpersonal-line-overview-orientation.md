@@ -42,6 +42,13 @@ No prerequisites are required, though familiarity with the [AQAL Overview](../ma
 
 Understanding this line matters because interpersonal capacity is not the same thing as emotional warmth or cognitive sophistication — a person can be highly articulate and deeply caring and still lack the structural capacity to hold a self-authored position under real relational pressure. This module gives you the map for locating where your own relational range currently sits.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why might a warm, caring person still give in whenever someone they love disagrees with them?
+2. What do you think changes in a person when they can hold their own view and still be open to someone else's?
+:::
+
 ## 🌿 Encounter
 
 Notice, before any framework names it, how differently relationships actually land. Some conversations feel effortless — disagreement moves through without threat, closeness deepens without either person disappearing into it. Others feel like walking on a surface that could give way at any moment: a raised voice, a withdrawn tone, a hint of disapproval, and the ground shifts.
@@ -66,15 +73,28 @@ Kegan's stages map directly onto the Interpersonal line's developmental arc:
 - **Institutional stage (Kegan 4):** The self becomes the author of its own values, standards, and commitments. Others are valued and separate. The person can disagree, set limits, and hold their own position under relational pressure. The shadow risk is relating through role and function at the expense of genuine contact.
 - **Interindividual stage (Kegan 5):** The self can hold its own institutional identity *and* genuinely open to the full subjectivity of another's world. Genuine I–Thou contact becomes structurally possible. The person can be changed by relationship without losing themselves.
 
+```mermaid
+flowchart LR
+  accTitle: What each Kegan stage can hold in relationship
+  accDescr: Four stages in order, each labelled with how the self relates to others. Imperial sees others as meeting needs, Interpersonal is shaped by relationships, Institutional authors its own position, and Interindividual holds its own position while opening to the other.
+  Imperial["Imperial: others meet my needs"] --> Interpersonal["Interpersonal: I am my relationships"]
+  Interpersonal --> Institutional["Institutional: I author my own position"]
+  Institutional --> Interindividual["Interindividual: I hold my position and open to yours"]
+```
+
+*In words:* at each stage something different is invisible to the person and so runs them. Needs come first, then relationships and expectations, then one's own standards. At the fourth stage the person can hold their own standards and also be changed by another's full reality. This is a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
+
+**Evidence tier:** B — interview-based and widely applied, with caution about generalizing across cultures.
+
 **2. Attachment Theory (Bowlby / Ainsworth)**
 
 John Bowlby established that the infant's relational patterning with primary caregivers creates an internal working model — a set of implicit expectations about self, other, and the safety of proximity — that shapes the baseline substrate of interpersonal relating throughout life. Mary Ainsworth's research identified four adult attachment patterns (secure, anxious-preoccupied, dismissing-avoidant, disorganized-fearful) that represent characteristic strategies for managing proximity, vulnerability, and distress in relationship.
 
-Attachment style is the *relational substrate* of interpersonal development, not the same thing as Kegan altitude. A person can be at Institutional altitude on Kegan's map and carry an anxious attachment strategy. The two interact: secure attachment provides greater relational flexibility across stages; insecure attachment can create systematic distortions in interpersonal range that are invisible to the self because they are experienced as simply how relationships are.
+Attachment style is the *relational substrate* of interpersonal development, not the same thing as Kegan altitude. A person can be at Institutional altitude on Kegan's map and carry an anxious attachment strategy. The two interact: secure attachment provides greater relational flexibility across stages; insecure attachment can create systematic distortions in interpersonal range that are invisible to the self because they are experienced as simply how relationships are. **Evidence tier:** A — a long, strong research base, though adult patterns are more changeable than early models predicted.
 
 **3. Buber's I–Thou and I–It**
 
-Martin Buber's foundational distinction is between I–Thou relating — in which the full subjectivity of the other is genuinely met and allowed to matter — and I–It relating — in which the other is treated as an object, tool, or means. Buber's insight is that I–It relating is not evil or malicious; it is simply the default. The question is whether the person has developed the capacity to shift from I–It to I–Thou, and to sustain that shift under relational pressure.
+Martin Buber's foundational distinction is between I–Thou relating — in which the full subjectivity of the other is genuinely met and allowed to matter — and I–It relating — in which the other is treated as an object, tool, or means. Buber's insight is that I–It relating is not evil or malicious; it is simply the default. The question is whether the person has developed the capacity to shift from I–It to I–Thou, and to sustain that shift under relational pressure. **Evidence tier:** C — a philosophical framework, not an empirical finding.
 
 The developmental meaning of Buber's distinction maps directly onto Kegan's arc: genuine I–Thou contact requires at least Interindividual altitude, because only at that altitude is the self stable enough to be genuinely *affected* by another's full subjectivity without losing itself. At Imperial altitude, the other is encountered primarily as It. At Interpersonal altitude, the relating is warm and affiliative, but the warmth can be contingent on the other staying within the emotional register that is manageable — a subtle form of I–It. Institutional altitude can produce clarity and respect; it can also produce relational distance that masquerades as healthy differentiation.
 
@@ -82,11 +102,11 @@ The developmental meaning of Buber's distinction maps directly onto Kegan's arc:
 
 Daniel Siegel's mindsight model describes interpersonal development as the cultivation of the capacity to hold one's own mind and another's mind simultaneously in awareness — to see the interior world behind behavior, to distinguish one's own mental states from another's, and to use this capacity to navigate relational complexity. Siegel's integration framework frames interpersonal health as the capacity to link differentiated elements (self and other, interior and exterior, past and present) without collapsing the differences.
 
-Mindsight provides an operationalizable bridge between Kegan's structural stages and the relational practices of the Interpersonal line: developing mindsight is the *how* of moving through the Interpersonal line arc.
+Mindsight provides an operationalizable bridge between Kegan's structural stages and the relational practices of the Interpersonal line: developing mindsight is the *how* of moving through the Interpersonal line arc. **Evidence tier:** B — grounded in interpersonal neurobiology, with some constructs still awaiting psychometric validation.
 
 **5. AQAL We-Quadrant Framework**
 
-The Interpersonal line develops primarily in the Lower-Left (LL) quadrant — the shared cultural and intersubjective space of mutual understanding, felt meaning, and relational norms. It is observable in the Lower-Right (LR) as structural interaction patterns, collaboration protocols, and organizational relational health. The critical AQAL distinction is that Interpersonal line development is *irreducibly relational* — it cannot be fully captured by measuring individual behavioral competencies (UR) or individual interior experience (UL). It requires real intersubjective encounter to develop and to assess.
+The Interpersonal line develops primarily in the Lower-Left (LL) quadrant — the shared cultural and intersubjective space of mutual understanding, felt meaning, and relational norms. It is observable in the Lower-Right (LR) as structural interaction patterns, collaboration protocols, and organizational relational health. The critical AQAL distinction is that Interpersonal line development is *irreducibly relational* — it cannot be fully captured by measuring individual behavioral competencies (UR) or individual interior experience (UL). It requires real intersubjective encounter to develop and to assess. **Evidence tier:** C — an integrative AQAL framework, not an independently validated measure.
 
 ---
 
@@ -148,6 +168,8 @@ The Interpersonal line often lags the Cognitive line significantly. A person may
 
 This is a self-inquiry exercise, not a self-evaluation. Your responses describe patterns you work with, not verdicts about your character.
 
+**Worked example (stem 2):** "When someone I care about disagrees with me in a way that matters to them, my first internal response is a sinking worry that they are upset with me, and what I typically do is agree quickly, even though I know it would probably be more helpful to ask what matters most to them." The sentence names a feeling, a habit and a better alternative, using an ordinary case.
+
 Complete each sentence stem in writing, using concrete examples from real relationships and situations rather than ideals or aspirations. Take as much space as each stem needs.
 
 1. **Characteristic relational patterns:** "In significant relationships, my recurring pattern is ___, which tends to show up most clearly when ___, and the people closest to me would probably say they experience me as ___."
@@ -172,6 +194,8 @@ This is the most common confusion in the Interpersonal line. A person can have d
 
 The practical marker: When relational threat is real and the stakes are high, does the person's actual behavior reflect the secure-base capacity they can describe abstractly? Conceptual fluency under calm conditions is not evidence of structural interpersonal development.
 
+**Back to your opening questions:** at the Interpersonal stage the self *is* its relationships, so a disagreement from someone loved can feel like a threat to the self, and warmth does not supply the structure to hold a separate position. The shift comes when the person takes their own needs and expectations as object, so they can hold their own view and still meet another person's full reality (the Interindividual stage in the diagram above).
+
 ### Pre/Trans Checkpoint 2: Emotional Warmth ≠ Interpersonal Development
 
 A person can be emotionally warm, relationally oriented, and genuinely caring — and simultaneously be structurally organized at Interpersonal altitude (Kegan 3), with the characteristic enmeshment, conflict avoidance, and self-loss-under-relational-pressure that altitude involves.
@@ -194,13 +218,13 @@ Warmth is a quality that can appear at any altitude. Interpersonal development c
 
 1. **(Individual — journaling)** What is the relationship between your Cognitive line development and your Interpersonal line development right now? Where does your analytic sophistication run ahead of your relational range, and what does that gap cost you?
 
-2. **(Individual — journaling)** When you review your characteristic relational pattern from the Self-Portrait, what altitude on Kegan's arc does that pattern most resemble? What does that suggest about your current interpersonal developmental work?
+2. **(Individual — journaling)** When you review your characteristic relational pattern from the Self-Portrait, what altitude on Kegan's arc does that pattern most resemble, and why? How might that shape your current interpersonal developmental work?
 
 3. **(Dialogue — with a trusted person)** Ask someone who knows you well: "When I'm under relational pressure — when there's real disagreement or conflict — what do you notice about me?" Listen without defending. What do you learn?
 
 4. **(Individual — somatic check-in)** Bring to mind a relationship where you consistently feel relational tension or unease. Where do you notice this in your body? What texture, weight, or movement is there? What does the body signal tell you that the conceptual analysis has not told you?
 
-5. **(Individual — journaling)** Recall a moment of genuine I–Thou contact — a time when you felt truly seen and allowed the other person's reality to fully matter. What conditions made that possible? What would it take to create more of those conditions deliberately?
+5. **(Individual — journaling)** Recall a moment of genuine I–Thou contact — a time when you felt truly seen and allowed the other person's reality to fully matter. Why do you think those conditions made it possible? How could you create more of them deliberately in one relationship you have now?
 
 ---
 
@@ -210,11 +234,11 @@ Warmth is a quality that can appear at any altitude. Interpersonal development c
 
 | Criterion | Not yet | Developing | Stable |
 |-----------|---------|------------|--------|
-| **Interpersonal line definition** — Distinguishes the Interpersonal line from the Emotional line and from general social skill | Cannot distinguish; conflates them | Can name the distinction with prompting | Explains the distinction clearly with a concrete example |
-| **Kegan stages application** — Maps the four Interpersonal altitudes to observable relational patterns | Cannot name the altitudes | Names altitudes but cannot connect to observable behavior | Connects each altitude to a specific observable relational pattern |
+| **Interpersonal line definition** — Distinguishes the Interpersonal line from the Emotional line and from general social skill | Cannot distinguish; conflates them | Can name the distinction with prompting | Explains the distinction clearly with one example of your own that shows each |
+| **Kegan stages application** — Maps the four Interpersonal altitudes to observable relational patterns | Cannot name the altitudes | Names altitudes but cannot connect to observable behavior | Connects each altitude to a specific observable relational pattern: you can name four, one per altitude |
 | **Attachment substrate** — Explains how attachment style interacts with Kegan altitude | No understanding | Partial: names attachment patterns | Explains the interaction: how attachment distorts or enables interpersonal range across altitudes |
 | **I–Thou developmental meaning** — Explains when and why genuine I–Thou contact becomes structurally possible | Cannot explain | Explains the concept but not the developmental condition | Explains why Interindividual altitude is required and what enables the shift |
-| **Pre/Trans checkpoint application** — Identifies both confusions and applies them to own current pattern | Cannot identify either | Identifies one confusion with evidence | Identifies both confusions with concrete current examples |
+| **Pre/Trans checkpoint application** — Identifies both confusions and applies them to own current pattern | Cannot identify either | Identifies one confusion with evidence | Identifies both confusions, each with one dated example from your own recent behavior |
 
 **Passing threshold:** Three or more criteria at *Developing* or *Stable*, with at least one at *Stable*.
 

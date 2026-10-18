@@ -55,6 +55,21 @@ import Admonition from '@theme/Admonition';
 
 ---
 
+## 🌿 Encounter
+
+Before working through the concepts below, bring to mind one specific moment from the past week when you felt emotionally activated — not a dramatic event, an ordinary one: a meeting that ran long, a message that landed wrong, a small disappointment. Notice, without yet trying to name or analyze it, what you actually experienced: a body sensation, an urge, a thought that arrived automatically.
+
+Hold that moment loosely as you read. The concepts that follow — constructed emotion, RULER, the L1–L4 arc — are most useful when they are immediately tested against something real rather than absorbed as abstract theory. You will return to this same moment, or one like it, in the Practice section below.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Someone can explain emotions brilliantly and still lose their temper under pressure. Why might knowing about emotions not be the same as developing emotionally?
+2. Two people get the same curt message. One feels hurt, the other feels nothing much. How could the same event produce different emotions?
+:::
+
+---
+
 ## 🧠 Learn
 
 ## 1) What the Emotional Line Is (and Is Not)
@@ -70,7 +85,21 @@ The Emotional line is developmental and trainable: it concerns *skills and struc
 
 ## 2) Barrett's Constructed Emotion Theory (Plain Language)
 
-Lisa Feldman Barrett's core claim is that emotions are not fixed hardwired packets that fire identically in all situations. Instead, the brain continuously predicts what bodily signals mean using prior experience, context, and concepts. In that sense, emotion is **constructed** in real time.
+Lisa Feldman Barrett's core claim is that emotions are not fixed hardwired packets that fire identically in all situations. Instead, the brain continuously predicts what bodily signals mean using prior experience, context, and concepts. In that sense, emotion is **constructed** in real time. **Evidence tier:** B — influential and well argued, but still actively debated against basic-emotion accounts.
+
+```mermaid
+flowchart LR
+  accTitle: How an emotion is constructed
+  accDescr: Body signals, past experience and the current context feed a prediction by the brain. The prediction, shaped by the emotion concepts you have, becomes the emotion you feel and the options you see.
+  Body[Body signals] --> Predict[Brain predicts what they mean]
+  Past[Past experience] --> Predict
+  Context[Current context] --> Predict
+  Concepts[Emotion concepts you know] -->|sharpen| Predict
+  Predict --> Emotion[Emotion you feel]
+  Emotion --> Options[Regulation options you see]
+```
+
+*In words:* the brain combines body signals, past experience and the current context into a prediction of what is happening. The emotion concepts you know sharpen that prediction. The result is the emotion you feel, and it shapes which regulation options you can see.
 
 Practical implication: emotional development is partly the development of richer emotion concepts. The more precise your emotional vocabulary and context discrimination, the more precise your emotional predictions and regulation options become.
 
@@ -83,7 +112,7 @@ This suite uses Brackett's **RULER** model as the operational scaffold:
 - **E — Express** emotions skillfully for context and relationship
 - **R — Regulate** emotions adaptively over time
 
-RULER maps cleanly onto AQAL Emotional line development and gives an evidence-aligned common language for practice across modules.
+RULER maps cleanly onto AQAL Emotional line development and gives an evidence-aligned common language for practice across modules. **Evidence tier:** B — supported by school implementation studies, where results depend heavily on implementation quality.
 
 ## 4) Emotional Line Developmental Arc (L1 → L4)
 
@@ -92,6 +121,8 @@ RULER maps cleanly onto AQAL Emotional line development and gives an evidence-al
 - **L3 — Appraisal mastery:** event → appraisal → emotion → regulation strategy chain becomes explicit and trainable.
 - **L4 — Co-regulation and facilitation:** emotional intelligence becomes relational/systemic; supports group climate and others' regulation.
 
+**Evidence tier:** C — the L1–L4 arc is this platform's own teaching map, not an independently tested measure. Use it as a lens for noticing patterns in your emotional life, not as a measurement of you or a verdict on anyone's worth.
+
 ## 5) Typical Cross-Line Pattern: Self, Cognitive, and Somatic
 
 Common psychograph pattern in adult learners:
@@ -99,7 +130,7 @@ Common psychograph pattern in adult learners:
 - **Cognitive line is often ahead:** conceptual sophistication outpaces lived regulation skill.
 - **Somatic line is tightly coupled:** body-signal literacy strongly conditions emotional differentiation and regulation quality.
 
-These are tendencies, not fixed rules; use psychograph inquiry rather than identity claims.
+These are tendencies, not fixed rules; use psychograph inquiry rather than identity claims. **Evidence tier:** C — the psychograph is an integrative framework, not a validated psychometric instrument.
 
 ---
 
@@ -110,14 +141,6 @@ The RULER scaffold and the L1–L4 arc are useful operational tools, but they ar
 Constructed emotion theory itself remains actively debated within affective science, and this module presents it as a useful working model rather than settled fact. Readers should hold the Barrett framework as one lens among competing accounts (including basic-emotion theories) rather than as the final word on how emotions arise.
 
 Finally, self-report tools like the Emotional Line Self-Portrait are vulnerable to the same blind spots they are meant to reveal: a person with low granular labeling capacity may not recognize the gap in their own responses. Pairing this module with feedback from someone who knows you well, or with a qualified practitioner, corrects for what self-assessment alone cannot see.
-
----
-
-## 🌿 Encounter
-
-Before working through the concepts below, bring to mind one specific moment from the past week when you felt emotionally activated — not a dramatic event, an ordinary one: a meeting that ran long, a message that landed wrong, a small disappointment. Notice, without yet trying to name or analyze it, what you actually experienced: a body sensation, an urge, a thought that arrived automatically.
-
-Hold that moment loosely as you read. The concepts that follow — constructed emotion, RULER, the L1–L4 arc — are most useful when they are immediately tested against something real rather than absorbed as abstract theory. You will return to this same moment, or one like it, in the Practice section below.
 
 ---
 
@@ -164,6 +187,8 @@ The person accesses contemplative or transcendent states reliably but struggles 
 
 ## Emotional Line Self-Portrait (30 minutes)
 
+**Worked example:** stem 2 filled in for an ordinary case. "When stress rises, my default regulation strategy is going quiet and pushing through; it tends to help when the task is short and clear, and backfire when a colleague reads my silence as disapproval." Notice that the answer names one concrete strategy, one situation where it works and one where it costs something. It does not judge the strategy as good or bad.
+
 Use complete sentences for each stem. Aim for concrete examples rather than ideals.
 
 1. **How I usually name emotions:** "When I feel emotionally activated, my first labels are usually ___, and I rarely name ___."
@@ -190,6 +215,8 @@ Reduced emotional expression is not automatically healthy regulation. Suppressio
 
 ---
 
+**Back to your opening questions:** explaining emotions draws on the Cognitive line, while regulating them in real time is an Emotional line skill, so the two can sit far apart (Profile A and Confusion 1). The same curt message can produce different emotions because each person's brain predicts its meaning from their own body state, past experience, context and emotion concepts: that is the constructed emotion view.
+
 ## The Gifts of Emotional Line Literacy
 
 Naming the Emotional line as a distinct developmental thread — separate from mood, temperament, and personality — gives learners a way to track real change over time rather than treating emotional life as a fixed trait. This alone reframes emotional difficulty as a skill gap rather than a character flaw.
@@ -212,11 +239,11 @@ The psychograph lens — locating the Emotional line against Self, Cognitive, an
 
 ## 🔍 Reflect
 
-1. Where do you currently rely on broad emotion categories instead of precise labels, and what does that cost you?
-2. In the past week, where did you confuse suppression with regulation?
+1. Where do you currently rely on broad emotion categories instead of precise labels, and how does that cost you in a specific recent situation?
+2. In the past week, where did you confuse suppression with regulation? Why did suppression feel like the right move at the time?
 3. Which line is most out of sync with your Emotional line right now (Self, Cognitive, Somatic, Interpersonal), and what evidence supports that?
 4. What relational context most reliably pushes you below your intended emotional capacity?
-5. What one micro-practice would most likely move your Emotional line one step forward this month?
+5. What one micro-practice would most likely move your Emotional line one step forward this month, and why would it work better than simply learning more about emotions?
 
 ---
 
@@ -224,11 +251,11 @@ The psychograph lens — locating the Emotional line against Self, Cognitive, an
 
 | Criterion | Not yet | Developing | Stable |
 |---|---|---|---|
-| **Definition clarity** — Distinguishes Emotional line from mood, temperament, and personality | Cannot distinguish | Distinguishes with prompts | Distinguishes clearly with examples |
-| **Constructed emotion understanding** — Explains Barrett's model in plain language | Cannot explain | Partial explanation | Clear explanation + practical implication |
-| **RULER operational fluency** — Applies all five skills to a recent emotional episode | Cannot apply | Applies 2–3 skills | Applies all five coherently |
-| **Developmental arc mapping** — Locates L1–L4 capabilities and own likely range | No map | Partial map | Coherent map with evidence |
-| **Pre/Trans checkpoint application** — Identifies own risk of the two confusions | Cannot identify | Identifies one confusion | Identifies both with concrete evidence |
+| **Definition clarity** — Distinguishes Emotional line from mood, temperament, and personality | Cannot distinguish | Distinguishes with prompts | Distinguishes all three clearly, with one example of your own for each |
+| **Constructed emotion understanding** — Explains Barrett's model in plain language | Cannot explain | Partial explanation | Clear explanation + one practical implication you can point to in your own week |
+| **RULER operational fluency** — Applies all five skills to a recent emotional episode | Cannot apply | Applies 2–3 skills | Applies all five to one written episode, one sentence per skill |
+| **Developmental arc mapping** — Locates L1–L4 capabilities and own likely range | No map | Partial map | Coherent map: your likely range, with one real example for each level you claim |
+| **Pre/Trans checkpoint application** — Identifies own risk of the two confusions | Cannot identify | Identifies one confusion | Identifies both, each with one dated example from your own behavior |
 
 **Passing threshold:** Three or more criteria at *Developing* or *Stable*.
 

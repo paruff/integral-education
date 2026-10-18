@@ -41,6 +41,9 @@ jobs:
       - name: Retention Check (retrieval + mastery threshold in every module)
         run: node scripts/check-retention.mjs
 
+      - name: Toolkit Check (generation, calibration, tiers, diagrams in every module)
+        run: node scripts/check-toolkit.mjs
+
       - name: Generate Content Graph
         run: node scripts/generate-content-graph.js
 

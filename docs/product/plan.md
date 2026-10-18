@@ -43,7 +43,7 @@ close it.
 | ID | Task | Proof | Depends |
 | --- | --- | --- | --- |
 | P1-01 | Revise the charter: self-paced-only scope; replace O4 (self-report) with the FR-15 retention measure; remove facilitated pilot pathways | Charter v0.2 signed | P0-01 |
-| P1-02 | Check the five new citations in `specification.md` against their sources | Each marked checked with a date | — |
+| P1-02 | Check the fifteen AI-sourced citations in `specification.md` against their sources (log in § Citation check log) | Each marked checked with a date | — |
 | P1-03 | Name a safety reviewer for Tier 2 content | Named in `raci.md` | — |
 
 ## P2 — Retention foundation (Strong evidence)

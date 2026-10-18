@@ -33,6 +33,13 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 
 Understanding this line matters because the body is not a passive vehicle for the mind — it is a primary source of information, regulation, and presence that every other developmental line depends on, whether or not that dependency is consciously recognized.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why might your body register that something is wrong before your mind can say what it is?
+2. What would it mean for the body to "inform but not command," and how might that differ from controlling or ignoring it?
+:::
+
 ## 🌿 Encounter
 
 Before any framework names it, the body already knows. A held breath before you consciously register the threat. A wave of nausea before you can say what's wrong. An exhale that arrives on its own the moment real safety returns. The nervous system is reading the room continuously, faster than thought, and reporting its findings the only way it can — as sensation.
@@ -49,23 +56,36 @@ The five frameworks below approach the somatic line from interoception research,
 
 ### 1. Interoception Research (Garfinkel & Critchley)
 
-Interoception — the sense of the internal state of the body — has three empirically distinct dimensions: interoceptive *accuracy* (objective performance on heartbeat detection tasks), interoceptive *sensibility* (subjective confidence in one's body awareness), and interoceptive *awareness* (the correspondence between accuracy and confidence — metacognitive awareness of one's own body perception). The somatic line primarily tracks the developmental trajectory of interoceptive awareness.
+Interoception — the sense of the internal state of the body — has three empirically distinct dimensions: interoceptive *accuracy* (objective performance on heartbeat detection tasks), interoceptive *sensibility* (subjective confidence in one's body awareness), and interoceptive *awareness* (the correspondence between accuracy and confidence — metacognitive awareness of one's own body perception). The somatic line primarily tracks the developmental trajectory of interoceptive awareness. **Evidence tier:** A — well-replicated empirical work across multiple labs.
 
 ### 2. Polyvagal Theory (Porges)
 
-Polyvagal Theory proposes that the autonomic nervous system evolved in three stages — dorsal vagal (immobilisation), sympathetic (mobilisation), and ventral vagal (social engagement) — and that these circuits activate hierarchically in response to safety and threat. The ventral vagal complex, myelinated and fast-acting, supports states of calm social connection. **Important caveat:** recent critiques (Grossman & Taylor, 2007; and subsequent work) dispute specific claims, particularly the evolutionary hierarchy of vagal branches and the anatomical claims about the nucleus ambiguus in humans. PVT is clinically influential and widely used in trauma therapy — it is cited here as a useful heuristic, not as settled neuroanatomical science.
+Polyvagal Theory proposes that the autonomic nervous system evolved in three stages — dorsal vagal (immobilisation), sympathetic (mobilisation), and ventral vagal (social engagement) — and that these circuits activate hierarchically in response to safety and threat. The ventral vagal complex, myelinated and fast-acting, supports states of calm social connection. **Important caveat:** recent critiques (Grossman & Taylor, 2007; and subsequent work) dispute specific claims, particularly the evolutionary hierarchy of vagal branches and the anatomical claims about the nucleus ambiguus in humans. PVT is clinically influential and widely used in trauma therapy — it is cited here as a useful heuristic, not as settled neuroanatomical science. **Evidence tier:** B — clinically influential, with contested neuroanatomical claims.
 
 ### 3. Somatic Experiencing and Body-Based Trauma Work (Levine; Ogden)
 
-Trauma lives in the body — incomplete defensive responses (fight, flight, freeze) are held as chronic muscular tension, autonomic dysregulation, and procedural memory patterns that persist beyond the original event. Levine's Somatic Experiencing and Ogden's Sensorimotor Psychotherapy describe how body-based attention — tracking sensation, completing truncated motor sequences, pendulating between activation and resource — can resolve these held patterns. These approaches inform the practice design throughout the somatic line suite.
+Trauma lives in the body — incomplete defensive responses (fight, flight, freeze) are held as chronic muscular tension, autonomic dysregulation, and procedural memory patterns that persist beyond the original event. Levine's Somatic Experiencing and Ogden's Sensorimotor Psychotherapy describe how body-based attention — tracking sensation, completing truncated motor sequences, pendulating between activation and resource — can resolve these held patterns. These approaches inform the practice design throughout the somatic line suite. **Evidence tier:** B — mainly clinical and practitioner evidence, with limited controlled validation.
 
 ### 4. Constructive-Developmental Theory (Kegan) and the Body
 
-Kegan's subject-object theory does not directly address the somatic line, but the structural logic applies: what a person is *subject to* somatically (embedded in, controlled by) at one stage becomes *object* (capable of being observed and related to) at the next. A Red-stage person is *subject to* impulse — the impulse is the self. An Orange-stage person can observe bodily states as data and make instrumental decisions about them. An Integral-stage person can hold the body as a participant in meaning-making without being identified with or detached from it.
+Kegan's subject-object theory does not directly address the somatic line, but the structural logic applies: what a person is *subject to* somatically (embedded in, controlled by) at one stage becomes *object* (capable of being observed and related to) at the next. A Red-stage person is *subject to* impulse — the impulse is the self. An Orange-stage person can observe bodily states as data and make instrumental decisions about them. An Integral-stage person can hold the body as a participant in meaning-making without being identified with or detached from it. **Evidence tier:** B — the subject-object framework is well supported by interview methodology, but its application to the body is an extrapolation.
 
 ### 5. AQAL Somatic Line — Developmental Arc
 
-Within the integral framework, the somatic line develops from reflexive reactivity (Archaic) through impulsive discharge (Red), rule-governed regulation (Amber), instrumental management (Orange), relational and felt presence (Green), and integrated embodiment where somatic intelligence participates in whole-person meaning-making (Integral). This is a theoretical synthesis — the specific stage descriptors are Wilber's framework applied to somatic development, not independently validated empirical findings.
+Within the integral framework, the somatic line develops from reflexive reactivity (Archaic) through impulsive discharge (Red), rule-governed regulation (Amber), instrumental management (Orange), relational and felt presence (Green), and integrated embodiment where somatic intelligence participates in whole-person meaning-making (Integral). This is a theoretical synthesis — the specific stage descriptors are Wilber's framework applied to somatic development, not independently validated empirical findings. **Evidence tier:** C — a theoretical synthesis. These stages are a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
+
+```mermaid
+flowchart TD
+  accTitle: The developmental arc of the somatic line
+  accDescr: The somatic line moves from reflexive reactivity through impulsive discharge, rule-governed regulation, instrumental management and relational presence to integrated embodiment. At each step what the body does becomes something the person can observe.
+  Reflex["Reflexive reactivity"] --> Impulse["Impulsive discharge"]
+  Impulse -->|"impulse becomes observable"| Rules["Rule-governed regulation"]
+  Rules --> Manage["Instrumental management"]
+  Manage -->|"signals are felt, not only managed"| Presence["Relational and felt presence"]
+  Presence --> Integrated["Integrated embodiment"]
+```
+
+*In words:* the line begins with reflexive reactivity and moves through impulsive discharge, rule-governed regulation and instrumental management to relational, felt presence and finally integrated embodiment. This follows the subject-object logic above: what the body does at one point becomes something you can observe and relate to at the next.
 
 ## The Gifts of Somatic Development
 
@@ -121,6 +141,8 @@ Somatic aliveness is a genuine characteristic of early-stage development and als
 
 **Format warning for module authors:** Somatic content at Archaic/Magic/Red stages requires embodied delivery — breath, movement, grounding, rhythm. The text-and-reflection template is NOT sufficient and should not be defaulted to. This overview module uses cognitive framing as appropriate for a line overview; practice modules at earlier stages must be redesigned for embodied delivery.
 
+**Worked example:** step 2 for one region. At the calves, you notice they feel warm, slightly tight, and a little buzzy, and you can feel the area clearly. You register those few words and move on to the knees without trying to change anything.
+
 1. **Arrive (3 minutes).** Close your eyes or soften your gaze. Take three natural breaths — no effort to change the breath, just notice it. Feel the weight of your body in the chair or on the floor. Notice the contact points: feet on floor, seat on chair, back against support.
 
 2. **Scan feet to head (10 minutes).** Slowly bring attention through your body, one region at a time. Spend about 30–60 seconds on each area: feet, calves, knees, thighs, pelvis, lower back, abdomen, chest, upper back, shoulders, arms, hands, neck, jaw, face, crown of head. For each region, notice: temperature (warm/cool), tension (tight/loose), texture (smooth/rough/buzzing/tingling), presence (can you feel this area at all, or is it blank?). Do not try to change anything. Just register.
@@ -137,16 +159,18 @@ Somatic aliveness is a genuine characteristic of early-stage development and als
 
 Completing a single body scan, or reading the frameworks above, gives you a *conceptual* map of interoception and nervous system regulation — it does not, by itself, widen your window of tolerance or install a new baseline of regulatory capacity. Being able to name the ventral vagal state is a different achievement from actually settling into it under real stress. Treat today's scan as one data point in a long practice, not evidence that regulation has already changed.
 
+**Back to your opening questions:** the nervous system reads safety and threat faster than the mind can label them, and reports in the only way it can, as sensation. "Inform but not command" means noticing what the body is saying and then choosing whether to act, which is different from suppressing it (regulation can become control) or being driven by it (the arc in Learn).
+
 The frameworks above (Polyvagal Theory especially) were developed and popularized largely in Western clinical and research contexts, and the specific vocabulary for body-awareness — which sensations get named, which are considered normal to attend to — varies across cultures and families. If your own background frames bodily attention differently than the language used here, trust your own felt experience over the terminology; the underlying claim (that the body carries regulable, informative signal) is more robust than any one culture's way of naming it.
 
 ## Reflect
 
 - Where in your body did you find the most aliveness? What was the quality of that sensation?
 - Where was the most silence or blankness? Did that change at all during the scan?
-- What surprised you about your body's responses during this exercise?
+- What surprised you about your body's responses during this exercise, and why do you think it responded that way?
 - How does your body feel right now compared to 25 minutes ago? Be specific — temperature, muscle tone, breathing depth.
-- When have you noticed your body giving you information before your mind could name what was happening? (Dialogue prompt: share an example with a partner.)
-- What is your relationship to your body — is it primarily a tool, a source of information, a source of distress, a home, or something else? Has that relationship shifted over time?
+- When have you noticed your body giving you information before your mind could name what was happening? How did you respond in that specific moment, and why do you think you noticed it then? (Dialogue prompt: share an example with a partner.)
+- What is your relationship to your body — is it primarily a tool, a source of information, a source of distress, a home, or something else? Why do you think it has, or has not, shifted over time?
 
 ## Assess
 
@@ -154,10 +178,10 @@ Use this rubric after completing the practice and reflection. It is for honest s
 
 | Criterion | Not yet | Developing | Stable |
 |-----------|---------|------------|--------|
-| **Interoceptive awareness** — I can locate and describe at least three distinct regions of my body with specific sensory qualities (temperature, tension, texture) | I cannot describe more than one region with specificity | I can describe two regions with some specificity | I can describe three or more regions, each with distinct sensory qualities |
-| **Regulation self-assessment** — I know what "regulated," "hyperaroused," and "hypoaroused" feel like in my own body | I cannot distinguish these states | I can sometimes distinguish when I am clearly activated | I can reliably identify my current state and describe its somatic markers |
-| **Embodied presence** — I can ground myself in my body during an ordinary interaction (conversation, meeting, meal) | I rarely notice my body during interactions | I sometimes notice and can briefly ground | I regularly ground in my body as a baseline practice |
-| **Somatic information** — I can identify a time when my body told me something my mind had not yet articulated | I cannot recall such an instance | I can recall one clear instance | I notice this regularly — my body is a reliable source of information |
+| **Interoceptive awareness** — I can locate and describe at least three distinct regions of my body with specific sensory qualities (temperature, tension, texture) | I cannot describe more than one region with specificity | I can describe two regions with some specificity | I can describe three or more regions, each with distinct sensory qualities: my notes list at least three regions with temperature, tension and texture for each |
+| **Regulation self-assessment** — I know what "regulated," "hyperaroused," and "hypoaroused" feel like in my own body | I cannot distinguish these states | I can sometimes distinguish when I am clearly activated | I can reliably identify my current state and describe its somatic markers: I can name one marker for each of the three states from my own experience |
+| **Embodied presence** — I can ground myself in my body during an ordinary interaction (conversation, meeting, meal) | I rarely notice my body during interactions | I sometimes notice and can briefly ground | I regularly ground in my body as a baseline practice: I can name at least two ordinary interactions this week where I did |
+| **Somatic information** — I can identify a time when my body told me something my mind had not yet articulated | I cannot recall such an instance | I can recall one clear instance | I notice this regularly — my body is a reliable source of information: I can point to at least two instances from the past month |
 
 **Passing threshold:** Three or more criteria at *Developing* or *Stable*.
 
@@ -193,7 +217,7 @@ Use this rubric after completing the practice and reflection. It is for honest s
 
 | Interval | Activity |
 |---|---|
-| 24 hours | Re-read the Interoception Research framework. Complete a 5-minute version of the body scan — feet, belly, chest only. Note any differences from the first full scan. |
+| 24 hours | Without looking, explain in two or three sentences what the Interoception Research framework says. Then check your answer against that section and note what you missed. Complete a 5-minute version of the body scan — feet, belly, chest only. Note any differences from the first full scan. |
 | 72 hours | Re-do the Practice body scan. Pay special attention to the region that felt most alive and the region that felt quietest. Compare your notes to the first session. |
 | 7 days | Apply one Integrate activity deliberately: eat the first three bites of a meal with full attention. Journal what you noticed that you usually miss. |
 | 14 days | Review the Somatic Line Gifts section. Which gift do you most recognise in your own experience? Which feels least accessible? Identify one small practice to develop the less accessible capacity. |

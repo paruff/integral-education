@@ -44,7 +44,7 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
   // Persist the spaced-retrieval schedule once the review finishes.
   React.useEffect(() => {
     if (completed) {
-      recordRetrievalReview(resolvedModuleId, moduleName);
+      recordRetrievalReview(resolvedModuleId, moduleName, cards);
     }
     // Only fire once, right when `completed` flips true.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -101,6 +101,7 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
         key={currentIndex}
         question={currentCard.q}
         answer={currentCard.a}
+        criteria={currentCard.criteria}
         cardNumber={currentIndex + 1}
         totalCards={totalCards}
         onComplete={handleCardComplete}

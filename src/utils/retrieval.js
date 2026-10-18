@@ -54,3 +54,17 @@ export function isDue(progress) {
   if (!progress || progress.complete || !progress.nextDueDate) return false;
   return new Date(progress.nextDueDate) <= new Date();
 }
+
+// Interleaved review (FR-05): mix cards from every due module round-robin, so
+// no two neighbouring questions come from the same module while others remain.
+// Capped per module to keep one sitting short.
+// schedule: { [moduleId]: { moduleName, nextDueDate, cards: [{ q, a, criteria? }] } }
+export function interleaveDueCards(schedule, maxPerModule = 3) {
+  const decks = Object.entries(schedule || {})
+    .filter(([, entry]) => isDue(entry) && entry.cards?.length)
+    .map(([moduleId, entry]) =>
+      entry.cards.slice(0, maxPerModule).map((card) => ({ ...card, moduleId, moduleName: entry.moduleName }))
+    );
+  const longest = Math.max(0, ...decks.map((d) => d.length));
+  return Array.from({ length: longest }, (_, i) => decks.map((d) => d[i]).filter(Boolean)).flat();
+}

@@ -217,7 +217,7 @@ Use this rubric after completing the practice and reflection. It is for honest s
 
 | Interval | Activity |
 |---|---|
-| 24 hours | Re-read the Interoception Research framework. Complete a 5-minute version of the body scan — feet, belly, chest only. Note any differences from the first full scan. |
+| 24 hours | Without looking, explain in two or three sentences what the Interoception Research framework says. Then check your answer against that section and note what you missed. Complete a 5-minute version of the body scan — feet, belly, chest only. Note any differences from the first full scan. |
 | 72 hours | Re-do the Practice body scan. Pay special attention to the region that felt most alive and the region that felt quietest. Compare your notes to the first session. |
 | 7 days | Apply one Integrate activity deliberately: eat the first three bites of a meal with full attention. Journal what you noticed that you usually miss. |
 | 14 days | Review the Somatic Line Gifts section. Which gift do you most recognise in your own experience? Which feels least accessible? Identify one small practice to develop the less accessible capacity. |

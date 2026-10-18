@@ -54,6 +54,23 @@ import Admonition from '@theme/Admonition';
 
 ---
 
+## 🧭 Orient
+
+You are about to work with a claim that can feel uncomfortable: that your confident sense of understanding another person's experience is not, by itself, reliable evidence that you actually do. Before continuing, notice any resistance to that claim — a felt sense of "but I really do know how they feel" is precisely the confidence Epley's research shows is so often miscalibrated. That noticing is the starting point for the practices below.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. How accurate do you think you are at knowing what a close colleague is thinking, and what would you base that on?
+2. If you wanted to be more accurate about what someone feels, what is the simplest thing you could do?
+:::
+
+## 🌿 Encounter
+
+Bring to mind one person you are currently in relationship with, and recall a recent moment where you felt confident you knew what they were thinking or feeling. Without checking with them, just notice: what is that confidence actually built on — their explicit words, or your own inference filling in the gaps? Hold that question lightly; the Practice exercises below are designed to let you test it directly.
+
+---
+
 ## 🧠 Learn
 
 This module trains the capacity to distinguish the three forms of empathy, understand the cognitive prerequisite for interpersonal development, recognise why perspective inferences are systematically less accurate than we believe, and develop the active verification habits that make genuine empathic accuracy possible.
@@ -72,11 +89,11 @@ The interpersonal problem that most frequently results from conflating these thr
 
 A second common failure: **cognitive empathy without affective grounding**. The person becomes skilled at perspective simulation — can accurately describe another's viewpoint — while feeling no genuine resonance with their experience. This can produce interpersonal competence that the other person experiences as precise but cold, or occasionally as unsettlingly accurate in a way that feels like calculation rather than care.
 
-Zaki's key finding is that these three components are not tightly coupled — they are separable capacities that develop somewhat independently and can be cultivated or recruited differentially depending on the relational context. Knowing *which* form of empathy a given relational situation calls for is itself an interpersonal skill.
+Zaki's key finding is that these three components are not tightly coupled — they are separable capacities that develop somewhat independently and can be cultivated or recruited differentially depending on the relational context. Knowing *which* form of empathy a given relational situation calls for is itself an interpersonal skill. **Evidence tier:** A — replicated across independent laboratories; real empathic responses blend all three.
 
 ### 2. Theory of Mind as the Cognitive Prerequisite for Interpersonal Development
 
-**Theory of Mind (ToM)** is the cognitive capacity to attribute independent mental states — beliefs, desires, intentions, knowledge states, emotions — to other people, and to understand that those mental states are distinct from one's own and may be false or incomplete (Premack & Woodruff, 1978; Baron-Cohen, 1995).
+**Theory of Mind (ToM)** is the cognitive capacity to attribute independent mental states — beliefs, desires, intentions, knowledge states, emotions — to other people, and to understand that those mental states are distinct from one's own and may be false or incomplete (Premack & Woodruff, 1978; Baron-Cohen, 1995). **Evidence tier:** A — classic paradigm, extensively replicated; the mechanism is still active research.
 
 ToM is developmental: it does not emerge fully until mid-childhood (the classic "false belief" task — understanding that another person can hold a belief you know to be incorrect — reliably passes at approximately age four). In adult development, ToM capacity tracks along the Interpersonal Line arc:
 
@@ -84,6 +101,8 @@ ToM is developmental: it does not emerge fully until mid-childhood (the classic 
 - **Basic ToM (Imperial altitude, Kegan 2):** Others' inner states are recognised as distinct, but are primarily tracked as inputs to one's own need-satisfaction calculus.
 - **Advanced ToM (Institutional altitude, Kegan 4):** Others' inner states are tracked with genuine independence from one's own perspective; the person can hold in mind that another's emotional state may be entirely different from their own and may be more accurate about the situation than one's own state.
 - **Recursive ToM (Interindividual altitude, Kegan 5):** The person can track not only what another thinks and feels, but what the other thinks the first person thinks and feels — and can work with this recursive structure in real-time relational navigation.
+
+These altitudes are a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
 
 The developmental significance: **interpersonal development above Kegan's Imperial stage requires functional ToM as a necessary (though not sufficient) prerequisite**. A person cannot genuinely take the perspective of another's interior experience as something that exists independently and matters in its own right until they have the structural capacity to represent another's mental states as distinct from their own. Without this capacity, what appears to be empathy is primarily projection — assuming the other person is experiencing what *I* would experience in their situation.
 
@@ -102,7 +121,20 @@ Key empirical findings:
 - **False consensus effect:** People systematically over-attribute their own attitudes, feelings, and beliefs to others, assuming more agreement than actually exists.
 - **Accuracy requires asking, not inferring:** Epley's most practically useful finding is that the accuracy of perspective inferences improves substantially when people *ask direct questions* rather than relying on mental simulation. And yet people routinely avoid asking — partly from embarrassment, partly from the false confidence that they already know.
 
-The interpersonal implication is direct: **the feeling of understanding another person is not evidence of accurate understanding**. Subjective confidence in a perspective inference is not predictive of its accuracy. Genuine empathic accuracy requires moving from inference to verification — a behavioural commitment that is structurally more demanding than it sounds, because it requires tolerating the possibility that your model of the other person was wrong.
+The interpersonal implication is direct: **the feeling of understanding another person is not evidence of accurate understanding**. Subjective confidence in a perspective inference is not predictive of its accuracy. Genuine empathic accuracy requires moving from inference to verification — a behavioural commitment that is structurally more demanding than it sounds, because it requires tolerating the possibility that your model of the other person was wrong. **Evidence tier:** A — well replicated in the laboratory; applying it to every real relationship should not be over-extrapolated.
+
+```mermaid
+flowchart LR
+  accTitle: From inference to verified understanding
+  accDescr: You make an inference about another person, feel confident, and either act on it or ask a verification question. Asking leads to their actual answer, which you compare with your inference and use to update your model.
+  Infer[Infer what they feel] --> Confident[Feel confident you are right]
+  Confident -->|"act on it"| Risk[Misread goes unnoticed]
+  Confident -->|"ask a verification question"| Answer[Their actual answer]
+  Answer --> Compare[Compare with your inference]
+  Compare --> Update[Update your model of them]
+```
+
+*In words:* an inference about another person comes with a feeling of confidence, but the confidence is not evidence. If you act on it, a misreading can go unnoticed. If you ask an open question, you get their actual answer, compare it with your guess and update your model of them.
 
 ### 4. Zaki's Empathy-as-Skill Model — Evidence That Empathic Accuracy Can Be Trained
 
@@ -118,6 +150,8 @@ Three key findings from Zaki's programme:
 
 The training implications for this module: empathic accuracy develops primarily through (a) building the habit of treating perspective inferences as hypotheses to be verified rather than truths to be relied on; (b) practising active verification questions; (c) logging the discrepancy between your initial inference and the verified account; and (d) building tolerance for being wrong about what another person is experiencing — because that tolerance is the psychological prerequisite for regularly checking.
 
+**Evidence tier:** A — experimental findings across paradigms; mindset effects are well controlled.
+
 ### 5. AQAL 1st/2nd/3rd-Person Perspectives as the Developmental Sequence
 
 AQAL integral theory maps perspective-taking as a *developmental sequence* in terms of the perspectives the self can inhabit (Wilber, 2000, 2006):
@@ -131,7 +165,7 @@ AQAL integral theory maps perspective-taking as a *developmental sequence* in te
 
 The developmental sequence has a specific implication for empathic accuracy: **most of the errors Epley documents — egocentrism, projection, false consensus — are structurally 1st-person errors operating inside an attempt at 2nd-person or 3rd-person perspective-taking**. The person believes they are taking the other's perspective (2nd-person), but they are primarily consulting their own first-person experience and projecting it onto the other. Genuine 2nd-person perspective-taking requires *verified contact with the other's actual experience*, not mental simulation of what I would experience in their situation.
 
-This AQAL frame makes explicit what Epley's data demonstrates empirically: advancing along the perspective-taking dimension of the Interpersonal Line means developing the capacity to actually inhabit 2nd-person perspective — and that requires active verification as a structural practice, not merely a cognitive technique.
+This AQAL frame makes explicit what Epley's data demonstrates empirically: advancing along the perspective-taking dimension of the Interpersonal Line means developing the capacity to actually inhabit 2nd-person perspective — and that requires active verification as a structural practice, not merely a cognitive technique. **Evidence tier:** B — a theoretical synthesis, broadly convergent with developmental psychology but not itself a directly tested finding.
 
 > **Pre/Trans Checkpoint:** The ability to describe another person's perspective fluently and analytically (3rd-person language about their inner states) is not the same as genuine 2nd-person contact. A person can write a sophisticated account of why a colleague is anxious without ever having genuinely encountered that colleague's experience from the inside. Conceptual fluency about perspectives is not empathic accuracy.
 
@@ -151,16 +185,6 @@ Epley's egocentrism findings are robust and well-replicated, but the practical r
 
 Wilber's AQAL developmental sequence is a theoretical synthesis, not a directly tested empirical finding in its own right — it draws together Piaget, Kegan, and post-metaphysical philosophy, and while broadly convergent with developmental psychology evidence, the specific 1st/2nd/3rd/4th-person framing should be read as an integrative map rather than a separately validated empirical claim.
 
-## 🧭 Orient
-
-You are about to work with a claim that can feel uncomfortable: that your confident sense of understanding another person's experience is not, by itself, reliable evidence that you actually do. Before continuing, notice any resistance to that claim — a felt sense of "but I really do know how they feel" is precisely the confidence Epley's research shows is so often miscalibrated. That noticing is the starting point for the practices below.
-
-## 🌿 Encounter
-
-Bring to mind one person you are currently in relationship with, and recall a recent moment where you felt confident you knew what they were thinking or feeling. Without checking with them, just notice: what is that confidence actually built on — their explicit words, or your own inference filling in the gaps? Hold that question lightly; the Practice exercises below are designed to let you test it directly.
-
----
-
 ## 🧘 Practice
 
 > **Safety note:** Both exercises carry a **Tier 1** safety classification. The exercises involve real relational situations and mild to moderate emotional engagement. Exercise (b) involves asking verification questions in live conversations; participants should select low-to-moderate stakes interactions for initial practice, not high-conflict or trauma-adjacent contexts.
@@ -169,6 +193,8 @@ Bring to mind one person you are currently in relationship with, and recall a re
 
 **Duration:** 20–30 minutes  
 **Setup:** Journal or paper, quiet space, reflective state.
+
+**Worked example (Steps 2 to 4):** a friend cancelled dinner by text. *Assumed:* "They are avoiding me; they were annoyed at what I said last week." *Actually observed:* a text that said "Sorry, can't make it tonight, work ran over." *Gap:* annoyance and avoidance were my additions; the observable text mentions only work. *Verification question to ask:* "Want to rebook this week? How did your day go?" The example is an ordinary, low-stakes case; choose your own.
 
 **Step 1 — Select a recent disagreement or difference (2 minutes).**  
 Recall a recent interaction in which you and another person were in disagreement, had different reactions to a shared event, or simply wanted different things. Choose something with genuine emotional charge but not the highest-intensity conflict in your life. Write one sentence describing the situation.
@@ -259,6 +285,8 @@ Genuine interpersonal development is built substantially on the willingness to b
 
 ---
 
+**Back to your opening questions:** the feeling of knowing what a colleague thinks comes from your own inference, and confidence is not evidence of accuracy, because people anchor on their own experience and adjust too little. The simplest way to improve is to ask an open verification question and compare the answer with your guess.
+
 ## The Gifts of Empathic Accuracy
 
 Verified understanding is one of the more reliable ways to make another person feel genuinely seen — not merely cared about in the abstract, but actually known in the specifics of their experience. That distinction matters more than it might seem: being cared for without being accurately understood can feel lonely even inside a loving relationship.
@@ -281,13 +309,13 @@ Carry this practice into ordinary life with three concrete commitments:
 
 After completing the Learn section and both Practice exercises, take 10 minutes to write responses to the following:
 
-1. **Which of the three types of empathy do you rely on most habitually?** What are the interpersonal gifts and costs of that preference?
+1. **Which of the three types of empathy do you rely on most habitually?** Why do you think you default to it, and what are the interpersonal gifts and costs of that preference?
 
-2. **Where in your relational life do you currently have the highest empathic accuracy?** What conditions produce that accuracy — and can any of those conditions be extended to other relationships?
+2. **Where in your relational life do you currently have the highest empathic accuracy?** How do those conditions produce that accuracy, in your own words, and how could you extend them to another relationship?
 
 3. **What is your characteristic inference error** — do you tend to project your own experience onto others (false consensus), to overestimate others' emotional intensity, to underestimate it, or to construct a version of the other that fits a familiar relational script?
 
-4. **Where in your current relationships would accurate perspective-verification most improve the quality of contact?**
+4. **Where in your current relationships would accurate perspective-verification most improve the quality of contact, and why there?**
 
 ---
 
@@ -299,8 +327,8 @@ Use this rubric to locate your current empathic accuracy practice:
 |:---|:---|
 | **L1 — Emerging** | Perspective-taking relies primarily on affective resonance; distinctions between empathy types are unfamiliar; verification questions are not a regular relational behaviour; inferences about others' experiences are treated as reliable without checking |
 | **L2 — Consolidating** | Can distinguish the three empathy types conceptually; recognises projection and egocentrism in retrospect; beginning to include verification questions in some conversations; gap between initial inference and verified account is sometimes noticed |
-| **L3 — Established** | Verification questions are a regular feature of relational practice; can distinguish own inference from observed evidence in real-time (not only retrospectively); empathic distress does not routinely substitute for accurate understanding; can identify personal inference patterns |
-| **L4 — Integrating** | Moves fluidly between affective resonance, cognitive perspective-taking, and compassionate orientation depending on what the relational context calls for; verification is a habitual relational behaviour rather than a deliberate intervention; can coach others in distinguishing the empathy types and developing verification practice |
+| **L3 — Established** | Verification questions are a regular feature of relational practice; can distinguish own inference from observed evidence in real-time (not only retrospectively); empathic distress does not routinely substitute for accurate understanding; can identify personal inference patterns; your log shows at least three verification questions with the accuracy of each inference marked |
+| **L4 — Integrating** | Moves fluidly between affective resonance, cognitive perspective-taking, and compassionate orientation depending on what the relational context calls for; verification is a habitual relational behaviour rather than a deliberate intervention; can coach others in distinguishing the empathy types and developing verification practice (you can point to one person you coached and what changed) |
 
 **Passing threshold:** Level 3 on the indicators above, shown in at least one real conversation, not only in the practice exercises.
 

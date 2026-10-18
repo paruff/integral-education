@@ -42,6 +42,13 @@ This module builds on [Interpersonal Line Overview & Orientation](./interpersona
 
 This module sits at the highest-complexity end of the Interpersonal line: sustaining genuine trust-building contact when role, culture, worldview, or developmental center of gravity differ significantly, and power is often unequal. Understanding this matters because ordinary communication skills — the ones that work well when people already share enough context — reliably break down here, and something more deliberate is needed.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why do clear, polite communication skills often break down when two people differ a lot in role, culture or worldview?
+2. When trust drops in a conversation, what do you think usually has to happen for it to recover?
+:::
+
 ## 🌿 Encounter
 
 Notice, before any framework names it, what it actually feels like to talk with someone whose assumptions are not yours. A small tightening when they say something that lands as dismissive, even if they didn't mean it that way. The pull to over-explain, or to go quiet, the moment you sense your view will not be easily understood. The subtle calculation — often below conscious awareness — of how much this costs to say, given who is listening and what power they hold.
@@ -58,23 +65,23 @@ The five frameworks below approach cross-difference dialogue from philosophical,
 
 ### Martin Buber — I–Thou / I–It
 
-Buber's distinction names the core orientation of this module: trust across difference grows when people meet as subjects (I–Thou), not as roles or instruments (I–It). Cross-difference dialogue fails when the other is reduced to category, stereotype, or function.
+Buber's distinction names the core orientation of this module: trust across difference grows when people meet as subjects (I–Thou), not as roles or instruments (I–It). Cross-difference dialogue fails when the other is reduced to category, stereotype, or function. **Evidence tier:** C — a philosophical framework, cited as conceptual support rather than empirical evidence.
 
 ### David Bohm — Dialogue vs. Discussion
 
-Bohm defines dialogue as a shared inquiry process, distinct from debate or persuasion. The key move is suspension of assumptions so participants can observe how their thinking is shaping the conversation in real time.
+Bohm defines dialogue as a shared inquiry process, distinct from debate or persuasion. The key move is suspension of assumptions so participants can observe how their thinking is shaping the conversation in real time. **Evidence tier:** B — a foundational framework that is theoretical and practitioner-oriented rather than experimental.
 
 ### Paulo Freire — Dialogical Co-Creation of Reality
 
-Freire frames dialogue as mutual world-making rather than one-way transmission. This module uses that lens to surface power: who defines reality, who is expected to adapt, and whose language sets the terms of legitimacy.
+Freire frames dialogue as mutual world-making rather than one-way transmission. This module uses that lens to surface power: who defines reality, who is expected to adapt, and whose language sets the terms of legitimacy. **Evidence tier:** B — a philosophical-pedagogical framework; how it is put into practice varies by context.
 
 ### William Isaacs — Four Dialogue Skills
 
-Isaacs operationalizes dialogue capacity through four trainable skills: listening, respecting, suspending, and voicing. These become the behavioral scaffold for high-trust dialogue across worldview and role asymmetry.
+Isaacs operationalizes dialogue capacity through four trainable skills: listening, respecting, suspending, and voicing. These become the behavioral scaffold for high-trust dialogue across worldview and role asymmetry. **Evidence tier:** B — a practitioner synthesis with wide organizational use but little controlled-trial evidence.
 
 ### Stage-Relative Trust Model (Developmental Synthesis)
 
-This model distinguishes what tends to generate trust at different developmental altitudes: Conformist (shared belonging), Achiever (competence and reliability), Individualist (authentic disclosure), Strategist (curiosity across difference). Cross-stage trust-building requires simultaneously speaking multiple trust languages.
+This model distinguishes what tends to generate trust at different developmental altitudes: Conformist (shared belonging), Achiever (competence and reliability), Individualist (authentic disclosure), Strategist (curiosity across difference). Cross-stage trust-building requires simultaneously speaking multiple trust languages. **Evidence tier:** B — a theoretical synthesis with practitioner support. Use the stages as a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
 
 ## The Gifts of Cross-Difference Dialogue
 
@@ -162,9 +169,24 @@ Cross-difference relationships usually move through three recurring phases:
 
 Developmental altitude influences the arc. Lower-altitude patterns often seek fast certainty or withdrawal; higher-altitude patterns can tolerate ambiguity, hold multiple truths, and stay in repair long enough to rebuild trust with stronger structure.
 
+```mermaid
+flowchart LR
+  accTitle: Contact, rupture and repair arc
+  accDescr: Cross-difference relationships move from contact to rupture to repair. Repair, if it works, returns to contact on firmer ground, while skipping impact and accountability leads to premature closure and a quiet rupture that returns.
+  Contact["Contact: goodwill and partial understanding"] --> Rupture["Rupture: mismatch or trust breach"]
+  Rupture -->|"acknowledge impact and take accountability"| Repair["Repair: renegotiated trust"]
+  Repair -->|"firmer ground"| Contact
+  Rupture -->|"rush to agree or withdraw"| Closure["Premature closure"]
+  Closure -->|"unspoken, it returns"| Rupture
+```
+
+*In words:* relationships across difference go from goodwill, to a mismatch or breach, to repair. When impact and accountability are acknowledged, repair returns the relationship to contact on firmer ground. When people rush to agree or withdraw, the breach stays unspoken and returns.
+
 ## Practice
 
 **Duration:** 25 minutes  
+**Worked example (steps 2 and 4 of Exercise a):** a team member and a manager discuss a new meeting schedule. *Assumptions named:* "I assume the manager has already decided"; "I assume my colleague cares more about speed than about fairness." *Suspended:* "This is my current assumption, not the whole truth. What matters most to you about the schedule?" The example uses a low-stakes topic, so choose your own.
+
 **Setup:** Quiet space, journal, and a timer. For Exercise (a), use a partner or small group only when facilitation support is available. No rush; pause at any point if needed.
 
 ### Exercise (a): Assumption Suspension Drill (partner or small group)
@@ -190,10 +212,12 @@ Completing the Assumption Suspension Drill once, or reading the frameworks above
 
 The trust languages and dialogue frameworks referenced above were developed primarily in Western organizational and philosophical contexts, and what counts as appropriate directness, disclosure, or challenge varies significantly by culture, role, and power position. If your own cultural or professional context signals trust differently than the examples above suggest, trust your own read of what actually builds safety in your specific relationships over the illustrative models.
 
+**Back to your opening questions:** ordinary skills aim at clarity and agreement, but across difference people protect dignity before logic, speaking carries different risks, and the same words can signal different realities. Trust recovers through the contact, rupture and repair arc: acknowledging impact and taking accountability, not just exchanging information.
+
 ## Reflect
 
-1. **(Individual journaling)** When I enter cross-difference dialogue, which assumptions do I treat as facts?
-2. **(Individual journaling)** Which trust language do I default to (belonging, reliability, authenticity, curiosity), and which do I under-signal?
+1. **(Individual journaling)** When I enter cross-difference dialogue, which assumptions do I treat as facts, and why do they feel like facts to me? Recall one real recent conversation.
+2. **(Individual journaling)** Which trust language do I default to (belonging, reliability, authenticity, curiosity), and which do I under-signal? How might that land with someone who prioritizes a different one?
 3. **(Dialogue prompt — partner/group)** Where do you feel most heard by me, and where do you feel least heard?
 4. **(Dialogue prompt — partner/group)** In moments of disagreement, what helps you stay in contact with me?
 5. **(Somatic check-in)** When trust drops in conversation, where do I notice it in my body (tightness, heat, numbness, urgency)?
@@ -204,10 +228,10 @@ The trust languages and dialogue frameworks referenced above were developed prim
 
 | Criterion | Not yet | Developing | Stable |
 |-----------|---------|------------|--------|
-| I name assumptions before high-difference dialogue | I enter conversations without naming assumptions | I name some assumptions when prompted | I reliably name key assumptions before dialogue begins |
-| I use dialogue skills under tension | I move into debate, defensiveness, or withdrawal quickly | I use one or two skills inconsistently | I can listen, respect, suspend, and voice in balanced sequence |
-| I navigate rupture toward repair | I avoid rupture or seek premature closure | I acknowledge rupture but struggle with accountability | I can acknowledge impact, take responsibility, and co-design repair steps |
-| I account for power dynamics | I treat all voices as equally safe to express regardless of context | I notice power only after conflict escalates | I proactively create conditions where lower-power voices can speak safely |
+| I name assumptions before high-difference dialogue | I enter conversations without naming assumptions | I name some assumptions when prompted | I reliably name key assumptions before dialogue begins: I can show written assumptions from three conversations |
+| I use dialogue skills under tension | I move into debate, defensiveness, or withdrawal quickly | I use one or two skills inconsistently | I can listen, respect, suspend, and voice in balanced sequence: I can point to one conversation where I used all four |
+| I navigate rupture toward repair | I avoid rupture or seek premature closure | I acknowledge rupture but struggle with accountability | I can acknowledge impact, take responsibility, and co-design repair steps: I can point to one repair I led and its outcome |
+| I account for power dynamics | I treat all voices as equally safe to express regardless of context | I notice power only after conflict escalates | I proactively create conditions where lower-power voices can speak safely: I can name two design moves I used |
 
 **Passing threshold:** Stable in at least 3 of 4 criteria, with no "Not yet" in "I account for power dynamics."
 
@@ -293,6 +317,7 @@ The trust languages and dialogue frameworks referenced above were developed prim
 | Isaacs, W. (1999). *Dialogue and the Art of Thinking Together*. Currency. | B | Practitioner synthesis; broad use in organizational contexts, limited controlled-trial evidence. |
 | Bohm, D. (1996). *On Dialogue*. Routledge. | B | Foundational dialogue framework; theoretical and practitioner-oriented rather than experimental. |
 | Freire, P. (1970/2000). *Pedagogy of the Oppressed* (30th anniversary ed.). Continuum. | B | Philosophical-pedagogical framework; empirical operationalization varies by context. |
+| Buber, M. (1958). *I and Thou* (2nd ed., R. G. Smith, Trans.). Scribner. | C | Philosophical framework; cited as conceptual support for genuine meeting rather than as empirical evidence. |
 | Stage-relative trust model (Conformist / Achiever / Individualist / Strategist), synthesized from developmental practice literature and practitioner field observations. | B | Theoretical synthesis with practitioner support; empirical operationalization is still emerging across contexts. |
 
 ## Safety Note

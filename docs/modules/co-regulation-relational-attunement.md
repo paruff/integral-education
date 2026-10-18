@@ -46,6 +46,23 @@ import Admonition from '@theme/Admonition';
 
 ---
 
+## 🧭 Orient
+
+You are about to practice offering — and receiving — a form of presence that asks you to set aside your usual instinct to help, fix, or reframe. Before beginning, notice that withholding advice is not withholding care; in this practice, your own regulated nervous system state is the primary thing you have to offer, not your words.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why can a calm person in the room settle you even when they say nothing helpful?
+2. If an adult is the one offering support, why does their own state matter more than their words?
+:::
+
+## 🌿 Encounter
+
+Bring to mind, right now, a person in whose presence your own nervous system reliably settles — even slightly. Notice what, specifically, they do: the pace of their voice, the quality of their eye contact, how quickly or slowly they respond. That noticing is the raw material the exercises below ask you to work with deliberately, rather than simply enjoy by accident.
+
+---
+
 ## 🧠 Learn
 
 This module trains the capacity to participate consciously in the relational regulation of emotional and autonomic states — both as the person offering attunement and as the person receiving it.
@@ -64,7 +81,7 @@ This module situates co-regulation explicitly in the **Lower-Left (We) quadrant*
 
 ### 2. Porges's Social Engagement System
 
-Stephen Porges's **polyvagal theory** (1994, 2011) identifies a third autonomic circuit — the **ventral vagal complex** — that is distinct from both the sympathetic fight/flight system and the dorsal vagal freeze/collapse system. The ventral vagal circuit is uniquely social: it evolved to support safe proximity and connection with other mammals.
+Stephen Porges's **polyvagal theory** (1994, 2011) identifies a third autonomic circuit — the **ventral vagal complex** — that is distinct from both the sympathetic fight/flight system and the dorsal vagal freeze/collapse system. The ventral vagal circuit is uniquely social: it evolved to support safe proximity and connection with other mammals. **Evidence tier:** B — clinically influential; the hierarchical neuroanatomy is contested, while the functional observations are better supported.
 
 The **social engagement system** is the set of neural pathways that links ventral vagal activation to the muscles of the face and voice. When the ventral vagal circuit is active, it simultaneously:
 
@@ -80,7 +97,7 @@ This has direct practical implications: when a facilitator, coach, or partner is
 
 ### 3. Siegel's PACE Attunement Model
 
-Daniel Siegel's **interpersonal neurobiology** (1999, 2012) holds that the mind is not solely a product of the individual brain — it is shaped at every stage by relational experience. Regulation is inherently dyadic before it becomes individual: the infant develops regulatory capacity through repeated cycles of attunement, misattunement, and repair with caregivers, and these early relational templates are encoded in the implicit memory of the developing right hemisphere.
+Daniel Siegel's **interpersonal neurobiology** (1999, 2012) holds that the mind is not solely a product of the individual brain — it is shaped at every stage by relational experience. Regulation is inherently dyadic before it becomes individual: the infant develops regulatory capacity through repeated cycles of attunement, misattunement, and repair with caregivers, and these early relational templates are encoded in the implicit memory of the developing right hemisphere. **Evidence tier:** B — a synthesising framework rather than one empirical programme; the claim that regulation develops through attuned caregiving has strong support.
 
 For adult relational practice, Siegel's collaborator Dan Hughes (2007) formulated the **PACE** model as a description of the relational climate that supports co-regulation:
 
@@ -99,11 +116,22 @@ The standard developmental narrative presents self-regulation as the mature endp
 
 **Infants cannot self-regulate.** The prefrontal cortex — the primary neural substrate for top-down emotion regulation — is not functional at birth and reaches full myelination only in the mid-twenties. Infant emotional regulation is achieved *exclusively* through co-regulation with attuned caregivers. The neural capacity for self-regulation is literally built, through repetition, from the relational substrate of co-regulation.
 
-Alan Schore's research on affect regulation (1994, 2003) maps this process at the neurobiological level: the right orbitofrontal cortex — the region most implicated in emotional regulation — develops in the first two years through contingent, attuned interactions with primary caregivers. Right-brain to right-brain communication between caregiver and infant is the medium through which regulatory capacity is transferred.
+Alan Schore's research on affect regulation (1994, 2003) maps this process at the neurobiological level: the right orbitofrontal cortex — the region most implicated in emotional regulation — develops in the first two years through contingent, attuned interactions with primary caregivers. Right-brain to right-brain communication between caregiver and infant is the medium through which regulatory capacity is transferred. **Evidence tier:** B — a theoretical synthesis; individual neuroimaging claims indicate direction rather than settled findings.
 
 The developmental arc therefore runs:
 
 > **Co-regulation → Internalised self-regulation → Sophisticated co-regulation**
+
+```mermaid
+flowchart LR
+  accTitle: Development of regulation from co-regulation to mature co-regulation
+  accDescr: Regulation first comes through an attuned caregiver, then is built into the individual as self-regulation, then is brought back into relationships as mature co-regulation, where both people carry their own regulation.
+  Early["Early: caregiver supplies regulation"] -->|"repeated attuned cycles"| Self["Self-regulation is built"]
+  Self -->|"both people bring their own"| Mature["Mature co-regulation between adults"]
+  Mature -->|"steady presence"| Others["Settles states others cannot settle alone"]
+```
+
+*In words:* a baby is regulated entirely by an attuned caregiver. Repeated cycles of attunement build the child's own capacity. An adult then brings that capacity into relationships, so two people who each carry their own regulation can settle states neither could settle alone.
 
 Adult capacity for mutual co-regulation is not a return to a primitive state. It is the application of mature regulatory capacity *in and through* the relational field — the most sophisticated expression of the Emotional Line precisely because it transcends the individual as the unit of regulation.
 
@@ -141,16 +169,6 @@ Second, PACE describes a quality of orientation, not a checklist, which makes it
 
 Third, neither framework fully addresses the cultural and gender variation covered in the Stabilize section below — both describe patterns derived substantially from Western clinical and research contexts, and the specific behavioral expression of safe attunement varies by culture in ways that a universalized reading of either framework can miss.
 
-## 🧭 Orient
-
-You are about to practice offering — and receiving — a form of presence that asks you to set aside your usual instinct to help, fix, or reframe. Before beginning, notice that withholding advice is not withholding care; in this practice, your own regulated nervous system state is the primary thing you have to offer, not your words.
-
-## 🌿 Encounter
-
-Bring to mind, right now, a person in whose presence your own nervous system reliably settles — even slightly. Notice what, specifically, they do: the pace of their voice, the quality of their eye contact, how quickly or slowly they respond. That noticing is the raw material the exercises below ask you to work with deliberately, rather than simply enjoy by accident.
-
----
-
 ## 🧘 Practice
 
 > **Safety note:** Both exercises below carry a **Tier 2** safety classification. Read the full Safety Note at the end of this module before beginning. Exercise (a) requires partner consent and is subject to facilitator-supported debrief requirements when conducted in a group setting.
@@ -182,6 +200,8 @@ Bring to mind, right now, a person in whose presence your own nervous system rel
 ---
 
 ### Exercise (b): Co-regulation Mapping — Solo Reflection
+
+**Worked example (Step 1, one relationship):** *Who:* a long-time colleague. *Markers:* my shoulders drop and my speech slows when we talk. *Conditions:* a predictable weekly check-in, no one rushing, and a history of small disagreements settled. This illustrates the step with neutral detail, so use your own relationships.
 
 **Duration:** 20–30 minutes
 **Setup:** Journal or paper, quiet space, reflective waking state. No partner required.
@@ -227,6 +247,8 @@ Early developmental co-regulation (the infant-caregiver dyad) and mature adult c
 
 ---
 
+**Back to your opening questions:** co-regulation works through the social engagement system, where a steady voice, soft face and unhurried presence transmit safety to another nervous system beneath the level of words. That is why the regulating person's own state matters more than their advice: if they are dysregulated, that propagates, and genuine co-regulation requires them to be actually regulated, not performing calm.
+
 ## The Gifts of Co-Regulation
 
 Co-regulation offers something individual self-regulation alone cannot: a second nervous system, willingly and skillfully brought into the field, that can shift a state no amount of solo effort was moving. There is real relief in discovering that regulation does not have to be a solitary achievement.
@@ -245,9 +267,9 @@ Finally, co-regulation deepens the relationships it moves through. Each cycle of
 
 ## 🔍 Reflect
 
-- In which of your current relationships does co-regulation happen most naturally? What conditions make that possible?
+- In which of your current relationships does co-regulation happen most naturally? Why do you think those conditions make that possible?
 - Can you recall a specific moment when someone's regulated presence shifted your own state — what did they actually do?
-- Where do you notice the pull to fix or reframe instead of simply staying present? What is that impulse protecting you from?
+- Where do you notice the pull to fix or reframe instead of simply staying present? How would you explain, in your own words, what that impulse is protecting you from?
 - Has the distinction between co-regulation and emotional merger changed how you think about a relationship in your life?
 
 ---
@@ -258,7 +280,7 @@ Finally, co-regulation deepens the relationships it moves through. Each cycle of
 
 **Proficient:** Recognizes, in the moment, when their own state is shifting another's (or vice versa), can distinguish genuine co-regulation from emotional contagion, and can deliberately offer regulated presence without requiring the other person to change first.
 
-**Passing threshold:** *Proficient*: you have noticed co-regulation working (in either direction) in at least two real interactions, not only described it.
+**Passing threshold:** *Proficient*: you have noticed co-regulation working (in either direction) in at least two real interactions, not only described it. Check: you can name the two interactions, who was affected in which direction, and what you noticed.
 
 This module is the primary bridge from individual regulation capacity (see [Emotion Regulation Foundations](./emotion-regulation-foundations)) to the interpersonal line — self-regulation is the prerequisite that makes genuine co-regulation, rather than mutual dysregulation, possible.
 

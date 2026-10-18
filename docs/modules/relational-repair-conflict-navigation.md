@@ -53,6 +53,13 @@ This module builds on [Interpersonal Line Overview & Orientation](./interpersona
 
 This module trains the highest-leverage skill in the Interpersonal line's middle stages: navigating the moment trust is strained, not by avoiding conflict but by moving through it in a way that builds rather than erodes it. Understanding this matters because most relationships are not undone by the presence of conflict — they are undone by the absence of repair.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. If a relationship has frequent arguments, does that mean it is in trouble? What would you look at instead?
+2. Think of an apology that did not help. Why do you think it fell short?
+:::
+
 ## 🌿 Encounter
 
 Notice, before any framework names it, what a fresh rupture actually feels like in the body: the sudden tightening, the urge to defend or withdraw, the replay of the exchange that won't quite settle. Even in a relationship you trust, a sharp word or a missed cue can leave a residue that lingers long after the conversation has moved on.
@@ -79,9 +86,11 @@ Three features of this model are significant for adult relational practice:
 
 - **The capacity to initiate repair is a developmental achievement.** At earlier developmental stages, repair initiation feels like capitulation, humiliation, or an admission of fault. The recognition that repair is a relational act — not a verdict about who was wrong — requires the structural capacity to hold one's own position *and* the relational field simultaneously. This is an Interpersonal Line L3/L4 capacity.
 
+**Evidence tier:** B — strong experimental support in infant–caregiver research; extending it to adult relationships is an extrapolation.
+
 ### 2. Gottman's Four Horsemen and the Repair Attempt
 
-John Gottman's decades of observational research on couples (1994, 1999) identified four behavioral patterns that, when chronic, reliably predict relational breakdown. He called these the **Four Horsemen of the Apocalypse:**
+John Gottman's decades of observational research on couples (1994, 1999) identified four behavioral patterns that, when chronic, reliably predict relational breakdown. He called these the **Four Horsemen of the Apocalypse:** **Evidence tier:** A — longitudinal observational research with multi-year follow-up, though it is mostly from couples in Western samples.
 
 | Horseman | What it looks like | What it communicates | Its antidote |
 | :--- | :--- | :--- | :--- |
@@ -108,9 +117,22 @@ Research on rupture and repair in therapeutic relationships (Safran & Muran, 200
 
 **Reconnection:** *"I value this relationship."* The repair sequence closes by affirming the relational bond that the conflict threatened. Reconnection is not compulsory — in some conflicts, the honest position is uncertainty about the relationship. But where repair is genuine, some acknowledgement that the relationship matters — expressed in a form that is authentic, not formulaic — is the closing step that shifts the relational field from rupture to continuity.
 
+```mermaid
+flowchart LR
+  accTitle: The four-step repair sequence
+  accDescr: Repair moves through acknowledgement of impact, accountability for your part, amends with a specific behavior change, and reconnection. Skipping amends leads back to an apology loop.
+  Ack["Acknowledge the impact"] --> Acct["Take accountability for your part"]
+  Acct --> Amends["Make amends: one specific change"]
+  Amends --> Reconnect["Reconnect: name what the relationship means"]
+  Ack -.->|"explain or justify first"| Block["Repair blocked"]
+  Amends -.->|"skip amends"| Loop["Apology loop"]
+```
+
+*In words:* repair runs in order from acknowledging the impact, to owning your specific part, to a concrete change in behavior, to affirming the relationship. Jumping to explanation blocks the first step, and skipping the concrete change turns apology into a repeating loop.
+
 ### 4. NVC as a Practical Repair Tool
 
-Marshall Rosenberg's **Nonviolent Communication** (NVC) framework provides a four-component communication structure that is particularly useful in repair contexts:
+Marshall Rosenberg's **Nonviolent Communication** (NVC) framework provides a four-component communication structure that is particularly useful in repair contexts: **Evidence tier:** B — substantial practitioner evidence, with few controlled trials of the four-component framework itself.
 
 | NVC Component | What it involves | Example in repair context |
 | :--- | :--- | :--- |
@@ -137,7 +159,7 @@ Conflict is not experienced symmetrically. Three structural dimensions shape the
 
 ### 6. Stage-Relative Conflict Patterns
 
-Developmental stage does not determine whether a person experiences conflict — everyone does. It shapes the *meaning* conflict carries and the range of responses available.
+Developmental stage does not determine whether a person experiences conflict — everyone does. It shapes the *meaning* conflict carries and the range of responses available. **Evidence tier:** B — builds on Kegan's well-supported theory; its application to conflict is a synthesis. Use the stages as a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.
 
 **Conformist / Amber — Conflict as rule violation:**
 At Conformist altitude, belonging to the group and conforming to its norms are the anchors of identity and safety. Conflict is experienced as a threat to group cohesion and as evidence that someone has violated the rules that hold the community together. The default response is either compliance (restore harmony by agreeing, even without genuine resolution) or exclusion (the conflicting person is wrong, deviant, or must be expelled). The shadow is conflict avoidance: difficult things are not named because naming them would violate the relational harmony that is the primary value. Repair at this altitude often looks like resuming normal behavior without acknowledgement — *"Let's just move on."* What is avoided is the acknowledgement that would require admitting that a rule was broken or that the relationship has complexity that the group's norms cannot contain.
@@ -174,6 +196,8 @@ Two further limitations apply across all stages. First, the Four Horsemen framew
 **Setup:** Private space. Journal or paper. Choose a specific past conflict — one that is resolved or sufficiently historical that you can reflect on it without significant current activation. If reviewing a particular conflict raises your current distress above a 6/10, choose a different, lower-charge example for this practice.
 
 > ⚠️ **Before beginning:** These practices are for *reflection on past conflicts*, not for use in an active conflict. Working through these exercises prepares you for future repair conversations — it does not substitute for them. See the Safety Note before proceeding.
+
+**Worked example (Practice B, Steps 1 and 2):** a low-stakes past conflict where I spoke over a colleague in a planning meeting. *Acknowledgement:* "When I talked over you, you did not get to finish your point, and the group missed it." *Accountability:* "I interrupted you because I was rushing, and that was on me." Notice that neither sentence contains "but" or an explanation. This only illustrates the existing step with an ordinary case.
 
 ---
 
@@ -233,13 +257,15 @@ Working through the Four Horsemen self-assessment once, or being able to recite 
 
 The frameworks above — Gottman's research, the repair sequence, NVC — were developed and validated primarily with Western (largely US) couples and organisational samples, and norms around directness, apology, and emotional disclosure in conflict vary significantly across cultures and families. If your own background frames acknowledgement, accountability, or reconnection differently than the examples above assume, trust your own read of what genuine repair requires in your specific relationships over the illustrative scripts.
 
+**Back to your opening questions:** frequent arguments are not the warning sign; unrepaired rupture is, because trust is built by the cycle of misattunement and repair rather than by never clashing. An apology often falls short because it skips steps: it explains before acknowledging impact, stays vague about accountability, or offers no concrete change (the apology loop).
+
 ---
 
 ## 🔍 Reflect
 
-1. In the Four Horsemen self-assessment, which pattern was most recognisable in your own behavior? What conditions seem to trigger it (topic, relationship type, power asymmetry, time pressure)?
+1. In the Four Horsemen self-assessment, which pattern was most recognisable in your own behavior? How do those conditions (topic, relationship type, power asymmetry, time pressure) set it off, in your own words?
 
-2. In the repair attempt design, which step was hardest to write? What does that reveal about your relationship to accountability, acknowledgement, or reconnection?
+2. In the repair attempt design, which step was hardest to write, and why? How does that show up in the way you handle accountability, acknowledgement, or reconnection in real relationships?
 
 3. When you consider the stage-relative conflict patterns in the Learn section, which pattern most resembles your default? Where do you see yourself expanding beyond it?
 
@@ -253,9 +279,9 @@ Use this five-point scale to self-assess your current capacity in each area:
 
 | Capacity | 1 — Not yet available | 3 — Partially available | 5 — Reliably available |
 | :--- | :--- | :--- | :--- |
-| **Repair initiation** | I tend to avoid initiating repair; I wait for the other person or hope conflict resolves on its own | I can initiate repair in low-stakes conflicts but struggle with high-stakes or power-asymmetric situations | I can initiate repair across most conflict types, including high-stakes and cross-power situations |
-| **Four Horsemen self-awareness** | I have not previously identified my default conflict patterns | I can identify my patterns in reflection but not in the moment | I can notice Horseman patterns arising in real time and interrupt them |
-| **Accountability specificity** | I tend to either over-apologise generally or deflect accountability | I can take accountability in reflection but struggle to be specific and un-hedged | I can name my specific contribution to a rupture clearly and without excessive self-criticism or deflection |
+| **Repair initiation** | I tend to avoid initiating repair; I wait for the other person or hope conflict resolves on its own | I can initiate repair in low-stakes conflicts but struggle with high-stakes or power-asymmetric situations | I can initiate repair across most conflict types, including high-stakes and cross-power situations; you can name two repairs you started and what happened |
+| **Four Horsemen self-awareness** | I have not previously identified my default conflict patterns | I can identify my patterns in reflection but not in the moment | I can notice Horseman patterns arising in real time and interrupt them; you can point to one dated occasion when you did |
+| **Accountability specificity** | I tend to either over-apologise generally or deflect accountability | I can take accountability in reflection but struggle to be specific and un-hedged | I can name my specific contribution to a rupture clearly and without excessive self-criticism or deflection; you have a written accountability sentence with no "but" in it |
 | **NVC first-person accuracy** | I struggle to separate observation from interpretation, or to identify what I actually felt and needed | I can apply the four NVC components in reflection; accuracy is partial | I can identify observation, feeling, need, and request reliably in reflection, and increasingly in real time |
 | **Power-asymmetric repair** | I have not considered how power dynamics shape conflict navigation | I can identify power asymmetries but find them difficult to name in conflict contexts | I can hold power-asymmetric awareness in repair conversations and adapt my approach accordingly |
 

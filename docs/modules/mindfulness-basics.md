@@ -41,6 +41,21 @@ import Admonition from '@theme/Admonition';
 
 This module is deliberately foundational: it does not require or target any particular developmental stage, and it does not involve altered or non-ordinary states. Its purpose is to build a basic, general-purpose attentional skill — noticing when attention has wandered and returning it — that later, more advanced states and lines modules on this platform assume as a starting capacity.
 
+## 🧭 Orient
+
+Before beginning, notice that this practice asks for very little: no special posture, no belief system, and no particular outcome to produce. The only job is to notice when attention has left the breath and to bring it back — as many times as that happens. There is no version of this practice where noticing distraction counts as failure; noticing is the entire skill being built.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. If your mind wanders fifty times in ten minutes of practice, have you failed at mindfulness? Why or why not?
+2. What do you think is the difference between paying attention to something and being aware of it?
+:::
+
+## 🌿 Encounter
+
+As you sit with the instructions below, expect the mind to wander — often, and sometimes into thoughts that feel urgent or important. This is not a sign that the practice isn't working. Meet each return to the breath as a small, complete rep of the actual skill, regardless of how many times it needs repeating in a single session.
+
 ## 🧠 Learn
 
 **Mindfulness** = non-judgmental awareness of present experience.
@@ -52,9 +67,25 @@ Key distinctions:
 - **Awareness** — the space in which experience occurs
 - **Meta-cognition** — <Tooltip term="Meta-cognition" definition="Awareness of your own awareness — observing the observer rather than being caught in thought">awareness of your own awareness</Tooltip>
 
+Each session is a loop you go around many times:
+
+```mermaid
+flowchart LR
+  accTitle: The basic loop of breath practice
+  accDescr: Attention rests on the breath, drifts into thought, is noticed as having drifted, and is returned to the breath. Each pass around the loop is one repetition of the skill.
+  Breath[Attention on the breath] -->|sooner or later| Drift[Mind wanders into thought]
+  Drift -->|"meta-awareness"| Notice[Notice the drift]
+  Notice -->|"gently, without judging"| Return[Return to the breath]
+  Return -->|one rep complete| Breath
+```
+
+*In words:* attention starts on the breath and, sooner or later, drifts into thought. Meta-awareness is the moment you notice the drift. You then return attention to the breath without judging yourself, and the loop starts again. Each full pass is one repetition of the skill, so a session with many drifts is a session with many reps.
+
 ## Two Framework Lenses: Attention Research and Classical Mindfulness Traditions
 
-Cognitive and neuroscientific research on attention and mind-wandering supplies this module's operational language — the distinction between focused attention and open monitoring, and the finding that the brain's default mode of operation involves substantial spontaneous mind-wandering that can be trained, though not eliminated. Classical mindfulness traditions (chiefly Buddhist *sati* and *vipassana* practice, secularised here) supply the actual practice instructions and the centuries of accumulated experience about what beginners encounter and how to work with it.
+Cognitive and neuroscientific research on attention and mind-wandering supplies this module's operational language — the distinction between focused attention and open monitoring, and the finding that the brain's default mode of operation involves substantial spontaneous mind-wandering that can be trained, though not eliminated. **Evidence tier:** A — large experience-sampling and randomised studies, though correlational findings and short training periods limit how far they generalise.
+
+Classical mindfulness traditions (chiefly Buddhist *sati* and *vipassana* practice, secularised here) supply the actual practice instructions and the centuries of accumulated experience about what beginners encounter and how to work with it. **Evidence tier:** B — a clinical-practitioner synthesis of traditional practice; secularisation removes the original ethical context.
 
 These two lenses layer straightforwardly: the research framing keeps expectations realistic — mind-wandering is normal brain function, not a personal failing — while the traditional practice instructions provide a structure (breath focus, noticing, returning, open awareness) that has been refined and taught successfully for a very long time. Neither lens is sufficient alone: research without practice produces intellectual understanding without skill; practice without the research framing can leave beginners believing that a wandering mind means they are doing it wrong.
 
@@ -66,19 +97,13 @@ The self-assessment rubric also has real limits. Self-reported attention and sel
 
 Finally, basic mindfulness training is sometimes marketed as a general solution to stress, productivity, or emotional difficulty, and that framing oversells what a 10–20 minute daily practice can realistically deliver. It is a foundational skill-building practice, not a treatment for clinical anxiety, depression, or trauma — those require different, often professionally supported, forms of care.
 
-## 🧭 Orient
-
-Before beginning, notice that this practice asks for very little: no special posture, no belief system, and no particular outcome to produce. The only job is to notice when attention has left the breath and to bring it back — as many times as that happens. There is no version of this practice where noticing distraction counts as failure; noticing is the entire skill being built.
-
-## 🌿 Encounter
-
-As you sit with the instructions below, expect the mind to wander — often, and sometimes into thoughts that feel urgent or important. This is not a sign that the practice isn't working. Meet each return to the breath as a small, complete rep of the actual skill, regardless of how many times it needs repeating in a single session.
-
 ---
 
 ## 🧘 Practice
 
 **Duration:** 10–20 min
+
+**Worked example:** step 4 in a real first session. You are on your third breath when you realise you are planning tomorrow's lunch. That realisation is the noticing. You might silently say "planning" and bring attention back to the rise and fall of your belly. Two breaths later you are replaying a work email; you notice again and return again. That is two reps of the skill, not two failures.
 
 **Instructions:**
 1. Find a comfortable position — sitting in a chair, cross-legged on a cushion, or lying down all work. If you have back pain, lying flat with knees bent or sitting with your back supported is fine.
@@ -108,9 +133,10 @@ As you sit with the instructions below, expect the mind to wander — often, and
 ## 🔍 Reflect
 
 - How often did your attention drift during the practice?
-- What types of thoughts pulled attention away most?
-- Was there a difference in quality between the beginning and end?
+- What types of thoughts pulled attention away most? Why do you think those ones had the strongest pull?
+- Was there a difference in quality between the beginning and end? How would you explain the change?
 - What did "returning" to breath feel like?
+- Think of a specific moment this week when you reacted before you could think. How might noticing a breath first have changed what happened?
 
 ---
 
@@ -121,7 +147,7 @@ As you sit with the instructions below, expect the mind to wander — often, and
 | 1 | Notices when attention has drifted (retrospectively) |
 | 2 | Returns to breath within seconds of noticing drift |
 | 3 | Sustains focused attention for 5+ minutes . *Example: "I sat for 10 minutes and my mind wandered maybe 15 times, but each time I noticed within a few seconds and returned to the breath. I never got lost in a thought for more than 30 seconds."*. *Example: "I sat for 10 minutes and my mind wandered maybe 15 times, but each time I noticed within seconds and returned to the breath. I never got lost in thought for more than half a minute."*|
-| 4 | Meta-awareness: observing the observer . *Example: "During an argument with my partner, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*. *Example: "During a tense conversation, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*|
+| 4 | Meta-awareness: observing the observer: you can name at least one moment from daily life this week, outside formal practice, when you noticed a reaction as it was rising . *Example: "During a tense conversation, I noticed myself getting defensive — and simultaneously noticed that I was noticing. I could see the anger rising without being swept away by it."*|
 
 **Passing threshold:** Level 3: you can sit for 5 minutes or more and return to the breath within seconds each time you notice drift.
 
@@ -140,6 +166,8 @@ Finally, the meta-cognitive capacity this module targets — noticing that you a
 **Consolidation, not achievement:** There is no advanced version of "returning attention to the breath" to graduate toward. What stabilises with consistent practice is not a special state but the reliability of the basic skill — noticing drift sooner, and returning to the present moment more easily, across more situations in daily life, not just during seated practice.
 
 **A baseline for everything else:** This module's rubric levels (1 through 4) describe a gradual strengthening of one simple capacity, not a hierarchy of spiritual attainment. Reaching Level 3 or 4 means the basic skill is now available as a foundation for the more advanced states, emotional, and shadow-integration modules elsewhere on this platform — not that this module's work is "finished" in some final sense.
+
+**Back to your opening questions:** fifty wanders in ten minutes is not failure. Each time you notice the drift and return, you complete one rep of the exact skill this practice builds (the loop in Learn). Attention is what you focus on, such as the breath, while awareness is the wider space in which the breath, thoughts and sounds all appear. Meta-cognition is noticing which of the two you are doing.
 
 ## 🔄 Integrate
 

@@ -61,6 +61,18 @@ This module addresses the interior (I) and relational (We) quadrants — it is a
 
 This module works with material you have already, unconsciously, pushed outside conscious awareness — so expect some initial resistance or defensiveness when the practice below asks you to locate a disowned trait in yourself. That resistance is itself data, not a sign you are doing the exercise wrong.
 
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why might a trait that irritates you in another person tell you something about yourself?
+2. Is a strong reaction to someone always a sign of something unowned in you? Why or why not?
+:::
+
+## 🌿 Encounter
+
+As you track your triggers over the next 24 hours, notice how quickly your mind supplies a story about the other person's character — that story is usually the clearest signal that a projection, rather than a neutral observation, is in play.
+
+
 ## 🧠 Learn
 
 **<Tooltip term="Shadow" definition="Disowned aspects of the self — qualities, impulses, and capacities pushed out of conscious awareness and often projected onto others. Includes both negative (dark shadow) and positive (golden shadow) qualities.">Shadow</Tooltip>** = the disowned aspects of self — qualities, impulses, and capacities that were deemed unacceptable and pushed out of conscious awareness.
@@ -74,11 +86,29 @@ Key concepts:
 
 The goal is not to eliminate shadow — it's to make the unconscious conscious.
 
+The Practice below follows this sequence, one trigger at a time:
+
+```mermaid
+flowchart LR
+  accTitle: From a trigger to owning a trait
+  accDescr: A strong reaction to someone prompts the question of which trait is being reacted to. The learner asks where that trait exists in themselves and then owns it. A reaction that is not about a disowned trait stops the loop.
+  Trigger[Strong reaction to someone] -->|"ask"| Trait["Which trait am I reacting to?"]
+  Trait -->|"ask"| Self["Where is it in me, even slightly?"]
+  Self -->|"if it fits"| Own["Own it with compassion"]
+  Self -->|"if it does not fit"| Other["Not every reaction is projection"]
+```
+
+*In words:* a strong reaction to someone is the signal. You name the trait you are reacting to, then ask whether it exists in you even slightly. If it does, you own it with compassion. If it does not fit, that is a valid answer, because not every strong reaction is a projection.
+
 ---
 
 ## Two Framework Lenses: Jung's Shadow Theory and Wilber's 3-2-1 Process
 
 Jung's concept of the shadow supplies this module's foundational claim: that psychological wholeness requires acknowledging, rather than eliminating, the qualities and impulses a person has pushed out of conscious awareness — including admirable qualities disowned as readily as unwanted ones. Wilber's 3-2-1 Process builds a specific, repeatable method on top of that claim: face the disowned quality as a third-person "it," speak to it in second-person dialogue, then finally speak as it in first person, moving the disowned material progressively closer to conscious ownership.
+
+**Evidence tier:** B (Jung's shadow theory) — foundational analytical-psychology theory; not established by controlled research.
+
+**Evidence tier:** C (Wilber's 3-2-1 Process) — a practitioner framework; the three-step sequence has not been tested against other methods.
 
 These two lenses layer directly — Jung explains why projection happens and what integration means, while the 3-2-1 Process gives a learner a concrete sequence of steps for doing that integration rather than only understanding it conceptually. Used together, they turn shadow work from an interesting theory about the psyche into a practice a person can actually perform on a specific, current trigger.
 
@@ -90,13 +120,11 @@ The framework's language — disowned, projection, integration — is also more 
 
 Finally, this module works with individual, item-by-item shadow content, not with the deeper, more diffuse patterns that could require sustained clinical or therapeutic support. A single trigger explored through the 3-2-1 Process is a modest, bounded practice — it is not a substitute for the longer arc of therapeutic shadow work that some material genuinely requires.
 
-## 🌿 Encounter
-
-As you track your triggers over the next 24 hours, notice how quickly your mind supplies a story about the other person's character — that story is usually the clearest signal that a projection, rather than a neutral observation, is in play.
-
 ## 🧘 Practice
 
 **Duration:** 15–20 min
+
+**Worked example:** steps 2 and 3 with a low-stakes trigger. A colleague always talks over others in meetings, and you feel a flash of annoyance. Step 2: the trait is "not letting others finish". Step 3: "Where does this exist in me, even slightly?" You recall interrupting a friend last week because you were excited. It is a small, ordinary instance, and noticing it is enough.
 
 **Instructions:**
 1. Track your emotional triggers for 24 hours
@@ -109,9 +137,9 @@ As you track your triggers over the next 24 hours, notice how quickly your mind 
 
 ## 🔍 Reflect
 
-- What trait in others triggered the strongest reaction?
-- Where have you expressed that same trait, even subtly?
-- What would it mean to fully own this quality?
+- What trait in others triggered the strongest reaction? Why do you think that trait, and not a different one, got to you?
+- Where have you expressed that same trait, even subtly? Describe one specific recent situation.
+- What would it mean to fully own this quality? How might owning it change how you respond to that person?
 - How did your body feel when you acknowledged the projection?
 
 ---
@@ -122,8 +150,8 @@ As you track your triggers over the next 24 hours, notice how quickly your mind 
 |-------|-----------|
 | 1 | Notices emotional triggers in real time |
 | 2 | Identifies a possible projection without excessive defense |
-| 3 | Owns a disowned trait and relates to it with compassion . *Example: "I noticed I was unusually irritated by a colleague who keeps promoting their work in meetings. I asked myself: 'Is there a part of me that wants to self-promote but feels it is not allowed?' The answer was yes."*. *Example: "I noticed I was unusually irritated by a colleague who keeps promoting their work. I asked myself: is there a part of me that wants to self-promote but feels it is not allowed? The answer was yes."*|
-| 4 | Uses shadow work to deepen relationships and creativity . *Example: "I caught myself mid-sentence during a dinner argument with my brother. I was about to call him 'controlling,' and I realized — I was the one trying to control the conversation. I stopped, named my projection out loud, and the whole tone of the exchange shifted."*. *Example: "I caught myself mid-sentence during dinner with my brother. I was about to call him controlling, and I realized — I was trying to control the conversation. I named my projection out loud and the tone shifted."*|
+| 3 | Owns a disowned trait and relates to it with compassion: you can point to at least one written entry where you named the trait and where it shows up in you . *Example: "I noticed I was unusually irritated by a colleague who keeps promoting their work in meetings. I asked myself: 'Is there a part of me that wants to self-promote but feels it is not allowed?' The answer was yes."*. *Example: "I noticed I was unusually irritated by a colleague who keeps promoting their work. I asked myself: is there a part of me that wants to self-promote but feels it is not allowed? The answer was yes."*|
+| 4 | Uses shadow work to deepen relationships and creativity: you can point to a real conversation or creative act that changed because you named a projection . *Example: "I caught myself mid-sentence during a dinner argument with my brother. I was about to call him 'controlling,' and I realized — I was the one trying to control the conversation. I stopped, named my projection out loud, and the whole tone of the exchange shifted."*. *Example: "I caught myself mid-sentence during dinner with my brother. I was about to call him controlling, and I realized — I was trying to control the conversation. I named my projection out loud and the tone shifted."*|
 
 **Passing threshold:** Level 3: you have owned at least one disowned trait and can relate to it with compassion rather than blame.
 
@@ -140,6 +168,8 @@ Finally, sustained practice builds a specific kind of humility: the recognition 
 ## Stabilize
 
 **Consolidation, not achievement:** There is no final inventory of disowned qualities to complete — shadow material regenerates as a person changes, and a trait fully integrated in one context can resurface in an unfamiliar one. What stabilizes with practice is not a finished list but the habit of noticing a strong reaction and asking, in the moment, "what does this reaction say about me?" before assuming it is only about the other person.
+
+**Back to your opening questions:** a trait that irritates you in someone else may be a quality you have pushed out of awareness and then see in them (projection), so the reaction can point back at you. It is not always so: a strong reaction can be a fair response to what the person did, which is why the practice asks "where is it in me?" and accepts "it does not fit" as an answer.
 
 **A bounded practice, not a substitute for depth work:** This module works with everyday, relatively contained triggers. It does not replace therapeutic shadow work for material connected to trauma, nor does completing the 3-2-1 Process on a single trigger constitute the deeper, longer-arc integration work some patterns genuinely require.
 

@@ -14,6 +14,7 @@ tags: ["interpersonal-line", "Kegan", "Buber", "attachment", "Siegel", "relation
 line: interpersonal
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 ---
 
@@ -302,6 +303,17 @@ The confusion this produces: the person's relational warmth and attunement can b
 **A:** Emotional warmth does not equal interpersonal development. A person can be emotionally warm and simultaneously be at Interpersonal altitude (Kegan 3), with the characteristic enmeshment, conflict avoidance, and self-loss under relational pressure that altitude involves.
 
 ---
+
+<RetrievalPrompt moduleName="EI-08 · Interpersonal Line Overview & Orientation" cards={[
+  {q: "In Kegan's theory, what do **subject** and **object** mean, and what is development?", a: "Subject is what you operate from automatically and can't see. Object is what you can observe and work with. Development is the growing capacity to take as object what was previously subject."},
+  {q: "Briefly describe Kegan's four stages as they apply to the Interpersonal line.", a: "**Imperial**: others are need-satisfiers and relating is transactional. **Interpersonal**: the self is its relationships and struggles to hold a position under pressure. **Institutional**: the self authors its own values but risks relating through role. **Interindividual**: you can be changed by relationship without losing yourself."},
+  {q: "How does attachment style differ from Kegan altitude?", a: "Attachment style is the **relational substrate**, the internal working model formed with early caregivers. Kegan altitude is the structural complexity of the meaning-making self. They interact but are separate: someone can be Institutional and still carry an anxious attachment strategy."},
+  {q: "What is Buber's I–Thou relating, and when does it become structurally possible?", a: "Meeting the other as a full subject whose reality is allowed to matter, as opposed to I–It, where the other is an object or means. It becomes structurally possible at **Interindividual** altitude, where the self is stable enough to be affected without losing itself."},
+  {q: "What is Siegel's **mindsight**, and what role does it play here?", a: "The capacity to hold your own mind and another's mind in awareness at the same time, seeing the interior world behind behavior. It is the \"how\" of moving through the Interpersonal line arc."},
+  {q: "A deeply warm, caring friend cannot hold their own position whenever a relationship feels threatened. Which checkpoint applies, and what is the distinguishing marker?", a: "Pre/Trans Checkpoint 2: **emotional warmth is not interpersonal development**. The marker is what happens under pressure: at Interpersonal altitude the self loses coherence, while at Interindividual altitude it stays stable and open."},
+  {q: "Someone can explain attachment theory brilliantly but becomes anxious or avoidant when real conflict hits. What concept explains this?", a: "Checkpoint 1, **knowing attachment theory is not secure attachment**, often a sign of the High Cognitive / Early Interpersonal asynchrony. Conceptual fluency under calm conditions is not evidence of structural capacity under real relational pressure."},
+  {q: "Self-check: from your Self-Portrait, which Kegan altitude does your typical response to significant disagreement most resemble, and what evidence from real relationships supports that?", a: "There is no single right answer. A strong answer names one altitude and links it to a concrete, observable pattern under pressure, not an ideal. It treats the result as a growing edge, not a verdict on your character."},
+]} />
 
 ## Retrieval Schedule
 

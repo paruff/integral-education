@@ -130,6 +130,8 @@ This rubric aligns with the AQAL Competency Map Emotional Line L1–L2 indicator
 | **L1: Affective Differentiation** | Identifies internal states strictly using binary polarities (e.g., "good" vs. "bad", "mad" vs. "glad"). | Reliably distinguishes between basic discrete emotional families (e.g., separating fear from anger or sadness). |
 | **L2: Granular Conceptualization** | Recognizes subtle shifts in emotional valence but struggles to accurately label mixed or nuanced states. | Accurately identifies and names nuanced, fine-grained emotional states (e.g., distinguishing frustration from indignation or disappointment). |
 
+**Passing threshold:** *Proficient* on both indicators.
+
 ---
 
 ## Evidence Base
@@ -182,11 +184,11 @@ This module involves recalling emotionally significant events to practice differ
 
 </Admonition>
 
-<RetrievalPrompt moduleName="Emotional Granularity" cards={
+<RetrievalPrompt moduleName="Emotional Granularity" cards={[
   {q: "What is emotional granularity?", a: "The ability to make fine-grained distinctions between emotional states"},
   {q: "What are the benefits of high emotional granularity?", a: "Less intense emotions during stress, faster recovery, better decisions under pressure. Note: causal evidence is still developing — correlational findings are strong, intervention studies ongoing"},
   {q: "Who is the researcher associated with emotional granularity?", a: "Lisa Feldman Barrett"}
-} />
+]} />
 
 ## ⏱️ Retrieval Schedule
 

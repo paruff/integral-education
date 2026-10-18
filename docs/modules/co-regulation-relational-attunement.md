@@ -24,6 +24,7 @@ line: interpersonal
 safety_tier: 2
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import Admonition from '@theme/Admonition';
 
@@ -257,6 +258,8 @@ Finally, co-regulation deepens the relationships it moves through. Each cycle of
 
 **Proficient:** Recognizes, in the moment, when their own state is shifting another's (or vice versa), can distinguish genuine co-regulation from emotional contagion, and can deliberately offer regulated presence without requiring the other person to change first.
 
+**Passing threshold:** *Proficient*: you have noticed co-regulation working (in either direction) in at least two real interactions, not only described it.
+
 This module is the primary bridge from individual regulation capacity (see [Emotion Regulation Foundations](./emotion-regulation-foundations)) to the interpersonal line — self-regulation is the prerequisite that makes genuine co-regulation, rather than mutual dysregulation, possible.
 
 ---
@@ -273,6 +276,17 @@ This module is the primary bridge from individual regulation capacity (see [Emot
 ---
 
 ## 🧠 Knowledge Retention & Retrieval
+
+<RetrievalPrompt moduleName="EI-06 · Co-regulation & Relational Attunement" cards={[
+  {q: "What is **co-regulation**, and what three features distinguish it?", a: "Co-regulation is the bidirectional, relational process through which nervous systems in proximity mutually influence each other's activation and safety. Its features are bidirectionality, autonomic specificity (it works below deliberate cognition) and relational primacy (it comes from genuine presence, not technique)."},
+  {q: "How does the **social engagement system** transmit safety to another person?", a: "When the ventral vagal circuit is active, the voice becomes prosodic, the face opens with softer eye contact, and proximity becomes possible without threat. Because these signals are linked to the autonomic state that produces them, they transmit safety to others' nervous systems, not just communicate it."},
+  {q: "What does **PACE** stand for, and why is it not a checklist?", a: "Playfulness, Acceptance, Curiosity, Empathy. It describes a quality of interior orientation, not a sequence to run; performed PACE is detectable because the social engagement system reads interior state. Acceptance is regard for the person, not agreement with their interpretation or actions."},
+  {q: "Why does the developmental arc run co-regulation, then self-regulation, then sophisticated co-regulation?", a: "Infants cannot self-regulate because the prefrontal cortex is not functional at birth; regulatory capacity is built through repeated attuned co-regulation with caregivers. Adult co-regulation applies that mature self-regulation in and through the relational field."},
+  {q: "How does co-regulation differ from **emotional contagion**?", a: "Emotional contagion is passive and automatic: one person's dysregulation triggers another's with no awareness of what is happening. Co-regulation is active and intentional and requires the regulating person to be genuinely regulated themselves."},
+  {q: "You are facilitating a tense group, notice your own voice tightening and feel the urge to fix things. What applies and what do you do?", a: "Your dysregulation will propagate beneath any reassuring words, so attend to your own regulation first: slow your breath and pace. Treat the urge to fix as information about your activation, then return to unhurried, regulated presence."},
+  {q: "What caveat applies when citing Porges's polyvagal theory?", a: "The functional observation that voice, face and proximity transmit safety or threat is well supported. The specific neuroanatomical, phylogenetically layered three-circuit hierarchy is contested, so polyvagal theory should not be presented as settled neuroscience."},
+  {q: "Self-check: in one relationship where you tend toward dysregulation, what condition could you change?", a: "Compare it with a relationship where you co-regulate well, looking at predictability, repair history, shared pace, physical environment, power dynamics and available time. Name one concrete behavioural change for this week, written as an action rather than an aspiration."},
+]} />
 
 ## ⏱️ Retrieval Schedule
 

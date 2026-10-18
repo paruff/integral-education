@@ -135,6 +135,8 @@ If your Practice write-up names a bias but your confidence in the original belie
 | 3 | Catches and corrects biases in own thinking in real time |
 | 4 | Designs processes and environments that reduce systematic bias |
 
+**Passing threshold:** Level 3: you have caught and corrected a bias in your own thinking while it was happening, not only spotted biases in examples.
+
 ---
 
 ## The Gifts of Bias Awareness

@@ -35,6 +35,9 @@ jobs:
       - name: Frontmatter Validation
         run: node scripts/validate-frontmatter.js
 
+      - name: Retention Check (retrieval + mastery threshold in every module)
+        run: node scripts/check-retention.mjs
+
       - name: Generate Content Graph
         run: node scripts/generate-content-graph.js
 

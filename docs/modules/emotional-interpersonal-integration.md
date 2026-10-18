@@ -40,6 +40,7 @@ line_secondary: interpersonal
 ---
 
 import ModuleMeta from '@site/src/components/ModuleMeta';
+import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
 <ModuleMeta />
 
@@ -311,6 +312,17 @@ The stage-by-stage integration map above draws on developmental and attachment r
 **A:** Integrated openness preserves choice, perspective, and verification; flooding collapses those capacities.
 
 ---
+
+<RetrievalPrompt moduleName="EI-13 · Emotional–Interpersonal Integration" cards={[
+  {q: "What question does each line answer, and why must they be asked together?", a: "The Emotional line asks what am I actually feeling and what is driving it; the Interpersonal line asks what is happening between us and how can I verify rather than assume. When either is weak the other gets distorted, through projection or by regulating against the wrong problem."},
+  {q: "What is the **characteristic gap**, and why does the Emotional line often lag?", a: "Cognitive and self-authoring development often outrun in-the-moment emotional regulation, so people can explain the right response yet lose precision when threatened. Conceptual understanding is easier to stabilize than regulation under social pressure."},
+  {q: "What are the four steps of the **integrated practice loop**?", a: "Name your own state with precision, check the appraisal driving it, verify the relational hypothesis with one direct question or repair statement, and review what you assumed versus what was true."},
+  {q: "You feel strongly with a friend and assume you know exactly what they feel. Which shadow is this, and what would you do?", a: "Resonance without verification: feeling deeply with someone does not guarantee reading them accurately. Separate I feel with you from I know what you feel, and ask one verification question."},
+  {q: "What is the characteristic challenge at Rational/Orange, and its practice emphasis?", a: "Relationships are approached as problems to solve, which flattens attunement and produces accurate analysis with low felt contact. The practice is to distinguish performance threat from relational hurt and ask one verification question before moving to solution mode."},
+  {q: "How does integrated emotional openness differ from **emotional flooding**?", a: "Both look affectively vivid, but structure differs. In flooding the person loses choice, perspective and verification; in integrated openness they can still name their state, check assumptions and stay in contact with the other person's separate reality."},
+  {q: "Why is a **We-space** the developmental container for this work?", a: "It gives repeated feedback you cannot generate alone, low-cost repair and enough safety to risk being inaccurate and revise. A good We-space does not remove friction; it lowers the cost of using friction as data."},
+  {q: "Self-check: what is your lower line, and does your 30-day plan test it in real behaviour?", a: "Name the lower line with specific recent behavioural evidence. Your plan should have a daily cue, a weekly relational test, a feedback source, and a day-30 question asking whether the gap is smaller in real behaviour or only in understanding."},
+]} />
 
 ## Retrieval Schedule
 

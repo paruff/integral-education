@@ -302,6 +302,8 @@ Use this rubric to locate your current empathic accuracy practice:
 | **L3 — Established** | Verification questions are a regular feature of relational practice; can distinguish own inference from observed evidence in real-time (not only retrospectively); empathic distress does not routinely substitute for accurate understanding; can identify personal inference patterns |
 | **L4 — Integrating** | Moves fluidly between affective resonance, cognitive perspective-taking, and compassionate orientation depending on what the relational context calls for; verification is a habitual relational behaviour rather than a deliberate intervention; can coach others in distinguishing the empathy types and developing verification practice |
 
+**Passing threshold:** Level 3 on the indicators above, shown in at least one real conversation, not only in the practice exercises.
+
 ---
 
 <Admonition type="tip" title="Facilitator Note">
@@ -313,7 +315,7 @@ Use this rubric to locate your current empathic accuracy practice:
 
 </Admonition>
 
-<RetrievalPrompt moduleName="EI-09 · Perspective-Taking & Empathic Accuracy" cards={
+<RetrievalPrompt moduleName="EI-09 · Perspective-Taking & Empathic Accuracy" cards={[
   {q: "What are the three types of empathy Zaki differentiates, and what does each involve?", a: "(1) **Affective empathy** — feeling *with* another; experiencing resonance with their emotional state. (2) **Cognitive empathy** — thinking *about* another; perspective-taking without necessarily feeling the resonance. (3) **Compassionate empathy** — caring *for* another; a motivational orientation toward their wellbeing combining resonance with action orientation."},
   {q: "What is empathic distress substitution, and why does it occur?", a: "Empathic distress substitution occurs when affective resonance with another's distress becomes so intense that the person withdraws from genuine contact with the other's experience and redirects helping behaviour toward reducing their own distress. It arises from high affective empathy without sufficient self-regulation or compassionate orientation to sustain genuine contact."},
   {q: "What is Theory of Mind (ToM), and why is it the cognitive prerequisite for interpersonal development above Kegan's Imperial altitude?", a: "ToM is the capacity to attribute independent mental states — beliefs, desires, emotions, intentions — to other people and to understand that those states may differ from one's own. It is the prerequisite for interpersonal development above Imperial altitude because genuine concern for another's interior experience requires the structural capacity to represent that experience as distinct from one's own — without ToM, what appears to be empathy is primarily projection."},
@@ -324,7 +326,7 @@ Use this rubric to locate your current empathic accuracy practice:
   {q: "What distinguishes this module (EI-09) from the Perspective-Taking Capacity module in the Stage Development section?", a: "The Perspective-Taking Capacity module addresses perspective-taking as a *stage-transition* competency — the cognitive shift from Amber in-group reasoning to Rational multi-perspectival judgment. EI-09 addresses perspective-taking as a trainable *Interpersonal Line* skill — specifically the affective and accuracy dimensions, grounded in Zaki's empathy research and Epley's egocentrism findings. The stage module provides the cognitive scaffold; this module develops relational precision."},
   {q: "What is a verification question, and what distinguishes it from a leading question?", a: "A verification question is a direct, open inquiry that holds your perspective inference as a hypothesis to be tested rather than a fact to be confirmed. It is genuinely open — you are willing to receive a surprising answer. A leading question contains the expected answer within the question (\"You were upset, right?\") and functions primarily to confirm the inference rather than to check it."},
   {q: "What does the Pre/Trans Checkpoint for empathic accuracy say?", a: "The ability to describe another person's perspective fluently and analytically — 3rd-person language about their inner states — is not the same as genuine 2nd-person contact. Conceptual fluency about perspectives is not empathic accuracy. A person can write a sophisticated account of why someone is anxious without having ever verified what that person is actually experiencing."}
-} />
+]} />
 
 ## ⏱️ Retrieval Schedule
 

@@ -47,6 +47,21 @@ This module assumes you have a basic mindfulness practice — the capacity to ob
 | **State Dynamics** | Reflective waking state; translating raw somatic affect into conscious mental representations. |
 | **Type Variations** | Dependent on linguistic structures and cultural background frameworks. |
 
+## 🧭 Orient
+
+You are about to practice resisting your first, most obvious emotion label in favor of a more precise one. Before starting, notice that the first label ("stressed," "bad," "fine") is not wrong — it is simply coarse. The practice below is not about rejecting your first read; it is about treating it as a starting point rather than a finished answer.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why might someone who says "I feel dread about Monday" cope better than someone who says "I feel bad"?
+2. Do you think learning more emotion words changes what you feel, or only how you describe it?
+:::
+
+## 🌿 Encounter
+
+Bring to mind, right now, whatever low-grade feeling is present for you at this moment — not a major event, just the background hum. Try labeling it with the first word that comes to mind. Now sit with it for ten more seconds and ask whether that word is exactly right, or just close. Most people find the first label is approximately correct but not precisely correct — that gap between "approximately" and "precisely" is exactly what the practice below trains.
+
 ## 🧠 Learn
 
 **Emotional granularity** is the ability to make fine-grained distinctions between emotional states — moving beyond "I feel bad" to "I feel ashamed because I failed to meet my own standard."
@@ -69,6 +84,24 @@ Core skills:
 
 This module draws on two complementary frameworks. Barrett's Theory of Constructed Emotion explains *why* granularity is possible at all — emotions are constructed in the moment from interoceptive signal and conceptual knowledge, which means a richer emotional vocabulary genuinely changes what you are able to perceive, not just what you are able to describe. Brackett's RULER Framework supplies the *practical skill sequence* — Recognizing, Understanding, Labeling, Expressing, and Regulating emotion — that turns the theoretical claim into a teachable, repeatable practice.
 
+**Evidence tier:** B (constructed emotion) — strong neuroimaging and behavioral support, though parts of the theory are still debated in cognitive science.
+
+**Evidence tier:** B (RULER) — extensively validated in schools; evidence outside educational settings is thinner.
+
+The same body signal can become a coarse label or a precise one, depending on the concepts you bring to it:
+
+```mermaid
+flowchart LR
+  accTitle: How vocabulary shapes an emotion label
+  accDescr: One body signal, such as a tight chest, is made sense of with the emotion words a person knows. A small vocabulary yields a coarse label with few options, a richer vocabulary yields a precise label that points to a response.
+  Signal["Body signal (tight chest)"] -->|"read with few words"| Coarse["Coarse label: bad"]
+  Signal -->|"read with many words"| Fine["Precise label: dread about Monday"]
+  Coarse -->|"little to act on"| Stuck[Feeling stays vague]
+  Fine -->|"points to a cause"| Act["Clear next step, such as preparing for the meeting"]
+```
+
+*In words:* the same body signal, such as a tight chest, can be read with a small set of emotion words or a large one. A small set gives a coarse label like "bad", which leaves the feeling vague and offers little to act on. A larger set gives a precise label like "dread about Monday", which points to a cause and a possible next step.
+
 Used together, these lenses explain both the mechanism (why naming can change felt intensity) and the method (how to build the naming skill deliberately). Neither framework alone is sufficient: Barrett's theory without a practice sequence stays abstract, and RULER's skill sequence without the underlying construction theory can be mistaken for a mere vocabulary exercise rather than a genuine perceptual shift.
 
 ## The Limitations of Emotional Granularity Training
@@ -81,19 +114,13 @@ Second, more granularity is not always better in the moment. In genuinely danger
 
 Third, as the Stabilize section below discusses, an expanded vocabulary can be mistaken for the underlying capacity itself — knowing many emotion words is not the same as being able to access and use that vocabulary under real emotional load.
 
-## 🧭 Orient
-
-You are about to practice resisting your first, most obvious emotion label in favor of a more precise one. Before starting, notice that the first label ("stressed," "bad," "fine") is not wrong — it is simply coarse. The practice below is not about rejecting your first read; it is about treating it as a starting point rather than a finished answer.
-
-## 🌿 Encounter
-
-Bring to mind, right now, whatever low-grade feeling is present for you at this moment — not a major event, just the background hum. Try labeling it with the first word that comes to mind. Now sit with it for ten more seconds and ask whether that word is exactly right, or just close. Most people find the first label is approximately correct but not precisely correct — that gap between "approximately" and "precisely" is exactly what the practice below trains.
-
 ---
 
 ## 🧘 Practice
 
 **Duration:** 10–15 min
+
+**Worked example:** steps 3 to 6 with an everyday event. A friend cancels dinner an hour before. The first label is "annoyed". Asking whether that is exactly right, the candidates are annoyed, disappointed, lonely, unimportant, relieved. Looking at the list, "disappointed" fits best, with a trace of relief at a free evening. Writing both down shows the evening held more than one feeling.
 
 **Instructions:**
 1. Set a timer for 5 minutes
@@ -110,9 +137,10 @@ Bring to mind, right now, whatever low-grade feeling is present for you at this 
 ## 🔍 Reflect
 
 - What was your initial emotion label? What did you settle on after reflection?
-- Did finding a more precise word change how you related to the emotion?
+- Did finding a more precise word change how you related to the emotion? Why do you think it did, or didn't?
 - Were there emotions that felt hard to name? What category were they in?
-- How does naming an emotion affect its intensity?
+- How does naming an emotion affect its intensity? Explain it in your own words, using the body signal and the words you brought to it.
+- Think of a specific conversation this week where you said "stressed" or "fine". How might a more precise word have changed what the other person did?
 
 ---
 
@@ -127,8 +155,8 @@ This rubric aligns with the AQAL Competency Map Emotional Line L1–L2 indicator
 
 | Competency Indicator | Emerging | Proficient |
 | :--- | :--- | :--- |
-| **L1: Affective Differentiation** | Identifies internal states strictly using binary polarities (e.g., "good" vs. "bad", "mad" vs. "glad"). | Reliably distinguishes between basic discrete emotional families (e.g., separating fear from anger or sadness). |
-| **L2: Granular Conceptualization** | Recognizes subtle shifts in emotional valence but struggles to accurately label mixed or nuanced states. | Accurately identifies and names nuanced, fine-grained emotional states (e.g., distinguishing frustration from indignation or disappointment). |
+| **L1: Affective Differentiation** | Identifies internal states strictly using binary polarities (e.g., "good" vs. "bad", "mad" vs. "glad"). | Reliably distinguishes between basic discrete emotional families (e.g., separating fear from anger or sadness): in your journal, you can point to at least three entries where you named emotions from different families. |
+| **L2: Granular Conceptualization** | Recognizes subtle shifts in emotional valence but struggles to accurately label mixed or nuanced states. | Accurately identifies and names nuanced, fine-grained emotional states (e.g., distinguishing frustration from indignation or disappointment): you can point to at least three practice entries where your final label differs from your first one and you can say why it fits better. |
 
 **Passing threshold:** *Proficient* on both indicators.
 
@@ -164,6 +192,8 @@ Apply this in real life:
 ## Stabilize
 - **The Pre/Trans Action Gap (Inflation Warning):** Developing an intellectual, conceptual knowledge of complex emotional vocabularies is not equivalent to actually practicing emotional granularity in high-charge moments. Do not mistake an expanded emotional lexicon for structural emotional line maturity.
 - **Cultural and Linguistic Relativism:** Emotion category boundaries are heavily dependent on language and culture. The English-language emotion wheel utilized in this module is a useful scaffold, but it is not a universal psychological blueprint. Learners from non-WEIRD (Western, Educated, Industrialized, Rich, Democratic) contexts should actively adapt these categories to fit their native linguistic frameworks.
+
+**Back to your opening questions:** "dread about Monday" points to a cause and a next step, while "bad" leaves the feeling vague (the diagram in Learn). People with higher granularity tend to recover faster from stress, though whether training granularity causes this is still being tested. On constructed emotion theory, words do more than describe: emotions are built from body signals and the concepts you bring, so a richer vocabulary can change what you are able to perceive.
 
 ---
 

@@ -47,6 +47,21 @@ import Admonition from '@theme/Admonition';
 
 ---
 
+## 🧭 Orient
+
+You are about to apply this bias list to a real decision or opinion of your own, not a textbook example. Before starting, notice that spotting a bias in someone else's reasoning is easy and spotting it in your own is the actual point of this practice — the discomfort of the second is a feature, not an obstacle.
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Why might a judgment that feels completely obvious still be wrong?
+2. Is having a cognitive bias a sign of poor thinking? Why or why not?
+:::
+
+## 🌿 Encounter
+
+Bring to mind a recent moment when you felt unusually certain about something — a decision, a judgment about a person, a prediction about how something would turn out. Notice what that certainty felt like from the inside: solid, obvious, not requiring further checking. That felt-obviousness is worth remembering, because it is exactly the signal that a heuristic may be doing the work rather than a fully examined chain of reasoning — which is what the practice below asks you to check.
+
 ## 🧠 Learn
 
 **Cognitive bias** = a systematic error in thinking that affects the judgments and decisions people make.
@@ -66,6 +81,12 @@ Key biases to know:
 
 This list of five biases draws on two related but distinct research programs. Kahneman and Tversky's heuristics-and-biases program (the source of confirmation bias, availability heuristic, and anchoring) treats bias as a predictable byproduct of fast, associative ("System 1") thinking substituting for slower, effortful ("System 2") reasoning — the shortcuts are efficient most of the time and systematically wrong in specific, identifiable conditions. The Dunning-Kruger metacognitive model is a narrower, different claim: it is specifically about the accuracy of *self-assessment* — whether you can correctly judge your own competence — rather than about errors in judging the external world.
 
+**Evidence tier:** A (heuristics-and-biases) — decades of experimental work, though some effect sizes have replicated less strongly than first reported.
+
+**Evidence tier:** B (Dunning-Kruger) — widely cited, but later replications and re-analyses find the effect smaller and more context-dependent than the original framing.
+
+Both are lenses for noticing patterns in your own reasoning. They are not a measurement of you or a verdict on anyone's intelligence or worth.
+
 These two lenses layer usefully: the heuristics-and-biases frame explains why a judgment about the *world* goes wrong, while the metacognitive frame explains why a judgment about *your own reasoning* can also go wrong, including your ability to detect the first kind of error in yourself. Treating all five biases as one undifferentiated category obscures this distinction — and the metacognitive layer is exactly why practicing bias-detection on your own thinking is harder than spotting it in someone else's.
 
 ## The Limitations of the Heuristics-and-Biases Framework
@@ -77,14 +98,6 @@ First, the replication record is mixed. Some biases (anchoring, confirmation bia
 Second, labeling a judgment "biased" after the fact is easy and can itself become a rhetorical shortcut — a way of dismissing a conclusion you dislike without engaging its actual content. Bias-language is diagnostic of a *process*, not automatically proof that a specific *conclusion* is wrong; a biased process can still, on occasion, produce a correct answer, and an unbiased process can still err for other reasons.
 
 Third, heuristics are heuristics because they usually work. A framework that only catalogs failure modes can leave the impression that fast, intuitive judgment is inherently suspect — when in fact most everyday decisions do not have the stakes or the available time to justify slow, effortful System 2 processing. The skill this module builds is knowing *when* the shortcut is likely to mislead, not abandoning shortcuts altogether.
-
-## 🧭 Orient
-
-You are about to apply this bias list to a real decision or opinion of your own, not a textbook example. Before starting, notice that spotting a bias in someone else's reasoning is easy and spotting it in your own is the actual point of this practice — the discomfort of the second is a feature, not an obstacle.
-
-## 🌿 Encounter
-
-Bring to mind a recent moment when you felt unusually certain about something — a decision, a judgment about a person, a prediction about how something would turn out. Notice what that certainty felt like from the inside: solid, obvious, not requiring further checking. That felt-obviousness is worth remembering, because it is exactly the signal that a heuristic may be doing the work rather than a fully examined chain of reasoning — which is what the practice below asks you to check.
 
 ---
 
@@ -98,6 +111,23 @@ Bring to mind a recent moment when you felt unusually certain about something �
 3. Ask: *What evidence contradicts this?*
 4. Identify which bias may be operating (use the list above)
 5. Write one sentence that steelmans the opposing view
+
+**Worked example:** a run through steps 1 to 5 on an ordinary belief. Belief: "my route to work is the fastest." Evidence for: it felt quick last Tuesday. Evidence against: you have never timed the other route, and the one slow day you remember is vivid. Bias that may be operating: availability, since the memorable day outweighs the typical ones. Steelman: the other route might be faster on most days, and you would only know by timing both.
+
+```mermaid
+flowchart TD
+  accTitle: Checking a belief for bias
+  accDescr: Start from a belief, list evidence for and against, name the bias that may be operating, steelman the opposing view, then check whether your confidence moved. If it did not move, return to the evidence against.
+  Belief[Recall a belief or decision] --> For[Evidence for]
+  For --> Against[Evidence against]
+  Against --> Bias["Name the bias that may be operating"]
+  Bias --> Steel[Steelman the opposing view]
+  Steel --> Moved{"Did confidence move?"}
+  Moved -->|"yes"| Done["Genuine bias-detection"]
+  Moved -->|"no"| Against
+```
+
+*In words:* the five practice steps run in order, and then you check whether your confidence in the original belief changed at all. If it did, that is genuine bias-detection. If it did not, return to the evidence against and check whether you weighed it, as the Stabilize checkpoint describes.
 
 ---
 
@@ -115,14 +145,17 @@ After completing the practice, distinguish three patterns that can each look lik
 
 If your Practice write-up names a bias but your confidence in the original belief did not move at all, that is useful information — return to step 3 (contradicting evidence) and check whether it was genuinely weighed.
 
+**Back to your opening questions:** a judgment can feel obvious because a mental shortcut produced it quickly, not because it was checked (felt-obviousness is the signal to check). Having biases is not poor thinking: they are efficient heuristics that mislead only outside the conditions where they work, and the skill is knowing when that is. Naming a bias should change your confidence or your evidence, otherwise it is performative doubt.
+
 ---
 
 ## 🔍 Reflect
 
-- What evidence did you ignore or downweight?
-- Which bias felt most active in your thinking?
+- What evidence did you ignore or downweight? Why do you think it was easy to overlook?
+- Which bias felt most active in your thinking? How did it make the belief feel more certain than the evidence supported?
 - How did it feel to steelman the opposing view?
 - Where did this belief or assumption originate?
+- Think of a specific decision in your own life this month. How might a shortcut have shaped it?
 
 ---
 
@@ -132,8 +165,8 @@ If your Practice write-up names a bias but your confidence in the original belie
 |-------|-----------|
 | 1 | Aware that cognitive biases exist |
 | 2 | Can name specific biases and give examples |
-| 3 | Catches and corrects biases in own thinking in real time |
-| 4 | Designs processes and environments that reduce systematic bias |
+| 3 | Catches and corrects biases in own thinking in real time: you can point to a written example where you named the bias, the evidence you had ignored, and how your view changed |
+| 4 | Designs processes and environments that reduce systematic bias: you have made something, such as a checklist or a rule for a recurring decision, and can show a decision it changed |
 
 **Passing threshold:** Level 3: you have caught and corrected a bias in your own thinking while it was happening, not only spotted biases in examples.
 

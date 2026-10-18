@@ -338,7 +338,7 @@ Complete before opening any PR.
 - [ ] Generation: `:::tip Before you read` with 1–2 questions at the end of Orient, answered later under `**Back to your opening questions:**`
 - [ ] Elaboration: 2+ Reflect prompts ask why/how in the learner's own words; 1+ ties the idea to their own life; none only restate content
 - [ ] Calibration: "Stable" cells name checkable evidence; every retrieval card has a model answer
-- [ ] No low-utility techniques: rereading, highlighting or summarizing is never the learning activity, including in Retrieval Schedule rows (re-reading one's *own* journal to compare is fine); no "learning styles"
+- [ ] No low-utility techniques: rereading, highlighting or summarizing is never the learning activity. Retrieval Schedule rows start from memory ("Without looking, ..."), then check against the module or the learner's own work; no "learning styles"
 - [ ] Load: one concept per section; a worked example before independent Practice; no decorative media
 - [ ] Evidence tiers: each framework in Learn shows `**Evidence tier:**` matching the Evidence table; stage models framed as a lens
 - [ ] Visual: at least one Mermaid (or SVG) diagram that explains structure, beside its text, with `accTitle`, `accDescr`, and an *In words:* description if it carries more than one idea

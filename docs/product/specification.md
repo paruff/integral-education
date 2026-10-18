@@ -1,6 +1,6 @@
 # Product Specification
 
-> **Status:** Draft, awaiting Product Owner acceptance (@paruff)
+> **Status:** Accepted by the Product Owner (@paruff), 2026-10-18 (PR #560)
 > **Revised:** 2026-10-18. Added visuals (FR-16), stage-specific language
 > (FR-17), separate stage sites (FR-18), success metrics (FR-19) and NFR-06.
 > **Previously:** 2026-10-02. Rebuilt around evidence-based self-paced learning
@@ -66,34 +66,33 @@ Karpicke & Blunt, Gollwitzer & Sheeran, Richland et al., Dunlosky & Rawson
 and Pashler et al. (added 2026-10-02) and Clark & Paivio, Ginns, Rey,
 Nesbit & Adesope, Fiorella & Mayer, Ginns, Martin & Marsh, Hulleman &
 Harackiewicz, Scheibehenne et al., Soderstrom & Bjork and Sitzmann et al.
-(added 2026-10-18) are AI-sourced and **must be checked by a human before
-merge** (AI policy).
+(added 2026-10-18) are AI-sourced. All fifteen were checked by a human
+on 2026-10-18 (see log below).
 
 ### Citation check log (P1-02, #510)
 
 An AI pre-check on 2026-10-18 confirmed each bibliographic record below
 (authors, year, title, journal, volume, issue, pages) against Crossref.
-It did **not** confirm the claims. A human must read each source, confirm
-the claim in the evidence table above, and enter the date (AI policy). One
-claim needs the nuance noted.
+It did not confirm the claims. The Product Owner (@paruff) read each
+source and confirmed each claim in the evidence table above on 2026-10-18.
 
 | Citation | DOI | Record (AI, 2026-10-18) | Note for the human checker | Human checked (date, initials) |
 | --- | --- | --- | --- | --- |
-| Karpicke & Blunt (2011) | [10.1126/science.1199327](https://doi.org/10.1126/science.1199327) | Matches | — | |
-| Gollwitzer & Sheeran (2006) | [10.1016/S0065-2601(06)38002-1](https://doi.org/10.1016/S0065-2601(06)38002-1) | Matches | Confirm d = 0.65 | |
-| Richland, Kornell & Kao (2009) | [10.1037/a0016496](https://doi.org/10.1037/a0016496) | Matches | — | |
-| Dunlosky & Rawson (2012) | [10.1016/j.learninstruc.2011.08.003](https://doi.org/10.1016/j.learninstruc.2011.08.003) | Matches | — | |
-| Pashler et al. (2008) | [10.1111/j.1539-6053.2009.01038.x](https://doi.org/10.1111/j.1539-6053.2009.01038.x) | Matches | — | |
-| Clark & Paivio (1991) | [10.1007/BF01320076](https://doi.org/10.1007/BF01320076) | Matches | Theory paper; cited only as the theoretical basis | |
-| Ginns (2006) | [10.1016/j.learninstruc.2006.10.001](https://doi.org/10.1016/j.learninstruc.2006.10.001) | Matches | — | |
-| Rey (2012) | [10.1016/j.edurev.2012.05.003](https://doi.org/10.1016/j.edurev.2012.05.003) | Matches | — | |
-| Nesbit & Adesope (2006) | [10.3102/00346543076003413](https://doi.org/10.3102/00346543076003413) | Matches | — | |
-| Fiorella & Mayer (2016) | [10.1007/s10648-015-9348-9](https://doi.org/10.1007/s10648-015-9348-9) | Matches | — | |
-| Ginns, Martin & Marsh (2013) | [10.1007/s10648-013-9228-0](https://doi.org/10.1007/s10648-013-9228-0) | Matches | — | |
-| Hulleman & Harackiewicz (2009) | [10.1126/science.1177067](https://doi.org/10.1126/science.1177067) | Matches | Effect was concentrated in students with low success expectations; consider narrowing the claim | |
-| Scheibehenne, Greifeneder & Todd (2010) | [10.1086/651235](https://doi.org/10.1086/651235) | Matches | — | |
-| Soderstrom & Bjork (2015) | [10.1177/1745691615569000](https://doi.org/10.1177/1745691615569000) | Matches | — | |
-| Sitzmann et al. (2010) | [10.5465/amle.9.2.zqr169](https://doi.org/10.5465/amle.9.2.zqr169) | Matches | — | |
+| Karpicke & Blunt (2011) | [10.1126/science.1199327](https://doi.org/10.1126/science.1199327) | Matches | — | 2026-10-18, PR |
+| Gollwitzer & Sheeran (2006) | [10.1016/S0065-2601(06)38002-1](https://doi.org/10.1016/S0065-2601(06)38002-1) | Matches | Confirm d = 0.65 | 2026-10-18, PR |
+| Richland, Kornell & Kao (2009) | [10.1037/a0016496](https://doi.org/10.1037/a0016496) | Matches | — | 2026-10-18, PR |
+| Dunlosky & Rawson (2012) | [10.1016/j.learninstruc.2011.08.003](https://doi.org/10.1016/j.learninstruc.2011.08.003) | Matches | — | 2026-10-18, PR |
+| Pashler et al. (2008) | [10.1111/j.1539-6053.2009.01038.x](https://doi.org/10.1111/j.1539-6053.2009.01038.x) | Matches | — | 2026-10-18, PR |
+| Clark & Paivio (1991) | [10.1007/BF01320076](https://doi.org/10.1007/BF01320076) | Matches | Theory paper; cited only as the theoretical basis | 2026-10-18, PR |
+| Ginns (2006) | [10.1016/j.learninstruc.2006.10.001](https://doi.org/10.1016/j.learninstruc.2006.10.001) | Matches | — | 2026-10-18, PR |
+| Rey (2012) | [10.1016/j.edurev.2012.05.003](https://doi.org/10.1016/j.edurev.2012.05.003) | Matches | — | 2026-10-18, PR |
+| Nesbit & Adesope (2006) | [10.3102/00346543076003413](https://doi.org/10.3102/00346543076003413) | Matches | — | 2026-10-18, PR |
+| Fiorella & Mayer (2016) | [10.1007/s10648-015-9348-9](https://doi.org/10.1007/s10648-015-9348-9) | Matches | — | 2026-10-18, PR |
+| Ginns, Martin & Marsh (2013) | [10.1007/s10648-013-9228-0](https://doi.org/10.1007/s10648-013-9228-0) | Matches | — | 2026-10-18, PR |
+| Hulleman & Harackiewicz (2009) | [10.1126/science.1177067](https://doi.org/10.1126/science.1177067) | Matches | Effect was concentrated in students with low success expectations; consider narrowing the claim | 2026-10-18, PR |
+| Scheibehenne, Greifeneder & Todd (2010) | [10.1086/651235](https://doi.org/10.1086/651235) | Matches | — | 2026-10-18, PR |
+| Soderstrom & Bjork (2015) | [10.1177/1745691615569000](https://doi.org/10.1177/1745691615569000) | Matches | — | 2026-10-18, PR |
+| Sitzmann et al. (2010) | [10.5465/amle.9.2.zqr169](https://doi.org/10.5465/amle.9.2.zqr169) | Matches | — | 2026-10-18, PR |
 
 ## Functional Requirements
 
@@ -263,13 +262,12 @@ claim needs the nuance noted.
 
 ## Flagged concerns
 
-1. **The charter conflicts with this spec.** Charter O4 (self-reported gain)
-   and its facilitated pilot pathways conflict with FR-15 and the
-   self-paced-only scope. The charter needs revising.
+1. **Charter conflict — resolved 2026-10-18.** Charter v0.2 replaces O4
+   with the FR-15 retention measure and removes facilitated pilots.
 2. **Self-assessment validity.** FR-03 instruments have no validity study.
    They must stay descriptive and never become placement.
-3. **Unverified citations.** The fifteen AI-sourced citations above need a
-   human check before this spec is accepted.
+3. **Citations — resolved 2026-10-18.** All fifteen AI-sourced citations
+   were checked by a human (see § Citation check log).
 4. **Stage targeting is a bet.** FR-17 and FR-18 have no direct evidence
    behind them, and they depend on self-placement (FR-03), which is
    unvalidated. Launch one stage site first and compare it with the main

@@ -7,7 +7,7 @@ tags: [implementation, governance, charter, M1]
 
 ## Integral Education Platform — Product Charter
 
-> **Status:** Draft v0.2 — Pending Product Owner sign-off (plan task P1-01, issue #509)  
+> **Status:** v0.2 — Approved by the Product Owner (@paruff), 2026-10-18 (plan task P1-01, issue #509)  
 > **Version:** 0.2  
 > **Last Updated:** 2026-10-18  
 > **Classification:** [HUMAN-REQUIRED] — AI-drafted; the Product Owner must validate scope, outcomes, and the sign-off section before this becomes authoritative.  
@@ -151,10 +151,10 @@ See the full [RACI Matrix](raci) for role definitions and workflow assignments.
 
 | Role | Responsibility | Current Owner |
 |------|---------------|---------------|
-| Product Owner | Charter, scope decisions, milestone go/no-go | `[PLACEHOLDER]` |
+| Product Owner | Charter, scope decisions, milestone go/no-go | Phil Ruff (@paruff) |
 | Curriculum Lead | Module design, learning objective quality | `[PLACEHOLDER]` |
 | Subject-Matter Expert (SME) | AQAL and ILP content accuracy | `[PLACEHOLDER]` |
-| Safety Lead | Shadowwork safety tier review, incident escalation | `[PLACEHOLDER]` |
+| Safety Lead | Shadowwork safety tier review, incident escalation; Tier 2 safety reviewer | Phil Ruff (@paruff) |
 | Clinical Advisor | Safety model clinical review | `[PLACEHOLDER — HUMAN-REQUIRED]` |
 | Content Reviewer | Evidence vetting and peer review | `[PLACEHOLDER]` |
 | Analyst | Metrics baseline, retention study protocol and report | `[PLACEHOLDER]` |
@@ -168,7 +168,7 @@ See the full [RACI Matrix](raci) for role definitions and workflow assignments.
 
 | Role | Name | Date | Signature |
 |------|------|------|-----------|
-| Product Owner | `[PLACEHOLDER]` | `[DATE]` | `[SIGNATURE]` |
+| Product Owner | Phil Ruff (@paruff) | 2026-10-18 | Approved via PR #560 |
 | Safety Lead | `[PLACEHOLDER]` | `[DATE]` | `[SIGNATURE]` |
 | Clinical Advisor | `[PLACEHOLDER]` | `[DATE]` | `[SIGNATURE]` |
 | Steering Group Representative | `[PLACEHOLDER]` | `[DATE]` | `[SIGNATURE]` |
@@ -180,4 +180,4 @@ See the full [RACI Matrix](raci) for role definitions and workflow assignments.
 | Version | Date | Author | Change Summary |
 |---------|------|--------|----------------|
 | 0.1 | 2026-04-05 | Copilot | Initial draft for human review |
-| 0.2 | 2026-10-18 | Claude (AI draft) | Self-paced-only scope; O4 replaced with the FR-15 delayed retention measure; facilitated pilot pathways and Pilot Coordinator role removed (P1-01, #509). Pending Product Owner sign-off |
+| 0.2 | 2026-10-18 | Claude (AI draft) | Self-paced-only scope; O4 replaced with the FR-15 delayed retention measure; facilitated pilot pathways and Pilot Coordinator role removed (P1-01, #509). Approved by the Product Owner 2026-10-18 |

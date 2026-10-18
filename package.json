@@ -51,7 +51,8 @@
   "overrides": {
     "serialize-javascript": "7.0.5",
     "brace-expansion": "1.1.16",
-    "fast-uri": "3.1.4"
+    "fast-uri": "3.1.4",
+    "tinypool": "^2.1.2"
   },
   "engines": {
     "node": ">=18.0"

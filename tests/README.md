@@ -1,6 +1,6 @@
 # Tests — Integral Education Platform
 
-> **Last updated:** 2026-07-25
+> **Last updated:** 2026-10-18
 
 ## Test Philosophy
 
@@ -83,7 +83,19 @@ npm run clear && npm run build
 
 ## Test Coverage
 
-This project does not use unit tests (no runtime logic to test). Coverage is defined as:
+Unit tests cover the browser-side logic in `src/` (retrieval scheduling,
+progress storage, retrieval components). They use Node's built-in runner, no
+extra framework:
+
+```bash
+npm test   # node --test tests/*.test.mjs; runs in CI and the lefthook pre-commit
+```
+
+`tests/setup.mjs` registers a small loader so tests can import `src/` files
+(JSX, `@site/` alias, CSS modules). Component tests render with
+`react-dom/server` and assert on the markup.
+
+Beyond unit tests, coverage is defined as:
 
 - **Build pass rate:** 100% on main
 - **Broken links:** 0 on main

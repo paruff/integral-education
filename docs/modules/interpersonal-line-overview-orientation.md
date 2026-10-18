@@ -344,7 +344,7 @@ The confusion this produces: the person's relational warmth and attunement can b
 | Interval | When | Activity |
 |----------|------|----------|
 | 1 | 24 hours after completing the module | Review all 10 Anki cards. Note any card where your answer was uncertain — those are your current developmental edges. |
-| 2 | 72 hours after completing the module | Re-read your Interpersonal Line Self-Portrait from Practice. For each prompt, add one concrete example from the past 72 hours. Note where your patterns showed up as you described them and where they surprised you. |
+| 2 | 72 hours after completing the module | Without looking, write from memory your main answer to each prompt of your Interpersonal Line Self-Portrait, with one concrete example from the past 72 hours for each. Then open the Self-Portrait you wrote in Practice, compare, and note where your patterns showed up as you described them and where they surprised you. |
 | 7 | 7 days after completing the module | Teach the Kegan altitudes to a trusted person in your own words, using a specific relationship example for each. Note what you struggled to explain or where they asked questions you couldn't answer — that is the edge of your current structural understanding. |
 | 4 | 14 days after completing the module | Select one Integrate activity and apply it deliberately this week. Journal what you noticed: where you enacted your growing edge, where your default pattern reasserted, and what one next step would be. |
 

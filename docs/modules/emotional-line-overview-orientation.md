@@ -265,7 +265,7 @@ The psychograph lens — locating the Emotional line against Self, Cognitive, an
 
 | Interval | Activity |
 |---|---|
-| 24h | Re-read your Emotional Line Self-Portrait. Add one concrete example from the past day of (a) your default label, (b) your regulation move, and (c) the outcome. |
+| 24h | Without looking, write from memory your default label, your regulation move, and the outcome from your Emotional Line Self-Portrait, and add one concrete example from the past day of each. Then open the Self-Portrait you wrote in Practice, compare, and note what you left out. |
 | 72h | Revisit the RULER section and annotate one real interaction with all five steps (Recognize, Understand, Label, Express, Regulate). |
 | 7d | Re-check Profile A/B/C asynchronies. Which profile most matched your week under stress, and what evidence supports that? |
 | 14d | Rewrite your developmental-edge sentence stem from Practice. Note one specific behavior that has improved and one that remains unchanged. |

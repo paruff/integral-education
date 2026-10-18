@@ -352,7 +352,7 @@ The stage-by-stage integration map above draws on developmental and attachment r
 | Interval | When | Activity |
 |----------|------|----------|
 | 1 | 24 hours after completing the module | Review all 10 Anki cards. Then write, from memory, the four steps of the integrated practice loop. |
-| 2 | 72 hours after completing the module | Re-open your Emotional–Interpersonal psychograph and revise only one item: the sentence naming the recurring failure pattern. Make it more behaviorally specific. |
+| 2 | 72 hours after completing the module | Without looking, write from memory the sentence naming your recurring failure pattern from your Emotional–Interpersonal psychograph. Then open the psychograph, compare, and revise only that one sentence to be more behaviorally specific. |
 | 3 | 7 days after completing the module | Use your integrated behavior once in a real conversation or meeting, then journal what you assumed, what you verified, and what changed. |
 | 4 | 30 days after completing the module | Review your 30-day integrated practice plan. Mark how many days you used the daily cue, whether the weekly relational test actually happened, and whether the gap narrowed in observable behavior. |
 

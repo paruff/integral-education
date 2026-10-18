@@ -77,6 +77,14 @@ This module uses a modified loop: **Orient → Encounter → Learn → Practice 
 
 This module draws on three complementary frameworks. Piaget and Inhelder's original concrete/formal operations research supplies the structural distinction itself — hypothetico-deductive reasoning as a qualitatively different operation from instance-bound comparison, not merely "more" of the same thinking. Fischer and Bidell's dynamic skill theory supplies the second lens: the finding that adult cognitive performance is domain- and support-condition dependent rather than a single global capacity, which is why the diagnostic tasks below are organized by domain rather than treated as a single test. Labouvie-Vief's research on affect and adult cognitive integration supplies the third lens — the specific mechanism by which stress and emotional load narrow reasoning to concrete mode, which grounds the Stress-Regression Mapping exercise. Held together, these three lenses let concrete-to-formal reasoning be understood structurally, mapped domain by domain rather than assumed to be uniform, and diagnosed for its actual stress triggers rather than treated as a fixed trait.
 
+**Evidence tier:** A — Piaget and Inhelder's concrete/formal distinction is a long-replicated finding; the original studies were of children and adolescents, so adult use needs care.
+
+**Evidence tier:** B — Fischer and Bidell's domain- and support-dependence of adult performance is a well-supported synthesis, with limited transfer into emotionally loaded contexts.
+
+**Evidence tier:** B — Labouvie-Vief's account of stress narrowing adult reasoning is a strong synthesis; effects vary by person and context.
+
+These are stage-style lenses for noticing patterns in your own reasoning, not a measurement of you or a verdict on anyone's worth.
+
 ## Concrete and formal operations from the inside
 
 **Concrete operational thinking** is reasoning from tangible, observable instances. You can sort, compare, and infer well when examples are visible and grounded in direct experience. Purely hypothetical scenarios feel vague, unnecessary, or "not real yet." Reasoning tends to stay category-based and instance-bound.
@@ -86,6 +94,19 @@ This module draws on three complementary frameworks. Piaget and Inhelder's origi
 **Formal operational thinking** is hypothetico-deductive reasoning. You can reason about possibilities rather than only actualities, systematically vary and test variables, and handle abstract concepts as mental objects even when they are not currently instantiated.
 
 **Characteristic achievement:** *"I can reason about things that don't exist yet."*
+
+```mermaid
+flowchart TD
+  accTitle: Concrete reasoning that fits or that regresses
+  accDescr: When a task arrives, ask whether it needs hypotheticals or variable analysis. If it does not, concrete reasoning fits. If it does, concrete-only reasoning signals that stress has narrowed your range.
+  Task["A task or conversation arrives"] --> Needs{"Does it need hypotheticals, variables or counterfactuals?"}
+  Needs -->|"No: act, execute, follow a procedure"| Fit["Concrete reasoning fits the task"]
+  Needs -->|"Yes"| Mode{"Which mode am I in?"}
+  Mode -->|"Reasoning about possibilities"| Formal["Formal operations available here"]
+  Mode -->|"Demanding proof I can see or touch"| Regress["Stress may have narrowed my range"]
+```
+
+*In words:* first ask what the task requires. If it only needs action or a known procedure, concrete reasoning is the right tool. If it needs possibilities, variables or counterfactuals, notice which mode you are in: reasoning about possibilities means formal operations are available in that domain, while insisting on visible proof suggests stress has narrowed your range.
 
 ---
 
@@ -110,6 +131,13 @@ Domain-specificity means you should ask *where* formal operations are available,
 The four Encounter tasks below are self-scored diagnostic exercises, not a validated psychometric instrument, and they carry real limitations. First, self-assessment of one's own reasoning operations is prone to the same domain-specific blind spots the module is trying to surface — a person reasoning concretely about a topic may not recognize the concreteness of their own reasoning about it in the moment they are doing it. Second, the framework distinguishes concrete from formal operations cleanly in principle, but in practice most adult reasoning is a mixture, and forcing a task response into one category or the other can obscure more than it reveals. Third, this module treats formal operations as generally more capable, but Piaget's own framework does not establish that formal reasoning is always the correct choice — the Pre/Trans checkpoint in Stabilize exists specifically because context-appropriate concreteness is a genuine cognitive strength, not a deficit to be corrected.
 
 ---
+
+:::tip Before you read
+Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
+
+1. Think of a topic where you reason easily about "what if" and one where you only trust what you can see. Why might the same person think so differently in the two?
+2. Is thinking concretely always a weaker way to think? When might it be the better choice?
+:::
 
 ## 🌿 Encounter
 
@@ -195,6 +223,8 @@ By the end of this module, you will be able to:
 
 ## 🧘 Practice
 
+**Worked example:** on Day 4 you must decide whether to accept a new project. A concrete pass says, "My manager says it is fine, so I will take it." Adding one counterfactual gives, "If I take it, what happens to my current deadlines?" Adding one rival explanation gives, "Maybe my manager said yes because nobody else was free, not because it suits me." Neither addition changes the decision yet; they widen what you consider before deciding.
+
 Run this 7-day protocol:
 
 - **Day 1:** Complete Encounter (a) and score which tasks were easy/hard by domain.
@@ -206,6 +236,8 @@ Run this 7-day protocol:
 ---
 
 ## ⚓ Stabilize
+
+**Back to your opening questions:** the same person can reason formally where they have practice and support and concretely where emotional load is high, so the useful question is where formal operations are available (domain-specificity). Concrete thinking is not weaker in itself: it is the better choice when the task calls for immediate action, procedural reliability or sensory-grounded execution. It becomes a problem only when stress narrows your range in a situation that needs hypotheticals.
 
 ## Pre/Trans checkpoint for concrete and formal operations
 
@@ -247,9 +279,9 @@ Cross-reference this module with:
 
 ## 🔍 Reflect
 
-1. In which domain do you currently overestimate your formal reasoning capacity?
-2. What emotional trigger most reliably pulls you into concrete-only reasoning?
-3. Where is concrete reasoning currently wise and sufficient in your life?
+1. In which domain do you currently overestimate your formal reasoning capacity, and why might that domain be easy to misjudge?
+2. What emotional trigger most reliably pulls you into concrete-only reasoning, and how does it narrow what you consider in a recent, specific situation?
+3. Where is concrete reasoning currently wise and sufficient in your life, and why is it enough there?
 4. What single habit will you use to reopen formal operations under stress this week?
 
 ---
@@ -271,10 +303,10 @@ Cross-reference this module with:
 
 | Criterion | Not yet | Developing | Stable |
 |---|---|---|---|
-| **Phenomenological precision** — You can describe concrete vs. formal operations from direct experience | Descriptions are conceptual only | Can identify one concrete and one formal signature in own thinking | Can consistently identify both signatures across domains |
-| **Domain-specific mapping** — You can identify where formal operations are available vs. unavailable | No domain differentiation | Differentiates two domains with partial evidence | Differentiates three or more domains with clear evidence |
-| **Stress-regression visibility** — You can name triggers and early warning signs | Triggers unclear | Triggers named but warning signs vague | Triggers and warning signs are specific and actionable |
-| **Formal-operation performance** — You can run variable and counterfactual reasoning on demand | Cannot produce alternatives | Produces alternatives with prompting | Independently produces hypotheses, variables, and disconfirming criteria |
+| **Phenomenological precision** — You can describe concrete vs. formal operations from direct experience | Descriptions are conceptual only | Can identify one concrete and one formal signature in own thinking | Can consistently identify both signatures across domains: you can quote one concrete and one formal example of your own in each of two or more domains |
+| **Domain-specific mapping** — You can identify where formal operations are available vs. unavailable | No domain differentiation | Differentiates two domains with partial evidence | Differentiates three or more domains with clear evidence: your Encounter notes list at least three domains, each with a task that was easy or hard |
+| **Stress-regression visibility** — You can name triggers and early warning signs | Triggers unclear | Triggers named but warning signs vague | Triggers and warning signs are specific and actionable: your stress-regression map has at least two triggers, each with a named warning sign and a live example |
+| **Formal-operation performance** — You can run variable and counterfactual reasoning on demand | Cannot produce alternatives | Produces alternatives with prompting | Independently produces hypotheses, variables, and disconfirming criteria: you have one written decision with at least one counterfactual, one rival explanation and one falsifier |
 
 **Passing threshold:** At least three criteria at *Developing* or above.
 
@@ -305,9 +337,9 @@ Cross-reference this module with:
 
 | Claim | Source | Quality tier | Caveat |
 |---|---|---|---|
-| Concrete and formal operations are distinguishable cognitive structures with formal operations marked by hypothetico-deductive reasoning. | Piaget, J. (1950). *The Psychology of Intelligence*; Inhelder, B., & Piaget, J. (1958). *The Growth of Logical Thinking from Childhood to Adolescence*. | Foundational primary theory/research syntheses | Original studies focused on children/adolescents; adult application requires domain-sensitive interpretation. |
-| Adult cognitive performance is domain- and support-condition dependent rather than globally fixed. | Fischer, K. W., & Bidell, T. R. (1998). Dynamic development of psychological structures. In Damon & Lerner (Eds.), *Handbook of Child Psychology*. | Strong developmental synthesis | Domain findings do not imply unlimited transfer across emotionally loaded contexts. |
-| Affect and stress can constrain integrative reasoning and produce lower-order performance in adults. | Labouvie-Vief, G. (2006). Emerging structures of adult thought. In Damon & Lerner (Eds.), *Handbook of Child Psychology*. | Strong theoretical and empirical synthesis | Effects vary by regulation skill and context; regression is probabilistic, not absolute. |
+| Concrete and formal operations are distinguishable cognitive structures with formal operations marked by hypothetico-deductive reasoning. | Piaget, J. (1950). *The Psychology of Intelligence*; Inhelder, B., & Piaget, J. (1958). *The Growth of Logical Thinking from Childhood to Adolescence*. | Tier A — foundational primary theory/research syntheses | Original studies focused on children/adolescents; adult application requires domain-sensitive interpretation. |
+| Adult cognitive performance is domain- and support-condition dependent rather than globally fixed. | Fischer, K. W., & Bidell, T. R. (1998). Dynamic development of psychological structures. In Damon & Lerner (Eds.), *Handbook of Child Psychology*. | Tier B — strong developmental synthesis | Domain findings do not imply unlimited transfer across emotionally loaded contexts. |
+| Affect and stress can constrain integrative reasoning and produce lower-order performance in adults. | Labouvie-Vief, G. (2006). Emerging structures of adult thought. In Damon & Lerner (Eds.), *Handbook of Child Psychology*. | Tier B — strong theoretical and empirical synthesis | Effects vary by regulation skill and context; regression is probabilistic, not absolute. |
 | Adult education can strengthen reflective, abstract perspective-taking through structured critical reflection. | Mezirow, J. (1991). *Transformative Dimensions of Adult Learning*; Basseches, M. (1984). *Dialectical Thinking and Adult Development*. | Influential adult-development frameworks | Reflective learning design quality strongly affects outcomes. |
 
 ---

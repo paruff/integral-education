@@ -22,6 +22,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
 
       - name: Setup Node
         uses: actions/setup-node@v7
@@ -43,15 +45,21 @@ jobs:
 
       - name: Toolkit Check (generation, calibration, tiers, diagrams in changed modules)
         shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PUSH_BASE_SHA: ${{ github.event.before }}
+          PUSH_HEAD_SHA: ${{ github.sha }}
         run: |
           set -euo pipefail
 
-          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
-            BASE_SHA="${{ github.event.pull_request.base.sha }}"
-            HEAD_SHA="${{ github.event.pull_request.head.sha }}"
+          if [[ "${EVENT_NAME}" == "pull_request" ]]; then
+            BASE_SHA="${PR_BASE_SHA}"
+            HEAD_SHA="${PR_HEAD_SHA}"
           else
-            BASE_SHA="${{ github.event.before }}"
-            HEAD_SHA="${{ github.sha }}"
+            BASE_SHA="${PUSH_BASE_SHA}"
+            HEAD_SHA="${PUSH_HEAD_SHA}"
           fi
 
           if [[ "${BASE_SHA}" == "0000000000000000000000000000000000000000" ]]; then
@@ -60,9 +68,13 @@ jobs:
             exit 0
           fi
 
-          git fetch --no-tags --depth=1 origin "${BASE_SHA}" "${HEAD_SHA}" || true
+          if ! git cat-file -e "${BASE_SHA}^{commit}" 2>/dev/null; then
+            echo "Unable to resolve base commit ${BASE_SHA}; checking all modules."
+            node scripts/check-toolkit.mjs
+            exit 0
+          fi
 
-          mapfile -t changed_modules < <(git diff --name-only "${BASE_SHA}" "${HEAD_SHA}" -- "docs/modules/*.md" "docs/modules/*.mdx")
+          mapfile -t changed_modules < <(git diff --name-only "${BASE_SHA}" "${HEAD_SHA}" | grep -E '^docs/modules/.+\.mdx?$' || true)
           if [[ "${#changed_modules[@]}" -eq 0 ]]; then
             echo "No module markdown changes detected; skipping toolkit check."
             exit 0

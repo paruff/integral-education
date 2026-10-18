@@ -60,6 +60,14 @@ pre-commit:
         - rebase
       priority: 2
 
+    toolkit-check:
+      tags: [content, quality]
+      run: node scripts/check-toolkit.mjs
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
     no-merge-conflicts:
       tags: [git, safety]
       run: |

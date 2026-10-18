@@ -14,6 +14,10 @@ const config = {
   organizationName: 'paruff',
   projectName: 'integral-education',
 
+  // FR-16: diagrams are text-based Mermaid source so they can be reviewed in a PR.
+  markdown: { mermaid: true },
+  themes: ['@docusaurus/theme-mermaid'],
+
   plugins: [
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),

@@ -5,6 +5,8 @@ import { transformAsync } from '@babel/core';
 const ROOT = new URL('../', import.meta.url);
 const SRC = new URL('src/', ROOT).href;
 const STUBS = {
+  '@docusaurus/useDocusaurusContext':
+    "export default function useDocusaurusContext() { return { siteConfig: { projectName: globalThis.__SITE_ID__ ?? 'integral-education' } }; }",
   '@docusaurus/Link':
     "import React from 'react'; export default function Link({ to, children }) { return React.createElement('a', { href: to }, children); }",
 };

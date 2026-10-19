@@ -12,7 +12,7 @@ import MixedReview from '@site/src/components/MixedReview';
 import { readLearnerData } from '@site/src/utils/learnerData';
 
 export function ProgressDashboard() {
-  const { data, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile, getDueReviews, getMixedReview, recordRetrievalReview } = useProgress();
+  const { data, siteId, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile, getDueReviews, getMixedReview, recordRetrievalReview } = useProgress();
   const [mixedSession, setMixedSession] = useState(null);
   const [storedData, setStoredData] = useState(null);
 
@@ -142,7 +142,7 @@ export function ProgressDashboard() {
         <p style={{ fontSize: '0.9rem' }}>
           Everything below lives only in this browser: module progress, your review schedule and your reflections. Nothing is sent to a server.
         </p>
-        <details onToggle={(e) => e.currentTarget.open && setStoredData(readLearnerData(localStorage))}>
+        <details onToggle={(e) => e.currentTarget.open && setStoredData(readLearnerData(localStorage, siteId))}>
           <summary>View my stored data</summary>
           <pre style={{ maxHeight: '20rem', overflow: 'auto', fontSize: '0.8rem' }}>
             {JSON.stringify(storedData ?? {}, null, 2)}
@@ -153,7 +153,7 @@ export function ProgressDashboard() {
           onClick={() => {
             if (window.confirm('This deletes your progress, review schedule and reflections from this browser. It cannot be undone. Continue?')) {
               clear();
-              setStoredData(readLearnerData(localStorage));
+              setStoredData(readLearnerData(localStorage, siteId));
               setMixedSession(null);
             }
           }}

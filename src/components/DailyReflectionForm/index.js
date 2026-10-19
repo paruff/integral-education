@@ -1,4 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { migrateLegacyData, siteKeys } from '@site/src/utils/learnerData';
 
 function Section({ label, field, value, onChange, placeholder }) {
   return (
@@ -28,6 +30,9 @@ function Section({ label, field, value, onChange, placeholder }) {
 }
 
 export default function DailyReflectionForm() {
+  const { siteConfig } = useDocusaurusContext();
+  const siteId = siteConfig.projectName;
+  const keys = useMemo(() => siteKeys(siteId), [siteId]);
   const [entries, setEntries] = useState({});
   const [lastSaved, setLastSaved] = useState(null);
   const [isAvailable, setIsAvailable] = useState(true);
@@ -41,14 +46,15 @@ export default function DailyReflectionForm() {
       return;
     }
     try {
-      const raw = localStorage.getItem('iel_reflections_v1');
+      migrateLegacyData(localStorage, siteId);
+      const raw = localStorage.getItem(keys.reflections);
       if (raw) setEntries(JSON.parse(raw));
     } catch {}
   }, []);
 
   function saveReflections(data) {
     try {
-      localStorage.setItem('iel_reflections_v1', JSON.stringify(data));
+      localStorage.setItem(keys.reflections, JSON.stringify(data));
     } catch {}
   }
 

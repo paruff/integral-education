@@ -1,0 +1,151 @@
+[
+  {
+    "id": "amber-to-rational",
+    "title": "Clear Thinking Path",
+    "modules": [
+      "amber-mythic-orientation",
+      "rational-orange-orientation",
+      "cognitive-dissonance-bridge",
+      "perspective-taking-capacity",
+      "authority-autonomy-transition",
+      "critical-thinking-foundations",
+      "evidence-evaluation"
+    ]
+  },
+  {
+    "id": "cognitive-line-development",
+    "title": "Cognitive Line Development",
+    "modules": [
+      "cognitive-line-concrete-to-formal",
+      "cognitive-line-postformal-operations",
+      "cognitive-line-metasystematic-vision-logic",
+      "cognitive-line-practice-architecture"
+    ]
+  },
+  {
+    "id": "emotional-line-development",
+    "title": "Emotional Line Development",
+    "modules": [
+      "emotional-line-overview-orientation",
+      "emotional-granularity",
+      "emotion-regulation-foundations",
+      "affect-labelling-somatic-correlation",
+      "emotional-intelligence-somatic-line",
+      "emotional-appraisal-meaning-making",
+      "emotional-interpersonal-integration"
+    ]
+  },
+  {
+    "id": "interpersonal-line-development",
+    "title": "Interpersonal Line Development",
+    "modules": [
+      "interpersonal-line-overview-orientation",
+      "perspective-taking-empathic-accuracy",
+      "relational-repair-conflict-navigation",
+      "cross-difference-dialogue-trust-building",
+      "emotional-interpersonal-integration"
+    ]
+  },
+  {
+    "id": "moral-line-development",
+    "title": "Moral Line",
+    "modules": [
+      "moral-line-shadow-moral-injury",
+      "contextual-ethics-moral-complexity",
+      "moral-line-imagination-integral-ethics"
+    ]
+  },
+  {
+    "id": "personal-to-integral",
+    "title": "Personal Growth Path",
+    "modules": [
+      "mindfulness-basics",
+      "emotional-granularity",
+      "shadow-integration-101"
+    ]
+  },
+  {
+    "id": "pluralistic-to-integral",
+    "title": "Integrating Perspectives Path",
+    "modules": [
+      "late-green-emergence-signals",
+      "integral-teal-orientation",
+      "vision-logic-metasystematic-thinking",
+      "healthy-hierarchy-actualization-gradient",
+      "integral-ethics-beyond-relativism",
+      "integral-shadow-teal-trap",
+      "multiperspectival-leadership-action",
+      "integral-life-practice-embodying-2nd-tier"
+    ]
+  },
+  {
+    "id": "rational-to-pluralistic",
+    "title": "Multiple Perspectives Path",
+    "modules": [
+      "late-orange-disillusionment",
+      "empathy-perspective-plurality",
+      "emotional-intelligence-somatic-line",
+      "contextual-ethics-moral-complexity",
+      "ecological-systems-consciousness",
+      "authentic-dialogue-collaborative-meaning",
+      "community-belonging-collective-intelligence",
+      "relativism-limits-of-pluralism",
+      "pluralistic-green-orientation"
+    ]
+  },
+  {
+    "id": "self-line-development",
+    "title": "Self Line Development",
+    "modules": [
+      "self-line-conventional-conformist-achiever",
+      "self-line-postconventional-individualist-strategist",
+      "self-line-postautonomous-construct-aware-unitive",
+      "self-line-integration-practice"
+    ]
+  },
+  {
+    "id": "shadow-work",
+    "title": "Shadow Work",
+    "modules": [
+      "shadow-work-foundation",
+      "shadow-321-process",
+      "shadow-positive-projection",
+      "shadow-persona-mask",
+      "shadow-in-relationships",
+      "shadow-collective-cultural",
+      "shadow-immunity-to-change",
+      "shadow-spiritual-bypassing"
+    ]
+  },
+  {
+    "id": "somatic-line-development",
+    "title": "Somatic Line Development",
+    "modules": [
+      "somatic-line-overview",
+      "mindfulness-basics",
+      "gross-state-awareness",
+      "emotional-intelligence-somatic-line"
+    ]
+  },
+  {
+    "id": "spiritual-line-development",
+    "title": "Spiritual Line Development",
+    "modules": [
+      "spiritual-line-overview-orientation",
+      "spiritual-line-mythic-to-rational",
+      "spiritual-line-conjunctive-universalizing",
+      "spiritual-line-post-metaphysical-integral-religion",
+      "spiritual-line-shadow-integration"
+    ]
+  },
+  {
+    "id": "state-development",
+    "title": "State Development",
+    "modules": [
+      "gross-state-awareness",
+      "subtle-state-access",
+      "causal-witness-state",
+      "nondual-awareness-orientation"
+    ]
+  }
+]

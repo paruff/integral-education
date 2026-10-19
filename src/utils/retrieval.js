@@ -68,3 +68,13 @@ export function interleaveDueCards(schedule, maxPerModule = 3) {
   const longest = Math.max(0, ...decks.map((d) => d.length));
   return Array.from({ length: longest }, (_, i) => decks.map((d) => d[i]).filter(Boolean)).flat();
 }
+
+// Stable short id for a card, from its question text, so a card's ratings can be
+// followed across reviews (calibration, FR-10/FR-19) without storing the text twice.
+export function cardId(question) {
+  let h = 5381;
+  for (const ch of String(question).trim().toLowerCase().replace(/\s+/g, ' ')) {
+    h = ((h * 33) ^ ch.codePointAt(0)) >>> 0;
+  }
+  return h.toString(36);
+}

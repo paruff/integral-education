@@ -3,7 +3,7 @@ import RetrievalCard from '@site/src/components/RetrievalCard';
 import Link from '@docusaurus/Link';
 import { useLocation } from '@docusaurus/router';
 import useProgress from '@site/src/hooks/useProgress';
-import { slugifyModuleName } from '@site/src/utils/retrieval';
+import { cardId, slugifyModuleName } from '@site/src/utils/retrieval';
 import styles from './styles.module.css';
 
 function formatDueDate(isoDateString) {
@@ -48,7 +48,12 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
   // Persist the spaced-retrieval schedule once the review finishes.
   React.useEffect(() => {
     if (completed) {
-      recordRetrievalReview(resolvedModuleId, moduleName, cards);
+      recordRetrievalReview(
+        resolvedModuleId,
+        moduleName,
+        cards,
+        cards.map((c, i) => ({ cardId: cardId(c.q), outcome: scores[i] }))
+      );
     }
     // Only fire once, right when `completed` flips true.
     // eslint-disable-next-line react-hooks/exhaustive-deps

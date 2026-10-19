@@ -10,6 +10,50 @@ import Link from '@docusaurus/Link';
 import { useState } from 'react';
 import MixedReview from '@site/src/components/MixedReview';
 import { readLearnerData } from '@site/src/utils/learnerData';
+import { computeMetrics } from '@site/src/utils/metrics';
+import pathways from '@site/src/data/pathways.json';
+
+export function LearningMetrics({ data }) {
+  const m = computeMetrics(data, pathways);
+  const pct = (rate) => `${Math.round(rate * 100)}%`;
+  const yesNo = (v) => (v === null ? 'not yet' : v ? 'yes' : 'no');
+  return (
+    <div className="margin-top--lg">
+      <h3>Your learning habits</h3>
+      <p style={{ fontSize: '0.9rem' }}>
+        These numbers are worked out in this browser from your own reviews. Nothing is sent anywhere, and clearing your data resets them. They show habits, not how much you know.
+      </p>
+      <ul>
+        <li>
+          <strong>Reviews done on time:</strong>{' '}
+          {m.reviews.total ? `${pct(m.reviews.rate)} (${m.reviews.onTime} of ${m.reviews.total} within 2 days of the due date)` : 'not enough reviews yet'}
+          . Aim for about 60% or more.
+        </li>
+        <li>
+          <strong>Remembered, then missed next time:</strong>{' '}
+          {m.calibration.pairs ? `${pct(m.calibration.gap)} (${m.calibration.missed} of ${m.calibration.pairs} cards you rated "remembered")` : 'not enough repeated cards yet'}
+          . A high number means you may be rating yourself too kindly. It should fall as you compare with the model answer.
+        </li>
+        <li>
+          <strong>Came back within 7 days:</strong> {yesNo(m.returns.within7)}. <strong>Within 30 days:</strong> {yesNo(m.returns.within30)}
+          {m.returns.firstDay ? ` (first day on this site: ${m.returns.firstDay}; ${m.returns.distinctDays} day${m.returns.distinctDays === 1 ? '' : 's'} in all)` : ''}.
+        </li>
+      </ul>
+      {m.pathways.length > 0 && (
+        <>
+          <p><strong>Pathways you have started:</strong></p>
+          <ul>
+            {m.pathways.map((p) => (
+              <li key={p.id}>
+                <Link to={`/docs/quickstarts/${p.id}`}>{p.title}</Link>: {p.done} of {p.total} modules marked complete
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+    </div>
+  );
+}
 
 export function ProgressDashboard() {
   const { data, siteId, isAvailable, clear, completedCount, getDaysSinceLastActivity, hasLineProfile, getDueReviews, getMixedReview, recordRetrievalReview } = useProgress();
@@ -53,8 +97,15 @@ export function ProgressDashboard() {
           {mixedSession ? (
             <MixedReview
               cards={mixedSession}
-              onComplete={(moduleIds) =>
-                moduleIds.forEach((id) => recordRetrievalReview(id, data.retrievalSchedule[id]?.moduleName))
+              onComplete={(moduleIds, results) =>
+                moduleIds.forEach((id) =>
+                  recordRetrievalReview(
+                    id,
+                    data.retrievalSchedule[id]?.moduleName,
+                    undefined,
+                    results.filter((r) => r.moduleId === id).map(({ cardId, outcome }) => ({ cardId, outcome }))
+                  )
+                )
               }
             />
           ) : (
@@ -136,6 +187,8 @@ export function ProgressDashboard() {
           </tbody>
         </table>
       )}
+
+      <LearningMetrics data={data} />
 
       <div className="margin-top--lg">
         <h3>Your stored data</h3>

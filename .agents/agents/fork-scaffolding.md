@@ -153,7 +153,7 @@ The pruned fork's `sidebars.js` should reference only modules in the fork's inve
 
 ### Step 5: Generate governance documents
 
-**`FORK.md`** at repo root:
+**`STAGE-SITES.md`** at repo root:
 
 ```markdown
 # [Fork public-facing name] — [fork-name]

@@ -189,7 +189,7 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
   and at least three readers from the target audience read each
   QuickStart aloud and explain it back (cognitive interviews). AI is not a
   substitute for these readers `[HUMAN-REQUIRED]`.
-- **FR-18 — Separate stage sites.** Each stage transition in `FORK.md` is
+- **FR-18 — Separate stage sites.** Each stage transition in `STAGE-SITES.md` is
   its own site, holding only the modules, QuickStarts and maps for that
   transition. Sites are built from **this repo**, one Docusaurus config per
   site (`docusaurus build --config <site>.config.js --out-dir build/<site>`),
@@ -314,7 +314,7 @@ AQAL as the organizing map.
 ## References
 
 - `docs/product/intent.md`, `docs/product/plan.md`
-- `FORK.md` (stage sites), `docs/METRICS.md`
+- `STAGE-SITES.md` (stage sites), `docs/METRICS.md`
 - `internal/implementation/product-charter.md`
 - `internal/quality/instructional-design-protocol.md` (§7 evidence base, PR #501)
 - `internal/quality/evidence-vetting-checklist.md`

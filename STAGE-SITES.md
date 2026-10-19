@@ -1,8 +1,9 @@
-# Fork Strategy — Integral Education Platform
+# Stage Sites — Integral Education Platform
 
 > **Last updated:** 2026-10-19
 > **Status:** Draft. The stage-site decision below (P9-01) was given by the owner on 2026-10-19; the owner confirms the wording.
 > **Owner:** @paruff
+> **Formerly:** `FORK.md`. The earlier fork model is kept lower down for reference; the decision below replaces it.
 
 ## Decision: stage sites, not forks (P9-01, #416)
 

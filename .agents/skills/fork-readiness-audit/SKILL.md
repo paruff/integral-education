@@ -16,7 +16,7 @@ These must be closed before any of the three forks are scaffolded.
 ### Governance
 | Item | Issue | Verification |
 |------|-------|-------------|
-| `FORK.md` exists upstream | PRE-06 | File present at repo root; contains fork philosophy, scope rules, upstream/fork content delineation |
+| `STAGE-SITES.md` exists upstream | PRE-06 | File present at repo root; contains fork philosophy, scope rules, upstream/fork content delineation |
 | RACI has named owners | PRE-07 | Zero placeholder entries remain |
 | Product Charter template ready | PRE-08 | Template in `.opencode/CHARTER-[fork-name].md`; to be instantiated per fork |
 
@@ -150,7 +150,7 @@ All universal gates PLUS:
 ### Universal gates
 | Gate item | Status | Notes |
 |-----------|--------|-------|
-| FORK.md | ✅/❌ | |
+| STAGE-SITES.md | ✅/❌ | |
 | RACI named owners | ✅/❌ | |
 | H1→H2 fix applied | ✅/❌ | |
 | Search plugin working | ✅/❌ | |

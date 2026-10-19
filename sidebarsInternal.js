@@ -53,6 +53,7 @@ const internalSidebar = {
         'pilots/pilot-pathway-shadow-foundations',
         'pilots/pilot-runbook-20-40',
         'pilots/pilot-revision-report-template',
+        'pilots/stage-language-cognitive-interview',
       ],
     },
   ],

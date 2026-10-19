@@ -81,7 +81,7 @@ The upstream monorepo contains all content. Forks extract stage-specific subsets
 - Each fork is a separate GitHub repo with its own `docusaurus.config.js`
 - Fork-specific values: `title`, `tagline`, `baseUrl`, `projectName`
 - Shared values: `src/components/`, `src/css/custom.css`, workflow structure
-- See [FORK.md](FORK.md) for full fork strategy
+- See [STAGE-SITES.md](STAGE-SITES.md) for the stage-site strategy
 
 ### 5. Search
 Local client-side search via `@easyops-cn/docusaurus-search-local`. Search index is generated at build time. No external search service dependency. Fork-specific search excludes internal docs.
@@ -145,7 +145,7 @@ integral-education/
 
 ## Related Documents
 
-- [FORK.md](FORK.md) — fork strategy and governance
+- [STAGE-SITES.md](STAGE-SITES.md) — stage-site strategy and governance
 - [Design decisions](docs/features/) — feature-level design docs
 - [Product Charter](internal/implementation/product-charter) — product scope
 - [AQAL Competency Map](docs/maps/aqal-competency-map.md) — content mapping

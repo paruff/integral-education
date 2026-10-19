@@ -115,7 +115,7 @@ P1-03.
 
 | ID | Task | Files | Proof | Depends |
 | --- | --- | --- | --- | --- |
-| P9-01 | `[HUMAN-REQUIRED]` Confirm the stage-site model: multi-config builds from this repo (forks deferred), the three transitions in `FORK.md`, which launches first, and Magic/Red placement (closes #416) | `FORK.md`, decision record | Decision recorded; `FORK.md` updated | — |
+| P9-01 | `[HUMAN-REQUIRED]` Confirm the stage-site model: multi-config builds from this repo (forks deferred), the three transitions in `STAGE-SITES.md`, which launches first, and Magic/Red placement (closes #416) | `STAGE-SITES.md`, decision record | Decision recorded; `STAGE-SITES.md` updated | — |
 | P9-01a | Multi-site build: a per-site config (title, navbar, sidebar, search, `include` filter) built with `--config` and `--out-dir` into one Pages artifact; CI builds every site | `sites/*.config.js`, `package.json`, deploy workflow | All sites build in CI; a link check fails if a stage site links to another stage or to AQAL pages | P9-01 |
 | P9-02 | Per-site storage key with migration from `iel_progress_v1` (NFR-06) | `src/hooks/useProgress.js` | Unit test: two sites, no overwrite; old data kept | — |
 | P9-03 | Stage-language checks: add FR-17 rules (prior knowledge, relevance, tiers in register) to `developmental-vocabulary`; write a cognitive-interview script for audience readers | `.agents/skills/developmental-vocabulary/`, `internal/pilots/` | Skill and script reviewed | — |

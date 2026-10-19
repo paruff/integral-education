@@ -44,6 +44,9 @@ jobs:
       - name: Toolkit Check (generation, calibration, tiers, diagrams in every module)
         run: node scripts/check-toolkit.mjs
 
+      - name: QuickStart Check (plan, progress, pace, mixed review, thresholds, pathway map)
+        run: node scripts/check-quickstarts.mjs
+
       - name: Generate Content Graph
         run: node scripts/generate-content-graph.js
 

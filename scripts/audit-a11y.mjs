@@ -17,6 +17,7 @@ const TARGETS = [
   { name: 'module-mindfulness', path: '/docs/modules/mindfulness-basics' },
   { name: 'module-diagram', path: '/docs/modules/systems-thinking-101' },
   { name: 'quickstart', path: '/docs/quickstarts/personal-to-integral' },
+  { name: 'quickstart-pathway-map', path: '/docs/quickstarts/rational-to-pluralistic' },
   { name: 'prototype', path: '/prototype' },
   { name: 'start-here', path: '/start' },
   { name: '404-page', path: '/nonexistent-page' },

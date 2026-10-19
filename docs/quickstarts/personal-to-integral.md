@@ -17,6 +17,35 @@ import Term from '@site/src/components/Term';
 
 ---
 
+## Plan your pathway
+
+Self-paced learning works better when you decide before you start. **Write one if-then plan now:** *"When [time/place], I will [first step]."* For example: "When I finish my morning coffee, I will open **Mindfulness Basics** and work on it for 20 minutes." If-then plans help people follow through on goals (Gollwitzer & Sheeran, 2006).
+
+**Suggested pace:** 20–30 minutes a day for 3–6 weeks.
+
+**Visible progress:** [My Progress](../my-progress) shows the modules you have completed and the reviews due. It is stored only in your browser, and you can clear it at any time.
+
+**Mixed review:** After every third module, run a mixed review on [My Progress](../my-progress). It mixes questions from the earlier modules instead of one module at a time, so it feels harder than rereading, and that effort is what builds lasting memory.
+
+**Mastery before moving on:** Each module's Assess section sets a passing threshold. Meet it before you start the next module; if you do not, repeat the practices first. This gate is advisory: the site cannot check it for you, so be honest with yourself.
+
+```mermaid
+flowchart TD
+  accTitle: Pathway map for this QuickStart
+  accDescr: 3 modules in order, with a mixed review after every third module. Each module has its own passing threshold; meet it before moving on.
+  Start(["Start here"]) --> S1["1. Mindfulness Basics"] --> S2["2. Emotional Granularity"] --> S3["3. Shadow Integration"] --> R1(["Mixed review"])
+```
+
+*In words:* start at step 1 and work in order. Your place in the path is the last module marked complete on My Progress. A mixed review follows every third module.
+
+| Step | Module | Pass when |
+|---|---|---|
+| 1 | [Mindfulness Basics](../modules/mindfulness-basics) | Level 3: you can sit for 5 minutes or more and return to the breath within seconds each time you notice drift. |
+| 2 | [Emotional Granularity](../modules/emotional-granularity) | *Proficient* on both indicators. |
+| 3 | [Shadow Integration](../modules/shadow-integration-101) | Level 3: you have owned at least one disowned trait and can relate to it with compassion rather than blame. |
+
+---
+
 ## Step 1: Mindfulness
 
 **Module:** [Mindfulness Basics](../modules/mindfulness-basics)

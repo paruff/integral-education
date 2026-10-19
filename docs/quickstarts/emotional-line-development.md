@@ -18,6 +18,39 @@ This sequence follows the Emotional line module suite's developmental arc, but i
 
 ---
 
+## Plan your pathway
+
+Self-paced learning works better when you decide before you start. **Write one if-then plan now:** *"When [time/place], I will [first step]."* For example: "When I finish my morning coffee, I will open **Emotional Line Overview & Orientation** and work on it for 20 minutes." If-then plans help people follow through on goals (Gollwitzer & Sheeran, 2006).
+
+**Suggested pace:** 20–40 minutes per module session, about 3–5 weeks for the whole path.
+
+**Visible progress:** [My Progress](../my-progress) shows the modules you have completed and the reviews due. It is stored only in your browser, and you can clear it at any time.
+
+**Mixed review:** After every third module, run a mixed review on [My Progress](../my-progress). It mixes questions from the earlier modules instead of one module at a time, so it feels harder than rereading, and that effort is what builds lasting memory.
+
+**Mastery before moving on:** Each module's Assess section sets a passing threshold. Meet it before you start the next module; if you do not, repeat the practices first. This gate is advisory: the site cannot check it for you, so be honest with yourself.
+
+```mermaid
+flowchart TD
+  accTitle: Pathway map for this QuickStart
+  accDescr: 7 modules in order, with a mixed review after every third module and a final review of earlier modules once the last module is done. Each module has its own passing threshold; meet it before moving on.
+  Start(["Start here"]) --> S1["1. Emotional Line Overview #amp; Orientation"] --> S2["2. Emotional Granularity"] --> S3["3. Emotion Regulation Foundations"] --> R1(["Mixed review"]) --> S4["4. Affect Labelling #amp; Somatic Correlation"] --> S5["5. Emotional Intelligence #amp; Somatic Line Development"] --> S6["6. EI-05 · Emotional Appraisal #amp; Meaning-Making"] --> R2(["Mixed review"]) --> S7["7. EI-13 · Emotional–Interpersonal Integration"] --> R3(["Mixed review"])
+```
+
+*In words:* start at step 1 and work in order. Your place in the path is the last module marked complete on My Progress. A mixed review follows every third module.
+
+| Step | Module | Pass when |
+|---|---|---|
+| 1 | [Emotional Line Overview & Orientation](../modules/emotional-line-overview-orientation) | Three or more criteria at *Developing* or *Stable*. |
+| 2 | [Emotional Granularity](../modules/emotional-granularity) | *Proficient* on both indicators. |
+| 3 | [Emotion Regulation Foundations](../modules/emotion-regulation-foundations) | *Proficient*: on at least three real occasions you named the strategy and autonomic zone you were in at the time and chose a strategy on purpose. |
+| 4 | [Affect Labelling & Somatic Correlation](../modules/affect-labelling-somatic-correlation) | Stable in at least 2 of 4 criteria, with no "Not yet" in Somatic access or Label-sensation correlation. If Somatic access is still "Not yet," repeat the practice 3 times over 2 weeks before moving to more advanced somatic modules. |
+| 5 | [Emotional Intelligence & Somatic Line Development](../modules/emotional-intelligence-somatic-line) | A score of 3 or 4 on at least 4 of 6 dimensions indicates the module competencies are consolidating. A score of 1 or 2 on Regulatory Integration or Pre/Trans Discernment indicates that more foundational regulatory work is needed before the module's more advanced practices are safe to deepen. |
+| 6 | [EI-05 · Emotional Appraisal & Meaning-Making](../modules/emotional-appraisal-meaning-making) | *Proficient*: you have traced at least two full ABC chains from your own live reactions, each with a genuinely different alternative appraisal. |
+| 7 | [EI-13 · Emotional–Interpersonal Integration](../modules/emotional-interpersonal-integration) | Stable in at least 3 of 4 criteria, with no **Not yet** in **I can identify my current line gap**. |
+
+---
+
 ## Readiness Check
 
 Choose the entry point that best matches your current need. There is no wrong door — each path converges on the full sequence.

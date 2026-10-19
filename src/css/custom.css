@@ -233,3 +233,9 @@ table a:hover {
     padding: 0.5rem 0;
   }
 }
+
+/* WCAG 2.1 AA: the search plugin's shortcut hint inherits the input placeholder
+   colour, which fails contrast on the navbar background (axe color-contrast). */
+.navbar__search kbd {
+  color: var(--ifm-color-emphasis-900);
+}

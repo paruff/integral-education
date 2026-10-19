@@ -12,7 +12,7 @@
 - **The same stage transitions the forks had**, one site each: Amber → Rational, Rational → Pluralistic, and Pluralistic → Integral.
 - **Order:** start with Amber → Rational, then Red/Magic.
 
-**Built so far:** `sites/clear-thinking.config.js` (Amber → Rational, working name and URL slug) with `scripts/build-sites.mjs` and `scripts/check-site-links.mjs`. It is built and link-checked in CI but not published: `published` stays `false` in `sites/sites.json` until launch (P9-05).
+**Built so far:** `sites/clear-thinking.config.js` (Amber → Rational, working name and URL slug) with `scripts/build-sites.mjs` and `scripts/check-site-links.mjs`. Its pages are assembled by `scripts/prepare-site.mjs` from the shared docs listed in `sites/sites.json`, with any page rewritten for that audience in `sites/<id>/overrides/docs/` on top, so unchanged pages stay single-source. Each build also runs a vocabulary check (`scripts/check-site-vocabulary.mjs`) and the link check; their baselines can only shrink, and `--strict` (the launch gate) needs both at 0. It is built and checked in CI but not published: `published` stays `false` in `sites/sites.json` until launch (P9-05).
 
 **Still open (owner to confirm):**
 

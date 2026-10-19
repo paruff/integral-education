@@ -8,18 +8,9 @@ const slug = 'clear-thinking';
 
 const search = main.plugins.find((p) => Array.isArray(p) && String(p[0]).includes('docusaurus-search-local'));
 
-// Only these docs are built into this site (relative to docs/).
-const include = [
-  'quickstarts/amber-to-rational.{md,mdx}',
-  'modules/amber-mythic-orientation.{md,mdx}',
-  'modules/rational-orange-orientation.{md,mdx}',
-  'modules/cognitive-dissonance-bridge.{md,mdx}',
-  'modules/perspective-taking-capacity.{md,mdx}',
-  'modules/authority-autonomy-transition.{md,mdx}',
-  'modules/critical-thinking-foundations.{md,mdx}',
-  'modules/evidence-evaluation.{md,mdx}',
-  'my-progress.{md,mdx}',
-];
+// The docs come from .sites-cache/clear-thinking/docs, assembled by scripts/prepare-site.mjs:
+// the doc list in sites/sites.json, with any rewrite in sites/clear-thinking/overrides/docs on top.
+// scripts/build-sites.mjs runs it first; run it by hand before `docusaurus start --config`.
 
 /** @type {import('@docusaurus/types').Config} */
 module.exports = {
@@ -38,7 +29,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve('./clear-thinking.sidebars.js'),
-          include,
+          path: '.sites-cache/clear-thinking/docs',
         },
         pages: { path: `sites/${slug}/pages` },
         blog: false,

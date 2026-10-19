@@ -21,3 +21,4 @@ yarn-error.log*
 
 # Pipeline/report artifacts (agent-generated, not canonical docs)
 *-report.md
+.sites-cache/

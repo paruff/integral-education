@@ -1,0 +1,20 @@
+{
+  "note": "Words a learner on this site must not meet (FR-17, fork-readiness-audit vocabulary gate). caseSensitive terms are matched exactly so a colour or an ordinary word is not flagged.",
+  "terms": [
+    { "term": "integral" },
+    { "term": "AQAL", "caseSensitive": true },
+    { "term": "stage" },
+    { "term": "developmental" },
+    { "term": "Spiral Dynamics" },
+    { "term": "worldview" },
+    { "term": "postmodern" },
+    { "term": "pluralistic" },
+    { "term": "Green", "caseSensitive": true },
+    { "term": "Orange", "caseSensitive": true },
+    { "term": "Teal", "caseSensitive": true },
+    { "term": "transcend" },
+    { "term": "centre of gravity" },
+    { "term": "center of gravity" },
+    { "term": "pre/trans" }
+  ]
+}

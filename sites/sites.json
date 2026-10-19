@@ -1,0 +1,9 @@
+[
+  {
+    "id": "clear-thinking",
+    "transition": "amber-to-rational",
+    "config": "sites/clear-thinking.config.js",
+    "linkBaseline": "sites/clear-thinking.link-baseline.json",
+    "published": false
+  }
+]

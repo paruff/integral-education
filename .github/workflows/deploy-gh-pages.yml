@@ -36,7 +36,8 @@ jobs:
         run: npm ci
 
       - name: Build site
-        run: npm run build
+        # Only sites marked "published" in sites/sites.json are built into the artifact.
+        run: node scripts/build-sites.mjs --published-only
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v5

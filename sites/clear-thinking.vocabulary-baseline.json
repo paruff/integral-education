@@ -1,6 +1,11 @@
 [
   {
     "file": ".sites-cache/clear-thinking/docs/modules/amber-mythic-orientation.mdx",
+    "term": "Amber",
+    "count": 81
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/amber-mythic-orientation.mdx",
     "term": "AQAL",
     "count": 1
   },
@@ -21,6 +26,11 @@
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/amber-mythic-orientation.mdx",
+    "term": "Rational",
+    "count": 3
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/amber-mythic-orientation.mdx",
     "term": "Spiral Dynamics",
     "count": 8
   },
@@ -33,6 +43,11 @@
     "file": ".sites-cache/clear-thinking/docs/modules/amber-mythic-orientation.mdx",
     "term": "worldview",
     "count": 4
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/authority-autonomy-transition.mdx",
+    "term": "Amber",
+    "count": 40
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/authority-autonomy-transition.mdx",
@@ -56,6 +71,11 @@
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/authority-autonomy-transition.mdx",
+    "term": "Rational",
+    "count": 22
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/authority-autonomy-transition.mdx",
     "term": "Spiral Dynamics",
     "count": 8
   },
@@ -73,6 +93,11 @@
     "file": ".sites-cache/clear-thinking/docs/modules/authority-autonomy-transition.mdx",
     "term": "worldview",
     "count": 2
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/cognitive-dissonance-bridge.mdx",
+    "term": "Amber",
+    "count": 15
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/cognitive-dissonance-bridge.mdx",
@@ -96,6 +121,11 @@
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/cognitive-dissonance-bridge.mdx",
+    "term": "Rational",
+    "count": 17
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/cognitive-dissonance-bridge.mdx",
     "term": "stage",
     "count": 24
   },
@@ -105,49 +135,9 @@
     "count": 21
   },
   {
-    "file": ".sites-cache/clear-thinking/docs/modules/critical-thinking-foundations.mdx",
-    "term": "AQAL",
-    "count": 1
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/critical-thinking-foundations.mdx",
-    "term": "developmental",
-    "count": 7
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/critical-thinking-foundations.mdx",
-    "term": "Orange",
-    "count": 2
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/critical-thinking-foundations.mdx",
-    "term": "stage",
-    "count": 9
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/evidence-evaluation.mdx",
-    "term": "AQAL",
-    "count": 1
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/evidence-evaluation.mdx",
-    "term": "developmental",
-    "count": 8
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/evidence-evaluation.mdx",
-    "term": "Green",
-    "count": 1
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/evidence-evaluation.mdx",
-    "term": "Orange",
-    "count": 2
-  },
-  {
-    "file": ".sites-cache/clear-thinking/docs/modules/evidence-evaluation.mdx",
-    "term": "stage",
-    "count": 6
+    "file": ".sites-cache/clear-thinking/docs/modules/perspective-taking-capacity.mdx",
+    "term": "Amber",
+    "count": 21
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/perspective-taking-capacity.mdx",
@@ -181,6 +171,11 @@
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/perspective-taking-capacity.mdx",
+    "term": "Rational",
+    "count": 20
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/perspective-taking-capacity.mdx",
     "term": "stage",
     "count": 86
   },
@@ -188,6 +183,11 @@
     "file": ".sites-cache/clear-thinking/docs/modules/perspective-taking-capacity.mdx",
     "term": "worldview",
     "count": 11
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/rational-orange-orientation.mdx",
+    "term": "Amber",
+    "count": 9
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/rational-orange-orientation.mdx",
@@ -208,6 +208,11 @@
     "file": ".sites-cache/clear-thinking/docs/modules/rational-orange-orientation.mdx",
     "term": "Orange",
     "count": 111
+  },
+  {
+    "file": ".sites-cache/clear-thinking/docs/modules/rational-orange-orientation.mdx",
+    "term": "Rational",
+    "count": 22
   },
   {
     "file": ".sites-cache/clear-thinking/docs/modules/rational-orange-orientation.mdx",

@@ -1,8 +1,7 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useMemo } from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { markIntervalComplete, isDue, interleaveDueCards } from '@site/src/utils/retrieval';
-import { clearLearnerData } from '@site/src/utils/learnerData';
-
-const STORAGE_KEY = 'iel_progress_v1';
+import { clearLearnerData, migrateLegacyData, siteKeys } from '@site/src/utils/learnerData';
 
 const DEFAULT_DATA = {
   modules: {},
@@ -11,9 +10,10 @@ const DEFAULT_DATA = {
   lastUpdated: null,
 };
 
-function loadFromStorage() {
+function loadFromStorage(keys) {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    migrateLegacyData(localStorage, keys.siteId);
+    const raw = localStorage.getItem(keys.progress);
     if (raw) {
       const parsed = JSON.parse(raw);
       // Ensure schema is valid
@@ -32,13 +32,13 @@ function loadFromStorage() {
 // Several components each hold their own useProgress state. Writes start from
 // what is in storage now, so one component can't overwrite another's changes
 // (e.g. marking a module complete wiping the review schedule).
-export function latest(prev) {
-  return loadFromStorage() || prev || { ...DEFAULT_DATA };
+export function latest(prev, keys = siteKeys()) {
+  return loadFromStorage(keys) || prev || { ...DEFAULT_DATA };
 }
 
-function saveToStorage(data) {
+function saveToStorage(keys, data) {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    localStorage.setItem(keys.progress, JSON.stringify(data));
     return true;
   } catch {
     return false;
@@ -46,7 +46,11 @@ function saveToStorage(data) {
 }
 
 export default function useProgress() {
-  const [data, setData] = useState(() => loadFromStorage());
+  // NFR-06: stage sites share one origin, so each stores under its own projectName.
+  const { siteConfig } = useDocusaurusContext();
+  const siteId = siteConfig.projectName;
+  const keys = useMemo(() => siteKeys(siteId), [siteId]);
+  const [data, setData] = useState(() => loadFromStorage(keys));
   const [isAvailable, setIsAvailable] = useState(() => {
     try {
       localStorage.setItem('__iel_test__', '1');
@@ -63,7 +67,7 @@ export default function useProgress() {
   const updateModule = useCallback((moduleId, updates) => {
     const now = new Date().toISOString();
     setData((prev) => {
-      const current = latest(prev);
+      const current = latest(prev, keys);
       const newData = {
         ...current,
         modules: {
@@ -76,10 +80,10 @@ export default function useProgress() {
         },
         lastUpdated: now,
       };
-      saveToStorage(newData);
+      saveToStorage(keys, newData);
       return newData;
     });
-  }, []);
+  }, [keys]);
 
   const getModule = useCallback(
     (moduleId) => {
@@ -92,8 +96,8 @@ export default function useProgress() {
   // Clears every learner key (progress, review schedule, reflections).
   const clear = useCallback(() => {
     setData({ ...DEFAULT_DATA });
-    clearLearnerData(localStorage);
-  }, []);
+    clearLearnerData(localStorage, siteId);
+  }, [siteId]);
 
   const getDaysSinceLastActivity = useCallback(() => {
     if (!safeData.lastUpdated) return null;
@@ -110,16 +114,16 @@ export default function useProgress() {
   const updateLineProfile = useCallback((profile) => {
     const now = new Date().toISOString();
     setData((prev) => {
-      const current = latest(prev);
+      const current = latest(prev, keys);
       const newData = {
         ...current,
         lineProfile: profile,
         lastUpdated: now,
       };
-      saveToStorage(newData);
+      saveToStorage(keys, newData);
       return newData;
     });
-  }, []);
+  }, [keys]);
 
   const hasLineProfile = safeData.lineProfile !== null;
 
@@ -127,7 +131,7 @@ export default function useProgress() {
   const recordRetrievalReview = useCallback((moduleId, moduleName, cards) => {
     const now = new Date().toISOString();
     setData((prev) => {
-      const current = latest(prev);
+      const current = latest(prev, keys);
       const priorEntry = (current.retrievalSchedule || {})[moduleId];
       const nextEntry = {
         ...markIntervalComplete(priorEntry),
@@ -142,10 +146,10 @@ export default function useProgress() {
         },
         lastUpdated: now,
       };
-      saveToStorage(newData);
+      saveToStorage(keys, newData);
       return newData;
     });
-  }, []);
+  }, [keys]);
 
   const getDueReviews = useCallback(() => {
     const schedule = safeData.retrievalSchedule || {};
@@ -161,6 +165,7 @@ export default function useProgress() {
 
   return {
     data: safeData,
+    siteId,
     isAvailable,
     updateModule,
     getModule,

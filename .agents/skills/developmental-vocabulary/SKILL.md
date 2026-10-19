@@ -25,6 +25,22 @@ The internal framework language (AQAL, Spiral Dynamics, centre of gravity, stage
 
 ---
 
+## Stage-site rules (FR-17)
+
+Apply these on a stage site (FR-18) on top of the cross-stage rules. Stage-matched language is a hypothesis that FR-19 tests, not a proven effect: the evidence under it is expertise reversal (fit to what the learner already knows) and conversational, relevant language (both in `docs/product/specification.md`). Do not claim more for it in any copy.
+
+1. **Start from prior knowledge.** Open each QuickStart and module with what this audience already knows and does well, in their words, before adding anything new. Do not explain what they already do daily, and do not assume vocabulary they have not met. Write for the typical reader of this site, not for the author.
+2. **Relevance.** Tie each idea to something from the audience's own life or values (their work, family, faith, craft, community), named concretely. One real example beats a general claim.
+3. **Evidence tiers in the audience's register.** Keep the A/B/C tier on every developmental claim (`evidence-vetting`), but word the label in the audience's register (for example "well tested", "good evidence", "useful but still debated"). Never raise a tier, soften a caveat, or drop a limit to sound resonant. Honesty is not traded for resonance.
+4. **No other stage named, anywhere on the site.** Titles, navbar, sidebar, search results, frontmatter tags shown to learners, alt text and diagram labels all count. Link out only through the hub's "not the right fit? choose again" route.
+5. **Shared modules.** A module used on two sites is written neutrally or split into per-site variants. If a line module needs this audience's examples to read well, split it.
+6. **Conversational, not performative.** Plain sentences, direct "you" (or "we" where this section's stage framing says so), short paragraphs. Do not imitate slang or a community's insider speech to sound close to it.
+7. **Check before review.** Run the sincere-reader test (cross-stage rule 3) on every learner-facing page, then `node scripts/validate-frontmatter.js` for prohibited vocabulary. These checks do not replace audience readers.
+
+**Audience readers are `[HUMAN-REQUIRED]`.** FR-17 is met only when at least three readers from the target audience have read each QuickStart aloud and explained it back, using `internal/pilots/stage-language-cognitive-interview.md`. An AI model is never a substitute for these readers, and AI output must not be described as audience-tested.
+
+---
+
 ## Magenta / Pre-Mythic
 
 ### Use

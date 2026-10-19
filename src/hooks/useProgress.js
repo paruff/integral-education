@@ -2,13 +2,18 @@ import { useState, useCallback, useMemo } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { markIntervalComplete, isDue, interleaveDueCards } from '@site/src/utils/retrieval';
 import { clearLearnerData, migrateLegacyData, siteKeys } from '@site/src/utils/learnerData';
+import { appendReview, withActivity } from '@site/src/utils/metrics';
 
 const DEFAULT_DATA = {
   modules: {},
   lineProfile: null,
   retrievalSchedule: {},
+  // FR-19 process metrics: kept in this browser only and shown to the learner.
+  reviewLog: [],
+  activityDays: [],
   lastUpdated: null,
 };
+
 
 function loadFromStorage(keys) {
   try {
@@ -18,8 +23,8 @@ function loadFromStorage(keys) {
       const parsed = JSON.parse(raw);
       // Ensure schema is valid
       if (parsed && typeof parsed === 'object' && parsed.modules) {
-        // Older stored data may predate retrievalSchedule — backfill it.
-        return { retrievalSchedule: {}, ...parsed };
+        // Older stored data may predate retrievalSchedule and the metrics logs — backfill them.
+        return { retrievalSchedule: {}, reviewLog: [], activityDays: [], ...parsed };
       }
     }
     return { ...DEFAULT_DATA };
@@ -80,8 +85,9 @@ export default function useProgress() {
         },
         lastUpdated: now,
       };
-      saveToStorage(keys, newData);
-      return newData;
+      const logged = withActivity(newData, now);
+      saveToStorage(keys, logged);
+      return logged;
     });
   }, [keys]);
 
@@ -120,15 +126,17 @@ export default function useProgress() {
         lineProfile: profile,
         lastUpdated: now,
       };
-      saveToStorage(keys, newData);
-      return newData;
+      const logged = withActivity(newData, now);
+      saveToStorage(keys, logged);
+      return logged;
     });
   }, [keys]);
 
   const hasLineProfile = safeData.lineProfile !== null;
 
   // cards are kept so due reviews can be mixed across modules (getMixedReview).
-  const recordRetrievalReview = useCallback((moduleId, moduleName, cards) => {
+  // results ([{ cardId, outcome }]) go to the review log for the FR-19 metrics.
+  const recordRetrievalReview = useCallback((moduleId, moduleName, cards, results) => {
     const now = new Date().toISOString();
     setData((prev) => {
       const current = latest(prev, keys);
@@ -138,16 +146,24 @@ export default function useProgress() {
         moduleName,
         cards: cards ?? priorEntry?.cards,
       };
+      const reviewLog = appendReview(current.reviewLog, {
+        moduleId,
+        at: now,
+        dueAt: priorEntry?.nextDueDate ?? null,
+        results: results ?? [],
+      });
       const newData = {
         ...current,
         retrievalSchedule: {
           ...current.retrievalSchedule,
           [moduleId]: nextEntry,
         },
+        reviewLog,
         lastUpdated: now,
       };
-      saveToStorage(keys, newData);
-      return newData;
+      const logged = withActivity(newData, now);
+      saveToStorage(keys, logged);
+      return logged;
     });
   }, [keys]);
 

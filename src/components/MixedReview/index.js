@@ -1,14 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import RetrievalCard from '@site/src/components/RetrievalCard';
+import { cardId } from '@site/src/utils/retrieval';
 
 // Runs an interleaved review (cards from interleaveDueCards). Calls
-// onComplete(moduleIds) once, when the last card is rated.
+// onComplete(moduleIds, results) once, when the last card is rated; results is
+// [{ moduleId, cardId, outcome }] for the FR-19 metrics.
 export default function MixedReview({ cards, onComplete }) {
   const [scores, setScores] = useState([]);
   const done = scores.length === cards.length;
 
   useEffect(() => {
-    if (done) onComplete([...new Set(cards.map((c) => c.moduleId))]);
+    if (done) {
+      onComplete(
+        [...new Set(cards.map((c) => c.moduleId))],
+        cards.map((c, i) => ({ moduleId: c.moduleId, cardId: cardId(c.q), outcome: scores[i] }))
+      );
+    }
     // Fire once, when `done` flips true.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done]);

@@ -239,3 +239,16 @@ table a:hover {
 .navbar__search kbd {
   color: var(--ifm-color-emphasis-900);
 }
+
+/* WCAG 2.1 AA: white text on the default danger red is 3.68:1 (axe color-contrast).
+   #c9252b gives 5.55:1. Used by the "Clear all my learning data" button. */
+.button--danger,
+.button--danger:hover {
+  --ifm-button-background-color: #c9252b;
+  --ifm-button-border-color: #c9252b;
+  --ifm-button-color: #fff;
+}
+.button--danger:hover {
+  --ifm-button-background-color: #a31b20;
+  --ifm-button-border-color: #a31b20;
+}

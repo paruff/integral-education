@@ -56,7 +56,8 @@ jobs:
 
       - name: Build Site
         id: build
-        run: npm run build
+        # Builds the main site, then every stage site (FR-18) and link-checks each one.
+        run: npm run build:sites
         timeout-minutes: 10
 
       - name: Record Build End

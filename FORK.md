@@ -1,8 +1,26 @@
 # Fork Strategy — Integral Education Platform
 
-> **Last updated:** 2026-07-25
-> **Status:** Draft
+> **Last updated:** 2026-10-19
+> **Status:** Draft. The stage-site decision below (P9-01) was given by the owner on 2026-10-19; the owner confirms the wording.
 > **Owner:** @paruff
+
+## Decision: stage sites, not forks (P9-01, #416)
+
+**Decided (owner, 2026-10-19):**
+
+- **No forks.** Each audience gets its own site, built from this repo with the Docusaurus framework: one config per site in `sites/`, built with `docusaurus build --config <site>.config.js --out-dir build/<id>` into one Pages artifact (FR-18). Separate fork repos are not used.
+- **The same stage transitions the forks had**, one site each: Amber → Rational, Rational → Pluralistic, and Pluralistic → Integral.
+- **Order:** start with Amber → Rational, then Red/Magic.
+
+**Built so far:** `sites/clear-thinking.config.js` (Amber → Rational, working name and URL slug) with `scripts/build-sites.mjs` and `scripts/check-site-links.mjs`. It is built and link-checked in CI but not published: `published` stays `false` in `sites/sites.json` until launch (P9-05).
+
+**Still open (owner to confirm):**
+
+- Where Red/Magic sits: its own site after the first, or elsewhere.
+- When Rational → Pluralistic and Pluralistic → Integral follow. The plan (P9-06) decides the other transitions after comparing the first site with the main site on FR-19 data.
+- The audience-facing name and URL slug of each site. `clear-thinking` is a working name that names no stage.
+
+The sections below describe the earlier fork model. Where they conflict with this decision, this decision wins.
 
 ## Philosophy
 
@@ -10,7 +28,9 @@ This repository is the **upstream monorepo** for the Integral Education Platform
 
 **One upstream, three forks.** Each fork removes AQAL jargon, filters content by developmental stage, and rebrands for its target audience. Forks are not mirrors; they are curated experiences.
 
-## Fork Inventory
+## Fork Inventory (earlier model)
+
+The fork repos below are not used under the decision above. Sites replace them: Fork 1 → `sites/clear-thinking`; the others follow the order above.
 
 | Fork | Repo | Target Stage Transition | Content Scope |
 |------|------|------------------------|---------------|

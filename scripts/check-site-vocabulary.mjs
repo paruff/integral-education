@@ -18,9 +18,12 @@ function files(dir) {
 const escape = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
 // Returns [{ file, term, count }] for every file and banned term that occurs.
-export function findVocabulary(fileTexts, terms) {
+// `ignore` is a list of { pattern } regexes for text that only looks like a banned term, such as
+// an author's surname in a citation; matches are removed before counting.
+export function findVocabulary(fileTexts, terms, ignore = []) {
   const found = [];
-  for (const [file, text] of Object.entries(fileTexts)) {
+  for (const [file, raw] of Object.entries(fileTexts)) {
+    const text = ignore.reduce((t, { pattern }) => t.replace(new RegExp(pattern, 'g'), ' '), raw);
     for (const { term, caseSensitive } of terms) {
       const re = new RegExp(`(?<![A-Za-z])${escape(term)}(?:s|es)?(?![A-Za-z])`, caseSensitive ? 'g' : 'gi');
       const count = (text.match(re) ?? []).length;
@@ -50,10 +53,10 @@ if (process.argv[1] && import.meta.url === new URL(process.argv[1], 'file://').h
     console.error('usage: check-site-vocabulary.mjs <id> [--strict] [--update-baseline]');
     process.exit(2);
   }
-  const { terms } = JSON.parse(readFileSync(`sites/${id}.vocabulary.json`, 'utf8'));
+  const { terms, ignore } = JSON.parse(readFileSync(`sites/${id}.vocabulary.json`, 'utf8'));
   const roots = [`.sites-cache/${id}/docs`, `sites/${id}/pages`];
   const texts = Object.fromEntries(roots.flatMap((r) => files(r)).map((f) => [relative('.', f), readFileSync(f, 'utf8')]));
-  const found = findVocabulary(texts, terms);
+  const found = findVocabulary(texts, terms, ignore);
   if (args.includes('--update-baseline')) {
     writeFileSync(site.vocabularyBaseline, JSON.stringify(found, null, 2) + '\n');
     console.log(`Wrote ${found.length} entries to ${site.vocabularyBaseline}`);

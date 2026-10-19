@@ -1,0 +1,109 @@
+[
+  {
+    "replace": "most common logical fallacies in Amber → Rational transition contexts",
+    "with": "most common logical fallacies in everyday reasoning"
+  },
+  {
+    "replace": "level: Amber → Rational\n",
+    "with": ""
+  },
+  {
+    "replace": "- amber\n- rational\n- critical-thinking",
+    "with": "- critical-thinking"
+  },
+  {
+    "replace": "- growing-up\n- stage-development\n",
+    "with": ""
+  },
+  {
+    "replace": "This is a mini-module in the **Amber → Rational** developmental sequence.",
+    "with": "This is a mini-module in the Clear Thinking Path."
+  },
+  {
+    "replace": "These skills together consolidate the Rational/Orange stage.",
+    "with": "Together, these skills make careful, evidence-based reasoning a habit."
+  },
+  {
+    "removeSection": "AQAL Mapping"
+  },
+  {
+    "replace": "Critical thinking is frequently misunderstood — both at the Amber stage and beyond it.",
+    "with": "Critical thinking is often misunderstood, both by people who rely on tradition and by people who do not."
+  },
+  {
+    "replace": "At the **Amber/Mythic** stage, the primary legitimating structure for belief is authority and tradition:",
+    "with": "For many people, the main basis for belief is authority and tradition:"
+  },
+  {
+    "replace": "**Rational/Orange** critical thinking does not replace the wisdom of tradition",
+    "with": "Critical thinking does not replace the wisdom of tradition"
+  },
+  {
+    "replace": " The Amber and Rational labels here are a lens for noticing patterns in reasoning, not a measurement of you or a verdict on anyone's worth.",
+    "with": " This is a way of noticing patterns in reasoning, not a measurement of you or a verdict on anyone's worth."
+  },
+  {
+    "replace": "## Five Logical Fallacies in the Amber → Rational Transition",
+    "with": "## Five Common Logical Fallacies"
+  },
+  {
+    "replace": "The following five fallacies are the most frequently encountered in the Amber → Rational developmental transition specifically. Each maps onto a characteristic reasoning pattern that is functional at the Amber stage but becomes a liability when more complex reasoning is required.",
+    "with": "The following five fallacies are especially common when people begin to examine beliefs they have long held on authority or tradition. Each maps onto a reasoning pattern that works well within a trusted tradition but becomes a liability when a claim has to be weighed on its own merits."
+  },
+  {
+    "replace": "**Why it is common in Amber → Rational transitions:**",
+    "with": "**Why it is common when people start to question long-held beliefs:**"
+  },
+  {
+    "replace": "At the Amber stage, authority is the primary epistemological validator.",
+    "with": "In a tradition-centred way of thinking, authority is the main test of whether a claim is true."
+  },
+  {
+    "replace": "Amber cognition maintains social cohesion partly through conserving inherited practices.",
+    "with": "A tradition-centred way of thinking keeps communities together partly by conserving inherited practices."
+  },
+  {
+    "replace": "Amber reasoning is strongly consequence-oriented within its moral framework",
+    "with": "Reasoning within a moral tradition is strongly consequence-oriented"
+  },
+  {
+    "replace": "Amber cognition tends toward clear categories",
+    "with": "A tradition-centred way of thinking tends toward clear categories"
+  },
+  {
+    "replace": "Amber epistemology evaluates claims partly through the character and status of their sources.",
+    "with": "A tradition-centred way of thinking evaluates claims partly through the character and status of their sources."
+  },
+  {
+    "replace": "the mapping of these five fallacies to the Amber to Rational transition is the authors' interpretive synthesis",
+    "with": "the mapping of these five fallacies to reasoning within a tradition-centred way of thinking is the authors' interpretive synthesis"
+  },
+  {
+    "replace": "The developmental challenge — and the genuine measure",
+    "with": "The real challenge — and the genuine measure"
+  },
+  {
+    "replace": "is the genuine developmental challenge",
+    "with": "is the genuine challenge"
+  },
+  {
+    "replace": "Piaget's discrete stage boundaries have been revised by subsequent research",
+    "with": "Piaget's sharp boundaries between steps have been revised by subsequent research"
+  },
+  {
+    "replace": "Logical fallacies in developmental context:",
+    "with": "Common logical fallacies:"
+  },
+  {
+    "replace": "developmental mapping of fallacies to stage transitions is the authors' synthesis",
+    "with": "the mapping of fallacies to steps in cognitive growth is the authors' synthesis"
+  },
+  {
+    "replace": "The developmental framing is interpretive",
+    "with": "The framing is interpretive"
+  },
+  {
+    "replace": "its specific mapping to Amber → Rational transitions draws on Paul & Elder's stage-integrated application",
+    "with": "its specific mapping to reasoning within a tradition-centred way of thinking draws on Paul & Elder's application of thinking in steps"
+  }
+]

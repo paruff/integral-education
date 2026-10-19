@@ -1,0 +1,77 @@
+[
+  {
+    "replace": "level: Amber → Rational\n",
+    "with": ""
+  },
+  {
+    "replace": "- amber\n- rational\n- evidence",
+    "with": "- evidence"
+  },
+  {
+    "replace": "- growing-up\n- stage-development\n",
+    "with": ""
+  },
+  {
+    "replace": "This is a mini-module in the **Amber → Rational** developmental sequence.",
+    "with": "This is a mini-module in the Clear Thinking Path."
+  },
+  {
+    "removeSection": "AQAL Mapping"
+  },
+  {
+    "replace": "Every stage of development has a characteristic epistemology — a characteristic answer to the question *How do I know what is true?*",
+    "with": "Every way of thinking has a characteristic answer to the question *How do I know what is true?*"
+  },
+  {
+    "replace": "At the **Amber/Mythic** stage, the primary answer is *authority*:",
+    "with": "For many people, the main answer is *authority*:"
+  },
+  {
+    "replace": "**Rational/Orange** epistemology adds a second layer:",
+    "with": "Evidence evaluation adds a second layer:"
+  },
+  {
+    "replace": "it is an upgrade in evaluative capacity",
+    "with": "it is an added skill in judging claims"
+  },
+  {
+    "replace": "recognizable developmental positions",
+    "with": "recognizable ways of knowing"
+  },
+  {
+    "replace": "The procedural stage is not about doubting everyone",
+    "with": "The procedural way of knowing is not about doubting everyone"
+  },
+  {
+    "replace": "Together they form the core epistemic toolkit of the Rational/Orange stage.",
+    "with": "Together they form the core toolkit for judging what is true."
+  },
+  {
+    "replace": "What is the epistemological shift from Amber to Rational knowing?",
+    "with": "What is the shift from relying on who said something to asking how well it is supported?"
+  },
+  {
+    "replace": "Piaget's stage boundaries are not sharply discrete in practice",
+    "with": "Piaget's boundaries between steps are not sharply discrete in practice"
+  },
+  {
+    "replace": "three distinct developmental frameworks",
+    "with": "three distinct bodies of research"
+  },
+  {
+    "replace": "evidence evaluation is a developmental achievement",
+    "with": "evaluating evidence is a skill that grows over time"
+  },
+  {
+    "replace": "describe the developmental positions that hardware makes possible",
+    "with": "describe the ways of knowing that hardware makes possible"
+  },
+  {
+    "replace": "replicated the developmental sequence",
+    "with": "replicated the sequence"
+  },
+  {
+    "replace": "qualitative interview-based developmental study",
+    "with": "qualitative interview-based study"
+  }
+]

@@ -15,6 +15,36 @@ sidebar_position: 11
 
 ---
 
+## Plan your pathway
+
+Self-paced learning works better when you decide before you start. **Write one if-then plan now:** *"When [time/place], I will [first step]."* For example: "When I finish my morning coffee, I will open **Somatic Line Overview & Orientation** and work on it for 20 minutes." If-then plans help people follow through on goals (Gollwitzer & Sheeran, 2006).
+
+**Suggested pace:** 15–25 minutes a day for 4–6 weeks.
+
+**Visible progress:** [My Progress](../my-progress) shows the modules you have completed and the reviews due. It is stored only in your browser, and you can clear it at any time.
+
+**Mixed review:** After every third module, run a mixed review on [My Progress](../my-progress). It mixes questions from the earlier modules instead of one module at a time, so it feels harder than rereading, and that effort is what builds lasting memory.
+
+**Mastery before moving on:** Each module's Assess section sets a passing threshold. Meet it before you start the next module; if you do not, repeat the practices first. This gate is advisory: the site cannot check it for you, so be honest with yourself.
+
+```mermaid
+flowchart TD
+  accTitle: Pathway map for this QuickStart
+  accDescr: 4 modules in order, with a mixed review after every third module and a final review of earlier modules once the last module is done. Each module has its own passing threshold; meet it before moving on.
+  Start(["Start here"]) --> S1["1. Somatic Line Overview #amp; Orientation"] --> S2["2. Mindfulness Basics"] --> S3["3. Gross State Awareness"] --> R1(["Mixed review"]) --> S4["4. Emotional Intelligence #amp; Somatic Line Development"] --> R2(["Mixed review"])
+```
+
+*In words:* start at step 1 and work in order. Your place in the path is the last module marked complete on My Progress. A mixed review follows every third module.
+
+| Step | Module | Pass when |
+|---|---|---|
+| 1 | [Somatic Line Overview & Orientation](../modules/somatic-line-overview) | Three or more criteria at *Developing* or *Stable*. |
+| 2 | [Mindfulness Basics](../modules/mindfulness-basics) | Level 3: you can sit for 5 minutes or more and return to the breath within seconds each time you notice drift. |
+| 3 | [Gross State Awareness](../modules/gross-state-awareness) | Three or more criteria at *Developing* or *Stable* after two weeks of consistent practice. |
+| 4 | [Emotional Intelligence & Somatic Line Development](../modules/emotional-intelligence-somatic-line) | A score of 3 or 4 on at least 4 of 6 dimensions indicates the module competencies are consolidating. A score of 1 or 2 on Regulatory Integration or Pre/Trans Discernment indicates that more foundational regulatory work is needed before the module's more advanced practices are safe to deepen. |
+
+---
+
 ## Step 1: Foundation — Body Awareness
 
 **Module:** [Somatic Line Overview](../modules/somatic-line-overview)

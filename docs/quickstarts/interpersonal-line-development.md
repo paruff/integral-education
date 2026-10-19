@@ -18,6 +18,37 @@ This sequence follows the Interpersonal line module suite's developmental arc. T
 
 ---
 
+## Plan your pathway
+
+Self-paced learning works better when you decide before you start. **Write one if-then plan now:** *"When [time/place], I will [first step]."* For example: "When I finish my morning coffee, I will open **EI-08 · Interpersonal Line Overview & Orientation** and work on it for 20 minutes." If-then plans help people follow through on goals (Gollwitzer & Sheeran, 2006).
+
+**Suggested pace:** 25–40 minutes per module session, about 4–6 weeks for the whole path.
+
+**Visible progress:** [My Progress](../my-progress) shows the modules you have completed and the reviews due. It is stored only in your browser, and you can clear it at any time.
+
+**Mixed review:** After every third module, run a mixed review on [My Progress](../my-progress). It mixes questions from the earlier modules instead of one module at a time, so it feels harder than rereading, and that effort is what builds lasting memory.
+
+**Mastery before moving on:** Each module's Assess section sets a passing threshold. Meet it before you start the next module; if you do not, repeat the practices first. This gate is advisory: the site cannot check it for you, so be honest with yourself.
+
+```mermaid
+flowchart TD
+  accTitle: Pathway map for this QuickStart
+  accDescr: 5 modules in order, with a mixed review after every third module and a final review of earlier modules once the last module is done. Each module has its own passing threshold; meet it before moving on.
+  Start(["Start here"]) --> S1["1. EI-08 · Interpersonal Line Overview #amp; Orientation"] --> S2["2. EI-09 · Perspective-Taking #amp; Empathic Accuracy"] --> S3["3. EI-10 · Relational Repair #amp; Conflict Navigation"] --> R1(["Mixed review"]) --> S4["4. EI-11 · Cross-Difference Dialogue #amp; Trust-Building"] --> S5["5. EI-13 · Emotional–Interpersonal Integration"] --> R2(["Mixed review"])
+```
+
+*In words:* start at step 1 and work in order. Your place in the path is the last module marked complete on My Progress. A mixed review follows every third module.
+
+| Step | Module | Pass when |
+|---|---|---|
+| 1 | [EI-08 · Interpersonal Line Overview & Orientation](../modules/interpersonal-line-overview-orientation) | Three or more criteria at *Developing* or *Stable*, with at least one at *Stable*. |
+| 2 | [EI-09 · Perspective-Taking & Empathic Accuracy](../modules/perspective-taking-empathic-accuracy) | Level 3 on the indicators above, shown in at least one real conversation, not only in the practice exercises. |
+| 3 | [EI-10 · Relational Repair & Conflict Navigation](../modules/relational-repair-conflict-navigation) | 3 or higher on at least four of the five capacities, including **Accountability specificity**. |
+| 4 | [EI-11 · Cross-Difference Dialogue & Trust-Building](../modules/cross-difference-dialogue-trust-building) | Stable in at least 3 of 4 criteria, with no "Not yet" in "I account for power dynamics." |
+| 5 | [EI-13 · Emotional–Interpersonal Integration](../modules/emotional-interpersonal-integration) | Stable in at least 3 of 4 criteria, with no **Not yet** in **I can identify my current line gap**. |
+
+---
+
 ## Readiness Check
 
 Choose the entry point that best matches your current need. All paths converge on the integration capstone.

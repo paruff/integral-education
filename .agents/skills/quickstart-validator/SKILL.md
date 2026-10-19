@@ -18,6 +18,18 @@ A QuickStart (`docs/quickstarts/*.mdx`) makes two promises the underlying module
 5. **Time commitment is plausible.** The stated "Time commitment" range should roughly track the number and depth of modules listed; flag if a QuickStart lists 12 modules but claims "2–4 weeks."
 6. **Pathway map (FR-16).** The QuickStart shows a text-based diagram (Mermaid, or inline SVG) of its steps in order, marking where reviews fall. Every Mermaid block has `accTitle` and `accDescr`, node labels match the module titles in the list, and the map sits beside the module list it summarizes. The map explains the route — no decorative images. `scripts/audit-a11y.mjs` passes on the built page.
 
+### Self-regulation scaffolds (G3: FR-13, FR-05, FR-07)
+
+Each QuickStart opens with a `## Plan your pathway` section that holds all of the following. `node scripts/check-quickstarts.mjs` checks the mechanical parts; the judgment calls are yours.
+
+7. **Planning prompt with an if-then plan (FR-13).** Asks the learner to write "When [time/place], I will [first step]" before starting, with an example built on the first module. Judgment: the example is concrete and small, not a goal in disguise.
+8. **Visible progress (FR-13).** Links to `my-progress` for completed modules and due reviews, and says the data stays in the browser.
+9. **Suggested pace (FR-13).** A `**Suggested pace:**` line. Judgment: it is realistic for the stated time commitment, matches the QuickStart's own time text, and for long-horizon paths (stage and line transitions) says the pace is the learner's and years are normal.
+10. **Mixed review points (FR-05).** The pathway map has a "Mixed review" node after every third module at most, and the prose points to the mixed review on My Progress. Never more than three modules in a row without one.
+11. **Mastery thresholds (FR-07).** A `**Mastery before moving on:**` statement says the gate is advisory (the site cannot enforce it). Every step in the table names its "Pass when" threshold, copied from that module's `**Passing threshold:**` line in its Assess section. If a module's threshold changes, update the table; the script flags drift. A module with no threshold is a module-authoring defect — fix it there, don't invent one here.
+
+Keep this block consistent across QuickStarts so learners meet the same scaffolds everywhere. The pace and example are drafts for human review, because a realistic pace is a judgment about learners, not a fact.
+
 ## How to check it
 
 - Read the QuickStart file in full, then `docs/.content-graph.json` for the stage/line/prerequisite fields of each referenced module (regenerate first with `npm run content-graph` if the graph might be stale).

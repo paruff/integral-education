@@ -4,6 +4,18 @@
     "transition": "amber-to-rational",
     "config": "sites/clear-thinking.config.js",
     "linkBaseline": "sites/clear-thinking.link-baseline.json",
-    "published": false
+    "vocabularyBaseline": "sites/clear-thinking.vocabulary-baseline.json",
+    "published": false,
+    "docs": [
+      "quickstarts/amber-to-rational",
+      "modules/amber-mythic-orientation",
+      "modules/rational-orange-orientation",
+      "modules/cognitive-dissonance-bridge",
+      "modules/perspective-taking-capacity",
+      "modules/authority-autonomy-transition",
+      "modules/critical-thinking-foundations",
+      "modules/evidence-evaluation",
+      "my-progress"
+    ]
   }
 ]

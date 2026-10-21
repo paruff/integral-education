@@ -320,6 +320,8 @@ function main() {
   console.log(`   ❌ Errors: ${validated - passed - warned}`);
    console.log(`   Frontmatter compliance: ${Math.round((passed / validated) * 100)}% (${passed}/${validated})\n`);
 
+  // Warnings fail the run too (P6-01): content must meet its own quality rules.
+  if (warned > 0) exitCode = 1;
   process.exit(exitCode);
 }
 

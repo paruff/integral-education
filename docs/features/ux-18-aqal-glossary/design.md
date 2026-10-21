@@ -36,7 +36,7 @@ Based on known/predictable violations:
 5. Fix all Level A violations (edit source files)
 6. Re-run axe to verify fixes
 7. Run Lighthouse accessibility audit
-8. Document results in docs/quality/accessibility-audit.md
+8. Document results in internal/quality/accessibility-audit.md
 
 ### Fix Patterns
 

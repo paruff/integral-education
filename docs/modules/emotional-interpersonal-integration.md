@@ -37,6 +37,7 @@ readingTime: 14
 practiceTime: 25
 line: emotional
 line_secondary: interpersonal
+teaches_framework: true
 ---
 
 import ModuleMeta from '@site/src/components/ModuleMeta';

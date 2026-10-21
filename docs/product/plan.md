@@ -127,10 +127,11 @@ P1-03.
 
 | ID | Task | Files | Proof | Depends |
 | --- | --- | --- | --- | --- |
-| P10-01 | `[HUMAN-REQUIRED]` Decide on site analytics: none, or a cookieless aggregate-only tool. Record privacy reasoning | decision record | Decision recorded | — |
+| P10-01 | `[HUMAN-REQUIRED]` Decide on site analytics: none, or a cookieless aggregate-only tool. Record privacy reasoning. **Decided 2026-10-21: cookieless aggregate-only** | `analytics-decision.md` | Decision recorded | — |
+| P10-01a | Choose the tool against the criteria in `analytics-decision.md` `[HUMAN-REQUIRED]` (cost, vendor); add it to production builds only, with the hub events and a footer privacy note | `docusaurus.config.js`, `sites/*.config.js`, privacy page | No cookies or device storage set (checked in browser devtools); not loaded on PR builds | P10-01 |
 | P10-02 | Compute process metrics in the browser (on-time reviews, calibration gap, completion, return) and show them to the learner on the progress page | `src/hooks/useProgress.js`, `docs/my-progress.mdx` | Unit tests per metric | P2-02, P9-02 |
 | P10-03 | Learner-controlled export: download a summary of their own metrics, to share only in a study | `docs/my-progress.mdx` | Learner sees what is exported before saving | P10-02 |
-| P10-04 | Add a learning-metrics section to `docs/METRICS.md` and the monthly ritual in the `metrics` skill; record the baseline | `docs/METRICS.md`, `.agents/skills/metrics/SKILL.md` | Baseline recorded | P10-01, P10-02 |
+| P10-04 | Add a learning-metrics section to `docs/METRICS.md` and the monthly ritual in the `metrics` skill; record the baseline | `docs/METRICS.md`, `.agents/skills/metrics/SKILL.md` | Baseline recorded | P10-01a, P10-02 |
 
 ## P11 — Deterministic build and CI
 

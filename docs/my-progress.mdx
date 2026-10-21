@@ -10,8 +10,38 @@ import Link from '@docusaurus/Link';
 import { useState } from 'react';
 import MixedReview from '@site/src/components/MixedReview';
 import { readLearnerData } from '@site/src/utils/learnerData';
-import { computeMetrics } from '@site/src/utils/metrics';
+import { computeMetrics, buildExport } from '@site/src/utils/metrics';
 import pathways from '@site/src/data/pathways.json';
+
+export function MetricsExport({ summary }) {
+  const [shown, setShown] = useState(false);
+  const text = JSON.stringify(summary, null, 2);
+  const save = () => {
+    const url = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'my-learning-habits.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+  return (
+    <div className="margin-bottom--md">
+      <p style={{ fontSize: '0.9rem' }}>
+        Taking part in a study? You can save a summary of these numbers to share. Nothing is sent: the file is saved on your device and you choose whether to share it.
+      </p>
+      <button className="button button--secondary button--sm" onClick={() => setShown(!shown)}>
+        {shown ? 'Hide' : 'See'} exactly what would be saved
+      </button>{' '}
+      {shown && (
+        <>
+          <pre>{text}</pre>
+          <p style={{ fontSize: '0.9rem' }}>Only counts. No card text, answers, ratings, reflections or dates of your visits.</p>
+          <button className="button button--primary button--sm" onClick={save}>Save this file</button>
+        </>
+      )}
+    </div>
+  );
+}
 
 export function LearningMetrics({ data }) {
   const m = computeMetrics(data, pathways);
@@ -39,6 +69,7 @@ export function LearningMetrics({ data }) {
           {m.returns.firstDay ? ` (first day on this site: ${m.returns.firstDay}; ${m.returns.distinctDays} day${m.returns.distinctDays === 1 ? '' : 's'} in all)` : ''}.
         </li>
       </ul>
+      <MetricsExport summary={buildExport(m)} />
       {m.pathways.length > 0 && (
         <>
           <p><strong>Pathways you have started:</strong></p>

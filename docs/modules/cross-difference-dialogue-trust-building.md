@@ -21,6 +21,21 @@ readingTime: 14
 practiceTime: 25
 line: interpersonal
 safety_tier: 2
+quadrants:
+- We
+- I
+- It
+level: Pluralistic → Integral
+lines:
+- interpersonal
+- emotional
+- cognitive
+- moral
+states:
+- reflective
+types:
+- self-paced
+- dialogue-supported
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 
@@ -40,12 +55,12 @@ import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 This module builds on [Interpersonal Line Overview & Orientation](./interpersonal-line-overview-orientation), [Perspective-Taking & Empathic Accuracy](./perspective-taking-empathic-accuracy), and [Relational Repair & Conflict Navigation](./relational-repair-conflict-navigation). Complete those first — this module assumes you can already recognize rupture and take another's perspective, and builds those into a dedicated cross-difference practice.
 :::
 
-This module sits at the highest-complexity end of the Interpersonal line: sustaining genuine trust-building contact when role, culture, worldview, or developmental center of gravity differ significantly, and power is often unequal. Understanding this matters because ordinary communication skills — the ones that work well when people already share enough context — reliably break down here, and something more deliberate is needed.
+This module sits at the highest-complexity end of the Interpersonal line: sustaining genuine trust-building contact when role, culture, outlook, or developmental home stage differ significantly, and power is often unequal. Understanding this matters because ordinary communication skills — the ones that work well when people already share enough context — reliably break down here, and something more deliberate is needed.
 
 :::tip Before you read
 Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
 
-1. Why do clear, polite communication skills often break down when two people differ a lot in role, culture or worldview?
+1. Why do clear, polite communication skills often break down when two people differ a lot in role, culture or outlook?
 2. When trust drops in a conversation, what do you think usually has to happen for it to recover?
 :::
 
@@ -123,7 +138,7 @@ Ordinary communication skills are often optimized for clarity, efficiency, or ag
 
 ### 1) What cross-difference dialogue is, and why ordinary communication skills are insufficient
 
-Cross-difference dialogue is a structured relational practice for staying in real contact across significant difference (role, culture, worldview, developmental center of gravity). Basic communication techniques often fail here because they do not address:
+Cross-difference dialogue is a structured relational practice for staying in real contact across significant difference (role, culture, outlook, developmental home stage). Basic communication techniques often fail here because they do not address:
 
 - **Identity threat:** people protect dignity before they process logic.
 - **Asymmetrical risk:** speaking carries different costs depending on role and social position.
@@ -324,7 +339,7 @@ The trust languages and dialogue frameworks referenced above were developed prim
 
 **Tier:** 2 — Relational vulnerability and identity threat in cross-difference dialogue
 
-**Before you begin:** This module includes naming assumptions and discussing meaningful difference in role, culture, and worldview. These practices can surface historical harm, marginalization, and identity threat.
+**Before you begin:** This module includes naming assumptions and discussing meaningful difference in role, culture, and outlook. These practices can surface historical harm, marginalization, and identity threat.
 
 **This practice may not be the right moment if:** You are currently in acute life disruption, significant emotional overwhelm, or are actively working with a therapist on closely related material. The practice will be here when you're ready.
 

@@ -288,7 +288,7 @@ The confusion this produces: the person's relational warmth and attunement can b
 |--------|---------------|-------|-----------|
 | [EI-08 · Interpersonal Line Overview & Orientation](./interpersonal-line-overview-orientation) | None | Theoretical foundation: Kegan, attachment, Buber, Siegel; psychograph orientation | 60 min |
 | EI-09 · Relational Repair & Rupture Navigation *(planned)* | EI-08 required | The structure and practice of rupture recognition, acknowledgment, and repair | 60 min |
-| EI-10 · Cross-Difference Collaboration *(planned)* | EI-08 required | Building trust and productive engagement across worldview, role, and background difference | 60 min |
+| EI-10 · Cross-Difference Collaboration *(planned)* | EI-08 required | Building trust and productive engagement across outlook, role, and background difference | 60 min |
 | EI-11 · Power, Role & Interpersonal Complexity *(planned)* | EI-08, EI-09 | How power differentials shape interpersonal range; navigating authority asymmetry | 60 min |
 | EI-12 · Interpersonal Facilitation & Team Health *(planned)* | EI-08 through EI-11 | Designing collaboration structures and coaching groups through relational complexity | 75 min |
 

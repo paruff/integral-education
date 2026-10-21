@@ -18,6 +18,20 @@ difficulty: Intermediate
 readingTime: 10
 practiceTime: 10
 line: emotional
+teaches_framework: true
+quadrants:
+- I
+- We
+- It
+- Its
+level: Rational → Pluralistic
+lines:
+- emotional
+- self
+states:
+- reflective
+types:
+- self-paced
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

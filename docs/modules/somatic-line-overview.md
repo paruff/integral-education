@@ -9,6 +9,20 @@ tags:
   - tier-2
 line: somatic
 safety_tier: 2
+teaches_framework: true
+quadrants:
+- I
+- It
+level: Cross-stage (Archaic through Integral)
+lines:
+- somatic
+- emotional
+- interpersonal
+states:
+- somatic
+- reflective
+types:
+- self-paced
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

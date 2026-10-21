@@ -8,7 +8,6 @@ quadrants:
 level: Rational → Pluralistic
 lines:
 - cognitive
-- systems
 states:
 - analytical
 types:

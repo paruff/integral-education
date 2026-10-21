@@ -8,6 +8,7 @@ import {
   computeMetrics,
   appendReview,
   withActivity,
+  buildExport,
 } from '@site/src/utils/metrics.js';
 import { cardId } from '@site/src/utils/retrieval.js';
 
@@ -98,4 +99,17 @@ test('logging: reviews are appended and capped; activity days are added once a d
 test('cardId is stable across spacing and case, and differs between questions', () => {
   assert.equal(cardId('What is  a loop?'), cardId('  what is a loop? '));
   assert.notEqual(cardId('What is a loop?'), cardId('What is a cycle?'));
+});
+
+test('buildExport keeps counts only: no titles, dates of activity or card data', () => {
+  const m = computeMetrics(
+    { modules: { a: { completed: true } }, activityDays: ['2026-10-01'], reviewLog: [{ cardId: 'x', dueDate: '2026-10-01', reviewedAt: '2026-10-01', remembered: true }] },
+    [{ id: 'p', title: 'Secret title', modules: ['a', 'b'] }],
+    new Date('2026-10-02'),
+  );
+  const out = buildExport(m, new Date('2026-10-02'));
+  assert.equal(out.exportedOn, '2026-10-02');
+  assert.deepEqual(out.pathways, [{ id: 'p', done: 1, total: 2 }]);
+  const text = JSON.stringify(out);
+  for (const leak of ['Secret title', 'firstDay', 'cardId', '"x"']) assert.ok(!text.includes(leak), leak);
 });

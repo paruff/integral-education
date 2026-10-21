@@ -207,7 +207,7 @@ Optional checks:
 
 - docs/maps/aqal-label-crosswalk.md
 - docs/implementation/integral-aqal-protocol-template.md
-- docs/quality/instructional-design-protocol.md
-- docs/quality/evidence-vetting-checklist.md
-- docs/quality/peer-review-sop.md
+- internal/quality/instructional-design-protocol.md
+- internal/quality/evidence-vetting-checklist.md
+- internal/quality/peer-review-sop.md
 - docs/safety/shadowwork-safety-standard.md

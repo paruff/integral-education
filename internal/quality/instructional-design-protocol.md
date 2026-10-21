@@ -194,7 +194,7 @@ Contributors and Copilot must verify all of the following before merge:
 
 ## Related Standards in This Repository
 
-- `docs/quality/evidence-vetting-checklist.md`
-- `docs/quality/peer-review-sop.md`
+- `internal/quality/evidence-vetting-checklist.md`
+- `internal/quality/peer-review-sop.md`
 - `docs/safety/shadowwork-safety-standard.md`
 - `.github/copilot-instructions.md`

@@ -10,7 +10,7 @@ The Integral Education Platform is a **static site generator** approach to conte
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Content Layer                             │
 │  docs/modules/  │  docs/quickstarts/  │  docs/maps/             │
-│  (75 learning   │  (10 QuickStart     │  (AQAL maps, cross-     │
+│  (77 learning   │  (13 QuickStart     │  (AQAL maps, cross-     │
 │   modules)      │   paths)            │   walks, taxonomies)    │
 ├─────────────────────────────────────────────────────────────────┤
 │                       Component Layer                             │
@@ -29,7 +29,7 @@ The Integral Education Platform is a **static site generator** approach to conte
 
 ## Content Model
 
-Every learning module follows a 13-section gold standard (see [Instructional Design Protocol](docs/quality/instructional-design-protocol.md)):
+Every learning module follows a 13-section gold standard (see [Instructional Design Protocol](internal/quality/instructional-design-protocol.md)):
 
 1. **AQAL Mapping** — quadrant, level, line, state, type coverage
 2. **Theoretical Frameworks** — minimum 4 frameworks including developmental theory
@@ -124,8 +124,8 @@ Author edits .md/.mdx
 ```
 integral-education/
 ├── docs/                    # Content layer
-│   ├── modules/             # 75 learning modules
-│   ├── quickstarts/         # 10 QuickStart paths
+│   ├── modules/             # 77 learning modules
+│   ├── quickstarts/         # 13 QuickStart paths
 │   ├── maps/                # AQAL maps and crosswalks
 │   ├── safety/              # Safety standards
 │   ├── quality/             # Quality protocols

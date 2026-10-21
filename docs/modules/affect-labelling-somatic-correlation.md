@@ -23,6 +23,15 @@ tags:
   - affect-labelling
   - emotion-regulation
 safety_tier: 2
+level: Amber → Pluralistic
+lines:
+- emotional
+- somatic
+- cognitive
+states:
+- reflective
+types:
+- self-paced
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

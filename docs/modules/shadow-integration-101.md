@@ -13,6 +13,7 @@ lines:
 states:
 - introspection
 tags:
+- tier-2
 - shadow
 - projection
 - self-awareness
@@ -24,6 +25,8 @@ prerequisites:
 line: cross-cutting
 safety_tier: 2
 teaches_framework: true
+types:
+- self-paced
 ---
 
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';

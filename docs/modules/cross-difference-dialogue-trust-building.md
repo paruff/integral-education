@@ -21,6 +21,21 @@ readingTime: 14
 practiceTime: 25
 line: interpersonal
 safety_tier: 2
+quadrants:
+- We
+- I
+- It
+level: Pluralistic → Integral
+lines:
+- interpersonal
+- emotional
+- cognitive
+- moral
+states:
+- reflective
+types:
+- self-paced
+- dialogue-supported
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 

@@ -31,7 +31,7 @@ jobs:
           set -euo pipefail
           # Discourage overclaiming language in learning content.
           # Exclude quality/protocol docs that reference hype terms as examples to avoid.
-          if grep -rniE "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md | grep -v '^docs/quality/'; then
+          if grep -rniE "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md | grep -v '^internal/quality/'; then
             echo "Found prohibited hype language. Replace with evidence-quality wording."
             exit 1
           fi

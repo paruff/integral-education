@@ -18,6 +18,7 @@ difficulty: Intermediate
 readingTime: 10
 practiceTime: 10
 line: emotional
+teaches_framework: true
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

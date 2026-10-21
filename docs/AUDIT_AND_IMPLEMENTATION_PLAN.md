@@ -119,7 +119,7 @@ for current state again.
 (404 as of when it was written). `gh api repos/paruff/integral-education/
 branches/main/protection` now returns a full protection config: 1 required
 approving review, required status checks (Build And Validate, Protocol
-Guardrails, CodeQL, NPM Audit, Dependency Review, GitGuardian), no force-push,
+Guardrails, CodeQL, NPM Audit, Dependency Review, Gitleaks), no force-push,
 no deletion. This is good news, not a gap — the skill doc just hasn't caught
 up.
 

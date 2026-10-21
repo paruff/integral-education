@@ -8,14 +8,14 @@ const config = {
   url: 'https://paruff.github.io',
   baseUrl: '/integral-education/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenAnchors: 'throw',
   favicon: 'img/favicon.ico',
 
   organizationName: 'paruff',
   projectName: 'integral-education',
 
   // FR-16: diagrams are text-based Mermaid source so they can be reviewed in a PR.
-  markdown: { mermaid: true },
+  markdown: { mermaid: true, hooks: { onBrokenMarkdownLinks: 'throw' } },
   themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [

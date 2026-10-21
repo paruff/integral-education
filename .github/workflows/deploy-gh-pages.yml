@@ -1,56 +1,63 @@
 name: Deploy Docusaurus to GitHub Pages
 
+# Deploys the artifact CI Quality built and tested on the same commit; it never rebuilds.
 on:
-  push:
-    branches:
-      - main
+  workflow_run:
+    workflows: ["CI Quality"]
+    types: [completed]
+    branches: [main]
   workflow_dispatch:
+    inputs:
+      run-id:
+        description: "CI Quality run whose 'site' artifact to deploy"
+        required: true
 
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read
 
 concurrency:
   group: pages-deploy
   cancel-in-progress: true
 
 jobs:
-  build:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v7
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v7
-        with:
-          node-version-file: .nvmrc
-          cache: npm
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v6
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build site
-        # Only sites marked "published" in sites/sites.json are built into the artifact.
-        run: node scripts/build-sites.mjs --published-only
-
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v5
-        with:
-          path: ./build
-
   deploy:
-    needs: build
+    if: github.event_name == 'workflow_dispatch' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'push')
     runs-on: ubuntu-24.04
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+
+      - name: Download CI artifact
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7
+        with:
+          name: site
+          path: build
+          run-id: ${{ inputs.run-id || github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+
+      - name: Verify artifact hash matches CI
+        run: |
+          expected=$(cat build/.build-hash)
+          actual=$(scripts/hash-build.sh build)
+          echo "CI: $expected"; echo "Deploy: $actual"
+          [ "$expected" = "$actual" ] || { echo "Artifact changed since CI built it"; exit 1; }
+          rm build/.build-hash
+
+      - name: Setup Pages
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
+        with:
+          path: ./build
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5

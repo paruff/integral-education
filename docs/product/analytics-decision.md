@@ -80,8 +80,12 @@ Cloudflare Web Analytics. Their feature claims have not been verified here.
   (`.github/workflows/ci-quality.yml`), through `analytics.js`. PR and local
   builds never load it.
 - **Events counted:** `enter-stage-site` and `choose-again`, plus page views.
-- **Still to check after the first deploy:** devtools shows no cookies and
-  no localStorage or sessionStorage entries from the tool. Record the result
-  here: _not yet checked_.
+- **Checked 2026-10-21 (live site, from the outside):** the production page
+  carries the `count.js` tag and the footer privacy note; the count endpoint
+  sends no `Set-Cookie`; `count.js` touches `localStorage` only for the
+  `skipgc` owner opt-out flag (read on normal visits, written only when the
+  site owner opts out). **Still to confirm in browser devtools:** no cookie
+  and no storage entry appear on a normal visit, and the `enter-stage-site`
+  and `choose-again` clicks register on the dashboard.
 - **Open:** whether the GoatCounter export is enough for the P10-04
   baseline has not been confirmed.

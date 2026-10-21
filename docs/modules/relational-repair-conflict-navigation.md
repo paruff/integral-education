@@ -271,6 +271,8 @@ The frameworks above — Gottman's research, the repair sequence, NVC — were d
 
 4. Is there a current or recent relationship where unrepaired rupture is accumulating? What is one step you could take toward repair this week?
 
+5. Think of a conflict that did get repaired in your life. Why do you think it worked, and how would you explain in your own words what each person did that made repair possible?
+
 ---
 
 ## 📊 Assess

@@ -230,6 +230,7 @@ Finally, this awareness extends outward: recognizing that other people are runni
 - Can you recall a moment when changing your appraisal (B) genuinely shifted your emotional response (C), not just your description of it? How did you tell the difference?
 - Which stage-relative appraisal signature felt most familiar when you read the four examples? Did that surprise you?
 - Where is the line, for you, between using this framework to understand a feeling and using it to talk yourself out of one?
+- Think of a recent emotional reaction you now read differently. How did the situation look before you re-appraised it, and why do you think the first reading felt so certain?
 
 ---
 

@@ -141,6 +141,7 @@ Finally, this module works with individual, item-by-item shadow content, not wit
 - Where have you expressed that same trait, even subtly? Describe one specific recent situation.
 - What would it mean to fully own this quality? How might owning it change how you respond to that person?
 - How did your body feel when you acknowledged the projection?
+- Think of a quality you criticize in others that you also have. Why do you think it is hard to see in yourself, and how could you check it with someone you trust, in your own words?
 
 ---
 

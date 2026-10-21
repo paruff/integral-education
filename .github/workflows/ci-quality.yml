@@ -78,6 +78,8 @@ jobs:
       # Only what main ships is handed to deploy: the same commit, built and tested here.
       - name: Build Pages Artifact (published sites only)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        env:
+          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
         run: |
           node scripts/build-sites.mjs --published-only
           scripts/hash-build.sh build | tee build/.build-hash

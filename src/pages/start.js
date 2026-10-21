@@ -321,7 +321,7 @@ function ResultBox({ label, result, styles: s }) {
 
       <div className={s.recommendedActions}>
         {siteUrl ? (
-          <a href={siteUrl} className={s.primaryPath}>
+          <a href={siteUrl} className={s.primaryPath} data-goatcounter-click="enter-stage-site">
             Begin the {result.title} →
           </a>
         ) : (

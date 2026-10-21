@@ -27,13 +27,17 @@ export default function ModuleFooter({ moduleId: explicitId, moduleTitle: explic
           <Link className={styles.primaryCta} to={mapped.next.to}>
             Next: {mapped.next.title} →
           </Link>
+        ) : quickstart ? (
+          <Link className={styles.primaryCta} to={quickstart.to}>
+            Back to {quickstart.title} →
+          </Link>
         ) : (
           <Link className={styles.primaryCta} to="/docs/modules">
             Explore all modules →
           </Link>
         )}
 
-        {quickstart && (
+        {quickstart && mapped?.next && (
           <Link className={styles.quickstartLink} to={quickstart.to}>
             Return to {quickstart.title}
           </Link>

@@ -271,6 +271,7 @@ Finally, co-regulation deepens the relationships it moves through. Each cycle of
 - Can you recall a specific moment when someone's regulated presence shifted your own state — what did they actually do?
 - Where do you notice the pull to fix or reframe instead of simply staying present? How would you explain, in your own words, what that impulse is protecting you from?
 - Has the distinction between co-regulation and emotional merger changed how you think about a relationship in your life?
+- Think of one relationship where your own state tends to set the mood for the other person. Why do you think that happens, and what do you do, specifically, that carries your state across?
 
 ---
 

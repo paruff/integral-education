@@ -317,6 +317,8 @@ After completing the Learn section and both Practice exercises, take 10 minutes 
 
 4. **Where in your current relationships would accurate perspective-verification most improve the quality of contact, and why there?**
 
+5. Choose one check you could use this week to test an assumption about what someone feels. Why that person and that moment, and how will you tell afterward whether you were accurate?
+
 ---
 
 ## 📊 Assess

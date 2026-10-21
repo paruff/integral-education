@@ -47,6 +47,8 @@ module.exports = {
       items: [
         { to: '/docs/quickstarts/amber-to-rational', position: 'left', label: 'Start' },
         { to: '/docs/my-progress', position: 'left', label: 'My Progress' },
+        // FR-18: the only way out of a stage site is the hub's "choose again" route.
+        { href: 'https://paruff.github.io/integral-education/start', position: 'right', label: 'Not the right fit? Choose again' },
       ],
     },
     footer: {

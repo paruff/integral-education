@@ -1,8 +1,14 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+// P9-04: the hub links only to stage sites that are published (sites/sites.json).
+const stageSites = Object.fromEntries(
+  require('./sites/sites.json').filter((s) => s.published).map((s) => [s.transition, `/integral-education/${s.id}/`])
+);
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  customFields: { stageSites },
   title: 'Integral Education Platform',
   tagline: 'Mastery Across All Quadrants',
   url: 'https://paruff.github.io',

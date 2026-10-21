@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './start.module.css';
 
 // ─── Assessment data ──────────────────────────────────────────────────────────
@@ -182,6 +183,7 @@ const RESULTS = {
     explanation:
       'Your answers suggest you tend to rely on established sources, trusted guidance, and clear rules when making decisions. These are real strengths — and there are also times when evidence-based reasoning opens doors that rules alone cannot. The Clear Thinking Path is designed to build that second skill without asking you to set aside the first.',
     recommended: '/docs/quickstarts/amber-to-rational',
+    siteKey: 'amber-to-rational',
     alt: 'You might also find the Personal to Integral path helpful as a broader starting point.',
     altLink: '/docs/quickstarts/personal-to-integral',
   },
@@ -310,15 +312,23 @@ function getRecommendedLinePathTitle(resultKey) {
 // ─── Result box sub-component (shared for stage and line) ────────────────────
 
 function ResultBox({ label, result, styles: s }) {
+  const { siteConfig } = useDocusaurusContext();
+  const siteUrl = result.siteKey && siteConfig.customFields.stageSites[result.siteKey];
   return (
     <section className={s.resultBox} role="region" aria-label={label}>
       <h2 className={s.resultTitle}>{result.title}</h2>
       <p className={s.explanation}>{result.explanation}</p>
 
       <div className={s.recommendedActions}>
-        <Link to={result.recommended} className={s.primaryPath}>
-          Begin the {result.title} →
-        </Link>
+        {siteUrl ? (
+          <a href={siteUrl} className={s.primaryPath}>
+            Begin the {result.title} →
+          </a>
+        ) : (
+          <Link to={result.recommended} className={s.primaryPath}>
+            Begin the {result.title} →
+          </Link>
+        )}
       </div>
 
       {result.alt && (
@@ -398,6 +408,15 @@ export default function StartPage() {
           disagreement, and growth. There are no right or wrong answers —
           this is about finding the starting points that fit where you are{' '}
           <em>right now</em>.
+        </p>
+
+        <p>
+          <strong>Supported range.</strong> Self-guided content on this site begins at the Amber
+          stage. Orientations to the earlier stages, for facilitators and educators, are
+          in <Link to="/docs/modules/magic-purple-stage-orientation">Magic/Purple</Link> and{' '}
+          <Link to="/docs/modules/magic-mythic-red-stage-orientation">Magic-Mythic/Red</Link>.
+          Self-guided experiential practice for those stages is out of scope by design: they
+          need a relational, in-person container that text alone cannot give.
         </p>
 
         <div className={styles.disclaimer} role="alert">

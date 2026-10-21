@@ -1,0 +1,10 @@
+[
+  {
+    "replace": " See the [Evidence Vetting Checklist](/internal/quality/evidence-vetting-checklist) for the full tier definitions.",
+    "with": ""
+  },
+  {
+    "replace": "For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard). Review [Contraindications by Technique](/internal/safety/shadowwork-safety-standard#contraindications-by-technique) before beginning shadow practices, and watch for [Spiritual Bypassing Red Flags](/internal/safety/shadowwork-safety-standard#spiritual-bypassing-red-flags) as inquiry deepens.",
+    "with": "Go at your own pace. If a practice brings up strong distress, stop, ground yourself with slow breathing, and talk with someone you trust or a qualified professional before continuing. Watch for using these ideas to avoid difficult feelings rather than face them."
+  }
+]

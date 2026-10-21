@@ -19,5 +19,6 @@ module.exports = {
       ],
     },
     'my-progress',
+    'reflections/daily-template',
   ],
 };

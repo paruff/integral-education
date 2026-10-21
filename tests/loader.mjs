@@ -7,6 +7,8 @@ const SRC = new URL('src/', ROOT).href;
 const STUBS = {
   '@docusaurus/useDocusaurusContext':
     "export default function useDocusaurusContext() { return { siteConfig: { projectName: globalThis.__SITE_ID__ ?? 'integral-education' } }; }",
+  '@docusaurus/plugin-content-docs/client':
+    'export function useDoc() { return { metadata: {} }; }',
   '@docusaurus/Link':
     "import React from 'react'; export default function Link({ to, children }) { return React.createElement('a', { href: to }, children); }",
 };
@@ -27,6 +29,8 @@ export async function resolve(specifier, context, next) {
       }
     }
   }
+  // Stub sources import bare packages (react): resolve those from the repo, not from the stub: URL.
+  if (context.parentURL?.startsWith('stub:')) return next(specifier, { ...context, parentURL: ROOT.href });
   return next(specifier, context);
 }
 

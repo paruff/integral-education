@@ -73,5 +73,13 @@
   {
     "replace": "qualitative interview-based developmental study",
     "with": "qualitative interview-based study"
+  },
+  {
+    "replace": "[Cognitive Bias 101](./cognitive-bias-101)",
+    "with": "Cognitive Bias 101"
+  },
+  {
+    "replace": " See the [Evidence Vetting Checklist](/internal/quality/evidence-vetting-checklist) for the full tier definitions.",
+    "with": ""
   }
 ]

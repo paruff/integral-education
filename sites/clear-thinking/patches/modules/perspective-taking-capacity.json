@@ -1,0 +1,14 @@
+[
+  {
+    "replace": "[Systems Thinking 101](./systems-thinking-101)",
+    "with": "Systems Thinking 101"
+  },
+  {
+    "replace": " — with full criteria available in the [Evidence Vetting Checklist](/internal/quality/evidence-vetting-checklist).",
+    "with": "."
+  },
+  {
+    "replace": "For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard).",
+    "with": "Go at your own pace. If a practice brings up strong distress, stop, ground yourself with slow breathing, and talk with someone you trust or a qualified professional before continuing."
+  }
+]

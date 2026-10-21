@@ -135,7 +135,10 @@ function sectionAtIndex(body, index) {
 
 // Sections where citing a prohibited term by name is standard academic
 // practice (source theory attribution), not learner-facing jargon leakage.
-const CITATION_SECTION_PATTERN = /framework|evidence|citation|research|gift|limitation/i;
+// Also exempt (approved on #536): retrieval cards, review schedules, cross-references
+// and assessment rubrics. They restate or point to terms taught in the module body
+// and are study/navigation scaffolding rather than first-contact prose.
+const CITATION_SECTION_PATTERN = /framework|evidence|citation|research|gift|limitation|anki|retrieval|cross-reference|assess/i;
 // The "Pre/Trans Checkpoint" heading is a deliberately-named recurring
 // device used to teach authors/facilitators to avoid the pre/trans fallacy —
 // naming it is the point, not a violation.

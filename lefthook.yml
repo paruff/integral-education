@@ -44,6 +44,14 @@ pre-commit:
         - rebase
       priority: 2
 
+    aqal-tags-check:
+      tags: [content, validation]
+      run: node scripts/check-aqal-tags.mjs
+      skip:
+        - merge
+        - rebase
+      priority: 2
+
     retention-check:
       tags: [content, quality]
       run: node scripts/check-retention.mjs

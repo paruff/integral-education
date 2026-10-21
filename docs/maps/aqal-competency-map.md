@@ -225,6 +225,21 @@ Each line of development is relatively independent. A learner may be at L3 on co
 | L3 | "During a job interview, I felt a knot in my stomach when they asked about my last role. My mind said 'answer confidently.' My body said 'this question is about something you are still processing.' I paused for a breath and chose to answer honestly rather than perform confidence. The somatic signal was more accurate than my cognitive appraisal." | Tier A — Interoceptive accuracy correlates with decision quality under uncertainty (Farb et al., 2015); somatic signals as valid information source |
 | L4 | "I designed a 3-minute body check-in for our team: feet on floor, one breath, name one sensation. After six weeks of doing this before standups, three team members independently told me they had started using it at home. One said: 'I did not realise how much tension I was carrying until I had a structured way to notice it.'" | Tier B — Clinical/practitioner evidence for body-informed protocols (Ogden et al., 2006); teaching somatic skills to others consolidates own competence |
 
+### Self/Ego Line
+
+**Status:** Draft — added for P6-04 because the platform's Self Line module suite and the emotional/interpersonal/moral modules tag `self`; awaiting SME validation like the rest of this map.
+
+**Competency statement:** Describes how one makes sense of oneself and one's experience, and recognises when that sense-making is the lens rather than the world.
+
+| Level | Progression Indicator | Observable Behaviors | Qualitative Evidence | Quantitative Evidence |
+|---|---|---|---|---|
+| L1 | Names own roles, traits and commitments | Lists roles and values in own words; separates a role from the self who holds it | Self-portrait reflection | Completion with ≥ 3 roles and 1 distinction |
+| L2 | Notices how own assumptions shape interpretation | Points to a recent situation and states the assumption that coloured it; revises the reading when given contrary evidence | Assumption log | ≥ 2 logged assumptions with a revision |
+| L3 | Holds own framework as one among several | Describes the same event from two self-structures (e.g. Expert and Strategist); names what each makes visible and hides | Self-line psychograph | Rated ≥ 3/4 on a rubric by a reviewer unfamiliar with the learner |
+| L4 | Supports others' self-inquiry without imposing a stage reading | Facilitates a self-inquiry session; avoids labelling the participant's stage | Facilitation recording; participant self-report | Participant autonomy rating ≥ 4/5 |
+
+---
+
 ### Spiritual/Meaning Line
 
 **Competency statement:** Articulates a coherent meaning framework that integrates multiple worldviews without dogmatism.

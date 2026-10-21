@@ -23,6 +23,21 @@ readingTime: 12
 practiceTime: 25
 line: interpersonal
 safety_tier: 2
+quadrants:
+- We
+- I
+- It
+level: Pluralistic → Integral
+lines:
+- interpersonal
+- emotional
+- self
+- moral
+states:
+- reflective
+types:
+- self-paced
+- partner-supported
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

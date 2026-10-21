@@ -58,7 +58,7 @@
     "tinypool": "^2.1.2"
   },
   "engines": {
-    "node": ">=18.0"
+    "node": ">=22"
   },
   "allowScripts": {
     "canvas@3.2.3": true,

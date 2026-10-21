@@ -3,5 +3,7 @@
   "quickstarts/amber-to-rational": "quickstarts/traditional-to-rational",
   "maps/amber-rational-progress-assessment": "maps/traditional-rational-progress-assessment",
   "modules/rational-orange-orientation": "modules/rational-orientation",
-  "modules/late-orange-disillusionment": "modules/late-rational-disillusionment"
+  "modules/late-orange-disillusionment": "modules/late-rational-disillusionment",
+  "modules/pluralistic-green-orientation": "modules/pluralistic-orientation",
+  "modules/late-green-emergence-signals": "modules/late-pluralistic-emergence-signals"
 }

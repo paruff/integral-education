@@ -495,7 +495,7 @@ function getModuleRecommendations(aScores, bScore, cScores, dScores) {
     mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-teal-trap' });
   }
   if (aScores.LATE_GREEN >= 4) {
-    mods.push({ title: 'Signs You\'re Ready for More Complexity', to: '/docs/modules/late-green-emergence-signals' });
+    mods.push({ title: 'Signs You\'re Ready for More Complexity', to: '/docs/modules/late-pluralistic-emergence-signals' });
   }
   if (aScores.INTEGRAL >= 3) {
     mods.push({ title: 'Integrating Perspectives Path', to: '/docs/quickstarts/pluralistic-to-integral' });

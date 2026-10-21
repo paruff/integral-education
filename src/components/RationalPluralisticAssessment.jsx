@@ -392,7 +392,7 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
       rationale: 'These modules consolidate your current strengths while deepening your awareness of the blind spots that can accompany them — the combination that distinguishes mature perspective-taking from performative inclusion.',
       modules: [
         { title: 'Relativism, Pluralism & The Limits of "All Perspectives Are Valid"', to: '/docs/modules/relativism-limits-of-pluralism' },
-        { title: 'Orientation: Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-green-orientation' },
+        { title: 'Orientation: Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-orientation' },
         { title: 'Community, Belonging & Collective Intelligence', to: '/docs/modules/community-belonging-collective-intelligence' },
       ],
     };
@@ -404,7 +404,7 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
       description: 'Your responses suggest well-developed capacities for perspective-taking, contextual ethics, and inclusive dialogue. These ways of making meaning appear to be operating reliably across domains.',
       rationale: 'These modules support the natural developmental edge from consolidated perspective-taking capacities toward broader integration — holding multiple perspectives without losing the capacity for judgment and action.',
       modules: [
-        { title: 'Orientation: Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-green-orientation' },
+        { title: 'Orientation: Pluralism, Empathy, and Belonging', to: '/docs/modules/pluralistic-orientation' },
         { title: 'Ecological & Systems Consciousness', to: '/docs/modules/ecological-systems-consciousness' },
         { title: 'Relativism, Pluralism & The Limits of "All Perspectives Are Valid"', to: '/docs/modules/relativism-limits-of-pluralism' },
       ],

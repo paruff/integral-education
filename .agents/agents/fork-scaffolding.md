@@ -43,7 +43,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 - All States modules
 - QuickStart: `traditional-to-rational` (PRE-01: must be complete)
 
-**Exclude:** All R→P suite modules, all P→I bridge modules, `pluralistic-green-orientation`, `integral-teal-orientation`
+**Exclude:** All R→P suite modules, all P→I bridge modules, `pluralistic-orientation`, `integral-teal-orientation`
 
 ---
 
@@ -62,7 +62,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
   - `authentic-dialogue-collaborative-meaning`
   - `community-belonging-collective-intelligence`
   - `relativism-limits-of-pluralism`
-- `pluralistic-green-orientation`
+- `pluralistic-orientation`
 - Emotional/Interpersonal line modules (after EI series complete and Safety Review passed)
 - All Skills modules
 - All States modules
@@ -75,7 +75,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 **Public-facing name:** Belonging & Dialogue
 
 **Modules to include:**
-- `pluralistic-green-orientation`
+- `pluralistic-orientation`
 - `late-green-disillusionment` (PRE-10: must exist and pass Safety Review)
 - `meta-systemic-thinking` (PRE-10)
 - `healthy-hierarchy-and-authority` (PRE-10)

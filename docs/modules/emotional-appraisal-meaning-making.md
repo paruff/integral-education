@@ -141,7 +141,7 @@ Appraisal is never stage-neutral. The meaning an event acquires depends on the i
 | :--- | :--- | :--- | :--- |
 | **Conformist (Amber/Mythic)** | Group belonging and rule compliance | "I have failed the group's standard; I may be rejected or shamed." | [Amber/Mythic Orientation](./traditional-orientation) |
 | **Achiever (Rational/Orange)** | Goal attainment and individual competence | "This feedback threatens my performance metrics and status." | [Rational/Orange Orientation](./rational-orientation) |
-| **Individualist (Late Orange/Pluralistic)** | Authentic self-expression and personal values | "Does this feedback reflect a clash between their expectations and my genuine approach?" | [Pluralistic/Green Orientation](./pluralistic-green-orientation) |
+| **Individualist (Late Orange/Pluralistic)** | Authentic self-expression and personal values | "Does this feedback reflect a clash between their expectations and my genuine approach?" | [Pluralistic/Green Orientation](./pluralistic-orientation) |
 | **Strategist (Integral/Teal)** | Systemic insight and multi-perspectival integration | "What does this reveal about the system I am operating in, and what perspective am I missing?" | [Integral/Teal Orientation](./integral-teal-orientation) |
 
 *Note:* These are idealized signatures. In practice, individuals regularly carry appraisal patterns from multiple stages simultaneously, and developmental altitude does not determine emotional maturity in a linear way. Stage-relative appraisal is a diagnostic lens, not a hierarchy of correctness. **Evidence tier:** B — a theoretical synthesis, not an independently replicated finding. Treat it as a lens for noticing patterns, not a measurement of you or a verdict on anyone's worth.

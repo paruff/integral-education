@@ -40,7 +40,7 @@ import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
 This module builds on [Interpersonal Line Overview & Orientation](./interpersonal-line-overview-orientation), [Perspective-Taking & Empathic Accuracy](./perspective-taking-empathic-accuracy), and [Relational Repair & Conflict Navigation](./relational-repair-conflict-navigation). Complete those first — this module assumes you can already recognize rupture and take another's perspective, and builds those into a dedicated cross-difference practice.
 :::
 
-This module sits at the highest-complexity end of the Interpersonal line: sustaining genuine trust-building contact when role, culture, outlook, or developmental center of gravity differ significantly, and power is often unequal. Understanding this matters because ordinary communication skills — the ones that work well when people already share enough context — reliably break down here, and something more deliberate is needed.
+This module sits at the highest-complexity end of the Interpersonal line: sustaining genuine trust-building contact when role, culture, outlook, or developmental home stage differ significantly, and power is often unequal. Understanding this matters because ordinary communication skills — the ones that work well when people already share enough context — reliably break down here, and something more deliberate is needed.
 
 :::tip Before you read
 Take a minute to answer these in your own words before you read on. A wrong guess still helps you learn what follows.
@@ -123,7 +123,7 @@ Ordinary communication skills are often optimized for clarity, efficiency, or ag
 
 ### 1) What cross-difference dialogue is, and why ordinary communication skills are insufficient
 
-Cross-difference dialogue is a structured relational practice for staying in real contact across significant difference (role, culture, outlook, developmental center of gravity). Basic communication techniques often fail here because they do not address:
+Cross-difference dialogue is a structured relational practice for staying in real contact across significant difference (role, culture, outlook, developmental home stage). Basic communication techniques often fail here because they do not address:
 
 - **Identity threat:** people protect dignity before they process logic.
 - **Asymmetrical risk:** speaking carries different costs depending on role and social position.

@@ -43,7 +43,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 - All States modules
 - QuickStart: `traditional-to-rational` (PRE-01: must be complete)
 
-**Exclude:** All R→P suite modules, all P→I bridge modules, `pluralistic-orientation`, `integral-teal-orientation`
+**Exclude:** All R→P suite modules, all P→I bridge modules, `pluralistic-orientation`, `integral-orientation`
 
 ---
 
@@ -79,7 +79,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 - `late-green-disillusionment` (PRE-10: must exist and pass Safety Review)
 - `meta-systemic-thinking` (PRE-10)
 - `healthy-hierarchy-and-authority` (PRE-10)
-- `integral-teal-orientation`
+- `integral-orientation`
 - All Skills modules
 - All States modules
 - QuickStart: `pluralistic-to-integral` (PRE-03: must be complete)

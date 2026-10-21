@@ -492,7 +492,7 @@ function getModuleRecommendations(aScores, bScore, cScores, dScores) {
   const mods = [];
 
   if (aScores.INTELLECTUAL >= 3) {
-    mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-teal-trap' });
+    mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-trap' });
   }
   if (aScores.LATE_GREEN >= 4) {
     mods.push({ title: 'Signs You\'re Ready for More Complexity', to: '/docs/modules/late-pluralistic-emergence-signals' });
@@ -505,7 +505,7 @@ function getModuleRecommendations(aScores, bScore, cScores, dScores) {
   }
   const shadowPatterns = Object.entries(cScores.shadowCount).filter(([, c]) => c >= 1).map(([p]) => p);
   if (shadowPatterns.includes('RANKING')) {
-    mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-teal-trap' });
+    mods.push({ title: 'The Trap of Believing You\'ve Arrived', to: '/docs/modules/integral-shadow-trap' });
   }
   if (shadowPatterns.includes('COGNITIVE_EMOTIONAL')) {
     mods.push({ title: 'Emotional Intelligence & Somatic Line', to: '/docs/modules/emotional-intelligence-somatic-line' });
@@ -517,7 +517,7 @@ function getModuleRecommendations(aScores, bScore, cScores, dScores) {
     mods.push({ title: 'Relational Repair & Conflict Navigation', to: '/docs/modules/relational-repair-conflict-navigation' });
   }
   // Always include integral orientation
-  mods.push({ title: 'Orientation: Systems, Complexity, and Integration', to: '/docs/modules/integral-teal-orientation' });
+  mods.push({ title: 'Orientation: Systems, Complexity, and Integration', to: '/docs/modules/integral-orientation' });
 
   // dedupe by to
   const seen = new Set();

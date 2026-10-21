@@ -174,11 +174,11 @@ const learnerSidebar = {
               collapsed: true,
               items: [
                 'modules/late-pluralistic-emergence-signals',
-                'modules/integral-teal-orientation',
+                'modules/integral-orientation',
                 'modules/vision-logic-metasystematic-thinking',
                 'modules/healthy-hierarchy-actualization-gradient',
                 'modules/integral-ethics-beyond-relativism',
-                'modules/integral-shadow-teal-trap',
+                'modules/integral-shadow-trap',
                 'modules/multiperspectival-leadership-action',
                 'modules/integral-life-practice-embodying-2nd-tier',
               ],

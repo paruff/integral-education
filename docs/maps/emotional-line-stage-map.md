@@ -74,7 +74,7 @@ Use these modules to deepen understanding of the cultural, cognitive, and relati
 - [Amber/Mythic Orientation](../modules/traditional-orientation)
 - [Rational/Orange Orientation](../modules/rational-orientation)
 - [Pluralistic/Green Orientation](../modules/pluralistic-orientation)
-- [Integral/Teal Orientation](../modules/integral-teal-orientation)
+- [Integral/Teal Orientation](../modules/integral-orientation)
 
 ### Emotional Line Modules (EI Series)
 This map provides the stage scaffolding for the Emotional line curriculum. Individual modules build the competencies the map describes:

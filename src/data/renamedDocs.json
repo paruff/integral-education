@@ -5,5 +5,7 @@
   "modules/rational-orange-orientation": "modules/rational-orientation",
   "modules/late-orange-disillusionment": "modules/late-rational-disillusionment",
   "modules/pluralistic-green-orientation": "modules/pluralistic-orientation",
-  "modules/late-green-emergence-signals": "modules/late-pluralistic-emergence-signals"
+  "modules/late-green-emergence-signals": "modules/late-pluralistic-emergence-signals",
+  "modules/integral-teal-orientation": "modules/integral-orientation",
+  "modules/integral-shadow-teal-trap": "modules/integral-shadow-trap"
 }

@@ -50,7 +50,7 @@ const KNOWN_MODULES = {
   'traditional-orientation': 'Values, Belonging, and Structure',
   'rational-orientation': 'Reason, Achievement, and Effectiveness',
   'pluralistic-orientation': 'Pluralism, Empathy, and Belonging',
-  'integral-teal-orientation': 'Systems, Complexity, and Integration',
+  'integral-orientation': 'Systems, Complexity, and Integration',
   'mindfulness-basics': 'Mindfulness Basics',
   'shadow-work-foundation': 'Shadow Work Foundation',
   'shadow-integration-101': 'Shadow Integration',

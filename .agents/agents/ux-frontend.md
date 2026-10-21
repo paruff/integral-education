@@ -140,7 +140,7 @@ const sidebars = {
         'modules/community-belonging-collective-intelligence',
         'modules/relativism-limits-of-pluralism',
         'modules/pluralistic-orientation',
-        'modules/integral-teal-orientation',
+        'modules/integral-orientation',
       ],
     },
     {

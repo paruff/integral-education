@@ -116,23 +116,23 @@ const MODULE_NEXT_STEPS = {
   },
   'integral-ethics-beyond-relativism': {
     nextTitle: 'The Trap of Having Arrived',
-    nextLink: '/docs/modules/integral-shadow-teal-trap',
+    nextLink: '/docs/modules/integral-shadow-trap',
   },
   'integral-life-practice-embodying-2nd-tier': {
     nextTitle: 'State Development (QuickStart)',
     nextLink: '/docs/quickstarts/state-development',
   },
-  'integral-shadow-teal-trap': {
+  'integral-shadow-trap': {
     nextTitle: 'Multiperspectival Leadership in Action',
     nextLink: '/docs/modules/multiperspectival-leadership-action',
   },
-  'integral-teal-orientation': {
+  'integral-orientation': {
     nextTitle: 'Vision-Logic & Metasystematic Thinking',
     nextLink: '/docs/modules/vision-logic-metasystematic-thinking',
   },
   'late-pluralistic-emergence-signals': {
     nextTitle: 'Systems, Complexity, and Integration',
-    nextLink: '/docs/modules/integral-teal-orientation',
+    nextLink: '/docs/modules/integral-orientation',
   },
   'late-rational-disillusionment': {
     nextTitle: 'Empathy, Perspective-Taking & Plurality',
@@ -240,7 +240,7 @@ const MODULE_NEXT_STEPS = {
   },
   'shadow-spiritual-bypassing': {
     nextTitle: 'The Trap of Having Arrived',
-    nextLink: '/docs/modules/integral-shadow-teal-trap',
+    nextLink: '/docs/modules/integral-shadow-trap',
   },
   'shadow-work-foundation': {
     nextTitle: 'The 3-2-1 Shadow Process',

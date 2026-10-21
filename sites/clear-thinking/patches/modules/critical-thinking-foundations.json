@@ -4,11 +4,11 @@
     "with": "most common logical fallacies in everyday reasoning"
   },
   {
-    "replace": "level: Amber → Rational\n",
+    "replace": "level: Traditional → Rational\n",
     "with": ""
   },
   {
-    "replace": "- amber\n- rational\n- critical-thinking",
+    "replace": "- traditional\n- rational\n- critical-thinking",
     "with": "- critical-thinking"
   },
   {

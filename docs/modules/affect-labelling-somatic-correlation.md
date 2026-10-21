@@ -23,7 +23,7 @@ tags:
   - affect-labelling
   - emotion-regulation
 safety_tier: 2
-level: Amber → Pluralistic
+level: Traditional → Pluralistic
 lines:
 - emotional
 - somatic

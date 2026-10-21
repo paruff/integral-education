@@ -7,7 +7,7 @@ quadrants:
   - I
   - We
   - Its
-level: "Cross-level capstone: Amber through Integral"
+level: "Cross-level capstone: Traditional through Integral"
 lines:
   - emotional
   - interpersonal

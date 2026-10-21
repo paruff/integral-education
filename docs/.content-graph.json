@@ -1,46 +1,43 @@
 {
-  "generated": "2026-07-26T22:05:18.065Z",
+  "generated": "2026-10-21T17:18:02.987Z",
   "totalModules": 77,
-  "totalEdges": 163,
+  "totalEdges": 234,
   "stats": {
     "stageDistribution": {
-      "Unknown": 36,
-      "Amber": 1,
-      "Rational → Pluralistic": 8,
-      "Amber → Rational": 7,
-      "Pluralistic → Integral": 12,
-      "Integral": 1,
-      "Cross-level capstone: Amber through Integral": 1,
-      "Teal": 1,
-      "Green": 2,
-      "Orange": 2,
-      "Red": 1,
-      "Orange → Green → Teal (Integral)": 1,
+      "Traditional → Pluralistic": 1,
+      "Traditional": 1,
+      "Rational → Pluralistic": 9,
+      "Traditional → Rational": 7,
+      "Pluralistic → Integral": 15,
+      "Unknown": 29,
+      "Integral": 2,
+      "Pluralistic": 3,
+      "Cross-level capstone: Traditional through Integral": 1,
+      "Rational": 2,
+      "Egocentric": 1,
+      "Magical": 1,
+      "Rational → Pluralistic → Integral": 1,
       "Rational → Integral": 1,
-      "Amber → Integral": 1,
-      "Amber → Rational (Fowler Stages 2–4)": 1,
-      "Rational/Orange → Integral/Teal (Spiritual line post-conventional)": 1
+      "Traditional → Integral": 1,
+      "Traditional → Rational (Fowler Stages 2–4)": 1,
+      "Rational → Integral (Spiritual line post-conventional)": 1
     },
     "lineCoverage": {
-      "emotional": 46,
-      "cognitive": 66,
-      "moral": 52,
-      "interpersonal": 54,
+      "emotional": 50,
+      "somatic": 25,
+      "cognitive": 68,
+      "moral": 54,
+      "interpersonal": 55,
       "spiritual": 11,
-      "somatic": 23,
-      "self": 22,
-      "ecological": 1,
-      "values": 2,
-      "leadership": 1,
-      "systems": 2
+      "self": 24
     },
     "safetyTiers": {
       "tier-1": 55,
       "tier-2": 22
     },
     "formats": {
-      "embodied-guided": 24,
-      "text-reflection": 53
+      "embodied-guided": 25,
+      "text-reflection": 52
     },
     "difficulties": {
       "Intermediate": 37,
@@ -62,10 +59,12 @@
       "id": "affect-labelling-somatic-correlation",
       "title": "Affect Labelling & Somatic Correlation",
       "file": "docs/modules/affect-labelling-somatic-correlation.md",
-      "stage": "Unknown",
-      "stageTarget": null,
+      "stage": "Traditional → Pluralistic",
+      "stageTarget": "Traditional → Pluralistic",
       "lines": [
-        "emotional"
+        "emotional",
+        "somatic",
+        "cognitive"
       ],
       "safetyTier": "tier-2",
       "difficulty": "Intermediate",
@@ -96,8 +95,8 @@
       "id": "amber-mythic-orientation",
       "title": "Orientation: Values, Belonging, and Structure",
       "file": "docs/modules/amber-mythic-orientation.mdx",
-      "stage": "Amber",
-      "stageTarget": "Amber",
+      "stage": "Traditional",
+      "stageTarget": "Traditional",
       "lines": [
         "cognitive",
         "moral",
@@ -110,7 +109,7 @@
       "readingTime": 8,
       "practiceTime": 10,
       "tags": [
-        "amber",
+        "traditional",
         "mythic",
         "spiral-dynamics",
         "cook-greuter",
@@ -150,7 +149,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "dialogue",
         "communication",
         "Bohm",
@@ -175,8 +173,8 @@
       "id": "authority-autonomy-transition",
       "title": "Authority and Autonomy: Learning to Think for Yourself",
       "file": "docs/modules/authority-autonomy-transition.mdx",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive",
         "moral",
@@ -190,7 +188,7 @@
       "readingTime": 10,
       "practiceTime": 12,
       "tags": [
-        "amber",
+        "traditional",
         "rational",
         "authority",
         "autonomy",
@@ -232,6 +230,7 @@
       "readingTime": 10,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "states",
         "causal",
         "witness",
@@ -252,14 +251,16 @@
       "id": "co-regulation-relational-attunement",
       "title": "EI-06 · Co-regulation & Relational Attunement",
       "file": "docs/modules/co-regulation-relational-attunement.md",
-      "stage": "Unknown",
-      "stageTarget": null,
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
       "lines": [
-        "interpersonal"
+        "emotional",
+        "interpersonal",
+        "somatic"
       ],
       "safetyTier": "tier-2",
       "difficulty": "Intermediate",
-      "format": "text-reflection",
+      "format": "embodied-guided",
       "prerequisites": [
         "emotional-line-overview-orientation",
         "emotion-regulation-foundations",
@@ -289,8 +290,8 @@
       "id": "cognitive-bias-101",
       "title": "Cognitive Bias Basics",
       "file": "docs/modules/cognitive-bias-101.md",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive"
       ],
@@ -317,8 +318,8 @@
       "id": "cognitive-dissonance-bridge",
       "title": "Cognitive Dissonance Bridge",
       "file": "docs/modules/cognitive-dissonance-bridge.mdx",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive",
         "moral",
@@ -332,7 +333,7 @@
       "readingTime": 10,
       "practiceTime": 12,
       "tags": [
-        "amber",
+        "traditional",
         "rational",
         "cognitive-dissonance",
         "kegan",
@@ -480,7 +481,7 @@
       "id": "cognitive-line-postformal-operations",
       "title": "Cognitive Line — Postformal Operations",
       "file": "docs/modules/cognitive-line-postformal-operations.mdx",
-      "stage": "Unknown",
+      "stage": "Pluralistic",
       "stageTarget": "Formal Operational → Postformal",
       "lines": [
         "cognitive",
@@ -581,7 +582,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "collective-intelligence",
         "community",
         "belonging",
@@ -628,7 +628,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "ethics",
         "moral-development",
         "kohlberg",
@@ -652,8 +651,8 @@
       "id": "critical-thinking-foundations",
       "title": "Critical Thinking Foundations",
       "file": "docs/modules/critical-thinking-foundations.mdx",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive",
         "moral"
@@ -665,7 +664,7 @@
       "readingTime": 10,
       "practiceTime": 10,
       "tags": [
-        "amber",
+        "traditional",
         "rational",
         "critical-thinking",
         "toulmin",
@@ -689,10 +688,13 @@
       "id": "cross-difference-dialogue-trust-building",
       "title": "EI-11 · Cross-Difference Dialogue & Trust-Building",
       "file": "docs/modules/cross-difference-dialogue-trust-building.md",
-      "stage": "Unknown",
-      "stageTarget": null,
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
       "lines": [
-        "interpersonal"
+        "interpersonal",
+        "emotional",
+        "cognitive",
+        "moral"
       ],
       "safetyTier": "tier-2",
       "difficulty": "Advanced",
@@ -730,7 +732,6 @@
       "stageTarget": "Rational → Pluralistic",
       "lines": [
         "cognitive",
-        "ecological",
         "emotional",
         "somatic",
         "moral"
@@ -746,7 +747,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "ecology",
         "systems-thinking",
         "ecological-consciousness",
@@ -810,10 +810,11 @@
       "id": "emotional-appraisal-meaning-making",
       "title": "EI-05 · Emotional Appraisal & Meaning-Making",
       "file": "docs/modules/emotional-appraisal-meaning-making.md",
-      "stage": "Unknown",
-      "stageTarget": null,
+      "stage": "Rational → Pluralistic",
+      "stageTarget": "Rational → Pluralistic",
       "lines": [
-        "emotional"
+        "emotional",
+        "self"
       ],
       "safetyTier": "tier-1",
       "difficulty": "Intermediate",
@@ -893,7 +894,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "emotional-intelligence",
         "somatic",
         "interoception",
@@ -919,8 +919,8 @@
       "id": "emotional-interpersonal-integration",
       "title": "EI-13 · Emotional–Interpersonal Integration",
       "file": "docs/modules/emotional-interpersonal-integration.md",
-      "stage": "Cross-level capstone: Amber through Integral",
-      "stageTarget": "Cross-level capstone: Amber through Integral",
+      "stage": "Cross-level capstone: Traditional through Integral",
+      "stageTarget": "Cross-level capstone: Traditional through Integral",
       "lines": [
         "emotional",
         "interpersonal",
@@ -1011,7 +1011,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "empathy",
         "perspective-taking",
         "intersubjectivity",
@@ -1036,8 +1035,8 @@
       "id": "evidence-evaluation",
       "title": "Evidence Evaluation & Scientific Literacy",
       "file": "docs/modules/evidence-evaluation.mdx",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive",
         "moral"
@@ -1049,7 +1048,7 @@
       "readingTime": 10,
       "practiceTime": 10,
       "tags": [
-        "amber",
+        "traditional",
         "rational",
         "evidence",
         "scientific-literacy",
@@ -1160,7 +1159,6 @@
       "tags": [
         "stage-development",
         "integral",
-        "teal",
         "2nd-tier",
         "hierarchy",
         "holarchy",
@@ -1171,7 +1169,7 @@
         "kegan",
         "torbert",
         "koestler",
-        "green",
+        "pluralistic",
         "growing-up",
         "organizational-design",
         "developmental-leadership"
@@ -1207,7 +1205,6 @@
       "tags": [
         "stage-development",
         "integral",
-        "teal",
         "2nd-tier",
         "ethics",
         "moral-development",
@@ -1242,7 +1239,6 @@
         "somatic",
         "interpersonal",
         "moral",
-        "values",
         "spiritual"
       ],
       "safetyTier": "tier-2",
@@ -1254,9 +1250,9 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "stage-development",
         "integral",
-        "teal",
         "2nd-tier",
         "ILP",
         "integral-life-practice",
@@ -1291,8 +1287,7 @@
         "emotional",
         "somatic",
         "interpersonal",
-        "moral",
-        "values"
+        "moral"
       ],
       "safetyTier": "tier-2",
       "difficulty": "Advanced",
@@ -1303,6 +1298,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "teal-shadow",
         "integral-shadow",
@@ -1332,8 +1328,8 @@
       "id": "integral-teal-orientation",
       "title": "Orientation: Systems, Complexity, and Integration",
       "file": "docs/modules/integral-teal-orientation.mdx",
-      "stage": "Teal",
-      "stageTarget": "Teal",
+      "stage": "Integral",
+      "stageTarget": "Integral",
       "lines": [
         "cognitive",
         "moral",
@@ -1353,7 +1349,6 @@
       "tags": [
         "stage-development",
         "integral",
-        "teal",
         "2nd-tier",
         "Cook-Greuter",
         "Kegan",
@@ -1415,8 +1410,8 @@
       "id": "late-green-emergence-signals",
       "title": "Signs You''re Ready for More Complexity",
       "file": "docs/modules/late-green-emergence-signals.mdx",
-      "stage": "Green",
-      "stageTarget": "Green",
+      "stage": "Pluralistic",
+      "stageTarget": "Pluralistic",
       "lines": [
         "cognitive",
         "moral",
@@ -1433,11 +1428,9 @@
       "practiceTime": 12,
       "tags": [
         "stage-development",
-        "green",
         "pluralistic",
         "transition",
         "integral",
-        "teal",
         "cook-greuter",
         "beck-cowan",
         "kegan",
@@ -1462,8 +1455,8 @@
       "id": "late-orange-disillusionment",
       "title": "When Effectiveness Isn''t Enough: Navigating the Crack",
       "file": "docs/modules/late-orange-disillusionment.mdx",
-      "stage": "Orange",
-      "stageTarget": "Orange",
+      "stage": "Rational",
+      "stageTarget": "Rational",
       "lines": [
         "cognitive",
         "moral",
@@ -1478,7 +1471,6 @@
       "practiceTime": 12,
       "tags": [
         "stage-development",
-        "orange",
         "rational",
         "disillusionment",
         "transition",
@@ -1501,8 +1493,8 @@
       "id": "magic-mythic-red-stage-orientation",
       "title": "Orientation: Power, Impulse, and Self-Assertion",
       "file": "docs/modules/magic-mythic-red-stage-orientation.md",
-      "stage": "Red",
-      "stageTarget": "Red",
+      "stage": "Egocentric",
+      "stageTarget": "Egocentric",
       "lines": [
         "cognitive",
         "moral",
@@ -1518,8 +1510,7 @@
       "readingTime": 10,
       "practiceTime": 10,
       "tags": [
-        "red",
-        "magic-mythic",
+        "egocentric",
         "spiral-dynamics",
         "gebser",
         "kohlberg",
@@ -1527,7 +1518,7 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 16,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
@@ -1539,8 +1530,8 @@
       "id": "magic-purple-stage-orientation",
       "title": "Orientation: Patterns, Ritual, and Protection",
       "file": "docs/modules/magic-purple-stage-orientation.mdx",
-      "stage": "Unknown",
-      "stageTarget": "Purple",
+      "stage": "Magical",
+      "stageTarget": "Magical",
       "lines": [
         "cognitive",
         "moral",
@@ -1554,8 +1545,7 @@
       "readingTime": 10,
       "practiceTime": 10,
       "tags": [
-        "purple",
-        "magic",
+        "magical",
         "spiral-dynamics",
         "gebser",
         "attachment-theory",
@@ -1563,7 +1553,7 @@
         "growing-up",
         "stage-development"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 16,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
@@ -1824,6 +1814,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "moral-line",
         "shadow-work",
         "moral-shadow",
@@ -1855,8 +1846,7 @@
         "cognitive",
         "moral",
         "interpersonal",
-        "emotional",
-        "leadership"
+        "emotional"
       ],
       "safetyTier": "tier-1",
       "difficulty": "Advanced",
@@ -1869,7 +1859,6 @@
       "tags": [
         "stage-development",
         "integral",
-        "teal",
         "2nd-tier",
         "leadership",
         "action-inquiry",
@@ -1915,6 +1904,7 @@
       "readingTime": 8,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "states",
         "nondual",
         "dzogchen",
@@ -1936,8 +1926,8 @@
       "id": "perspective-taking-capacity",
       "title": "Perspective-Taking Capacity",
       "file": "docs/modules/perspective-taking-capacity.mdx",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive",
         "moral",
@@ -1950,7 +1940,7 @@
       "readingTime": 10,
       "practiceTime": 10,
       "tags": [
-        "amber",
+        "traditional",
         "rational",
         "perspective-taking",
         "selman",
@@ -2011,8 +2001,8 @@
       "id": "pluralistic-green-orientation",
       "title": "Orientation: Pluralism, Empathy, and Belonging",
       "file": "docs/modules/pluralistic-green-orientation.mdx",
-      "stage": "Green",
-      "stageTarget": "Green",
+      "stage": "Pluralistic",
+      "stageTarget": "Pluralistic",
       "lines": [
         "cognitive",
         "moral",
@@ -2030,7 +2020,6 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "AQAL",
         "Cook-Greuter",
         "Kegan",
@@ -2051,8 +2040,8 @@
       "id": "rational-orange-orientation",
       "title": "Orientation: Reason, Achievement, and Effectiveness",
       "file": "docs/modules/rational-orange-orientation.mdx",
-      "stage": "Orange",
-      "stageTarget": "Orange",
+      "stage": "Rational",
+      "stageTarget": "Rational",
       "lines": [
         "cognitive",
         "moral",
@@ -2065,7 +2054,6 @@
       "readingTime": 8,
       "practiceTime": 10,
       "tags": [
-        "orange",
         "rational",
         "spiral-dynamics",
         "cook-greuter",
@@ -2086,10 +2074,13 @@
       "id": "relational-repair-conflict-navigation",
       "title": "EI-10 · Relational Repair & Conflict Navigation",
       "file": "docs/modules/relational-repair-conflict-navigation.md",
-      "stage": "Unknown",
-      "stageTarget": null,
+      "stage": "Pluralistic → Integral",
+      "stageTarget": "Pluralistic → Integral",
       "lines": [
-        "interpersonal"
+        "interpersonal",
+        "emotional",
+        "self",
+        "moral"
       ],
       "safetyTier": "tier-2",
       "difficulty": "Intermediate",
@@ -2144,11 +2135,9 @@
       "tags": [
         "stage-development",
         "pluralistic",
-        "green",
         "relativism",
         "perspectivism",
         "integral",
-        "teal",
         "Wilber",
         "Gebser",
         "Rokeach",
@@ -2235,6 +2224,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "self-line",
         "ego-development",
         "practice-architecture",
@@ -2401,6 +2391,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "3-2-1",
         "Wilber",
@@ -2422,8 +2413,8 @@
       "id": "shadow-collective-cultural",
       "title": "Collective & Cultural Shadow — The Undiscovered Self of Nations and Communities",
       "file": "docs/modules/shadow-collective-cultural.mdx",
-      "stage": "Orange → Green → Teal (Integral)",
-      "stageTarget": "Orange → Green → Teal (Integral)",
+      "stage": "Rational → Pluralistic → Integral",
+      "stageTarget": "Rational → Pluralistic → Integral",
       "lines": [
         "cognitive",
         "emotional",
@@ -2439,6 +2430,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "collective-shadow",
         "cultural-shadow",
@@ -2484,6 +2476,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "immunity-to-change",
         "Kegan",
@@ -2525,6 +2518,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "relationships",
         "projection",
@@ -2565,6 +2559,7 @@
       "readingTime": 10,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow",
         "projection",
         "self-awareness"
@@ -2581,8 +2576,8 @@
       "id": "shadow-persona-mask",
       "title": "Persona & Mask — The Social Face and Its Shadow",
       "file": "docs/modules/shadow-persona-mask.mdx",
-      "stage": "Amber → Integral",
-      "stageTarget": "Amber → Integral",
+      "stage": "Traditional → Integral",
+      "stageTarget": "Traditional → Integral",
       "lines": [
         "cognitive",
         "emotional",
@@ -2600,6 +2595,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "persona",
         "mask",
@@ -2624,8 +2620,8 @@
       "id": "shadow-positive-projection",
       "title": "Positive Shadow — Reclaiming Projected Gold",
       "file": "docs/modules/shadow-positive-projection.mdx",
-      "stage": "Amber → Rational",
-      "stageTarget": "Amber → Rational",
+      "stage": "Traditional → Rational",
+      "stageTarget": "Traditional → Rational",
       "lines": [
         "cognitive",
         "emotional",
@@ -2642,6 +2638,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "positive-shadow",
         "golden-shadow",
@@ -2684,6 +2681,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "spiritual-bypassing",
         "Welwood",
@@ -2725,6 +2723,7 @@
       "readingTime": 8,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "Jung",
         "AQAL",
@@ -2747,9 +2746,11 @@
       "title": "Somatic Line Overview & Orientation",
       "file": "docs/modules/somatic-line-overview.md",
       "stage": "Unknown",
-      "stageTarget": null,
+      "stageTarget": "Cross-stage (Archaic through Integral)",
       "lines": [
-        "somatic"
+        "somatic",
+        "emotional",
+        "interpersonal"
       ],
       "safetyTier": "tier-2",
       "difficulty": "Unknown",
@@ -2774,7 +2775,7 @@
       "title": "Spiritual Line — Conjunctive to Universalizing (Fowler Stages 5–6)",
       "file": "docs/modules/spiritual-line-conjunctive-universalizing.mdx",
       "stage": "Unknown",
-      "stageTarget": "Pluralistic/Green → early Integral (Fowler Stages 5–6)",
+      "stageTarget": "Pluralistic → early Integral (Fowler Stages 5–6)",
       "lines": [
         "spiritual",
         "cognitive",
@@ -2811,8 +2812,8 @@
       "id": "spiritual-line-mythic-to-rational",
       "title": "Spiritual Line — From Literal Belief to Reasoned Faith",
       "file": "docs/modules/spiritual-line-mythic-to-rational.mdx",
-      "stage": "Amber → Rational (Fowler Stages 2–4)",
-      "stageTarget": "Amber → Rational (Fowler Stages 2–4)",
+      "stage": "Traditional → Rational (Fowler Stages 2–4)",
+      "stageTarget": "Traditional → Rational (Fowler Stages 2–4)",
       "lines": [
         "spiritual",
         "cognitive",
@@ -2896,8 +2897,8 @@
       "id": "spiritual-line-post-metaphysical-integral-religion",
       "title": "Post-Metaphysical Spirituality: Faith Beyond Literal Metaphysics",
       "file": "docs/modules/spiritual-line-post-metaphysical-integral-religion.mdx",
-      "stage": "Rational/Orange → Integral/Teal (Spiritual line post-conventional)",
-      "stageTarget": "Rational/Orange → Integral/Teal (Spiritual line post-conventional)",
+      "stage": "Rational → Integral (Spiritual line post-conventional)",
+      "stageTarget": "Rational → Integral (Spiritual line post-conventional)",
       "lines": [
         "spiritual",
         "cognitive",
@@ -3000,6 +3001,7 @@
       "readingTime": 12,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "shadow-work",
         "spiritual-line",
         "spiritual-shadow",
@@ -3043,6 +3045,7 @@
       "readingTime": 10,
       "practiceTime": 15,
       "tags": [
+        "tier-2",
         "states",
         "subtle",
         "yoga-nidra",
@@ -3065,8 +3068,7 @@
       "stage": "Rational → Pluralistic",
       "stageTarget": "Rational → Pluralistic",
       "lines": [
-        "cognitive",
-        "systems"
+        "cognitive"
       ],
       "safetyTier": "tier-1",
       "difficulty": "Intermediate",
@@ -3097,7 +3099,6 @@
       "stageTarget": "Pluralistic → Integral",
       "lines": [
         "cognitive",
-        "systems",
         "moral"
       ],
       "safetyTier": "tier-1",
@@ -3111,7 +3112,6 @@
       "tags": [
         "stage-development",
         "integral",
-        "teal",
         "2nd-tier",
         "vision-logic",
         "metasystematic",
@@ -3558,6 +3558,61 @@
       "type": "quickstart-member"
     },
     {
+      "source": "amber-mythic-orientation",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-dissonance-bridge",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "perspective-taking-capacity",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "authority-autonomy-transition",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "critical-thinking-foundations",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "evidence-evaluation",
+      "target": "amber-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-concrete-to-formal",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-postformal-operations",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-metasystematic-vision-logic",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-line-practice-architecture",
+      "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
       "source": "cognitive-line-concrete-to-formal",
       "target": "cognitive-line-development",
       "type": "quickstart-member"
@@ -3585,6 +3640,41 @@
     {
       "source": "cognitive-line-practice-architecture",
       "target": "cognitive-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-line-overview-orientation",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotion-regulation-foundations",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "affect-labelling-somatic-correlation",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-intelligence-somatic-line",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-appraisal-meaning-making",
+      "target": "emotional-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-interpersonal-integration",
+      "target": "emotional-line-development",
       "type": "quickstart-member"
     },
     {
@@ -3653,6 +3743,31 @@
       "type": "quickstart-member"
     },
     {
+      "source": "interpersonal-line-overview-orientation",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "perspective-taking-empathic-accuracy",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "relational-repair-conflict-navigation",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cross-difference-dialogue-trust-building",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-interpersonal-integration",
+      "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
       "source": "emotional-line-overview-orientation",
       "target": "interpersonal-line-development",
       "type": "quickstart-member"
@@ -3660,6 +3775,36 @@
     {
       "source": "co-regulation-relational-attunement",
       "target": "interpersonal-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "moral-line-shadow-moral-injury",
+      "target": "moral-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "contextual-ethics-moral-complexity",
+      "target": "moral-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "moral-line-imagination-integral-ethics",
+      "target": "moral-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "mindfulness-basics",
+      "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-granularity",
+      "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-integration-101",
+      "target": "personal-to-integral",
       "type": "quickstart-member"
     },
     {
@@ -3680,6 +3825,46 @@
     {
       "source": "systems-thinking-101",
       "target": "personal-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "late-green-emergence-signals",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-teal-orientation",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "vision-logic-metasystematic-thinking",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "healthy-hierarchy-actualization-gradient",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-ethics-beyond-relativism",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-shadow-teal-trap",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "multiperspectival-leadership-action",
+      "target": "pluralistic-to-integral",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "integral-life-practice-embodying-2nd-tier",
+      "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },
     {
@@ -3778,6 +3963,71 @@
       "type": "quickstart-member"
     },
     {
+      "source": "late-orange-disillusionment",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "empathy-perspective-plurality",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-intelligence-somatic-line",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "contextual-ethics-moral-complexity",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "ecological-systems-consciousness",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "authentic-dialogue-collaborative-meaning",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "community-belonging-collective-intelligence",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "relativism-limits-of-pluralism",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "pluralistic-green-orientation",
+      "target": "rational-to-pluralistic",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-conventional-conformist-achiever",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-postconventional-individualist-strategist",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-postautonomous-construct-aware-unitive",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "self-line-integration-practice",
+      "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
       "source": "self-line-conventional-conformist-achiever",
       "target": "self-line-development",
       "type": "quickstart-member"
@@ -3815,6 +4065,46 @@
     {
       "source": "self-line-integration-practice",
       "target": "self-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-work-foundation",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-321-process",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-positive-projection",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-persona-mask",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-in-relationships",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-collective-cultural",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-immunity-to-change",
+      "target": "shadow-work",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "shadow-spiritual-bypassing",
+      "target": "shadow-work",
       "type": "quickstart-member"
     },
     {
@@ -3893,6 +4183,26 @@
       "type": "quickstart-member"
     },
     {
+      "source": "somatic-line-overview",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "mindfulness-basics",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "gross-state-awareness",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "emotional-intelligence-somatic-line",
+      "target": "somatic-line-development",
+      "type": "quickstart-member"
+    },
+    {
       "source": "shadow-work-foundation",
       "target": "somatic-line-development",
       "type": "quickstart-member"
@@ -3925,6 +4235,51 @@
     {
       "source": "spiritual-line-shadow-integration",
       "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-overview-orientation",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-mythic-to-rational",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-conjunctive-universalizing",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-post-metaphysical-integral-religion",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "spiritual-line-shadow-integration",
+      "target": "spiritual-line-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "gross-state-awareness",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "subtle-state-access",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "causal-witness-state",
+      "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "nondual-awareness-orientation",
+      "target": "state-development",
       "type": "quickstart-member"
     },
     {

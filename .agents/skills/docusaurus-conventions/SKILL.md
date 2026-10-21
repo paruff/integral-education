@@ -195,7 +195,7 @@ const sidebars = {
         'modules/authentic-dialogue-collaborative-meaning',
         'modules/community-belonging-collective-intelligence',
         'modules/relativism-limits-of-pluralism',
-        'modules/pluralistic-green-orientation',
+        'modules/pluralistic-orientation',
         'modules/integral-teal-orientation',
       ],
     },

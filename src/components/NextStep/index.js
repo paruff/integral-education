@@ -130,7 +130,7 @@ const MODULE_NEXT_STEPS = {
     nextTitle: 'Vision-Logic & Metasystematic Thinking',
     nextLink: '/docs/modules/vision-logic-metasystematic-thinking',
   },
-  'late-green-emergence-signals': {
+  'late-pluralistic-emergence-signals': {
     nextTitle: 'Systems, Complexity, and Integration',
     nextLink: '/docs/modules/integral-teal-orientation',
   },
@@ -178,9 +178,9 @@ const MODULE_NEXT_STEPS = {
     nextTitle: 'Authority and Autonomy',
     nextLink: '/docs/modules/authority-autonomy-transition',
   },
-  'pluralistic-green-orientation': {
+  'pluralistic-orientation': {
     nextTitle: 'Signs You\'re Ready for More Complexity',
-    nextLink: '/docs/modules/late-green-emergence-signals',
+    nextLink: '/docs/modules/late-pluralistic-emergence-signals',
   },
   'rational-orientation': {
     nextTitle: 'Cognitive Dissonance Bridge',
@@ -188,7 +188,7 @@ const MODULE_NEXT_STEPS = {
   },
   'relativism-limits-of-pluralism': {
     nextTitle: 'Pluralism, Empathy, and Belonging',
-    nextLink: '/docs/modules/pluralistic-green-orientation',
+    nextLink: '/docs/modules/pluralistic-orientation',
   },
   'self-line-conventional-conformist-achiever': {
     nextTitle: 'Postconventional Self — Individualist to Strategist',

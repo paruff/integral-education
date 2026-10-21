@@ -73,7 +73,7 @@ Use these modules to deepen understanding of the cultural, cognitive, and relati
 
 - [Amber/Mythic Orientation](../modules/traditional-orientation)
 - [Rational/Orange Orientation](../modules/rational-orientation)
-- [Pluralistic/Green Orientation](../modules/pluralistic-green-orientation)
+- [Pluralistic/Green Orientation](../modules/pluralistic-orientation)
 - [Integral/Teal Orientation](../modules/integral-teal-orientation)
 
 ### Emotional Line Modules (EI Series)

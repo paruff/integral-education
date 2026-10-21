@@ -164,7 +164,7 @@ const learnerSidebar = {
                 'modules/authentic-dialogue-collaborative-meaning',
                 'modules/community-belonging-collective-intelligence',
                 'modules/relativism-limits-of-pluralism',
-                'modules/pluralistic-green-orientation',
+                'modules/pluralistic-orientation',
               ],
             },
             {
@@ -173,7 +173,7 @@ const learnerSidebar = {
               collapsible: true,
               collapsed: true,
               items: [
-                'modules/late-green-emergence-signals',
+                'modules/late-pluralistic-emergence-signals',
                 'modules/integral-teal-orientation',
                 'modules/vision-logic-metasystematic-thinking',
                 'modules/healthy-hierarchy-actualization-gradient',

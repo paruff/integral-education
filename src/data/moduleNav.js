@@ -183,7 +183,7 @@ export default {
     "quickstart": "personal-to-integral",
     "next": null
   },
-  "late-green-emergence-signals": {
+  "late-pluralistic-emergence-signals": {
     "quickstart": "pluralistic-to-integral",
     "next": {
       "title": "Systems, Complexity, and Integration",
@@ -275,10 +275,10 @@ export default {
     "quickstart": "rational-to-pluralistic",
     "next": {
       "title": "Pluralism, Empathy, and Belonging",
-      "to": "/docs/modules/pluralistic-green-orientation"
+      "to": "/docs/modules/pluralistic-orientation"
     }
   },
-  "pluralistic-green-orientation": {
+  "pluralistic-orientation": {
     "quickstart": "rational-to-pluralistic",
     "next": null
   },

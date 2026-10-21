@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T17:32:02.073Z",
+  "generated": "2026-10-21T17:36:38.085Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
@@ -190,7 +190,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 15,
@@ -1117,7 +1117,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -1163,7 +1163,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -1210,7 +1210,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -1258,7 +1258,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -1306,7 +1306,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 8,
@@ -1372,9 +1372,9 @@
       "missingJourneySteps": []
     },
     {
-      "id": "late-green-emergence-signals",
+      "id": "late-pluralistic-emergence-signals",
       "title": "Signs You''re Ready for More Complexity",
-      "file": "docs/modules/late-green-emergence-signals.mdx",
+      "file": "docs/modules/late-pluralistic-emergence-signals.mdx",
       "stage": "Pluralistic",
       "stageTarget": "Pluralistic",
       "lines": [
@@ -1646,7 +1646,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 10,
@@ -1817,7 +1817,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -1863,7 +1863,7 @@
       "difficulty": "Beginner",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 8,
@@ -1963,9 +1963,9 @@
       "missingJourneySteps": []
     },
     {
-      "id": "pluralistic-green-orientation",
+      "id": "pluralistic-orientation",
       "title": "Orientation: Pluralism, Empathy, and Belonging",
-      "file": "docs/modules/pluralistic-green-orientation.mdx",
+      "file": "docs/modules/pluralistic-orientation.mdx",
       "stage": "Pluralistic",
       "stageTarget": "Pluralistic",
       "lines": [
@@ -2351,7 +2351,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -2390,7 +2390,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -2435,7 +2435,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 12,
@@ -2478,7 +2478,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -2519,7 +2519,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 15,
@@ -2554,7 +2554,7 @@
       "difficulty": "Beginner",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 12,
@@ -2641,7 +2641,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -2683,7 +2683,7 @@
       "difficulty": "Advanced",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 8,
       "practiceTime": 15,
@@ -2751,7 +2751,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 10,
@@ -2832,7 +2832,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 8,
@@ -2874,7 +2874,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 10,
@@ -2960,7 +2960,7 @@
       "difficulty": "Beginner",
       "format": "embodied-guided",
       "prerequisites": [
-        "pluralistic-green-orientation",
+        "pluralistic-orientation",
         "integral-teal-orientation"
       ],
       "readingTime": 12,
@@ -3105,7 +3105,7 @@
       "difficulty": "Advanced",
       "format": "text-reflection",
       "prerequisites": [
-        "pluralistic-green-orientation"
+        "pluralistic-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 10,
@@ -3153,7 +3153,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "causal-witness-state",
       "type": "prerequisite"
     },
@@ -3278,27 +3278,27 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "healthy-hierarchy-actualization-gradient",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "integral-ethics-beyond-relativism",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "integral-life-practice-embodying-2nd-tier",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "integral-shadow-teal-trap",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "integral-teal-orientation",
       "type": "prerequisite"
     },
@@ -3309,7 +3309,7 @@
     },
     {
       "source": "rational-orientation",
-      "target": "late-green-emergence-signals",
+      "target": "late-pluralistic-emergence-signals",
       "type": "prerequisite"
     },
     {
@@ -3328,7 +3328,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "moral-line-imagination-integral-ethics",
       "type": "prerequisite"
     },
@@ -3348,12 +3348,12 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "multiperspectival-leadership-action",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "nondual-awareness-orientation",
       "type": "prerequisite"
     },
@@ -3369,7 +3369,7 @@
     },
     {
       "source": "rational-orientation",
-      "target": "pluralistic-green-orientation",
+      "target": "pluralistic-orientation",
       "type": "prerequisite"
     },
     {
@@ -3408,17 +3408,17 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-321-process",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-collective-cultural",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-immunity-to-change",
       "type": "prerequisite"
     },
@@ -3428,17 +3428,17 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-in-relationships",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-integration-101",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-persona-mask",
       "type": "prerequisite"
     },
@@ -3458,17 +3458,17 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-spiritual-bypassing",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "shadow-work-foundation",
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "spiritual-line-conjunctive-universalizing",
       "type": "prerequisite"
     },
@@ -3478,7 +3478,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "spiritual-line-overview-orientation",
       "type": "prerequisite"
     },
@@ -3488,7 +3488,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "spiritual-line-post-metaphysical-integral-religion",
       "type": "prerequisite"
     },
@@ -3503,7 +3503,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "spiritual-line-shadow-integration",
       "type": "prerequisite"
     },
@@ -3518,7 +3518,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "vision-logic-metasystematic-thinking",
       "type": "prerequisite"
     },
@@ -3758,7 +3758,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "late-green-emergence-signals",
+      "source": "late-pluralistic-emergence-signals",
       "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },
@@ -3798,7 +3798,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "late-green-emergence-signals",
+      "source": "late-pluralistic-emergence-signals",
       "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },
@@ -3888,7 +3888,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "rational-to-pluralistic",
       "type": "quickstart-member"
     },
@@ -3933,7 +3933,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "pluralistic-green-orientation",
+      "source": "pluralistic-orientation",
       "target": "rational-to-pluralistic",
       "type": "quickstart-member"
     },

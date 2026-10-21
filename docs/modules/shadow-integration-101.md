@@ -21,7 +21,7 @@ difficulty: Advanced
 readingTime: 10
 practiceTime: 15
 prerequisites:
-- pluralistic-green-orientation
+- pluralistic-orientation
 line: cross-cutting
 safety_tier: 2
 teaches_framework: true

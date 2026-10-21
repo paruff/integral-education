@@ -1,5 +1,5 @@
 ---
-id: magic-mythic-red-stage-orientation
+id: egocentric-stage-orientation
 title: 'Orientation: Power, Impulse, and Self-Assertion'
 sidebar_label: Power, Impulse, and Self-Assertion
 description: An educational orientation to the Magic-Mythic/Red stage — its gifts, worldview, and developmental place — as a foundation for understanding the emergence of individual selfhood and personal power in oneself and others.

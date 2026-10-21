@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T17:45:49.547Z",
+  "generated": "2026-10-21T17:50:10.962Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
@@ -11,9 +11,9 @@
       "Unknown": 29,
       "Integral": 2,
       "Pluralistic": 3,
+      "Egocentric": 1,
       "Cross-level capstone: Traditional through Integral": 1,
       "Rational": 2,
-      "Egocentric": 1,
       "Magical": 1,
       "Rational → Pluralistic → Integral": 1,
       "Rational → Integral": 1,
@@ -735,6 +735,43 @@
       "missingJourneySteps": []
     },
     {
+      "id": "egocentric-stage-orientation",
+      "title": "Orientation: Power, Impulse, and Self-Assertion",
+      "file": "docs/modules/egocentric-stage-orientation.md",
+      "stage": "Egocentric",
+      "stageTarget": "Egocentric",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "somatic"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "magical-stage-orientation"
+      ],
+      "readingTime": 10,
+      "practiceTime": 10,
+      "tags": [
+        "egocentric",
+        "spiral-dynamics",
+        "gebser",
+        "kohlberg",
+        "somatic",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 16,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true,
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
+    },
+    {
       "id": "emotion-regulation-foundations",
       "title": "Emotion Regulation Foundations",
       "file": "docs/modules/emotion-regulation-foundations.mdx",
@@ -1447,43 +1484,6 @@
         "arrival-fallacy"
       ],
       "goldStandardSections": 21,
-      "hasAQAL": true,
-      "hasPractice": true,
-      "hasEvidence": true,
-      "hasSafetyNote": true,
-      "hasFacilitatorNote": true,
-      "missingJourneySteps": []
-    },
-    {
-      "id": "magic-mythic-red-stage-orientation",
-      "title": "Orientation: Power, Impulse, and Self-Assertion",
-      "file": "docs/modules/magic-mythic-red-stage-orientation.md",
-      "stage": "Egocentric",
-      "stageTarget": "Egocentric",
-      "lines": [
-        "cognitive",
-        "moral",
-        "interpersonal",
-        "somatic"
-      ],
-      "safetyTier": "tier-1",
-      "difficulty": "Beginner",
-      "format": "embodied-guided",
-      "prerequisites": [
-        "magical-stage-orientation"
-      ],
-      "readingTime": 10,
-      "practiceTime": 10,
-      "tags": [
-        "egocentric",
-        "spiral-dynamics",
-        "gebser",
-        "kohlberg",
-        "somatic",
-        "growing-up",
-        "stage-development"
-      ],
-      "goldStandardSections": 16,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
@@ -3223,6 +3223,11 @@
       "type": "prerequisite"
     },
     {
+      "source": "magical-stage-orientation",
+      "target": "egocentric-stage-orientation",
+      "type": "prerequisite"
+    },
+    {
       "source": "emotional-line-overview-orientation",
       "target": "emotion-regulation-foundations",
       "type": "prerequisite"
@@ -3310,11 +3315,6 @@
     {
       "source": "rational-orientation",
       "target": "late-pluralistic-emergence-signals",
-      "type": "prerequisite"
-    },
-    {
-      "source": "magical-stage-orientation",
-      "target": "magic-mythic-red-stage-orientation",
       "type": "prerequisite"
     },
     {

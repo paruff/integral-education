@@ -17,7 +17,7 @@ const internalSidebar = {
           label: 'Guides',
           items: [
             'implementation/shadow-work-facilitation-guide',
-            'implementation/magic-red-facilitator-guide',
+            'implementation/egocentric-facilitator-guide',
             'implementation/traditional-rational-facilitator-guide',
             'implementation/rational-pluralistic-facilitator-guide',
             'implementation/pluralistic-integral-facilitator-guide',

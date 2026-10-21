@@ -4,6 +4,8 @@
 // the audience-facing name before launch (P9-05).
 const main = require('../docusaurus.config.js');
 
+const analytics = require('../analytics.js');
+
 const slug = 'clear-thinking';
 
 const search = main.plugins.find((p) => Array.isArray(p) && String(p[0]).includes('docusaurus-search-local'));
@@ -48,12 +50,12 @@ module.exports = {
         { to: '/docs/quickstarts/amber-to-rational', position: 'left', label: 'Start' },
         { to: '/docs/my-progress', position: 'left', label: 'My Progress' },
         // FR-18: the only way out of a stage site is the hub's "choose again" route.
-        { href: 'https://paruff.github.io/integral-education/start', position: 'right', label: 'Not the right fit? Choose again' },
+        { href: 'https://paruff.github.io/integral-education/start', position: 'right', label: 'Not the right fit? Choose again', 'data-goatcounter-click': 'choose-again' },
       ],
     },
     footer: {
       style: 'dark',
-      copyright: 'Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Built with Docusaurus.',
+      copyright: `Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>. Built with Docusaurus.<br/>${analytics.privacyNote}`,
     },
   },
 };

@@ -1,0 +1,5 @@
+{
+  "modules/amber-mythic-orientation": "modules/traditional-orientation",
+  "quickstarts/amber-to-rational": "quickstarts/traditional-to-rational",
+  "maps/amber-rational-progress-assessment": "maps/traditional-rational-progress-assessment"
+}

@@ -10,7 +10,7 @@ const MODULE_NEXT_STEPS = {
     nextTitle: 'Emotional Appraisal & Meaning-Making',
     nextLink: '/docs/modules/emotional-appraisal-meaning-making',
   },
-  'amber-mythic-orientation': {
+  'traditional-orientation': {
     nextTitle: 'Reason, Achievement, and Effectiveness',
     nextLink: '/docs/modules/rational-orange-orientation',
   },
@@ -272,7 +272,7 @@ const MODULE_NEXT_STEPS = {
   },
   'systems-thinking-101': {
     nextTitle: 'Values, Belonging, and Structure',
-    nextLink: '/docs/modules/amber-mythic-orientation',
+    nextLink: '/docs/modules/traditional-orientation',
   },
   'vision-logic-metasystematic-thinking': {
     nextTitle: 'Healthy Hierarchy & the Actualization Gradient',

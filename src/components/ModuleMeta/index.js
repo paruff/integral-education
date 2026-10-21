@@ -47,7 +47,7 @@ function difficultyBg(difficulty) {
 // If a prereq slug isn't in this map, it's still rendered as a link.
 
 const KNOWN_MODULES = {
-  'amber-mythic-orientation': 'Values, Belonging, and Structure',
+  'traditional-orientation': 'Values, Belonging, and Structure',
   'rational-orange-orientation': 'Reason, Achievement, and Effectiveness',
   'pluralistic-green-orientation': 'Pluralism, Empathy, and Belonging',
   'integral-teal-orientation': 'Systems, Complexity, and Integration',

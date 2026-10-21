@@ -232,7 +232,7 @@ const MODULE_RECOMMENDATIONS = {
   CON: [
     { title: 'Self Line Overview — The Psychograph', to: '/docs/modules/self-line-overview-psychograph' },
     { title: 'Self Line: Conventional — Conformist to Achiever', to: '/docs/modules/self-line-conventional-conformist-achiever' },
-    { title: 'Orientation: Values, Belonging, and Structure', to: '/docs/modules/amber-mythic-orientation' },
+    { title: 'Orientation: Values, Belonging, and Structure', to: '/docs/modules/traditional-orientation' },
   ],
   ACH: [
     { title: 'Self Line Overview — The Psychograph', to: '/docs/modules/self-line-overview-psychograph' },

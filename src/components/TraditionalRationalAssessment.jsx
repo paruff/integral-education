@@ -112,7 +112,7 @@ const RESULTS = {
     title: 'Grounded in Tradition',
     description: 'Your answers suggest you draw significant strength from established structures, trusted authorities, and shared values. You have a clear sense of what is right and where you belong — these are genuine developmental achievements, not limitations. Many of the capacities you rely on — loyalty, consistency, reliability — are ones the world deeply needs.',
     modules: [
-      { title: 'Orientation: Values, Belonging, and Structure', to: '/docs/modules/amber-mythic-orientation' },
+      { title: 'Orientation: Values, Belonging, and Structure', to: '/docs/modules/traditional-orientation' },
       { title: 'Cognitive Dissonance Bridge', to: '/docs/modules/cognitive-dissonance-bridge' },
       { title: 'Authority and Autonomy', to: '/docs/modules/authority-autonomy-transition' },
     ],
@@ -155,7 +155,7 @@ function categorize(aCount, bCount, cCount) {
   return 'amber-rational-transitional';
 }
 
-export default function AmberRationalAssessment() {
+export default function TraditionalRationalAssessment() {
   const [answers, setAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
 

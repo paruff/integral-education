@@ -9,6 +9,27 @@ export const MAIN_SITE_ID = 'integral-education';
 const LEGACY_PROGRESS_KEY = 'iel_progress_v1';
 const LEGACY_REFLECTIONS_KEY = 'iel_reflections_v1';
 
+import renamedDocs from '@site/src/data/renamedDocs.json';
+
+// Module ids are the last path segment of a doc id. Carries progress saved under an old id to the new one.
+const RENAMED_MODULES = Object.fromEntries(
+  Object.entries(renamedDocs).map(([from, to]) => [from.split('/').pop(), to.split('/').pop()])
+);
+const renameKeys = (obj) =>
+  Object.fromEntries(Object.entries(obj ?? {}).map(([k, v]) => [RENAMED_MODULES[k] ?? k, v]));
+
+export function renameModuleIds(data) {
+  if (!data || typeof data !== 'object') return data;
+  return {
+    ...data,
+    modules: renameKeys(data.modules),
+    ...(data.retrievalSchedule && { retrievalSchedule: renameKeys(data.retrievalSchedule) }),
+    ...(Array.isArray(data.reviewLog) && {
+      reviewLog: data.reviewLog.map((r) => ({ ...r, moduleId: RENAMED_MODULES[r?.moduleId] ?? r?.moduleId })),
+    }),
+  };
+}
+
 export function siteKeys(siteId = MAIN_SITE_ID) {
   const id = String(siteId).toLowerCase().replace(/[^a-z0-9-]/g, '-');
   const main = id === MAIN_SITE_ID;

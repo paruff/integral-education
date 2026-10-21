@@ -81,7 +81,7 @@ const audienceCards = [
     headline: "Build the character that holds under pressure",
     body: "Research-backed practices for decision-making, integrity, and resilience.",
     cta: "Start your character practice",
-    href: "/docs/quickstarts/amber-to-rational",
+    href: "/docs/quickstarts/traditional-to-rational",
   },
   {
     headline: "Think more clearly. Decide more wisely.",
@@ -126,7 +126,7 @@ const sidebars = {
       label: 'Stage Journeys',
       collapsed: false,
       items: [
-        'modules/amber-mythic-orientation',
+        'modules/traditional-orientation',
         'modules/cognitive-dissonance-bridge',
         'modules/perspective-taking-capacity',
         'modules/authority-autonomy-transition',
@@ -199,7 +199,7 @@ Create the file structure and frontmatter skeletons. Hand to Content Authoring a
 
 ```
 docs/quickstarts/
-├── amber-to-rational.md      ← PRE-01 rebuild
+├── traditional-to-rational.md      ← PRE-01 rebuild
 ├── rational-to-pluralistic.md ← PRE-02 create
 └── pluralistic-to-integral.md ← PRE-03 create
 ```

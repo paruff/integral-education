@@ -33,7 +33,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 **Internal never-use vocabulary:** integral, AQAL, stage, developmental, centre of gravity, Spiral Dynamics, worldview, evolution, postmodern, pluralistic, Green, Orange
 
 **Modules to include:**
-- `amber-mythic-orientation` (PRE-04: must be at gold standard before inclusion)
+- `traditional-orientation` (PRE-04: must be at gold standard before inclusion)
 - `cognitive-dissonance-bridge`
 - `perspective-taking-capacity`
 - `authority-autonomy-transition`
@@ -41,7 +41,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 - `rational-orange-orientation`
 - All Skills modules
 - All States modules
-- QuickStart: `amber-to-rational` (PRE-01: must be complete)
+- QuickStart: `traditional-to-rational` (PRE-01: must be complete)
 
 **Exclude:** All R→P suite modules, all P→I bridge modules, `pluralistic-green-orientation`, `integral-teal-orientation`
 

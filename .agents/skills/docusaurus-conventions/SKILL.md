@@ -182,7 +182,7 @@ const sidebars = {
       label: 'Stage Journeys',
       collapsed: false,
       items: [
-        'modules/amber-mythic-orientation',
+        'modules/traditional-orientation',
         'modules/cognitive-dissonance-bridge',
         'modules/perspective-taking-capacity',
         'modules/authority-autonomy-transition',

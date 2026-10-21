@@ -29,6 +29,16 @@ const config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   plugins: [
+    // Old doc URLs (stage-name migration) keep working: src/data/renamedDocs.json maps old doc id to new.
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: Object.entries(require('./src/data/renamedDocs.json')).map(([from, to]) => ({
+          from: `/docs/${from}`,
+          to: `/docs/${to}`,
+        })),
+      },
+    ],
     [
       require.resolve('@easyops-cn/docusaurus-search-local'),
       ({

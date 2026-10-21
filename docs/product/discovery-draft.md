@@ -37,7 +37,7 @@ persona below, not owned by a persona of its own.
 - **Stage:** Amber (Mythic/Conventional) — values structure, loyalty, belonging, clear right/wrong.
 - **JTBD:** "When I notice tension between what I was taught and what I now experience, I want a steady, non-judgmental path to examine my beliefs, so that I can grow without feeling I'm betraying where I came from."
 - **Needs:** Strengths-first framing (see `aqal-label-crosswalk.md`'s stage-differentiated editorial guidance), no deficit language ("stuck at"), no premature exposure to Rational/Pluralistic vocabulary.
-- **Primary path:** `docs/quickstarts/amber-to-rational.mdx`.
+- **Primary path:** `docs/quickstarts/traditional-to-rational.mdx`.
 - **Relevant tags:** `amber`, `tier-1` (most content), stage-specific line quickstarts as needed.
 
 ### 2. The Rational Achiever
@@ -45,7 +45,7 @@ persona below, not owned by a persona of its own.
 - **Stage:** Orange (Rational) — values evidence, autonomy, achievement, self-authored judgment.
 - **JTBD:** "When my old certainties stop holding up under scrutiny, I want a structured, evidence-aware way to build new judgment, so that I gain capability without becoming cynical or contemptuous of where I started."
 - **Needs:** Canonical terminology is welcome here (per crosswalk guidance for Orange/Green/Integral audiences); values measurable progress and clear frameworks over open-ended reflection.
-- **Primary path:** `docs/quickstarts/amber-to-rational.mdx` (arrival) and `docs/quickstarts/rational-to-pluralistic.mdx` (departure).
+- **Primary path:** `docs/quickstarts/traditional-to-rational.mdx` (arrival) and `docs/quickstarts/rational-to-pluralistic.mdx` (departure).
 - **Relevant tags:** `orange`/`rational`, `cognitive-line` emphasis common at this stage.
 
 ### 3. The Pluralistic Integrator

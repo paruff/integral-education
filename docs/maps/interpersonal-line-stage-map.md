@@ -67,7 +67,7 @@ The following table isolates the characteristic shadow of the **Interpersonal li
 ## Cross-References
 
 ### Stage Orientation Modules
-- [Amber/Mythic Stage Orientation](../modules/amber-mythic-orientation)
+- [Amber/Mythic Stage Orientation](../modules/traditional-orientation)
 - [Rational/Orange Stage Orientation](../modules/rational-orange-orientation)
 - [Pluralistic/Green Stage Orientation](../modules/pluralistic-green-orientation)
 - [Integral/Teal Stage Orientation](../modules/integral-teal-orientation)

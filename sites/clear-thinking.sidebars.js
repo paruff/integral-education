@@ -3,13 +3,13 @@
 /** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
 module.exports = {
   learnerSidebar: [
-    'quickstarts/amber-to-rational',
+    'quickstarts/traditional-to-rational',
     {
       type: 'category',
       label: 'The path',
       collapsible: false,
       items: [
-        'modules/amber-mythic-orientation',
+        'modules/traditional-orientation',
         'modules/rational-orange-orientation',
         'modules/cognitive-dissonance-bridge',
         'modules/perspective-taking-capacity',

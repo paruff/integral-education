@@ -1,11 +1,10 @@
 {
-  "generated": "2026-10-21T17:18:02.987Z",
+  "generated": "2026-10-21T17:28:27.595Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
     "stageDistribution": {
       "Traditional → Pluralistic": 1,
-      "Traditional": 1,
       "Rational → Pluralistic": 9,
       "Traditional → Rational": 7,
       "Pluralistic → Integral": 15,
@@ -20,14 +19,15 @@
       "Rational → Integral": 1,
       "Traditional → Integral": 1,
       "Traditional → Rational (Fowler Stages 2–4)": 1,
-      "Rational → Integral (Spiritual line post-conventional)": 1
+      "Rational → Integral (Spiritual line post-conventional)": 1,
+      "Traditional": 1
     },
     "lineCoverage": {
       "emotional": 50,
       "somatic": 25,
       "cognitive": 68,
-      "moral": 54,
       "interpersonal": 55,
+      "moral": 54,
       "spiritual": 11,
       "self": 24
     },
@@ -82,41 +82,6 @@
         "interoception",
         "affect-labelling",
         "emotion-regulation"
-      ],
-      "goldStandardSections": 17,
-      "hasAQAL": true,
-      "hasPractice": true,
-      "hasEvidence": true,
-      "hasSafetyNote": true,
-      "hasFacilitatorNote": true,
-      "missingJourneySteps": []
-    },
-    {
-      "id": "amber-mythic-orientation",
-      "title": "Orientation: Values, Belonging, and Structure",
-      "file": "docs/modules/amber-mythic-orientation.mdx",
-      "stage": "Traditional",
-      "stageTarget": "Traditional",
-      "lines": [
-        "cognitive",
-        "moral",
-        "interpersonal"
-      ],
-      "safetyTier": "tier-1",
-      "difficulty": "Beginner",
-      "format": "text-reflection",
-      "prerequisites": [],
-      "readingTime": 8,
-      "practiceTime": 10,
-      "tags": [
-        "traditional",
-        "mythic",
-        "spiral-dynamics",
-        "cook-greuter",
-        "kegan",
-        "fowler",
-        "growing-up",
-        "stage-development"
       ],
       "goldStandardSections": 17,
       "hasAQAL": true,
@@ -3092,6 +3057,41 @@
       "missingJourneySteps": []
     },
     {
+      "id": "traditional-orientation",
+      "title": "Orientation: Values, Belonging, and Structure",
+      "file": "docs/modules/traditional-orientation.mdx",
+      "stage": "Traditional",
+      "stageTarget": "Traditional",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Beginner",
+      "format": "text-reflection",
+      "prerequisites": [],
+      "readingTime": 8,
+      "practiceTime": 10,
+      "tags": [
+        "traditional",
+        "mythic",
+        "spiral-dynamics",
+        "cook-greuter",
+        "kegan",
+        "fowler",
+        "growing-up",
+        "stage-development"
+      ],
+      "goldStandardSections": 17,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true,
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
+    },
+    {
       "id": "vision-logic-metasystematic-thinking",
       "title": "Vision-Logic & Metasystematic Thinking",
       "file": "docs/modules/vision-logic-metasystematic-thinking.mdx",
@@ -3521,76 +3521,6 @@
       "source": "pluralistic-green-orientation",
       "target": "vision-logic-metasystematic-thinking",
       "type": "prerequisite"
-    },
-    {
-      "source": "amber-mythic-orientation",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "rational-orange-orientation",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "cognitive-dissonance-bridge",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "perspective-taking-capacity",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "authority-autonomy-transition",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "critical-thinking-foundations",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "evidence-evaluation",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "amber-mythic-orientation",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "rational-orange-orientation",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "cognitive-dissonance-bridge",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "perspective-taking-capacity",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "authority-autonomy-transition",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "critical-thinking-foundations",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
-    },
-    {
-      "source": "evidence-evaluation",
-      "target": "amber-to-rational",
-      "type": "quickstart-member"
     },
     {
       "source": "cognitive-line-concrete-to-formal",
@@ -4305,6 +4235,76 @@
     {
       "source": "gross-state-awareness",
       "target": "state-development",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "traditional-orientation",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-dissonance-bridge",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "perspective-taking-capacity",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "authority-autonomy-transition",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "critical-thinking-foundations",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "evidence-evaluation",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "traditional-orientation",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "rational-orange-orientation",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "cognitive-dissonance-bridge",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "perspective-taking-capacity",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "authority-autonomy-transition",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "critical-thinking-foundations",
+      "target": "traditional-to-rational",
+      "type": "quickstart-member"
+    },
+    {
+      "source": "evidence-evaluation",
+      "target": "traditional-to-rational",
       "type": "quickstart-member"
     }
   ]

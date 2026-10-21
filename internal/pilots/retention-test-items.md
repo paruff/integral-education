@@ -10,7 +10,7 @@ tags: [pilot, retention, fr-15]
 
 **Status:** AI draft, **NOT VALIDATED** (P5-02, #531). A human must validate
 every item before use `[HUMAN-REQUIRED]`. Source: the seven modules of
-`docs/quickstarts/amber-to-rational.mdx`, per the protocol in
+`docs/quickstarts/traditional-to-rational.mdx`, per the protocol in
 `retention-study-protocol.md`.
 
 Each set has 14 items, two per module, so a learner who skipped nothing is

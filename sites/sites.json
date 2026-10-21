@@ -1,14 +1,14 @@
 [
   {
     "id": "clear-thinking",
-    "transition": "amber-to-rational",
+    "transition": "traditional-to-rational",
     "config": "sites/clear-thinking.config.js",
     "linkBaseline": "sites/clear-thinking.link-baseline.json",
     "vocabularyBaseline": "sites/clear-thinking.vocabulary-baseline.json",
     "published": false,
     "docs": [
-      "quickstarts/amber-to-rational",
-      "modules/amber-mythic-orientation",
+      "quickstarts/traditional-to-rational",
+      "modules/traditional-orientation",
       "modules/rational-orange-orientation",
       "modules/cognitive-dissonance-bridge",
       "modules/perspective-taking-capacity",

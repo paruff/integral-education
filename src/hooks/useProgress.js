@@ -1,7 +1,7 @@
 import { useState, useCallback, useMemo } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { markIntervalComplete, isDue, interleaveDueCards } from '@site/src/utils/retrieval';
-import { clearLearnerData, migrateLegacyData, siteKeys } from '@site/src/utils/learnerData';
+import { clearLearnerData, migrateLegacyData, renameModuleIds, siteKeys } from '@site/src/utils/learnerData';
 import { appendReview, withActivity } from '@site/src/utils/metrics';
 
 const DEFAULT_DATA = {
@@ -24,7 +24,7 @@ function loadFromStorage(keys) {
       // Ensure schema is valid
       if (parsed && typeof parsed === 'object' && parsed.modules) {
         // Older stored data may predate retrievalSchedule and the metrics logs — backfill them.
-        return { retrievalSchedule: {}, reviewLog: [], activityDays: [], ...parsed };
+        return renameModuleIds({ retrievalSchedule: {}, reviewLog: [], activityDays: [], ...parsed });
       }
     }
     return { ...DEFAULT_DATA };

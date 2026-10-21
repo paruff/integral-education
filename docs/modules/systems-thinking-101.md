@@ -21,7 +21,7 @@ difficulty: Intermediate
 readingTime: 10
 practiceTime: 10
 prerequisites:
-- rational-orange-orientation
+- rational-orientation
 line: cognitive
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

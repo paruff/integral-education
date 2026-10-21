@@ -1,5 +1,7 @@
 {
   "modules/amber-mythic-orientation": "modules/traditional-orientation",
   "quickstarts/amber-to-rational": "quickstarts/traditional-to-rational",
-  "maps/amber-rational-progress-assessment": "maps/traditional-rational-progress-assessment"
+  "maps/amber-rational-progress-assessment": "maps/traditional-rational-progress-assessment",
+  "modules/rational-orange-orientation": "modules/rational-orientation",
+  "modules/late-orange-disillusionment": "modules/late-rational-disillusionment"
 }

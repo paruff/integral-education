@@ -186,8 +186,8 @@ const sidebars = {
         'modules/cognitive-dissonance-bridge',
         'modules/perspective-taking-capacity',
         'modules/authority-autonomy-transition',
-        'modules/rational-orange-orientation',
-        'modules/late-orange-disillusionment',
+        'modules/rational-orientation',
+        'modules/late-rational-disillusionment',
         'modules/empathy-perspective-plurality',
         'modules/emotional-intelligence-somatic-line',
         'modules/contextual-ethics-moral-complexity',
@@ -333,18 +333,18 @@ Always use the `@site` alias — never relative paths for component imports. `@s
 
 ## Internal links — cross-fork safety
 
-Module body text that uses absolute paths (e.g. `/docs/modules/rational-orange-orientation`) will break across forks that have a different `baseUrl`. Always use Docusaurus doc IDs for cross-document links:
+Module body text that uses absolute paths (e.g. `/docs/modules/rational-orientation`) will break across forks that have a different `baseUrl`. Always use Docusaurus doc IDs for cross-document links:
 
 ```mdx
 // ❌ Breaks in forks with different baseUrl
-[Rational Orange Orientation](/docs/modules/rational-orange-orientation)
+[Rational Orange Orientation](/docs/modules/rational-orientation)
 
 // ✅ Fork-safe: Docusaurus resolves relative to the doc root
-[Rational Orange Orientation](../modules/rational-orange-orientation)
+[Rational Orange Orientation](../modules/rational-orientation)
 
 // ✅ Also fork-safe: use the @docusaurus/Link component in MDX
 import Link from '@docusaurus/Link';
-<Link to="/docs/modules/rational-orange-orientation">Rational Orange Orientation</Link>
+<Link to="/docs/modules/rational-orientation">Rational Orange Orientation</Link>
 ```
 
 When in doubt, use relative paths. They are portable across all forks regardless of `baseUrl`.

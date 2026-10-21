@@ -6,7 +6,7 @@ description: "Use this skill whenever writing, extending, or auditing an Integra
 # Module Authoring — Journey Template Gold Standard
 
 ## Benchmark exemplar — fetch before writing
-- `https://paruff.github.io/integral-education/docs/modules/rational-orange-orientation`
+- `https://paruff.github.io/integral-education/docs/modules/rational-orientation`
 
 This is the quality floor for tone, depth, and how Gifts/Limitations/Frameworks fold into custom-named headings. If you cannot fetch it, stop and report the failure.
 

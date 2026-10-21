@@ -131,9 +131,9 @@ const RESULTS = {
     title: 'Thinking for Yourself',
     description: 'Your answers suggest you have developed a strong internal compass — you evaluate claims on their evidence, make decisions based on your own reasoning, and can hold your own perspective alongside others without losing yourself. These are the foundational capacities of self-authorship. The next growth edges involve integrating emotional and interpersonal dimensions with this cognitive strength.',
     modules: [
-      { title: 'Orientation: Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orange-orientation' },
+      { title: 'Orientation: Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orientation' },
       { title: 'Evidence Evaluation', to: '/docs/modules/evidence-evaluation' },
-      { title: 'Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
+      { title: 'Navigating the Crack', to: '/docs/modules/late-rational-disillusionment' },
     ],
   },
   'rational-stable': {
@@ -142,7 +142,7 @@ const RESULTS = {
     modules: [
       { title: 'Empathy & Perspective-Plurality', to: '/docs/modules/empathy-perspective-plurality' },
       { title: 'Emotional Intelligence & Somatic Line', to: '/docs/modules/emotional-intelligence-somatic-line' },
-      { title: 'Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
+      { title: 'Navigating the Crack', to: '/docs/modules/late-rational-disillusionment' },
       { title: 'Multiple Perspectives Path', to: '/docs/quickstarts/rational-to-pluralistic' },
     ],
   },

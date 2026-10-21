@@ -34,7 +34,7 @@ import NextStep from '@site/src/components/NextStep';
 ```mdx
 <NextStep
   nextTitle="Rational/Orange Stage Orientation"
-  nextLink="/docs/modules/rational-orange-orientation"
+  nextLink="/docs/modules/rational-orientation"
   reflectLink="/docs/reflections/daily-template"
   message="You completed this module. The next step in your path is below."
 />

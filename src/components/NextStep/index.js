@@ -12,7 +12,7 @@ const MODULE_NEXT_STEPS = {
   },
   'traditional-orientation': {
     nextTitle: 'Reason, Achievement, and Effectiveness',
-    nextLink: '/docs/modules/rational-orange-orientation',
+    nextLink: '/docs/modules/rational-orientation',
   },
   'authentic-dialogue-collaborative-meaning': {
     nextTitle: 'Community, Belonging & Collective Intelligence',
@@ -56,7 +56,7 @@ const MODULE_NEXT_STEPS = {
   },
   'cognitive-line-practice-architecture': {
     nextTitle: 'Reason, Achievement, and Effectiveness',
-    nextLink: '/docs/modules/rational-orange-orientation',
+    nextLink: '/docs/modules/rational-orientation',
   },
   'community-belonging-collective-intelligence': {
     nextTitle: 'Relativism & the Limits of Pluralism',
@@ -100,7 +100,7 @@ const MODULE_NEXT_STEPS = {
   },
   'evidence-evaluation': {
     nextTitle: 'Navigating the Crack',
-    nextLink: '/docs/modules/late-orange-disillusionment',
+    nextLink: '/docs/modules/late-rational-disillusionment',
   },
   'flow-peak-experience': {
     nextTitle: 'State Development (QuickStart)',
@@ -134,7 +134,7 @@ const MODULE_NEXT_STEPS = {
     nextTitle: 'Systems, Complexity, and Integration',
     nextLink: '/docs/modules/integral-teal-orientation',
   },
-  'late-orange-disillusionment': {
+  'late-rational-disillusionment': {
     nextTitle: 'Empathy, Perspective-Taking & Plurality',
     nextLink: '/docs/modules/empathy-perspective-plurality',
   },
@@ -182,7 +182,7 @@ const MODULE_NEXT_STEPS = {
     nextTitle: 'Signs You\'re Ready for More Complexity',
     nextLink: '/docs/modules/late-green-emergence-signals',
   },
-  'rational-orange-orientation': {
+  'rational-orientation': {
     nextTitle: 'Cognitive Dissonance Bridge',
     nextLink: '/docs/modules/cognitive-dissonance-bridge',
   },

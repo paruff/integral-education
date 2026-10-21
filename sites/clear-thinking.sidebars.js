@@ -10,7 +10,7 @@ module.exports = {
       collapsible: false,
       items: [
         'modules/traditional-orientation',
-        'modules/rational-orange-orientation',
+        'modules/rational-orientation',
         'modules/cognitive-dissonance-bridge',
         'modules/perspective-taking-capacity',
         'modules/authority-autonomy-transition',

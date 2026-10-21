@@ -8,7 +8,7 @@ const render = (moduleId) => renderToStaticMarkup(createElement(ModuleFooter, { 
 
 test('a middle step links Next to the following step, plus a Return link to its QuickStart', () => {
   const html = render('traditional-orientation');
-  assert.ok(html.includes('href="/docs/modules/rational-orange-orientation"'));
+  assert.ok(html.includes('href="/docs/modules/rational-orientation"'));
   assert.ok(html.includes('Next:'));
   assert.ok(html.includes('Return to Clear Thinking Path'));
 });

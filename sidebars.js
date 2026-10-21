@@ -146,7 +146,7 @@ const learnerSidebar = {
           collapsed: true,
           items: [
             'modules/traditional-orientation',
-            'modules/rational-orange-orientation',
+            'modules/rational-orientation',
             'modules/cognitive-dissonance-bridge',
             'modules/perspective-taking-capacity',
             'modules/authority-autonomy-transition',
@@ -156,7 +156,7 @@ const learnerSidebar = {
               collapsible: true,
               collapsed: true,
               items: [
-                'modules/late-orange-disillusionment',
+                'modules/late-rational-disillusionment',
                 'modules/empathy-perspective-plurality',
                 'modules/emotional-intelligence-somatic-line',
                 'modules/contextual-ethics-moral-complexity',

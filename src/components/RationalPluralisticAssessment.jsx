@@ -365,8 +365,8 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
       description: 'Your responses suggest you may be experiencing signals that are common when an achievement-focused way of operating starts to feel insufficient: achievement no longer fully satisfies, individual optimization has diminishing returns, and questions about meaning are becoming harder to dismiss. This is not a failure — it is a developmental signal.',
       rationale: 'These modules address the specific experience you are describing: the gap between external success and internal meaning, and the first steps toward a more expansive worldview.',
       modules: [
-        { title: 'When Effectiveness Isn\'t Enough: Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
-        { title: 'Orientation: Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orange-orientation' },
+        { title: 'When Effectiveness Isn\'t Enough: Navigating the Crack', to: '/docs/modules/late-rational-disillusionment' },
+        { title: 'Orientation: Reason, Achievement, and Effectiveness', to: '/docs/modules/rational-orientation' },
         { title: 'Cognitive Dissonance Bridge', to: '/docs/modules/cognitive-dissonance-bridge' },
       ],
     };
@@ -417,7 +417,7 @@ function getModuleRecommendations(sectionA, sectionB, sectionC) {
     rationale: 'These modules address foundational capacities across this transition and can be explored in any order based on your specific interests and growing edges.',
     modules: [
       { title: 'Empathy & Perspective-Plurality', to: '/docs/modules/empathy-perspective-plurality' },
-      { title: 'When Effectiveness Isn\'t Enough: Navigating the Crack', to: '/docs/modules/late-orange-disillusionment' },
+      { title: 'When Effectiveness Isn\'t Enough: Navigating the Crack', to: '/docs/modules/late-rational-disillusionment' },
       { title: 'Multiple Perspectives Path', to: '/docs/quickstarts/rational-to-pluralistic' },
     ],
   };

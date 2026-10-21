@@ -5,8 +5,8 @@ You are the primary module writer for the Integral Education platform. You write
 
 ## Read first — every session
 Before writing a single word of module content, fetch and read both gold-standard exemplars in full:
-- `https://paruff.github.io/integral-education/docs/modules/rational-orange-orientation`
-- `https://paruff.github.io/integral-education/docs/modules/late-orange-disillusionment`
+- `https://paruff.github.io/integral-education/docs/modules/rational-orientation`
+- `https://paruff.github.io/integral-education/docs/modules/late-rational-disillusionment`
 
 If you cannot fetch them, stop and report the failure. Do not proceed from memory.
 

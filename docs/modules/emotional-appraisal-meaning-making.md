@@ -140,7 +140,7 @@ Appraisal is never stage-neutral. The meaning an event acquires depends on the i
 | Stage | Appraisal Focus | Characteristic Inner Response | Cross-reference |
 | :--- | :--- | :--- | :--- |
 | **Conformist (Amber/Mythic)** | Group belonging and rule compliance | "I have failed the group's standard; I may be rejected or shamed." | [Amber/Mythic Orientation](./traditional-orientation) |
-| **Achiever (Rational/Orange)** | Goal attainment and individual competence | "This feedback threatens my performance metrics and status." | [Rational/Orange Orientation](./rational-orange-orientation) |
+| **Achiever (Rational/Orange)** | Goal attainment and individual competence | "This feedback threatens my performance metrics and status." | [Rational/Orange Orientation](./rational-orientation) |
 | **Individualist (Late Orange/Pluralistic)** | Authentic self-expression and personal values | "Does this feedback reflect a clash between their expectations and my genuine approach?" | [Pluralistic/Green Orientation](./pluralistic-green-orientation) |
 | **Strategist (Integral/Teal)** | Systemic insight and multi-perspectival integration | "What does this reveal about the system I am operating in, and what perspective am I missing?" | [Integral/Teal Orientation](./integral-teal-orientation) |
 

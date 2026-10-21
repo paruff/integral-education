@@ -22,6 +22,20 @@ readingTime: 10
 practiceTime: 10
 line: interpersonal
 safety_tier: 2
+quadrants:
+- We
+- I
+- It
+level: Pluralistic → Integral
+lines:
+- emotional
+- interpersonal
+- somatic
+states:
+- reflective
+- somatic
+types:
+- dialogue-supported
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';

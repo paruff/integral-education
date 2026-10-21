@@ -11,10 +11,8 @@ Produced by `node scripts/check-aqal-tags.mjs` against the "Minimum Metadata Req
 
 - 17 modules had `safety_tier: 2` but no `tier-2` tag (mechanical; tag added).
 
-## Open: needs a human decision (59 mismatches)
+## Resolved in the follow-up PR (all 59 mismatches; `check-aqal-tags.mjs` now reports zero)
 
-1. **Missing required metadata (7 modules):** `affect-labelling-somatic-correlation`, `co-regulation-relational-attunement`, `cross-difference-dialogue-trust-building`, `emotional-appraisal-meaning-making`, `relational-repair-conflict-navigation`, `shadow-integration-101`, `somatic-line-overview`. They lack some of `quadrants`, `level`, `lines`, `states`, `types`. The values are a content judgment, so none were guessed.
-2. **Line vocabulary (23 modules use `self`):** The map lists six lines (cognitive, emotional, moral, interpersonal, somatic, spiritual) but the platform has a Self Line suite. Decide: add Self to the map (recommended) or retag the modules.
-3. **Other unlisted lines (6 modules):** `ecological` (1), `leadership` (1), `systems` (2), `values` (2). Decide: add to the map, or map each to an existing line.
-
-Once these are settled, wire the script into lefthook/CI so the count stays at zero.
+1. **Missing metadata (7 modules):** `quadrants`, `level`, `lines`, `states`, `types` added from each module's own AQAL Mapping section. AI-drafted; please check the values.
+2. **`self` line (23 modules):** Self/Ego Line added to `docs/maps/aqal-competency-map.md` (marked Draft, awaiting SME) and to the script's allowed lines.
+3. **Other lines (6 modules):** `ecological`, `leadership`, `systems`, `values` removed from `lines`; each module already carries its mapped lines (cognitive, moral, interpersonal, ...).

@@ -12,7 +12,7 @@ import yaml from 'js-yaml';
 
 const DIR = resolve(import.meta.dirname, '../docs/modules');
 const QUADRANTS = ['I', 'We', 'It', 'Its'];
-const LINES = ['cognitive', 'emotional', 'moral', 'interpersonal', 'somatic', 'spiritual'];
+const LINES = ['cognitive', 'emotional', 'moral', 'interpersonal', 'somatic', 'spiritual', 'self'];
 const TIERS = [1, 2, 3];
 
 let problems = 0;

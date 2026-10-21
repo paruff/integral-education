@@ -79,7 +79,7 @@ jobs:
       - name: Build Pages Artifact (published sites only)
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
         env:
-          GOATCOUNTER_CODE: ${{ vars.GOATCOUNTER_CODE }}
+          GOATCOUNTER_CODE: paruff
         run: |
           node scripts/build-sites.mjs --published-only
           scripts/hash-build.sh build | tee build/.build-hash

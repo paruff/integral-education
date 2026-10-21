@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T17:28:27.595Z",
+  "generated": "2026-10-21T17:32:02.073Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
@@ -107,7 +107,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -540,7 +540,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -586,7 +586,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -705,7 +705,7 @@
       "difficulty": "Intermediate",
       "format": "embodied-guided",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -852,7 +852,7 @@
       "difficulty": "Intermediate",
       "format": "embodied-guided",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -969,7 +969,7 @@
       "difficulty": "Intermediate",
       "format": "embodied-guided",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -1387,7 +1387,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -1417,9 +1417,9 @@
       "missingJourneySteps": []
     },
     {
-      "id": "late-orange-disillusionment",
+      "id": "late-rational-disillusionment",
       "title": "When Effectiveness Isn''t Enough: Navigating the Crack",
-      "file": "docs/modules/late-orange-disillusionment.mdx",
+      "file": "docs/modules/late-rational-disillusionment.mdx",
       "stage": "Rational",
       "stageTarget": "Rational",
       "lines": [
@@ -1569,7 +1569,7 @@
       "difficulty": "Intermediate",
       "format": "embodied-guided",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 15,
@@ -1978,7 +1978,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 8,
       "practiceTime": 12,
@@ -2002,9 +2002,9 @@
       "missingJourneySteps": []
     },
     {
-      "id": "rational-orange-orientation",
+      "id": "rational-orientation",
       "title": "Orientation: Reason, Achievement, and Effectiveness",
-      "file": "docs/modules/rational-orange-orientation.mdx",
+      "file": "docs/modules/rational-orientation.mdx",
       "stage": "Rational",
       "stageTarget": "Rational",
       "lines": [
@@ -2093,7 +2093,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 12,
@@ -3039,7 +3039,7 @@
       "difficulty": "Intermediate",
       "format": "text-reflection",
       "prerequisites": [
-        "rational-orange-orientation"
+        "rational-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 10,
@@ -3148,7 +3148,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "authentic-dialogue-collaborative-meaning",
       "type": "prerequisite"
     },
@@ -3193,12 +3193,12 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "community-belonging-collective-intelligence",
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "contextual-ethics-moral-complexity",
       "type": "prerequisite"
     },
@@ -3218,7 +3218,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "ecological-systems-consciousness",
       "type": "prerequisite"
     },
@@ -3243,7 +3243,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "emotional-intelligence-somatic-line",
       "type": "prerequisite"
     },
@@ -3273,7 +3273,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "empathy-perspective-plurality",
       "type": "prerequisite"
     },
@@ -3308,7 +3308,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "late-green-emergence-signals",
       "type": "prerequisite"
     },
@@ -3318,7 +3318,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "mindfulness-deepening",
       "type": "prerequisite"
     },
@@ -3368,7 +3368,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "pluralistic-green-orientation",
       "type": "prerequisite"
     },
@@ -3383,7 +3383,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "relativism-limits-of-pluralism",
       "type": "prerequisite"
     },
@@ -3513,7 +3513,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "systems-thinking-101",
       "type": "prerequisite"
     },
@@ -3848,7 +3848,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "late-orange-disillusionment",
+      "source": "late-rational-disillusionment",
       "target": "rational-to-pluralistic",
       "type": "quickstart-member"
     },
@@ -3893,7 +3893,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "late-orange-disillusionment",
+      "source": "late-rational-disillusionment",
       "target": "rational-to-pluralistic",
       "type": "quickstart-member"
     },
@@ -4243,7 +4243,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "traditional-to-rational",
       "type": "quickstart-member"
     },
@@ -4278,7 +4278,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "rational-orange-orientation",
+      "source": "rational-orientation",
       "target": "traditional-to-rational",
       "type": "quickstart-member"
     },

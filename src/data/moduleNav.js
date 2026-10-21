@@ -236,7 +236,7 @@ export default {
     "quickstart": "pluralistic-to-integral",
     "next": null
   },
-  "late-orange-disillusionment": {
+  "late-rational-disillusionment": {
     "quickstart": "rational-to-pluralistic",
     "next": {
       "title": "Empathy & Perspective-Plurality",
@@ -428,10 +428,10 @@ export default {
     "quickstart": "traditional-to-rational",
     "next": {
       "title": "Reason, Achievement, and Effectiveness",
-      "to": "/docs/modules/rational-orange-orientation"
+      "to": "/docs/modules/rational-orientation"
     }
   },
-  "rational-orange-orientation": {
+  "rational-orientation": {
     "quickstart": "traditional-to-rational",
     "next": {
       "title": "Cognitive Dissonance Bridge",

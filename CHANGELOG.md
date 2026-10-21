@@ -33,7 +33,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 ### Fixed
 
 - **Accessibility** — 6 WCAG 2.1 AA violations (4 link-in-text-block, 2 color-contrast); 4 new `:focus-visible` rules added
-- **Prerequisites** — 5 Beginner modules had incorrect rational-orange-orientation prerequisite; cleaned to `prerequisites: None`
+- **Prerequisites** — 5 Beginner modules had incorrect rational-orientation prerequisite; cleaned to `prerequisites: None`
 - **Heading hierarchy** — H1→H2 across all docs for WCAG SC 1.3.1 compliance
 - **Safety language** — removed prescribed breath-count ratios from somatic modules; crisis resource banner added to all shadow/state modules
 - **Homepage link text** — efficacy statement moved from orphaned position between loop and QuickStarts into hero section

@@ -38,7 +38,7 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 - `perspective-taking-capacity`
 - `authority-autonomy-transition`
 - `amber-shadow-moral-certainty` (PRE-09: must exist and pass Safety Review)
-- `rational-orange-orientation`
+- `rational-orientation`
 - All Skills modules
 - All States modules
 - QuickStart: `traditional-to-rational` (PRE-01: must be complete)
@@ -52,8 +52,8 @@ Do not scaffold a partial fork. A fork with missing QuickStarts, unaudited modul
 **Public-facing name:** Clear Thinking & Effectiveness
 
 **Modules to include:**
-- `rational-orange-orientation`
-- `late-orange-disillusionment`
+- `rational-orientation`
+- `late-rational-disillusionment`
 - Full R→P suite (PRE-05: all 7 must be at gold standard):
   - `empathy-perspective-plurality`
   - `emotional-intelligence-somatic-line`

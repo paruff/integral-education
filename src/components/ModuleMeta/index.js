@@ -48,7 +48,7 @@ function difficultyBg(difficulty) {
 
 const KNOWN_MODULES = {
   'traditional-orientation': 'Values, Belonging, and Structure',
-  'rational-orange-orientation': 'Reason, Achievement, and Effectiveness',
+  'rational-orientation': 'Reason, Achievement, and Effectiveness',
   'pluralistic-green-orientation': 'Pluralism, Empathy, and Belonging',
   'integral-teal-orientation': 'Systems, Complexity, and Integration',
   'mindfulness-basics': 'Mindfulness Basics',

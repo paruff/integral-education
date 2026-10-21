@@ -19,16 +19,24 @@ const OUTPUT_FILE = process.argv[2] === '--output' && process.argv[3]
   ? path.resolve(process.argv[3])
   : path.join(__dirname, '..', 'docs', '.content-graph.json');
 
-// Known stage labels in frontmatter
-const STAGE_LABELS = [
-  'Archaic', 'Magic', 'Magenta', 'Red', 'Amber', 'Orange', 'Green', 'Teal',
-  'Integral',
-];
+// Stage names (see .agents/skills/developmental-vocabulary). Old colour names are aliases
+// until the migration finishes; every stage leaves this script under its new name.
+const STAGE_ALIASES = {
+  Archaic: 'Archaic', Beige: 'Archaic',
+  Magical: 'Magical', Magic: 'Magical', Magenta: 'Magical', Purple: 'Magical',
+  Egocentric: 'Egocentric', Red: 'Egocentric',
+  Traditional: 'Traditional', Amber: 'Traditional',
+  Rational: 'Rational', Orange: 'Rational',
+  Pluralistic: 'Pluralistic', Green: 'Pluralistic',
+  Integral: 'Integral', Teal: 'Integral', Turquoise: 'Integral',
+};
+const STAGE_LABELS = Object.keys(STAGE_ALIASES);
 const STAGE_TRANSITIONS = [
-  'Amber → Rational', 'Rational → Pluralistic', 'Pluralistic → Integral',
-  'Amber → Orange', 'Orange → Green', 'Green → Teal',
-  'Rational', 'Amber',
+  'Traditional → Rational', 'Rational → Pluralistic', 'Pluralistic → Integral',
+  'Amber → Rational', 'Amber → Orange', 'Orange → Green', 'Green → Teal',
+  'Rational', 'Traditional', 'Amber',
 ];
+const stageName = (s) => STAGE_ALIASES[s] ?? s;
 
 function parseFrontmatter(filePath) {
   const content = fs.readFileSync(filePath, 'utf-8');
@@ -169,13 +177,13 @@ function inferStage(fm) {
     return fm.level;
   }
   if (fm.level && STAGE_LABELS.includes(fm.level)) {
-    return fm.level;
+    return stageName(fm.level);
   }
   if (fm.tags) {
     const stageTag = fm.tags.find(t =>
-      ['archaic', 'magenta', 'red', 'amber', 'orange', 'green', 'teal', 'integral'].includes(t)
+      STAGE_LABELS.includes(t.charAt(0).toUpperCase() + t.slice(1))
     );
-    if (stageTag) return stageTag.charAt(0).toUpperCase() + stageTag.slice(1);
+    if (stageTag) return stageName(stageTag.charAt(0).toUpperCase() + stageTag.slice(1));
   }
   return 'Unknown';
 }
@@ -199,9 +207,9 @@ function inferSafetyTier(fm) {
 function inferDifficulty(fm) {
   if (fm.difficulty) return fm.difficulty;
   const stage = inferStage(fm);
-  if (['Archaic', 'Magic', 'Magenta', 'Red', 'Amber'].includes(stage)) return 'Beginner';
-  if (['Orange', 'Rational'].includes(stage)) return 'Intermediate';
-  if (['Green', 'Teal', 'Integral'].includes(stage)) return 'Advanced';
+  if (['Archaic', 'Magical', 'Egocentric', 'Traditional'].includes(stage)) return 'Beginner';
+  if (stage === 'Rational') return 'Intermediate';
+  if (['Pluralistic', 'Integral'].includes(stage)) return 'Advanced';
   return 'Unknown';
 }
 

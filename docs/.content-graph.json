@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T17:41:08.446Z",
+  "generated": "2026-10-21T17:45:49.547Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
@@ -1470,7 +1470,7 @@
       "difficulty": "Beginner",
       "format": "embodied-guided",
       "prerequisites": [
-        "magic-purple-stage-orientation"
+        "magical-stage-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 10,
@@ -1492,9 +1492,9 @@
       "missingJourneySteps": []
     },
     {
-      "id": "magic-purple-stage-orientation",
+      "id": "magical-stage-orientation",
       "title": "Orientation: Patterns, Ritual, and Protection",
-      "file": "docs/modules/magic-purple-stage-orientation.mdx",
+      "file": "docs/modules/magical-stage-orientation.mdx",
       "stage": "Magical",
       "stageTarget": "Magical",
       "lines": [
@@ -3313,7 +3313,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "magic-purple-stage-orientation",
+      "source": "magical-stage-orientation",
       "target": "magic-mythic-red-stage-orientation",
       "type": "prerequisite"
     },

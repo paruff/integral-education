@@ -29,7 +29,7 @@ tags:
 difficulty: Beginner
 readingTime: 10
 practiceTime: 10
-prerequisites: magic-purple-stage-orientation
+prerequisites: magical-stage-orientation
 line: cross-cutting
 ---
 import ModuleFooter from '@site/src/components/ModuleFooter';
@@ -59,7 +59,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 ## 🧭 Orient
 
 :::info Before this module
-This module assumes familiarity with [Magic/Purple Stage Orientation](./magic-purple-stage-orientation), the first module in the Magic/Purple → Red/Amber developmental sequence.
+This module assumes familiarity with [Magic/Purple Stage Orientation](./magical-stage-orientation), the first module in the Magic/Purple → Red/Amber developmental sequence.
 :::
 
 **Position in sequence:** This is the second module in the **Magic/Purple → Red/Amber** developmental sequence, following Magic/Purple Stage Orientation. It provides the conceptual and experiential foundation for understanding the Magic-Mythic/Red stage — the emergence of individual selfhood and personal power out of the tribal matrix that Purple provides. This is the stage the Amber/Mythic Orientation module implicitly assumes as prior; this module fills that gap directly.

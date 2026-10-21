@@ -413,7 +413,7 @@ export default function StartPage() {
         <p>
           <strong>Supported range.</strong> Self-guided content on this site begins at the Amber
           stage. Orientations to the earlier stages, for facilitators and educators, are
-          in <Link to="/docs/modules/magic-purple-stage-orientation">Magic/Purple</Link> and{' '}
+          in <Link to="/docs/modules/magical-stage-orientation">Magic/Purple</Link> and{' '}
           <Link to="/docs/modules/magic-mythic-red-stage-orientation">Magic-Mythic/Red</Link>.
           Self-guided experiential practice for those stages is out of scope by design: they
           need a relational, in-person container that text alone cannot give.

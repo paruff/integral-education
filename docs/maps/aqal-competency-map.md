@@ -330,7 +330,7 @@ Types are stable styles that cut across levels and states. They shape how compet
 >
 > The tables below are **facilitator-reference material only**: descriptive patterns that help a practitioner recognize where someone may be centered, design developmentally appropriate support, and honor the genuine gifts present at each stage. These descriptions are not rubrics for learners to score themselves, and they are not intended to be shared directly with someone whose current centre of gravity is at the described stage. Unlike the Amber-and-above rows in this map, they carry no assessment function.
 
-**Cross-references:** [MM-01 · Magic/Purple Stage Orientation](../modules/magic-purple-stage-orientation) | [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/magic-mythic-red-stage-orientation)
+**Cross-references:** [MM-01 · Magic/Purple Stage Orientation](../modules/magical-stage-orientation) | [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/magic-mythic-red-stage-orientation)
 
 ---
 
@@ -338,7 +338,7 @@ Types are stable styles that cut across levels and states. They shape how compet
 
 **Stage overview:** Purple/Magic is characterized by participatory embeddedness, tribal belonging, animistic world-sensing, and pre-individual identity. The self is not yet clearly differentiated from the group. Meaning is generated through ritual, repetition, and mythic story. Safety is experienced as belonging, and the world is perceived as alive, animated, and interpersonally responsive.
 
-See [MM-01 · Magic/Purple Stage Orientation](../modules/magic-purple-stage-orientation) for the full stage-level account.
+See [MM-01 · Magic/Purple Stage Orientation](../modules/magical-stage-orientation) for the full stage-level account.
 
 #### Quadrant Expression at Magic/Purple
 

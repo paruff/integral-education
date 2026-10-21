@@ -227,15 +227,16 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
   | Outcome (headline) | Delayed retention score, ≥7 days after the pathway | FR-15 study | Effect size with interval, reported per stage site |
   | Process | Reviews completed within 2 days of due | `useProgress`, local | ≥60% for active learners |
   | Process | Calibration gap: share of cards rated "remembered" then missed at the next review | `useProgress`, local | Falling over a pathway |
-  | Process | Pathway completion; return within 7 and 30 days | Local, plus site analytics if P10-01 approves | Baseline first, then per-site trend |
-  | Fit | Learners who switch stage site after their first visit | Hub analytics | Baseline; a high rate signals mis-placement |
+  | Process | Pathway completion; return within 7 and 30 days | Local. Site analytics adds an aggregate completion proxy; returns stay local only (`analytics-decision.md`) | Baseline first, then per-site trend |
+  | Fit | Learners who switch stage site after their first visit | Hub analytics (aggregate proxy, not a per-learner rate) | Baseline; a high rate signals mis-placement |
   | Self-report (never headline) | Perceived usefulness, comfort with stage language | Study survey | Reported separately |
   | Guardrail | Accessibility violations; safety reports; build | CI, issues | 0; reviewed within 72h; green |
 
   Process metrics are computed in the learner's browser and shown to them
   on the progress page. They also serve as FR-13's visible progress. Nothing
   leaves the browser unless the learner exports it. Any site-wide analytics
-  must be cookieless, aggregate-only and approved by a human (P10-01).
+  must be cookieless, aggregate-only and approved by a human (P10-01;
+  decided in `analytics-decision.md`).
   *Acceptance:* metrics visible on `docs/my-progress.mdx`; a baseline is
   recorded in `docs/METRICS.md` before the first stage site launches.
 

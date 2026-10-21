@@ -8,6 +8,7 @@ file types scoped to one feature.
 - `discovery-draft.md` — product-level discovery-flow output (persona, JTBD, riskiest assumption)
 - `specification.md` — product-wide requirements and acceptance criteria
 - `plan.md` — the single consolidated product plan
+- `analytics-decision.md` — P10-01: cookieless, aggregate-only site analytics and what it may collect
 - `design.md` — point-in-time architectural snapshot from the product-discovery
   session. `ARCHITECTURE.md` at repo root remains the living, continuously-updated
   reference; this file does not replace it.

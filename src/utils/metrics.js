@@ -84,3 +84,16 @@ export function computeMetrics(data = {}, pathways = [], now = new Date()) {
       .filter((p) => p.started > 0),
   };
 }
+
+// The only fields that can leave the browser (P10-03). Counts and rates only:
+// no card text, answers, ratings, reflections or dates.
+export function buildExport(metrics, now = new Date()) {
+  const { reviews, calibration, returns, pathways } = metrics;
+  return {
+    exportedOn: new Date(now).toISOString().slice(0, 10),
+    reviews: { onTime: reviews.onTime, total: reviews.total },
+    calibration: { missed: calibration.missed, pairs: calibration.pairs },
+    returns: { distinctDays: returns.distinctDays, within7: returns.within7, within30: returns.within30 },
+    pathways: pathways.map((p) => ({ id: p.id, done: p.done, total: p.total })),
+  };
+}

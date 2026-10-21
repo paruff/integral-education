@@ -51,6 +51,13 @@ jobs:
         run: npm run build:sites
         timeout-minutes: 10
 
+      # WCAG 2.2 AA (NFR-02): axe-core over key pages of the built site; exits 1 on any violation.
+      - name: Accessibility Audit
+        run: |
+          npx docusaurus serve --port 3099 --no-open &
+          curl --retry 30 --retry-delay 1 --retry-connrefused -fsS -o /dev/null http://localhost:3099/integral-education/
+          node scripts/audit-a11y.mjs
+
       - name: Record Build End
         id: build-end
         run: echo "time=$(date +%s%N)" >> $GITHUB_OUTPUT

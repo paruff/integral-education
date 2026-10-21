@@ -81,7 +81,7 @@ Critical thinking, evidence evaluation, cognitive dissonance, systems consciousn
 
 ## Quality Gates
 
-Every module is held to the [Instructional Design Protocol](docs/quality/instructional-design-protocol.md) and [Evidence-Vetting Checklist](docs/quality/evidence-vetting-checklist.md). CI enforces:
+Every module is held to the [Instructional Design Protocol](internal/quality/instructional-design-protocol.md) and [Evidence-Vetting Checklist](internal/quality/evidence-vetting-checklist.md). CI enforces:
 - **Content Protocol**: no hype language, required safety terms in shadow modules, AQAL token coverage
 - **Build**: Docusaurus production build must pass
 - **Security**: npm audit (high+), CodeQL analysis, dependency review
@@ -111,10 +111,10 @@ npm run build   # production build
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before contributing. Key reference documents:
 
-- [Instructional Design Protocol](docs/quality/instructional-design-protocol.md)
+- [Instructional Design Protocol](internal/quality/instructional-design-protocol.md)
 - [AQAL Label Crosswalk](docs/maps/aqal-label-crosswalk.md)
-- [Evidence-Vetting Checklist](docs/quality/evidence-vetting-checklist.md)
-- [Peer Review SOP](docs/quality/peer-review-sop.md)
+- [Evidence-Vetting Checklist](internal/quality/evidence-vetting-checklist.md)
+- [Peer Review SOP](internal/quality/peer-review-sop.md)
 - [Shadowwork Safety Standard](docs/safety/shadowwork-safety-standard.md)
 - [Facilitator Qualification Standard](docs/safety/facilitator-qualification-standard.md)
 - [State Development Safety Standard](docs/safety/state-development-safety-standard.md)

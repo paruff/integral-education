@@ -19,7 +19,7 @@ validation & delivery (.github/workflows/**, npm run build)
 - Safety and evidence standards are upstream constraints for all learning content.
 
 ## Hard Architectural Rules
-- Keep canonical protocol sources in `docs/quality/`, `docs/maps/`, and `docs/implementation/` as single sources of truth.
+- Keep canonical protocol sources in `internal/quality/`, `docs/maps/`, and `docs/implementation/` as single sources of truth.
 - Preserve Docusaurus structure: content in `docs/`, UI in `src/`, static assets in `static/`.
 - Ensure sidebar entries and frontmatter IDs stay aligned with file paths.
 - Treat broken links/build failures as blocking defects.
@@ -29,9 +29,9 @@ validation & delivery (.github/workflows/**, npm run build)
 - `README.md`
 - `sidebars.js`
 - `docusaurus.config.js`
-- `docs/quality/instructional-design-protocol.md`
-- `docs/quality/evidence-vetting-checklist.md`
-- `docs/quality/peer-review-sop.md`
+- `internal/quality/instructional-design-protocol.md`
+- `internal/quality/evidence-vetting-checklist.md`
+- `internal/quality/peer-review-sop.md`
 - `docs/maps/aqal-label-crosswalk.md`
 - `.github/workflows/ci-quality.yml`
 - `.github/workflows/content-protocol.yml`

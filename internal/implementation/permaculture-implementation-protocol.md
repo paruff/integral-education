@@ -11,9 +11,9 @@ This document is a domain-specific implementation example that translates the re
 
 Canonical references:
 
-- `docs/quality/instructional-design-protocol.md`
-- `docs/quality/evidence-vetting-checklist.md`
-- `docs/quality/peer-review-sop.md`
+- `internal/quality/instructional-design-protocol.md`
+- `internal/quality/evidence-vetting-checklist.md`
+- `internal/quality/peer-review-sop.md`
 
 Use this as a worked pattern for designing objective, skills-focused courses in other domains.
 

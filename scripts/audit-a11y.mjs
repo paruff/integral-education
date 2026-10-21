@@ -28,7 +28,7 @@ async function run() {
   mkdirSync(OUTPUT_DIR, { recursive: true });
 
   console.log('Launching browser...');
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: process.env.CI ? ['--no-sandbox'] : [] }) // ubuntu-24.04 runners block Chrome's user-namespace sandbox;
   const results = [];
 
   for (const target of TARGETS) {
@@ -43,7 +43,7 @@ async function run() {
     } catch (e) {
       console.log(`  ⚠️  Could not load ${url}: ${e.message}`);
       await page.close();
-      continue;
+      continue; // counted as unaudited by the exit check below
     }
     
     // Inject axe-core from CDN (bundled approach)
@@ -143,6 +143,12 @@ async function run() {
     JSON.stringify(report, null, 2)
   );
   console.log(`\nFull report saved to artifacts/axe-report.json`);
+
+  // Fail CI on any violation, or when a target could not be audited.
+  if (totalViolations > 0 || results.length < TARGETS.length) {
+    console.error(`\nFAIL: ${totalViolations} violations, ${results.length}/${TARGETS.length} pages audited`);
+    process.exit(1);
+  }
 }
 
 run().catch(err => {

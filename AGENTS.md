@@ -56,7 +56,7 @@
 - Product-level discovery/spec/design/tasks: docs/product/
 - Feature-level discovery/spec/design/tasks: docs/features/<slug>/
 - AQAL map: docs/maps/
-- Quality gates: docs/quality/
+- Quality gates: internal/quality/
 
 ## See Also
 - docs/AI_COST_GUIDE.md

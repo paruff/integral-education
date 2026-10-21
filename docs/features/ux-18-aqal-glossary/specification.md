@@ -25,7 +25,7 @@ WCAG 2.1 AA compliance is both an ethical obligation for an educational platform
 - Document all Level A and Level AA violations
 - Fix all Level A violations found
 - Run Lighthouse accessibility audit targeting score 90+
-- Document final audit results in docs/quality/accessibility-audit.md
+- Document final audit results in internal/quality/accessibility-audit.md
 - Document methodology for quarterly re-runs
 
 ### Non-Functional
@@ -35,5 +35,5 @@ WCAG 2.1 AA compliance is both an ethical obligation for an educational platform
 ## Acceptance Criteria
 1. axe-core reports zero Level A violations on all audited pages
 2. Lighthouse accessibility score 90 or above on all audited pages
-3. Audit results documented in docs/quality/accessibility-audit.md
+3. Audit results documented in internal/quality/accessibility-audit.md
 4. Audit methodology documented so it can be re-run quarterly

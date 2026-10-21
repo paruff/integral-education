@@ -73,7 +73,7 @@ Cloudflare Web Analytics. Their feature claims have not been verified here.
 ## Tool chosen (P10-01a)
 
 - **Tool:** GoatCounter, hosted (site code `paruff`). Chosen by @paruff,
-  2026-10-21, from `analytics-tool-shortlist.md`.
+  2026-10-21, on `analytics-tool-shortlist.md`.
 - **Why:** free, and its own documentation states no cookies, no
   localStorage and no stored IP, which meets the "never" rules above.
 - **How it is loaded:** only by the deploy build on `main`
@@ -81,7 +81,7 @@ Cloudflare Web Analytics. Their feature claims have not been verified here.
   builds never load it.
 - **Events counted:** `enter-stage-site` and `choose-again`, plus page views.
 - **Still to check after the first deploy:** devtools shows no cookies and
-  no localStorage or sessionStorage entries from the tool. Result: _not yet
-  checked_.
+  no localStorage or sessionStorage entries from the tool. Record the result
+  here: _not yet checked_.
 - **Open:** whether the GoatCounter export is enough for the P10-04
   baseline has not been confirmed.

@@ -2,10 +2,11 @@
 
 ## Learning metrics (FR-19)
 
-**Status:** structure only (P10-04, #535). **The baseline is not recorded yet.**
-It cannot be until the analytics tool is chosen and live (#586) and the
-retention study has produced a first score (#21). No value below is an
-estimate; a blank means "not measured".
+**Status:** structure only (P10-04, #535). **No baseline values yet.**
+Analytics went live on production on 2026-10-21 (GoatCounter, #586), so
+aggregate counts start from that date. The delayed retention score needs the
+retention study (#21) and the learner-export metrics need P10-03. No value
+below is an estimate; a blank means "not measured".
 
 Order matters: the delayed retention score is the headline. Process metrics
 are habits, and self-report is never the headline (Soderstrom & Bjork, 2015;

@@ -13,6 +13,7 @@ lines:
 states:
 - introspection
 tags:
+- tier-2
 - shadow
 - projection
 - self-awareness
@@ -23,6 +24,7 @@ prerequisites:
 - pluralistic-green-orientation
 line: cross-cutting
 safety_tier: 2
+teaches_framework: true
 ---
 
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';

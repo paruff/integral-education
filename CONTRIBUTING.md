@@ -17,7 +17,7 @@ All contributors must:
 
 ### Types of Contribution
 
-1. **Module content** — new learning modules, QuickStart paths, or maps (see [Instructional Design Protocol](docs/quality/instructional-design-protocol.md))
+1. **Module content** — new learning modules, QuickStart paths, or maps (see [Instructional Design Protocol](internal/quality/instructional-design-protocol.md))
 2. **Platform improvements** — Docusaurus configuration, React components, search, accessibility
 3. **Safety reviews** — clinician review of Tier 2 module content
 4. **Bug fixes** — broken links, build errors, accessibility violations
@@ -36,7 +36,7 @@ All contributors must:
 
 ### Module Content Standards
 
-All modules must follow the [13-Section Gold Standard](docs/quality/instructional-design-protocol.md):
+All modules must follow the [13-Section Gold Standard](internal/quality/instructional-design-protocol.md):
 
 1. AQAL Mapping
 2. Theoretical Frameworks
@@ -92,4 +92,4 @@ Before opening a PR:
 - File an issue for process questions
 - See the [Product Charter](internal/implementation/product-charter) for project scope
 - See [AQAL Competency Map](docs/maps/aqal-competency-map.md) for module placement
-- See [Evidence Vetting Checklist](docs/quality/evidence-vetting-checklist.md) for citation guidance
+- See [Evidence Vetting Checklist](internal/quality/evidence-vetting-checklist.md) for citation guidance

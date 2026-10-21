@@ -69,6 +69,19 @@ const PROHIBITED_VOCABULARY = [
   'pre-trans',
 ];
 
+// Framework terms a module may use freely once it teaches them: a module with a
+// heading that names the term, or `teaches_framework: true` in its frontmatter (e.g. "The Pre/Trans Distinction", "How AQAL Maps
+// Collective Shadow") is teaching that term, so it is not jargon leaking in.
+const FRAMEWORK_TERMS = ['integral', 'aqal', 'pre/trans', 'pre-trans'];
+
+function teachesTerm(body, word, fm) {
+  if (!FRAMEWORK_TERMS.includes(word.toLowerCase())) return false;
+  // Explicit opt-in: `teaches_framework: true` in frontmatter (only these terms).
+  if (String(fm.teaches_framework) === 'true') return true;
+  const variants = word.toLowerCase().startsWith('pre') ? ['pre/trans', 'pre-trans'] : [word.toLowerCase()];
+  return body.split('\n').some(l => /^#{1,6} /.test(l) && variants.some(v => l.toLowerCase().includes(v)));
+}
+
 let exitCode = 0;
 
 function parseFrontmatter(filePath) {
@@ -236,9 +249,13 @@ function validateFile(filePath) {
   // 5. Prohibited vocabulary (only check non-integral modules)
   const isIntegralAudience = tags.some(t => /teal|integral/i.test(t));
   if (!isIntegralAudience) {
-    const body = content.replace(/^---[\s\S]*?---\n/, ''); // exclude frontmatter
+    const body = content
+      .replace(/^---[\s\S]*?---\n/, '') // exclude frontmatter
+      .replace(/\]\([^)]*\)/g, ']()') // link targets are paths, not prose
+      .replace(/https?:\/\/\S+/g, ''); // bare URLs
     for (const word of PROHIBITED_VOCABULARY) {
       const wordLower = word.toLowerCase();
+      if (teachesTerm(body, word, fm)) continue;
       // Use word boundary for more precise matching
       const regex = new RegExp(`\\b${word}\\b`, 'gi');
       let match;

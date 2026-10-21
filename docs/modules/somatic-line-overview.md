@@ -9,6 +9,7 @@ tags:
   - tier-2
 line: somatic
 safety_tier: 2
+teaches_framework: true
 ---
 
 import ModuleFooter from '@site/src/components/ModuleFooter';

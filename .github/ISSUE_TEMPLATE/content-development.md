@@ -87,8 +87,8 @@ labels: [content, backlog, copilot-implementable]
 ## Canonical References
 
 - `docs/implementation/integral-aqal-protocol-template.md`
-- `docs/quality/instructional-design-protocol.md`
-- `docs/quality/evidence-vetting-checklist.md`
+- `internal/quality/instructional-design-protocol.md`
+- `internal/quality/evidence-vetting-checklist.md`
 - `docs/maps/aqal-label-crosswalk.md`
 
 ## Task Classification

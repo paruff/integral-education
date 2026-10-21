@@ -1,12 +1,10 @@
 name: Content Protocol
 
 on:
+  # No paths filter on PRs: Protocol Guardrails is a required check, and a
+  # path-filtered required check never reports on non-docs PRs (P11-05).
   pull_request:
     branches: [main]
-    paths:
-      - docs/**
-      - README.md
-      - .github/workflows/content-protocol.yml
   push:
     branches: [main]
     paths:

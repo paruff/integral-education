@@ -5,7 +5,7 @@
     "config": "sites/clear-thinking.config.js",
     "linkBaseline": "sites/clear-thinking.link-baseline.json",
     "vocabularyBaseline": "sites/clear-thinking.vocabulary-baseline.json",
-    "published": false,
+    "published": true,
     "docs": [
       "quickstarts/amber-to-rational",
       "modules/amber-mythic-orientation",

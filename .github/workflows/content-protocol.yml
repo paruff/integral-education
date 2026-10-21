@@ -20,15 +20,12 @@ permissions:
 jobs:
   protocol-guardrails:
     name: Protocol Guardrails
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 10
 
     steps:
       - name: Checkout
         uses: actions/checkout@v7
-
-      - name: Install ripgrep
-        run: sudo apt-get install -y ripgrep
 
       - name: Check For Hype Terms
         shell: bash
@@ -36,7 +33,7 @@ jobs:
           set -euo pipefail
           # Discourage overclaiming language in learning content.
           # Exclude quality/protocol docs that reference hype terms as examples to avoid.
-          if rg -n -i --glob '!docs/quality/**' "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md; then
+          if grep -rniE "\\b(breakthrough|cure|revolutionary|guaranteed)\\b" docs README.md | grep -v '^docs/quality/'; then
             echo "Found prohibited hype language. Replace with evidence-quality wording."
             exit 1
           fi
@@ -47,7 +44,7 @@ jobs:
           set -euo pipefail
           # Only check learner-facing modules in docs/modules/ — exclude archived
           # specs (docs/features/) and reference pages (docs/safety/)
-          shadow_files=$(rg --files docs/modules | rg -i "shadow|safety")
+          shadow_files=$(find docs/modules -type f | grep -iE "shadow|safety" || true)
           if [[ -z "${shadow_files}" ]]; then
             echo "No shadow/safety files detected in docs. Skipping safety-language check."
             exit 0
@@ -63,7 +60,7 @@ jobs:
 
           while IFS= read -r f; do
             for p in "${required_patterns[@]}"; do
-              if ! rg -n -i "${p}" "${f}" >/dev/null; then
+              if ! grep -qiE "${p}" "${f}"; then
                 echo "Missing required safety language pattern '${p}' in ${f}"
                 exit 1
               fi
@@ -76,7 +73,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          aqal_files=$(rg --files docs | rg -i "aqal|integral|module|pathway")
+          aqal_files=$(find docs -type f | grep -iE "aqal|integral|module|pathway" || true)
           if [[ -z "${aqal_files}" ]]; then
             echo "No AQAL/integral files detected for token check."
             exit 0
@@ -93,7 +90,7 @@ jobs:
           while IFS= read -r f; do
             missing=0
             for t in "${tokens[@]}"; do
-              if ! rg -n -i "${t}" "${f}" >/dev/null; then
+              if ! grep -qiE "${t}" "${f}"; then
                 missing=1
               fi
             done

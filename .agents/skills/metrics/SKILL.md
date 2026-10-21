@@ -40,3 +40,4 @@
 5. Assign one owner per driver with due date.
 6. Confirm human-required safety/governance reviews were completed.
 7. Publish a short action plan for next cycle.
+8. Learning metrics: review the FR-19 table in `docs/METRICS.md` (retention first, then process, self-report last). Update values and dates; never fill a blank with an estimate.

@@ -53,7 +53,7 @@ import ModuleMeta from '@site/src/components/ModuleMeta';
 | **States** (Experience) | Mythic-emergent — the world is populated by heroes, enemies, and magical forces the self can now act upon rather than merely participate in; embodied arousal — intensity, urgency, aliveness |
 | **Style** (Types) | Individual-first; felt power before negotiated fairness; meaning through action, victory, and direct consequence |
 
-**Growing Up path:** This module addresses the Red/Magic-Mythic centre of gravity on the Growing Up path. It orients learners to this developmental location with honesty and dignity — whether they are recognizing it in themselves, in children or teenagers they parent, in teams they lead, or in cultural patterns they navigate.
+**Growing Up path:** This module addresses the Red/Magic-Mythic home stage on the Growing Up path. It orients learners to this developmental location with honesty and dignity — whether they are recognizing it in themselves, in children or teenagers they parent, in teams they lead, or in cultural patterns they navigate.
 
 ---
 
@@ -277,7 +277,7 @@ Use these prompts for journaling or dialogue after the practice. These prompts a
 
 **Presenting this content in group settings:**
 
-Red is present, to some degree, in every adult — it is the developmental root of assertiveness, courage, and personal agency, and most adults carry unintegrated Red material even when their centre of gravity is much higher. This module carries more risk than most stage-orientation content: its "gifts" (power, self-assertion, courage) sit close to language that, handled carelessly, can be heard as endorsing domination, aggression, or disregard for others. Precision in framing is not optional here.
+Red is present, to some degree, in every adult — it is the developmental root of assertiveness, courage, and personal agency, and most adults carry unintegrated Red material even when their home stage is much higher. This module carries more risk than most stage-orientation content: its "gifts" (power, self-assertion, courage) sit close to language that, handled carelessly, can be heard as endorsing domination, aggression, or disregard for others. Precision in framing is not optional here.
 
 **Framing recommendations:**
 

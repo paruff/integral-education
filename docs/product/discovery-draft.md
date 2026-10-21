@@ -18,7 +18,7 @@ different framing per stage audience. A persona set that ignored stage would
 under-specify the single variable the product already treats as load-bearing.
 
 Personas anchor at **Amber and above**. Magic/Purple and Red/Power stage
-content exists on the platform (`magic-purple-stage-orientation.mdx`,
+content exists on the platform (`magical-stage-orientation.mdx`,
 `magic-mythic-red-stage-orientation.md`) but is explicitly reflective and
 observational — "the conceptual and experiential foundation for understanding
 this pre-rational capacity **in oneself and others**." Per

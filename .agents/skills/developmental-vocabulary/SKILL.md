@@ -41,6 +41,28 @@ Apply these on a stage site (FR-18) on top of the cross-stage rules. Stage-match
 
 ---
 
+## Stage names (decided 2026-10-21, migration in progress)
+
+One set of names for internal use: enum values, file and doc names, tags, and talk between authors. Learners never see these names (cross-stage rule 2, FR-17). Colours survive only in this crosswalk and in citations of Spiral Dynamics or Wilber.
+
+| Name | Colour(s) used so far | Notes |
+|---|---|---|
+| Archaic | Beige, Infrared | Survival, sensorimotor |
+| Magical | Purple, Magenta | After Archaic, before Egocentric |
+| Egocentric | Red | Replaces "Power", "Impulsive" and "Magic-Mythic" |
+| Traditional | Amber | Replaces "Mythic". Spiral Dynamics calls this stage Blue |
+| Rational | Orange | |
+| Pluralistic | Green | |
+| Integral | Teal, Turquoise | Turquoise folds in. Use "late Integral" where the distinction matters. Spiral Dynamics calls Teal Yellow |
+
+Rules:
+- Use only these names for new work. Do not use Premodern, Modern or Postmodern as stage names or groupings.
+- Use "early" or "late" before a name for transitions (late Rational, early Pluralistic).
+- The colour names below (Magenta, Red, Amber, Teal and so on) are the old names, kept until each section is migrated. Treat them as aliases of the names above.
+- Source-framework crosswalks (Kegan, Cook-Greuter and others) are not decided. Run any such table through `evidence-vetting` first.
+
+---
+
 ## Magenta / Pre-Mythic
 
 ### Use

@@ -23,5 +23,5 @@ Mirrors `ci-quality.yml`'s `build-and-validate` job exactly, in the same order, 
 ## Gotchas
 
 - Don't commit `docs/.content-graph.json` / `docs/.content-graph-stats.json` changes that don't match your actual content changes — a stale regeneration (e.g. run before your edits landed) will show a misleading diff in the PR.
-- If `npm run build` passes locally but the PR's CI still fails, suspect an environment difference (Node version — CI pins `node-version: 20`) before assuming the check itself is flaky.
+- If `npm run build` passes locally but the PR's CI still fails, suspect an environment difference (Node version — CI pins Node via `.nvmrc`) before assuming the check itself is flaky.
 - This skill is about *running* the same checks as CI, not about deciding whether to add lychee or the accessibility scripts (see `accessibility-checker`) to CI itself — that's a CI-policy change requiring explicit sign-off per the `gitops` and `pr-contract` skills, not something to bundle into a routine PR.

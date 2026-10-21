@@ -13,6 +13,7 @@ lines:
 states:
 - introspection
 tags:
+- tier-2
 - shadow
 - projection
 - self-awareness

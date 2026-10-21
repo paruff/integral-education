@@ -330,7 +330,7 @@ Types are stable styles that cut across levels and states. They shape how compet
 >
 > The tables below are **facilitator-reference material only**: descriptive patterns that help a practitioner recognize where someone may be centered, design developmentally appropriate support, and honor the genuine gifts present at each stage. These descriptions are not rubrics for learners to score themselves, and they are not intended to be shared directly with someone whose current centre of gravity is at the described stage. Unlike the Amber-and-above rows in this map, they carry no assessment function.
 
-**Cross-references:** [MM-01 · Magic/Purple Stage Orientation](../modules/magical-stage-orientation) | [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/magic-mythic-red-stage-orientation)
+**Cross-references:** [MM-01 · Magic/Purple Stage Orientation](../modules/magical-stage-orientation) | [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/egocentric-stage-orientation)
 
 ---
 
@@ -378,7 +378,7 @@ Types (introverted/extraverted, structure-seeking/exploratory, etc.) modulate ho
 
 **Stage overview:** Red/Magic-Mythic is characterized by emergent individualism, power-orientation, egocentric exchange, impulsive present-orientation, and heroic self-assertion. The self has differentiated from the tribal field but has not yet organized under an internalized moral code beyond raw power and exchange. Courage, vitality, directness, and honest self-assertion are the genuine gifts of this stage.
 
-See [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/magic-mythic-red-stage-orientation) for the full stage-level account.
+See [MM-02 · Magic-Mythic/Red Stage Orientation](../modules/egocentric-stage-orientation) for the full stage-level account.
 
 #### Quadrant Expression at Magic-Mythic/Red
 

@@ -105,5 +105,13 @@
   {
     "replace": "its specific mapping to Amber → Rational transitions draws on Paul & Elder's stage-integrated application",
     "with": "its specific mapping to reasoning within a tradition-centred way of thinking draws on Paul & Elder's application of thinking in steps"
+  },
+  {
+    "replace": "[Cognitive Bias 101](./cognitive-bias-101)",
+    "with": "Cognitive Bias 101"
+  },
+  {
+    "replace": " See the [Evidence Vetting Checklist](/internal/quality/evidence-vetting-checklist) for the full tier definitions.",
+    "with": ""
   }
 ]

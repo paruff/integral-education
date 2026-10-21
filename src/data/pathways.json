@@ -1,18 +1,5 @@
 [
   {
-    "id": "amber-to-rational",
-    "title": "Clear Thinking Path",
-    "modules": [
-      "amber-mythic-orientation",
-      "rational-orange-orientation",
-      "cognitive-dissonance-bridge",
-      "perspective-taking-capacity",
-      "authority-autonomy-transition",
-      "critical-thinking-foundations",
-      "evidence-evaluation"
-    ]
-  },
-  {
     "id": "cognitive-line-development",
     "title": "Cognitive Line Development",
     "modules": [
@@ -146,6 +133,19 @@
       "subtle-state-access",
       "causal-witness-state",
       "nondual-awareness-orientation"
+    ]
+  },
+  {
+    "id": "traditional-to-rational",
+    "title": "Clear Thinking Path",
+    "modules": [
+      "traditional-orientation",
+      "rational-orange-orientation",
+      "cognitive-dissonance-bridge",
+      "perspective-taking-capacity",
+      "authority-autonomy-transition",
+      "critical-thinking-foundations",
+      "evidence-evaluation"
     ]
   }
 ]

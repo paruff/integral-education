@@ -107,7 +107,7 @@ function getModalTransition(lineScores) {
 ```js
 // Routes (unchanged)
 const QUICKSTART_ROUTES = {
-  amber_orange: '/docs/quickstarts/amber-to-rational',
+  amber_orange: '/docs/quickstarts/traditional-to-rational',
   orange_green: '/docs/quickstarts/rational-to-pluralistic',
   green_teal:   '/docs/quickstarts/pluralistic-to-integral',
 };
@@ -340,7 +340,7 @@ function DueReviews() {
       somatic: 'amber_orange',
     },
     modalResult: 'amber_orange',
-    routedTo: '/docs/quickstarts/amber-to-rational',
+    routedTo: '/docs/quickstarts/traditional-to-rational',
   },
 }
 ```

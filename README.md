@@ -49,7 +49,7 @@ integral-education/
 | Path | Description |
 |---|---|
 | [Personal → Integral](docs/quickstarts/personal-to-integral.md) | Deepen self-awareness, reduce reactivity, build systems perspective |
-| [Amber → Rational](docs/quickstarts/amber-to-rational.mdx) | Move from rule-based to evidence-based thinking |
+| [Amber → Rational](docs/quickstarts/traditional-to-rational.mdx) | Move from rule-based to evidence-based thinking |
 | [Rational → Pluralistic](docs/quickstarts/rational-to-pluralistic.mdx) | Bridge from analytical to multi-perspectival reasoning |
 | [Pluralistic → Integral](docs/quickstarts/pluralistic-to-integral.mdx) | Move beyond relativism to second-tier integration |
 | [Cognitive Line](docs/quickstarts/cognitive-line-development.mdx) | Develop through concrete, formal, postformal, and metasystematic cognition |

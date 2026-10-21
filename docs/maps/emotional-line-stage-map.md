@@ -71,7 +71,7 @@ The following table focuses specifically on the characteristic shadow of the Emo
 ### Stage Orientation Modules
 Use these modules to deepen understanding of the cultural, cognitive, and relational context at each developmental altitude:
 
-- [Amber/Mythic Orientation](../modules/amber-mythic-orientation)
+- [Amber/Mythic Orientation](../modules/traditional-orientation)
 - [Rational/Orange Orientation](../modules/rational-orange-orientation)
 - [Pluralistic/Green Orientation](../modules/pluralistic-green-orientation)
 - [Integral/Teal Orientation](../modules/integral-teal-orientation)

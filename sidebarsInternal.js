@@ -18,7 +18,7 @@ const internalSidebar = {
           items: [
             'implementation/shadow-work-facilitation-guide',
             'implementation/magic-red-facilitator-guide',
-            'implementation/amber-rational-facilitator-guide',
+            'implementation/traditional-rational-facilitator-guide',
             'implementation/rational-pluralistic-facilitator-guide',
             'implementation/pluralistic-integral-facilitator-guide',
             'implementation/self-line-facilitation-guide',

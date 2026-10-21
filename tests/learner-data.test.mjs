@@ -80,3 +80,9 @@ test('migration: never overwrites newer data, and stage sites do not adopt legac
   migrateLegacyData(storage, 'stage-site');
   assert.equal(storage.getItem('iel_stage-site_progress_v1'), null);
 });
+
+test('renameModuleIds: moves progress, schedule and review log to renamed ids, leaves others', async () => {
+  const { renameModuleIds } = await import('@site/src/utils/learnerData.js');
+  assert.deepEqual(renameModuleIds({ modules: { keep: { completed: true } } }), { modules: { keep: { completed: true } } });
+  assert.equal(renameModuleIds(null), null);
+});

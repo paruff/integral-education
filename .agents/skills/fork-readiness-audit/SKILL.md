@@ -43,8 +43,8 @@ All universal gates PLUS:
 ### Content gates
 | Item | Issue | Status required | Verification |
 |------|-------|-----------------|-------------|
-| `amber-to-rational` QuickStart complete | PRE-01 | 5-step path; readiness check; transition signals present | Audit agent gap report: all 13 sections ✅ |
-| `amber-mythic-orientation` at gold standard | PRE-04 | All 13 sections complete | Audit agent gap report: all 13 sections ✅ |
+| `traditional-to-rational` QuickStart complete | PRE-01 | 5-step path; readiness check; transition signals present | Audit agent gap report: all 13 sections ✅ |
+| `traditional-orientation` at gold standard | PRE-04 | All 13 sections complete | Audit agent gap report: all 13 sections ✅ |
 | `amber-shadow-moral-certainty` exists | PRE-09 | Created; Tier 2; Safety Review passed | Safety Review agent: PASS on file |
 
 ### Safety gates

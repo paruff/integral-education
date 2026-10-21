@@ -99,7 +99,7 @@ export default function Home() {
               <h3>Clear Thinking Path</h3>
               <p>Build critical thinking skills for navigating complexity with confidence.</p>
               <p className="homepage-card-meta">Time commitment: 10–20 weeks</p>
-              <Link className="homepage-card-cta" to="/docs/quickstarts/amber-to-rational">
+              <Link className="homepage-card-cta" to="/docs/quickstarts/traditional-to-rational">
                 Begin →
               </Link>
             </article>
@@ -154,7 +154,7 @@ export default function Home() {
                 <span className="homepage-level-badge">Beginner</span>
                 <span className="homepage-card-meta">Read time: 8 min</span>
               </div>
-              <Link className="homepage-card-cta" to="/docs/modules/amber-mythic-orientation">
+              <Link className="homepage-card-cta" to="/docs/modules/traditional-orientation">
                 Open module →
               </Link>
             </article>

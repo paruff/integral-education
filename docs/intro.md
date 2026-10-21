@@ -39,7 +39,7 @@ Choose your path:
 | Path | Description |
 |------|-------------|
 | [Personal → Integral](quickstarts/personal-to-integral) | Deepen self-awareness, reduce reactivity, build systems perspective |
-| [Amber → Rational](quickstarts/amber-to-rational) | Move from rule-based to evidence-based thinking |
+| [Amber → Rational](quickstarts/traditional-to-rational) | Move from rule-based to evidence-based thinking |
 
 ## 📚 Modules
 

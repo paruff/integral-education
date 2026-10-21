@@ -10,7 +10,7 @@ const learnerSidebar = {
       items: [
         'quickstarts/personal-to-integral',
         'quickstarts/moral-line-development',
-        'quickstarts/amber-to-rational',
+        'quickstarts/traditional-to-rational',
         'quickstarts/rational-to-pluralistic',
         'quickstarts/pluralistic-to-integral',
         'quickstarts/self-line-development',
@@ -145,7 +145,7 @@ const learnerSidebar = {
           collapsible: true,
           collapsed: true,
           items: [
-            'modules/amber-mythic-orientation',
+            'modules/traditional-orientation',
             'modules/rational-orange-orientation',
             'modules/cognitive-dissonance-bridge',
             'modules/perspective-taking-capacity',
@@ -249,7 +249,7 @@ const learnerSidebar = {
         'maps/glossary',
         'maps/aqal-overview',
         'maps/aqal-glossary',
-        'maps/amber-rational-progress-assessment',
+        'maps/traditional-rational-progress-assessment',
         'maps/rational-pluralistic-progress-assessment',
         'maps/pluralistic-integral-progress-assessment',
         'maps/aqal-label-crosswalk',

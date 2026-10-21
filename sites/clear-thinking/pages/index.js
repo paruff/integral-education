@@ -13,7 +13,7 @@ export default function Home() {
           A step-by-step path through seven modules, one at a time. You make a plan, work through a
           module, check what you remember, and move on when you are ready.
         </p>
-        <Link className="button button--primary button--lg" to="/docs/quickstarts/amber-to-rational">
+        <Link className="button button--primary button--lg" to="/docs/quickstarts/traditional-to-rational">
           Start the path
         </Link>
       </main>

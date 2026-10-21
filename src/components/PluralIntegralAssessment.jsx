@@ -626,7 +626,7 @@ export default function PluralIntegralAssessment() {
         </p>
         <p style={{ margin: '0.5rem 0 0', fontSize: '0.9rem', lineHeight: 1.6 }}>
           If you are earlier in your developmental journey, the{' '}
-          <Link to="/docs/maps/amber-rational-progress-assessment">Amber → Rational</Link>{' '}
+          <Link to="/docs/maps/traditional-rational-progress-assessment">Amber → Rational</Link>{' '}
           or Rational → Pluralistic assessments will be more appropriate starting points. Completing this
           assessment before reaching this stage of development is likely to produce misleading results.
         </p>

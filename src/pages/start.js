@@ -120,10 +120,10 @@ const ALL_PATHS = [
     to: '/docs/quickstarts/personal-to-integral',
   },
   {
-    id: 'amber-to-rational',
+    id: 'traditional-to-rational',
     title: 'Clear Thinking Path',
     description: 'Move from rule-based to evidence-based thinking.',
-    to: '/docs/quickstarts/amber-to-rational',
+    to: '/docs/quickstarts/traditional-to-rational',
   },
   {
     id: 'rational-to-pluralistic',
@@ -182,8 +182,8 @@ const RESULTS = {
     title: 'Clear Thinking Path',
     explanation:
       'Your answers suggest you tend to rely on established sources, trusted guidance, and clear rules when making decisions. These are real strengths — and there are also times when evidence-based reasoning opens doors that rules alone cannot. The Clear Thinking Path is designed to build that second skill without asking you to set aside the first.',
-    recommended: '/docs/quickstarts/amber-to-rational',
-    siteKey: 'amber-to-rational',
+    recommended: '/docs/quickstarts/traditional-to-rational',
+    siteKey: 'traditional-to-rational',
     alt: 'You might also find the Personal to Integral path helpful as a broader starting point.',
     altLink: '/docs/quickstarts/personal-to-integral',
   },
@@ -193,7 +193,7 @@ const RESULTS = {
       'Your answers suggest you are comfortable weighing evidence, reasoning things through, and forming your own conclusions. That analytical skill is a powerful foundation. The Multiple Perspectives Path builds on it by helping you hold and integrate viewpoints very different from your own — which is where the hardest decisions usually live.',
     recommended: '/docs/quickstarts/rational-to-pluralistic',
     alt: 'If you want to strengthen your analytical foundations first, the Clear Thinking Path is a good starting point.',
-    altLink: '/docs/quickstarts/amber-to-rational',
+    altLink: '/docs/quickstarts/traditional-to-rational',
   },
   'C-dominant': {
     title: 'Integrating Perspectives Path',

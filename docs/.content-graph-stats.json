@@ -1,7 +1,6 @@
 {
   "stageDistribution": {
     "Traditional → Pluralistic": 1,
-    "Traditional": 1,
     "Rational → Pluralistic": 9,
     "Traditional → Rational": 7,
     "Pluralistic → Integral": 15,
@@ -16,14 +15,15 @@
     "Rational → Integral": 1,
     "Traditional → Integral": 1,
     "Traditional → Rational (Fowler Stages 2–4)": 1,
-    "Rational → Integral (Spiritual line post-conventional)": 1
+    "Rational → Integral (Spiritual line post-conventional)": 1,
+    "Traditional": 1
   },
   "lineCoverage": {
     "emotional": 50,
     "somatic": 25,
     "cognitive": 68,
-    "moral": 54,
     "interpersonal": 55,
+    "moral": 54,
     "spiritual": 11,
     "self": 24
   },

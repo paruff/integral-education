@@ -46,6 +46,10 @@ export async function load(url, context, next) {
   if (url.startsWith('stub:')) {
     return { format: 'module', source: STUBS[url.slice('stub:'.length)], shortCircuit: true };
   }
+  if (url.startsWith(SRC) && url.endsWith('.json')) {
+    // webpack imports JSON without an import attribute; do the same here.
+    return { format: 'module', source: `export default ${await readFile(fileURLToPath(url), 'utf8')};`, shortCircuit: true };
+  }
   if (url.startsWith(SRC) && url.endsWith('.js')) {
     const source = await readFile(fileURLToPath(url), 'utf8');
     const { code } = await transformAsync(source, {

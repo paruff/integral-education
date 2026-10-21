@@ -28,7 +28,7 @@ async function run() {
   mkdirSync(OUTPUT_DIR, { recursive: true });
 
   console.log('Launching browser...');
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({ headless: true, args: process.env.CI ? ['--no-sandbox'] : [] }) // ubuntu-24.04 runners block Chrome's user-namespace sandbox;
   const results = [];
 
   for (const target of TARGETS) {

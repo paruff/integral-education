@@ -60,7 +60,7 @@ persona below, not owned by a persona of its own.
 
 - **Stage:** Teal/Turquoise (Integral/Super-Integral) — values systemic, multi-perspectival, paradox-holding capacity.
 - **JTBD:** "When I can see the value in every stage but still catch myself using that awareness to feel subtly superior, I want tools to recognize and metabolize my own developmental shadow, so that my integral capacity serves genuine relationship rather than quiet status."
-- **Needs:** Full canonical AQAL vocabulary; shadow-work content (`integral-shadow-teal-trap.mdx`); explicit non-ranking, non-elitism framing is a recurring and deliberate design concern at this stage.
+- **Needs:** Full canonical AQAL vocabulary; shadow-work content (`integral-shadow-trap.mdx`); explicit non-ranking, non-elitism framing is a recurring and deliberate design concern at this stage.
 - **Primary path:** `docs/quickstarts/pluralistic-to-integral.mdx`, `docs/quickstarts/personal-to-integral.md`, `docs/quickstarts/shadow-work.mdx`.
 - **Relevant tags:** `teal`/`integral`, `tier-2` common (shadow/identity work).
 

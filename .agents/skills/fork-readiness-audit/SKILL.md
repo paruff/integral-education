@@ -115,7 +115,7 @@ All universal gates PLUS:
 | `late-green-disillusionment` created | PRE-10 | 13-section standard; Safety Review PASS |
 | `meta-systemic-thinking` created | PRE-10 | 13-section standard; Safety Review PASS |
 | `healthy-hierarchy-and-authority` created | PRE-10 | 13-section standard; Safety Review PASS |
-| `integral-teal-orientation` audited | — | Audit agent gap report: all ✅ |
+| `integral-orientation` audited | — | Audit agent gap report: all ✅ |
 
 ### Teal superiority check (mandatory — unique to Fork 3)
 | Item | Verification |

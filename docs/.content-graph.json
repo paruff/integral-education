@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T17:36:38.085Z",
+  "generated": "2026-10-21T17:41:08.446Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
@@ -1242,9 +1242,54 @@
       "missingJourneySteps": []
     },
     {
-      "id": "integral-shadow-teal-trap",
+      "id": "integral-orientation",
+      "title": "Orientation: Systems, Complexity, and Integration",
+      "file": "docs/modules/integral-orientation.mdx",
+      "stage": "Integral",
+      "stageTarget": "Integral",
+      "lines": [
+        "cognitive",
+        "moral",
+        "interpersonal",
+        "emotional",
+        "somatic"
+      ],
+      "safetyTier": "tier-1",
+      "difficulty": "Advanced",
+      "format": "embodied-guided",
+      "prerequisites": [
+        "pluralistic-orientation",
+        "integral-orientation"
+      ],
+      "readingTime": 8,
+      "practiceTime": 12,
+      "tags": [
+        "stage-development",
+        "integral",
+        "2nd-tier",
+        "Cook-Greuter",
+        "Kegan",
+        "Wilber",
+        "AQAL",
+        "spiral-dynamics",
+        "torbert",
+        "commons",
+        "vision-logic",
+        "metasystematic",
+        "growing-up"
+      ],
+      "goldStandardSections": 21,
+      "hasAQAL": true,
+      "hasPractice": true,
+      "hasEvidence": true,
+      "hasSafetyNote": true,
+      "hasFacilitatorNote": true,
+      "missingJourneySteps": []
+    },
+    {
+      "id": "integral-shadow-trap",
       "title": "The Trap of Believing You''ve Arrived",
-      "file": "docs/modules/integral-shadow-teal-trap.mdx",
+      "file": "docs/modules/integral-shadow-trap.mdx",
       "stage": "Pluralistic → Integral",
       "stageTarget": "Pluralistic → Integral",
       "lines": [
@@ -1282,51 +1327,6 @@
         "Masters"
       ],
       "goldStandardSections": 25,
-      "hasAQAL": true,
-      "hasPractice": true,
-      "hasEvidence": true,
-      "hasSafetyNote": true,
-      "hasFacilitatorNote": true,
-      "missingJourneySteps": []
-    },
-    {
-      "id": "integral-teal-orientation",
-      "title": "Orientation: Systems, Complexity, and Integration",
-      "file": "docs/modules/integral-teal-orientation.mdx",
-      "stage": "Integral",
-      "stageTarget": "Integral",
-      "lines": [
-        "cognitive",
-        "moral",
-        "interpersonal",
-        "emotional",
-        "somatic"
-      ],
-      "safetyTier": "tier-1",
-      "difficulty": "Advanced",
-      "format": "embodied-guided",
-      "prerequisites": [
-        "pluralistic-orientation",
-        "integral-teal-orientation"
-      ],
-      "readingTime": 8,
-      "practiceTime": 12,
-      "tags": [
-        "stage-development",
-        "integral",
-        "2nd-tier",
-        "Cook-Greuter",
-        "Kegan",
-        "Wilber",
-        "AQAL",
-        "spiral-dynamics",
-        "torbert",
-        "commons",
-        "vision-logic",
-        "metasystematic",
-        "growing-up"
-      ],
-      "goldStandardSections": 21,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
@@ -1647,7 +1647,7 @@
       "format": "text-reflection",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 10,
@@ -1864,7 +1864,7 @@
       "format": "embodied-guided",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 8,
       "practiceTime": 15,
@@ -2436,7 +2436,7 @@
       "format": "text-reflection",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -2555,7 +2555,7 @@
       "format": "embodied-guided",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -2833,7 +2833,7 @@
       "format": "text-reflection",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 8,
       "practiceTime": 10,
@@ -2875,7 +2875,7 @@
       "format": "text-reflection",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 10,
       "practiceTime": 10,
@@ -2961,7 +2961,7 @@
       "format": "embodied-guided",
       "prerequisites": [
         "pluralistic-orientation",
-        "integral-teal-orientation"
+        "integral-orientation"
       ],
       "readingTime": 12,
       "practiceTime": 15,
@@ -3294,17 +3294,17 @@
     },
     {
       "source": "pluralistic-orientation",
-      "target": "integral-shadow-teal-trap",
+      "target": "integral-orientation",
+      "type": "prerequisite"
+    },
+    {
+      "source": "integral-orientation",
+      "target": "integral-orientation",
       "type": "prerequisite"
     },
     {
       "source": "pluralistic-orientation",
-      "target": "integral-teal-orientation",
-      "type": "prerequisite"
-    },
-    {
-      "source": "integral-teal-orientation",
-      "target": "integral-teal-orientation",
+      "target": "integral-shadow-trap",
       "type": "prerequisite"
     },
     {
@@ -3333,7 +3333,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "moral-line-imagination-integral-ethics",
       "type": "prerequisite"
     },
@@ -3358,7 +3358,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "nondual-awareness-orientation",
       "type": "prerequisite"
     },
@@ -3423,7 +3423,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "shadow-immunity-to-change",
       "type": "prerequisite"
     },
@@ -3443,7 +3443,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "shadow-persona-mask",
       "type": "prerequisite"
     },
@@ -3483,7 +3483,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "spiritual-line-overview-orientation",
       "type": "prerequisite"
     },
@@ -3493,7 +3493,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "spiritual-line-post-metaphysical-integral-religion",
       "type": "prerequisite"
     },
@@ -3508,7 +3508,7 @@
       "type": "prerequisite"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "spiritual-line-shadow-integration",
       "type": "prerequisite"
     },
@@ -3763,7 +3763,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },
@@ -3783,7 +3783,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "integral-shadow-teal-trap",
+      "source": "integral-shadow-trap",
       "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },
@@ -3803,7 +3803,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "integral-teal-orientation",
+      "source": "integral-orientation",
       "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },
@@ -3823,7 +3823,7 @@
       "type": "quickstart-member"
     },
     {
-      "source": "integral-shadow-teal-trap",
+      "source": "integral-shadow-trap",
       "target": "pluralistic-to-integral",
       "type": "quickstart-member"
     },

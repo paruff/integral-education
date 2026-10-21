@@ -187,10 +187,10 @@ export default {
     "quickstart": "pluralistic-to-integral",
     "next": {
       "title": "Systems, Complexity, and Integration",
-      "to": "/docs/modules/integral-teal-orientation"
+      "to": "/docs/modules/integral-orientation"
     }
   },
-  "integral-teal-orientation": {
+  "integral-orientation": {
     "quickstart": "pluralistic-to-integral",
     "next": {
       "title": "Vision-Logic & Metasystematic Thinking",
@@ -215,10 +215,10 @@ export default {
     "quickstart": "pluralistic-to-integral",
     "next": {
       "title": "The Trap of Having Arrived",
-      "to": "/docs/modules/integral-shadow-teal-trap"
+      "to": "/docs/modules/integral-shadow-trap"
     }
   },
-  "integral-shadow-teal-trap": {
+  "integral-shadow-trap": {
     "quickstart": "pluralistic-to-integral",
     "next": {
       "title": "Multiperspectival Leadership & Action",

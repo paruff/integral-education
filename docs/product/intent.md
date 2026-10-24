@@ -1,6 +1,7 @@
 # Product Intent
 
-> **Status:** Draft, awaiting Product Owner acceptance
+> **Status:** Accepted by the Product Owner, 2026-10-24
+> ([review.md](review.md))
 > **Owner:** @paruff
 > **Date:** 2026-10-02
 > **Relationship:** mission and scope come from
@@ -103,14 +104,17 @@ built on learning-science evidence:
 
 ## Open questions
 
-1. **Charter amendment.** O4 (self-reported ≥70% gain) and the charter's
-   facilitated pilot pathways conflict with this intent. Should the charter
-   be revised now? `plan.md` assumes yes (task P1-01).
-2. **Safety reviewer.** Who signs off on Tier 2 content? Until someone is
-   named, no Tier 2 content ships.
+Answered questions stay listed with where they were decided
+([review.md](review.md) § Decision log).
+
+1. ~~**Charter amendment.**~~ Resolved 2026-10-18: charter v0.2 (#509).
+2. ~~**Safety reviewer.**~~ Resolved 2026-10-18: Safety Lead named in
+   `raci.md` (#511).
 3. **Retention test items.** Who validates them? AI may draft items but must
    not validate them.
-4. **Fork scope** (#415, #416). Does Magic/Red stage content stay on the main
-   site? Now part of P9-01.
-5. **Which stage site launches first?** `plan.md` P9-01.
-6. **Site analytics.** None, or cookieless aggregate-only? `plan.md` P10-01.
+4. **Fork scope** (#415, #416). Stage sites, not forks, decided 2026-10-19
+   (P9-01). Still open: where Magic/Red content sits (`STAGE-SITES.md`).
+5. ~~**Which stage site launches first?**~~ Resolved 2026-10-19: Amber →
+   Rational (Clear Thinking), published 2026-10-21 (PR #619).
+6. ~~**Site analytics.**~~ Resolved 2026-10-21: cookieless aggregate-only
+   ([analytics-decision.md](analytics-decision.md)).

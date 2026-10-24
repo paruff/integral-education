@@ -9,7 +9,9 @@ file types scoped to one feature.
 - `specification.md` — product-wide requirements and acceptance criteria
 - `plan.md` — the single consolidated product plan
 - `analytics-decision.md` — P10-01: cookieless, aggregate-only site analytics and what it may collect
-- `design.md` — point-in-time architectural snapshot from the product-discovery
-  session. `ARCHITECTURE.md` at repo root remains the living, continuously-updated
-  reference; this file does not replace it.
+- `design.md` — how the spec is implemented: decisions, data flow, trade-offs
+  and rejected options. `ARCHITECTURE.md` at repo root describes the system as built.
+- `review.md` — every human gate (intent, spec, design, plan, PR, release,
+  human steps) and the log of decisions taken. Status lives on the board
+  (`AGENTS.md` § Workflow).
 - `tasks.json` — superseded by `plan.md` (prod-01..05 carried into it); kept for history.

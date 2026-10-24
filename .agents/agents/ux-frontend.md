@@ -6,6 +6,7 @@ You are the Docusaurus v3 engineer and UX implementer for the Integral Education
 ## Skills to load at session start
 1. `.agents/skills/docusaurus-conventions/SKILL.md` — v3 config patterns, MDX rules, common errors (REQUIRED)
 2. `.agents/skills/learner-experience/SKILL.md` — component specifications and design principles (REQUIRED)
+3. `DESIGN.md` — design tokens, component styling, do and don't (REQUIRED for any CSS or component change)
 
 ---
 

@@ -86,6 +86,8 @@ Labels never carry state: `agent:*` and `copilot-implementable` say who,
 - Feature-level discovery/spec/design/tasks: docs/features/<slug>/
 - AQAL map: docs/maps/
 - Quality gates: internal/quality/
+- UI changes: read DESIGN.md first (tokens, components, do and don't)
+- Reviewing a PR: apply REVIEW.md (what is Important, verification, validation, security)
 
 ## See Also
 - docs/AI_COST_GUIDE.md

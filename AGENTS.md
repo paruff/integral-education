@@ -51,9 +51,38 @@
 | Marketing copy | .agents/agents/marketing-copy.md |
 | Fork scaffolding (one-time per fork) | .agents/agents/fork-scaffolding.md |
 
+## Workflow
+State lives only in Status on [Project #6](https://github.com/users/paruff/projects/6).
+Labels never carry state: `agent:*` and `copilot-implementable` say who,
+`human-required` says the task contains a human step.
+- Gates: intent → spec → design → plan → PR → merge/release, plus human steps
+  (`docs/product/review.md`: who decides, what approved means, decision log).
+- Status: Backlog (dependencies open or not prioritised) · Ready for agent (only a human puts it
+  here) · In progress (you claimed it) · Needs human review (set Gate to the
+  decision) · Blocked (name the blocker: comment or `gh issue edit N --add-blocked-by M`) · Done (auto on close).
+- Next for you (swap the label for your harness):
+  `gh project item-list 6 --owner paruff --limit 100 --query 'status:"Ready for agent" is:open label:agent:claude-code' --format json --jq '[.items | sort_by(.content.number)[] | "#\(.content.number) \(.title)"] | .[0] // "nothing Ready for agent"'`
+- Waiting on a human:
+  `gh project item-list 6 --owner paruff --limit 100 --query 'status:"Needs human review"' --format json --jq '(.items[] | "\(.gate // "no gate")\t#\(.content.number)\t\(.title)") // "nothing waiting on a human"'`
+- Move: `gh project item-edit 6 --owner paruff --url <issue-url> --field Status --value "In progress"`
+  (`--field Gate --value PR` when you hand over).
+- Loop: claim → branch from `main` → PR using the template (`Closes #N`) →
+  Needs human review + Gate → a human merges. Merge a PR only when its base is `main`.
+- Issues: title `P<n>-<nn> · <task>`, body per `.github/ISSUE_TEMPLATE/plan-task.md`.
+  Plan rows link to their issue; a new row and its issue land in the same PR.
+- Commits: `type: description (P-ID, #issue)`.
+
+| Harness | Give it | Never give it |
+|---|---|---|
+| Copilot | Issues assigned to it (`gh issue edit N --add-assignee @copilot`), CI fixes, PR review. Doesn't read the board | Learning-science or safety judgment; deploy pipeline |
+| OpenCode + MiMo (`agent:opencode-mimo`) | Bulk repetitive edits; must pass build, `npm test`, validators | Citations, evidence tiers, Tier 2/safety, CI/deploy |
+| Nemotron (`agent:nemotron`) | Read-only audits and analysis prep | Code or workflow changes |
+| Claude Code (`agent:claude-code`, model in issue) | Haiku: small chores · Sonnet: features, CI, content batches, skills · Opus: evidence judgments, study design | — |
+| Human | Decisions, citation checks, item validation, audience readers, repo settings | — |
+
 ## Context Before Writing Code
 - Architecture overview: ARCHITECTURE.md
-- Product-level discovery/spec/design/tasks: docs/product/
+- Product intent, spec, design, plan and gate log: docs/product/{intent,specification,design,plan,review}.md
 - Feature-level discovery/spec/design/tasks: docs/features/<slug>/
 - AQAL map: docs/maps/
 - Quality gates: internal/quality/

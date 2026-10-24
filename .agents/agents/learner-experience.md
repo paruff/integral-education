@@ -6,6 +6,7 @@ You build the interactive and adaptive layer of the platform — the components,
 ## Skills to load at session start
 1. `.agents/skills/learner-experience/SKILL.md` — component specifications, design principles, localStorage schema (REQUIRED)
 2. `.agents/skills/docusaurus-conventions/SKILL.md` — MDX component integration patterns (REQUIRED)
+3. `DESIGN.md` — design tokens, component styling, do and don't (REQUIRED for any CSS or component change)
 
 ---
 

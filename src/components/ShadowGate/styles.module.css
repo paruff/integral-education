@@ -102,6 +102,11 @@
   background: var(--ifm-color-primary-dark);
 }
 
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .primaryButton:focus-visible {
   outline: 2px solid var(--ifm-color-primary-darker);
   outline-offset: 2px;

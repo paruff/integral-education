@@ -308,11 +308,6 @@ const MODULE_RECOMMENDATIONS = {
 
 function analyzeMechanisms(answers) {
   const counts = {};
-  Object.values(answers).forEach((val) => {
-    const q = QUESTIONS_A.find((q) => q.id === Object.keys(answers).find((k) => answers[k] === val));
-    // Reconstruct: find mechanism for each answer
-  });
-  // Simpler approach: iterate answered questions
   QUESTIONS_A.forEach((q) => {
     const ans = answers[q.id];
     if (!ans) return;
@@ -354,13 +349,6 @@ export default function ShadowAssessment() {
   function handleCopy() {
     const analysis = submitted ? analyzeMechanisms(answersA) : null;
     const bypass = submitted ? analyzeBypassing(answersC) : null;
-    const dominantLine = submitted
-      ? QUESTIONS_B.reduce((max, q) => {
-          const ans = answersB[q.id];
-          // Just pick the first answered as indicative
-          return ans ? q.line : max;
-        }, 'Self')
-      : '';
     const lines = [];
     lines.push('═══ Shadow Work Self-Assessment ═══');
     lines.push(`Date: ${new Date().toLocaleDateString()}`);
@@ -527,7 +515,7 @@ export default function ShadowAssessment() {
       </div>
 
       {/* Submit */}
-      <button className="button button--primary button--lg" onClick={() => { setSubmitted(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ width: '100%', marginBottom: '1rem' }}>
+      <button className="button button--primary button--lg" disabled={totalAnswered < totalQuestions} onClick={() => { setSubmitted(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ width: '100%', marginBottom: '1rem' }}>
         View Your Shadow Profile ({totalAnswered}/{totalQuestions})
       </button>
     </div>

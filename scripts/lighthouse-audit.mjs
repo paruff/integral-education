@@ -15,7 +15,6 @@ const TARGETS = [
   { name: 'intro', path: '/docs/intro' },
   { name: 'module-mindfulness', path: '/docs/modules/mindfulness-basics' },
   { name: 'quickstart', path: '/docs/quickstarts/personal-to-integral' },
-  { name: 'prototype', path: '/prototype' },
   { name: 'start-here', path: '/start' },
   { name: '404-page', path: '/nonexistent-page' },
 ];

@@ -3,9 +3,13 @@
 // .github/workflows/ci-quality.yml sets it, so PR and local builds never load it.
 const code = process.env.GOATCOUNTER_CODE;
 
+// Our own copy of GoatCounter's count.js (static/js/goatcounter-count.js), not gc.zgo.at: the
+// script runs on the same origin as learners' stored journals, so it must not change under us.
+const SCRIPT = '/integral-education/js/goatcounter-count.js';
+
 module.exports = {
   scripts: code
-    ? [{ src: 'https://gc.zgo.at/count.js', async: true, 'data-goatcounter': `https://${code}.goatcounter.com/count` }]
+    ? [{ src: SCRIPT, async: true, 'data-goatcounter': `https://${code}.goatcounter.com/count` }]
     : [],
   clientModules: code ? [require.resolve('./src/clientModules/goatcounter.js')] : [],
   // Shown in every site's footer: what is counted and what is not.

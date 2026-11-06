@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { markIntervalComplete, isDue, interleaveDueCards } from '@site/src/utils/retrieval';
 import { clearLearnerData, migrateLegacyData, siteKeys } from '@site/src/utils/learnerData';
@@ -41,9 +41,19 @@ export function latest(prev, keys = siteKeys()) {
   return loadFromStorage(keys) || prev || { ...DEFAULT_DATA };
 }
 
-function saveToStorage(keys, data) {
+export function saveToStorage(keys, data) {
   try {
     localStorage.setItem(keys.progress, JSON.stringify(data));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function storageAvailable() {
+  try {
+    localStorage.setItem('__iel_test__', '1');
+    localStorage.removeItem('__iel_test__');
     return true;
   } catch {
     return false;
@@ -55,41 +65,45 @@ export default function useProgress() {
   const { siteConfig } = useDocusaurusContext();
   const siteId = siteConfig.projectName;
   const keys = useMemo(() => siteKeys(siteId), [siteId]);
-  const [data, setData] = useState(() => loadFromStorage(keys));
-  const [isAvailable, setIsAvailable] = useState(() => {
-    try {
-      localStorage.setItem('__iel_test__', '1');
-      localStorage.removeItem('__iel_test__');
-      return true;
-    } catch {
-      return false;
-    }
-  });
+  // The server has no localStorage, so the first client render must look like the server's
+  // (empty, storage assumed available); the real values are read right after mount.
+  const [data, setData] = useState(null);
+  const [isAvailable, setIsAvailable] = useState(true);
+  const dataRef = useRef(null);
+
+  useEffect(() => {
+    const loaded = loadFromStorage(keys);
+    dataRef.current = loaded;
+    setData(loaded);
+    setIsAvailable(storageAvailable());
+  }, [keys]);
 
   // If storage was unavailable on load, data is null
   const safeData = data || { ...DEFAULT_DATA };
 
-  const updateModule = useCallback((moduleId, updates) => {
+  // Applies one change on top of what is in storage now, writes it, and returns true only if
+  // the write worked. Callers must not tell the learner "saved" when this returns false.
+  const commit = useCallback((change) => {
     const now = new Date().toISOString();
-    setData((prev) => {
-      const current = latest(prev, keys);
-      const newData = {
+    const current = latest(dataRef.current, keys);
+    const next = withActivity({ ...change(current, now), lastUpdated: now }, now);
+    const ok = saveToStorage(keys, next);
+    dataRef.current = next;
+    setData(next);
+    return ok;
+  }, [keys]);
+
+  const updateModule = useCallback(
+    (moduleId, updates) =>
+      commit((current, now) => ({
         ...current,
         modules: {
           ...current.modules,
-          [moduleId]: {
-            ...(current.modules[moduleId] || {}),
-            ...updates,
-            lastVisited: now,
-          },
+          [moduleId]: { ...(current.modules[moduleId] || {}), ...updates, lastVisited: now },
         },
-        lastUpdated: now,
-      };
-      const logged = withActivity(newData, now);
-      saveToStorage(keys, logged);
-      return logged;
-    });
-  }, [keys]);
+      })),
+    [commit]
+  );
 
   const getModule = useCallback(
     (moduleId) => {
@@ -101,7 +115,8 @@ export default function useProgress() {
 
   // Clears every learner key (progress, review schedule, reflections).
   const clear = useCallback(() => {
-    setData({ ...DEFAULT_DATA });
+    dataRef.current = { ...DEFAULT_DATA };
+    setData(dataRef.current);
     clearLearnerData(localStorage, siteId);
   }, [siteId]);
 
@@ -117,55 +132,37 @@ export default function useProgress() {
     (m) => m.completed
   ).length;
 
-  const updateLineProfile = useCallback((profile) => {
-    const now = new Date().toISOString();
-    setData((prev) => {
-      const current = latest(prev, keys);
-      const newData = {
-        ...current,
-        lineProfile: profile,
-        lastUpdated: now,
-      };
-      const logged = withActivity(newData, now);
-      saveToStorage(keys, logged);
-      return logged;
-    });
-  }, [keys]);
+  const updateLineProfile = useCallback(
+    (profile) => commit((current) => ({ ...current, lineProfile: profile })),
+    [commit]
+  );
 
   const hasLineProfile = safeData.lineProfile !== null;
 
   // cards are kept so due reviews can be mixed across modules (getMixedReview).
   // results ([{ cardId, outcome }]) go to the review log for the FR-19 metrics.
-  const recordRetrievalReview = useCallback((moduleId, moduleName, cards, results) => {
-    const now = new Date().toISOString();
-    setData((prev) => {
-      const current = latest(prev, keys);
-      const priorEntry = (current.retrievalSchedule || {})[moduleId];
-      const nextEntry = {
-        ...markIntervalComplete(priorEntry),
-        moduleName,
-        cards: cards ?? priorEntry?.cards,
-      };
-      const reviewLog = appendReview(current.reviewLog, {
-        moduleId,
-        at: now,
-        dueAt: priorEntry?.nextDueDate ?? null,
-        results: results ?? [],
-      });
-      const newData = {
-        ...current,
-        retrievalSchedule: {
-          ...current.retrievalSchedule,
-          [moduleId]: nextEntry,
-        },
-        reviewLog,
-        lastUpdated: now,
-      };
-      const logged = withActivity(newData, now);
-      saveToStorage(keys, logged);
-      return logged;
-    });
-  }, [keys]);
+  const recordRetrievalReview = useCallback(
+    (moduleId, moduleName, cards, results) =>
+      commit((current, now) => {
+        const priorEntry = (current.retrievalSchedule || {})[moduleId];
+        const nextEntry = {
+          ...markIntervalComplete(priorEntry),
+          moduleName,
+          cards: cards ?? priorEntry?.cards,
+        };
+        return {
+          ...current,
+          retrievalSchedule: { ...current.retrievalSchedule, [moduleId]: nextEntry },
+          reviewLog: appendReview(current.reviewLog, {
+            moduleId,
+            at: now,
+            dueAt: priorEntry?.nextDueDate ?? null,
+            results: results ?? [],
+          }),
+        };
+      }),
+    [commit]
+  );
 
   const getDueReviews = useCallback(() => {
     const schedule = safeData.retrievalSchedule || {};

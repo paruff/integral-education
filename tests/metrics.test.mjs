@@ -9,7 +9,11 @@ import {
   appendReview,
   withActivity,
   buildExport,
+  localDay,
 } from '@site/src/utils/metrics.js';
+
+// Activity days are the learner's local dates; the fixtures below are written in UTC.
+process.env.TZ = 'UTC';
 import { cardId } from '@site/src/utils/retrieval.js';
 
 const d = (iso) => `${iso}T12:00:00.000Z`;
@@ -112,4 +116,19 @@ test('buildExport keeps counts only: no titles, dates of activity or card data',
   assert.deepEqual(out.pathways, [{ id: 'p', done: 1, total: 2 }]);
   const text = JSON.stringify(out);
   for (const leak of ['Secret title', 'firstDay', 'cardId', '"x"']) assert.ok(!text.includes(leak), leak);
+});
+
+test('activity days follow the learner\'s clock, not UTC', () => {
+  process.env.TZ = 'America/New_York';
+  try {
+    // 8:05pm in New York in July is already the next day in UTC.
+    const evening = '2026-07-02T00:05:00.000Z';
+    assert.equal(localDay(evening), '2026-07-01');
+    const once = withActivity({ activityDays: ['2026-07-01'] }, '2026-07-01T23:55:00.000Z');
+    assert.equal(withActivity(once, evening), once, 'one evening is one day, not a return visit');
+    // one UTC-midnight away from the first day: not yet a return, window still open
+    assert.equal(returnVisits(['2026-07-01'], new Date(evening)).within7, null);
+  } finally {
+    process.env.TZ = 'UTC';
+  }
 });

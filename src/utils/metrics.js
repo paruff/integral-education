@@ -8,14 +8,22 @@ const DAY_MS = 24 * 60 * 60 * 1000;
 const MAX_REVIEW_LOG = 500;
 const MAX_ACTIVITY_DAYS = 400;
 
+// The learner's own calendar day (YYYY-MM-DD, local time). "Came back the next day" must
+// follow their clock, not UTC: at 8pm in New York UTC is already tomorrow.
+export function localDay(date = new Date()) {
+  const d = new Date(date);
+  const pad = (n) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
 // Adds a review to the log, keeping only the most recent MAX_REVIEW_LOG.
 export function appendReview(reviewLog = [], entry) {
   return [...reviewLog, entry].slice(-MAX_REVIEW_LOG);
 }
 
-// Records the day of `nowIso` (UTC date) as a day the learner did something, for the return-visit metric.
+// Records the day of `nowIso` (the learner's local date) as a day they did something, for the return-visit metric.
 export function withActivity(data, nowIso) {
-  const day = nowIso.slice(0, 10);
+  const day = localDay(nowIso);
   const days = data.activityDays || [];
   return days.includes(day) ? data : { ...data, activityDays: [...days, day].slice(-MAX_ACTIVITY_DAYS) };
 }
@@ -55,7 +63,7 @@ export function pathwayCompletion(modules = {}, pathwayModules = []) {
   return { done, started, total: pathwayModules.length, rate: pathwayModules.length ? done / pathwayModules.length : null };
 }
 
-// Return visits, from the days (YYYY-MM-DD, UTC) on which the learner did anything.
+// Return visits, from the days (YYYY-MM-DD, local) on which the learner did anything.
 // A window is true if they came back inside it, null if it has not ended and they have
 // not come back yet, false if it ended without a return.
 export function returnVisits(activityDays = [], now = new Date()) {
@@ -68,7 +76,8 @@ export function returnVisits(activityDays = [], now = new Date()) {
       return diff >= 1 && diff <= n;
     });
     if (back) return true;
-    return (new Date(now) - first) / DAY_MS > n ? false : null;
+    const today = new Date(`${localDay(now)}T00:00:00Z`);
+    return (today - first) / DAY_MS > n ? false : null;
   };
   return { firstDay: days[0], distinctDays: days.length, within7: window(7), within30: window(30) };
 }

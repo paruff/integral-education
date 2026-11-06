@@ -146,7 +146,7 @@ export default function useProgress() {
       commit((current, now) => {
         const priorEntry = (current.retrievalSchedule || {})[moduleId];
         const nextEntry = {
-          ...markIntervalComplete(priorEntry),
+          ...markIntervalComplete(priorEntry, results),
           moduleName,
           cards: cards ?? priorEntry?.cards,
         };

@@ -90,7 +90,7 @@ export default function RetrievalPrompt({ moduleName, moduleId, cards = [] }) {
             <p>
               Come back on <strong>{formatDueDate(scheduleEntry.nextDueDate)}</strong> for your next
               review. You'll find it listed under "Due for review" on your{' '}
-              <Link to="/my-progress">progress page</Link>.
+              <Link to="/docs/my-progress">progress page</Link>.
             </p>
           ) : (
             <p>Your next review date will be scheduled automatically.</p>

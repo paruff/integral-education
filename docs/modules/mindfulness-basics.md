@@ -22,6 +22,7 @@ prerequisites: None
 line: somatic
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import Tooltip from '@site/src/components/Tooltip';
 import Admonition from '@theme/Admonition';
@@ -221,4 +222,4 @@ This module involves breath-focused and open-monitoring attention practice. As n
 | 7 days | Complete the Assess rubric for the first time; identify your current level |
 | 14 days | Repeat the Assess rubric; note any shift from Day 7; identify one Integrate practice to carry forward |
 
-
+<ModuleFooter />

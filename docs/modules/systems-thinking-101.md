@@ -25,6 +25,7 @@ prerequisites:
 line: cognitive
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import Admonition from '@theme/Admonition';
 
@@ -215,4 +216,4 @@ This module involves analytical reflection and mapping of systems you are part o
 | 7 days | Complete the Assess rubric for the first time; identify your current level |
 | 14 days | Repeat the Assess rubric; draw a causal loop diagram for one recurring problem in your life, as suggested in Integrate |
 
-
+<ModuleFooter />

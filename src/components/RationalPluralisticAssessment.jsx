@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -484,12 +485,13 @@ export default function RationalPluralisticAssessment() {
     lines.push('Results reflect tendencies in this moment, not fixed identities.');
 
     const text = lines.join('\n');
-    navigator.clipboard.writeText(text).catch(() => {});
-    const btn = document.getElementById('rp-copy-btn');
-    if (btn) {
-      btn.textContent = '✓ Copied to Clipboard';
-      setTimeout(() => (btn.textContent = 'Export to Journal'), 2000);
-    }
+    copyText(text).then((ok) => {
+      const btn = document.getElementById('rp-copy-btn');
+      if (ok && btn) {
+        btn.textContent = '✓ Copied to Clipboard';
+        setTimeout(() => (btn.textContent = 'Export to Journal'), 2000);
+      }
+    });
   }
 
   const profile = submitted ? generateProfile(answersA, answersB) : null;

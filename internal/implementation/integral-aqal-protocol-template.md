@@ -25,22 +25,17 @@ Canonical references:
 
 ## Module End-of-Page Progression CTA (Required)
 
-When authoring module files under `docs/modules/`, include the reusable NextStep CTA at the bottom of the module body:
+When authoring module files under `docs/modules/`, end the module body with the reusable ModuleFooter. It holds "Mark as Complete", the Next link and the Daily Reflection link; `scripts/check-retention.mjs` fails a module that lacks it.
 
 ```mdx
-import NextStep from '@site/src/components/NextStep';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 ```
 
 ```mdx
-<NextStep
-  nextTitle="Rational/Orange Stage Orientation"
-  nextLink="/docs/modules/rational-orange-orientation"
-  reflectLink="/docs/reflections/daily-template"
-  message="You completed this module. The next step in your path is below."
-/>
+<ModuleFooter />
 ```
 
-If `nextTitle` and `nextLink` are omitted, the component falls back to the module-path mapping in `src/components/NextStep/index.js`.
+The Next link and parent QuickStart come from `src/data/moduleNav.js`, generated from the QuickStart step tables by `scripts/generate-pathways.mjs`; edit the tables, not the footer.
 
 ---
 

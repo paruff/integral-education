@@ -1,6 +1,7 @@
 #!/usr/bin/env node
-// Fails if any module lacks spaced retrieval (FR-04) or a mastery threshold
-// in its Assess section (FR-07). Usage: node scripts/check-retention.mjs
+// Fails if any module lacks spaced retrieval (FR-04), a mastery threshold
+// in its Assess section (FR-07), or the <ModuleFooter /> that holds "Mark as Complete"
+// and the Next link. Usage: node scripts/check-retention.mjs
 import { readdirSync, readFileSync } from 'node:fs';
 
 const DIR = 'docs/modules';
@@ -12,6 +13,10 @@ for (const file of files) {
 
   if (!/<RetrievalPrompt[\s\S]*?cards=\{\[\s*\{/.test(text)) {
     problems.push(`${file}: no <RetrievalPrompt> with cards`);
+  }
+
+  if (!/<ModuleFooter\b/.test(text)) {
+    problems.push(`${file}: no <ModuleFooter />`);
   }
 
   // An Assess span runs from its H2 to the next journey H2 (one starting with
@@ -33,7 +38,7 @@ for (const file of files) {
 }
 
 if (problems.length) {
-  console.error(`❌ ${problems.length} retention problem(s) in ${files.length} modules:\n  ${problems.join('\n  ')}`);
+  console.error(`❌ ${problems.length} module problem(s) in ${files.length} modules:\n  ${problems.join('\n  ')}`);
   process.exit(1);
 }
-console.log(`✅ ${files.length}/${files.length} modules have spaced retrieval and a stated mastery threshold`);
+console.log(`✅ ${files.length}/${files.length} modules have spaced retrieval, a stated mastery threshold and a module footer`);

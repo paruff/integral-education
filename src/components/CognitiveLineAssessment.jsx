@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 import styles from './CognitiveLineAssessment.module.css';
 
@@ -339,23 +340,9 @@ export default function CognitiveLineAssessment() {
 
   const handleExport = useCallback(async () => {
     const text = buildExportText(mhcProfile, dialecticalScore, sectionCAnswers, mhcProfile.dominantLevel);
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    } catch {
-      // Fallback for older browsers
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    }
+    const ok = await copyText(text);
+    setCopied(ok);
+    if (ok) setTimeout(() => setCopied(false), 3000);
   }, [mhcProfile, dialecticalScore, sectionCAnswers]);
 
   const sectionAComplete = Object.keys(sectionAAnswers).length === SECTION_A_TASKS.length;

@@ -157,7 +157,6 @@ Don't:
 Found while writing this file. Fix in separate PRs:
 
 - Accent blue `#2e7dce` is hard-coded in `StateAssessment.module.css`,
-  `start.module.css`, `reflect.module.css` and `prototype.module.css`, and
-  used as text colour. It is 4.25:1 on white, below 4.5:1 for normal text.
+  `start.module.css`, and used as text colour. It is 4.25:1 on white, below 4.5:1 for normal text.
 - Radii outside the scale: 3px, 4px, 6px, 8px and 0.4rem appear in component CSS.
 - Font sizes outside the scale (0.8rem, 0.92rem, 1.05rem, 1.15rem, 1.3rem) appear in component CSS.

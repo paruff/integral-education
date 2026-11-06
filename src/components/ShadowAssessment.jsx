@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -361,9 +362,10 @@ export default function ShadowAssessment() {
     lines.push('\n── IMPORTANT ──');
     lines.push('Shadow work involves encountering disowned parts of yourself.');
     lines.push('This tool is a map for self-reflection, not a clinical assessment.');
-    navigator.clipboard.writeText(lines.join('\n')).catch(() => {});
-    const btn = document.getElementById('sw-copy-btn');
-    if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => (btn.textContent = 'Export to Journal'), 2000); }
+    copyText(lines.join('\n')).then((ok) => {
+      const btn = document.getElementById('sw-copy-btn');
+      if (ok && btn) { btn.textContent = '✓ Copied'; setTimeout(() => (btn.textContent = 'Export to Journal'), 2000); }
+    });
   }
 
   const cs = { maxWidth: '700px', margin: '0 auto', fontFamily: 'inherit' };

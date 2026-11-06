@@ -24,9 +24,7 @@
     "@docusaurus/core": "3.10.2",
     "@docusaurus/preset-classic": "3.10.2",
     "@docusaurus/theme-mermaid": "3.10.2",
-    "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
-    "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.3.1"
   },
@@ -34,7 +32,6 @@
     "@docusaurus/module-type-aliases": "3.10.2",
     "@docusaurus/types": "3.10.2",
     "@easyops-cn/docusaurus-search-local": "^0.55.3",
-    "canvas": "^3.2.3",
     "lefthook": "2.2.2",
     "lighthouse": "^13.5.0",
     "puppeteer": "^25.16.0"
@@ -61,7 +58,6 @@
     "node": ">=24"
   },
   "allowScripts": {
-    "canvas@3.2.3": true,
     "puppeteer@25.3.0": true,
     "lighthouse@13.4.0": true
   }

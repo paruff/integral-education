@@ -9,7 +9,7 @@ import useProgress from '@site/src/hooks/useProgress';
 import Link from '@docusaurus/Link';
 import { useState } from 'react';
 import MixedReview from '@site/src/components/MixedReview';
-import { readLearnerData } from '@site/src/utils/learnerData';
+import { MAIN_SITE_ID, readLearnerData } from '@site/src/utils/learnerData';
 import { computeMetrics, buildExport } from '@site/src/utils/metrics';
 import pathways from '@site/src/data/pathways.json';
 
@@ -179,7 +179,8 @@ export function ProgressDashboard() {
           </div>
         )}
 
-        {!hasLineProfile && (
+        {/* The Line Profile page exists on the main site only. */}
+        {!hasLineProfile && siteId === MAIN_SITE_ID && (
           <p className="margin-top--md">
             <Link to="/line-profile">Take your Line Profile →</Link> to see your development across six key lines.
           </p>

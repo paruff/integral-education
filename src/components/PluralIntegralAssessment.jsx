@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 
 // ─── Section A: Late-Green Signals Recognition ────────────────────────────────
@@ -603,9 +604,10 @@ export default function PluralIntegralAssessment() {
       'Note: Developmental self-assessments are least reliable at the level one is transitioning toward.',
       'Treat these results as one data point among many, and seek feedback from people who know you well.',
     ];
-    navigator.clipboard.writeText(lines.join('\n')).catch(() => {});
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+    copyText(lines.join('\n')).then((ok) => {
+      setCopied(ok);
+      if (ok) setTimeout(() => setCopied(false), 2500);
+    });
   }
 
   // Colours for line bars

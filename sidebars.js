@@ -272,11 +272,6 @@ const learnerSidebar = {
       label: 'Reflection',
       items: ['reflections/daily-template'],
     },
-    {
-      type: 'link',
-      label: 'Prototype',
-      href: '/prototype',
-    },
   ],
 };
 

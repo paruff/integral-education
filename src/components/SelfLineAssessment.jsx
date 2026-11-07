@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 import styles from './MoralLineAssessment.module.css';
 
@@ -364,20 +365,9 @@ export default function SelfLineAssessment() {
 
   const handleExport = useCallback(async () => {
     const text = buildExportText(profile, sectionBResponses);
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    } catch {
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    }
+    const ok = await copyText(text);
+    setCopied(ok);
+    if (ok) setTimeout(() => setCopied(false), 3000);
   }, [profile, sectionBResponses]);
 
   // ── Results view ────────────────────────────────────────────────────────────

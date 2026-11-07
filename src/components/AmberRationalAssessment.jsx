@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 
 const QUESTIONS = [
@@ -209,12 +210,13 @@ export default function AmberRationalAssessment() {
           .join('\n')
       : '';
     const text = `Self-Assessment Results\nDate: ${new Date().toLocaleDateString()}\nResult: ${result?.title}\n\nDomain Breakdown:\n${domainText}\n\nRecommended Modules:\n${result?.modules.map((m) => `- ${m.title}`).join('\n')}`;
-    navigator.clipboard.writeText(text).catch(() => {});
-    const btn = document.getElementById('copy-btn');
-    if (btn) {
-      btn.textContent = 'Copied ✓';
-      setTimeout(() => (btn.textContent = 'Save my results to journal'), 2000);
-    }
+    copyText(text).then((ok) => {
+      const btn = document.getElementById('copy-btn');
+      if (ok && btn) {
+        btn.textContent = 'Copied ✓';
+        setTimeout(() => (btn.textContent = 'Save my results to journal'), 2000);
+      }
+    });
   }
 
   return (

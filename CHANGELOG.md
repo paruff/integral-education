@@ -4,6 +4,20 @@ All notable changes to the Integral Education Platform.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [Unreleased]
+
+### Fixed
+
+- **Shadow-work entry gate** — a contraindication (crisis, active PTSD, acute trauma response) now blocks with no "proceed anyway" option whatever the distress number; the gate needs a distress answer, and passing it opens only that module for the session.
+- **Analytics** — only the page path is counted: search terms and other query strings are never sent. The GoatCounter script is served from this site (`static/js/goatcounter-count.js`), not `gc.zgo.at`.
+- **Daily reflection** — one entry per day (an older single entry is kept under the day it was written) instead of overwriting; saves that fail now say so.
+- **Review schedule** — the first review is due in 1 day (1, 3, 7, 14 as the modules say); cards rated "need to review" repeat the interval instead of advancing; a review before it is due leaves the schedule alone.
+- **Progress** — module pages no longer print "Progress tracking is unavailable" before loading; "Completed on" shows the day you marked it complete; "return visit" days follow the learner's local date.
+
+### Removed
+
+- `/prototype` demo page (it saved demo reviews under the real *Mindfulness Basics* module), the unused `/reflect` page, `NextStep` and `PracticeTimer` components, the `canvas`, `prism-react-renderer` and `@mdx-js/react` direct dependencies, and the tracked `artifacts/` audit output.
+
 ## [0.2.0-alpha] — 2026-07-25
 
 ### Added

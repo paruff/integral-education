@@ -255,6 +255,8 @@ function DueReviews() {
 
 ### PracticeTimer.jsx
 
+> **Status: not built.** A first version existed but no module used it, so it was removed (see git history). This section is the spec if a timed practice is added.
+
 **Purpose:** In-page timer for timed practices.
 
 **Location:** `src/components/PracticeTimer.jsx`

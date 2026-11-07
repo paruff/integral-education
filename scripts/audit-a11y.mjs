@@ -19,7 +19,6 @@ const TARGETS = [
   { name: 'quickstart', path: '/docs/quickstarts/personal-to-integral' },
   { name: 'quickstart-pathway-map', path: '/docs/quickstarts/rational-to-pluralistic' },
   { name: 'my-progress', path: '/docs/my-progress' },
-  { name: 'prototype', path: '/prototype' },
   { name: 'start-here', path: '/start' },
   { name: '404-page', path: '/nonexistent-page' },
 ];

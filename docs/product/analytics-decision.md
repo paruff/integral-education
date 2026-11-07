@@ -78,7 +78,11 @@ Cloudflare Web Analytics. Their feature claims have not been verified here.
   localStorage and no stored IP, which meets the "never" rules above.
 - **How it is loaded:** only by the deploy build on `main`
   (`.github/workflows/ci-quality.yml`), through `analytics.js`. PR and local
-  builds never load it.
+  builds never load it. The script is our own vendored copy
+  (`static/js/goatcounter-count.js`, ISC licence), not `gc.zgo.at/count.js`: it runs
+  on the same origin as learners' stored journals, so it must not change under us.
+  Two local edits keep the URL's query string (e.g. a `/search?q=` term) from ever
+  being sent; `tests/analytics.test.mjs` fails if a refresh loses them.
 - **Events counted:** `enter-stage-site` and `choose-again`, plus page views.
 - **Checked 2026-10-21 (live site, from the outside):** the production page
   carries the `count.js` tag and the footer privacy note; the count endpoint

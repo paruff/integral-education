@@ -194,15 +194,6 @@ export default function Home() {
                 Open reflection →
               </Link>
             </article>
-            <article className="homepage-tool-card">
-              <h3>
-                <span>🖱️</span> Platform Demo
-              </h3>
-              <p>Try an interactive walkthrough of pathway selection, safety gates, practice flows, and progress tracking.</p>
-              <Link className="homepage-card-cta" to="/prototype">
-                Try the demo →
-              </Link>
-            </article>
           </div>
         </section>
       </main>

@@ -23,3 +23,6 @@ https://doi.org/10.5465/amle.9.2.zqr169
 # modules; ignoring the check rather than removing/replacing the citation.
 https://www.iasp.info/resources/Crisis_Centres
 https://www.iasp.info/resources/Crisis_Centres/
+
+# docs/product/plan.md links the private GitHub Project board; it returns 404 to anonymous crawlers.
+^https://github\.com/users/paruff/projects/

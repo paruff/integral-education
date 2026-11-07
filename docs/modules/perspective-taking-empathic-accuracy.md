@@ -32,6 +32,7 @@ line: interpersonal
 teaches_framework: true
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import Admonition from '@theme/Admonition';
 
@@ -398,3 +399,5 @@ The practices in this module are Tier 1 and are designed for general development
 ## 📝 SME Review Sign-off (Human-recommended)
 
 *This module is flagged for SME review by a social psychologist with expertise in empathy research (Zaki/Epley paradigms) and an AQAL-literate developmental clinician before publication.*
+
+<ModuleFooter />

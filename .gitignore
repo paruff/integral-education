@@ -22,3 +22,6 @@ yarn-error.log*
 # Pipeline/report artifacts (agent-generated, not canonical docs)
 *-report.md
 .sites-cache/
+
+# Output of scripts/audit-a11y.mjs and scripts/lighthouse-audit.mjs (rerun to regenerate)
+artifacts/

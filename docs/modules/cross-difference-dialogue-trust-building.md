@@ -38,6 +38,7 @@ types:
 - dialogue-supported
 ---
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 
 ## 🗺️ AQAL Mapping
 
@@ -366,3 +367,5 @@ The trust languages and dialogue frameworks referenced above were developed prim
 For the full safety framework, see the [Shadowwork Safety Standard](/internal/safety/shadowwork-safety-standard) and the [Emotional & Interpersonal Line Safety Addendum](/internal/safety/emotional-interpersonal-safety-addendum).
 
 **Safety review sign-off:** **[HUMAN-REQUIRED]** Licensed clinician review required before publication. Current status: pending.
+
+<ModuleFooter />

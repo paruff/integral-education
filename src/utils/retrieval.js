@@ -27,20 +27,32 @@ function addDays(days) {
 }
 
 // progress: { intervalIndex, lastReviewDate, nextDueDate, complete } | undefined
+// results: [{ cardId, outcome }] from the review that just finished.
 // Returns the next progress state after a review just happened.
-export function markIntervalComplete(progress) {
+//   - the first review schedules the first interval (1 day), as the modules promise;
+//   - a review done before it was due, or after the sequence is complete, changes nothing;
+//   - any card rated "needs-review" repeats the same interval instead of advancing;
+//   - coming back well past the window drops back one interval;
+//   - otherwise the schedule advances, and the last interval completes it.
+export function markIntervalComplete(progress, results = []) {
+  if (progress?.complete) return progress;
+  if (progress?.nextDueDate && new Date(progress.nextDueDate) > new Date()) return progress;
+
   const currentIndex = progress?.intervalIndex ?? 0;
   const expectedDays = INTERVALS_DAYS[currentIndex];
 
-  const missed = progress?.lastReviewDate
+  const late = progress?.lastReviewDate
     ? daysSince(progress.lastReviewDate) > expectedDays * MISS_THRESHOLD_MULTIPLIER
     : false;
+  const forgot = results.some((r) => r.outcome === 'needs-review');
 
-  const nextIndex = missed
-    ? Math.max(0, currentIndex - 1)
-    : Math.min(INTERVALS_DAYS.length - 1, currentIndex + 1);
+  let nextIndex;
+  if (!progress) nextIndex = 0;
+  else if (late) nextIndex = Math.max(0, currentIndex - 1);
+  else if (forgot) nextIndex = currentIndex;
+  else nextIndex = Math.min(INTERVALS_DAYS.length - 1, currentIndex + 1);
 
-  const isComplete = !missed && currentIndex === INTERVALS_DAYS.length - 1;
+  const isComplete = !!progress && !late && !forgot && currentIndex === INTERVALS_DAYS.length - 1;
 
   return {
     intervalIndex: nextIndex,

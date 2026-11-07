@@ -42,6 +42,7 @@ teaches_framework: true
 
 import ModuleMeta from '@site/src/components/ModuleMeta';
 import RetrievalPrompt from '@site/src/components/RetrievalPrompt';
+import ModuleFooter from '@site/src/components/ModuleFooter';
 
 <ModuleMeta />
 
@@ -392,3 +393,5 @@ This module involves reflective and cognitive practices. The Emotional–Interpe
 If any material surfaces significant distress, pause and speak with a trusted person. Return to the module only when you feel more settled.
 
 This content is educational, not therapeutic.
+
+<ModuleFooter />

@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import Link from '@docusaurus/Link';
+import { useLocation } from '@docusaurus/router';
+import { gateOutcome } from '@site/src/utils/shadowGate';
 import CrisisResourceBanner from '@site/src/components/CrisisResourceBanner';
 import styles from './styles.module.css';
 
-const STORAGE_KEY = 'shadow-gate-acknowledged';
+const STORAGE_PREFIX = 'shadow-gate-acknowledged:';
 
 /**
  * ShadowGate — Tier 1 entry gate for shadow work modules.
  *
  * Renders a pre-module consent and readiness check. Uses sessionStorage
- * so the gate does not re-fire on page reload within a browser session.
+ * so the gate does not re-fire on page reload within a browser session. The
+ * acknowledgment is per module: passing it for one module does not open the others.
  *
  * Blocks entry when:
+ *   - Any contraindication checked (show "not suitable" message, no override)
  *   - Self-reported distress ≥ 7 (show grounding + crisis banner)
- *   - Any contraindication checked (show "not suitable" message)
+ * The decision lives in src/utils/shadowGate.js.
  */
 export default function ShadowGate({ children }) {
+  const storageKey = STORAGE_PREFIX + useLocation().pathname.replace(/\/+$/, '');
   const [acknowledged, setAcknowledged] = useState(false);
   const [blocked, setBlocked] = useState(false);
   const [blockReason, setBlockReason] = useState(null); // 'distress' | 'contraindication'
@@ -31,35 +36,28 @@ export default function ShadowGate({ children }) {
   // On mount: check sessionStorage for prior acknowledgment
   useEffect(() => {
     try {
-      if (sessionStorage.getItem(STORAGE_KEY) === 'true') {
+      if (sessionStorage.getItem(storageKey) === 'true') {
         setAcknowledged(true);
       }
     } catch {
       // sessionStorage unavailable (rare) — show gate
     }
-  }, []);
-
-  const hasContraindication =
-    contraindications.trauma || contraindications.ptsd || contraindications.crisis;
+  }, [storageKey]);
 
   const handleProceed = () => {
-    const dist = parseInt(distress, 10);
+    const outcome = gateOutcome(distress, contraindications);
 
-    if (dist >= 7) {
-      setBlocked(true);
-      setBlockReason('distress');
-      return;
-    }
+    if (outcome === 'incomplete') return;
 
-    if (hasContraindication) {
+    if (outcome !== 'pass') {
       setBlocked(true);
-      setBlockReason('contraindication');
+      setBlockReason(outcome);
       return;
     }
 
     // Gate passes
     try {
-      sessionStorage.setItem(STORAGE_KEY, 'true');
+      sessionStorage.setItem(storageKey, 'true');
     } catch {
       // sessionStorage unavailable — gate will re-fire on reload (acceptable)
     }
@@ -222,7 +220,7 @@ export default function ShadowGate({ children }) {
       </div>
 
       {/* Proceed */}
-      <button className={styles.primaryButton} onClick={handleProceed}>
+      <button className={styles.primaryButton} onClick={handleProceed} disabled={distress === null}>
         I'm ready to proceed →
       </button>
     </div>

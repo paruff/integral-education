@@ -14,27 +14,33 @@ const LEVEL_LABELS = {
 export default function ModuleComplete({ moduleId, moduleTitle }) {
   const { data, isAvailable, updateModule, getModule } = useProgress();
   const [saved, setSaved] = useState(false);
+  const [saveFailed, setSaveFailed] = useState(false);
 
   const moduleData = getModule(moduleId);
   const currentLevel = moduleData?.level || null;
   const isCompleted = moduleData?.completed || false;
-  const completedDate = moduleData?.lastVisited || null;
+  // completedAt is set when the button is pressed; lastVisited changes on every visit, so it is not a completion date.
+  const completedDate = moduleData?.completedAt || null;
 
   useEffect(() => {
     // Mark visited on mount
     updateModule(moduleId, {});
   }, []);
 
+  // "Saved" is only shown when the write worked; otherwise the learner is told it was not stored.
+  function save(updates) {
+    const ok = updateModule(moduleId, updates);
+    setSaveFailed(!ok);
+    setSaved(ok);
+    if (ok) setTimeout(() => setSaved(false), 2000);
+  }
+
   function handleLevelChange(level) {
-    updateModule(moduleId, { level });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    save({ level });
   }
 
   function handleToggleComplete() {
-    updateModule(moduleId, { completed: !isCompleted });
-    setSaved(true);
-    setTimeout(() => setSaved(false), 2000);
+    save({ completed: !isCompleted, completedAt: isCompleted ? null : new Date().toISOString() });
   }
 
   if (!isAvailable) {
@@ -84,6 +90,11 @@ export default function ModuleComplete({ moduleId, moduleTitle }) {
       </div>
 
       {saved && <p className={styles.savedNotice}>Progress saved ✓</p>}
+      {saveFailed && (
+        <p className={styles.unavailable} role="alert">
+          Could not save your progress. Your browser's storage may be full or blocked.
+        </p>
+      )}
 
       {completedDate && isCompleted && (
         <p className={styles.completedDate}>

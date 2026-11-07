@@ -40,13 +40,27 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Only check learner-facing modules in docs/modules/ — exclude archived
-          # specs (docs/features/) and reference pages (docs/safety/)
-          shadow_files=$(find docs/modules -type f | grep -iE "shadow|safety" || true)
+          # Learner-facing modules in docs/modules/ that are Tier 2 (safety_tier: 2 in
+          # frontmatter) or named shadow/safety. Archived specs (docs/features/) and
+          # reference pages (docs/safety/) are not checked.
+          shadow_files=$( { grep -lE '^safety_tier: *2' docs/modules/* || true; find docs/modules -type f | grep -iE "shadow|safety" || true; } | sort -u)
           if [[ -z "${shadow_files}" ]]; then
-            echo "No shadow/safety files detected in docs. Skipping safety-language check."
+            echo "No Tier 2 or shadow/safety modules detected. Skipping safety-language check."
             exit 0
           fi
+
+          # Tier 2 modules that predate this check and still lack some of the wording below.
+          # They warn instead of failing until a human reviews and writes the missing
+          # safety text (AGENTS.md: safety-sensitive output needs human sign-off).
+          # Remove a line here when its module is fixed; never add to this list.
+          known_gaps="
+          docs/modules/affect-labelling-somatic-correlation.md
+          docs/modules/co-regulation-relational-attunement.md
+          docs/modules/cross-difference-dialogue-trust-building.md
+          docs/modules/relational-repair-conflict-navigation.md
+          docs/modules/self-line-integration-practice.mdx
+          docs/modules/somatic-line-overview.md
+          "
 
           required_patterns=(
             "consent"
@@ -56,15 +70,21 @@ jobs:
             "escalation"
           )
 
+          failed=0
           while IFS= read -r f; do
             for p in "${required_patterns[@]}"; do
               if ! grep -qiE "${p}" "${f}"; then
-                echo "Missing required safety language pattern '${p}' in ${f}"
-                exit 1
+                if grep -qxF "${f}" <<< "$(echo "${known_gaps}" | sed 's/^ *//')"; then
+                  echo "::warning file=${f}::Known gap: missing safety language pattern '${p}'"
+                else
+                  echo "::error file=${f}::Missing required safety language pattern '${p}'"
+                  failed=1
+                fi
               fi
             done
           done <<< "${shadow_files}"
 
+          if [[ "${failed}" -eq 1 ]]; then exit 1; fi
           echo "Shadow/safety language checks passed."
 
       - name: Check AQAL Coverage Tokens

@@ -1,4 +1,5 @@
 import React, { useState, useCallback } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 import styles from './MoralLineAssessment.module.css';
 
@@ -185,15 +186,7 @@ function computeSchemaProfile(sectionAAnswers) {
   const pcPct = Math.round((schemaCounts.PC / totalRatings) * 100);
 
   // Dominant schema: highest proportion; tie → PC > MN > PI
-  let dominant = 'PI';
-  if (mnPct > (dominant === 'PI' ? piPct : schemaCounts.MN > schemaCounts.PI ? mnPct : -1)) {
-    dominant = 'MN';
-  }
-  if (pcPct >= mnPct && pcPct >= piPct) {
-    dominant = 'PC';
-  } else if (mnPct >= piPct && mnPct >= pcPct) {
-    dominant = 'MN';
-  }
+  const dominant = pcPct >= mnPct && pcPct >= piPct ? 'PC' : mnPct >= piPct ? 'MN' : 'PI';
 
   return { piPct, mnPct, pcPct, dominant, totalDilemmas, completedDilemmas };
 }
@@ -420,23 +413,9 @@ export default function MoralLineAssessment() {
 
   const handleExport = useCallback(async () => {
     const text = buildExportText(schemaProfile, careScore, courageGap);
-    try {
-      await navigator.clipboard.writeText(text);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    } catch {
-      // Fallback for older browsers
-      const textarea = document.createElement('textarea');
-      textarea.value = text;
-      textarea.style.position = 'fixed';
-      textarea.style.opacity = '0';
-      document.body.appendChild(textarea);
-      textarea.select();
-      document.execCommand('copy');
-      document.body.removeChild(textarea);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 3000);
-    }
+    const ok = await copyText(text);
+    setCopied(ok);
+    if (ok) setTimeout(() => setCopied(false), 3000);
   }, [schemaProfile, careScore, courageGap]);
 
   const sectionAComplete = Object.keys(sectionAAnswers).filter(

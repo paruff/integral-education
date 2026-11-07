@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { copyText } from '@site/src/utils/copyText';
 import Link from '@docusaurus/Link';
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -308,11 +309,6 @@ const MODULE_RECOMMENDATIONS = {
 
 function analyzeMechanisms(answers) {
   const counts = {};
-  Object.values(answers).forEach((val) => {
-    const q = QUESTIONS_A.find((q) => q.id === Object.keys(answers).find((k) => answers[k] === val));
-    // Reconstruct: find mechanism for each answer
-  });
-  // Simpler approach: iterate answered questions
   QUESTIONS_A.forEach((q) => {
     const ans = answers[q.id];
     if (!ans) return;
@@ -354,13 +350,6 @@ export default function ShadowAssessment() {
   function handleCopy() {
     const analysis = submitted ? analyzeMechanisms(answersA) : null;
     const bypass = submitted ? analyzeBypassing(answersC) : null;
-    const dominantLine = submitted
-      ? QUESTIONS_B.reduce((max, q) => {
-          const ans = answersB[q.id];
-          // Just pick the first answered as indicative
-          return ans ? q.line : max;
-        }, 'Self')
-      : '';
     const lines = [];
     lines.push('═══ Shadow Work Self-Assessment ═══');
     lines.push(`Date: ${new Date().toLocaleDateString()}`);
@@ -373,9 +362,10 @@ export default function ShadowAssessment() {
     lines.push('\n── IMPORTANT ──');
     lines.push('Shadow work involves encountering disowned parts of yourself.');
     lines.push('This tool is a map for self-reflection, not a clinical assessment.');
-    navigator.clipboard.writeText(lines.join('\n')).catch(() => {});
-    const btn = document.getElementById('sw-copy-btn');
-    if (btn) { btn.textContent = '✓ Copied'; setTimeout(() => (btn.textContent = 'Export to Journal'), 2000); }
+    copyText(lines.join('\n')).then((ok) => {
+      const btn = document.getElementById('sw-copy-btn');
+      if (ok && btn) { btn.textContent = '✓ Copied'; setTimeout(() => (btn.textContent = 'Export to Journal'), 2000); }
+    });
   }
 
   const cs = { maxWidth: '700px', margin: '0 auto', fontFamily: 'inherit' };
@@ -527,7 +517,7 @@ export default function ShadowAssessment() {
       </div>
 
       {/* Submit */}
-      <button className="button button--primary button--lg" onClick={() => { setSubmitted(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ width: '100%', marginBottom: '1rem' }}>
+      <button className="button button--primary button--lg" disabled={totalAnswered < totalQuestions} onClick={() => { setSubmitted(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }} style={{ width: '100%', marginBottom: '1rem' }}>
         View Your Shadow Profile ({totalAnswered}/{totalQuestions})
       </button>
     </div>

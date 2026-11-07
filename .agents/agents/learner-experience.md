@@ -200,6 +200,8 @@ function DueReviews() {
 
 ### P2 — Somatic practice timer (`PracticeTimer.jsx`)
 
+> **Status: not built.** A first version existed but no module used it, so it was removed (see git history). This section is the spec if a timed practice is added.
+
 **Purpose:** In-page timer for timed somatic and reflective practices. Creates a container for the practice without requiring the learner to watch a clock.
 
 **Props:**

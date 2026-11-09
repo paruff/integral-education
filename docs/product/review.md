@@ -45,3 +45,4 @@ Append new rows at the bottom. Scope is `product` or a feature slug.
 | 2026-10-21 | product | Design | One internal stage-name set (P12-01) | Approved | @paruff | PR #620 |
 | 2026-10-24 | product | Intent | [intent.md](intent.md) | Approved | @paruff | PR adding this file |
 | 2026-10-24 | product | Plan | [plan.md](plan.md) | Approved | @paruff | PR adding this file |
+| 2026-11-09 | product | Plan | [plan.md](plan.md): open rows rewritten to match the code (P3-03, P5, P9, P10, P12) | Pending | @paruff | this PR |

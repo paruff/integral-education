@@ -41,7 +41,7 @@ flowchart TD
 | Step | Module | Pass when |
 |---|---|---|
 | 1 | [Mindfulness Basics](../modules/mindfulness-basics) | Level 3: you can sit for 5 minutes or more and return to the breath within seconds each time you notice drift. |
-| 2 | [Emotional Granularity](../modules/emotional-granularity) | *Proficient* on both indicators. |
+| 2 | [Emotional Granularity](../modules/emotional-granularity) | Stable in at least 3 of 4 criteria. |
 | 3 | [Shadow Integration](../modules/shadow-integration-101) | Level 3: you have owned at least one disowned trait and can relate to it with compassion rather than blame. |
 
 ---

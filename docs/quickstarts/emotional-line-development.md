@@ -42,7 +42,7 @@ flowchart TD
 | Step | Module | Pass when |
 |---|---|---|
 | 1 | [Emotional Line Overview & Orientation](../modules/emotional-line-overview-orientation) | Three or more criteria at *Developing* or *Stable*. |
-| 2 | [Emotional Granularity](../modules/emotional-granularity) | *Proficient* on both indicators. |
+| 2 | [Emotional Granularity](../modules/emotional-granularity) | Stable in at least 3 of 4 criteria. |
 | 3 | [Emotion Regulation Foundations](../modules/emotion-regulation-foundations) | *Proficient*: on at least three real occasions you named the strategy and autonomic zone you were in at the time and chose a strategy on purpose. |
 | 4 | [Affect Labelling & Somatic Correlation](../modules/affect-labelling-somatic-correlation) | Stable in at least 2 of 4 criteria, with no "Not yet" in Somatic access or Label-sensation correlation. If Somatic access is still "Not yet," repeat the practice 3 times over 2 weeks before moving to more advanced somatic modules. |
 | 5 | [Emotional Intelligence & Somatic Line Development](../modules/emotional-intelligence-somatic-line) | A score of 3 or 4 on at least 4 of 6 dimensions indicates the module competencies are consolidating. A score of 1 or 2 on Regulatory Integration or Pre/Trans Discernment indicates that more foundational regulatory work is needed before the module's more advanced practices are safe to deepen. |

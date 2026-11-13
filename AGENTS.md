@@ -65,7 +65,8 @@ Labels never carry state: `agent:*` and `copilot-implementable` say who,
 - Waiting on a human:
   `gh project item-list 6 --owner paruff --limit 100 --query 'status:"Needs human review"' --format json --jq '(.items[] | "\(.gate // "no gate")\t#\(.content.number)\t\(.title)") // "nothing waiting on a human"'`
 - Move: `gh project item-edit 6 --owner paruff --url <issue-url> --field Status --value "In progress"`
-  (`--field Gate --value PR` when you hand over).
+  (`--field Gate --value PR` when you hand over). Cloud sessions can't run `gh project`
+  (no GraphQL): say so in the PR and a human moves the card.
 - Loop: claim → branch from `main` → PR using the template (`Closes #N`) →
   Needs human review + Gate → a human merges. Merge a PR only when its base is `main`.
 - Issues: title `P<n>-<nn> · <task>`, body per `.github/ISSUE_TEMPLATE/plan-task.md`.

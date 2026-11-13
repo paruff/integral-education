@@ -1,6 +1,7 @@
 # Planning Audit, 2026-11-13
 
-> **Status:** Phase 1 (audit) complete, awaiting the Product Owner's review. Nothing in the planning docs or on GitHub has been changed.
+> **Status:** Phase 1 (audit) reviewed by the Product Owner on 2026-11-13: all findings approved. Phase 2 (doc revisions) is applied in the same branch; see section 7. Phase 3 (GitHub) is not drafted or applied.
+> File and line references below describe the repo **before** Phase 2. Phase 2 moved `docs/AUDIT_AND_IMPLEMENTATION_PLAN.md` and `docs/v0.3.0-alpha-todo.md` to `docs/product/archive/` and changed line numbers in the planning docs.
 > **Scope:** planning only. The 13-section module rubric was skipped, as asked.
 > **Checked against:** `main` at `e4ba758`, 17 open issues, 4 milestones, all closed issues from #409 up.
 
@@ -14,7 +15,7 @@
 
 ## 1. Proposed structure
 
-**The premise needs correcting first.** The repo already has a single intent → spec → design → plan chain in `docs/product/`, accepted on 2026-10-24 (`docs/product/review.md:46-47`). `docs/AUDIT_AND_IMPLEMENTATION_PLAN.md`, `docs/v0.3.0-alpha-todo.md` and `internal/implementation/backlog.md` each carry a "Superseded 2026-10-02" banner pointing to `docs/product/plan.md`. None of the 41 folders in `docs/features/` maps to an open issue. So this is not a consolidation job. It is closing the gaps between the existing chain and the prei pattern.
+**The premise needs correcting first.** The repo already has a single intent → spec → design → plan chain in `docs/product/`, accepted on 2026-10-24 (`docs/product/review.md:46-47`). `docs/AUDIT_AND_IMPLEMENTATION_PLAN.md`, `docs/v0.3.0-alpha-todo.md` and `internal/implementation/backlog.md` each carry a "Superseded 2026-10-02" banner pointing to `docs/product/plan.md`. None of the 40 folders in `docs/features/` maps to an open issue. So this is not a consolidation job. It is closing the gaps between the existing chain and the prei pattern.
 
 Compared with prei (`intent.md`, `spec.md`, `plan.md` at its root, read on 2026-11-13):
 
@@ -156,7 +157,7 @@ Only one row can be handed to a cheaper model now. The plan gives no order for t
 
 ### 17. Feature specs: none open, some with stale task files
 
-- 41 folders in `docs/features/`. No open issue refers to any of them.
+- 40 folders in `docs/features/` (the first draft of this audit said 41; that was a miscount). No open issue refers to any of them.
 - `tasks.json` still shows "pending" tasks in `rp-106-…` (6), `ilp-96-…` (5) and `sw-93-…` (4), although issues #106, #96 and #93 closed on 2026-07-24 and the pages exist in `docs/maps/`. `ei-74-…` (8), `ei-90-…` (8) and `clarity-03-…` (3) also show pending tasks; whether that work shipped is **UNVERIFIED**.
 - **Fix:** add `docs/features/README.md`: one line per folder with its issue and "shipped" or "check". A cheap-model task (Phase 3).
 
@@ -216,3 +217,30 @@ All other closed P-row issues (#509–#548 except the open ones above) were not 
 ## 6. Phase 3 draft (GitHub changes)
 
 Not drafted yet. It follows the Phase 2 approvals. Nothing on GitHub changes until the owner says "apply".
+
+## 7. Phase 2: what was applied (2026-11-13)
+
+Owner's answers: (1) next release is `v0.3.0-alpha`; (2) use the audit's recommended P9-06 numbers; (3) the early publish is a deliberate trial, so readers read the live site; (4) remove planning docs from the public site; (5) the retention study waits until after 2026-12-16; (6) P12 gets its own goal and requirement.
+
+| Finding | Applied in Phase 2 | Left for |
+| --- | --- | --- |
+| 1 | Baseline wording corrected in intent, spec, plan and `docs/METRICS.md`; new row P10-04a | Owner: record the values. Phase 3: the issue |
+| 2 | P9-06 rewritten with a minimum count, a 25% threshold, one extension and a copy freeze; rule drafted in `docs/METRICS.md` | Owner: confirm the numbers by 2026-11-30 |
+| 3 | Trial recorded in `review.md`, plan P9-05 and `STAGE-SITES.md` | Owner: the readers |
+| 4 | "Owner's queue" in `plan.md`, in order | — |
+| 5 | `v0.3.0-alpha` defined in `plan.md` | Phase 3: the milestone |
+| 6 | Goals table in `plan.md`; P12 moved to G8 | Phase 3: edit #554, #555, #557; open the G8 issue |
+| 7 | FR-19 target reworded | Owner: Spec gate |
+| 8 | P7 is now rows P7-01 to P7-13 under "Later" | — |
+| 9 | NFR-07 added | Owner: Spec gate |
+| 10 | `review.md` rows corrected; pending rows added | Owner: approve or return `design.md` and the three revisions |
+| 11 | Six stale statements corrected | — |
+| 12 | — | Phase 3: retitle and relabel #528, #529, #531, #586, #628 |
+| 13 | `docs/product/`, `docs/features/`, `docs/audits/` excluded from the docs build; superseded plans moved into `docs/product/archive/` | `docs/METRICS.md`, `AI_COST_GUIDE.md` and `MODEL_ROUTING_GUIDE.md` are still built: they are not planning docs, but say if they should go too |
+| 14 | — | Phase 3: close milestones and #656. Owner: the replacement link in #658 |
+| 15 | Rows P5-01a and P5-01b | Phase 3: the issues |
+| 16 | New row P3-04; note in the spec | Owner: the re-check |
+| 17 | `docs/features/README.md` index | The six "check" folders are still unverified |
+| 18 | One line in `AGENTS.md` | — |
+
+New rows have no issue yet. `AGENTS.md` says a new row and its issue land in the same PR; here the issues wait for the owner's "apply" in Phase 3, so the rows say "no issue yet".

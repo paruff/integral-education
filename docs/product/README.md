@@ -14,4 +14,7 @@ file types scoped to one feature.
 - `review.md` — every human gate (intent, spec, design, plan, PR, release,
   human steps) and the log of decisions taken. Status lives on the board
   (`AGENTS.md` § Workflow).
+- `archive/` — closed plan phases (`plan-2026-10.md`) and the two plans superseded on 2026-10-02
+- `../audits/` — dated planning audits
+- None of `docs/product/`, `docs/features/` or `docs/audits/` is built into the public site (`docusaurus.config.js`, docs `exclude`)
 - `tasks.json` — superseded by `plan.md` (prod-01..05 carried into it); kept for history.

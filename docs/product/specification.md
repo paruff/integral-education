@@ -1,6 +1,9 @@
 # Product Specification
 
 > **Status:** Accepted by the Product Owner (@paruff), 2026-10-18 (PR #560)
+> **Revised:** 2026-11-13 (awaits the Spec gate, [review.md](review.md)).
+> Planning audit: FR-19 target and acceptance match what was built, NFR-07
+> added for stage names, stale counts corrected, one statistic flagged.
 > **Revised:** 2026-10-18. Added visuals (FR-16), stage-specific language
 > (FR-17), separate stage sites (FR-18), success metrics (FR-19) and NFR-06.
 > **Previously:** 2026-10-02. Rebuilt around evidence-based self-paced learning
@@ -61,7 +64,10 @@ They organize navigation and content, and their claims are tiered (FR-14).
 Visuals are for every learner, not for "visual learners". FR-11's
 learning-styles prohibition still applies.
 
-Citations from protocol §7 were checked against sources on 2026-10-01.
+Citations from protocol §7 were checked against sources on 2026-10-01;
+the checker is not recorded. The planning audit of 2026-11-13 could not
+verify "217 studies" for Adesope et al. (2017), so the numbers in the §7
+citations are re-checked by a human in plan P3-04.
 Karpicke & Blunt, Gollwitzer & Sheeran, Richland et al., Dunlosky & Rawson
 and Pashler et al. (added 2026-10-02) and Clark & Paivio, Ginns, Rey,
 Nesbit & Adesope, Fiorella & Mayer, Ginns, Martin & Marsh, Hulleman &
@@ -101,7 +107,7 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
 - **FR-01 — Stage/line-tagged content.** Every module carries frontmatter
   tags for its stage, line and safety tier (`aqal-tagger` skill).
   *Acceptance:* `node scripts/validate-frontmatter.js` reports zero errors
-  and zero warnings (today 27/77 pass).
+  and zero warnings (77/77 on 2026-11-13; 27/77 on 2026-10-02).
 - **FR-02 — Self-selected QuickStarts.** Learners choose a pathway for their
   stage transition or line focus. *Acceptance:* every `docs/quickstarts/*.mdx`
   passes the `quickstart-validator` checks.
@@ -224,7 +230,7 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
 
   | Tier | Metric | Source | Target |
   | --- | --- | --- | --- |
-  | Outcome (headline) | Delayed retention score, ≥7 days after the pathway | FR-15 study | Effect size with interval, reported per stage site |
+  | Outcome (headline) | Delayed retention score, ≥7 days after the pathway | FR-15 study | Effect size with interval, reported for the studied QuickStart. A per-site comparison is a later study (the first study has no stage-site arm) |
   | Process | Reviews completed within 2 days of due | `useProgress`, local | ≥60% for active learners |
   | Process | Calibration gap: share of cards rated "remembered" then missed at the next review | `useProgress`, local | Falling over a pathway |
   | Process | Pathway completion; return within 7 and 30 days | Local. Site analytics adds an aggregate completion proxy; returns stay local only (`analytics-decision.md`) | Baseline first, then per-site trend |
@@ -237,14 +243,18 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
   leaves the browser unless the learner exports it. Any site-wide analytics
   must be cookieless, aggregate-only and approved by a human (P10-01;
   decided in `analytics-decision.md`).
-  *Acceptance:* metrics visible on `docs/my-progress.mdx`; a baseline is
-  recorded in `docs/METRICS.md` before the first stage site launches.
+  *Acceptance:* metrics visible on `docs/my-progress.mdx`; baseline values
+  are recorded in `docs/METRICS.md`. The original wording, "before the
+  first stage site launches", was not met: the first site was published on
+  2026-10-21 with no values recorded. The first recorded values are the
+  baseline (plan P10-04a), and the first site is compared with the main
+  site over the same weeks (plan P9-06).
 
 ## Non-Functional Requirements
 
 - **NFR-01 — No server-side runtime.** Static Docusaurus site.
 - **NFR-02 — Accessibility.** WCAG 2.2 AA on learner-facing pages.
-  `scripts/audit-a11y.mjs` exists but is not yet run in CI.
+  `scripts/audit-a11y.mjs` runs in CI (`ci-quality.yml`, since P6-02).
 - **NFR-03 — Build integrity.** `npm run build` passes with zero broken
   links on every merge to `main`.
 - **NFR-04 — Fork portability.** Per `ARCHITECTURE.md` § Fork Architecture.
@@ -261,6 +271,14 @@ source and confirmed each claim in the evidence table above on 2026-10-18.
   Storage keys must include the site's `projectName`, and existing data
   must carry over to the new key. *Acceptance:* unit test with two site
   keys.
+
+- **NFR-07 — One stage-name set.** Internal stage names follow the single
+  set and crosswalk in the `developmental-vocabulary` skill (decided in
+  P12-01). When a doc is renamed, its old URL redirects to the new one and
+  progress stored under the old doc id still shows under the new id.
+  *Acceptance:* `scripts/check-stage-names.mjs` passes in CI; every URL in
+  `src/data/stage-redirects.json` resolves; the stored-progress tests named
+  in plan P12-03 pass.
 
 ## Flagged concerns
 

@@ -3,7 +3,8 @@
 > **Status:** Accepted by the Product Owner, 2026-10-24
 > ([review.md](review.md))
 > **Owner:** @paruff
-> **Date:** 2026-10-02
+> **Date:** 2026-10-02 (revised 2026-11-13: counts dated, baseline signal
+> corrected; the revision awaits the Intent gate)
 > **Relationship:** mission and scope come from
 > `internal/implementation/product-charter.md`. This file states the learning
 > direction that `specification.md` and `plan.md` must serve.
@@ -20,8 +21,9 @@ The platform has 77 modules and 13 QuickStarts. Two weaknesses limit it.
 1. **Learning that may not last.** Research on durable learning (summarized in
    Brown, Roediger & McDaniel, *Make It Stick*, 2014) shows that rereading
    and fluent-feeling study build little lasting memory. Effortful retrieval,
-   spacing and interleaving do. Only 59 of 77 modules end with spaced
-   retrieval, and the rest of the toolkit isn't applied consistently.
+   spacing and interleaving do. On 2026-10-02 only 59 of 77 modules ended
+   with spaced retrieval (and on 2026-10-18 only 8 of those rendered a
+   working prompt), and the rest of the toolkit wasn't applied consistently.
 2. **Evidence standards are uneven.** The developmental frameworks that
    organize the content (AQAL, Spiral Dynamics) have weak or contested
    empirical support, yet some content presents them as findings.
@@ -57,16 +59,16 @@ built on learning-science evidence:
 
 ### Success signals (to be confirmed in `specification.md`)
 
-| Signal | Today | Target |
-| --- | --- | --- |
-| Modules ending in spaced retrieval (`RetrievalPrompt`) | 59 / 77 | 77 / 77 |
-| Modules applying the full Make It Stick toolkit (FR-05 to FR-09) | not tracked | 100% of new and revised modules |
-| QuickStarts with a planning prompt and visible progress | not tracked | 13 / 13 |
-| Developmental claims carrying an evidence tier | not tracked | 100% of new and revised modules |
-| Retention measured objectively | none | ≥1 self-paced study with a delayed retention test (≥7 days) |
-| QuickStarts with a pathway map; modules with explanatory visuals | 0 / 13; 0 / 77 | 13 / 13; 100% of revised modules |
-| Learning metrics (FR-19) baselined | none | Baseline in `docs/METRICS.md` before the first stage site |
-| Stage sites live and measured | 0 | 1, compared with the main site before deciding on the others |
+| Signal | 2026-10-02 | 2026-11-13 | Target |
+| --- | --- | --- | --- |
+| Modules ending in spaced retrieval (`RetrievalPrompt`) | 59 / 77 | 77 / 77 (`check-retention.mjs`) | 77 / 77 |
+| Modules applying the full Make It Stick toolkit (FR-05 to FR-09) | not tracked | checked by `check-toolkit.mjs` in CI | 100% of new and revised modules |
+| QuickStarts with a planning prompt and visible progress | not tracked | 13 / 13 (`check-quickstarts.mjs`) | 13 / 13 |
+| Developmental claims carrying an evidence tier | not tracked | 255 tags, none yet checked by a human (P3-03) | 100% of new and revised modules |
+| Retention measured objectively | none | none (P5, after P9-06) | ≥1 self-paced study with a delayed retention test (≥7 days) |
+| QuickStarts with a pathway map; modules with explanatory visuals | 0 / 13; 0 / 77 | 13 / 13 maps; module visuals added in P8-03 | 13 / 13; 100% of revised modules |
+| Learning metrics (FR-19) baselined | none | none. The first site launched without one | First values recorded in `docs/METRICS.md` by 2026-11-30 (P10-04a) |
+| Stage sites live and measured | 0 | 1 live (2026-10-21), decision due 2026-12-16 | 1, compared with the main site before deciding on the others |
 
 ## Affected users and systems
 

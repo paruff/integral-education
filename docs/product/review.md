@@ -43,6 +43,13 @@ Append new rows at the bottom. Scope is `product` or a feature slug.
 | 2026-10-21 | product | Design | GoatCounter chosen as the analytics tool (P10-01a) | Approved | @paruff | #586, [analytics-decision.md](analytics-decision.md#tool-chosen-p10-01a) |
 | 2026-10-21 | product | Release | Clear Thinking stage site published | Approved | @paruff | PR #619 |
 | 2026-10-21 | product | Design | One internal stage-name set (P12-01) | Approved | @paruff | PR #620 |
-| 2026-10-24 | product | Intent | [intent.md](intent.md) | Approved | @paruff | PR adding this file |
-| 2026-10-24 | product | Plan | [plan.md](plan.md) | Approved | @paruff | PR adding this file |
-| 2026-11-09 | product | Plan | [plan.md](plan.md): open rows rewritten to match the code (P3-03, P5, P9, P10, P12) | Pending | @paruff | this PR |
+| 2026-10-24 | product | Intent | [intent.md](intent.md) | Approved | @paruff | PR #632 |
+| 2026-10-24 | product | Plan | [plan.md](plan.md) | Approved | @paruff | PR #632 |
+| 2026-11-09 | product | Plan | [plan.md](plan.md): open rows rewritten to match the code (P3-03, P5, P9, P10, P12) | Approved (merged by @paruff 2026-11-09) | @paruff | PR #663 |
+| 2026-11-13 | product | Release | Clear Thinking was published (2026-10-21) before the three FR-17 audience readers, as a deliberate trial so that readers read the live site | Decided | @paruff | [audit](../audits/2026-11-13-planning-audit.md) finding 3; the PR adding this row |
+| 2026-11-13 | product | Plan | Next release is `v0.3.0-alpha`, cut at the P9-06 decision; the retention study (P5) starts after it | Decided | @paruff | audit questions 1 and 5; the PR adding this row |
+| 2026-11-13 | product | Plan | P9-06 rule: minimum 30 views per site and 30 hub entries, switch rate 25% or lower, one 4-week extension, copy freeze | Recommended by the audit; owner confirms the numbers by 2026-11-30 | @paruff | [plan.md](plan.md) P9-06 |
+| 2026-11-13 | product | Intent | [intent.md](intent.md): counts dated, baseline signal corrected | Pending | @paruff | the PR adding this row |
+| 2026-11-13 | product | Spec | [specification.md](specification.md): FR-19 target and acceptance, NFR-07 added | Pending | @paruff | the PR adding this row |
+| 2026-11-13 | product | Plan | [plan.md](plan.md): goals, owner's queue, Spec column, Later, archive | Pending | @paruff | the PR adding this row |
+| 2026-11-13 | product | Design | [design.md](design.md) is still Draft; no Design-gate row exists for the file as a whole | Pending | @paruff | — |

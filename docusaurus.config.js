@@ -62,6 +62,17 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
+          // Planning docs stay in the repo but are not part of the learner site.
+          // The first four entries are Docusaurus's own defaults.
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+            'product/**',
+            'features/**',
+            'audits/**',
+          ],
         },
         blog: false,
         theme: {

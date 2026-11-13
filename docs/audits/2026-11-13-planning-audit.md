@@ -1,6 +1,6 @@
 # Planning Audit, 2026-11-13
 
-> **Status:** Phase 1 (audit) reviewed by the Product Owner on 2026-11-13: all findings approved. Phase 2 (doc revisions) is applied in the same branch; see section 7. Phase 3 (GitHub) is not drafted or applied.
+> **Status:** Phase 1 (audit) reviewed by the Product Owner on 2026-11-13: all findings approved. Phase 2 (doc revisions) is applied in the same branch; see section 7. Phase 3 (GitHub) was applied on 2026-11-13; see section 6.
 > File and line references below describe the repo **before** Phase 2. Phase 2 moved `docs/AUDIT_AND_IMPLEMENTATION_PLAN.md` and `docs/v0.3.0-alpha-todo.md` to `docs/product/archive/` and changed line numbers in the planning docs.
 > **Scope:** planning only. The 13-section module rubric was skipped, as asked.
 > **Checked against:** `main` at `e4ba758`, 17 open issues, 4 milestones, all closed issues from #409 up.
@@ -214,9 +214,25 @@ All other closed P-row issues (#509–#548 except the open ones above) were not 
 5. Is deferring the retention study (P5) until after 2026-12-16 acceptable? It delays the intent's headline measure.
 6. May P12 get its own goal (G8) and requirement (NFR-07), or should it stay under G6?
 
-## 6. Phase 3 draft (GitHub changes)
+## 6. Phase 3: GitHub changes (applied 2026-11-13, on the owner's "apply")
 
-Not drafted yet. It follows the Phase 2 approvals. Nothing on GitHub changes until the owner says "apply".
+| Change | Item | Finding |
+| --- | --- | --- |
+| Milestones closed | 6C, 6D, 6E, 7A (each had 0 open issues) | 14 |
+| Milestone created | `v0.3.0-alpha`, due 2026-12-16; holds #586, #529, #629, #669 | 5 |
+| Issue created | #665 `G8 · Goal: One stage-name set everywhere` (parent of #629, #630, #631; sub-issue of #557) | 6 |
+| Issue created | #666 `P3-04` re-check the §7 citation numbers (human; under G2 #551) | 16 |
+| Issue created | #667 `P5-01a` archive the facilitated pilot files (Haiku; under G5 #554) | 15 |
+| Issue created | #668 `P5-01b` form-tool shortlist (Sonnet; under G5 #554) | 15 |
+| Issue created | #669 `P10-04a` record the baseline values (human; under G5 #554) | 1 |
+| Closed as duplicate | #656, of #658 | 14 |
+| Closed as completed | #555 (G6), with the proof in a comment | 6 |
+| Retitled | #586, #528, #529, #557 to say what remains | 12, 6 |
+| Body edited | #586 (four done boxes ticked, export check added); #529 (dependencies, two-step done-when); #530 (dependencies); #554 (#21 replaced by #628, new rows, success measure); #551 (#666 added); #557 (the "not live yet" correction replaced); #629, #630, #631 (goal is #665) | 1, 2, 6, 12 |
+| Label removed | `agent:claude-code` from #586, #528, #530, #531: the remaining step is human | 12 |
+| Label added | `human-required` on #530 | 12 |
+
+**Not done, needs a human:** adding #665 to #669 to Project #6 and setting Status. This session cannot reach the board (no GraphQL). #658 stays open: the owner chooses the replacement link.
 
 ## 7. Phase 2: what was applied (2026-11-13)
 
@@ -243,4 +259,4 @@ Owner's answers: (1) next release is `v0.3.0-alpha`; (2) use the audit's recomme
 | 17 | Index appended to the existing `docs/features/README.md` (the audit wrongly said none existed); its two stale "Open" rows corrected (PRs #336, #337 are merged) | The six "check" folders are still unverified |
 | 18 | One line in `AGENTS.md` | — |
 
-New rows have no issue yet. `AGENTS.md` says a new row and its issue land in the same PR; here the issues wait for the owner's "apply" in Phase 3, so the rows say "no issue yet".
+The new rows now link to their issues (#666 to #669), created in Phase 3.

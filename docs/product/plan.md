@@ -65,12 +65,11 @@ the current goal waits in its own phase or in [Later](#later-no-milestone).
 | G3 | Self-paced pathways supply the structure a teacher would | `check-quickstarts.mjs` 13/13 | P4 | #552 | Done 2026-10-19 |
 | G4 | One stage site, measured against the main site | P9-06 decision and its numbers in [review.md](review.md) | P9 | #553 | **Current.** Decision due 2026-12-16 |
 | G5 | We know whether learning works | Retention report committed (P5-03); values in `docs/METRICS.md` (P10-04a) | P5, P10 | #554 | Open. P5 starts after G4 |
-| G6 | Content meets its own quality rules | Validator 77/77, warnings fail CI | P6 | #555 | Done 2026-10-21 (issue still open) |
+| G6 | Content meets its own quality rules | Validator 77/77, warnings fail CI | P6 | #555 | Done 2026-10-21 |
 | G7 | Deterministic build | Deployed artifact is the tested artifact | P11 | #556 | Done 2026-10-21 |
-| G8 | One stage-name set everywhere | `check-stage-names.mjs` passes in CI (P12-04) | P12 | no issue yet | Open. P12-03 starts after G4 |
+| G8 | One stage-name set everywhere | `check-stage-names.mjs` passes in CI (P12-04) | P12 | #665 | Open. P12-03 starts after G4 |
 
-**Next release: `v0.3.0-alpha`** (milestone of the same name, no milestone
-yet). It is cut when the P9-06 decision is recorded. It holds P10-01a,
+**Next release: `v0.3.0-alpha`** (milestone of the same name). It is cut when the P9-06 decision is recorded. It holds P10-01a,
 P10-04a, P9-06 and P12-02, plus what is under `[Unreleased]` in
 `CHANGELOG.md`. P3-03, P3-04 and the P9-05 readers run alongside but do not
 hold the release. P5 and P12-03 onward come after it.
@@ -82,11 +81,11 @@ Every open step that needs the Product Owner, in the order to do them.
 | # | Step | Row | Issue | By |
 | --- | --- | --- | --- | --- |
 | 1 | Devtools check on a normal visit; is the GoatCounter export enough | P10-01a | [#586](https://github.com/paruff/integral-education/issues/586) | now |
-| 2 | Fill the Baseline column in `docs/METRICS.md` | P10-04a | no issue yet | 2026-11-30 |
+| 2 | Fill the Baseline column in `docs/METRICS.md` | P10-04a | [#669](https://github.com/paruff/integral-education/issues/669) | 2026-11-30 |
 | 3 | Confirm the go / revise / stop rule in `docs/METRICS.md` | P9-06 | [#529](https://github.com/paruff/integral-education/issues/529) | 2026-11-30 |
 | 4 | Three audience readers; the site's name | P9-05 | [#528](https://github.com/paruff/integral-education/issues/528) | before 2026-12-16 if possible |
 | 5 | Citation check, at least 69 tags, in batches | P3-03 | [#519](https://github.com/paruff/integral-education/issues/519) | alongside |
-| 6 | Re-check the numbers in the protocol §7 citations | P3-04 | no issue yet | alongside |
+| 6 | Re-check the numbers in the protocol §7 citations | P3-04 | [#666](https://github.com/paruff/integral-education/issues/666) | alongside |
 | 7 | Choose a replacement for the dead support-resource link | none (nightly alert) | [#658](https://github.com/paruff/integral-education/issues/658) | alongside |
 | 8 | Gates: approve or return `design.md` (still Draft) and the 2026-11-13 revisions of intent, spec and plan | — | [review.md](review.md) | with this PR |
 | 9 | Decide the stage sites | P9-06 | [#529](https://github.com/paruff/integral-education/issues/529) | 2026-12-16 |
@@ -107,7 +106,7 @@ Design: [§4 Toolkit enforcement](design.md#4-toolkit-enforcement-in-every-modul
 | [P3-01](https://github.com/paruff/integral-education/issues/517) | FR-08 to FR-12 | Add generation, elaboration, calibration, load and no-low-utility checks to the `module-authoring` skill checklist (FR-08 to FR-12) | `.agents/skills/module-authoring/SKILL.md` | `module-authoring` checklist lists the five checks (FR-08 to FR-12) and `check-toolkit.mjs` still passes; reviewed by the Product Owner in the PR | P1-02 |
 | [P3-02](https://github.com/paruff/integral-education/issues/518) | FR-08 to FR-12 | Apply the toolkit to existing modules, starting with the `amber-to-rational` QuickStart (the live stage site), then the other twelve in `docs/quickstarts/` order, batched by pathway | `docs/modules/*` (several PRs) | Each batch passes the checklist | P3-01 |
 | [P3-03](https://github.com/paruff/integral-education/issues/519) | FR-14 | Inline evidence tiers already exist (255 tags). Remaining: the human citation check of [`p3-03-citation-check-worklist.md`](p3-03-citation-check-worklist.md) (every Tier A, at least 10% of B and C) `[HUMAN-REQUIRED]`, then fix the tags the check downgrades; confirm each Theoretical Frameworks section introduces stage models as a lens (FR-14) | `p3-03-citation-check-worklist.md` (Result column filled in), only the modules the check flags | Worklist Result column complete; reviewer and date at the end of that file and a row in [review.md](review.md); `check-toolkit.mjs` passes | P0-03 |
-| P3-04 (no issue yet) | FR-04, FR-07 | `[HUMAN-REQUIRED]` Re-check the numbers in the citations that came from protocol §7 and are not in the fifteen-row human log: Adesope et al. (2017) "g = 0.51 across 217 studies" and Kulik et al. (1990) "108 controlled evaluations" first. The 2026-10-01 check names no checker, and the audit could not verify the Adesope count | `specification.md` (evidence table and citation check log), `internal/quality/instructional-design-protocol.md` §7 | Each §7 citation has a row in the citation check log with a date and initials; any corrected number is corrected in both files | — |
+| [P3-04](https://github.com/paruff/integral-education/issues/666) | FR-04, FR-07 | `[HUMAN-REQUIRED]` Re-check the numbers in the citations that came from protocol §7 and are not in the fifteen-row human log: Adesope et al. (2017) "g = 0.51 across 217 studies" and Kulik et al. (1990) "108 controlled evaluations" first. The 2026-10-01 check names no checker, and the audit could not verify the Adesope count | `specification.md` (evidence table and citation check log), `internal/quality/instructional-design-protocol.md` §7 | Each §7 citation has a row in the citation check log with a date and initials; any corrected number is corrected in both files | — |
 
 ## P5 — Measure retention
 
@@ -119,8 +118,8 @@ and can be done before then.
 
 | ID | Spec | Task | Files | Proof | Depends |
 | --- | --- | --- | --- | --- | --- |
-| P5-01a (no issue yet) | FR-15 | Archive the superseded facilitated files `pilot-runbook-20-40.md` and `pilot-pathway-*.md` to `internal/pilots/archive/`, and fix any link to them | `internal/pilots/archive/` (create), `sidebarsInternal.js` if it lists them | The three files are under `archive/`; `npm run build` passes | — |
-| P5-01b (no issue yet) | FR-15, NFR-05 | Draft a test-form tool shortlist against the rules in [analytics-decision.md](analytics-decision.md) (a form tool is a new data processor), the way `analytics-tool-shortlist.md` did for analytics. The owner picks | `docs/product/form-tool-shortlist.md` (create) | Shortlist names what each tool stores, where, and for how long, with a link to each tool's own documentation for every claim | — |
+| [P5-01a](https://github.com/paruff/integral-education/issues/667) | FR-15 | Archive the superseded facilitated files `pilot-runbook-20-40.md` and `pilot-pathway-*.md` to `internal/pilots/archive/`, and fix any link to them | `internal/pilots/archive/` (create), `sidebarsInternal.js` if it lists them | The three files are under `archive/`; `npm run build` passes | — |
+| [P5-01b](https://github.com/paruff/integral-education/issues/668) | FR-15, NFR-05 | Draft a test-form tool shortlist against the rules in [analytics-decision.md](analytics-decision.md) (a form tool is a new data processor), the way `analytics-tool-shortlist.md` did for analytics. The owner picks | `docs/product/form-tool-shortlist.md` (create) | Shortlist names what each tool stores, where, and for how long, with a link to each tool's own documentation for every claim | — |
 | [P5-01](https://github.com/paruff/integral-education/issues/530) | FR-15 | Finish the self-paced study protocol: one QuickStart (`amber-to-rational`, the Clear Thinking QuickStart), delayed retention test at least 7 days after the last module, self-report kept separate (FR-15), single-arm paired analysis (a between-site comparison is a later analysis). The draft already covers design, measures, analysis and data handling. Remaining: `[HUMAN-REQUIRED]` consent wording, sample and recruitment route (target 20–40 adults), and the test-form tool. A form tool is a new data processor, so record it in [analytics-decision.md](analytics-decision.md) before use (shortlist: P5-01b). Archiving the facilitated files is P5-01a | `internal/pilots/retention-study-protocol.md` (modify), `analytics-decision.md` (modify) | Protocol review checklist (§9) ticked by the Product Owner; form tool recorded; row in [review.md](review.md) | P1-01, P5-01b, P9-06 |
 | [P5-02](https://github.com/paruff/integral-education/issues/531) | FR-15 | Items are drafted (two sets of 14, two per module). Remaining: the Product Owner validates every item against the checklist in the file `[HUMAN-REQUIRED]` | `internal/pilots/retention-test-items.md` (modify: reviewer, date, changes) | All checklist boxes ticked; reviewer and date recorded in the file and a row in [review.md](review.md) | P5-01 |
 | [P5-03](https://github.com/paruff/integral-education/issues/628) | FR-15, FR-19 | Run the study and write the report. Effect size is the paired Cohen's d of delayed vs pre-test with a 95% interval (protocol §7), labelled preliminary, no efficacy claims from one study (absorbs issue #21). Replaces `pilot-revision-report-template.md`, which moves to `internal/pilots/archive/` | `internal/pilots/retention-study-report.md` (create) | Report committed with the protocol's §7 tables and §8 limits; aggregates only (n < 5 cells suppressed) | P5-02 |
@@ -150,11 +149,11 @@ Design: [§9 Metrics and analytics](design.md#9-metrics-and-analytics).
 | [P10-02](https://github.com/paruff/integral-education/issues/533) | FR-13, FR-19 | Compute process metrics in the browser (on-time reviews, calibration gap, completion, return) and show them to the learner on the progress page | `src/hooks/useProgress.js`, `docs/my-progress.mdx` | `tests/metrics.test.mjs`: one test per metric | P2-02, P9-02, P11-08 |
 | [P10-03](https://github.com/paruff/integral-education/issues/534) | FR-19, NFR-05 | Learner-controlled export: download a summary of their own metrics, to share only in a study | `docs/my-progress.mdx` | Learner sees what is exported before saving | P10-02 |
 | [P10-04](https://github.com/paruff/integral-education/issues/535) | FR-19 | Add a learning-metrics section to `docs/METRICS.md` and the monthly ritual in the `metrics` skill; record the baseline | `docs/METRICS.md`, `.agents/skills/metrics/SKILL.md` | Baseline recorded | P10-01a, P10-02 |
-| P10-04a (no issue yet) | FR-19 | `[HUMAN-REQUIRED]` Record the values. P10-04 (#535) was closed with the structure only: `docs/METRICS.md` has no baseline values. Fill the Baseline column with values and dates from GoatCounter and, where there is one, a learner export. Leave "not measured" where no source exists yet | `docs/METRICS.md` | Every row of the learning-metrics table has a dated value or "not measured" with the reason; done by 2026-11-30 | P10-01a |
+| [P10-04a](https://github.com/paruff/integral-education/issues/669) | FR-19 | `[HUMAN-REQUIRED]` Record the values. P10-04 (#535) was closed with the structure only: `docs/METRICS.md` has no baseline values. Fill the Baseline column with values and dates from GoatCounter and, where there is one, a learner export. Leave "not measured" where no source exists yet | `docs/METRICS.md` | Every row of the learning-metrics table has a dated value or "not measured" with the reason; done by 2026-11-30 | P10-01a |
 
 ## P12 — Stage nomenclature
 
-Design: [§8 Stage nomenclature](design.md#8-stage-nomenclature). Goal: G8 (no issue yet; was listed under G6, #555).
+Design: [§8 Stage nomenclature](design.md#8-stage-nomenclature). Goal: G8 (#665; was listed under G6, #555).
 
 P12-01 is done. Steps 2–4 are written but **not on `main`**: PRs #621–#627 merged into each other's branches (`origin/feat/stage-names-steps-2-3` is not an ancestor of `main`, checked 2026-11-13).
 

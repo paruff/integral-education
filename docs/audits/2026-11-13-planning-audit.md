@@ -159,7 +159,7 @@ Only one row can be handed to a cheaper model now. The plan gives no order for t
 
 - 40 folders in `docs/features/` (the first draft of this audit said 41; that was a miscount). No open issue refers to any of them.
 - `tasks.json` still shows "pending" tasks in `rp-106-…` (6), `ilp-96-…` (5) and `sw-93-…` (4), although issues #106, #96 and #93 closed on 2026-07-24 and the pages exist in `docs/maps/`. `ei-74-…` (8), `ei-90-…` (8) and `clarity-03-…` (3) also show pending tasks; whether that work shipped is **UNVERIFIED**.
-- **Fix:** add `docs/features/README.md`: one line per folder with its issue and "shipped" or "check". A cheap-model task (Phase 3).
+- **Fix:** extend the existing `docs/features/README.md` (it lists 4 of the 40 folders): one line per folder with its issue and "shipped" or "check". A cheap-model task (Phase 3).
 
 ### 18. The board commands in `AGENTS.md` do not work in cloud sessions
 
@@ -240,7 +240,7 @@ Owner's answers: (1) next release is `v0.3.0-alpha`; (2) use the audit's recomme
 | 14 | — | Phase 3: close milestones and #656. Owner: the replacement link in #658 |
 | 15 | Rows P5-01a and P5-01b | Phase 3: the issues |
 | 16 | New row P3-04; note in the spec | Owner: the re-check |
-| 17 | `docs/features/README.md` index | The six "check" folders are still unverified |
+| 17 | Index appended to the existing `docs/features/README.md` (the audit wrongly said none existed); its two stale "Open" rows corrected (PRs #336, #337 are merged) | The six "check" folders are still unverified |
 | 18 | One line in `AGENTS.md` | — |
 
 New rows have no issue yet. `AGENTS.md` says a new row and its issue land in the same PR; here the issues wait for the owner's "apply" in Phase 3, so the rows say "no issue yet".

@@ -1,42 +1,39 @@
 {
   "stageDistribution": {
-    "Unknown": 36,
-    "Amber": 1,
-    "Rational → Pluralistic": 8,
-    "Amber → Rational": 7,
-    "Pluralistic → Integral": 12,
-    "Integral": 1,
-    "Cross-level capstone: Amber through Integral": 1,
-    "Teal": 1,
-    "Green": 2,
-    "Orange": 2,
-    "Red": 1,
-    "Orange → Green → Teal (Integral)": 1,
+    "Traditional → Pluralistic": 1,
+    "Traditional": 1,
+    "Rational → Pluralistic": 9,
+    "Traditional → Rational": 7,
+    "Pluralistic → Integral": 15,
+    "Unknown": 29,
+    "Integral": 2,
+    "Pluralistic": 3,
+    "Cross-level capstone: Traditional through Integral": 1,
+    "Rational": 2,
+    "Egocentric": 1,
+    "Magical": 1,
+    "Rational → Pluralistic → Integral": 1,
     "Rational → Integral": 1,
-    "Amber → Integral": 1,
-    "Amber → Rational (Fowler Stages 2–4)": 1,
-    "Rational/Orange → Integral/Teal (Spiritual line post-conventional)": 1
+    "Traditional → Integral": 1,
+    "Traditional → Rational (Fowler Stages 2–4)": 1,
+    "Rational → Integral (Spiritual line post-conventional)": 1
   },
   "lineCoverage": {
-    "emotional": 46,
-    "cognitive": 66,
-    "moral": 52,
-    "interpersonal": 54,
+    "emotional": 50,
+    "somatic": 25,
+    "cognitive": 68,
+    "moral": 54,
+    "interpersonal": 55,
     "spiritual": 11,
-    "somatic": 23,
-    "self": 22,
-    "ecological": 1,
-    "values": 2,
-    "leadership": 1,
-    "systems": 2
+    "self": 24
   },
   "safetyTiers": {
     "tier-1": 55,
     "tier-2": 22
   },
   "formats": {
-    "embodied-guided": 24,
-    "text-reflection": 53
+    "embodied-guided": 25,
+    "text-reflection": 52
   },
   "difficulties": {
     "Intermediate": 37,

@@ -7,7 +7,7 @@ quadrants:
 - I
 - We
 - Its
-level: Red
+level: Egocentric
 lines:
 - cognitive
 - moral
@@ -19,8 +19,7 @@ states:
 types:
 - individual-first
 tags:
-- red
-- magic-mythic
+- egocentric
 - spiral-dynamics
 - gebser
 - kohlberg

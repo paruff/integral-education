@@ -5,6 +5,9 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { findVocabulary, compareVocabulary } from '../scripts/check-site-vocabulary.mjs';
 import { prepareSite, applyPatches } from '../scripts/prepare-site.mjs';
+import { createRequire } from 'node:module';
+
+const { inferStage, STAGE_ALIASES } = createRequire(import.meta.url)('../scripts/generate-content-graph.js');
 
 const terms = [{ term: 'stage' }, { term: 'Green', caseSensitive: true }, { term: 'AQAL', caseSensitive: true }];
 
@@ -104,4 +107,14 @@ test('prepareSite: applies a patch to the shared copy, and refuses a patch plus 
   mkdirSync(join(root, 'sites/s/overrides/docs/modules'), { recursive: true });
   writeFileSync(join(root, 'sites/s/overrides/docs/modules/a.mdx'), 'rewritten');
   assert.throws(() => prepareSite({ id: 's', docs: ['modules/a'] }, root), /both a patch and an override/);
+});
+
+test('stage names (P12-02): an old colour name and its new name both resolve to the new name', () => {
+  for (const [name, canonical] of Object.entries(STAGE_ALIASES)) {
+    assert.equal(inferStage({ level: name }), canonical, `level: ${name}`);
+    assert.equal(inferStage({ tags: [name.toLowerCase()] }), canonical, `tag: ${name.toLowerCase()}`);
+  }
+  assert.equal(inferStage({ level: 'Amber' }), 'Traditional');
+  assert.equal(inferStage({ level: 'Traditional' }), 'Traditional');
+  assert.equal(inferStage({ tags: ['red'] }), 'Egocentric');
 });

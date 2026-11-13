@@ -3,7 +3,7 @@ id: interpersonal-line-stage-map
 title: Interpersonal Line Stage Map (Amber through Integral)
 sidebar_label: Interpersonal Line Stage Map
 description: A reference matrix showing how the Interpersonal developmental line characteristically differs across Amber/Mythic, Rational/Orange, Pluralistic/Green, and Integral/Teal, including Kegan stage mapping, characteristic shadow patterns, and growth edges.
-tags: [interpersonal-line, stage-map, aqal, growing-up, amber, orange, green, teal, kegan, trust, conflict, shadow, reference]
+tags: [interpersonal-line, stage-map, aqal, growing-up, traditional, rational, pluralistic, integral, kegan, trust, conflict, shadow, reference]
 ---
 
 import Admonition from '@theme/Admonition';

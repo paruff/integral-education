@@ -3,7 +3,7 @@ id: emotional-line-stage-map
 title: Emotional Line Stage Map (Amber through Integral)
 sidebar_label: Emotional Line Stage Map
 description: A reference matrix showing how emotional experience, expression, vocabulary, regulation style, and relational emotional dynamics characteristically differ at each developmental altitude from Amber/Mythic through Integral/Teal, including characteristic shadows and growth edges for each stage.
-tags: [emotional-line, stage-map, aqal, growing-up, amber, orange, green, teal, regulation, shadow, reference]
+tags: [emotional-line, stage-map, aqal, growing-up, traditional, rational, pluralistic, integral, regulation, shadow, reference]
 ---
 
 import Admonition from '@theme/Admonition';

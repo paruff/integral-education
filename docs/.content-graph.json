@@ -1,5 +1,5 @@
 {
-  "generated": "2026-10-21T17:18:02.987Z",
+  "generated": "2026-11-13T07:18:53.704Z",
   "totalModules": 77,
   "totalEdges": 234,
   "stats": {
@@ -370,8 +370,8 @@
       "prerequisites": [
         "cognitive-line-overview-orientation"
       ],
-      "readingTime": 10,
-      "practiceTime": 12,
+      "readingTime": 15,
+      "practiceTime": 35,
       "tags": [
         "cognitive-line",
         "Piaget",
@@ -380,9 +380,10 @@
         "metacognition",
         "stress-regression",
         "adult-learning",
-        "AQAL"
+        "AQAL",
+        "tier-1"
       ],
-      "goldStandardSections": 22,
+      "goldStandardSections": 14,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
@@ -856,14 +857,16 @@
       "difficulty": "Beginner",
       "format": "text-reflection",
       "prerequisites": [],
-      "readingTime": 10,
-      "practiceTime": 12,
+      "readingTime": 15,
+      "practiceTime": 20,
       "tags": [
         "emotions",
         "affect",
-        "self-awareness"
+        "self-awareness",
+        "emotional-line",
+        "tier-1"
       ],
-      "goldStandardSections": 16,
+      "goldStandardSections": 14,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,
@@ -3076,14 +3079,16 @@
       "prerequisites": [
         "rational-orange-orientation"
       ],
-      "readingTime": 10,
-      "practiceTime": 10,
+      "readingTime": 15,
+      "practiceTime": 25,
       "tags": [
         "systems",
         "complexity",
-        "feedback"
+        "feedback",
+        "cognitive-line",
+        "tier-1"
       ],
-      "goldStandardSections": 15,
+      "goldStandardSections": 14,
       "hasAQAL": true,
       "hasPractice": true,
       "hasEvidence": true,

@@ -173,11 +173,13 @@ function checkJourneySkeleton(sections, content) {
 }
 
 function inferStage(fm) {
-  if (fm.level && STAGE_TRANSITIONS.some(t => fm.level.includes(t))) {
-    return fm.level;
-  }
+  // A bare stage name first: 'Amber' also matches the transition list below,
+  // which would return it unchanged.
   if (fm.level && STAGE_LABELS.includes(fm.level)) {
     return stageName(fm.level);
+  }
+  if (fm.level && STAGE_TRANSITIONS.some(t => fm.level.includes(t))) {
+    return fm.level;
   }
   if (fm.tags) {
     const stageTag = fm.tags.find(t =>
@@ -392,4 +394,6 @@ function main() {
   console.log(`\n---METRICS:${JSON.stringify(graph.stats)}:METRICS---`);
 }
 
-main();
+// Run as a script; export the stage mapping for tests/site-tools.test.mjs.
+if (require.main === module) main();
+module.exports = { inferStage, STAGE_ALIASES };
